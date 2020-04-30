@@ -1,0 +1,591 @@
+---
+title: "Peace of Mind with Cloud Secret Providers"
+
+date: 2020-04-29T14:26:35-07:00
+draft: true
+meta_desc: "Learn how to encrypt your Pulumi secrets with a cloud secrets provider to ensure secrets never leave your control"
+meta_image: meta.png
+authors:
+    - lee-briggs
+tags:
+    - features
+    - security
+---
+
+The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. Back in [Pulumi 0.17.12](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) we introduced client-side secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
+Our first iteration of the client-side encryption used a passphrase for encrypting the secret, however, remembering that passphrase and sharing it securely with team members is less than ideal.
+That's why in our 0.17.28 release, we added support for "Cloud Secret Providers", giving users fill confidence that their sensitive values are for their eyes only.
+
+<!--more-->
+
+Pulumi supports encryption via [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you how to create an AWS KMS in a stack using Pulumi, and then use the key to encrypt values in subsequent stacks.
+
+## Create a KMS Key
+
+First, we need to create our KMS key. We also want to set an alias on the key to make it easier to reference later:
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// Create a new KMS key
+const key = new aws.kms.Key("stack-encryption-key", {
+    deletionWindowInDays: 10,
+    description: "KMS key for encrypting Pulumi secret values",
+});
+
+// Create a new alias to the key
+const alias = new aws.kms.Alias("alias/stack-encryption-key", {
+    targetKeyId: key.keyId,
+});
+
+// Export the arns
+export const keyArn = key.arn
+export const aliasArn = alias.arn
+```
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+```javascript
+"use strict";
+const pulumi = require("@pulumi/pulumi");
+const aws = require("@pulumi/aws");
+
+// Create a nw KMS Key
+const key = new aws.kms.Key("stack-encryption-key", {
+        deletionWindowInDays: 10,
+        description: "KMS key for encrypting Pulumi secret values"
+});
+
+
+// Create an alias to the key
+const alias = new aws.kms.Alias("alias/stack-encryption-key", {
+    targetKeyId: key.keyId
+});
+
+
+// Export the arns
+exports.keyArn = key.arn;
+exports.aliasArn = alias.arn;
+```
+{{% /choosable %}}
+
+{{% choosable language python %}}
+```python
+import pulumi
+from pulumi_aws import kms
+
+# Create a new KMS key
+key = kms.Key("stack-encryption-key",
+    deletion_window_in_days=10,
+    description="KMS key for encrypting Pulumi secret values"
+)
+
+// Create an alias to the key
+alias = kms.Alias("alias/stack-encryption-key",
+    target_key_id=key.key_id
+)
+
+# Export the arns
+pulumi.export('key_arn',  key.arn)
+```
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+		// Create a new KMS key
+		key, err := kms.NewKey(ctx, "stack-encryption-key", &kms.KeyArgs{
+			Description: pulumi.String("KMS key for encrypting Pulumi secret values"),
+			DeletionWindowInDays: pulumi.Int(10),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Create an alias to the key
+		alias, err := kms.NewAlias(ctx, "alias/stack-encryption-key", &kms.AliasArgs{
+			TargetKeyId: key.KeyId,
+		})
+		if err != nil {
+			return err
+		}
+
+		// Export the arns
+		ctx.Export("keyArn", key.Arn)
+		ctx.Export("keyAlias", alias.Arn)
+		return nil
+	})
+}
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+```csharp
+using Pulumi;
+using Pulumi.Aws.Kms;
+using System.Threading.Tasks;
+
+class Program {
+    static Task Main() {
+        return Deployment.RunAsync(() => {
+            var key = new Key("stack-encryption-key", new KeyArgs {
+                DeletionWindowInDays = 10,
+                Description = "KMS key for encrypting Pulumi secret values"
+            });
+            var alias = new Pulumi.Aws.Kms.Alias("alias/stack-encryption-key", new AliasArgs{
+                TargetKeyId = key.KeyId
+            });
+        });
+    }
+}
+```
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Creating the key is enough to allow us to start using it for our encryption provider. However, we need to consider who has access to the key before we start utilizing it with Pulumi.
+
+## Scoping Permission to our Key
+
+Generally, in AWS, you scope access to resources using IAM roles. However, for sensitive values like KMS keys, IAM roles alone aren't enough to provide the security you might need. As an example, if someone in your AWS account as an IAM role with the following policy attached:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1588215924595",
+      "Action": "kms:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+That user gets access to every KMS key in your account, which would also mean they could decrypt any secret in your Pulumi stack.
+
+To rectify this, we need to attach a Key Policy to the key:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+{{% choosable language typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const config = new pulumi.Config();
+const iamRole = config.require("iamRole");
+const accountID = config.require("accountID");
+
+
+const keyPolicy = {
+    Version: "2012-10-17",
+    Id: "policy",
+    Statement: [
+        // This statement allows all users to view the key in the console
+        {
+            Sid: "AllowGetKeys",
+            Effect: "Allow",
+            Action: ["kms:Describe*", "kms:Get*", "kms:List*"],
+            Principal: {
+                "AWS": [`arn:aws:iam::${accountID}:root`]
+            },
+            Resource: "*",
+        },
+        // This is a configurable statement that we can use to allow access to an IAM arn
+        {
+            Sid: "AllowIAMUserAccessKeys",
+            Effect: "Allow",
+            Action: ["kms:*"],
+            Principal: {
+                "AWS": iamRole,
+            },
+            Resource: "*",
+        }
+    ]
+}
+
+// Create a new KMS key
+const key = new aws.kms.Key("stack-encryption-key", {
+    deletionWindowInDays: 10,
+    description: "KMS key for encrypting Pulumi secret values",
+    policy: JSON.stringify(keyPolicy),
+});
+
+// Create a new alias to the key
+const alias = new aws.kms.Alias("alias/stack-encryption-key", {
+    targetKeyId: key.keyId,
+});
+
+// Export the arns
+export const keyArn = key.arn
+export const aliasArn = alias.arn
+
+```
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+
+```javascript
+"use strict";
+const pulumi = require("@pulumi/pulumi");
+const aws = require("@pulumi/aws");
+
+let config = new pulumi.Config();
+let iamRole = config.require("iamRole");
+let accountID = config.require("accountID");
+
+const keyPolicy = {
+    Version: "2012-10-17",
+    Id: "policy",
+    Statement: [
+        // This statement allows all users to view the key in the console
+        {
+            Sid: "AllowGetKeys",
+            Effect: "Allow",
+            Action: ["kms:Describe*", "kms:Get*", "kms:List*"],
+            Principal: {
+                "AWS": [`arn:aws:iam::${accountID}:root`]
+            },
+            Resource: "*",
+        },
+        // This is a configurable statement that we can use to allow access to an IAM arn
+        {
+            Sid: "AllowIAMUserAccessKeys",
+            Effect: "Allow",
+            Action: ["kms:*"],
+            Principal: {
+                "AWS": iamRole,
+            },
+            Resource: "*",
+        }
+    ]
+}
+
+// Create a nw KMS Key
+const key = new aws.kms.Key("stack-encryption-key", {
+        deletionWindowInDays: 10,
+        description: "KMS key for encrypting Pulumi secret values",
+        policy: JSON.stringify(keyPolicy),
+});
+
+
+// Create an alias to the key
+const alias = new aws.kms.Alias("alias/stack-encryption-key", {
+    targetKeyId: key.keyId
+});
+
+
+// Export the arns
+exports.keyArn = key.arn;
+exports.aliasArn = alias.arn;
+
+});
+
+
+// Export the arns
+exports.keyArn = key.arn;
+exports.aliasArn = alias.arn;
+```
+{{% /choosable %}}
+
+{{% choosable language python %}}
+```python
+import pulumi
+import json
+from pulumi_aws import kms
+
+config = pulumi.Config()
+iam_role = config.require("iamRole")
+account_id = config.require("accountID")
+
+
+key_policy = {
+    "Version": "2012-10-17",
+    "Id": "policy",
+    "Statement": [
+        # This statement allows all users to view the key in the console
+        {
+            "Sid": "AllowGetKeys",
+            "Effect": "Allow",
+            "Action": ["kms:Describe*", "kms:Get*", "kms:List*"],
+            "Principal": {
+                "AWS": ["arn:aws:iam::{}:root".format(account_id)]
+            },
+            "Resource": "*",
+        },
+        # This is a configurable statement that we can use to allow access to an IAM arn
+        {
+            "Sid": "AllowIAMUserAccessKeys",
+            "Effect": "Allow",
+            "Action": ["kms:*"],
+            "Principal": {
+                "AWS": iam_role,
+            },
+            "Resource": "*",
+        }
+    ]
+}
+# Create an AWS KMS key
+key = kms.Key("stack-encryption-key",
+    deletion_window_in_days=10,
+    description="KMS key for encrypting Pulumi secret values",
+    policy=json.dumps(key_policy)
+)
+
+alias = kms.Alias("alias/stack-encryption-key",
+    target_key_id=key.key_id
+)
+
+# Export the name of the bucket
+pulumi.export('key_arn',  key.arn)
+pulumi.export('alias_arn', alias.arn)
+```
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+
+	type Principal struct {
+		AWS string `json:"AWS"`
+	}
+	type Statement struct {
+		Sid       string    `json:"Sid"`
+		Effect    string    `json:"Effect"`
+		Principal Principal `json:"Principal"`
+		Action    []string  `json:"Action"`
+		Resource  string    `json:"Resource"`
+	}
+
+	type KeyPolicy struct {
+		Version    string      `json:"Version"`
+		ID         string      `json:"Id"`
+		Statements []Statement `json:"Statement"`
+	}
+
+	pulumi.Run(func(ctx *pulumi.Context) error {
+
+		config := config.New(ctx, "")
+
+		iamRole := config.Require("iamRole")
+		accountID := config.Require("accountID")
+
+		rootIamRole := fmt.Sprintf("arn:aws:iam::%s:root", accountID)
+
+		rawKeyPolicy := &KeyPolicy{
+			Version: "2012-10-17",
+			ID:      "policy",
+			Statements: []Statement{
+				{
+					Sid:    "AllowGetKeys",
+					Effect: "Allow",
+					Action: []string{
+						"kms:Describe*", "kms:Get*", "kms:List*",
+					},
+					Resource: "*",
+					Principal: Principal{
+						AWS: rootIamRole,
+					},
+				},
+				{
+					Sid:      "AllowIAMUserAccessKeys",
+					Effect:   "Allow",
+					Action:   []string{"kms:*"},
+					Resource: "*",
+					Principal: Principal{
+						AWS: iamRole,
+					},
+				},
+			},
+		}
+
+		keyPolicy, err := json.Marshal(rawKeyPolicy)
+
+		if err != nil {
+			panic("Error formatting keypolicy")
+		}
+
+		// Create an AWS KMS key
+		key, err := kms.NewKey(ctx, "stack-encryption-key", &kms.KeyArgs{
+			Description:          pulumi.String("KMS key for encrypting Pulumi secret values"),
+			DeletionWindowInDays: pulumi.Int(10),
+			Policy:               pulumi.String(string(keyPolicy)),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Create an alias to the key
+		alias, err := kms.NewAlias(ctx, "alias/stack-encryption-key", &kms.AliasArgs{
+			TargetKeyId: key.KeyId,
+		})
+		if err != nil {
+			return err
+		}
+
+		// Export the name of the bucket
+		ctx.Export("keyArn", key.Arn)
+		ctx.Export("keyAlias", alias.Arn)
+		return nil
+	})
+}
+```
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+```csharp
+<insert csharp here>
+```
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+In this example, we've made the IAM role allowed access to the key in the key policy configurable to an IAM role, and we've also given read permissions to the key to everyone in the account. Let's set some configuration variables now so we can be sure we can use this key for our next Pulumi stack:
+
+```bash
+# Get the current AWS account ID and set it as a config variable
+aws sts get-caller-identity | jq .Account -r | pulumi config set <projectname>:accountID
+# Get the current IAM role we're using as set it as a config variable
+aws sts get-caller-identity | jq .Arn -r | pulumi config set <projectname>:iamRole
+```
+
+## Initialize a New Stack
+
+Now our key has been created and is adequately scoped we can create a new stack and use the `secrets-provider` flag on creation to specify the KMS key to encrypt our secrets.
+
+```bash
+# In our examples we set our alias to "stack-encryption-key" so we'll use that
+# Note, we need to set the region we're deploying to
+pulumi new aws-typescript -n <projectname> -s <stackname> -d "An example stack encrypted with AWS KMS" --secrets-provider="awskms://alias/stack-encryption-key?region=us-west-2" --config aws:region=us-west-2
+```
+
+You can check inside your `Pulumi.<stackname>.yaml` which key you're using to encrypt your secrets:
+
+```yaml
+secretsprovider: awskms://alias/stack-encryption-key?region=us-west-2
+encryptedkey: AQICAHjqW3rb5Hw5Vpxi0c1sayz52VXj7yn20WVwsVILJSBU8wFDjvGuox3wDCJX99TxZFzAAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMWNeFRZIg8kVXMxrUAgEQgDtz6zV0aqegeAbmaQUNllMp8PQJa1qbjBH813I/XH6LbfynxZO9NE3sYPG89G0u/ltYsADiUAFS0bnadQ==
+config:
+  aws:region: us-west-2
+```
+
+## Use your Encrypted Secret
+
+Now we've initialized our stack we can add a secret configuration value using the secret flag and see the encrypted config value in the stack configuration:
+
+```bash
+pulumi config set --secret <projectname>:supersecret correct-horse-battery-stable
+```
+
+Verify the encryption
+To verify that the secret is indeed only accessible to the KMS key we created earlier, we can verify by removing access to the key temporarily and trying to perform a Pulumi operation. First, let's use the secret in our stack:
+
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+export const superSecret = config.require("supersecret");
+```
+
+{{% /choosable %}}
+
+{{% choosable language javascript %}}
+
+```javascript
+"use strict";
+const pulumi = require("@pulumi/pulumi");
+
+const config = new pulumi.Config();
+exports.superSecret = config.require("supersecret");
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+config = pulumi.Config()
+
+pulumi.export('superSecret',  config.require("supersecret"))
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		config := config.New(ctx, "")
+		superSecret := config.Require("supersecret")
+
+		ctx.Export("superSecret", pulumi.String(superSecret))
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+<insert csharp here>
+```
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Now we need to verify the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. Let's unset the AWS_PROFILE environment variable and then rerun `Pulumi up`:
+
+```bash
+unset AWS_PROFILE
+pulumi up
+error: getting secrets manager: secrets (code=Unknown): InvalidSignatureException: The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. Consult the service documentation for details.
+	status code: 400, request id: 9cf7508d-a7d5-40bb-b40f-98f68e82ac74
+```
+
+Excellent! We can't read these values without access to this KMS key. We can be safe in the knowledge our secret values are only readable by us, including when stored in the Pulumi state!
+
+## Wrap up
+
+This example showed how to use client-side encryption with AWS KMS, but Pulumi as mentioned before, Pulumi has support for Azure KeyVault, Google Cloud KMS and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers). 
+
+We hope your next compliance audit is more relaxed with this feature available!
