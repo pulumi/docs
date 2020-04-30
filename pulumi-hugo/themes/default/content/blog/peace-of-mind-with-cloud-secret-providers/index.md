@@ -532,7 +532,7 @@ class KeyStack : Stack
 
 {{< /chooser >}}
 
-In this example, we've made the IAM role allowed access to the key in the key policy configurable to an IAM role, and we've also given read permissions to the key to everyone in the account. Let's set some configuration variables now so we can be sure we can use this key for our next Pulumi stack:
+In this example, we've made the IAM role allowed access to the key in the key policy configurable to an IAM role, and we've also given read permissions to the key to everyone in the account. Let's set some configuration variables so we can be sure we can use this key for our next Pulumi stack:
 
 ```bash
 # Get the current AWS account ID and set it as a config variable
@@ -543,7 +543,7 @@ aws sts get-caller-identity | jq .Arn -r | pulumi config set <projectname>:iamRo
 
 ## Initialize a New Stack
 
-Now our key has been created and is adequately scoped we can create a new stack and use the `secrets-provider` flag on creation to specify the KMS key to encrypt our secrets.
+Now our key has been created and is adequately scoped; we can create a new stack and use the `secrets-provider` flag on creation to specify the KMS key to encrypt our secrets.
 
 ```bash
 # In our examples we set our alias to "stack-encryption-key" so we'll use that
@@ -551,7 +551,7 @@ Now our key has been created and is adequately scoped we can create a new stack 
 pulumi new aws-typescript -n <projectname> -s <stackname> -d "An example stack encrypted with AWS KMS" --secrets-provider="awskms://alias/stack-encryption-key?region=us-west-2" --config aws:region=us-west-2
 ```
 
-You can check inside your `Pulumi.<stackname>.yaml` which key you're using to encrypt your secrets:
+You can check inside your `Pulumi.<stackname>.yaml` for which key you're using to encrypt your secrets:
 
 ```yaml
 secretsprovider: awskms://alias/stack-encryption-key?region=us-west-2
@@ -568,8 +568,9 @@ Now we've initialized our stack we can add a secret configuration value using th
 pulumi config set --secret <projectname>:supersecret correct-horse-battery-stable
 ```
 
-Verify the encryption
-To verify that the secret is indeed only accessible to the KMS key we created earlier, we can verify by removing access to the key temporarily and trying to perform a Pulumi operation. First, let's use the secret in our stack:
+## Verify the encryption
+
+To verify that the secret is indeed only accessible to the KMS key we created earlier, we can remove access to the key temporarily and try to perform a Pulumi operation. First, let's use the secret in our stack:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -650,7 +651,7 @@ class AnotherStack : Stack
 
 {{< /chooser >}}
 
-Now we need to verify the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. Let's unset the AWS_PROFILE environment variable and then rerun `Pulumi up`:
+Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. Let's unset the AWS_PROFILE environment variable and then rerun `Pulumi up`:
 
 ```bash
 unset AWS_PROFILE
@@ -663,6 +664,6 @@ Excellent! We can't read these values without access to this KMS key. We can be 
 
 ## Wrap up
 
-This example showed how to use client-side encryption with AWS KMS, but Pulumi as mentioned before, Pulumi has support for Azure KeyVault, Google Cloud KMS and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers). 
+This example showed how to use client-side encryption with AWS KMS, but Pulumi, as mentioned before, has support for Azure KeyVault, Google Cloud KMS, and Hashicorp Vault for storing your keys. You can find examples of how to use these encryption methods in our [examples repo](https://github.com/pulumi/examples/tree/master/secrets-provider) and take a look at our [secrets provider documentation](https://www.pulumi.com/docs/intro/concepts/config/#available-encryption-providers). 
 
 We hope your next compliance audit is more relaxed with this feature available!
