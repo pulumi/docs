@@ -37,7 +37,7 @@ git_sha: "89a6ef287139e89ade7f8f584d0de67d17406fd7"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L15">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ Certificates can be imported from certificate files on the local disk, in PEM fo
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ssl_certificate.html.markdown.
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -64,7 +64,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L24">method <b>get</b></a>
 </h4>
 
 
@@ -75,14 +75,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L35">method <b>isInstance</b></a>
 </h4>
 
 
@@ -93,7 +93,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L45">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L45">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -101,7 +101,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Content of certificate on Disk
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -110,7 +110,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -118,7 +118,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the SSL Certificate to be Imported on to BIGIP
 
 <h4 class="pdoc-member-header" id="Certificate-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L53">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L53">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>partition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ Name of the SSL Certificate to be Imported on to BIGIP
 Partition on to SSL Certificate to be imported
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -135,7 +135,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Key" data-link-title="Key">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L15">
         Resource <strong>Key</strong>
     </a>
 </h3>
@@ -148,7 +148,7 @@ Certificate key can be imported from certificate key files on the local disk, in
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ssl_key.html.markdown.
 
 <h4 class="pdoc-member-header" id="Key-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -162,7 +162,7 @@ Create a Key resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Key-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L24">method <b>get</b></a>
 </h4>
 
 
@@ -173,14 +173,14 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Key-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Key-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L35">method <b>isInstance</b></a>
 </h4>
 
 
@@ -191,7 +191,7 @@ Returns true if the given object is an instance of Key.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Key-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L45">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L45">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Content of SSL certificate key present on local Disk
 
 <h4 class="pdoc-member-header" id="Key-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -208,7 +208,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Key-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -216,7 +216,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the SSL Certificate key to be Imported on to BIGIP
 
 <h4 class="pdoc-member-header" id="Key-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L53">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L53">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>partition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ Name of the SSL Certificate key to be Imported on to BIGIP
 Partition on to SSL Certificate key to be imported
 
 <h4 class="pdoc-member-header" id="Key-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -236,7 +236,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L114">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -246,7 +246,7 @@ deployments.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L118">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L118">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ The set of arguments for constructing a Certificate resource.
 Content of certificate on Disk
 
 <h4 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ Content of certificate on Disk
 Name of the SSL Certificate to be Imported on to BIGIP
 
 <h4 class="pdoc-member-header" id="CertificateArgs-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L126">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L126">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ Name of the SSL Certificate to be Imported on to BIGIP
 Partition on to SSL Certificate to be imported
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L96">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -280,7 +280,7 @@ Partition on to SSL Certificate to be imported
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L100">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L100">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ Input properties used for looking up and filtering Certificate resources.
 Content of certificate on Disk
 
 <h4 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ Content of certificate on Disk
 Name of the SSL Certificate to be Imported on to BIGIP
 
 <h4 class="pdoc-member-header" id="CertificateState-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/certificate.ts#L108">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/certificate.ts#L108">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ Name of the SSL Certificate to be Imported on to BIGIP
 Partition on to SSL Certificate to be imported
 
 <h3 class="pdoc-module-header" id="KeyArgs" data-link-title="KeyArgs">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L114">
         interface <strong>KeyArgs</strong>
     </a>
 </h3>
@@ -314,7 +314,7 @@ Partition on to SSL Certificate to be imported
 The set of arguments for constructing a Key resource.
 
 <h4 class="pdoc-member-header" id="KeyArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L118">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L118">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ The set of arguments for constructing a Key resource.
 Content of SSL certificate key present on local Disk
 
 <h4 class="pdoc-member-header" id="KeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ Content of SSL certificate key present on local Disk
 Name of the SSL Certificate key to be Imported on to BIGIP
 
 <h4 class="pdoc-member-header" id="KeyArgs-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L126">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L126">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ Name of the SSL Certificate key to be Imported on to BIGIP
 Partition on to SSL Certificate key to be imported
 
 <h3 class="pdoc-module-header" id="KeyState" data-link-title="KeyState">
-    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L96">
         interface <strong>KeyState</strong>
     </a>
 </h3>
@@ -348,7 +348,7 @@ Partition on to SSL Certificate key to be imported
 Input properties used for looking up and filtering Key resources.
 
 <h4 class="pdoc-member-header" id="KeyState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L100">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L100">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ Input properties used for looking up and filtering Key resources.
 Content of SSL certificate key present on local Disk
 
 <h4 class="pdoc-member-header" id="KeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -364,7 +364,7 @@ Content of SSL certificate key present on local Disk
 Name of the SSL Certificate key to be Imported on to BIGIP
 
 <h4 class="pdoc-member-header" id="KeyState-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/{{< param git_sha >}}/sdk/nodejs/ssl/key.ts#L108">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/89a6ef287139e89ade7f8f584d0de67d17406fd7/sdk/nodejs/ssl/key.ts#L108">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

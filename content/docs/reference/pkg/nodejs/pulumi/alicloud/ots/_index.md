@@ -40,7 +40,7 @@ git_sha: "d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L32">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -72,7 +72,7 @@ const foo = new alicloud.ots.Instance("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ots_instance.html.markdown.
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +86,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +97,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-accessedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L62">property <b>accessedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L62">property <b>accessedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessedBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The network limitation of accessing instance. Valid values:
 
 <h4 class="pdoc-member-header" id="Instance-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ The network limitation of accessing instance. Valid values:
 The description of the instance. Currently, it does not support modifying.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +140,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L70">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L70">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of instance. Valid values are "Capacity" and "HighPerformance". Default to "HighPerformance".
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ The type of instance. Valid values are "Capacity" and "HighPerformance". Default
 The name of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L78">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L78">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ The name of the instance.
 A mapping of tags to assign to the instance.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -173,7 +173,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InstanceAttachment" data-link-title="InstanceAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L47">
         Resource <strong>InstanceAttachment</strong>
     </a>
 </h3>
@@ -220,7 +220,7 @@ const fooInstanceAttachment = new alicloud.ots.InstanceAttachment("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ots_instance_attachment.html.markdown.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -234,7 +234,7 @@ Create a InstanceAttachment resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -245,14 +245,14 @@ Get an existing InstanceAttachment resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -263,7 +263,7 @@ Returns true if the given object is an instance of InstanceAttachment.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -272,7 +272,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L77">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L77">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the OTS instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -289,7 +289,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L81">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L81">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ deployments.
 The ID of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-vpcName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L85">property <b>vpcName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L85">property <b>vpcName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The ID of attaching VPC to instance.
 The name of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachment-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L89">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L89">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -313,14 +313,14 @@ The name of attaching VPC to instance.
 The ID of attaching VSwitch to instance.
 
 <h3 class="pdoc-module-header" id="Table" data-link-title="Table">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L9">
         Resource <strong>Table</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Table</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L59"> <b>constructor</b></a>
 </h4>
 
 
@@ -334,7 +334,7 @@ Create a Table resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L18">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -345,14 +345,14 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Table-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L29">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -363,7 +363,7 @@ Returns true if the given object is an instance of Table.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Table-deviationCellVersionInSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L39">property <b>deviationCellVersionInSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L39">property <b>deviationCellVersionInSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deviationCellVersionInSec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 
 <h4 class="pdoc-member-header" id="Table-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -380,7 +380,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Table-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L43">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L43">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the OTS instance in which table will located.
 
 <h4 class="pdoc-member-header" id="Table-maxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L47">property <b>maxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L47">property <b>maxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ The name of the OTS instance in which table will located.
 The maximum number of versions stored in this table. The valid value is 1-2147483647.
 
 <h4 class="pdoc-member-header" id="Table-primaryKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L51">property <b>primaryKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L51">property <b>primaryKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#TablePrimaryKey'>TablePrimaryKey</a>[]&gt;;</code></pre>
@@ -404,7 +404,7 @@ The maximum number of versions stored in this table. The valid value is 1-214748
 The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primaryKey` should not be less than one and not be more than four.
 
 <h4 class="pdoc-member-header" id="Table-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L55">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L55">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -412,7 +412,7 @@ The property of `TableMeta` which indicates the structure information of a table
 The table name of the OTS instance. If changed, a new table would be created.
 
 <h4 class="pdoc-member-header" id="Table-timeToLive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L59">property <b>timeToLive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L59">property <b>timeToLive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ The table name of the OTS instance. If changed, a new table would be created.
 The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 
 <h4 class="pdoc-member-header" id="Table-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -432,7 +432,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L145">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -442,7 +442,7 @@ deployments.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-accessedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L149">property <b>accessedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L149">property <b>accessedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessedBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ The set of arguments for constructing a Instance resource.
 The network limitation of accessing instance. Valid values:
 
 <h4 class="pdoc-member-header" id="InstanceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L153">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L153">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ The network limitation of accessing instance. Valid values:
 The description of the instance. Currently, it does not support modifying.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L157">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L157">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ The description of the instance. Currently, it does not support modifying.
 The type of instance. Valid values are "Capacity" and "HighPerformance". Default to "HighPerformance".
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ The type of instance. Valid values are "Capacity" and "HighPerformance". Default
 The name of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L165">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L165">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -482,7 +482,7 @@ The name of the instance.
 A mapping of tags to assign to the instance.
 
 <h3 class="pdoc-module-header" id="InstanceAttachmentArgs" data-link-title="InstanceAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L159">
         interface <strong>InstanceAttachmentArgs</strong>
     </a>
 </h3>
@@ -492,7 +492,7 @@ A mapping of tags to assign to the instance.
 The set of arguments for constructing a InstanceAttachment resource.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L163">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L163">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ The set of arguments for constructing a InstanceAttachment resource.
 The name of the OTS instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-vpcName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L167">property <b>vpcName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L167">property <b>vpcName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,7 +508,7 @@ The name of the OTS instance.
 The name of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L171">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L171">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -516,7 +516,7 @@ The name of attaching VPC to instance.
 The ID of attaching VSwitch to instance.
 
 <h3 class="pdoc-module-header" id="InstanceAttachmentState" data-link-title="InstanceAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L137">
         interface <strong>InstanceAttachmentState</strong>
     </a>
 </h3>
@@ -526,7 +526,7 @@ The ID of attaching VSwitch to instance.
 Input properties used for looking up and filtering InstanceAttachment resources.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L141">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L141">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Input properties used for looking up and filtering InstanceAttachment resources.
 The name of the OTS instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L145">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L145">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ The name of the OTS instance.
 The ID of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-vpcName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L149">property <b>vpcName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L149">property <b>vpcName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ The ID of attaching VPC to instance.
 The name of attaching VPC to instance.
 
 <h4 class="pdoc-member-header" id="InstanceAttachmentState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instanceAttachment.ts#L153">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instanceAttachment.ts#L153">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ The name of attaching VPC to instance.
 The ID of attaching VSwitch to instance.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L119">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -568,7 +568,7 @@ The ID of attaching VSwitch to instance.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-accessedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L123">property <b>accessedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L123">property <b>accessedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessedBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ Input properties used for looking up and filtering Instance resources.
 The network limitation of accessing instance. Valid values:
 
 <h4 class="pdoc-member-header" id="InstanceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L127">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L127">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The network limitation of accessing instance. Valid values:
 The description of the instance. Currently, it does not support modifying.
 
 <h4 class="pdoc-member-header" id="InstanceState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L131">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L131">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The description of the instance. Currently, it does not support modifying.
 The type of instance. Valid values are "Capacity" and "HighPerformance". Default to "HighPerformance".
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L135">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ The type of instance. Valid values are "Capacity" and "HighPerformance". Default
 The name of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/instance.ts#L139">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/instance.ts#L139">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -608,7 +608,7 @@ The name of the instance.
 A mapping of tags to assign to the instance.
 
 <h3 class="pdoc-module-header" id="TableArgs" data-link-title="TableArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L147">
         interface <strong>TableArgs</strong>
     </a>
 </h3>
@@ -618,7 +618,7 @@ A mapping of tags to assign to the instance.
 The set of arguments for constructing a Table resource.
 
 <h4 class="pdoc-member-header" id="TableArgs-deviationCellVersionInSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L151">property <b>deviationCellVersionInSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L151">property <b>deviationCellVersionInSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviationCellVersionInSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -626,7 +626,7 @@ The set of arguments for constructing a Table resource.
 The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 
 <h4 class="pdoc-member-header" id="TableArgs-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L155">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L155">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ The max version offset of the table. The valid value is 1-9223372036854775807. D
 The name of the OTS instance in which table will located.
 
 <h4 class="pdoc-member-header" id="TableArgs-maxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L159">property <b>maxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L159">property <b>maxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ The name of the OTS instance in which table will located.
 The maximum number of versions stored in this table. The valid value is 1-2147483647.
 
 <h4 class="pdoc-member-header" id="TableArgs-primaryKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L163">property <b>primaryKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L163">property <b>primaryKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#TablePrimaryKey'>TablePrimaryKey</a>&gt;[]&gt;;</code></pre>
@@ -650,7 +650,7 @@ The maximum number of versions stored in this table. The valid value is 1-214748
 The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primaryKey` should not be less than one and not be more than four.
 
 <h4 class="pdoc-member-header" id="TableArgs-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L167">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L167">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ The property of `TableMeta` which indicates the structure information of a table
 The table name of the OTS instance. If changed, a new table would be created.
 
 <h4 class="pdoc-member-header" id="TableArgs-timeToLive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L171">property <b>timeToLive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L171">property <b>timeToLive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -666,7 +666,7 @@ The table name of the OTS instance. If changed, a new table would be created.
 The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 
 <h3 class="pdoc-module-header" id="TableState" data-link-title="TableState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L117">
         interface <strong>TableState</strong>
     </a>
 </h3>
@@ -676,7 +676,7 @@ The retention time of data stored in this table (unit: second). The value maximu
 Input properties used for looking up and filtering Table resources.
 
 <h4 class="pdoc-member-header" id="TableState-deviationCellVersionInSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L121">property <b>deviationCellVersionInSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L121">property <b>deviationCellVersionInSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviationCellVersionInSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -684,7 +684,7 @@ Input properties used for looking up and filtering Table resources.
 The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 
 <h4 class="pdoc-member-header" id="TableState-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L125">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L125">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ The max version offset of the table. The valid value is 1-9223372036854775807. D
 The name of the OTS instance in which table will located.
 
 <h4 class="pdoc-member-header" id="TableState-maxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L129">property <b>maxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L129">property <b>maxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ The name of the OTS instance in which table will located.
 The maximum number of versions stored in this table. The valid value is 1-2147483647.
 
 <h4 class="pdoc-member-header" id="TableState-primaryKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L133">property <b>primaryKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L133">property <b>primaryKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#TablePrimaryKey'>TablePrimaryKey</a>&gt;[]&gt;;</code></pre>
@@ -708,7 +708,7 @@ The maximum number of versions stored in this table. The valid value is 1-214748
 The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primaryKey` should not be less than one and not be more than four.
 
 <h4 class="pdoc-member-header" id="TableState-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L137">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L137">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ The property of `TableMeta` which indicates the structure information of a table
 The table name of the OTS instance. If changed, a new table would be created.
 
 <h4 class="pdoc-member-header" id="TableState-timeToLive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ots/table.ts#L141">property <b>timeToLive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ots/table.ts#L141">property <b>timeToLive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeToLive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

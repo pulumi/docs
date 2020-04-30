@@ -28,7 +28,7 @@ git_sha: "675c878364fae3780683a9c821869bd7202571dc"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="debug" data-link-title="debug">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/log/index.ts#L34">
+    <a href="https://github.com/pulumi/pulumi/blob/675c878364fae3780683a9c821869bd7202571dc/sdk/nodejs/log/index.ts#L34">
         function <strong>debug</strong>
     </a>
 </h3>
@@ -40,7 +40,7 @@ git_sha: "675c878364fae3780683a9c821869bd7202571dc"
 debug logs a debug-level message that is generally hidden from end-users.
 
 <h3 class="pdoc-module-header" id="error" data-link-title="error">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/log/index.ts#L75">
+    <a href="https://github.com/pulumi/pulumi/blob/675c878364fae3780683a9c821869bd7202571dc/sdk/nodejs/log/index.ts#L75">
         function <strong>error</strong>
     </a>
 </h3>
@@ -52,7 +52,7 @@ debug logs a debug-level message that is generally hidden from end-users.
 error logs a fatal error to indicate that the tool should stop processing resource operations immediately.
 
 <h3 class="pdoc-module-header" id="hasErrors" data-link-title="hasErrors">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/log/index.ts#L27">
+    <a href="https://github.com/pulumi/pulumi/blob/675c878364fae3780683a9c821869bd7202571dc/sdk/nodejs/log/index.ts#L27">
         function <strong>hasErrors</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ error logs a fatal error to indicate that the tool should stop processing resour
 hasErrors returns true if any errors have occurred in the program.
 
 <h3 class="pdoc-module-header" id="info" data-link-title="info">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/log/index.ts#L47">
+    <a href="https://github.com/pulumi/pulumi/blob/675c878364fae3780683a9c821869bd7202571dc/sdk/nodejs/log/index.ts#L47">
         function <strong>info</strong>
     </a>
 </h3>
@@ -76,7 +76,7 @@ hasErrors returns true if any errors have occurred in the program.
 info logs an informational message that is generally printed to stdout during resource operations.
 
 <h3 class="pdoc-module-header" id="warn" data-link-title="warn">
-    <a href="https://github.com/pulumi/pulumi/blob/{{< param git_sha >}}/sdk/nodejs/log/index.ts#L61">
+    <a href="https://github.com/pulumi/pulumi/blob/675c878364fae3780683a9c821869bd7202571dc/sdk/nodejs/log/index.ts#L61">
         function <strong>warn</strong>
     </a>
 </h3>

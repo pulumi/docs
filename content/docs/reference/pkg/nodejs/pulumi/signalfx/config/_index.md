@@ -33,7 +33,7 @@ git_sha: "c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiUrl</strong>
     </a>
 </h3>
@@ -43,7 +43,7 @@ git_sha: "c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438"
 API URL for your SignalFx org, may include a realm
 
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/config/vars.ts#L16">
         let <strong>authToken</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ API URL for your SignalFx org, may include a realm
 SignalFx auth token
 
 <h3 class="pdoc-module-header" id="customAppUrl" data-link-title="customAppUrl">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/config/vars.ts#L20">
         let <strong>customAppUrl</strong>
     </a>
 </h3>

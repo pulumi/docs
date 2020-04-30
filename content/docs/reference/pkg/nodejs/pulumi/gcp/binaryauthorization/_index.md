@@ -46,7 +46,7 @@ git_sha: "8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Attestor" data-link-title="Attestor">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L21">
         Resource <strong>Attestor</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ To get more information about Attestor, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown.
 
 <h4 class="pdoc-member-header" id="Attestor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a Attestor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Attestor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +89,14 @@ Get an existing Attestor resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Attestor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Attestor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Returns true if the given object is an instance of Attestor.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Attestor-attestationAuthorityNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L51">property <b>attestationAuthorityNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L51">property <b>attestationAuthorityNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNote'>AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Attestor-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 
 <h4 class="pdoc-member-header" id="Attestor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Attestor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ deployments and may be missing (undefined) during planning phases.
 The resource name.
 
 <h4 class="pdoc-member-header" id="Attestor-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L65">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L65">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Attestor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -159,7 +159,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AttestorIamBinding" data-link-title="AttestorIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">
         Resource <strong>AttestorIamBinding</strong>
     </a>
 </h3>
@@ -179,7 +179,7 @@ Three different resources help you manage your IAM policy for Binary Authorizati
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam.html.markdown.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -193,7 +193,7 @@ Create a AttestorIamBinding resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -204,14 +204,14 @@ Get an existing AttestorIamBinding resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -222,7 +222,7 @@ Returns true if the given object is an instance of AttestorIamBinding.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L52">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L52">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -230,12 +230,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L53">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L53">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorIamBindingCondition'>AttestorIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L57">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L57">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +243,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -252,12 +252,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L58">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L58">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L63">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L69">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L69">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="AttestorIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -285,7 +285,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AttestorIamMember" data-link-title="AttestorIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">
         Resource <strong>AttestorIamMember</strong>
     </a>
 </h3>
@@ -305,7 +305,7 @@ Three different resources help you manage your IAM policy for Binary Authorizati
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam.html.markdown.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -319,7 +319,7 @@ Create a AttestorIamMember resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -330,14 +330,14 @@ Get an existing AttestorIamMember resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -348,7 +348,7 @@ Returns true if the given object is an instance of AttestorIamMember.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L52">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L52">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,12 +356,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L53">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L53">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorIamMemberCondition'>AttestorIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L57">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L57">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -378,12 +378,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L58">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L58">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L63">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -392,7 +392,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L69">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L69">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="AttestorIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -411,7 +411,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AttestorIamPolicy" data-link-title="AttestorIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">
         Resource <strong>AttestorIamPolicy</strong>
     </a>
 </h3>
@@ -431,7 +431,7 @@ Three different resources help you manage your IAM policy for Binary Authorizati
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor_iam.html.markdown.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -445,7 +445,7 @@ Create a AttestorIamPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -456,14 +456,14 @@ Get an existing AttestorIamPolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -474,7 +474,7 @@ Returns true if the given object is an instance of AttestorIamPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L52">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L52">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L56">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L56">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -490,7 +490,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -499,7 +499,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L61">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L61">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,7 +508,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L66">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L66">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -526,7 +526,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L21">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -544,7 +544,7 @@ To get more information about Policy, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -558,7 +558,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -569,14 +569,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -587,7 +587,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-admissionWhitelistPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L53">property <b>admissionWhitelistPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L53">property <b>admissionWhitelistPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>admissionWhitelistPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAdmissionWhitelistPattern'>PolicyAdmissionWhitelistPattern</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Policy-clusterAdmissionRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L61">property <b>clusterAdmissionRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L61">property <b>clusterAdmissionRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterAdmissionRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyClusterAdmissionRule'>PolicyClusterAdmissionRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 
 <h4 class="pdoc-member-header" id="Policy-defaultAdmissionRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L66">property <b>defaultAdmissionRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L66">property <b>defaultAdmissionRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyDefaultAdmissionRule'>PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
@@ -618,7 +618,7 @@ Default admission rule for a cluster without a per-cluster admission
 rule.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -626,7 +626,7 @@ rule.  Structure is documented below.
 A descriptive comment.
 
 <h4 class="pdoc-member-header" id="Policy-globalPolicyEvaluationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L76">property <b>globalPolicyEvaluationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L76">property <b>globalPolicyEvaluationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalPolicyEvaluationMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -645,7 +645,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L81">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L81">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -666,7 +666,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AttestorArgs" data-link-title="AttestorArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L131">
         interface <strong>AttestorArgs</strong>
     </a>
 </h3>
@@ -676,7 +676,7 @@ deployments.
 The set of arguments for constructing a Attestor resource.
 
 <h4 class="pdoc-member-header" id="AttestorArgs-attestationAuthorityNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L135">property <b>attestationAuthorityNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L135">property <b>attestationAuthorityNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationAuthorityNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote'>AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
@@ -684,7 +684,7 @@ The set of arguments for constructing a Attestor resource.
 A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="AttestorArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L140">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L140">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 
 <h4 class="pdoc-member-header" id="AttestorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ displayed in chooser dialogs.
 The resource name.
 
 <h4 class="pdoc-member-header" id="AttestorArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L149">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L149">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -710,7 +710,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="AttestorIamBindingArgs" data-link-title="AttestorIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L148">
         interface <strong>AttestorIamBindingArgs</strong>
     </a>
 </h3>
@@ -720,7 +720,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a AttestorIamBinding resource.
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingArgs-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L152">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L152">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -728,17 +728,17 @@ The set of arguments for constructing a AttestorIamBinding resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L153">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L153">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamBindingCondition'>AttestorIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L154">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L154">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L159">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L159">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L165">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L165">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="AttestorIamBindingState" data-link-title="AttestorIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L121">
         interface <strong>AttestorIamBindingState</strong>
     </a>
 </h3>
@@ -767,7 +767,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering AttestorIamBinding resources.
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L125">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L125">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -775,12 +775,12 @@ Input properties used for looking up and filtering AttestorIamBinding resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L126">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L126">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamBindingCondition'>AttestorIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L130">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L130">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,12 +788,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L131">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L131">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L136">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L136">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L142">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamBinding.ts#L142">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="AttestorIamMemberArgs" data-link-title="AttestorIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L148">
         interface <strong>AttestorIamMemberArgs</strong>
     </a>
 </h3>
@@ -822,7 +822,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a AttestorIamMember resource.
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberArgs-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L152">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L152">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -830,17 +830,17 @@ The set of arguments for constructing a AttestorIamMember resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L153">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L153">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamMemberCondition'>AttestorIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L154">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L154">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L159">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L159">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +849,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L165">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L165">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -859,7 +859,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="AttestorIamMemberState" data-link-title="AttestorIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L121">
         interface <strong>AttestorIamMemberState</strong>
     </a>
 </h3>
@@ -869,7 +869,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering AttestorIamMember resources.
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L125">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L125">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,12 +877,12 @@ Input properties used for looking up and filtering AttestorIamMember resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L126">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L126">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorIamMemberCondition'>AttestorIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L130">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L130">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -890,12 +890,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L131">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L131">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L136">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L136">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AttestorIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L142">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamMember.ts#L142">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -914,7 +914,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="AttestorIamPolicyArgs" data-link-title="AttestorIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L135">
         interface <strong>AttestorIamPolicyArgs</strong>
     </a>
 </h3>
@@ -924,7 +924,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a AttestorIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyArgs-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L139">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L139">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -932,7 +932,7 @@ The set of arguments for constructing a AttestorIamPolicy resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L144">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L144">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -941,7 +941,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L149">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L149">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -950,7 +950,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h3 class="pdoc-module-header" id="AttestorIamPolicyState" data-link-title="AttestorIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L111">
         interface <strong>AttestorIamPolicyState</strong>
     </a>
 </h3>
@@ -960,7 +960,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering AttestorIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyState-attestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L115">property <b>attestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L115">property <b>attestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -968,7 +968,7 @@ Input properties used for looking up and filtering AttestorIamPolicy resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L119">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L119">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -976,7 +976,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L124">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L124">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="AttestorIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L129">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestorIamPolicy.ts#L129">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h3 class="pdoc-module-header" id="AttestorState" data-link-title="AttestorState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L107">
         interface <strong>AttestorState</strong>
     </a>
 </h3>
@@ -1004,7 +1004,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Input properties used for looking up and filtering Attestor resources.
 
 <h4 class="pdoc-member-header" id="AttestorState-attestationAuthorityNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L111">property <b>attestationAuthorityNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L111">property <b>attestationAuthorityNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationAuthorityNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote'>AttestorAttestationAuthorityNote</a>&gt;;</code></pre>
@@ -1012,7 +1012,7 @@ Input properties used for looking up and filtering Attestor resources.
 A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="AttestorState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L116">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L116">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 
 <h4 class="pdoc-member-header" id="AttestorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ displayed in chooser dialogs.
 The resource name.
 
 <h4 class="pdoc-member-header" id="AttestorState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/attestor.ts#L125">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/attestor.ts#L125">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L167">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -1048,7 +1048,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-admissionWhitelistPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L173">property <b>admissionWhitelistPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L173">property <b>admissionWhitelistPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern'>PolicyAdmissionWhitelistPattern</a>&gt;[]&gt;;</code></pre>
@@ -1058,7 +1058,7 @@ image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-clusterAdmissionRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L181">property <b>clusterAdmissionRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L181">property <b>clusterAdmissionRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule'>PolicyClusterAdmissionRule</a>&gt;[]&gt;;</code></pre>
@@ -1070,7 +1070,7 @@ or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-defaultAdmissionRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L186">property <b>defaultAdmissionRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L186">property <b>defaultAdmissionRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAdmissionRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule'>PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
@@ -1079,7 +1079,7 @@ Default admission rule for a cluster without a per-cluster admission
 rule.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L190">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L190">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ rule.  Structure is documented below.
 A descriptive comment.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-globalPolicyEvaluationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L196">property <b>globalPolicyEvaluationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L196">property <b>globalPolicyEvaluationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalPolicyEvaluationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L201">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L201">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L127">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -1116,7 +1116,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-admissionWhitelistPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L133">property <b>admissionWhitelistPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L133">property <b>admissionWhitelistPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>admissionWhitelistPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern'>PolicyAdmissionWhitelistPattern</a>&gt;[]&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PolicyState-clusterAdmissionRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L141">property <b>clusterAdmissionRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L141">property <b>clusterAdmissionRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAdmissionRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule'>PolicyClusterAdmissionRule</a>&gt;[]&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 
 <h4 class="pdoc-member-header" id="PolicyState-defaultAdmissionRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L146">property <b>defaultAdmissionRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L146">property <b>defaultAdmissionRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAdmissionRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule'>PolicyDefaultAdmissionRule</a>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ Default admission rule for a cluster without a per-cluster admission
 rule.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ rule.  Structure is documented below.
 A descriptive comment.
 
 <h4 class="pdoc-member-header" id="PolicyState-globalPolicyEvaluationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L156">property <b>globalPolicyEvaluationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L156">property <b>globalPolicyEvaluationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalPolicyEvaluationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1165,7 +1165,7 @@ for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/binaryauthorization/policy.ts#L161">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/binaryauthorization/policy.ts#L161">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

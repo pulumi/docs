@@ -37,7 +37,7 @@ git_sha: "5dde5b1ce8704e28e8e7a34f614d0244aab02448"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="MemberAccountAssociation" data-link-title="MemberAccountAssociation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L27">
         Resource <strong>MemberAccountAssociation</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ const example = new aws.macie.MemberAccountAssociation("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L57"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a MemberAccountAssociation resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +89,14 @@ Get an existing MemberAccountAssociation resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Returns true if the given object is an instance of MemberAccountAssociation.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -116,7 +116,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-memberAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L57">property <b>memberAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L57">property <b>memberAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the AWS account that you want to associate with Amazon Macie as a member account.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="S3BucketAssociation" data-link-title="S3BucketAssociation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L33">
         Resource <strong>S3BucketAssociation</strong>
     </a>
 </h3>
@@ -164,7 +164,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -178,7 +178,7 @@ Create a S3BucketAssociation resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -189,14 +189,14 @@ Get an existing S3BucketAssociation resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -207,7 +207,7 @@ Returns true if the given object is an instance of S3BucketAssociation.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L63">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L63">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the S3 bucket that you want to associate with Amazon Macie.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-classificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L67">property <b>classificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L67">property <b>classificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>classificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#S3BucketAssociationClassificationType'>S3BucketAssociationClassificationType</a>&gt;;</code></pre>
@@ -223,7 +223,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
 The configuration of how Amazon Macie classifies the S3 objects.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -232,7 +232,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-memberAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L71">property <b>memberAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L71">property <b>memberAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memberAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `memberAccountId` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L75">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L75">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ The ID of the Amazon Macie member account whose S3 resources you want to associa
 Object key prefix identifying one or more S3 objects to which the association applies.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -260,7 +260,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="MemberAccountAssociationArgs" data-link-title="MemberAccountAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L103">
         interface <strong>MemberAccountAssociationArgs</strong>
     </a>
 </h3>
@@ -270,7 +270,7 @@ deployments.
 The set of arguments for constructing a MemberAccountAssociation resource.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociationArgs-memberAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L107">property <b>memberAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L107">property <b>memberAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ The set of arguments for constructing a MemberAccountAssociation resource.
 The ID of the AWS account that you want to associate with Amazon Macie as a member account.
 
 <h3 class="pdoc-module-header" id="MemberAccountAssociationState" data-link-title="MemberAccountAssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L93">
         interface <strong>MemberAccountAssociationState</strong>
     </a>
 </h3>
@@ -288,7 +288,7 @@ The ID of the AWS account that you want to associate with Amazon Macie as a memb
 Input properties used for looking up and filtering MemberAccountAssociation resources.
 
 <h4 class="pdoc-member-header" id="MemberAccountAssociationState-memberAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/memberAccountAssociation.ts#L97">property <b>memberAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/memberAccountAssociation.ts#L97">property <b>memberAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ Input properties used for looking up and filtering MemberAccountAssociation reso
 The ID of the AWS account that you want to associate with Amazon Macie as a member account.
 
 <h3 class="pdoc-module-header" id="S3BucketAssociationArgs" data-link-title="S3BucketAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L139">
         interface <strong>S3BucketAssociationArgs</strong>
     </a>
 </h3>
@@ -306,7 +306,7 @@ The ID of the AWS account that you want to associate with Amazon Macie as a memb
 The set of arguments for constructing a S3BucketAssociation resource.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationArgs-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L143">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L143">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ The set of arguments for constructing a S3BucketAssociation resource.
 The name of the S3 bucket that you want to associate with Amazon Macie.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationArgs-classificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L147">property <b>classificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L147">property <b>classificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>classificationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3BucketAssociationClassificationType'>S3BucketAssociationClassificationType</a>&gt;;</code></pre>
@@ -322,7 +322,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
 The configuration of how Amazon Macie classifies the S3 objects.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationArgs-memberAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L151">property <b>memberAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L151">property <b>memberAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ The configuration of how Amazon Macie classifies the S3 objects.
 The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `memberAccountId` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationArgs-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L155">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L155">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ The ID of the Amazon Macie member account whose S3 resources you want to associa
 Object key prefix identifying one or more S3 objects to which the association applies.
 
 <h3 class="pdoc-module-header" id="S3BucketAssociationState" data-link-title="S3BucketAssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L117">
         interface <strong>S3BucketAssociationState</strong>
     </a>
 </h3>
@@ -348,7 +348,7 @@ Object key prefix identifying one or more S3 objects to which the association ap
 Input properties used for looking up and filtering S3BucketAssociation resources.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationState-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L121">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L121">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ Input properties used for looking up and filtering S3BucketAssociation resources
 The name of the S3 bucket that you want to associate with Amazon Macie.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationState-classificationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L125">property <b>classificationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L125">property <b>classificationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>classificationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3BucketAssociationClassificationType'>S3BucketAssociationClassificationType</a>&gt;;</code></pre>
@@ -364,7 +364,7 @@ The name of the S3 bucket that you want to associate with Amazon Macie.
 The configuration of how Amazon Macie classifies the S3 objects.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationState-memberAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L129">property <b>memberAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L129">property <b>memberAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -372,7 +372,7 @@ The configuration of how Amazon Macie classifies the S3 objects.
 The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `memberAccountId` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 
 <h4 class="pdoc-member-header" id="S3BucketAssociationState-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/macie/s3BucketAssociation.ts#L133">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/macie/s3BucketAssociation.ts#L133">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

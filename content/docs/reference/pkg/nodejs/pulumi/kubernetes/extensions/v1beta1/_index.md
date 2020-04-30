@@ -33,7 +33,7 @@ git_sha: "4d130407f48a2c7408f3593f23f64e1932d4022f"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DaemonSet" data-link-title="DaemonSet">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">
         Resource <strong>DaemonSet</strong>
     </a>
 </h3>
@@ -48,7 +48,7 @@ by Kubernetes v1.16+ clusters.
 DaemonSet represents the configuration of a daemon set.
 
 <h4 class="pdoc-member-header" id="DaemonSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -62,7 +62,7 @@ Create a extensions.v1beta1.DaemonSet resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DaemonSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -76,14 +76,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="DaemonSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DaemonSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -94,7 +94,7 @@ Returns true if the given object is an instance of DaemonSet.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DaemonSet-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L23">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L23">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="DaemonSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -114,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DaemonSet-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L31">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"DaemonSet"</span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="DaemonSet-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L37">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L37">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -134,7 +134,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="DaemonSet-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L43">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L43">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonSetSpec'>DaemonSetSpec</a>&gt;;</code></pre>
@@ -143,7 +143,7 @@ The desired behavior of this daemon set. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="DaemonSet-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L50">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L50">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonSetStatus'>DaemonSetStatus</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="DaemonSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -162,7 +162,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DaemonSetList" data-link-title="DaemonSetList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">
         Resource <strong>DaemonSetList</strong>
     </a>
 </h3>
@@ -172,7 +172,7 @@ deployments.
 DaemonSetList is a collection of daemon sets.
 
 <h4 class="pdoc-member-header" id="DaemonSetList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -186,7 +186,7 @@ Create a extensions.v1beta1.DaemonSetList resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DaemonSetList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -200,14 +200,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="DaemonSetList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DaemonSetList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -218,7 +218,7 @@ Returns true if the given object is an instance of DaemonSetList.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DaemonSetList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="DaemonSetList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -238,7 +238,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DaemonSetList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonSet'>DaemonSet</a>[]&gt;;</code></pre>
@@ -246,7 +246,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of daemon sets.
 
 <h4 class="pdoc-member-header" id="DaemonSetList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"DaemonSetList"</span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="DaemonSetList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L39">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -266,7 +266,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="DaemonSetList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -275,7 +275,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Deployment" data-link-title="Deployment">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">
         Resource <strong>Deployment</strong>
     </a>
 </h3>
@@ -312,7 +312,7 @@ time out and mark the resource update as Failed. You can override the default ti
 by setting the 'customTimeouts' option on the resource.
 
 <h4 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -326,7 +326,7 @@ Create a extensions.v1beta1.Deployment resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -340,14 +340,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Deployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -358,7 +358,7 @@ Returns true if the given object is an instance of Deployment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Deployment-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L45">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L45">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Deployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -378,7 +378,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Deployment-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L53">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L53">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Deployment"</span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Deployment-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L58">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L58">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -397,7 +397,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object metadata.
 
 <h4 class="pdoc-member-header" id="Deployment-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L63">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L63">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentSpec'>DeploymentSpec</a>&gt;;</code></pre>
@@ -405,7 +405,7 @@ Standard object metadata.
 Specification of the desired behavior of the Deployment.
 
 <h4 class="pdoc-member-header" id="Deployment-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L68">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L68">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentStatus'>DeploymentStatus</a>&gt;;</code></pre>
@@ -413,7 +413,7 @@ Specification of the desired behavior of the Deployment.
 Most recently observed status of the Deployment.
 
 <h4 class="pdoc-member-header" id="Deployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Deployment.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -422,7 +422,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DeploymentList" data-link-title="DeploymentList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">
         Resource <strong>DeploymentList</strong>
     </a>
 </h3>
@@ -432,7 +432,7 @@ deployments.
 DeploymentList is a list of Deployments.
 
 <h4 class="pdoc-member-header" id="DeploymentList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -446,7 +446,7 @@ Create a extensions.v1beta1.DeploymentList resource with the given unique name, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DeploymentList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -460,14 +460,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="DeploymentList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DeploymentList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -478,7 +478,7 @@ Returns true if the given object is an instance of DeploymentList.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DeploymentList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="DeploymentList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -498,7 +498,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DeploymentList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Deployment'>Deployment</a>[]&gt;;</code></pre>
@@ -506,7 +506,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is the list of Deployments.
 
 <h4 class="pdoc-member-header" id="DeploymentList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"DeploymentList"</span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="DeploymentList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L38">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -525,7 +525,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard list metadata.
 
 <h4 class="pdoc-member-header" id="DeploymentList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -534,7 +534,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Ingress" data-link-title="Ingress">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">
         Resource <strong>Ingress</strong>
     </a>
 </h3>
@@ -565,7 +565,7 @@ time out and mark the resource update as Failed. You can override the default ti
 by setting the 'customTimeouts' option on the resource.
 
 <h4 class="pdoc-member-header" id="Ingress-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -579,7 +579,7 @@ Create a extensions.v1beta1.Ingress resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Ingress-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -593,14 +593,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Ingress-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Ingress-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -611,7 +611,7 @@ Returns true if the given object is an instance of Ingress.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Ingress-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L39">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L39">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -622,7 +622,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Ingress-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -631,7 +631,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Ingress-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L47">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L47">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Ingress"</span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Ingress-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -651,7 +651,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="Ingress-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L59">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L59">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressSpec'>IngressSpec</a>&gt;;</code></pre>
@@ -660,7 +660,7 @@ Spec is the desired state of the Ingress. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Ingress-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L65">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L65">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressStatus'>IngressStatus</a>&gt;;</code></pre>
@@ -669,7 +669,7 @@ Status is the current state of the Ingress. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Ingress-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/Ingress.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -678,7 +678,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IngressList" data-link-title="IngressList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">
         Resource <strong>IngressList</strong>
     </a>
 </h3>
@@ -688,7 +688,7 @@ deployments.
 IngressList is a collection of Ingress.
 
 <h4 class="pdoc-member-header" id="IngressList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -702,7 +702,7 @@ Create a extensions.v1beta1.IngressList resource with the given unique name, arg
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IngressList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -716,14 +716,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="IngressList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IngressList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -734,7 +734,7 @@ Returns true if the given object is an instance of IngressList.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IngressList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="IngressList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -754,7 +754,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IngressList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Ingress'>Ingress</a>[]&gt;;</code></pre>
@@ -762,7 +762,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is the list of Ingress.
 
 <h4 class="pdoc-member-header" id="IngressList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"IngressList"</span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="IngressList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L39">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -782,7 +782,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="IngressList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/IngressList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -791,7 +791,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkPolicy" data-link-title="NetworkPolicy">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">
         Resource <strong>NetworkPolicy</strong>
     </a>
 </h3>
@@ -803,7 +803,7 @@ networking/v1/NetworkPolicy. NetworkPolicy describes what network traffic is all
 set of Pods
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -817,7 +817,7 @@ Create a extensions.v1beta1.NetworkPolicy resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -831,14 +831,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -849,7 +849,7 @@ Returns true if the given object is an instance of NetworkPolicy.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L22">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L22">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -869,7 +869,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L30">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L30">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L36">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L36">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -889,7 +889,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L41">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L41">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicySpec'>NetworkPolicySpec</a>&gt;;</code></pre>
@@ -897,7 +897,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Specification of the desired behavior for this NetworkPolicy.
 
 <h4 class="pdoc-member-header" id="NetworkPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -906,7 +906,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkPolicyList" data-link-title="NetworkPolicyList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">
         Resource <strong>NetworkPolicyList</strong>
     </a>
 </h3>
@@ -917,7 +917,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicyList is deprecated by
 networking/v1/NetworkPolicyList. Network Policy List is a list of NetworkPolicy objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -931,7 +931,7 @@ Create a extensions.v1beta1.NetworkPolicyList resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -945,14 +945,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -963,7 +963,7 @@ Returns true if the given object is an instance of NetworkPolicyList.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L21">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L21">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -974,7 +974,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -983,7 +983,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L26">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L26">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NetworkPolicy'>NetworkPolicy</a>[]&gt;;</code></pre>
@@ -991,7 +991,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L34">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L34">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</code></pre>
@@ -1002,7 +1002,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L40">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L40">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="NetworkPolicyList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1020,7 +1020,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodSecurityPolicy" data-link-title="PodSecurityPolicy">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">
         Resource <strong>PodSecurityPolicy</strong>
     </a>
 </h3>
@@ -1032,7 +1032,7 @@ will be applied to a pod and container. Deprecated: use PodSecurityPolicy from p
 Group instead.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -1046,7 +1046,7 @@ Create a extensions.v1beta1.PodSecurityPolicy resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -1060,14 +1060,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1078,7 +1078,7 @@ Returns true if the given object is an instance of PodSecurityPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L22">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L22">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L30">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L30">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodSecurityPolicy"</span>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L36">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L36">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L41">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L41">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicySpec'>PodSecurityPolicySpec</a>&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 spec defines the policy enforced.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodSecurityPolicyList" data-link-title="PodSecurityPolicyList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">
         Resource <strong>PodSecurityPolicyList</strong>
     </a>
 </h3>
@@ -1146,7 +1146,7 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects. Deprecated: use
 PodSecurityPolicyList from policy API Group instead.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -1160,7 +1160,7 @@ Create a extensions.v1beta1.PodSecurityPolicyList resource with the given unique
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -1174,14 +1174,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1192,7 +1192,7 @@ Returns true if the given object is an instance of PodSecurityPolicyList.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L21">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L21">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L26">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L26">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicy'>PodSecurityPolicy</a>[]&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ deployments and may be missing (undefined) during planning phases.
 items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L34">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L34">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodSecurityPolicyList"</span>&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L40">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L40">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -1240,7 +1240,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReplicaSet" data-link-title="ReplicaSet">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">
         Resource <strong>ReplicaSet</strong>
     </a>
 </h3>
@@ -1264,7 +1264,7 @@ supported by Kubernetes v1.16+ clusters.
 ReplicaSet ensures that a specified number of pod replicas are running at any given time.
 
 <h4 class="pdoc-member-header" id="ReplicaSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -1278,7 +1278,7 @@ Create a extensions.v1beta1.ReplicaSet resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicaSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L64">method <b>get</b></a>
 </h4>
 
 
@@ -1292,14 +1292,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ReplicaSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicaSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L75">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1310,7 +1310,7 @@ Returns true if the given object is an instance of ReplicaSet.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicaSet-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L23">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L23">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ReplicaSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1330,7 +1330,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicaSet-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L31">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ReplicaSet"</span>&gt;;</code></pre>
@@ -1341,7 +1341,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ReplicaSet-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L38">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -1351,7 +1351,7 @@ that the ReplicaSet manages. Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="ReplicaSet-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L44">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L44">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ReplicaSetSpec'>ReplicaSetSpec</a>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ Spec defines the specification of the desired behavior of the ReplicaSet. More i
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="ReplicaSet-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L51">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L51">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ReplicaSetStatus'>ReplicaSetStatus</a>&gt;;</code></pre>
@@ -1370,7 +1370,7 @@ by some window of time. Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="ReplicaSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1379,7 +1379,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReplicaSetList" data-link-title="ReplicaSetList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">
         Resource <strong>ReplicaSetList</strong>
     </a>
 </h3>
@@ -1389,7 +1389,7 @@ deployments.
 ReplicaSetList is a collection of ReplicaSets.
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -1403,7 +1403,7 @@ Create a extensions.v1beta1.ReplicaSetList resource with the given unique name, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -1417,14 +1417,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1435,7 +1435,7 @@ Returns true if the given object is an instance of ReplicaSetList.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"extensions/v1beta1"</span>&gt;;</code></pre>
@@ -1446,7 +1446,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1455,7 +1455,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L26">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L26">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ReplicaSet'>ReplicaSet</a>[]&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ List of ReplicaSets. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L34">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L34">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ReplicaSetList"</span>&gt;;</code></pre>
@@ -1475,7 +1475,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L40">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L40">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -1484,7 +1484,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ReplicaSetList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>

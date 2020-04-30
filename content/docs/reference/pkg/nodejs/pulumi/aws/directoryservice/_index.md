@@ -46,7 +46,7 @@ git_sha: "5dde5b1ce8704e28e8e7a34f614d0244aab02448"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ConditionalForwader" data-link-title="ConditionalForwader">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">
         Resource <strong>ConditionalForwader</strong>
     </a>
 </h3>
@@ -76,7 +76,7 @@ const example = new aws.directoryservice.ConditionalForwader("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -90,7 +90,7 @@ Create a ConditionalForwader resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -101,14 +101,14 @@ Get an existing ConditionalForwader resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Returns true if the given object is an instance of ConditionalForwader.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L60">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L60">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id of directory.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-dnsIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L64">property <b>dnsIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L64">property <b>dnsIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -135,7 +135,7 @@ The id of directory.
 A list of forwarder IP addresses.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-remoteDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L68">property <b>remoteDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L68">property <b>remoteDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remoteDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ deployments and may be missing (undefined) during planning phases.
 The fully qualified domain name of the remote domain for which forwarders will be used.
 
 <h4 class="pdoc-member-header" id="ConditionalForwader-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Directory" data-link-title="Directory">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L125">
         Resource <strong>Directory</strong>
     </a>
 </h3>
@@ -284,7 +284,7 @@ const connector = new aws.directoryservice.Directory("connector", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown.
 
 <h4 class="pdoc-member-header" id="Directory-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L211"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L211"> <b>constructor</b></a>
 </h4>
 
 
@@ -298,7 +298,7 @@ Create a Directory resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Directory-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L134">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L134">method <b>get</b></a>
 </h4>
 
 
@@ -309,14 +309,14 @@ Get an existing Directory resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Directory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L125">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L125">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Directory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L145">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L145">method <b>isInstance</b></a>
 </h4>
 
 
@@ -327,7 +327,7 @@ Returns true if the given object is an instance of Directory.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Directory-accessUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L155">property <b>accessUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L155">property <b>accessUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The access URL for the directory, such as `http://alias.awsapps.com`.
 
 <h4 class="pdoc-member-header" id="Directory-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L159">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L159">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ The access URL for the directory, such as `http://alias.awsapps.com`.
 The alias for the directory (must be unique amongst all aliases in AWS). Required for `enableSso`.
 
 <h4 class="pdoc-member-header" id="Directory-connectSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L163">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L163">property <b>connectSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryConnectSettings'>DirectoryConnectSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 Connector related information about the directory. Fields documented below.
 
 <h4 class="pdoc-member-header" id="Directory-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L167">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L167">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ Connector related information about the directory. Fields documented below.
 A textual description for the directory.
 
 <h4 class="pdoc-member-header" id="Directory-dnsIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L171">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L171">property <b>dnsIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -367,7 +367,7 @@ A textual description for the directory.
 A list of IP addresses of the DNS servers for the directory or connector.
 
 <h4 class="pdoc-member-header" id="Directory-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L175">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L175">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>edition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ A list of IP addresses of the DNS servers for the directory or connector.
 The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 
 <h4 class="pdoc-member-header" id="Directory-enableSso">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L179">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L179">property <b>enableSso</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableSso: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (
 Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Directory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L125">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L125">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -392,7 +392,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Directory-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L183">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ deployments and may be missing (undefined) during planning phases.
 The fully qualified name for the directory, such as `corp.example.com`
 
 <h4 class="pdoc-member-header" id="Directory-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L187">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L187">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -408,7 +408,7 @@ The fully qualified name for the directory, such as `corp.example.com`
 The password for the directory administrator or connector user.
 
 <h4 class="pdoc-member-header" id="Directory-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L191">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L191">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -416,7 +416,7 @@ The password for the directory administrator or connector user.
 The ID of the security group created by the directory.
 
 <h4 class="pdoc-member-header" id="Directory-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L195">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L195">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -424,7 +424,7 @@ The ID of the security group created by the directory.
 The short name of the directory, such as `CORP`.
 
 <h4 class="pdoc-member-header" id="Directory-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L199">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L199">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -432,7 +432,7 @@ The short name of the directory, such as `CORP`.
 The size of the directory (`Small` or `Large` are accepted values).
 
 <h4 class="pdoc-member-header" id="Directory-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L203">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L203">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ The size of the directory (`Small` or `Large` are accepted values).
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Directory-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L207">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L207">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ A mapping of tags to assign to the resource.
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 
 <h4 class="pdoc-member-header" id="Directory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L125">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L125">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -457,7 +457,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Directory-vpcSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L211">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L211">property <b>vpcSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryVpcSettings'>DirectoryVpcSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ deployments.
 VPC related information about the directory. Fields documented below.
 
 <h3 class="pdoc-module-header" id="LogService" data-link-title="LogService">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L49">
         Resource <strong>LogService</strong>
     </a>
 </h3>
@@ -512,7 +512,7 @@ const exampleLogService = new aws.directoryservice.LogService("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown.
 
 <h4 class="pdoc-member-header" id="LogService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -526,7 +526,7 @@ Create a LogService resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -537,14 +537,14 @@ Get an existing LogService resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -555,7 +555,7 @@ Returns true if the given object is an instance of LogService.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogService-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L79">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L79">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -563,7 +563,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id of directory.
 
 <h4 class="pdoc-member-header" id="LogService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -572,7 +572,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogService-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L83">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L83">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -580,7 +580,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.
 
 <h4 class="pdoc-member-header" id="LogService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -591,7 +591,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDirectory" data-link-title="getDirectory">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L27">
         Function <strong>getDirectory</strong>
     </a>
 </h3>
@@ -620,7 +620,7 @@ const example = aws_directory_service_directory_main.id.apply(id => aws.director
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConditionalForwaderArgs" data-link-title="ConditionalForwaderArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L132">
         interface <strong>ConditionalForwaderArgs</strong>
     </a>
 </h3>
@@ -630,7 +630,7 @@ const example = aws_directory_service_directory_main.id.apply(id => aws.director
 The set of arguments for constructing a ConditionalForwader resource.
 
 <h4 class="pdoc-member-header" id="ConditionalForwaderArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L136">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L136">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -638,7 +638,7 @@ The set of arguments for constructing a ConditionalForwader resource.
 The id of directory.
 
 <h4 class="pdoc-member-header" id="ConditionalForwaderArgs-dnsIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L140">property <b>dnsIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L140">property <b>dnsIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -646,7 +646,7 @@ The id of directory.
 A list of forwarder IP addresses.
 
 <h4 class="pdoc-member-header" id="ConditionalForwaderArgs-remoteDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L144">property <b>remoteDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L144">property <b>remoteDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ A list of forwarder IP addresses.
 The fully qualified domain name of the remote domain for which forwarders will be used.
 
 <h3 class="pdoc-module-header" id="ConditionalForwaderState" data-link-title="ConditionalForwaderState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L114">
         interface <strong>ConditionalForwaderState</strong>
     </a>
 </h3>
@@ -664,7 +664,7 @@ The fully qualified domain name of the remote domain for which forwarders will b
 Input properties used for looking up and filtering ConditionalForwader resources.
 
 <h4 class="pdoc-member-header" id="ConditionalForwaderState-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L118">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L118">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -672,7 +672,7 @@ Input properties used for looking up and filtering ConditionalForwader resources
 The id of directory.
 
 <h4 class="pdoc-member-header" id="ConditionalForwaderState-dnsIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L122">property <b>dnsIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L122">property <b>dnsIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -680,7 +680,7 @@ The id of directory.
 A list of forwarder IP addresses.
 
 <h4 class="pdoc-member-header" id="ConditionalForwaderState-remoteDomainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/conditionalForwader.ts#L126">property <b>remoteDomainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/conditionalForwader.ts#L126">property <b>remoteDomainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remoteDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,7 +688,7 @@ A list of forwarder IP addresses.
 The fully qualified domain name of the remote domain for which forwarders will be used.
 
 <h3 class="pdoc-module-header" id="DirectoryArgs" data-link-title="DirectoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L341">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L341">
         interface <strong>DirectoryArgs</strong>
     </a>
 </h3>
@@ -698,7 +698,7 @@ The fully qualified domain name of the remote domain for which forwarders will b
 The set of arguments for constructing a Directory resource.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L345">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L345">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ The set of arguments for constructing a Directory resource.
 The alias for the directory (must be unique amongst all aliases in AWS). Required for `enableSso`.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-connectSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L349">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L349">property <b>connectSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>DirectoryConnectSettings</a>&gt;;</code></pre>
@@ -714,7 +714,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 Connector related information about the directory. Fields documented below.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L353">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L353">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ Connector related information about the directory. Fields documented below.
 A textual description for the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L357">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L357">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ A textual description for the directory.
 The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-enableSso">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L361">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L361">property <b>enableSso</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSso?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (
 Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L365">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L365">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ Whether to enable single-sign on for the directory. Requires `alias`. Defaults t
 The fully qualified name for the directory, such as `corp.example.com`
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L369">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L369">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ The fully qualified name for the directory, such as `corp.example.com`
 The password for the directory administrator or connector user.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L373">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L373">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ The password for the directory administrator or connector user.
 The short name of the directory, such as `CORP`.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L377">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L377">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The short name of the directory, such as `CORP`.
 The size of the directory (`Small` or `Large` are accepted values).
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L381">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L381">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -778,7 +778,7 @@ The size of the directory (`Small` or `Large` are accepted values).
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L385">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L385">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ A mapping of tags to assign to the resource.
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-vpcSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L389">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L389">property <b>vpcSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>DirectoryVpcSettings</a>&gt;;</code></pre>
@@ -794,7 +794,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 VPC related information about the directory. Fields documented below.
 
 <h3 class="pdoc-module-header" id="DirectoryState" data-link-title="DirectoryState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L275">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L275">
         interface <strong>DirectoryState</strong>
     </a>
 </h3>
@@ -804,7 +804,7 @@ VPC related information about the directory. Fields documented below.
 Input properties used for looking up and filtering Directory resources.
 
 <h4 class="pdoc-member-header" id="DirectoryState-accessUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L279">property <b>accessUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L279">property <b>accessUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ Input properties used for looking up and filtering Directory resources.
 The access URL for the directory, such as `http://alias.awsapps.com`.
 
 <h4 class="pdoc-member-header" id="DirectoryState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L283">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L283">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ The access URL for the directory, such as `http://alias.awsapps.com`.
 The alias for the directory (must be unique amongst all aliases in AWS). Required for `enableSso`.
 
 <h4 class="pdoc-member-header" id="DirectoryState-connectSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L287">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L287">property <b>connectSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>DirectoryConnectSettings</a>&gt;;</code></pre>
@@ -828,7 +828,7 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 Connector related information about the directory. Fields documented below.
 
 <h4 class="pdoc-member-header" id="DirectoryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L291">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L291">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ Connector related information about the directory. Fields documented below.
 A textual description for the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-dnsIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L295">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L295">property <b>dnsIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -844,7 +844,7 @@ A textual description for the directory.
 A list of IP addresses of the DNS servers for the directory or connector.
 
 <h4 class="pdoc-member-header" id="DirectoryState-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L299">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L299">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ A list of IP addresses of the DNS servers for the directory or connector.
 The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 
 <h4 class="pdoc-member-header" id="DirectoryState-enableSso">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L303">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L303">property <b>enableSso</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSso?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (
 Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DirectoryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L307">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L307">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ Whether to enable single-sign on for the directory. Requires `alias`. Defaults t
 The fully qualified name for the directory, such as `corp.example.com`
 
 <h4 class="pdoc-member-header" id="DirectoryState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L311">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L311">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -876,7 +876,7 @@ The fully qualified name for the directory, such as `corp.example.com`
 The password for the directory administrator or connector user.
 
 <h4 class="pdoc-member-header" id="DirectoryState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L315">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L315">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -884,7 +884,7 @@ The password for the directory administrator or connector user.
 The ID of the security group created by the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L319">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L319">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -892,7 +892,7 @@ The ID of the security group created by the directory.
 The short name of the directory, such as `CORP`.
 
 <h4 class="pdoc-member-header" id="DirectoryState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L323">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L323">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -900,7 +900,7 @@ The short name of the directory, such as `CORP`.
 The size of the directory (`Small` or `Large` are accepted values).
 
 <h4 class="pdoc-member-header" id="DirectoryState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L327">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L327">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -908,7 +908,7 @@ The size of the directory (`Small` or `Large` are accepted values).
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DirectoryState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L331">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L331">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -916,7 +916,7 @@ A mapping of tags to assign to the resource.
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 
 <h4 class="pdoc-member-header" id="DirectoryState-vpcSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/directory.ts#L335">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/directory.ts#L335">property <b>vpcSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>DirectoryVpcSettings</a>&gt;;</code></pre>
@@ -924,7 +924,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 VPC related information about the directory. Fields documented below.
 
 <h3 class="pdoc-module-header" id="GetDirectoryArgs" data-link-title="GetDirectoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L44">
         interface <strong>GetDirectoryArgs</strong>
     </a>
 </h3>
@@ -934,7 +934,7 @@ VPC related information about the directory. Fields documented below.
 A collection of arguments for invoking getDirectory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L48">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L48">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -942,7 +942,7 @@ A collection of arguments for invoking getDirectory.
 The ID of the directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L52">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L52">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -950,7 +950,7 @@ The ID of the directory.
 A mapping of tags assigned to the directory/connector.
 
 <h3 class="pdoc-module-header" id="GetDirectoryResult" data-link-title="GetDirectoryResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L58">
         interface <strong>GetDirectoryResult</strong>
     </a>
 </h3>
@@ -960,7 +960,7 @@ A mapping of tags assigned to the directory/connector.
 A collection of values returned by getDirectory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-accessUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L62">property <b>accessUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L62">property <b>accessUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -968,7 +968,7 @@ A collection of values returned by getDirectory.
 The access URL for the directory/connector, such as http://alias.awsapps.com.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L66">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L66">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -976,12 +976,12 @@ The access URL for the directory/connector, such as http://alias.awsapps.com.
 The alias for the directory/connector, such as `d-991708b282.awsapps.com`.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-connectSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L67">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L67">property <b>connectSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectSettings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryConnectSetting'>GetDirectoryConnectSetting</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDirectoryResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L71">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L71">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -989,12 +989,12 @@ The alias for the directory/connector, such as `d-991708b282.awsapps.com`.
 A textual description for the directory/connector.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L72">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L72">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDirectoryResult-dnsIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L76">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L76">property <b>dnsIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1002,7 +1002,7 @@ A textual description for the directory/connector.
 A list of IP addresses of the DNS servers for the directory/connector.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L80">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L80">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1010,7 +1010,7 @@ A list of IP addresses of the DNS servers for the directory/connector.
 (for `MicrosoftAD`) The Microsoft AD edition (`Standard` or `Enterprise`).
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-enableSso">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L84">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L84">property <b>enableSso</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSso: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1018,7 +1018,7 @@ A list of IP addresses of the DNS servers for the directory/connector.
 The directory/connector single-sign on status.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L113">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L113">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1026,7 +1026,7 @@ The directory/connector single-sign on status.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1034,7 +1034,7 @@ The provider-assigned unique ID for this managed resource.
 The fully qualified name for the directory/connector.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L92">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L92">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1042,7 +1042,7 @@ The fully qualified name for the directory/connector.
 The ID of the security group created by the directory/connector.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L96">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L96">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1050,7 +1050,7 @@ The ID of the security group created by the directory/connector.
 The short name of the directory/connector, such as `CORP`.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L100">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L100">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1058,7 +1058,7 @@ The short name of the directory/connector, such as `CORP`.
 (for `SimpleAD` and `ADConnector`) The size of the directory/connector (`Small` or `Large`).
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L104">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L104">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1066,7 +1066,7 @@ The short name of the directory/connector, such as `CORP`.
 A mapping of tags assigned to the directory/connector.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L108">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L108">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1074,12 +1074,12 @@ A mapping of tags assigned to the directory/connector.
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD`).
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-vpcSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/getDirectory.ts#L109">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/getDirectory.ts#L109">property <b>vpcSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSettings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryVpcSetting'>GetDirectoryVpcSetting</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="LogServiceArgs" data-link-title="LogServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L138">
         interface <strong>LogServiceArgs</strong>
     </a>
 </h3>
@@ -1089,7 +1089,7 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD`).
 The set of arguments for constructing a LogService resource.
 
 <h4 class="pdoc-member-header" id="LogServiceArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L142">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L142">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ The set of arguments for constructing a LogService resource.
 The id of directory.
 
 <h4 class="pdoc-member-header" id="LogServiceArgs-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L146">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L146">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ The id of directory.
 Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.
 
 <h3 class="pdoc-module-header" id="LogServiceState" data-link-title="LogServiceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L124">
         interface <strong>LogServiceState</strong>
     </a>
 </h3>
@@ -1115,7 +1115,7 @@ Name of the cloudwatch log group to which the logs should be published. The log 
 Input properties used for looking up and filtering LogService resources.
 
 <h4 class="pdoc-member-header" id="LogServiceState-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L128">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L128">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ Input properties used for looking up and filtering LogService resources.
 The id of directory.
 
 <h4 class="pdoc-member-header" id="LogServiceState-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/{{< param git_sha >}}/sdk/nodejs/directoryservice/logService.ts#L132">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/5dde5b1ce8704e28e8e7a34f614d0244aab02448/sdk/nodejs/directoryservice/logService.ts#L132">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

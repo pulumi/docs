@@ -176,238 +176,238 @@ import * as azure from "@pulumi/azure";
 
 <h2 id="Locations" data-link-title="Locations">namespace <strong>Locations</strong></h2>
 <h3 class="pdoc-module-header" id="AustraliaCentral" data-link-title="AustraliaCentral">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L32">
         const <strong>AustraliaCentral</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AustraliaCentral: <a href='#Location'>Location</a> = <span class='s2'>&#34;australiacentral&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AustraliaCentral2" data-link-title="AustraliaCentral2">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L33">
         const <strong>AustraliaCentral2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AustraliaCentral2: <a href='#Location'>Location</a> = <span class='s2'>&#34;australiacentral2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AustraliaEast" data-link-title="AustraliaEast">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L30">
         const <strong>AustraliaEast</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AustraliaEast: <a href='#Location'>Location</a> = <span class='s2'>&#34;australiaeast&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AustraliaSouthEast" data-link-title="AustraliaSouthEast">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L31">
         const <strong>AustraliaSouthEast</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AustraliaSouthEast: <a href='#Location'>Location</a> = <span class='s2'>&#34;australiasoutheast&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="BrazilSouth" data-link-title="BrazilSouth">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L29">
         const <strong>BrazilSouth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> BrazilSouth: <a href='#Location'>Location</a> = <span class='s2'>&#34;brazilsouth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CanadaCentral" data-link-title="CanadaCentral">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L37">
         const <strong>CanadaCentral</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CanadaCentral: <a href='#Location'>Location</a> = <span class='s2'>&#34;canadacentral&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CanadaEast" data-link-title="CanadaEast">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L38">
         const <strong>CanadaEast</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CanadaEast: <a href='#Location'>Location</a> = <span class='s2'>&#34;canadaeast&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CentralIndia" data-link-title="CentralIndia">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L35">
         const <strong>CentralIndia</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CentralIndia: <a href='#Location'>Location</a> = <span class='s2'>&#34;centralindia&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CentralUS" data-link-title="CentralUS">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L18">
         const <strong>CentralUS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CentralUS: <a href='#Location'>Location</a> = <span class='s2'>&#34;centralus&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="EastAsia" data-link-title="EastAsia">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L16">
         const <strong>EastAsia</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> EastAsia: <a href='#Location'>Location</a> = <span class='s2'>&#34;eastasia&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="EastUS" data-link-title="EastUS">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L19">
         const <strong>EastUS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> EastUS: <a href='#Location'>Location</a> = <span class='s2'>&#34;eastus&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="EastUS2" data-link-title="EastUS2">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L20">
         const <strong>EastUS2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> EastUS2: <a href='#Location'>Location</a> = <span class='s2'>&#34;eastus2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="FranceCentral" data-link-title="FranceCentral">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L44">
         const <strong>FranceCentral</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> FranceCentral: <a href='#Location'>Location</a> = <span class='s2'>&#34;francecentral&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="FranceSouth" data-link-title="FranceSouth">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L45">
         const <strong>FranceSouth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> FranceSouth: <a href='#Location'>Location</a> = <span class='s2'>&#34;francesouth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="JapanEast" data-link-title="JapanEast">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L28">
         const <strong>JapanEast</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> JapanEast: <a href='#Location'>Location</a> = <span class='s2'>&#34;japaneast&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="JapanWest" data-link-title="JapanWest">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L27">
         const <strong>JapanWest</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> JapanWest: <a href='#Location'>Location</a> = <span class='s2'>&#34;japanwest&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="KoreaCentral" data-link-title="KoreaCentral">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L42">
         const <strong>KoreaCentral</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> KoreaCentral: <a href='#Location'>Location</a> = <span class='s2'>&#34;koreacentral&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="KoreaSouth" data-link-title="KoreaSouth">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L43">
         const <strong>KoreaSouth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> KoreaSouth: <a href='#Location'>Location</a> = <span class='s2'>&#34;koreasouth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NorthCentralUS" data-link-title="NorthCentralUS">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L23">
         const <strong>NorthCentralUS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NorthCentralUS: <a href='#Location'>Location</a> = <span class='s2'>&#34;northcentralus&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NorthEurope" data-link-title="NorthEurope">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L25">
         const <strong>NorthEurope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NorthEurope: <a href='#Location'>Location</a> = <span class='s2'>&#34;northeurope&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SouthAfricaNorth" data-link-title="SouthAfricaNorth">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L46">
         const <strong>SouthAfricaNorth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SouthAfricaNorth: <a href='#Location'>Location</a> = <span class='s2'>&#34;southafricanorth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SouthAfricaWest" data-link-title="SouthAfricaWest">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L47">
         const <strong>SouthAfricaWest</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SouthAfricaWest: <a href='#Location'>Location</a> = <span class='s2'>&#34;southafricawest&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SouthCentralUS" data-link-title="SouthCentralUS">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L24">
         const <strong>SouthCentralUS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SouthCentralUS: <a href='#Location'>Location</a> = <span class='s2'>&#34;southcentralus&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SouthEastAsia" data-link-title="SouthEastAsia">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L17">
         const <strong>SouthEastAsia</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SouthEastAsia: <a href='#Location'>Location</a> = <span class='s2'>&#34;southeastasia&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SouthIndia" data-link-title="SouthIndia">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L34">
         const <strong>SouthIndia</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SouthIndia: <a href='#Location'>Location</a> = <span class='s2'>&#34;southindia&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="UAECentral" data-link-title="UAECentral">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L49">
         const <strong>UAECentral</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> UAECentral: <a href='#Location'>Location</a> = <span class='s2'>&#34;uaecentral&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="UAENorth" data-link-title="UAENorth">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L48">
         const <strong>UAENorth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> UAENorth: <a href='#Location'>Location</a> = <span class='s2'>&#34;uaenorth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="UKSouth" data-link-title="UKSouth">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L39">
         const <strong>UKSouth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> UKSouth: <a href='#Location'>Location</a> = <span class='s2'>&#34;uksouth&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="UKWest" data-link-title="UKWest">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L40">
         const <strong>UKWest</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> UKWest: <a href='#Location'>Location</a> = <span class='s2'>&#34;ukwest&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="WestCentralUS" data-link-title="WestCentralUS">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L41">
         const <strong>WestCentralUS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> WestCentralUS: <a href='#Location'>Location</a> = <span class='s2'>&#34;westcentralus&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="WestEurope" data-link-title="WestEurope">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L26">
         const <strong>WestEurope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> WestEurope: <a href='#Location'>Location</a> = <span class='s2'>&#34;westeurope&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="WestIndia" data-link-title="WestIndia">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L36">
         const <strong>WestIndia</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> WestIndia: <a href='#Location'>Location</a> = <span class='s2'>&#34;westindia&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="WestUS" data-link-title="WestUS">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L21">
         const <strong>WestUS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> WestUS: <a href='#Location'>Location</a> = <span class='s2'>&#34;westus&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="WestUS2" data-link-title="WestUS2">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L22">
         const <strong>WestUS2</strong>
     </a>
 </h3>
@@ -416,7 +416,7 @@ import * as azure from "@pulumi/azure";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L16">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -431,7 +431,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L29"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L29"> <b>constructor</b></a>
 </h4>
 
 
@@ -445,14 +445,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L24">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L24">method <b>isInstance</b></a>
 </h4>
 
 
@@ -463,14 +463,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L16">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L16">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -479,7 +479,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -491,7 +491,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -500,7 +500,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -509,7 +509,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -518,7 +518,7 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -527,21 +527,21 @@ deployments.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="Location" data-link-title="Location">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/location.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/location.ts#L52">
         type <strong>Location</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Location = <span class='s2'>"eastasia"</span> | <span class='s2'>"southeastasia"</span> | <span class='s2'>"centralus"</span> | <span class='s2'>"eastus"</span> | <span class='s2'>"eastus2"</span> | <span class='s2'>"westus"</span> | <span class='s2'>"westus2"</span> | <span class='s2'>"northcentralus"</span> | <span class='s2'>"southcentralus"</span> | <span class='s2'>"northeurope"</span> | <span class='s2'>"westeurope"</span> | <span class='s2'>"japanwest"</span> | <span class='s2'>"japaneast"</span> | <span class='s2'>"brazilsouth"</span> | <span class='s2'>"australiaeast"</span> | <span class='s2'>"australiasoutheast"</span> | <span class='s2'>"australiacentral"</span> | <span class='s2'>"australiacentral2"</span> | <span class='s2'>"southindia"</span> | <span class='s2'>"centralindia"</span> | <span class='s2'>"westindia"</span> | <span class='s2'>"canadacentral"</span> | <span class='s2'>"canadaeast"</span> | <span class='s2'>"uksouth"</span> | <span class='s2'>"ukwest"</span> | <span class='s2'>"westcentralus"</span> | <span class='s2'>"koreacentral"</span> | <span class='s2'>"koreasouth"</span> | <span class='s2'>"francecentral"</span> | <span class='s2'>"francesouth"</span> | <span class='s2'>"southafricanorth"</span> | <span class='s2'>"southafricawest"</span> | <span class='s2'>"uaecentral"</span> | <span class='s2'>"uaenorth"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Overwrite" data-link-title="Overwrite">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/util.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/util.ts#L22">
         type <strong>Overwrite</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Overwrite = Pick&lt;T, Diff&lt;keyof T, keyof U&gt;&gt; &amp; U;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L74">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -551,12 +551,12 @@ deployments.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-auxiliaryTenantIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L75">property <b>auxiliaryTenantIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L75">property <b>auxiliaryTenantIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auxiliaryTenantIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-clientCertificatePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L80">property <b>clientCertificatePassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L80">property <b>clientCertificatePassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificatePassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ The password associated with the Client Certificate. For use when authenticating
 Client Certificate
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientCertificatePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L85">property <b>clientCertificatePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L85">property <b>clientCertificatePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificatePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ The path to the Client Certificate associated with the Service Principal for use
 Principal using a Client Certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L89">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L89">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ Principal using a Client Certificate.
 The Client ID which should be used.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L93">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L93">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ The Client ID which should be used.
 The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-disableCorrelationRequestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L97">property <b>disableCorrelationRequestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L97">property <b>disableCorrelationRequestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableCorrelationRequestId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ The Client Secret which should be used. For use When authenticating as a Service
 This will disable the x-ms-correlation-request-id header.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-disableTerraformPartnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L101">property <b>disableTerraformPartnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L101">property <b>disableTerraformPartnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableTerraformPartnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ This will disable the x-ms-correlation-request-id header.
 This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L106">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L106">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -615,12 +615,12 @@ The Cloud Environment which should be used. Possible values are public, usgovern
 public.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L107">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L107">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProviderFeatures'>ProviderFeatures</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-msiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L112">property <b>msiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L112">property <b>msiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>msiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +629,7 @@ The path to a custom endpoint for Managed Service Identity - in most circumstanc
 automatically.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-partnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L116">property <b>partnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L116">property <b>partnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partnerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +637,7 @@ automatically.
 A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipCredentialsValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L120">property <b>skipCredentialsValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L120">property <b>skipCredentialsValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipCredentialsValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -645,7 +645,7 @@ A GUID/UUID that is registered with Microsoft to facilitate partner resource usa
 This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipProviderRegistration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L125">property <b>skipProviderRegistration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L125">property <b>skipProviderRegistration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipProviderRegistration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ Should the AzureRM Provider skip registering all of the Resource Providers that 
 registered?
 
 <h4 class="pdoc-member-header" id="ProviderArgs-storageUseAzuread">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L129">property <b>storageUseAzuread</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L129">property <b>storageUseAzuread</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageUseAzuread?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -662,7 +662,7 @@ registered?
 Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
 
 <h4 class="pdoc-member-header" id="ProviderArgs-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L133">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L133">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
 The Subscription ID which should be used.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L137">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L137">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ The Subscription ID which should be used.
 The Tenant ID which should be used.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-useMsi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/provider.ts#L141">property <b>useMsi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/provider.ts#L141">property <b>useMsi</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useMsi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

@@ -55,7 +55,7 @@ git_sha: "8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AppProfile" data-link-title="AppProfile">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L14">
         Resource <strong>AppProfile</strong>
     </a>
 </h3>
@@ -67,7 +67,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_app_profile.html.markdown.
 
 <h4 class="pdoc-member-header" id="AppProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -81,7 +81,7 @@ Create a AppProfile resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AppProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -92,14 +92,14 @@ Get an existing AppProfile resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AppProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AppProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -110,7 +110,7 @@ Returns true if the given object is an instance of AppProfile.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AppProfile-appProfileId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L44">property <b>appProfileId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L44">property <b>appProfileId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appProfileId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -118,7 +118,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 
 <h4 class="pdoc-member-header" id="AppProfile-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L48">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L48">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 Long form description of the use case for this app profile.
 
 <h4 class="pdoc-member-header" id="AppProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -135,7 +135,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AppProfile-ignoreWarnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L52">property <b>ignoreWarnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L52">property <b>ignoreWarnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreWarnings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ deployments and may be missing (undefined) during planning phases.
 If true, ignore safety checks when deleting/updating the app profile.
 
 <h4 class="pdoc-member-header" id="AppProfile-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L56">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L56">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ If true, ignore safety checks when deleting/updating the app profile.
 The name of the instance to create the app profile within.
 
 <h4 class="pdoc-member-header" id="AppProfile-multiClusterRoutingUseAny">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L62">property <b>multiClusterRoutingUseAny</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L62">property <b>multiClusterRoutingUseAny</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiClusterRoutingUseAny: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ in the event of transient errors or delays. Clusters in a region are considered 
 consistency to improve availability.
 
 <h4 class="pdoc-member-header" id="AppProfile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 
 <h4 class="pdoc-member-header" id="AppProfile-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L72">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L72">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,7 +179,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AppProfile-singleClusterRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L76">property <b>singleClusterRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L76">property <b>singleClusterRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>singleClusterRouting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AppProfileSingleClusterRouting'>AppProfileSingleClusterRouting</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ If it is not provided, the provider project is used.
 Use a single-cluster routing policy.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="AppProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -196,7 +196,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Dataset" data-link-title="Dataset">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L21">
         Resource <strong>Dataset</strong>
     </a>
 </h3>
@@ -214,7 +214,7 @@ To get more information about Dataset, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown.
 
 <h4 class="pdoc-member-header" id="Dataset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -228,7 +228,7 @@ Create a Dataset resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dataset-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -239,14 +239,14 @@ Get an existing Dataset resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dataset-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dataset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -257,7 +257,7 @@ Returns true if the given object is an instance of Dataset.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dataset-accesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L51">property <b>accesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L51">property <b>accesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetAccess'>DatasetAccess</a>[]&gt;;</code></pre>
@@ -265,7 +265,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An array of objects that define dataset access for one or more entities.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Dataset-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L55">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L55">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ An array of objects that define dataset access for one or more entities.  Struct
 The time when this dataset was created, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="Dataset-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L59">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L59">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ The time when this dataset was created, in milliseconds since the epoch.
 The ID of the dataset containing this table.
 
 <h4 class="pdoc-member-header" id="Dataset-defaultEncryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L65">property <b>defaultEncryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L65">property <b>defaultEncryptionConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultEncryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetDefaultEncryptionConfiguration'>DatasetDefaultEncryptionConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ all newly-created partitioned tables in the dataset will have encryption key set
 this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Dataset-defaultPartitionExpirationMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L70">property <b>defaultPartitionExpirationMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L70">property <b>defaultPartitionExpirationMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultPartitionExpirationMs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
 
 <h4 class="pdoc-member-header" id="Dataset-defaultTableExpirationMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L75">property <b>defaultTableExpirationMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L75">property <b>defaultTableExpirationMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultTableExpirationMs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
 
 <h4 class="pdoc-member-header" id="Dataset-deleteContentsOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L81">property <b>deleteContentsOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L81">property <b>deleteContentsOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteContentsOnDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
 
 <h4 class="pdoc-member-header" id="Dataset-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L85">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L85">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -327,7 +327,7 @@ destroying the resource will fail if tables are present.
 A user-friendly description of the dataset
 
 <h4 class="pdoc-member-header" id="Dataset-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L89">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L89">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ A user-friendly description of the dataset
 A hash of the resource.
 
 <h4 class="pdoc-member-header" id="Dataset-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L93">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L93">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ A hash of the resource.
 A descriptive name for the dataset
 
 <h4 class="pdoc-member-header" id="Dataset-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -352,7 +352,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dataset-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L98">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L98">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ The labels associated with this dataset. You can use these to
 organize and group your datasets
 
 <h4 class="pdoc-member-header" id="Dataset-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L102">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L102">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifiedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ organize and group your datasets
 The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="Dataset-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L107">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L107">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
 <h4 class="pdoc-member-header" id="Dataset-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L112">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L112">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Dataset-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L116">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L116">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ If it is not provided, the provider project is used.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="Dataset-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -404,7 +404,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetAccess" data-link-title="DatasetAccess">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L27">
         Resource <strong>DatasetAccess</strong>
     </a>
 </h3>
@@ -429,7 +429,7 @@ To get more information about DatasetAccess, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset_access.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -443,7 +443,7 @@ Create a DatasetAccess resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -454,14 +454,14 @@ Get an existing DatasetAccess resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetAccess-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -472,7 +472,7 @@ Returns true if the given object is an instance of DatasetAccess.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L57">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L57">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the dataset containing this table.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L62">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L62">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
 
 <h4 class="pdoc-member-header" id="DatasetAccess-groupByEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L66">property <b>groupByEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L66">property <b>groupByEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupByEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ domain specified will be granted the specified access
 An email address of a Google Group to grant access to.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-iamMember">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L71">property <b>iamMember</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L71">property <b>iamMember</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamMember: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -506,7 +506,7 @@ Some other type of member that appears in the IAM Policy but isn't a user,
 group, domain, or special group. For example: `allUsers`
 
 <h4 class="pdoc-member-header" id="DatasetAccess-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -515,7 +515,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L76">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L76">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -524,7 +524,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L85">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L85">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ counterparts, and will show a diff post-create. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 
 <h4 class="pdoc-member-header" id="DatasetAccess-specialGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L89">property <b>specialGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L89">property <b>specialGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>specialGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ counterparts, and will show a diff post-create. See
 A special group to grant access to. Possible values include:
 
 <h4 class="pdoc-member-header" id="DatasetAccess-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -554,7 +554,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DatasetAccess-userByEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L94">property <b>userByEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L94">property <b>userByEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userByEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -563,7 +563,7 @@ An email address of a user to grant access to. For example:
 fred@example.com
 
 <h4 class="pdoc-member-header" id="DatasetAccess-view">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L102">property <b>view</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L102">property <b>view</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>view: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatasetAccessView'>DatasetAccessView</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DataTransferConfig" data-link-title="DataTransferConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">
         Resource <strong>DataTransferConfig</strong>
     </a>
 </h3>
@@ -594,7 +594,7 @@ To get more information about Config, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_data_transfer_config.html.markdown.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -608,7 +608,7 @@ Create a DataTransferConfig resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -619,14 +619,14 @@ Get an existing DataTransferConfig resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -637,7 +637,7 @@ Returns true if the given object is an instance of DataTransferConfig.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-dataRefreshWindowDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L54">property <b>dataRefreshWindowDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L54">property <b>dataRefreshWindowDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataRefreshWindowDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -649,7 +649,7 @@ just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L58">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L58">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataSourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ Set the value to 0 to use the default value.
 The data source id. Cannot be changed once the transfer config is created.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-destinationDatasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L62">property <b>destinationDatasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L62">property <b>destinationDatasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationDatasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ The data source id. Cannot be changed once the transfer config is created.
 The BigQuery target dataset id.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L66">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L66">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ The BigQuery target dataset id.
 When set to true, no runs are scheduled for a given transfer.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L70">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L70">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ When set to true, no runs are scheduled for a given transfer.
 The user specified display name for the transfer config.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -690,7 +690,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L75">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where conf
 not required. The name is ignored when creating a transfer config.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-params">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L85">property <b>params</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L85">property <b>params</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>params: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -717,7 +717,7 @@ not required. The name is ignored when creating a transfer config.
 These parameters are specific to each data source.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L90">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L90">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +726,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L101">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L101">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 
 <h4 class="pdoc-member-header" id="DataTransferConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -750,7 +750,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Reservation" data-link-title="Reservation">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L20">
         Resource <strong>Reservation</strong>
     </a>
 </h3>
@@ -768,7 +768,7 @@ To get more information about Reservation, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_reservation.html.markdown.
 
 <h4 class="pdoc-member-header" id="Reservation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -782,7 +782,7 @@ Create a Reservation resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Reservation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -793,14 +793,14 @@ Get an existing Reservation resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Reservation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Reservation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -811,7 +811,7 @@ Returns true if the given object is an instance of Reservation.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Reservation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -820,7 +820,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Reservation-ignoreIdleSlots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L52">property <b>ignoreIdleSlots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L52">property <b>ignoreIdleSlots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreIdleSlots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -830,7 +830,7 @@ the same admin project. If true, a query using this reservation will execute wit
 capacity specified above at most.
 
 <h4 class="pdoc-member-header" id="Reservation-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L57">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L57">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -839,7 +839,7 @@ The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
 
 <h4 class="pdoc-member-header" id="Reservation-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 The name of the reservation. This field must only contain alphanumeric characters or dash.
 
 <h4 class="pdoc-member-header" id="Reservation-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L66">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L66">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -856,7 +856,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Reservation-slotCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L71">property <b>slotCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L71">property <b>slotCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slotCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ Minimum slots available to this reservation. A slot is a unit of computational p
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 
 <h4 class="pdoc-member-header" id="Reservation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -874,7 +874,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Table" data-link-title="Table">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L18">
         Resource <strong>Table</strong>
     </a>
 </h3>
@@ -888,7 +888,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_table.html.markdown.
 
 <h4 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L163"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L163"> <b>constructor</b></a>
 </h4>
 
 
@@ -902,7 +902,7 @@ Create a Table resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -913,14 +913,14 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Table-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -931,7 +931,7 @@ Returns true if the given object is an instance of Table.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Table-clusterings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L50">property <b>clusterings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L50">property <b>clusterings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -941,7 +941,7 @@ Up to four top-level columns are allowed, and should be specified in
 descending priority order.
 
 <h4 class="pdoc-member-header" id="Table-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L54">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L54">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -949,7 +949,7 @@ descending priority order.
 The time when this table was created, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="Table-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L59">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L59">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,7 +958,7 @@ The dataset ID to create the table in.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Table-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -966,7 +966,7 @@ Changing this forces a new resource to be created.
 The field description.
 
 <h4 class="pdoc-member-header" id="Table-encryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L69">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L69">property <b>encryptionConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableEncryptionConfiguration'>TableEncryptionConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -976,7 +976,7 @@ If left blank, the table will be encrypted with a Google-managed key; that proce
 is transparent to the user.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Table-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L73">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L73">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -984,7 +984,7 @@ is transparent to the user.  Structure is documented below.
 A hash of the resource.
 
 <h4 class="pdoc-member-header" id="Table-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L80">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L80">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ indefinitely. Expired tables will be deleted and their storage
 reclaimed.
 
 <h4 class="pdoc-member-header" id="Table-externalDataConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L87">property <b>externalDataConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L87">property <b>externalDataConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalDataConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfiguration'>TableExternalDataConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ By defining these properties, the data source can then be queried as
 if it were a standard BigQuery table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Table-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L91">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L91">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>friendlyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ if it were a standard BigQuery table. Structure is documented below.
 A descriptive name for the table.
 
 <h4 class="pdoc-member-header" id="Table-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1023,7 +1023,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Table-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L95">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L95">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1031,7 +1031,7 @@ deployments and may be missing (undefined) during planning phases.
 A mapping of labels to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Table-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L99">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L99">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifiedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ A mapping of labels to assign to the resource.
 The time when this table was last modified, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="Table-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L103">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L103">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ The time when this table was last modified, in milliseconds since the epoch.
 The geographic location where the table resides. This value is inherited from the dataset.
 
 <h4 class="pdoc-member-header" id="Table-numBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L107">property <b>numBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L107">property <b>numBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1055,7 +1055,7 @@ The geographic location where the table resides. This value is inherited from th
 The size of this table in bytes, excluding any data in the streaming buffer.
 
 <h4 class="pdoc-member-header" id="Table-numLongTermBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L111">property <b>numLongTermBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L111">property <b>numLongTermBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numLongTermBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ The size of this table in bytes, excluding any data in the streaming buffer.
 The number of bytes in the table that are considered "long-term storage".
 
 <h4 class="pdoc-member-header" id="Table-numRows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L115">property <b>numRows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L115">property <b>numRows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numRows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1071,7 +1071,7 @@ The number of bytes in the table that are considered "long-term storage".
 The number of rows of data in this table, excluding any data in the streaming buffer.
 
 <h4 class="pdoc-member-header" id="Table-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L120">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L120">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Table-rangePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L125">property <b>rangePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L125">property <b>rangePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rangePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableRangePartitioning'>TableRangePartitioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ If specified, configures range-based
 partitioning for this table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Table-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L139">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L139">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +1107,7 @@ field type, we currently cannot suppress the recurring diff this causes.
 As a workaround, we recommend using the schema as returned by the API.
 
 <h4 class="pdoc-member-header" id="Table-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L143">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L143">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +1115,7 @@ As a workaround, we recommend using the schema as returned by the API.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="Table-tableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L148">property <b>tableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L148">property <b>tableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1124,7 +1124,7 @@ A unique ID for the resource.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Table-timePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L153">property <b>timePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L153">property <b>timePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableTimePartitioning'>TableTimePartitioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ If specified, configures time-based
 partitioning for this table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Table-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L158">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L158">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ The only type supported is DAY, which will generate
 one partition per day based on data loading time.
 
 <h4 class="pdoc-member-header" id="Table-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Table-view">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L163">property <b>view</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L163">property <b>view</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>view: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableView'>TableView</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ Structure is documented below.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefaultServiceAccount" data-link-title="getDefaultServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L23">
         Function <strong>getDefaultServiceAccount</strong>
     </a>
 </h3>
@@ -1187,7 +1187,7 @@ For more information see
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AppProfileArgs" data-link-title="AppProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L168">
         interface <strong>AppProfileArgs</strong>
     </a>
 </h3>
@@ -1197,7 +1197,7 @@ For more information see
 The set of arguments for constructing a AppProfile resource.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-appProfileId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L172">property <b>appProfileId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L172">property <b>appProfileId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appProfileId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ The set of arguments for constructing a AppProfile resource.
 The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 Long form description of the use case for this app profile.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-ignoreWarnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L180">property <b>ignoreWarnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L180">property <b>ignoreWarnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreWarnings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ Long form description of the use case for this app profile.
 If true, ignore safety checks when deleting/updating the app profile.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L184">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L184">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ If true, ignore safety checks when deleting/updating the app profile.
 The name of the instance to create the app profile within.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-multiClusterRoutingUseAny">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L190">property <b>multiClusterRoutingUseAny</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L190">property <b>multiClusterRoutingUseAny</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiClusterRoutingUseAny?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ in the event of transient errors or delays. Clusters in a region are considered 
 consistency to improve availability.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L195">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L195">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1248,7 +1248,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AppProfileArgs-singleClusterRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L199">property <b>singleClusterRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L199">property <b>singleClusterRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleClusterRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting'>AppProfileSingleClusterRouting</a>&gt;;</code></pre>
@@ -1256,7 +1256,7 @@ If it is not provided, the provider project is used.
 Use a single-cluster routing policy.  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="AppProfileState" data-link-title="AppProfileState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L126">
         interface <strong>AppProfileState</strong>
     </a>
 </h3>
@@ -1266,7 +1266,7 @@ Use a single-cluster routing policy.  Structure is documented below.
 Input properties used for looking up and filtering AppProfile resources.
 
 <h4 class="pdoc-member-header" id="AppProfileState-appProfileId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L130">property <b>appProfileId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L130">property <b>appProfileId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appProfileId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ Input properties used for looking up and filtering AppProfile resources.
 The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 
 <h4 class="pdoc-member-header" id="AppProfileState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L134">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L134">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 Long form description of the use case for this app profile.
 
 <h4 class="pdoc-member-header" id="AppProfileState-ignoreWarnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L138">property <b>ignoreWarnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L138">property <b>ignoreWarnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreWarnings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ Long form description of the use case for this app profile.
 If true, ignore safety checks when deleting/updating the app profile.
 
 <h4 class="pdoc-member-header" id="AppProfileState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L142">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L142">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ If true, ignore safety checks when deleting/updating the app profile.
 The name of the instance to create the app profile within.
 
 <h4 class="pdoc-member-header" id="AppProfileState-multiClusterRoutingUseAny">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L148">property <b>multiClusterRoutingUseAny</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L148">property <b>multiClusterRoutingUseAny</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiClusterRoutingUseAny?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ in the event of transient errors or delays. Clusters in a region are considered 
 consistency to improve availability.
 
 <h4 class="pdoc-member-header" id="AppProfileState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 
 <h4 class="pdoc-member-header" id="AppProfileState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L158">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L158">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="AppProfileState-singleClusterRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/appProfile.ts#L162">property <b>singleClusterRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/appProfile.ts#L162">property <b>singleClusterRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleClusterRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting'>AppProfileSingleClusterRouting</a>&gt;;</code></pre>
@@ -1334,7 +1334,7 @@ If it is not provided, the provider project is used.
 Use a single-cluster routing policy.  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DatasetAccessArgs" data-link-title="DatasetAccessArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L209">
         interface <strong>DatasetAccessArgs</strong>
     </a>
 </h3>
@@ -1344,7 +1344,7 @@ Use a single-cluster routing policy.  Structure is documented below.
 The set of arguments for constructing a DatasetAccess resource.
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L213">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L213">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1352,7 +1352,7 @@ The set of arguments for constructing a DatasetAccess resource.
 The ID of the dataset containing this table.
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L218">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L218">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-groupByEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L222">property <b>groupByEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L222">property <b>groupByEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupByEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ domain specified will be granted the specified access
 An email address of a Google Group to grant access to.
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-iamMember">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L227">property <b>iamMember</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L227">property <b>iamMember</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamMember?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1378,7 +1378,7 @@ Some other type of member that appears in the IAM Policy but isn't a user,
 group, domain, or special group. For example: `allUsers`
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L232">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L232">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1387,7 +1387,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L241">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L241">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1400,7 +1400,7 @@ counterparts, and will show a diff post-create. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-specialGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L245">property <b>specialGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L245">property <b>specialGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specialGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,7 +1408,7 @@ counterparts, and will show a diff post-create. See
 A special group to grant access to. Possible values include:
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-userByEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L250">property <b>userByEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L250">property <b>userByEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userByEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1417,7 +1417,7 @@ An email address of a user to grant access to. For example:
 fred@example.com
 
 <h4 class="pdoc-member-header" id="DatasetAccessArgs-view">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L258">property <b>view</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L258">property <b>view</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccessView'>DatasetAccessView</a>&gt;;</code></pre>
@@ -1429,7 +1429,7 @@ set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DatasetAccessState" data-link-title="DatasetAccessState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L154">
         interface <strong>DatasetAccessState</strong>
     </a>
 </h3>
@@ -1439,7 +1439,7 @@ needs to be granted again via an update operation.  Structure is documented belo
 Input properties used for looking up and filtering DatasetAccess resources.
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L158">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L158">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1447,7 +1447,7 @@ Input properties used for looking up and filtering DatasetAccess resources.
 The ID of the dataset containing this table.
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L163">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L163">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-groupByEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L167">property <b>groupByEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L167">property <b>groupByEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupByEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ domain specified will be granted the specified access
 An email address of a Google Group to grant access to.
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-iamMember">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L172">property <b>iamMember</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L172">property <b>iamMember</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamMember?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1473,7 +1473,7 @@ Some other type of member that appears in the IAM Policy but isn't a user,
 group, domain, or special group. For example: `allUsers`
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L177">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L177">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1482,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L186">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L186">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1495,7 +1495,7 @@ counterparts, and will show a diff post-create. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-specialGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L190">property <b>specialGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L190">property <b>specialGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specialGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ counterparts, and will show a diff post-create. See
 A special group to grant access to. Possible values include:
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-userByEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L195">property <b>userByEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L195">property <b>userByEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userByEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1512,7 +1512,7 @@ An email address of a user to grant access to. For example:
 fred@example.com
 
 <h4 class="pdoc-member-header" id="DatasetAccessState-view">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/datasetAccess.ts#L203">property <b>view</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/datasetAccess.ts#L203">property <b>view</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccessView'>DatasetAccessView</a>&gt;;</code></pre>
@@ -1524,7 +1524,7 @@ set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DatasetArgs" data-link-title="DatasetArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L255">
         interface <strong>DatasetArgs</strong>
     </a>
 </h3>
@@ -1534,7 +1534,7 @@ needs to be granted again via an update operation.  Structure is documented belo
 The set of arguments for constructing a Dataset resource.
 
 <h4 class="pdoc-member-header" id="DatasetArgs-accesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L259">property <b>accesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L259">property <b>accesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccess'>DatasetAccess</a>&gt;[]&gt;;</code></pre>
@@ -1542,7 +1542,7 @@ The set of arguments for constructing a Dataset resource.
 An array of objects that define dataset access for one or more entities.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DatasetArgs-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L263">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L263">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1550,7 @@ An array of objects that define dataset access for one or more entities.  Struct
 The ID of the dataset containing this table.
 
 <h4 class="pdoc-member-header" id="DatasetArgs-defaultEncryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L269">property <b>defaultEncryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L269">property <b>defaultEncryptionConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetDefaultEncryptionConfiguration'>DatasetDefaultEncryptionConfiguration</a>&gt;;</code></pre>
@@ -1560,7 +1560,7 @@ all newly-created partitioned tables in the dataset will have encryption key set
 this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DatasetArgs-defaultPartitionExpirationMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L274">property <b>defaultPartitionExpirationMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L274">property <b>defaultPartitionExpirationMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPartitionExpirationMs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1569,7 +1569,7 @@ The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
 
 <h4 class="pdoc-member-header" id="DatasetArgs-defaultTableExpirationMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L279">property <b>defaultTableExpirationMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L279">property <b>defaultTableExpirationMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTableExpirationMs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1578,7 +1578,7 @@ The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
 
 <h4 class="pdoc-member-header" id="DatasetArgs-deleteContentsOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L285">property <b>deleteContentsOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L285">property <b>deleteContentsOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteContentsOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1588,7 +1588,7 @@ dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
 
 <h4 class="pdoc-member-header" id="DatasetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L289">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L289">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1596,7 +1596,7 @@ destroying the resource will fail if tables are present.
 A user-friendly description of the dataset
 
 <h4 class="pdoc-member-header" id="DatasetArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L293">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L293">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1604,7 +1604,7 @@ A user-friendly description of the dataset
 A descriptive name for the dataset
 
 <h4 class="pdoc-member-header" id="DatasetArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L298">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L298">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ The labels associated with this dataset. You can use these to
 organize and group your datasets
 
 <h4 class="pdoc-member-header" id="DatasetArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L303">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L303">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1622,7 +1622,7 @@ The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
 <h4 class="pdoc-member-header" id="DatasetArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L308">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L308">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1631,7 +1631,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="DatasetState" data-link-title="DatasetState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L180">
         interface <strong>DatasetState</strong>
     </a>
 </h3>
@@ -1641,7 +1641,7 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering Dataset resources.
 
 <h4 class="pdoc-member-header" id="DatasetState-accesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L184">property <b>accesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L184">property <b>accesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetAccess'>DatasetAccess</a>&gt;[]&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ Input properties used for looking up and filtering Dataset resources.
 An array of objects that define dataset access for one or more entities.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DatasetState-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L188">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L188">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1657,7 +1657,7 @@ An array of objects that define dataset access for one or more entities.  Struct
 The time when this dataset was created, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="DatasetState-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L192">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L192">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1665,7 +1665,7 @@ The time when this dataset was created, in milliseconds since the epoch.
 The ID of the dataset containing this table.
 
 <h4 class="pdoc-member-header" id="DatasetState-defaultEncryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L198">property <b>defaultEncryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L198">property <b>defaultEncryptionConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatasetDefaultEncryptionConfiguration'>DatasetDefaultEncryptionConfiguration</a>&gt;;</code></pre>
@@ -1675,7 +1675,7 @@ all newly-created partitioned tables in the dataset will have encryption key set
 this value, unless table creation request (or query) overrides the key.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DatasetState-defaultPartitionExpirationMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L203">property <b>defaultPartitionExpirationMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L203">property <b>defaultPartitionExpirationMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPartitionExpirationMs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1684,7 +1684,7 @@ The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
 
 <h4 class="pdoc-member-header" id="DatasetState-defaultTableExpirationMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L208">property <b>defaultTableExpirationMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L208">property <b>defaultTableExpirationMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTableExpirationMs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1693,7 +1693,7 @@ The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
 
 <h4 class="pdoc-member-header" id="DatasetState-deleteContentsOnDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L214">property <b>deleteContentsOnDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L214">property <b>deleteContentsOnDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteContentsOnDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
 
 <h4 class="pdoc-member-header" id="DatasetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L218">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ destroying the resource will fail if tables are present.
 A user-friendly description of the dataset
 
 <h4 class="pdoc-member-header" id="DatasetState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L222">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L222">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1719,7 +1719,7 @@ A user-friendly description of the dataset
 A hash of the resource.
 
 <h4 class="pdoc-member-header" id="DatasetState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L226">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L226">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1727,7 @@ A hash of the resource.
 A descriptive name for the dataset
 
 <h4 class="pdoc-member-header" id="DatasetState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L231">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L231">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1736,7 +1736,7 @@ The labels associated with this dataset. You can use these to
 organize and group your datasets
 
 <h4 class="pdoc-member-header" id="DatasetState-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L235">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L235">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifiedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1744,7 +1744,7 @@ organize and group your datasets
 The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="DatasetState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L240">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L240">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
 <h4 class="pdoc-member-header" id="DatasetState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L245">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L245">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1762,7 +1762,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatasetState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataset.ts#L249">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataset.ts#L249">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1770,7 +1770,7 @@ If it is not provided, the provider project is used.
 The URI of the created resource.
 
 <h3 class="pdoc-module-header" id="DataTransferConfigArgs" data-link-title="DataTransferConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L225">
         interface <strong>DataTransferConfigArgs</strong>
     </a>
 </h3>
@@ -1780,7 +1780,7 @@ The URI of the created resource.
 The set of arguments for constructing a DataTransferConfig resource.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-dataRefreshWindowDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L233">property <b>dataRefreshWindowDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L233">property <b>dataRefreshWindowDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataRefreshWindowDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1792,7 +1792,7 @@ just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L237">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L237">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1800,7 +1800,7 @@ Set the value to 0 to use the default value.
 The data source id. Cannot be changed once the transfer config is created.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-destinationDatasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L241">property <b>destinationDatasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L241">property <b>destinationDatasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationDatasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1808,7 +1808,7 @@ The data source id. Cannot be changed once the transfer config is created.
 The BigQuery target dataset id.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L245">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L245">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1816,7 +1816,7 @@ The BigQuery target dataset id.
 When set to true, no runs are scheduled for a given transfer.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L249">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L249">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1824,7 +1824,7 @@ When set to true, no runs are scheduled for a given transfer.
 The user specified display name for the transfer config.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L254">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L254">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +1833,7 @@ The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-params">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L258">property <b>params</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L258">property <b>params</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>params: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1841,7 +1841,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 These parameters are specific to each data source.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L263">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L263">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1850,7 +1850,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L274">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L274">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,7 +1865,7 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 
 <h3 class="pdoc-module-header" id="DataTransferConfigState" data-link-title="DataTransferConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L164">
         interface <strong>DataTransferConfigState</strong>
     </a>
 </h3>
@@ -1875,7 +1875,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 Input properties used for looking up and filtering DataTransferConfig resources.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-dataRefreshWindowDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L172">property <b>dataRefreshWindowDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L172">property <b>dataRefreshWindowDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataRefreshWindowDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1887,7 +1887,7 @@ just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L176">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L176">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1895,7 +1895,7 @@ Set the value to 0 to use the default value.
 The data source id. Cannot be changed once the transfer config is created.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-destinationDatasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L180">property <b>destinationDatasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L180">property <b>destinationDatasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationDatasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1903,7 +1903,7 @@ The data source id. Cannot be changed once the transfer config is created.
 The BigQuery target dataset id.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L184">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L184">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1911,7 +1911,7 @@ The BigQuery target dataset id.
 When set to true, no runs are scheduled for a given transfer.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L188">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L188">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1919,7 +1919,7 @@ When set to true, no runs are scheduled for a given transfer.
 The user specified display name for the transfer config.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L193">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L193">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1928,7 +1928,7 @@ The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where conf
 not required. The name is ignored when creating a transfer config.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-params">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L203">property <b>params</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L203">property <b>params</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>params?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1946,7 +1946,7 @@ not required. The name is ignored when creating a transfer config.
 These parameters are specific to each data source.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L208">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L208">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1955,7 +1955,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DataTransferConfigState-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/dataTransferConfig.ts#L219">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/dataTransferConfig.ts#L219">property <b>schedule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1970,7 +1970,7 @@ https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cro
 NOTE: the granularity should be at least 8 hours, or less frequent.
 
 <h3 class="pdoc-module-header" id="GetDefaultServiceAccountArgs" data-link-title="GetDefaultServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L40">
         interface <strong>GetDefaultServiceAccountArgs</strong>
     </a>
 </h3>
@@ -1980,7 +1980,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 A collection of arguments for invoking getDefaultServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L44">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L44">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1988,7 +1988,7 @@ A collection of arguments for invoking getDefaultServiceAccount.
 The project the unique service account was created for. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetDefaultServiceAccountResult" data-link-title="GetDefaultServiceAccountResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L50">
         interface <strong>GetDefaultServiceAccountResult</strong>
     </a>
 </h3>
@@ -1998,7 +1998,7 @@ The project the unique service account was created for. If it is not provided, t
 A collection of values returned by getDefaultServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L55">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L55">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2007,7 +2007,7 @@ The email address of the service account. This value is often used to refer to t
 in order to grant IAM permissions.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2015,12 +2015,12 @@ in order to grant IAM permissions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDefaultServiceAccountResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L56">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/getDefaultServiceAccount.ts#L56">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ReservationArgs" data-link-title="ReservationArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L146">
         interface <strong>ReservationArgs</strong>
     </a>
 </h3>
@@ -2030,7 +2030,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Reservation resource.
 
 <h4 class="pdoc-member-header" id="ReservationArgs-ignoreIdleSlots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L152">property <b>ignoreIdleSlots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L152">property <b>ignoreIdleSlots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreIdleSlots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2040,7 +2040,7 @@ the same admin project. If true, a query using this reservation will execute wit
 capacity specified above at most.
 
 <h4 class="pdoc-member-header" id="ReservationArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L157">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2049,7 +2049,7 @@ The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
 
 <h4 class="pdoc-member-header" id="ReservationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L161">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2057,7 +2057,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 The name of the reservation. This field must only contain alphanumeric characters or dash.
 
 <h4 class="pdoc-member-header" id="ReservationArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L166">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L166">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2066,7 +2066,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ReservationArgs-slotCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L171">property <b>slotCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L171">property <b>slotCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slotCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2075,7 +2075,7 @@ Minimum slots available to this reservation. A slot is a unit of computational p
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 
 <h3 class="pdoc-module-header" id="ReservationState" data-link-title="ReservationState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L115">
         interface <strong>ReservationState</strong>
     </a>
 </h3>
@@ -2085,7 +2085,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
 Input properties used for looking up and filtering Reservation resources.
 
 <h4 class="pdoc-member-header" id="ReservationState-ignoreIdleSlots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L121">property <b>ignoreIdleSlots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L121">property <b>ignoreIdleSlots</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreIdleSlots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2095,7 +2095,7 @@ the same admin project. If true, a query using this reservation will execute wit
 capacity specified above at most.
 
 <h4 class="pdoc-member-header" id="ReservationState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L126">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L126">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2104,7 @@ The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
 
 <h4 class="pdoc-member-header" id="ReservationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 The name of the reservation. This field must only contain alphanumeric characters or dash.
 
 <h4 class="pdoc-member-header" id="ReservationState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L135">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L135">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2121,7 +2121,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ReservationState-slotCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/reservation.ts#L140">property <b>slotCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/reservation.ts#L140">property <b>slotCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slotCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2130,7 +2130,7 @@ Minimum slots available to this reservation. A slot is a unit of computational p
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
 
 <h3 class="pdoc-module-header" id="TableArgs" data-link-title="TableArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L371">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L371">
         interface <strong>TableArgs</strong>
     </a>
 </h3>
@@ -2140,7 +2140,7 @@ unit of parallelism. Queries using this reservation might use more slots during 
 The set of arguments for constructing a Table resource.
 
 <h4 class="pdoc-member-header" id="TableArgs-clusterings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L377">property <b>clusterings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L377">property <b>clusterings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2150,7 +2150,7 @@ Up to four top-level columns are allowed, and should be specified in
 descending priority order.
 
 <h4 class="pdoc-member-header" id="TableArgs-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L382">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L382">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2159,7 +2159,7 @@ The dataset ID to create the table in.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L386">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L386">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2167,7 +2167,7 @@ Changing this forces a new resource to be created.
 The field description.
 
 <h4 class="pdoc-member-header" id="TableArgs-encryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L392">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L392">property <b>encryptionConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableEncryptionConfiguration'>TableEncryptionConfiguration</a>&gt;;</code></pre>
@@ -2177,7 +2177,7 @@ If left blank, the table will be encrypted with a Google-managed key; that proce
 is transparent to the user.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableArgs-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L399">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L399">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2188,7 +2188,7 @@ indefinitely. Expired tables will be deleted and their storage
 reclaimed.
 
 <h4 class="pdoc-member-header" id="TableArgs-externalDataConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L406">property <b>externalDataConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L406">property <b>externalDataConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalDataConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration'>TableExternalDataConfiguration</a>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ By defining these properties, the data source can then be queried as
 if it were a standard BigQuery table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableArgs-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L410">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L410">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ if it were a standard BigQuery table. Structure is documented below.
 A descriptive name for the table.
 
 <h4 class="pdoc-member-header" id="TableArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L414">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L414">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ A descriptive name for the table.
 A mapping of labels to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TableArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L419">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L419">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2224,7 +2224,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TableArgs-rangePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L424">property <b>rangePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L424">property <b>rangePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableRangePartitioning'>TableRangePartitioning</a>&gt;;</code></pre>
@@ -2233,7 +2233,7 @@ If specified, configures range-based
 partitioning for this table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableArgs-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L438">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L438">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ field type, we currently cannot suppress the recurring diff this causes.
 As a workaround, we recommend using the schema as returned by the API.
 
 <h4 class="pdoc-member-header" id="TableArgs-tableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L443">property <b>tableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L443">property <b>tableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2260,7 +2260,7 @@ A unique ID for the resource.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TableArgs-timePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L448">property <b>timePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L448">property <b>timePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning'>TableTimePartitioning</a>&gt;;</code></pre>
@@ -2269,7 +2269,7 @@ If specified, configures time-based
 partitioning for this table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableArgs-view">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L453">property <b>view</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L453">property <b>view</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView'>TableView</a>&gt;;</code></pre>
@@ -2278,7 +2278,7 @@ If specified, configures this table as a view.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="TableState" data-link-title="TableState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L246">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L246">
         interface <strong>TableState</strong>
     </a>
 </h3>
@@ -2288,7 +2288,7 @@ Structure is documented below.
 Input properties used for looking up and filtering Table resources.
 
 <h4 class="pdoc-member-header" id="TableState-clusterings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L252">property <b>clusterings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L252">property <b>clusterings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2298,7 +2298,7 @@ Up to four top-level columns are allowed, and should be specified in
 descending priority order.
 
 <h4 class="pdoc-member-header" id="TableState-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L256">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L256">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2306,7 +2306,7 @@ descending priority order.
 The time when this table was created, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="TableState-datasetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L261">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L261">property <b>datasetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2315,7 +2315,7 @@ The dataset ID to create the table in.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L265">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L265">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2323,7 +2323,7 @@ Changing this forces a new resource to be created.
 The field description.
 
 <h4 class="pdoc-member-header" id="TableState-encryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L271">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L271">property <b>encryptionConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableEncryptionConfiguration'>TableEncryptionConfiguration</a>&gt;;</code></pre>
@@ -2333,7 +2333,7 @@ If left blank, the table will be encrypted with a Google-managed key; that proce
 is transparent to the user.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L275">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L275">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2341,7 +2341,7 @@ is transparent to the user.  Structure is documented below.
 A hash of the resource.
 
 <h4 class="pdoc-member-header" id="TableState-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L282">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L282">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2352,7 +2352,7 @@ indefinitely. Expired tables will be deleted and their storage
 reclaimed.
 
 <h4 class="pdoc-member-header" id="TableState-externalDataConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L289">property <b>externalDataConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L289">property <b>externalDataConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalDataConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration'>TableExternalDataConfiguration</a>&gt;;</code></pre>
@@ -2363,7 +2363,7 @@ By defining these properties, the data source can then be queried as
 if it were a standard BigQuery table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableState-friendlyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L293">property <b>friendlyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L293">property <b>friendlyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>friendlyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2371,7 +2371,7 @@ if it were a standard BigQuery table. Structure is documented below.
 A descriptive name for the table.
 
 <h4 class="pdoc-member-header" id="TableState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L297">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L297">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2379,7 +2379,7 @@ A descriptive name for the table.
 A mapping of labels to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TableState-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L301">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L301">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifiedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2387,7 +2387,7 @@ A mapping of labels to assign to the resource.
 The time when this table was last modified, in milliseconds since the epoch.
 
 <h4 class="pdoc-member-header" id="TableState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L305">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L305">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2395,7 +2395,7 @@ The time when this table was last modified, in milliseconds since the epoch.
 The geographic location where the table resides. This value is inherited from the dataset.
 
 <h4 class="pdoc-member-header" id="TableState-numBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L309">property <b>numBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L309">property <b>numBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2403,7 +2403,7 @@ The geographic location where the table resides. This value is inherited from th
 The size of this table in bytes, excluding any data in the streaming buffer.
 
 <h4 class="pdoc-member-header" id="TableState-numLongTermBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L313">property <b>numLongTermBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L313">property <b>numLongTermBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numLongTermBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2411,7 +2411,7 @@ The size of this table in bytes, excluding any data in the streaming buffer.
 The number of bytes in the table that are considered "long-term storage".
 
 <h4 class="pdoc-member-header" id="TableState-numRows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L317">property <b>numRows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L317">property <b>numRows</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numRows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2419,7 +2419,7 @@ The number of bytes in the table that are considered "long-term storage".
 The number of rows of data in this table, excluding any data in the streaming buffer.
 
 <h4 class="pdoc-member-header" id="TableState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L322">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L322">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2428,7 +2428,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TableState-rangePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L327">property <b>rangePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L327">property <b>rangePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rangePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableRangePartitioning'>TableRangePartitioning</a>&gt;;</code></pre>
@@ -2437,7 +2437,7 @@ If specified, configures range-based
 partitioning for this table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableState-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L341">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L341">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2455,7 +2455,7 @@ field type, we currently cannot suppress the recurring diff this causes.
 As a workaround, we recommend using the schema as returned by the API.
 
 <h4 class="pdoc-member-header" id="TableState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L345">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L345">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2463,7 +2463,7 @@ As a workaround, we recommend using the schema as returned by the API.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="TableState-tableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L350">property <b>tableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L350">property <b>tableId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2472,7 +2472,7 @@ A unique ID for the resource.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TableState-timePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L355">property <b>timePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L355">property <b>timePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning'>TableTimePartitioning</a>&gt;;</code></pre>
@@ -2481,7 +2481,7 @@ If specified, configures time-based
 partitioning for this table. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="TableState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L360">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L360">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2490,7 +2490,7 @@ The only type supported is DAY, which will generate
 one partition per day based on data loading time.
 
 <h4 class="pdoc-member-header" id="TableState-view">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/bigquery/table.ts#L365">property <b>view</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/bigquery/table.ts#L365">property <b>view</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>view?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView'>TableView</a>&gt;;</code></pre>

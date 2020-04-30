@@ -31,7 +31,7 @@ git_sha: "115c570a876eef4eb2d417a4f0f8be068f0d64e9"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-mailgun/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-mailgun/blob/115c570a876eef4eb2d417a4f0f8be068f0d64e9/sdk/nodejs/config/vars.ts#L9">
         let <strong>apiKey</strong>
     </a>
 </h3>

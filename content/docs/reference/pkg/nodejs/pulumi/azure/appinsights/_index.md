@@ -49,7 +49,7 @@ git_sha: "739e47b22fd300ab22139c0fe21d5727264a44d8"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AnalyticsItem" data-link-title="AnalyticsItem">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L13">
         Resource <strong>AnalyticsItem</strong>
     </a>
 </h3>
@@ -61,7 +61,7 @@ Manages an Application Insights Analytics Item component.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_analytics_item.html.markdown.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -75,7 +75,7 @@ Create a AnalyticsItem resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -86,14 +86,14 @@ Get an existing AnalyticsItem resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -104,7 +104,7 @@ Returns true if the given object is an instance of AnalyticsItem.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L43">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L43">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationInsightsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,7 +112,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Application Insights component on which the Analytics Item exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L47">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L47">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ The ID of the Application Insights component on which the Analytics Item exists.
 The content for the Analytics Item, for example the query text if `type` is `query`.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-functionAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L51">property <b>functionAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L51">property <b>functionAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionAlias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ The content for the Analytics Item, for example the query text if `type` is `que
 The alias to use for the function. Required when `type` is `function`.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Application Insights Analytics Item. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L59">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L59">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Specifies the name of the Application Insights Analytics Item. Changing this for
 The scope for the Analytics Item. Can be `shared` or `user`. Changing this forces a new resource to be created. Must be `shared` for functions.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L63">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L63">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeCreated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ The scope for the Analytics Item. Can be `shared` or `user`. Changing this force
 A string containing the time the Analytics Item was created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-timeModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L67">property <b>timeModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L67">property <b>timeModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ A string containing the time the Analytics Item was created.
 A string containing the time the Analytics Item was last modified.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L71">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L71">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ A string containing the time the Analytics Item was last modified.
 The type of Analytics Item to create. Can be one of `query`, `function`, `folder`, `recent`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -186,7 +186,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AnalyticsItem-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L75">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L75">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ deployments.
 A string indicating the version of the query format
 
 <h3 class="pdoc-module-header" id="ApiKey" data-link-title="ApiKey">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L13">
         Resource <strong>ApiKey</strong>
     </a>
 </h3>
@@ -206,7 +206,7 @@ Manages an Application Insights API key.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_api_key.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApiKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L60"> <b>constructor</b></a>
 </h4>
 
 
@@ -220,7 +220,7 @@ Create a ApiKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -231,14 +231,14 @@ Get an existing ApiKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -249,7 +249,7 @@ Returns true if the given object is an instance of ApiKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiKey-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L43">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L43">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API Key secret (Sensitive).
 
 <h4 class="pdoc-member-header" id="ApiKey-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L47">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L47">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationInsightsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ The API Key secret (Sensitive).
 The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -274,7 +274,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKey-readPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L56">property <b>readPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L56">property <b>readPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ new resource to be created.
 Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -300,7 +300,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ApiKey-writePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L60">property <b>writePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L60">property <b>writePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writePermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ deployments.
 Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="Insights" data-link-title="Insights">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L13">
         Resource <strong>Insights</strong>
     </a>
 </h3>
@@ -320,7 +320,7 @@ Manages an Application Insights component.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights.html.markdown.
 
 <h4 class="pdoc-member-header" id="Insights-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -334,7 +334,7 @@ Create a Insights resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Insights-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -345,14 +345,14 @@ Get an existing Insights resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Insights-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Insights-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -363,7 +363,7 @@ Returns true if the given object is an instance of Insights.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Insights-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L43">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L43">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The App ID associated with this Application Insights component.
 
 <h4 class="pdoc-member-header" id="Insights-applicationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L47">property <b>applicationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L47">property <b>applicationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The App ID associated with this Application Insights component.
 Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Insights-dailyDataCapInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L51">property <b>dailyDataCapInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L51">property <b>dailyDataCapInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dailyDataCapInGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Specifies the type of Application Insights to create. Valid values are `ios` for
 Specifies the Application Insights component daily data volume cap in GB.
 
 <h4 class="pdoc-member-header" id="Insights-dailyDataCapNotificationsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L55">property <b>dailyDataCapNotificationsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L55">property <b>dailyDataCapNotificationsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dailyDataCapNotificationsDisabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ Specifies the Application Insights component daily data volume cap in GB.
 Specifies if a notification email will be send when the daily data volume cap is met.
 
 <h4 class="pdoc-member-header" id="Insights-disableIpMasking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L59">property <b>disableIpMasking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L59">property <b>disableIpMasking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableIpMasking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ Specifies if a notification email will be send when the daily data volume cap is
 By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Insights-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -412,7 +412,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Insights-instrumentationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L63">property <b>instrumentationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L63">property <b>instrumentationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instrumentationKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ deployments and may be missing (undefined) during planning phases.
 The Instrumentation Key for this Application Insights component.
 
 <h4 class="pdoc-member-header" id="Insights-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L67">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L67">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ The Instrumentation Key for this Application Insights component.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Insights-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -437,7 +437,7 @@ Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="Insights-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ The name of the resource group in which to
 create the Application Insights component.
 
 <h4 class="pdoc-member-header" id="Insights-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L81">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L81">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ create the Application Insights component.
 Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
 
 <h4 class="pdoc-member-header" id="Insights-samplingPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L85">property <b>samplingPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L85">property <b>samplingPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>samplingPercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ Specifies the retention period in days. Possible values are `30`, `60`, `90`, `1
 Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
 
 <h4 class="pdoc-member-header" id="Insights-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ Specifies the percentage of the data produced by the monitored application that 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Insights-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -479,7 +479,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="WebTest" data-link-title="WebTest">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L13">
         Resource <strong>WebTest</strong>
     </a>
 </h3>
@@ -491,7 +491,7 @@ Manages an Application Insights WebTest.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_web_test.html.markdown.
 
 <h4 class="pdoc-member-header" id="WebTest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -505,7 +505,7 @@ Create a WebTest resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="WebTest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -516,14 +516,14 @@ Get an existing WebTest resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="WebTest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="WebTest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -534,7 +534,7 @@ Returns true if the given object is an instance of WebTest.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="WebTest-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L43">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L43">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationInsightsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WebTest-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L47">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L47">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ The ID of the Application Insights component on which the WebTest operates. Chan
 An XML configuration specification for a WebTest.
 
 <h4 class="pdoc-member-header" id="WebTest-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ An XML configuration specification for a WebTest.
 Purpose/user defined descriptive test for this WebTest.
 
 <h4 class="pdoc-member-header" id="WebTest-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L55">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L55">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ Purpose/user defined descriptive test for this WebTest.
 Is the test actively being monitored.
 
 <h4 class="pdoc-member-header" id="WebTest-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L59">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L59">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ Is the test actively being monitored.
 Interval in seconds between test runs for this WebTest. Default is `300`.
 
 <h4 class="pdoc-member-header" id="WebTest-geoLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L63">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L63">property <b>geoLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -582,7 +582,7 @@ Interval in seconds between test runs for this WebTest. Default is `300`.
 A list of where to physically run the tests from to give global coverage for accessibility of your application.
 
 <h4 class="pdoc-member-header" id="WebTest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -591,7 +591,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="WebTest-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L67">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L67">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ deployments and may be missing (undefined) during planning phases.
 = (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
 
 <h4 class="pdoc-member-header" id="WebTest-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L71">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the resource group.
 
 <h4 class="pdoc-member-header" id="WebTest-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,12 +616,12 @@ Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="WebTest-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WebTest-retryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L81">property <b>retryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L81">property <b>retryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retryEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -629,12 +629,12 @@ new resource to be created.
 Allow for retries should this WebTest fail.
 
 <h4 class="pdoc-member-header" id="WebTest-syntheticMonitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L82">property <b>syntheticMonitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L82">property <b>syntheticMonitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syntheticMonitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WebTest-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L86">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L86">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ Allow for retries should this WebTest fail.
 Resource tags.
 
 <h4 class="pdoc-member-header" id="WebTest-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L90">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L90">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ Resource tags.
 Seconds until this WebTest will timeout and fail. Default is `30`.
 
 <h4 class="pdoc-member-header" id="WebTest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -661,7 +661,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getInsights" data-link-title="getInsights">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L13">
         Function <strong>getInsights</strong>
     </a>
 </h3>
@@ -677,7 +677,7 @@ Use this data source to access information about an existing Application Insight
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AnalyticsItemArgs" data-link-title="AnalyticsItemArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L178">
         interface <strong>AnalyticsItemArgs</strong>
     </a>
 </h3>
@@ -687,7 +687,7 @@ Use this data source to access information about an existing Application Insight
 The set of arguments for constructing a AnalyticsItem resource.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemArgs-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L182">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L182">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -695,7 +695,7 @@ The set of arguments for constructing a AnalyticsItem resource.
 The ID of the Application Insights component on which the Analytics Item exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L186">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L186">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -703,7 +703,7 @@ The ID of the Application Insights component on which the Analytics Item exists.
 The content for the Analytics Item, for example the query text if `type` is `query`.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemArgs-functionAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L190">property <b>functionAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L190">property <b>functionAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ The content for the Analytics Item, for example the query text if `type` is `que
 The alias to use for the function. Required when `type` is `function`.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -719,7 +719,7 @@ The alias to use for the function. Required when `type` is `function`.
 Specifies the name of the Application Insights Analytics Item. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L198">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L198">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ Specifies the name of the Application Insights Analytics Item. Changing this for
 The scope for the Analytics Item. Can be `shared` or `user`. Changing this forces a new resource to be created. Must be `shared` for functions.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L202">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L202">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -735,7 +735,7 @@ The scope for the Analytics Item. Can be `shared` or `user`. Changing this force
 The type of Analytics Item to create. Can be one of `query`, `function`, `folder`, `recent`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="AnalyticsItemState" data-link-title="AnalyticsItemState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L136">
         interface <strong>AnalyticsItemState</strong>
     </a>
 </h3>
@@ -745,7 +745,7 @@ The type of Analytics Item to create. Can be one of `query`, `function`, `folder
 Input properties used for looking up and filtering AnalyticsItem resources.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L140">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L140">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ Input properties used for looking up and filtering AnalyticsItem resources.
 The ID of the Application Insights component on which the Analytics Item exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L144">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L144">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -761,7 +761,7 @@ The ID of the Application Insights component on which the Analytics Item exists.
 The content for the Analytics Item, for example the query text if `type` is `query`.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-functionAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L148">property <b>functionAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L148">property <b>functionAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionAlias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +769,7 @@ The content for the Analytics Item, for example the query text if `type` is `que
 The alias to use for the function. Required when `type` is `function`.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -777,7 +777,7 @@ The alias to use for the function. Required when `type` is `function`.
 Specifies the name of the Application Insights Analytics Item. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L156">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L156">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -785,7 +785,7 @@ Specifies the name of the Application Insights Analytics Item. Changing this for
 The scope for the Analytics Item. Can be `shared` or `user`. Changing this forces a new resource to be created. Must be `shared` for functions.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L160">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L160">property <b>timeCreated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeCreated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +793,7 @@ The scope for the Analytics Item. Can be `shared` or `user`. Changing this force
 A string containing the time the Analytics Item was created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-timeModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L164">property <b>timeModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L164">property <b>timeModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeModified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ A string containing the time the Analytics Item was created.
 A string containing the time the Analytics Item was last modified.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L168">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L168">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ A string containing the time the Analytics Item was last modified.
 The type of Analytics Item to create. Can be one of `query`, `function`, `folder`, `recent`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AnalyticsItemState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/analyticsItem.ts#L172">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/analyticsItem.ts#L172">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +817,7 @@ The type of Analytics Item to create. Can be one of `query`, `function`, `folder
 A string indicating the version of the query format
 
 <h3 class="pdoc-module-header" id="ApiKeyArgs" data-link-title="ApiKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L131">
         interface <strong>ApiKeyArgs</strong>
     </a>
 </h3>
@@ -827,7 +827,7 @@ A string indicating the version of the query format
 The set of arguments for constructing a ApiKey resource.
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L135">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L135">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -835,7 +835,7 @@ The set of arguments for constructing a ApiKey resource.
 The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-readPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L144">property <b>readPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L144">property <b>readPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -852,7 +852,7 @@ new resource to be created.
 Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKeyArgs-writePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L148">property <b>writePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L148">property <b>writePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -860,7 +860,7 @@ Specifies the list of read permissions granted to the API key. Valid values are 
 Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ApiKeyState" data-link-title="ApiKeyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L104">
         interface <strong>ApiKeyState</strong>
     </a>
 </h3>
@@ -870,7 +870,7 @@ Specifies the list of write permissions granted to the API key. Valid values are
 Input properties used for looking up and filtering ApiKey resources.
 
 <h4 class="pdoc-member-header" id="ApiKeyState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L108">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L108">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -878,7 +878,7 @@ Input properties used for looking up and filtering ApiKey resources.
 The API Key secret (Sensitive).
 
 <h4 class="pdoc-member-header" id="ApiKeyState-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L112">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L112">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -886,7 +886,7 @@ The API Key secret (Sensitive).
 The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -895,7 +895,7 @@ Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKeyState-readPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L121">property <b>readPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L121">property <b>readPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -903,7 +903,7 @@ new resource to be created.
 Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiKeyState-writePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/apiKey.ts#L125">property <b>writePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/apiKey.ts#L125">property <b>writePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -911,7 +911,7 @@ Specifies the list of read permissions granted to the API key. Valid values are 
 Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetInsightsArgs" data-link-title="GetInsightsArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L30">
         interface <strong>GetInsightsArgs</strong>
     </a>
 </h3>
@@ -921,7 +921,7 @@ Specifies the list of write permissions granted to the API key. Valid values are
 A collection of arguments for invoking getInsights.
 
 <h4 class="pdoc-member-header" id="GetInsightsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L34">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -929,7 +929,7 @@ A collection of arguments for invoking getInsights.
 Specifies the name of the Application Insights component.
 
 <h4 class="pdoc-member-header" id="GetInsightsArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L38">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L38">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -937,7 +937,7 @@ Specifies the name of the Application Insights component.
 Specifies the name of the resource group the Application Insights component is located in.
 
 <h3 class="pdoc-module-header" id="GetInsightsResult" data-link-title="GetInsightsResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L44">
         interface <strong>GetInsightsResult</strong>
     </a>
 </h3>
@@ -947,7 +947,7 @@ Specifies the name of the resource group the Application Insights component is l
 A collection of values returned by getInsights.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L48">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L48">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -955,7 +955,7 @@ A collection of values returned by getInsights.
 The App ID associated with this Application Insights component.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-applicationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L52">property <b>applicationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L52">property <b>applicationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -963,7 +963,7 @@ The App ID associated with this Application Insights component.
 The type of the component.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -971,7 +971,7 @@ The type of the component.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-instrumentationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L56">property <b>instrumentationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L56">property <b>instrumentationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instrumentationKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -979,7 +979,7 @@ The provider-assigned unique ID for this managed resource.
 The instrumentation key of the Application Insights component.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L60">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L60">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -987,17 +987,17 @@ The instrumentation key of the Application Insights component.
 The Azure location where the component exists.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInsightsResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L62">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L62">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInsightsResult-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L66">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L66">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1005,7 +1005,7 @@ The Azure location where the component exists.
 The retention period in days.
 
 <h4 class="pdoc-member-header" id="GetInsightsResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/getInsights.ts#L70">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/getInsights.ts#L70">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1013,7 +1013,7 @@ The retention period in days.
 Tags applied to the component.
 
 <h3 class="pdoc-module-header" id="InsightsArgs" data-link-title="InsightsArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L206">
         interface <strong>InsightsArgs</strong>
     </a>
 </h3>
@@ -1023,7 +1023,7 @@ Tags applied to the component.
 The set of arguments for constructing a Insights resource.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-applicationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L210">property <b>applicationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L210">property <b>applicationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1031,7 +1031,7 @@ The set of arguments for constructing a Insights resource.
 Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-dailyDataCapInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L214">property <b>dailyDataCapInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L214">property <b>dailyDataCapInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyDataCapInGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ Specifies the type of Application Insights to create. Valid values are `ios` for
 Specifies the Application Insights component daily data volume cap in GB.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-dailyDataCapNotificationsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L218">property <b>dailyDataCapNotificationsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L218">property <b>dailyDataCapNotificationsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyDataCapNotificationsDisabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ Specifies the Application Insights component daily data volume cap in GB.
 Specifies if a notification email will be send when the daily data volume cap is met.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-disableIpMasking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L222">property <b>disableIpMasking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L222">property <b>disableIpMasking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableIpMasking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1055,7 +1055,7 @@ Specifies if a notification email will be send when the daily data volume cap is
 By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L226">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L226">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ By default the real client ip is masked as `0.0.0.0` in the logs. Use this argum
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L236">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L236">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ The name of the resource group in which to
 create the Application Insights component.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L240">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L240">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ create the Application Insights component.
 Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-samplingPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L244">property <b>samplingPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L244">property <b>samplingPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samplingPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ Specifies the retention period in days. Possible values are `30`, `60`, `90`, `1
 Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
 
 <h4 class="pdoc-member-header" id="InsightsArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L248">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L248">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ Specifies the percentage of the data produced by the monitored application that 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="InsightsState" data-link-title="InsightsState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L150">
         interface <strong>InsightsState</strong>
     </a>
 </h3>
@@ -1115,7 +1115,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Insights resources.
 
 <h4 class="pdoc-member-header" id="InsightsState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L154">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L154">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ Input properties used for looking up and filtering Insights resources.
 The App ID associated with this Application Insights component.
 
 <h4 class="pdoc-member-header" id="InsightsState-applicationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L158">property <b>applicationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L158">property <b>applicationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1131,7 @@ The App ID associated with this Application Insights component.
 Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InsightsState-dailyDataCapInGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L162">property <b>dailyDataCapInGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L162">property <b>dailyDataCapInGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyDataCapInGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ Specifies the type of Application Insights to create. Valid values are `ios` for
 Specifies the Application Insights component daily data volume cap in GB.
 
 <h4 class="pdoc-member-header" id="InsightsState-dailyDataCapNotificationsDisabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L166">property <b>dailyDataCapNotificationsDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L166">property <b>dailyDataCapNotificationsDisabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyDataCapNotificationsDisabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ Specifies the Application Insights component daily data volume cap in GB.
 Specifies if a notification email will be send when the daily data volume cap is met.
 
 <h4 class="pdoc-member-header" id="InsightsState-disableIpMasking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L170">property <b>disableIpMasking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L170">property <b>disableIpMasking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableIpMasking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ Specifies if a notification email will be send when the daily data volume cap is
 By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="InsightsState-instrumentationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L174">property <b>instrumentationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L174">property <b>instrumentationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instrumentationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ By default the real client ip is masked as `0.0.0.0` in the logs. Use this argum
 The Instrumentation Key for this Application Insights component.
 
 <h4 class="pdoc-member-header" id="InsightsState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L178">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L178">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ The Instrumentation Key for this Application Insights component.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InsightsState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L183">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="InsightsState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L188">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L188">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ The name of the resource group in which to
 create the Application Insights component.
 
 <h4 class="pdoc-member-header" id="InsightsState-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L192">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L192">property <b>retentionInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1197,7 +1197,7 @@ create the Application Insights component.
 Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`.
 
 <h4 class="pdoc-member-header" id="InsightsState-samplingPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L196">property <b>samplingPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L196">property <b>samplingPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>samplingPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ Specifies the retention period in days. Possible values are `30`, `60`, `90`, `1
 Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
 
 <h4 class="pdoc-member-header" id="InsightsState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/insights.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/insights.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ Specifies the percentage of the data produced by the monitored application that 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="WebTestArgs" data-link-title="WebTestArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L221">
         interface <strong>WebTestArgs</strong>
     </a>
 </h3>
@@ -1223,7 +1223,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a WebTest resource.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L225">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L225">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ The set of arguments for constructing a WebTest resource.
 The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L229">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L229">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ The ID of the Application Insights component on which the WebTest operates. Chan
 An XML configuration specification for a WebTest.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L233">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L233">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1247,7 @@ An XML configuration specification for a WebTest.
 Purpose/user defined descriptive test for this WebTest.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L237">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L237">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ Purpose/user defined descriptive test for this WebTest.
 Is the test actively being monitored.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L241">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L241">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1263,7 +1263,7 @@ Is the test actively being monitored.
 Interval in seconds between test runs for this WebTest. Default is `300`.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-geoLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L245">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L245">property <b>geoLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ Interval in seconds between test runs for this WebTest. Default is `300`.
 A list of where to physically run the tests from to give global coverage for accessibility of your application.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L249">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L249">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +1279,7 @@ A list of where to physically run the tests from to give global coverage for acc
 = (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L253">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L253">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1287,7 @@ A list of where to physically run the tests from to give global coverage for acc
 The location of the resource group.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L258">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L258">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1296,12 +1296,12 @@ Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L259">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L259">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WebTestArgs-retryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L263">property <b>retryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L263">property <b>retryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ new resource to be created.
 Allow for retries should this WebTest fail.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L267">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L267">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ Allow for retries should this WebTest fail.
 Resource tags.
 
 <h4 class="pdoc-member-header" id="WebTestArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L271">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L271">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1325,7 +1325,7 @@ Resource tags.
 Seconds until this WebTest will timeout and fail. Default is `30`.
 
 <h3 class="pdoc-module-header" id="WebTestState" data-link-title="WebTestState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L164">
         interface <strong>WebTestState</strong>
     </a>
 </h3>
@@ -1335,7 +1335,7 @@ Seconds until this WebTest will timeout and fail. Default is `30`.
 Input properties used for looking up and filtering WebTest resources.
 
 <h4 class="pdoc-member-header" id="WebTestState-applicationInsightsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L168">property <b>applicationInsightsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L168">property <b>applicationInsightsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1343,7 +1343,7 @@ Input properties used for looking up and filtering WebTest resources.
 The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="WebTestState-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L172">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L172">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1351,7 +1351,7 @@ The ID of the Application Insights component on which the WebTest operates. Chan
 An XML configuration specification for a WebTest.
 
 <h4 class="pdoc-member-header" id="WebTestState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1359,7 @@ An XML configuration specification for a WebTest.
 Purpose/user defined descriptive test for this WebTest.
 
 <h4 class="pdoc-member-header" id="WebTestState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L180">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L180">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1367,7 +1367,7 @@ Purpose/user defined descriptive test for this WebTest.
 Is the test actively being monitored.
 
 <h4 class="pdoc-member-header" id="WebTestState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L184">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L184">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1375,7 +1375,7 @@ Is the test actively being monitored.
 Interval in seconds between test runs for this WebTest. Default is `300`.
 
 <h4 class="pdoc-member-header" id="WebTestState-geoLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L188">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L188">property <b>geoLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1383,7 +1383,7 @@ Interval in seconds between test runs for this WebTest. Default is `300`.
 A list of where to physically run the tests from to give global coverage for accessibility of your application.
 
 <h4 class="pdoc-member-header" id="WebTestState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L192">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L192">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1391,7 +1391,7 @@ A list of where to physically run the tests from to give global coverage for acc
 = (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
 
 <h4 class="pdoc-member-header" id="WebTestState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L196">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L196">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1399,7 +1399,7 @@ A list of where to physically run the tests from to give global coverage for acc
 The location of the resource group.
 
 <h4 class="pdoc-member-header" id="WebTestState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1408,12 +1408,12 @@ Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="WebTestState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L202">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L202">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WebTestState-retryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L206">property <b>retryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L206">property <b>retryEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retryEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1421,12 +1421,12 @@ new resource to be created.
 Allow for retries should this WebTest fail.
 
 <h4 class="pdoc-member-header" id="WebTestState-syntheticMonitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L207">property <b>syntheticMonitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L207">property <b>syntheticMonitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syntheticMonitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WebTestState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L211">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L211">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1434,7 +1434,7 @@ Allow for retries should this WebTest fail.
 Resource tags.
 
 <h4 class="pdoc-member-header" id="WebTestState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/{{< param git_sha >}}/sdk/nodejs/appinsights/webTest.ts#L215">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/739e47b22fd300ab22139c0fe21d5727264a44d8/sdk/nodejs/appinsights/webTest.ts#L215">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

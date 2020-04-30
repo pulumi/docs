@@ -38,7 +38,7 @@ git_sha: "d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c"
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDdosBgpInstances" data-link-title="getDdosBgpInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L30">
         Function <strong>getDdosBgpInstances</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ddosbgp_instances.html.markdown.
 
 <h3 class="pdoc-module-header" id="getDdosCooInstances" data-link-title="getDdosCooInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L28">
         Function <strong>getDdosCooInstances</strong>
     </a>
 </h3>
@@ -100,7 +100,7 @@ export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetDdosBgpInstancesArgs" data-link-title="GetDdosBgpInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L49">
         interface <strong>GetDdosBgpInstancesArgs</strong>
     </a>
 </h3>
@@ -110,7 +110,7 @@ export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 A collection of arguments for invoking getDdosBgpInstances.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L53">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -118,7 +118,7 @@ A collection of arguments for invoking getDdosBgpInstances.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L57">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -126,12 +126,12 @@ A list of instance IDs.
 A regex string to filter results by the instance name.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L58">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDdosBgpInstancesResult" data-link-title="GetDdosBgpInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L64">
         interface <strong>GetDdosBgpInstancesResult</strong>
     </a>
 </h3>
@@ -141,7 +141,7 @@ A regex string to filter results by the instance name.
 A collection of values returned by getDdosBgpInstances.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -149,7 +149,7 @@ A collection of values returned by getDdosBgpInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L68">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L68">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -157,7 +157,7 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L72">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L72">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDdosBgpInstancesInstance'>GetDdosBgpInstancesInstance</a>[];</code></pre>
@@ -165,12 +165,12 @@ A list of instance IDs.
 A list of apis. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L73">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L73">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L77">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L77">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -178,12 +178,12 @@ A list of apis. Each element contains the following attributes:
 A list of instance names.
 
 <h4 class="pdoc-member-header" id="GetDdosBgpInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosBgpInstances.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosBgpInstances.ts#L78">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDdosCooInstancesArgs" data-link-title="GetDdosCooInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L47">
         interface <strong>GetDdosCooInstancesArgs</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ A list of instance names.
 A collection of arguments for invoking getDdosCooInstances.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L51">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -201,7 +201,7 @@ A collection of arguments for invoking getDdosCooInstances.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -209,12 +209,12 @@ A list of instance IDs.
 A regex string to filter results by the instance name.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDdosCooInstancesResult" data-link-title="GetDdosCooInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L62">
         interface <strong>GetDdosCooInstancesResult</strong>
     </a>
 </h3>
@@ -224,7 +224,7 @@ A regex string to filter results by the instance name.
 A collection of values returned by getDdosCooInstances.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L80">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -232,7 +232,7 @@ A collection of values returned by getDdosCooInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L66">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L66">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -240,7 +240,7 @@ The provider-assigned unique ID for this managed resource.
 A list of instance IDs.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L70">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L70">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDdosCooInstancesInstance'>GetDdosCooInstancesInstance</a>[];</code></pre>
@@ -248,12 +248,12 @@ A list of instance IDs.
 A list of apis. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L71">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L71">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L75">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L75">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -261,7 +261,7 @@ A list of apis. Each element contains the following attributes:
 A list of instance names.
 
 <h4 class="pdoc-member-header" id="GetDdosCooInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/ddos/getDdosCooInstances.ts#L76">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/ddos/getDdosCooInstances.ts#L76">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

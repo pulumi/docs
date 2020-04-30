@@ -155,4331 +155,4331 @@ git_sha: "dbedd1b23964384c14b3880379e348959fdd362a"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ElasticSearchAclAcl" data-link-title="ElasticSearchAclAcl">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L7">
         interface <strong>ElasticSearchAclAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElasticSearchAclAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="ElasticSearchAclAcl-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L8">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L8">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='#ElasticSearchAclAclRule'>ElasticSearchAclAclRule</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ElasticSearchAclAcl-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L9">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L9">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ElasticSearchAclAclRule" data-link-title="ElasticSearchAclAclRule">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L12">
         interface <strong>ElasticSearchAclAclRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ElasticSearchAclAclRule</span></code></pre>
 <h4 class="pdoc-member-header" id="ElasticSearchAclAclRule-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L13">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L13">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ElasticSearchAclAclRule-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L14">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L14">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permission: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetElasticSearchAclAcl" data-link-title="GetElasticSearchAclAcl">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L17">
         interface <strong>GetElasticSearchAclAcl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetElasticSearchAclAcl</span></code></pre>
 <h4 class="pdoc-member-header" id="GetElasticSearchAclAcl-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L18">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L18">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='#GetElasticSearchAclAclRule'>GetElasticSearchAclAclRule</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticSearchAclAcl-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L19">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L19">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetElasticSearchAclAclRule" data-link-title="GetElasticSearchAclAclRule">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L22">
         interface <strong>GetElasticSearchAclAclRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetElasticSearchAclAclRule</span></code></pre>
 <h4 class="pdoc-member-header" id="GetElasticSearchAclAclRule-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L23">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L23">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticSearchAclAclRule-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L24">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L24">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permission: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKafkaConnectorTask" data-link-title="GetKafkaConnectorTask">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L27">
         interface <strong>GetKafkaConnectorTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetKafkaConnectorTask</span></code></pre>
 <h4 class="pdoc-member-header" id="GetKafkaConnectorTask-connector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L28">property <b>connector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L28">property <b>connector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKafkaConnectorTask-task">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L29">property <b>task</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L29">property <b>task</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>task: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceCassandra" data-link-title="GetServiceCassandra">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L32">
         interface <strong>GetServiceCassandra</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceCassandra</span></code></pre>
 <h3 class="pdoc-module-header" id="GetServiceCassandraUserConfig" data-link-title="GetServiceCassandraUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L36">
         interface <strong>GetServiceCassandraUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceCassandraUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L37">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L37">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfig-migrateSstableloader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L38">property <b>migrateSstableloader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L38">property <b>migrateSstableloader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migrateSstableloader?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L39">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L39">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceCassandraUserConfigPrivateAccess'>outputs.GetServiceCassandraUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L40">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L40">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceCassandraUserConfigPublicAccess'>outputs.GetServiceCassandraUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L41">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L41">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceCassandraUserConfigPrivateAccess" data-link-title="GetServiceCassandraUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L44">
         interface <strong>GetServiceCassandraUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceCassandraUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L45">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L45">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceCassandraUserConfigPublicAccess" data-link-title="GetServiceCassandraUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L48">
         interface <strong>GetServiceCassandraUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceCassandraUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceCassandraUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L49">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L49">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceComponent" data-link-title="GetServiceComponent">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L52">
         interface <strong>GetServiceComponent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceComponent</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-component">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L53">property <b>component</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L53">property <b>component</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>component: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L54">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L54">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-kafkaAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L55">property <b>kafkaAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L55">property <b>kafkaAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaAuthenticationMethod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L56">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L56">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L57">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L57">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>route: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-ssl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L58">property <b>ssl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L58">property <b>ssl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceComponent-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L59">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L59">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearch" data-link-title="GetServiceElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L62">
         interface <strong>GetServiceElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearch-kibanaUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L63">property <b>kibanaUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L63">property <b>kibanaUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibanaUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearchUserConfig" data-link-title="GetServiceElasticsearchUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L66">
         interface <strong>GetServiceElasticsearchUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearchUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L67">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L67">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-disableReplicationFactorAdjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L68">property <b>disableReplicationFactorAdjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L68">property <b>disableReplicationFactorAdjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableReplicationFactorAdjustment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L69">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L69">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceElasticsearchUserConfigElasticsearch'>outputs.GetServiceElasticsearchUserConfigElasticsearch</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-elasticsearchVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L70">property <b>elasticsearchVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L70">property <b>elasticsearchVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-indexPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L71">property <b>indexPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L71">property <b>indexPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexPatterns?: <a href='#GetServiceElasticsearchUserConfigIndexPattern'>GetServiceElasticsearchUserConfigIndexPattern</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L72">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L72">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-kibana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L73">property <b>kibana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L73">property <b>kibana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibana?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceElasticsearchUserConfigKibana'>outputs.GetServiceElasticsearchUserConfigKibana</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-maxIndexCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L74">property <b>maxIndexCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L74">property <b>maxIndexCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIndexCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L75">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L75">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceElasticsearchUserConfigPrivateAccess'>outputs.GetServiceElasticsearchUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L76">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L76">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceElasticsearchUserConfigPublicAccess'>outputs.GetServiceElasticsearchUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-recoveryBasebackupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L77">property <b>recoveryBasebackupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L77">property <b>recoveryBasebackupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryBasebackupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L78">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L78">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearchUserConfigElasticsearch" data-link-title="GetServiceElasticsearchUserConfigElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L81">
         interface <strong>GetServiceElasticsearchUserConfigElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearchUserConfigElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-actionAutoCreateIndexEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L82">property <b>actionAutoCreateIndexEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L82">property <b>actionAutoCreateIndexEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionAutoCreateIndexEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-actionDestructiveRequiresName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L83">property <b>actionDestructiveRequiresName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L83">property <b>actionDestructiveRequiresName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionDestructiveRequiresName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-httpMaxContentLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L84">property <b>httpMaxContentLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L84">property <b>httpMaxContentLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpMaxContentLength?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-indicesFielddataCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L85">property <b>indicesFielddataCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L85">property <b>indicesFielddataCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesFielddataCacheSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-indicesMemoryIndexBufferSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L86">property <b>indicesMemoryIndexBufferSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L86">property <b>indicesMemoryIndexBufferSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesMemoryIndexBufferSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-indicesQueriesCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L87">property <b>indicesQueriesCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L87">property <b>indicesQueriesCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesQueriesCacheSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-indicesQueryBoolMaxClauseCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L88">property <b>indicesQueryBoolMaxClauseCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L88">property <b>indicesQueryBoolMaxClauseCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesQueryBoolMaxClauseCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-reindexRemoteWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L89">property <b>reindexRemoteWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L89">property <b>reindexRemoteWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reindexRemoteWhitelists?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolAnalyzeQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L90">property <b>threadPoolAnalyzeQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L90">property <b>threadPoolAnalyzeQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolAnalyzeQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolAnalyzeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L91">property <b>threadPoolAnalyzeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L91">property <b>threadPoolAnalyzeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolAnalyzeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolForceMergeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L92">property <b>threadPoolForceMergeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L92">property <b>threadPoolForceMergeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolForceMergeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolGetQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L93">property <b>threadPoolGetQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L93">property <b>threadPoolGetQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolGetQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolGetSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L94">property <b>threadPoolGetSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L94">property <b>threadPoolGetSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolGetSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolIndexQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L95">property <b>threadPoolIndexQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L95">property <b>threadPoolIndexQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolIndexQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolIndexSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L96">property <b>threadPoolIndexSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L96">property <b>threadPoolIndexSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolIndexSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolSearchQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L97">property <b>threadPoolSearchQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L97">property <b>threadPoolSearchQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolSearchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L98">property <b>threadPoolSearchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L98">property <b>threadPoolSearchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolSearchThrottledQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L99">property <b>threadPoolSearchThrottledQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L99">property <b>threadPoolSearchThrottledQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchThrottledQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolSearchThrottledSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L100">property <b>threadPoolSearchThrottledSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L100">property <b>threadPoolSearchThrottledSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchThrottledSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolWriteQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L101">property <b>threadPoolWriteQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L101">property <b>threadPoolWriteQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolWriteQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigElasticsearch-threadPoolWriteSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L102">property <b>threadPoolWriteSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L102">property <b>threadPoolWriteSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolWriteSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearchUserConfigIndexPattern" data-link-title="GetServiceElasticsearchUserConfigIndexPattern">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L105">
         interface <strong>GetServiceElasticsearchUserConfigIndexPattern</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearchUserConfigIndexPattern</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigIndexPattern-maxIndexCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L106">property <b>maxIndexCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L106">property <b>maxIndexCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIndexCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigIndexPattern-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L107">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L107">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearchUserConfigKibana" data-link-title="GetServiceElasticsearchUserConfigKibana">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L110">
         interface <strong>GetServiceElasticsearchUserConfigKibana</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearchUserConfigKibana</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigKibana-elasticsearchRequestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L111">property <b>elasticsearchRequestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L111">property <b>elasticsearchRequestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchRequestTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigKibana-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L112">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L112">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigKibana-maxOldSpaceSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L113">property <b>maxOldSpaceSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L113">property <b>maxOldSpaceSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOldSpaceSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearchUserConfigPrivateAccess" data-link-title="GetServiceElasticsearchUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L116">
         interface <strong>GetServiceElasticsearchUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearchUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigPrivateAccess-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L117">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L117">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigPrivateAccess-kibana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L118">property <b>kibana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L118">property <b>kibana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L119">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L119">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceElasticsearchUserConfigPublicAccess" data-link-title="GetServiceElasticsearchUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L122">
         interface <strong>GetServiceElasticsearchUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceElasticsearchUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigPublicAccess-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L123">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L123">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigPublicAccess-kibana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L124">property <b>kibana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L124">property <b>kibana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceElasticsearchUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L125">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L125">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafana" data-link-title="GetServiceGrafana">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L128">
         interface <strong>GetServiceGrafana</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafana</span></code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfig" data-link-title="GetServiceGrafanaUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L132">
         interface <strong>GetServiceGrafanaUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-alertingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L133">property <b>alertingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L133">property <b>alertingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertingEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-alertingErrorOrTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L134">property <b>alertingErrorOrTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L134">property <b>alertingErrorOrTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertingErrorOrTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-alertingNodataOrNullvalues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L135">property <b>alertingNodataOrNullvalues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L135">property <b>alertingNodataOrNullvalues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertingNodataOrNullvalues?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-allowEmbedding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L136">property <b>allowEmbedding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L136">property <b>allowEmbedding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowEmbedding?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-authGenericOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L137">property <b>authGenericOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L137">property <b>authGenericOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGenericOauth?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigAuthGenericOauth'>outputs.GetServiceGrafanaUserConfigAuthGenericOauth</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-authGithub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L138">property <b>authGithub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L138">property <b>authGithub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGithub?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigAuthGithub'>outputs.GetServiceGrafanaUserConfigAuthGithub</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-authGitlab">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L139">property <b>authGitlab</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L139">property <b>authGitlab</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGitlab?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigAuthGitlab'>outputs.GetServiceGrafanaUserConfigAuthGitlab</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-authGoogle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L140">property <b>authGoogle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L140">property <b>authGoogle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGoogle?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigAuthGoogle'>outputs.GetServiceGrafanaUserConfigAuthGoogle</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-cookieSamesite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L141">property <b>cookieSamesite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L141">property <b>cookieSamesite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieSamesite?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L142">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L142">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-dashboardsVersionsToKeep">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L143">property <b>dashboardsVersionsToKeep</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L143">property <b>dashboardsVersionsToKeep</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardsVersionsToKeep?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-dataproxySendUserHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L144">property <b>dataproxySendUserHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L144">property <b>dataproxySendUserHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataproxySendUserHeader?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-dataproxyTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L145">property <b>dataproxyTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L145">property <b>dataproxyTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataproxyTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-disableGravatar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L146">property <b>disableGravatar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L146">property <b>disableGravatar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableGravatar?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-editorsCanAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L147">property <b>editorsCanAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L147">property <b>editorsCanAdmin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editorsCanAdmin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-externalImageStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L148">property <b>externalImageStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L148">property <b>externalImageStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalImageStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigExternalImageStorage'>outputs.GetServiceGrafanaUserConfigExternalImageStorage</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-googleAnalyticsUaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L149">property <b>googleAnalyticsUaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L149">property <b>googleAnalyticsUaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>googleAnalyticsUaId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L150">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L150">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-metricsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L151">property <b>metricsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L151">property <b>metricsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricsEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L152">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L152">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigPrivateAccess'>outputs.GetServiceGrafanaUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L153">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L153">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigPublicAccess'>outputs.GetServiceGrafanaUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-smtpServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L154">property <b>smtpServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L154">property <b>smtpServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpServer?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceGrafanaUserConfigSmtpServer'>outputs.GetServiceGrafanaUserConfigSmtpServer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-userAutoAssignOrg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L155">property <b>userAutoAssignOrg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L155">property <b>userAutoAssignOrg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAutoAssignOrg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-userAutoAssignOrgRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L156">property <b>userAutoAssignOrgRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L156">property <b>userAutoAssignOrgRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAutoAssignOrgRole?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfig-viewersCanEdit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L157">property <b>viewersCanEdit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L157">property <b>viewersCanEdit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>viewersCanEdit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigAuthGenericOauth" data-link-title="GetServiceGrafanaUserConfigAuthGenericOauth">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L160">
         interface <strong>GetServiceGrafanaUserConfigAuthGenericOauth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigAuthGenericOauth</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L161">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L161">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L162">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L162">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-allowedOrganizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L163">property <b>allowedOrganizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L163">property <b>allowedOrganizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOrganizations?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L164">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L164">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L165">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L165">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L166">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L166">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L167">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L167">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L169">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L169">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGenericOauth-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L170">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L170">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigAuthGithub" data-link-title="GetServiceGrafanaUserConfigAuthGithub">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L173">
         interface <strong>GetServiceGrafanaUserConfigAuthGithub</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigAuthGithub</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGithub-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L174">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L174">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGithub-allowedOrganizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L175">property <b>allowedOrganizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L175">property <b>allowedOrganizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOrganizations?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGithub-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L176">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L176">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGithub-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L177">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L177">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGithub-teamIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L178">property <b>teamIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L178">property <b>teamIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigAuthGitlab" data-link-title="GetServiceGrafanaUserConfigAuthGitlab">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L181">
         interface <strong>GetServiceGrafanaUserConfigAuthGitlab</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigAuthGitlab</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L182">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L182">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-allowedGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L183">property <b>allowedGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L183">property <b>allowedGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedGroups?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L184">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L184">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L185">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L185">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L186">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L186">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L187">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L187">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGitlab-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L188">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L188">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigAuthGoogle" data-link-title="GetServiceGrafanaUserConfigAuthGoogle">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L191">
         interface <strong>GetServiceGrafanaUserConfigAuthGoogle</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigAuthGoogle</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGoogle-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L192">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L192">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGoogle-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L193">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L193">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGoogle-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L194">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L194">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigAuthGoogle-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L195">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L195">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigExternalImageStorage" data-link-title="GetServiceGrafanaUserConfigExternalImageStorage">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L198">
         interface <strong>GetServiceGrafanaUserConfigExternalImageStorage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigExternalImageStorage</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigExternalImageStorage-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L199">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L199">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigExternalImageStorage-bucketUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L200">property <b>bucketUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L200">property <b>bucketUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigExternalImageStorage-provider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L201">property <b>provider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L201">property <b>provider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provider?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigExternalImageStorage-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L202">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L202">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigPrivateAccess" data-link-title="GetServiceGrafanaUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L205">
         interface <strong>GetServiceGrafanaUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigPrivateAccess-grafana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L206">property <b>grafana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L206">property <b>grafana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grafana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigPublicAccess" data-link-title="GetServiceGrafanaUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L209">
         interface <strong>GetServiceGrafanaUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigPublicAccess-grafana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L210">property <b>grafana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L210">property <b>grafana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grafana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceGrafanaUserConfigSmtpServer" data-link-title="GetServiceGrafanaUserConfigSmtpServer">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L213">
         interface <strong>GetServiceGrafanaUserConfigSmtpServer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceGrafanaUserConfigSmtpServer</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-fromAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L214">property <b>fromAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L214">property <b>fromAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-fromName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L215">property <b>fromName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L215">property <b>fromName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L216">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L216">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L217">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L217">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L218">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L218">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-skipVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L219">property <b>skipVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L219">property <b>skipVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipVerify?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceGrafanaUserConfigSmtpServer-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L220">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L220">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceInfluxdb" data-link-title="GetServiceInfluxdb">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L223">
         interface <strong>GetServiceInfluxdb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceInfluxdb</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdb-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L224">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L224">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceInfluxdbUserConfig" data-link-title="GetServiceInfluxdbUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L227">
         interface <strong>GetServiceInfluxdbUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceInfluxdbUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L228">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L228">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L229">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L229">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L230">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L230">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceInfluxdbUserConfigPrivateAccess'>outputs.GetServiceInfluxdbUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L231">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L231">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceInfluxdbUserConfigPublicAccess'>outputs.GetServiceInfluxdbUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L232">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L232">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceInfluxdbUserConfigPrivateAccess" data-link-title="GetServiceInfluxdbUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L235">
         interface <strong>GetServiceInfluxdbUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceInfluxdbUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfigPrivateAccess-influxdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L236">property <b>influxdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L236">property <b>influxdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>influxdb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceInfluxdbUserConfigPublicAccess" data-link-title="GetServiceInfluxdbUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L239">
         interface <strong>GetServiceInfluxdbUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceInfluxdbUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceInfluxdbUserConfigPublicAccess-influxdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L240">property <b>influxdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L240">property <b>influxdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>influxdb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceIntegrationEndpointDatadogUserConfig" data-link-title="GetServiceIntegrationEndpointDatadogUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L243">
         interface <strong>GetServiceIntegrationEndpointDatadogUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceIntegrationEndpointDatadogUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointDatadogUserConfig-datadogApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L244">property <b>datadogApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L244">property <b>datadogApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogApiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointDatadogUserConfig-disableConsumerStats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L245">property <b>disableConsumerStats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L245">property <b>disableConsumerStats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableConsumerStats?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointDatadogUserConfig-maxPartitionContexts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L246">property <b>maxPartitionContexts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L246">property <b>maxPartitionContexts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPartitionContexts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointDatadogUserConfig-site">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L247">property <b>site</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L247">property <b>site</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>site?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig" data-link-title="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L250">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L250">
         interface <strong>GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-ca">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L251">property <b>ca</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L251">property <b>ca</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ca?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-indexDaysMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L252">property <b>indexDaysMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L252">property <b>indexDaysMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexDaysMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-indexPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L253">property <b>indexPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L253">property <b>indexPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L254">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L254">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L255">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L255">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceIntegrationEndpointPrometheusUserConfig" data-link-title="GetServiceIntegrationEndpointPrometheusUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L258">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L258">
         interface <strong>GetServiceIntegrationEndpointPrometheusUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceIntegrationEndpointPrometheusUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointPrometheusUserConfig-basicAuthPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L259">property <b>basicAuthPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L259">property <b>basicAuthPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicAuthPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointPrometheusUserConfig-basicAuthUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L260">property <b>basicAuthUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L260">property <b>basicAuthUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicAuthUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceIntegrationEndpointRsyslogUserConfig" data-link-title="GetServiceIntegrationEndpointRsyslogUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L263">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L263">
         interface <strong>GetServiceIntegrationEndpointRsyslogUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceIntegrationEndpointRsyslogUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-ca">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L264">property <b>ca</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L264">property <b>ca</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ca?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L265">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L265">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L266">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L266">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L267">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L267">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-logline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L268">property <b>logline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L268">property <b>logline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logline?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L269">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L269">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-sd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L270">property <b>sd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L270">property <b>sd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sd?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L271">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L271">property <b>server</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>server?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceIntegrationEndpointRsyslogUserConfig-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L272">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L272">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafka" data-link-title="GetServiceKafka">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L275">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L275">
         interface <strong>GetServiceKafka</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafka</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafka-accessCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L276">property <b>accessCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L276">property <b>accessCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessCert: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafka-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L277">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L277">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafka-connectUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L278">property <b>connectUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L278">property <b>connectUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafka-restUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L279">property <b>restUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L279">property <b>restUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafka-schemaRegistryUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L280">property <b>schemaRegistryUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L280">property <b>schemaRegistryUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaRegistryUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaConnect" data-link-title="GetServiceKafkaConnect">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L283">
         interface <strong>GetServiceKafkaConnect</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaConnect</span></code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaConnectUserConfig" data-link-title="GetServiceKafkaConnectUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L287">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L287">
         interface <strong>GetServiceKafkaConnectUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaConnectUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L288">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L288">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfig-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L289">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L289">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaConnectUserConfigKafkaConnect'>outputs.GetServiceKafkaConnectUserConfigKafkaConnect</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L290">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L290">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaConnectUserConfigPrivateAccess'>outputs.GetServiceKafkaConnectUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L291">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L291">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaConnectUserConfigPublicAccess'>outputs.GetServiceKafkaConnectUserConfigPublicAccess</a>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaConnectUserConfigKafkaConnect" data-link-title="GetServiceKafkaConnectUserConfigKafkaConnect">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L294">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L294">
         interface <strong>GetServiceKafkaConnectUserConfigKafkaConnect</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaConnectUserConfigKafkaConnect</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigKafkaConnect-consumerIsolationLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L295">property <b>consumerIsolationLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L295">property <b>consumerIsolationLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIsolationLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigKafkaConnect-consumerMaxPollRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L296">property <b>consumerMaxPollRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L296">property <b>consumerMaxPollRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerMaxPollRecords?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigKafkaConnect-offsetFlushIntervalMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L297">property <b>offsetFlushIntervalMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L297">property <b>offsetFlushIntervalMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offsetFlushIntervalMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaConnectUserConfigPrivateAccess" data-link-title="GetServiceKafkaConnectUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L300">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L300">
         interface <strong>GetServiceKafkaConnectUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaConnectUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigPrivateAccess-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L301">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L301">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L302">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L302">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaConnectUserConfigPublicAccess" data-link-title="GetServiceKafkaConnectUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L305">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L305">
         interface <strong>GetServiceKafkaConnectUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaConnectUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigPublicAccess-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L306">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L306">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaConnectUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L307">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L307">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfig" data-link-title="GetServiceKafkaUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L310">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L310">
         interface <strong>GetServiceKafkaUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L311">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L311">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L312">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L312">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafka">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L313">property <b>kafka</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L313">property <b>kafka</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafka?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaUserConfigKafka'>outputs.GetServiceKafkaUserConfigKafka</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafkaAuthenticationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L314">property <b>kafkaAuthenticationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L314">property <b>kafkaAuthenticationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaAuthenticationMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaUserConfigKafkaAuthenticationMethods'>outputs.GetServiceKafkaUserConfigKafkaAuthenticationMethods</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L315">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L315">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafkaConnectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L316">property <b>kafkaConnectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L316">property <b>kafkaConnectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaUserConfigKafkaConnectConfig'>outputs.GetServiceKafkaUserConfigKafkaConnectConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafkaRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L317">property <b>kafkaRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L317">property <b>kafkaRest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaRest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafkaRestConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L318">property <b>kafkaRestConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L318">property <b>kafkaRestConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaRestConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaUserConfigKafkaRestConfig'>outputs.GetServiceKafkaUserConfigKafkaRestConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-kafkaVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L319">property <b>kafkaVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L319">property <b>kafkaVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L320">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L320">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaUserConfigPrivateAccess'>outputs.GetServiceKafkaUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L321">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L321">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceKafkaUserConfigPublicAccess'>outputs.GetServiceKafkaUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfig-schemaRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L322">property <b>schemaRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L322">property <b>schemaRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaRegistry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfigKafka" data-link-title="GetServiceKafkaUserConfigKafka">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L325">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L325">
         interface <strong>GetServiceKafkaUserConfigKafka</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfigKafka</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-autoCreateTopicsEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L326">property <b>autoCreateTopicsEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L326">property <b>autoCreateTopicsEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCreateTopicsEnable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-compressionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L327">property <b>compressionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L327">property <b>compressionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compressionType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-connectionsMaxIdleMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L328">property <b>connectionsMaxIdleMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L328">property <b>connectionsMaxIdleMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionsMaxIdleMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-defaultReplicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L329">property <b>defaultReplicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L329">property <b>defaultReplicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultReplicationFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-groupMaxSessionTimeoutMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L330">property <b>groupMaxSessionTimeoutMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L330">property <b>groupMaxSessionTimeoutMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMaxSessionTimeoutMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-groupMinSessionTimeoutMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L331">property <b>groupMinSessionTimeoutMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L331">property <b>groupMinSessionTimeoutMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMinSessionTimeoutMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logCleanerMaxCompactionLagMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L332">property <b>logCleanerMaxCompactionLagMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L332">property <b>logCleanerMaxCompactionLagMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanerMaxCompactionLagMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logCleanerMinCleanableRatio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L333">property <b>logCleanerMinCleanableRatio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L333">property <b>logCleanerMinCleanableRatio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanerMinCleanableRatio?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logCleanerMinCompactionLagMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L334">property <b>logCleanerMinCompactionLagMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L334">property <b>logCleanerMinCompactionLagMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanerMinCompactionLagMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logCleanupPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L335">property <b>logCleanupPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L335">property <b>logCleanupPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanupPolicy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logMessageTimestampDifferenceMaxMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L336">property <b>logMessageTimestampDifferenceMaxMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L336">property <b>logMessageTimestampDifferenceMaxMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logMessageTimestampDifferenceMaxMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logMessageTimestampType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L337">property <b>logMessageTimestampType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L337">property <b>logMessageTimestampType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logMessageTimestampType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logRetentionBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L338">property <b>logRetentionBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L338">property <b>logRetentionBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logRetentionBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logRetentionHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L339">property <b>logRetentionHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L339">property <b>logRetentionHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logRetentionHours?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-logSegmentBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L340">property <b>logSegmentBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L340">property <b>logSegmentBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logSegmentBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-maxConnectionsPerIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L341">property <b>maxConnectionsPerIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L341">property <b>maxConnectionsPerIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionsPerIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-messageMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L342">property <b>messageMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L342">property <b>messageMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-numPartitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L343">property <b>numPartitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L343">property <b>numPartitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numPartitions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-offsetsRetentionMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L344">property <b>offsetsRetentionMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L344">property <b>offsetsRetentionMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offsetsRetentionMinutes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-producerPurgatoryPurgeIntervalRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L345">property <b>producerPurgatoryPurgeIntervalRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L345">property <b>producerPurgatoryPurgeIntervalRequests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>producerPurgatoryPurgeIntervalRequests?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-replicaFetchMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L346">property <b>replicaFetchMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L346">property <b>replicaFetchMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaFetchMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-replicaFetchResponseMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L347">property <b>replicaFetchResponseMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L347">property <b>replicaFetchResponseMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaFetchResponseMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafka-socketRequestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L348">property <b>socketRequestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L348">property <b>socketRequestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>socketRequestMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfigKafkaAuthenticationMethods" data-link-title="GetServiceKafkaUserConfigKafkaAuthenticationMethods">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L351">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L351">
         interface <strong>GetServiceKafkaUserConfigKafkaAuthenticationMethods</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfigKafkaAuthenticationMethods</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaAuthenticationMethods-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L352">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L352">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaAuthenticationMethods-sasl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L353">property <b>sasl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L353">property <b>sasl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sasl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfigKafkaConnectConfig" data-link-title="GetServiceKafkaUserConfigKafkaConnectConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L356">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L356">
         interface <strong>GetServiceKafkaUserConfigKafkaConnectConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfigKafkaConnectConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaConnectConfig-consumerIsolationLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L357">property <b>consumerIsolationLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L357">property <b>consumerIsolationLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIsolationLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaConnectConfig-consumerMaxPollRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L358">property <b>consumerMaxPollRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L358">property <b>consumerMaxPollRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerMaxPollRecords?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaConnectConfig-offsetFlushIntervalMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L359">property <b>offsetFlushIntervalMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L359">property <b>offsetFlushIntervalMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offsetFlushIntervalMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfigKafkaRestConfig" data-link-title="GetServiceKafkaUserConfigKafkaRestConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L362">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L362">
         interface <strong>GetServiceKafkaUserConfigKafkaRestConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfigKafkaRestConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaRestConfig-consumerEnableAutoCommit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L363">property <b>consumerEnableAutoCommit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L363">property <b>consumerEnableAutoCommit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerEnableAutoCommit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaRestConfig-consumerRequestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L364">property <b>consumerRequestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L364">property <b>consumerRequestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerRequestMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaRestConfig-consumerRequestTimeoutMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L365">property <b>consumerRequestTimeoutMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L365">property <b>consumerRequestTimeoutMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerRequestTimeoutMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaRestConfig-producerAcks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L366">property <b>producerAcks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L366">property <b>producerAcks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>producerAcks?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaRestConfig-producerLingerMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L367">property <b>producerLingerMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L367">property <b>producerLingerMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>producerLingerMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigKafkaRestConfig-simpleconsumerPoolSizeMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L368">property <b>simpleconsumerPoolSizeMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L368">property <b>simpleconsumerPoolSizeMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>simpleconsumerPoolSizeMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfigPrivateAccess" data-link-title="GetServiceKafkaUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L371">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L371">
         interface <strong>GetServiceKafkaUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L372">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L372">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceKafkaUserConfigPublicAccess" data-link-title="GetServiceKafkaUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L375">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L375">
         interface <strong>GetServiceKafkaUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceKafkaUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigPublicAccess-kafka">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L376">property <b>kafka</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L376">property <b>kafka</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafka?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigPublicAccess-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L377">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L377">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigPublicAccess-kafkaRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L378">property <b>kafkaRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L378">property <b>kafkaRest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaRest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L379">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L379">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceKafkaUserConfigPublicAccess-schemaRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L380">property <b>schemaRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L380">property <b>schemaRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaRegistry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceMysql" data-link-title="GetServiceMysql">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L383">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L383">
         interface <strong>GetServiceMysql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceMysql</span></code></pre>
 <h3 class="pdoc-module-header" id="GetServiceMysqlUserConfig" data-link-title="GetServiceMysqlUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L387">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L387">
         interface <strong>GetServiceMysqlUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceMysqlUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L388">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L388">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L389">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L389">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-backupHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L390">property <b>backupHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L390">property <b>backupHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupHour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-backupMinute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L391">property <b>backupMinute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L391">property <b>backupMinute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupMinute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L392">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L392">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L393">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L393">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceMysqlUserConfigMysql'>outputs.GetServiceMysqlUserConfigMysql</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-mysqlVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L394">property <b>mysqlVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L394">property <b>mysqlVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L395">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L395">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceMysqlUserConfigPrivateAccess'>outputs.GetServiceMysqlUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L396">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L396">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceMysqlUserConfigPublicAccess'>outputs.GetServiceMysqlUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-recoveryTargetTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L397">property <b>recoveryTargetTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L397">property <b>recoveryTargetTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryTargetTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L398">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L398">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceMysqlUserConfigMysql" data-link-title="GetServiceMysqlUserConfigMysql">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L401">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L401">
         interface <strong>GetServiceMysqlUserConfigMysql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceMysqlUserConfigMysql</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L402">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L402">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-defaultTimeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L403">property <b>defaultTimeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L403">property <b>defaultTimeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTimeZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-groupConcatMaxLen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L404">property <b>groupConcatMaxLen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L404">property <b>groupConcatMaxLen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupConcatMaxLen?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-informationSchemaStatsExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L405">property <b>informationSchemaStatsExpiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L405">property <b>informationSchemaStatsExpiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>informationSchemaStatsExpiry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-innodbFtMinTokenSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L406">property <b>innodbFtMinTokenSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L406">property <b>innodbFtMinTokenSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbFtMinTokenSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-innodbFtServerStopwordTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L407">property <b>innodbFtServerStopwordTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L407">property <b>innodbFtServerStopwordTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbFtServerStopwordTable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-innodbLockWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L408">property <b>innodbLockWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L408">property <b>innodbLockWaitTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbLockWaitTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-innodbOnlineAlterLogMaxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L409">property <b>innodbOnlineAlterLogMaxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L409">property <b>innodbOnlineAlterLogMaxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbOnlineAlterLogMaxSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-innodbRollbackOnTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L410">property <b>innodbRollbackOnTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L410">property <b>innodbRollbackOnTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbRollbackOnTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-maxAllowedPacket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L411">property <b>maxAllowedPacket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L411">property <b>maxAllowedPacket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxAllowedPacket?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-netReadTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L412">property <b>netReadTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L412">property <b>netReadTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>netReadTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-netWriteTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L413">property <b>netWriteTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L413">property <b>netWriteTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>netWriteTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-sqlMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L414">property <b>sqlMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L414">property <b>sqlMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-sqlRequirePrimaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L415">property <b>sqlRequirePrimaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L415">property <b>sqlRequirePrimaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlRequirePrimaryKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigMysql-waitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L416">property <b>waitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L416">property <b>waitTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceMysqlUserConfigPrivateAccess" data-link-title="GetServiceMysqlUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L419">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L419">
         interface <strong>GetServiceMysqlUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceMysqlUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigPrivateAccess-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L420">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L420">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L421">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L421">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceMysqlUserConfigPublicAccess" data-link-title="GetServiceMysqlUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L424">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L424">
         interface <strong>GetServiceMysqlUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceMysqlUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigPublicAccess-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L425">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L425">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceMysqlUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L426">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L426">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePg" data-link-title="GetServicePg">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L429">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L429">
         interface <strong>GetServicePg</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePg</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-dbname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L430">property <b>dbname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L430">property <b>dbname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L431">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L431">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L432">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L432">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L433">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L433">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-replicaUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L434">property <b>replicaUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L434">property <b>replicaUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-sslmode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L435">property <b>sslmode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L435">property <b>sslmode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslmode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L436">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L436">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePg-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L437">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L437">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfig" data-link-title="GetServicePgUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L440">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L440">
         interface <strong>GetServicePgUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L441">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L441">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L442">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L442">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-backupHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L443">property <b>backupHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L443">property <b>backupHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupHour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-backupMinute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L444">property <b>backupMinute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L444">property <b>backupMinute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupMinute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L445">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L445">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-pg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L446">property <b>pg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L446">property <b>pg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pg?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServicePgUserConfigPg'>outputs.GetServicePgUserConfigPg</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-pgReadReplica">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L447">property <b>pgReadReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L447">property <b>pgReadReplica</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgReadReplica?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-pgServiceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L448">property <b>pgServiceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L448">property <b>pgServiceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgServiceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-pgVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L449">property <b>pgVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L449">property <b>pgVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-pgbouncer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L450">property <b>pgbouncer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L450">property <b>pgbouncer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgbouncer?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServicePgUserConfigPgbouncer'>outputs.GetServicePgUserConfigPgbouncer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-pglookout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L451">property <b>pglookout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L451">property <b>pglookout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pglookout?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServicePgUserConfigPglookout'>outputs.GetServicePgUserConfigPglookout</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L452">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L452">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServicePgUserConfigPrivateAccess'>outputs.GetServicePgUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L453">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L453">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServicePgUserConfigPublicAccess'>outputs.GetServicePgUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-recoveryTargetTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L454">property <b>recoveryTargetTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L454">property <b>recoveryTargetTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryTargetTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L455">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L455">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-timescaledb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L456">property <b>timescaledb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L456">property <b>timescaledb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timescaledb?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServicePgUserConfigTimescaledb'>outputs.GetServicePgUserConfigTimescaledb</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfig-variant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L457">property <b>variant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L457">property <b>variant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variant?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfigPg" data-link-title="GetServicePgUserConfigPg">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L460">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L460">
         interface <strong>GetServicePgUserConfigPg</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfigPg</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumAnalyzeScaleFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L461">property <b>autovacuumAnalyzeScaleFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L461">property <b>autovacuumAnalyzeScaleFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumAnalyzeScaleFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumAnalyzeThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L462">property <b>autovacuumAnalyzeThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L462">property <b>autovacuumAnalyzeThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumAnalyzeThreshold?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumMaxWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L463">property <b>autovacuumMaxWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L463">property <b>autovacuumMaxWorkers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumMaxWorkers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumNaptime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L464">property <b>autovacuumNaptime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L464">property <b>autovacuumNaptime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumNaptime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumVacuumCostDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L465">property <b>autovacuumVacuumCostDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L465">property <b>autovacuumVacuumCostDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumCostDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumVacuumCostLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L466">property <b>autovacuumVacuumCostLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L466">property <b>autovacuumVacuumCostLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumCostLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumVacuumScaleFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L467">property <b>autovacuumVacuumScaleFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L467">property <b>autovacuumVacuumScaleFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumScaleFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-autovacuumVacuumThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L468">property <b>autovacuumVacuumThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L468">property <b>autovacuumVacuumThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumThreshold?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-deadlockTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L469">property <b>deadlockTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L469">property <b>deadlockTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadlockTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-idleInTransactionSessionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L470">property <b>idleInTransactionSessionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L470">property <b>idleInTransactionSessionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleInTransactionSessionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-jit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L471">property <b>jit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L471">property <b>jit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-logAutovacuumMinDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L472">property <b>logAutovacuumMinDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L472">property <b>logAutovacuumMinDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAutovacuumMinDuration?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-logErrorVerbosity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L473">property <b>logErrorVerbosity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L473">property <b>logErrorVerbosity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logErrorVerbosity?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-logMinDurationStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L474">property <b>logMinDurationStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L474">property <b>logMinDurationStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logMinDurationStatement?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxLocksPerTransaction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L475">property <b>maxLocksPerTransaction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L475">property <b>maxLocksPerTransaction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLocksPerTransaction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxParallelWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L476">property <b>maxParallelWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L476">property <b>maxParallelWorkers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxParallelWorkers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxParallelWorkersPerGather">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L477">property <b>maxParallelWorkersPerGather</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L477">property <b>maxParallelWorkersPerGather</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxParallelWorkersPerGather?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxPredLocksPerTransaction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L478">property <b>maxPredLocksPerTransaction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L478">property <b>maxPredLocksPerTransaction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPredLocksPerTransaction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxPreparedTransactions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L479">property <b>maxPreparedTransactions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L479">property <b>maxPreparedTransactions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPreparedTransactions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxStackDepth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L480">property <b>maxStackDepth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L480">property <b>maxStackDepth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStackDepth?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxStandbyArchiveDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L481">property <b>maxStandbyArchiveDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L481">property <b>maxStandbyArchiveDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStandbyArchiveDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxStandbyStreamingDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L482">property <b>maxStandbyStreamingDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L482">property <b>maxStandbyStreamingDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStandbyStreamingDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-maxWorkerProcesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L483">property <b>maxWorkerProcesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L483">property <b>maxWorkerProcesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxWorkerProcesses?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-pgStatStatementsTrack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L484">property <b>pgStatStatementsTrack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L484">property <b>pgStatStatementsTrack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgStatStatementsTrack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-tempFileLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L485">property <b>tempFileLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L485">property <b>tempFileLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tempFileLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L486">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L486">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-trackActivityQuerySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L487">property <b>trackActivityQuerySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L487">property <b>trackActivityQuerySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trackActivityQuerySize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-trackFunctions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L488">property <b>trackFunctions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L488">property <b>trackFunctions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trackFunctions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPg-walWriterDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L489">property <b>walWriterDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L489">property <b>walWriterDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>walWriterDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfigPgbouncer" data-link-title="GetServicePgUserConfigPgbouncer">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L492">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L492">
         interface <strong>GetServicePgUserConfigPgbouncer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfigPgbouncer</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPgbouncer-serverResetQueryAlways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L493">property <b>serverResetQueryAlways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L493">property <b>serverResetQueryAlways</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverResetQueryAlways?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfigPglookout" data-link-title="GetServicePgUserConfigPglookout">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L496">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L496">
         interface <strong>GetServicePgUserConfigPglookout</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfigPglookout</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPglookout-maxFailoverReplicationTimeLag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L497">property <b>maxFailoverReplicationTimeLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L497">property <b>maxFailoverReplicationTimeLag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFailoverReplicationTimeLag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfigPrivateAccess" data-link-title="GetServicePgUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L500">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L500">
         interface <strong>GetServicePgUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPrivateAccess-pg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L501">property <b>pg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L501">property <b>pg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPrivateAccess-pgbouncer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L502">property <b>pgbouncer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L502">property <b>pgbouncer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgbouncer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L503">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L503">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfigPublicAccess" data-link-title="GetServicePgUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L506">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L506">
         interface <strong>GetServicePgUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPublicAccess-pg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L507">property <b>pg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L507">property <b>pg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPublicAccess-pgbouncer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L508">property <b>pgbouncer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L508">property <b>pgbouncer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgbouncer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L509">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L509">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServicePgUserConfigTimescaledb" data-link-title="GetServicePgUserConfigTimescaledb">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L512">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L512">
         interface <strong>GetServicePgUserConfigTimescaledb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicePgUserConfigTimescaledb</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicePgUserConfigTimescaledb-maxBackgroundWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L513">property <b>maxBackgroundWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L513">property <b>maxBackgroundWorkers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBackgroundWorkers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceRedis" data-link-title="GetServiceRedis">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L516">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L516">
         interface <strong>GetServiceRedis</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceRedis</span></code></pre>
 <h3 class="pdoc-module-header" id="GetServiceRedisUserConfig" data-link-title="GetServiceRedisUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L520">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L520">
         interface <strong>GetServiceRedisUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceRedisUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L521">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L521">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-migration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L522">property <b>migration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L522">property <b>migration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migration?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceRedisUserConfigMigration'>outputs.GetServiceRedisUserConfigMigration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L523">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L523">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceRedisUserConfigPrivateAccess'>outputs.GetServiceRedisUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L524">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L524">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceRedisUserConfigPublicAccess'>outputs.GetServiceRedisUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-redisLfuDecayTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L525">property <b>redisLfuDecayTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L525">property <b>redisLfuDecayTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisLfuDecayTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-redisLfuLogFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L526">property <b>redisLfuLogFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L526">property <b>redisLfuLogFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisLfuLogFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-redisMaxmemoryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L527">property <b>redisMaxmemoryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L527">property <b>redisMaxmemoryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisMaxmemoryPolicy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-redisNotifyKeyspaceEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L528">property <b>redisNotifyKeyspaceEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L528">property <b>redisNotifyKeyspaceEvents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisNotifyKeyspaceEvents?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-redisSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L529">property <b>redisSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L529">property <b>redisSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisSsl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfig-redisTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L530">property <b>redisTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L530">property <b>redisTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceRedisUserConfigMigration" data-link-title="GetServiceRedisUserConfigMigration">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L533">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L533">
         interface <strong>GetServiceRedisUserConfigMigration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceRedisUserConfigMigration</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigMigration-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L534">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L534">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigMigration-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L535">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L535">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigMigration-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L536">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L536">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigMigration-ssl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L537">property <b>ssl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L537">property <b>ssl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigMigration-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L538">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L538">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceRedisUserConfigPrivateAccess" data-link-title="GetServiceRedisUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L541">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L541">
         interface <strong>GetServiceRedisUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceRedisUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L542">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L542">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigPrivateAccess-redis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L543">property <b>redis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L543">property <b>redis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redis?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceRedisUserConfigPublicAccess" data-link-title="GetServiceRedisUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L546">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L546">
         interface <strong>GetServiceRedisUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceRedisUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L547">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L547">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceRedisUserConfigPublicAccess-redis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L548">property <b>redis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L548">property <b>redis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redis?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceServiceIntegration" data-link-title="GetServiceServiceIntegration">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L551">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L551">
         interface <strong>GetServiceServiceIntegration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceServiceIntegration</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceServiceIntegration-integrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L552">property <b>integrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L552">property <b>integrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceServiceIntegration-sourceServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L553">property <b>sourceServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L553">property <b>sourceServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceServiceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="KafkaConnectorTask" data-link-title="KafkaConnectorTask">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L556">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L556">
         interface <strong>KafkaConnectorTask</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KafkaConnectorTask</span></code></pre>
 <h4 class="pdoc-member-header" id="KafkaConnectorTask-connector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L557">property <b>connector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L557">property <b>connector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="KafkaConnectorTask-task">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L558">property <b>task</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L558">property <b>task</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>task: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCassandra" data-link-title="ServiceCassandra">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L561">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L561">
         interface <strong>ServiceCassandra</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceCassandra</span></code></pre>
 <h3 class="pdoc-module-header" id="ServiceCassandraUserConfig" data-link-title="ServiceCassandraUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L565">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L565">
         interface <strong>ServiceCassandraUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceCassandraUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L566">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L566">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfig-migrateSstableloader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L567">property <b>migrateSstableloader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L567">property <b>migrateSstableloader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migrateSstableloader?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L568">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L568">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceCassandraUserConfigPrivateAccess'>outputs.ServiceCassandraUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L569">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L569">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceCassandraUserConfigPublicAccess'>outputs.ServiceCassandraUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L570">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L570">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCassandraUserConfigPrivateAccess" data-link-title="ServiceCassandraUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L573">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L573">
         interface <strong>ServiceCassandraUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceCassandraUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L574">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L574">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceCassandraUserConfigPublicAccess" data-link-title="ServiceCassandraUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L577">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L577">
         interface <strong>ServiceCassandraUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceCassandraUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceCassandraUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L578">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L578">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceComponent" data-link-title="ServiceComponent">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L581">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L581">
         interface <strong>ServiceComponent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceComponent</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-component">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L582">property <b>component</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L582">property <b>component</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>component: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L583">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L583">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-kafkaAuthenticationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L584">property <b>kafkaAuthenticationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L584">property <b>kafkaAuthenticationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaAuthenticationMethod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L585">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L585">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L586">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L586">property <b>route</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>route: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-ssl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L587">property <b>ssl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L587">property <b>ssl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceComponent-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L588">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L588">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearch" data-link-title="ServiceElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L591">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L591">
         interface <strong>ServiceElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearch-kibanaUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L592">property <b>kibanaUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L592">property <b>kibanaUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibanaUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearchUserConfig" data-link-title="ServiceElasticsearchUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L595">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L595">
         interface <strong>ServiceElasticsearchUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearchUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L596">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L596">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-disableReplicationFactorAdjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L597">property <b>disableReplicationFactorAdjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L597">property <b>disableReplicationFactorAdjustment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableReplicationFactorAdjustment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L598">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L598">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceElasticsearchUserConfigElasticsearch'>outputs.ServiceElasticsearchUserConfigElasticsearch</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-elasticsearchVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L599">property <b>elasticsearchVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L599">property <b>elasticsearchVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-indexPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L600">property <b>indexPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L600">property <b>indexPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexPatterns?: <a href='#ServiceElasticsearchUserConfigIndexPattern'>ServiceElasticsearchUserConfigIndexPattern</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L601">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L601">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-kibana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L602">property <b>kibana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L602">property <b>kibana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibana?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceElasticsearchUserConfigKibana'>outputs.ServiceElasticsearchUserConfigKibana</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-maxIndexCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L603">property <b>maxIndexCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L603">property <b>maxIndexCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIndexCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L604">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L604">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceElasticsearchUserConfigPrivateAccess'>outputs.ServiceElasticsearchUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L605">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L605">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceElasticsearchUserConfigPublicAccess'>outputs.ServiceElasticsearchUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-recoveryBasebackupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L606">property <b>recoveryBasebackupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L606">property <b>recoveryBasebackupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryBasebackupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L607">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L607">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearchUserConfigElasticsearch" data-link-title="ServiceElasticsearchUserConfigElasticsearch">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L610">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L610">
         interface <strong>ServiceElasticsearchUserConfigElasticsearch</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearchUserConfigElasticsearch</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-actionAutoCreateIndexEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L611">property <b>actionAutoCreateIndexEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L611">property <b>actionAutoCreateIndexEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionAutoCreateIndexEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-actionDestructiveRequiresName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L612">property <b>actionDestructiveRequiresName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L612">property <b>actionDestructiveRequiresName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionDestructiveRequiresName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-httpMaxContentLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L613">property <b>httpMaxContentLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L613">property <b>httpMaxContentLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpMaxContentLength?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-indicesFielddataCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L614">property <b>indicesFielddataCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L614">property <b>indicesFielddataCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesFielddataCacheSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-indicesMemoryIndexBufferSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L615">property <b>indicesMemoryIndexBufferSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L615">property <b>indicesMemoryIndexBufferSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesMemoryIndexBufferSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-indicesQueriesCacheSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L616">property <b>indicesQueriesCacheSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L616">property <b>indicesQueriesCacheSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesQueriesCacheSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-indicesQueryBoolMaxClauseCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L617">property <b>indicesQueryBoolMaxClauseCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L617">property <b>indicesQueryBoolMaxClauseCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indicesQueryBoolMaxClauseCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-reindexRemoteWhitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L618">property <b>reindexRemoteWhitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L618">property <b>reindexRemoteWhitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reindexRemoteWhitelists?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolAnalyzeQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L619">property <b>threadPoolAnalyzeQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L619">property <b>threadPoolAnalyzeQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolAnalyzeQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolAnalyzeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L620">property <b>threadPoolAnalyzeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L620">property <b>threadPoolAnalyzeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolAnalyzeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolForceMergeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L621">property <b>threadPoolForceMergeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L621">property <b>threadPoolForceMergeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolForceMergeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolGetQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L622">property <b>threadPoolGetQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L622">property <b>threadPoolGetQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolGetQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolGetSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L623">property <b>threadPoolGetSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L623">property <b>threadPoolGetSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolGetSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolIndexQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L624">property <b>threadPoolIndexQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L624">property <b>threadPoolIndexQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolIndexQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolIndexSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L625">property <b>threadPoolIndexSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L625">property <b>threadPoolIndexSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolIndexSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolSearchQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L626">property <b>threadPoolSearchQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L626">property <b>threadPoolSearchQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolSearchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L627">property <b>threadPoolSearchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L627">property <b>threadPoolSearchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolSearchThrottledQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L628">property <b>threadPoolSearchThrottledQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L628">property <b>threadPoolSearchThrottledQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchThrottledQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolSearchThrottledSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L629">property <b>threadPoolSearchThrottledSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L629">property <b>threadPoolSearchThrottledSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolSearchThrottledSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolWriteQueueSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L630">property <b>threadPoolWriteQueueSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L630">property <b>threadPoolWriteQueueSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolWriteQueueSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigElasticsearch-threadPoolWriteSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L631">property <b>threadPoolWriteSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L631">property <b>threadPoolWriteSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threadPoolWriteSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearchUserConfigIndexPattern" data-link-title="ServiceElasticsearchUserConfigIndexPattern">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L634">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L634">
         interface <strong>ServiceElasticsearchUserConfigIndexPattern</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearchUserConfigIndexPattern</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigIndexPattern-maxIndexCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L635">property <b>maxIndexCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L635">property <b>maxIndexCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxIndexCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigIndexPattern-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L636">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L636">property <b>pattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pattern?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearchUserConfigKibana" data-link-title="ServiceElasticsearchUserConfigKibana">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L639">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L639">
         interface <strong>ServiceElasticsearchUserConfigKibana</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearchUserConfigKibana</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigKibana-elasticsearchRequestTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L640">property <b>elasticsearchRequestTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L640">property <b>elasticsearchRequestTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchRequestTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigKibana-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L641">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L641">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigKibana-maxOldSpaceSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L642">property <b>maxOldSpaceSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L642">property <b>maxOldSpaceSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxOldSpaceSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearchUserConfigPrivateAccess" data-link-title="ServiceElasticsearchUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L645">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L645">
         interface <strong>ServiceElasticsearchUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearchUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigPrivateAccess-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L646">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L646">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigPrivateAccess-kibana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L647">property <b>kibana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L647">property <b>kibana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L648">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L648">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceElasticsearchUserConfigPublicAccess" data-link-title="ServiceElasticsearchUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L651">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L651">
         interface <strong>ServiceElasticsearchUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceElasticsearchUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigPublicAccess-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L652">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L652">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigPublicAccess-kibana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L653">property <b>kibana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L653">property <b>kibana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kibana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceElasticsearchUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L654">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L654">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafana" data-link-title="ServiceGrafana">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L657">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L657">
         interface <strong>ServiceGrafana</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafana</span></code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfig" data-link-title="ServiceGrafanaUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L661">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L661">
         interface <strong>ServiceGrafanaUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-alertingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L662">property <b>alertingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L662">property <b>alertingEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertingEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-alertingErrorOrTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L663">property <b>alertingErrorOrTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L663">property <b>alertingErrorOrTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertingErrorOrTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-alertingNodataOrNullvalues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L664">property <b>alertingNodataOrNullvalues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L664">property <b>alertingNodataOrNullvalues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alertingNodataOrNullvalues?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-allowEmbedding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L665">property <b>allowEmbedding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L665">property <b>allowEmbedding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowEmbedding?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-authGenericOauth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L666">property <b>authGenericOauth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L666">property <b>authGenericOauth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGenericOauth?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigAuthGenericOauth'>outputs.ServiceGrafanaUserConfigAuthGenericOauth</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-authGithub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L667">property <b>authGithub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L667">property <b>authGithub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGithub?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigAuthGithub'>outputs.ServiceGrafanaUserConfigAuthGithub</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-authGitlab">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L668">property <b>authGitlab</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L668">property <b>authGitlab</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGitlab?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigAuthGitlab'>outputs.ServiceGrafanaUserConfigAuthGitlab</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-authGoogle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L669">property <b>authGoogle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L669">property <b>authGoogle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authGoogle?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigAuthGoogle'>outputs.ServiceGrafanaUserConfigAuthGoogle</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-cookieSamesite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L670">property <b>cookieSamesite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L670">property <b>cookieSamesite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieSamesite?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L671">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L671">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-dashboardsVersionsToKeep">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L672">property <b>dashboardsVersionsToKeep</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L672">property <b>dashboardsVersionsToKeep</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardsVersionsToKeep?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-dataproxySendUserHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L673">property <b>dataproxySendUserHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L673">property <b>dataproxySendUserHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataproxySendUserHeader?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-dataproxyTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L674">property <b>dataproxyTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L674">property <b>dataproxyTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataproxyTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-disableGravatar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L675">property <b>disableGravatar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L675">property <b>disableGravatar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableGravatar?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-editorsCanAdmin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L676">property <b>editorsCanAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L676">property <b>editorsCanAdmin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editorsCanAdmin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-externalImageStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L677">property <b>externalImageStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L677">property <b>externalImageStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalImageStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigExternalImageStorage'>outputs.ServiceGrafanaUserConfigExternalImageStorage</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-googleAnalyticsUaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L678">property <b>googleAnalyticsUaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L678">property <b>googleAnalyticsUaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>googleAnalyticsUaId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L679">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L679">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-metricsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L680">property <b>metricsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L680">property <b>metricsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricsEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L681">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L681">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigPrivateAccess'>outputs.ServiceGrafanaUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L682">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L682">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigPublicAccess'>outputs.ServiceGrafanaUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-smtpServer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L683">property <b>smtpServer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L683">property <b>smtpServer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smtpServer?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceGrafanaUserConfigSmtpServer'>outputs.ServiceGrafanaUserConfigSmtpServer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-userAutoAssignOrg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L684">property <b>userAutoAssignOrg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L684">property <b>userAutoAssignOrg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAutoAssignOrg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-userAutoAssignOrgRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L685">property <b>userAutoAssignOrgRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L685">property <b>userAutoAssignOrgRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAutoAssignOrgRole?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfig-viewersCanEdit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L686">property <b>viewersCanEdit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L686">property <b>viewersCanEdit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>viewersCanEdit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigAuthGenericOauth" data-link-title="ServiceGrafanaUserConfigAuthGenericOauth">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L689">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L689">
         interface <strong>ServiceGrafanaUserConfigAuthGenericOauth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigAuthGenericOauth</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L690">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L690">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L691">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L691">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-allowedOrganizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L692">property <b>allowedOrganizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L692">property <b>allowedOrganizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOrganizations?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L693">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L693">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L694">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L694">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L695">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L695">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L696">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L696">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L697">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L697">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L698">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L698">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGenericOauth-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L699">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L699">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigAuthGithub" data-link-title="ServiceGrafanaUserConfigAuthGithub">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L702">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L702">
         interface <strong>ServiceGrafanaUserConfigAuthGithub</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigAuthGithub</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGithub-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L703">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L703">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGithub-allowedOrganizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L704">property <b>allowedOrganizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L704">property <b>allowedOrganizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOrganizations?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGithub-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L705">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L705">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGithub-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L706">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L706">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGithub-teamIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L707">property <b>teamIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L707">property <b>teamIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>teamIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigAuthGitlab" data-link-title="ServiceGrafanaUserConfigAuthGitlab">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L710">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L710">
         interface <strong>ServiceGrafanaUserConfigAuthGitlab</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigAuthGitlab</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L711">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L711">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-allowedGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L712">property <b>allowedGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L712">property <b>allowedGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedGroups?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L713">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L713">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L714">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L714">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L715">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L715">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L716">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L716">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGitlab-tokenUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L717">property <b>tokenUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L717">property <b>tokenUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigAuthGoogle" data-link-title="ServiceGrafanaUserConfigAuthGoogle">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L720">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L720">
         interface <strong>ServiceGrafanaUserConfigAuthGoogle</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigAuthGoogle</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGoogle-allowSignUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L721">property <b>allowSignUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L721">property <b>allowSignUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSignUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGoogle-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L722">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L722">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGoogle-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L723">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L723">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigAuthGoogle-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L724">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L724">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigExternalImageStorage" data-link-title="ServiceGrafanaUserConfigExternalImageStorage">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L727">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L727">
         interface <strong>ServiceGrafanaUserConfigExternalImageStorage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigExternalImageStorage</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigExternalImageStorage-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L728">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L728">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigExternalImageStorage-bucketUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L729">property <b>bucketUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L729">property <b>bucketUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigExternalImageStorage-provider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L730">property <b>provider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L730">property <b>provider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provider?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigExternalImageStorage-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L731">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L731">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigPrivateAccess" data-link-title="ServiceGrafanaUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L734">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L734">
         interface <strong>ServiceGrafanaUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigPrivateAccess-grafana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L735">property <b>grafana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L735">property <b>grafana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grafana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigPublicAccess" data-link-title="ServiceGrafanaUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L738">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L738">
         interface <strong>ServiceGrafanaUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigPublicAccess-grafana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L739">property <b>grafana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L739">property <b>grafana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grafana?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceGrafanaUserConfigSmtpServer" data-link-title="ServiceGrafanaUserConfigSmtpServer">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L742">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L742">
         interface <strong>ServiceGrafanaUserConfigSmtpServer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceGrafanaUserConfigSmtpServer</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-fromAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L743">property <b>fromAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L743">property <b>fromAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-fromName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L744">property <b>fromName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L744">property <b>fromName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L745">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L745">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L746">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L746">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L747">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L747">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-skipVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L748">property <b>skipVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L748">property <b>skipVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipVerify?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceGrafanaUserConfigSmtpServer-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L749">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L749">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceInfluxdb" data-link-title="ServiceInfluxdb">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L752">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L752">
         interface <strong>ServiceInfluxdb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceInfluxdb</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdb-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L753">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L753">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceInfluxdbUserConfig" data-link-title="ServiceInfluxdbUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L756">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L756">
         interface <strong>ServiceInfluxdbUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceInfluxdbUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L757">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L757">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L758">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L758">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L759">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L759">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceInfluxdbUserConfigPrivateAccess'>outputs.ServiceInfluxdbUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L760">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L760">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceInfluxdbUserConfigPublicAccess'>outputs.ServiceInfluxdbUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L761">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L761">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceInfluxdbUserConfigPrivateAccess" data-link-title="ServiceInfluxdbUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L764">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L764">
         interface <strong>ServiceInfluxdbUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceInfluxdbUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfigPrivateAccess-influxdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L765">property <b>influxdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L765">property <b>influxdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>influxdb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceInfluxdbUserConfigPublicAccess" data-link-title="ServiceInfluxdbUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L768">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L768">
         interface <strong>ServiceInfluxdbUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceInfluxdbUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceInfluxdbUserConfigPublicAccess-influxdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L769">property <b>influxdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L769">property <b>influxdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>influxdb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceIntegrationEndpointDatadogUserConfig" data-link-title="ServiceIntegrationEndpointDatadogUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L772">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L772">
         interface <strong>ServiceIntegrationEndpointDatadogUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceIntegrationEndpointDatadogUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointDatadogUserConfig-datadogApiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L773">property <b>datadogApiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L773">property <b>datadogApiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datadogApiKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointDatadogUserConfig-disableConsumerStats">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L774">property <b>disableConsumerStats</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L774">property <b>disableConsumerStats</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableConsumerStats?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointDatadogUserConfig-maxPartitionContexts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L775">property <b>maxPartitionContexts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L775">property <b>maxPartitionContexts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPartitionContexts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointDatadogUserConfig-site">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L776">property <b>site</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L776">property <b>site</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>site?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig" data-link-title="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L779">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L779">
         interface <strong>ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-ca">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L780">property <b>ca</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L780">property <b>ca</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ca?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-indexDaysMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L781">property <b>indexDaysMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L781">property <b>indexDaysMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexDaysMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-indexPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L782">property <b>indexPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L782">property <b>indexPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L783">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L783">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointExternalElasticsearchLogsUserConfig-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L784">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L784">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceIntegrationEndpointPrometheusUserConfig" data-link-title="ServiceIntegrationEndpointPrometheusUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L787">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L787">
         interface <strong>ServiceIntegrationEndpointPrometheusUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceIntegrationEndpointPrometheusUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointPrometheusUserConfig-basicAuthPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L788">property <b>basicAuthPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L788">property <b>basicAuthPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicAuthPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointPrometheusUserConfig-basicAuthUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L789">property <b>basicAuthUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L789">property <b>basicAuthUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicAuthUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceIntegrationEndpointRsyslogUserConfig" data-link-title="ServiceIntegrationEndpointRsyslogUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L792">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L792">
         interface <strong>ServiceIntegrationEndpointRsyslogUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceIntegrationEndpointRsyslogUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-ca">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L793">property <b>ca</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L793">property <b>ca</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ca?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L794">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L794">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L795">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L795">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L796">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L796">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-logline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L797">property <b>logline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L797">property <b>logline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logline?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L798">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L798">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-sd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L799">property <b>sd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L799">property <b>sd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sd?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L800">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L800">property <b>server</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>server?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationEndpointRsyslogUserConfig-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L801">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L801">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceIntegrationLogsUserConfig" data-link-title="ServiceIntegrationLogsUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L804">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L804">
         interface <strong>ServiceIntegrationLogsUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceIntegrationLogsUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationLogsUserConfig-elasticsearchIndexDaysMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L805">property <b>elasticsearchIndexDaysMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L805">property <b>elasticsearchIndexDaysMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchIndexDaysMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationLogsUserConfig-elasticsearchIndexPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L806">property <b>elasticsearchIndexPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L806">property <b>elasticsearchIndexPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchIndexPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceIntegrationMirrormakerUserConfig" data-link-title="ServiceIntegrationMirrormakerUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L809">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L809">
         interface <strong>ServiceIntegrationMirrormakerUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceIntegrationMirrormakerUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceIntegrationMirrormakerUserConfig-mirrormakerWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L810">property <b>mirrormakerWhitelist</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L810">property <b>mirrormakerWhitelist</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mirrormakerWhitelist?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafka" data-link-title="ServiceKafka">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L813">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L813">
         interface <strong>ServiceKafka</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafka</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafka-accessCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L814">property <b>accessCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L814">property <b>accessCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessCert: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafka-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L815">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L815">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafka-connectUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L816">property <b>connectUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L816">property <b>connectUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafka-restUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L817">property <b>restUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L817">property <b>restUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafka-schemaRegistryUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L818">property <b>schemaRegistryUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L818">property <b>schemaRegistryUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaRegistryUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaConnect" data-link-title="ServiceKafkaConnect">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L821">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L821">
         interface <strong>ServiceKafkaConnect</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaConnect</span></code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaConnectUserConfig" data-link-title="ServiceKafkaConnectUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L825">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L825">
         interface <strong>ServiceKafkaConnectUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaConnectUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L826">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L826">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfig-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L827">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L827">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaConnectUserConfigKafkaConnect'>outputs.ServiceKafkaConnectUserConfigKafkaConnect</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L828">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L828">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaConnectUserConfigPrivateAccess'>outputs.ServiceKafkaConnectUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L829">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L829">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaConnectUserConfigPublicAccess'>outputs.ServiceKafkaConnectUserConfigPublicAccess</a>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaConnectUserConfigKafkaConnect" data-link-title="ServiceKafkaConnectUserConfigKafkaConnect">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L832">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L832">
         interface <strong>ServiceKafkaConnectUserConfigKafkaConnect</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaConnectUserConfigKafkaConnect</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigKafkaConnect-consumerIsolationLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L833">property <b>consumerIsolationLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L833">property <b>consumerIsolationLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIsolationLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigKafkaConnect-consumerMaxPollRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L834">property <b>consumerMaxPollRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L834">property <b>consumerMaxPollRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerMaxPollRecords?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigKafkaConnect-offsetFlushIntervalMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L835">property <b>offsetFlushIntervalMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L835">property <b>offsetFlushIntervalMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offsetFlushIntervalMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaConnectUserConfigPrivateAccess" data-link-title="ServiceKafkaConnectUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L838">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L838">
         interface <strong>ServiceKafkaConnectUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaConnectUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigPrivateAccess-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L839">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L839">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L840">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L840">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaConnectUserConfigPublicAccess" data-link-title="ServiceKafkaConnectUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L843">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L843">
         interface <strong>ServiceKafkaConnectUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaConnectUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigPublicAccess-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L844">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L844">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaConnectUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L845">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L845">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfig" data-link-title="ServiceKafkaUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L848">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L848">
         interface <strong>ServiceKafkaUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-customDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L849">property <b>customDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L849">property <b>customDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L850">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L850">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafka">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L851">property <b>kafka</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L851">property <b>kafka</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafka?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaUserConfigKafka'>outputs.ServiceKafkaUserConfigKafka</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafkaAuthenticationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L852">property <b>kafkaAuthenticationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L852">property <b>kafkaAuthenticationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaAuthenticationMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaUserConfigKafkaAuthenticationMethods'>outputs.ServiceKafkaUserConfigKafkaAuthenticationMethods</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L853">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L853">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafkaConnectConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L854">property <b>kafkaConnectConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L854">property <b>kafkaConnectConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnectConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaUserConfigKafkaConnectConfig'>outputs.ServiceKafkaUserConfigKafkaConnectConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafkaRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L855">property <b>kafkaRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L855">property <b>kafkaRest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaRest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafkaRestConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L856">property <b>kafkaRestConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L856">property <b>kafkaRestConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaRestConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaUserConfigKafkaRestConfig'>outputs.ServiceKafkaUserConfigKafkaRestConfig</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-kafkaVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L857">property <b>kafkaVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L857">property <b>kafkaVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L858">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L858">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaUserConfigPrivateAccess'>outputs.ServiceKafkaUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L859">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L859">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceKafkaUserConfigPublicAccess'>outputs.ServiceKafkaUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfig-schemaRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L860">property <b>schemaRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L860">property <b>schemaRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaRegistry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfigKafka" data-link-title="ServiceKafkaUserConfigKafka">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L863">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L863">
         interface <strong>ServiceKafkaUserConfigKafka</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfigKafka</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-autoCreateTopicsEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L864">property <b>autoCreateTopicsEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L864">property <b>autoCreateTopicsEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCreateTopicsEnable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-compressionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L865">property <b>compressionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L865">property <b>compressionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compressionType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-connectionsMaxIdleMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L866">property <b>connectionsMaxIdleMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L866">property <b>connectionsMaxIdleMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionsMaxIdleMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-defaultReplicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L867">property <b>defaultReplicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L867">property <b>defaultReplicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultReplicationFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-groupMaxSessionTimeoutMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L868">property <b>groupMaxSessionTimeoutMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L868">property <b>groupMaxSessionTimeoutMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMaxSessionTimeoutMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-groupMinSessionTimeoutMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L869">property <b>groupMinSessionTimeoutMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L869">property <b>groupMinSessionTimeoutMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupMinSessionTimeoutMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logCleanerMaxCompactionLagMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L870">property <b>logCleanerMaxCompactionLagMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L870">property <b>logCleanerMaxCompactionLagMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanerMaxCompactionLagMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logCleanerMinCleanableRatio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L871">property <b>logCleanerMinCleanableRatio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L871">property <b>logCleanerMinCleanableRatio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanerMinCleanableRatio?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logCleanerMinCompactionLagMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L872">property <b>logCleanerMinCompactionLagMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L872">property <b>logCleanerMinCompactionLagMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanerMinCompactionLagMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logCleanupPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L873">property <b>logCleanupPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L873">property <b>logCleanupPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logCleanupPolicy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logMessageTimestampDifferenceMaxMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L874">property <b>logMessageTimestampDifferenceMaxMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L874">property <b>logMessageTimestampDifferenceMaxMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logMessageTimestampDifferenceMaxMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logMessageTimestampType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L875">property <b>logMessageTimestampType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L875">property <b>logMessageTimestampType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logMessageTimestampType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logRetentionBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L876">property <b>logRetentionBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L876">property <b>logRetentionBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logRetentionBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logRetentionHours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L877">property <b>logRetentionHours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L877">property <b>logRetentionHours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logRetentionHours?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-logSegmentBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L878">property <b>logSegmentBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L878">property <b>logSegmentBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logSegmentBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-maxConnectionsPerIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L879">property <b>maxConnectionsPerIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L879">property <b>maxConnectionsPerIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConnectionsPerIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-messageMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L880">property <b>messageMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L880">property <b>messageMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-numPartitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L881">property <b>numPartitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L881">property <b>numPartitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numPartitions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-offsetsRetentionMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L882">property <b>offsetsRetentionMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L882">property <b>offsetsRetentionMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offsetsRetentionMinutes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-producerPurgatoryPurgeIntervalRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L883">property <b>producerPurgatoryPurgeIntervalRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L883">property <b>producerPurgatoryPurgeIntervalRequests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>producerPurgatoryPurgeIntervalRequests?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-replicaFetchMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L884">property <b>replicaFetchMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L884">property <b>replicaFetchMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaFetchMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-replicaFetchResponseMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L885">property <b>replicaFetchResponseMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L885">property <b>replicaFetchResponseMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaFetchResponseMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafka-socketRequestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L886">property <b>socketRequestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L886">property <b>socketRequestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>socketRequestMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfigKafkaAuthenticationMethods" data-link-title="ServiceKafkaUserConfigKafkaAuthenticationMethods">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L889">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L889">
         interface <strong>ServiceKafkaUserConfigKafkaAuthenticationMethods</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfigKafkaAuthenticationMethods</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaAuthenticationMethods-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L890">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L890">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaAuthenticationMethods-sasl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L891">property <b>sasl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L891">property <b>sasl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sasl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfigKafkaConnectConfig" data-link-title="ServiceKafkaUserConfigKafkaConnectConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L894">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L894">
         interface <strong>ServiceKafkaUserConfigKafkaConnectConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfigKafkaConnectConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaConnectConfig-consumerIsolationLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L895">property <b>consumerIsolationLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L895">property <b>consumerIsolationLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerIsolationLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaConnectConfig-consumerMaxPollRecords">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L896">property <b>consumerMaxPollRecords</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L896">property <b>consumerMaxPollRecords</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerMaxPollRecords?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaConnectConfig-offsetFlushIntervalMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L897">property <b>offsetFlushIntervalMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L897">property <b>offsetFlushIntervalMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>offsetFlushIntervalMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfigKafkaRestConfig" data-link-title="ServiceKafkaUserConfigKafkaRestConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L900">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L900">
         interface <strong>ServiceKafkaUserConfigKafkaRestConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfigKafkaRestConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaRestConfig-consumerEnableAutoCommit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L901">property <b>consumerEnableAutoCommit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L901">property <b>consumerEnableAutoCommit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerEnableAutoCommit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaRestConfig-consumerRequestMaxBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L902">property <b>consumerRequestMaxBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L902">property <b>consumerRequestMaxBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerRequestMaxBytes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaRestConfig-consumerRequestTimeoutMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L903">property <b>consumerRequestTimeoutMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L903">property <b>consumerRequestTimeoutMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerRequestTimeoutMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaRestConfig-producerAcks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L904">property <b>producerAcks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L904">property <b>producerAcks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>producerAcks?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaRestConfig-producerLingerMs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L905">property <b>producerLingerMs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L905">property <b>producerLingerMs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>producerLingerMs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigKafkaRestConfig-simpleconsumerPoolSizeMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L906">property <b>simpleconsumerPoolSizeMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L906">property <b>simpleconsumerPoolSizeMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>simpleconsumerPoolSizeMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfigPrivateAccess" data-link-title="ServiceKafkaUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L909">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L909">
         interface <strong>ServiceKafkaUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L910">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L910">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceKafkaUserConfigPublicAccess" data-link-title="ServiceKafkaUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L913">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L913">
         interface <strong>ServiceKafkaUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceKafkaUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigPublicAccess-kafka">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L914">property <b>kafka</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L914">property <b>kafka</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafka?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigPublicAccess-kafkaConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L915">property <b>kafkaConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L915">property <b>kafkaConnect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaConnect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigPublicAccess-kafkaRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L916">property <b>kafkaRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L916">property <b>kafkaRest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaRest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L917">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L917">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceKafkaUserConfigPublicAccess-schemaRegistry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L918">property <b>schemaRegistry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L918">property <b>schemaRegistry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaRegistry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceMysql" data-link-title="ServiceMysql">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L921">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L921">
         interface <strong>ServiceMysql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceMysql</span></code></pre>
 <h3 class="pdoc-module-header" id="ServiceMysqlUserConfig" data-link-title="ServiceMysqlUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L925">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L925">
         interface <strong>ServiceMysqlUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceMysqlUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L926">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L926">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L927">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L927">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-backupHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L928">property <b>backupHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L928">property <b>backupHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupHour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-backupMinute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L929">property <b>backupMinute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L929">property <b>backupMinute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupMinute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L930">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L930">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L931">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L931">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceMysqlUserConfigMysql'>outputs.ServiceMysqlUserConfigMysql</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-mysqlVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L932">property <b>mysqlVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L932">property <b>mysqlVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L933">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L933">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceMysqlUserConfigPrivateAccess'>outputs.ServiceMysqlUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L934">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L934">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceMysqlUserConfigPublicAccess'>outputs.ServiceMysqlUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-recoveryTargetTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L935">property <b>recoveryTargetTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L935">property <b>recoveryTargetTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryTargetTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L936">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L936">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceMysqlUserConfigMysql" data-link-title="ServiceMysqlUserConfigMysql">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L939">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L939">
         interface <strong>ServiceMysqlUserConfigMysql</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceMysqlUserConfigMysql</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-connectTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L940">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L940">property <b>connectTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-defaultTimeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L941">property <b>defaultTimeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L941">property <b>defaultTimeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTimeZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-groupConcatMaxLen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L942">property <b>groupConcatMaxLen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L942">property <b>groupConcatMaxLen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupConcatMaxLen?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-informationSchemaStatsExpiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L943">property <b>informationSchemaStatsExpiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L943">property <b>informationSchemaStatsExpiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>informationSchemaStatsExpiry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-innodbFtMinTokenSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L944">property <b>innodbFtMinTokenSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L944">property <b>innodbFtMinTokenSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbFtMinTokenSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-innodbFtServerStopwordTable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L945">property <b>innodbFtServerStopwordTable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L945">property <b>innodbFtServerStopwordTable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbFtServerStopwordTable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-innodbLockWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L946">property <b>innodbLockWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L946">property <b>innodbLockWaitTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbLockWaitTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-innodbOnlineAlterLogMaxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L947">property <b>innodbOnlineAlterLogMaxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L947">property <b>innodbOnlineAlterLogMaxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbOnlineAlterLogMaxSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-innodbRollbackOnTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L948">property <b>innodbRollbackOnTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L948">property <b>innodbRollbackOnTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>innodbRollbackOnTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-maxAllowedPacket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L949">property <b>maxAllowedPacket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L949">property <b>maxAllowedPacket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxAllowedPacket?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-netReadTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L950">property <b>netReadTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L950">property <b>netReadTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>netReadTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-netWriteTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L951">property <b>netWriteTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L951">property <b>netWriteTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>netWriteTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-sqlMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L952">property <b>sqlMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L952">property <b>sqlMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-sqlRequirePrimaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L953">property <b>sqlRequirePrimaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L953">property <b>sqlRequirePrimaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlRequirePrimaryKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigMysql-waitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L954">property <b>waitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L954">property <b>waitTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceMysqlUserConfigPrivateAccess" data-link-title="ServiceMysqlUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L957">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L957">
         interface <strong>ServiceMysqlUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceMysqlUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigPrivateAccess-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L958">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L958">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L959">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L959">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceMysqlUserConfigPublicAccess" data-link-title="ServiceMysqlUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L962">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L962">
         interface <strong>ServiceMysqlUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceMysqlUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigPublicAccess-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L963">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L963">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceMysqlUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L964">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L964">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePg" data-link-title="ServicePg">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L967">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L967">
         interface <strong>ServicePg</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePg</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-dbname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L968">property <b>dbname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L968">property <b>dbname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L969">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L969">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L970">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L970">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L971">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L971">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-replicaUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L972">property <b>replicaUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L972">property <b>replicaUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-sslmode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L973">property <b>sslmode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L973">property <b>sslmode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslmode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L974">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L974">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePg-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L975">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L975">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfig" data-link-title="ServicePgUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L978">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L978">
         interface <strong>ServicePgUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L979">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L979">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-adminUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L980">property <b>adminUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L980">property <b>adminUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsername?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-backupHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L981">property <b>backupHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L981">property <b>backupHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupHour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-backupMinute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L982">property <b>backupMinute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L982">property <b>backupMinute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupMinute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L983">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L983">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-pg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L984">property <b>pg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L984">property <b>pg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pg?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServicePgUserConfigPg'>outputs.ServicePgUserConfigPg</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-pgReadReplica">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L985">property <b>pgReadReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L985">property <b>pgReadReplica</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgReadReplica?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-pgServiceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L986">property <b>pgServiceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L986">property <b>pgServiceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgServiceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-pgVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L987">property <b>pgVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L987">property <b>pgVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-pgbouncer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L988">property <b>pgbouncer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L988">property <b>pgbouncer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgbouncer?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServicePgUserConfigPgbouncer'>outputs.ServicePgUserConfigPgbouncer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-pglookout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L989">property <b>pglookout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L989">property <b>pglookout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pglookout?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServicePgUserConfigPglookout'>outputs.ServicePgUserConfigPglookout</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L990">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L990">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServicePgUserConfigPrivateAccess'>outputs.ServicePgUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L991">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L991">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServicePgUserConfigPublicAccess'>outputs.ServicePgUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-recoveryTargetTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L992">property <b>recoveryTargetTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L992">property <b>recoveryTargetTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryTargetTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-serviceToForkFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L993">property <b>serviceToForkFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L993">property <b>serviceToForkFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceToForkFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-timescaledb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L994">property <b>timescaledb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L994">property <b>timescaledb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timescaledb?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServicePgUserConfigTimescaledb'>outputs.ServicePgUserConfigTimescaledb</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfig-variant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L995">property <b>variant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L995">property <b>variant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variant?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfigPg" data-link-title="ServicePgUserConfigPg">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L998">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L998">
         interface <strong>ServicePgUserConfigPg</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfigPg</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumAnalyzeScaleFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L999">property <b>autovacuumAnalyzeScaleFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L999">property <b>autovacuumAnalyzeScaleFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumAnalyzeScaleFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumAnalyzeThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1000">property <b>autovacuumAnalyzeThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1000">property <b>autovacuumAnalyzeThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumAnalyzeThreshold?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumMaxWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1001">property <b>autovacuumMaxWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1001">property <b>autovacuumMaxWorkers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumMaxWorkers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumNaptime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1002">property <b>autovacuumNaptime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1002">property <b>autovacuumNaptime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumNaptime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumVacuumCostDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1003">property <b>autovacuumVacuumCostDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1003">property <b>autovacuumVacuumCostDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumCostDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumVacuumCostLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1004">property <b>autovacuumVacuumCostLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1004">property <b>autovacuumVacuumCostLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumCostLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumVacuumScaleFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1005">property <b>autovacuumVacuumScaleFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1005">property <b>autovacuumVacuumScaleFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumScaleFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-autovacuumVacuumThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1006">property <b>autovacuumVacuumThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1006">property <b>autovacuumVacuumThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autovacuumVacuumThreshold?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-deadlockTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1007">property <b>deadlockTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1007">property <b>deadlockTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadlockTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-idleInTransactionSessionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1008">property <b>idleInTransactionSessionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1008">property <b>idleInTransactionSessionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idleInTransactionSessionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-jit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1009">property <b>jit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1009">property <b>jit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-logAutovacuumMinDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1010">property <b>logAutovacuumMinDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1010">property <b>logAutovacuumMinDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAutovacuumMinDuration?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-logErrorVerbosity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1011">property <b>logErrorVerbosity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1011">property <b>logErrorVerbosity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logErrorVerbosity?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-logMinDurationStatement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1012">property <b>logMinDurationStatement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1012">property <b>logMinDurationStatement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logMinDurationStatement?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxLocksPerTransaction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1013">property <b>maxLocksPerTransaction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1013">property <b>maxLocksPerTransaction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLocksPerTransaction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxParallelWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1014">property <b>maxParallelWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1014">property <b>maxParallelWorkers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxParallelWorkers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxParallelWorkersPerGather">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1015">property <b>maxParallelWorkersPerGather</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1015">property <b>maxParallelWorkersPerGather</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxParallelWorkersPerGather?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxPredLocksPerTransaction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1016">property <b>maxPredLocksPerTransaction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1016">property <b>maxPredLocksPerTransaction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPredLocksPerTransaction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxPreparedTransactions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1017">property <b>maxPreparedTransactions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1017">property <b>maxPreparedTransactions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPreparedTransactions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxStackDepth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1018">property <b>maxStackDepth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1018">property <b>maxStackDepth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStackDepth?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxStandbyArchiveDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1019">property <b>maxStandbyArchiveDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1019">property <b>maxStandbyArchiveDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStandbyArchiveDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxStandbyStreamingDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1020">property <b>maxStandbyStreamingDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1020">property <b>maxStandbyStreamingDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxStandbyStreamingDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-maxWorkerProcesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1021">property <b>maxWorkerProcesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1021">property <b>maxWorkerProcesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxWorkerProcesses?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-pgStatStatementsTrack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1022">property <b>pgStatStatementsTrack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1022">property <b>pgStatStatementsTrack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgStatStatementsTrack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-tempFileLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1023">property <b>tempFileLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1023">property <b>tempFileLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tempFileLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1024">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1024">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-trackActivityQuerySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1025">property <b>trackActivityQuerySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1025">property <b>trackActivityQuerySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trackActivityQuerySize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-trackFunctions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1026">property <b>trackFunctions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1026">property <b>trackFunctions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trackFunctions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPg-walWriterDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1027">property <b>walWriterDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1027">property <b>walWriterDelay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>walWriterDelay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfigPgbouncer" data-link-title="ServicePgUserConfigPgbouncer">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1030">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1030">
         interface <strong>ServicePgUserConfigPgbouncer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfigPgbouncer</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPgbouncer-serverResetQueryAlways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1031">property <b>serverResetQueryAlways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1031">property <b>serverResetQueryAlways</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverResetQueryAlways?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfigPglookout" data-link-title="ServicePgUserConfigPglookout">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1034">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1034">
         interface <strong>ServicePgUserConfigPglookout</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfigPglookout</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPglookout-maxFailoverReplicationTimeLag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1035">property <b>maxFailoverReplicationTimeLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1035">property <b>maxFailoverReplicationTimeLag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFailoverReplicationTimeLag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfigPrivateAccess" data-link-title="ServicePgUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1038">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1038">
         interface <strong>ServicePgUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPrivateAccess-pg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1039">property <b>pg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1039">property <b>pg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPrivateAccess-pgbouncer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1040">property <b>pgbouncer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1040">property <b>pgbouncer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgbouncer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1041">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1041">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfigPublicAccess" data-link-title="ServicePgUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1044">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1044">
         interface <strong>ServicePgUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPublicAccess-pg">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1045">property <b>pg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1045">property <b>pg</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pg?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPublicAccess-pgbouncer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1046">property <b>pgbouncer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1046">property <b>pgbouncer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgbouncer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1047">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1047">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServicePgUserConfigTimescaledb" data-link-title="ServicePgUserConfigTimescaledb">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1050">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1050">
         interface <strong>ServicePgUserConfigTimescaledb</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServicePgUserConfigTimescaledb</span></code></pre>
 <h4 class="pdoc-member-header" id="ServicePgUserConfigTimescaledb-maxBackgroundWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1051">property <b>maxBackgroundWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1051">property <b>maxBackgroundWorkers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBackgroundWorkers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceRedis" data-link-title="ServiceRedis">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1054">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1054">
         interface <strong>ServiceRedis</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceRedis</span></code></pre>
 <h3 class="pdoc-module-header" id="ServiceRedisUserConfig" data-link-title="ServiceRedisUserConfig">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1058">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1058">
         interface <strong>ServiceRedisUserConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceRedisUserConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-ipFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1059">property <b>ipFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1059">property <b>ipFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipFilters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-migration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1060">property <b>migration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1060">property <b>migration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migration?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceRedisUserConfigMigration'>outputs.ServiceRedisUserConfigMigration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-privateAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1061">property <b>privateAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1061">property <b>privateAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceRedisUserConfigPrivateAccess'>outputs.ServiceRedisUserConfigPrivateAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-publicAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1062">property <b>publicAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1062">property <b>publicAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceRedisUserConfigPublicAccess'>outputs.ServiceRedisUserConfigPublicAccess</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-redisLfuDecayTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1063">property <b>redisLfuDecayTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1063">property <b>redisLfuDecayTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisLfuDecayTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-redisLfuLogFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1064">property <b>redisLfuLogFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1064">property <b>redisLfuLogFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisLfuLogFactor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-redisMaxmemoryPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1065">property <b>redisMaxmemoryPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1065">property <b>redisMaxmemoryPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisMaxmemoryPolicy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-redisNotifyKeyspaceEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1066">property <b>redisNotifyKeyspaceEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1066">property <b>redisNotifyKeyspaceEvents</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisNotifyKeyspaceEvents?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-redisSsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1067">property <b>redisSsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1067">property <b>redisSsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisSsl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfig-redisTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1068">property <b>redisTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1068">property <b>redisTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redisTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceRedisUserConfigMigration" data-link-title="ServiceRedisUserConfigMigration">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1071">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1071">
         interface <strong>ServiceRedisUserConfigMigration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceRedisUserConfigMigration</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigMigration-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1072">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1072">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigMigration-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1073">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1073">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigMigration-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1074">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1074">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigMigration-ssl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1075">property <b>ssl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1075">property <b>ssl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigMigration-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1076">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1076">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceRedisUserConfigPrivateAccess" data-link-title="ServiceRedisUserConfigPrivateAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1079">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1079">
         interface <strong>ServiceRedisUserConfigPrivateAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceRedisUserConfigPrivateAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigPrivateAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1080">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1080">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigPrivateAccess-redis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1081">property <b>redis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1081">property <b>redis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redis?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceRedisUserConfigPublicAccess" data-link-title="ServiceRedisUserConfigPublicAccess">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1084">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1084">
         interface <strong>ServiceRedisUserConfigPublicAccess</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceRedisUserConfigPublicAccess</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigPublicAccess-prometheus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1085">property <b>prometheus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1085">property <b>prometheus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prometheus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceRedisUserConfigPublicAccess-redis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1086">property <b>redis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1086">property <b>redis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redis?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceServiceIntegration" data-link-title="ServiceServiceIntegration">
-    <a href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1089">
+    <a href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1089">
         interface <strong>ServiceServiceIntegration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceServiceIntegration</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceServiceIntegration-integrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1090">property <b>integrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1090">property <b>integrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceServiceIntegration-sourceServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/{{< param git_sha >}}/sdk/nodejs/types/output.ts#L1091">property <b>sourceServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aiven/blob/dbedd1b23964384c14b3880379e348959fdd362a/sdk/nodejs/types/output.ts#L1091">property <b>sourceServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceServiceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

@@ -44,98 +44,98 @@ git_sha: "64ea17aaccc28b862db522499aa07ee4ef6d280e"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L9">
         let <strong>apiKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;) || utilities.getEnv(&#34;NEWRELIC_API_KEY&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L10">
         let <strong>apiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_API_URL&#34;) || &#34;https://api.newrelic.com/v2&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cacertFile" data-link-title="cacertFile">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L11">
         let <strong>cacertFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cacertFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cacertFile&#34;) || utilities.getEnv(&#34;NEWRELIC_API_CACERT&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="infraApiUrl" data-link-title="infraApiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L12">
         let <strong>infraApiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> infraApiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;infraApiUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_INFRA_API_URL&#34;) || &#34;https://infra-api.newrelic.com/v2&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="infrastructureApiUrl" data-link-title="infrastructureApiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L13">
         let <strong>infrastructureApiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> infrastructureApiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;infrastructureApiUrl&#34;) || utilities.getEnv(&#34;NEWRELIC_INFRASTRUCTURE_API_URL&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insecureSkipVerify" data-link-title="insecureSkipVerify">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L14">
         let <strong>insecureSkipVerify</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insecureSkipVerify: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecureSkipVerify&#34;) || utilities.getEnvBoolean(&#34;NEWRELIC_API_SKIP_VERIFY&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insightsAccountId" data-link-title="insightsAccountId">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L15">
         let <strong>insightsAccountId</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insightsAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;insightsAccountId&#34;) || utilities.getEnv(&#34;NEWRELIC_INSIGHTS_ACCOUNT_ID&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insightsInsertKey" data-link-title="insightsInsertKey">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L16">
         let <strong>insightsInsertKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insightsInsertKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;insightsInsertKey&#34;) || utilities.getEnv(&#34;NEWRELIC_INSIGHTS_INSERT_KEY&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insightsInsertUrl" data-link-title="insightsInsertUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L17">
         let <strong>insightsInsertUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insightsInsertUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;insightsInsertUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_INSIGHTS_INSERT_URL&#34;) || &#34;https://insights-collector.newrelic.com/v1/accounts&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insightsQueryKey" data-link-title="insightsQueryKey">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L18">
         let <strong>insightsQueryKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insightsQueryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;insightsQueryKey&#34;) || utilities.getEnv(&#34;NEWRELIC_INSIGHTS_QUERY_KEY&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insightsQueryUrl" data-link-title="insightsQueryUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L19">
         let <strong>insightsQueryUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insightsQueryUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;insightsQueryUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_INSIGHTS_QUERY_URL&#34;) || &#34;https://insights-api.newrelic.com/v1/accounts&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="nerdgraphApiUrl" data-link-title="nerdgraphApiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L20">
         let <strong>nerdgraphApiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> nerdgraphApiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;nerdgraphApiUrl&#34;) || utilities.getEnv(&#34;NEWRELIC_NERDGRAPH_API_URL&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="personalApiKey" data-link-title="personalApiKey">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L21">
         let <strong>personalApiKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> personalApiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;personalApiKey&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="syntheticsApiUrl" data-link-title="syntheticsApiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/64ea17aaccc28b862db522499aa07ee4ef6d280e/sdk/nodejs/config/vars.ts#L22">
         let <strong>syntheticsApiUrl</strong>
     </a>
 </h3>

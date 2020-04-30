@@ -32,7 +32,7 @@ git_sha: "1b3960ecc31ce2a1b4aacab95361b53e67a16727"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/1b3960ecc31ce2a1b4aacab95361b53e67a16727/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -42,7 +42,7 @@ git_sha: "1b3960ecc31ce2a1b4aacab95361b53e67a16727"
 Fastly API Key from https://app.fastly.com/#account
 
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/1b3960ecc31ce2a1b4aacab95361b53e67a16727/sdk/nodejs/config/vars.ts#L16">
         let <strong>baseUrl</strong>
     </a>
 </h3>

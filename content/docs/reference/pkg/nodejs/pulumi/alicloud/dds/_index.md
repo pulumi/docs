@@ -35,7 +35,7 @@ git_sha: "d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c"
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getMongoInstances" data-link-title="getMongoInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L8">
         Function <strong>getMongoInstances</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ git_sha: "d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c"
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetMongoInstancesArgs" data-link-title="GetMongoInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L31">
         interface <strong>GetMongoInstancesArgs</strong>
     </a>
 </h3>
@@ -56,42 +56,42 @@ git_sha: "d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c"
 A collection of arguments for invoking getMongoInstances.
 
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L32">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L32">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L33">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L33">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L34">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L34">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L35">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L35">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L36">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L36">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L37">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L37">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L38">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L38">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetMongoInstancesResult" data-link-title="GetMongoInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L44">
         interface <strong>GetMongoInstancesResult</strong>
     </a>
 </h3>
@@ -101,12 +101,12 @@ A collection of arguments for invoking getMongoInstances.
 A collection of values returned by getMongoInstances.
 
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L45">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L45">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -114,42 +114,42 @@ A collection of values returned by getMongoInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L46">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L46">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L47">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L47">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L48">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L48">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L49">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L49">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMongoInstancesInstance'>GetMongoInstancesInstance</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L50">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L50">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L51">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L51">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L52">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L52">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMongoInstancesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/{{< param git_sha >}}/sdk/nodejs/dds/getMongoInstances.ts#L53">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/d1e2ae63541c4cfb5416fcdebee7cbb1b8780f8c/sdk/nodejs/dds/getMongoInstances.ts#L53">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>

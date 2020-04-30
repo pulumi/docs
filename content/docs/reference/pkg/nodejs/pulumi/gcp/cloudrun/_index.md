@@ -46,7 +46,7 @@ git_sha: "8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DomainMapping" data-link-title="DomainMapping">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L21">
         Resource <strong>DomainMapping</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ To get more information about DomainMapping, see:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_domain_mapping.html.markdown.
 
 <h4 class="pdoc-member-header" id="DomainMapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a DomainMapping resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainMapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +89,14 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainMapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainMapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Returns true if the given object is an instance of DomainMapping.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainMapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -116,7 +116,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainMapping-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L51">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L51">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the cloud run instance. eg us-central1
 
 <h4 class="pdoc-member-header" id="DomainMapping-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L55">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L55">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingMetadata'>DomainMappingMetadata</a>&gt;;</code></pre>
@@ -132,7 +132,7 @@ The location of the cloud run instance. eg us-central1
 Metadata associated with this DomainMapping.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DomainMapping-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ Metadata associated with this DomainMapping.  Structure is documented below.
 Name should be a verified domain
 
 <h4 class="pdoc-member-header" id="DomainMapping-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L64">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L64">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DomainMapping-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L68">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L68">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingSpec'>DomainMappingSpec</a>&gt;;</code></pre>
@@ -157,7 +157,7 @@ If it is not provided, the provider project is used.
 The spec for this DomainMapping.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DomainMapping-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L72">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L72">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatus'>DomainMappingStatus</a>&gt;;</code></pre>
@@ -165,7 +165,7 @@ The spec for this DomainMapping.  Structure is documented below.
 The current status of the DomainMapping.
 
 <h4 class="pdoc-member-header" id="DomainMapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -174,7 +174,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IamBinding" data-link-title="IamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L22">
         Resource <strong>IamBinding</strong>
     </a>
 </h3>
@@ -194,7 +194,7 @@ Three different resources help you manage your IAM policy for Cloud Run Service.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown.
 
 <h4 class="pdoc-member-header" id="IamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -208,7 +208,7 @@ Create a IamBinding resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -219,14 +219,14 @@ Get an existing IamBinding resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -237,12 +237,12 @@ Returns true if the given object is an instance of IamBinding.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L49">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L49">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#IamBindingCondition'>IamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L53">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L53">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="IamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -259,7 +259,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IamBinding-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L57">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L57">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -267,12 +267,12 @@ deployments and may be missing (undefined) during planning phases.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L58">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L58">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L63">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L69">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L69">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IamBinding-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L73">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L73">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -308,7 +308,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IamMember" data-link-title="IamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L22">
         Resource <strong>IamMember</strong>
     </a>
 </h3>
@@ -328,7 +328,7 @@ Three different resources help you manage your IAM policy for Cloud Run Service.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown.
 
 <h4 class="pdoc-member-header" id="IamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -342,7 +342,7 @@ Create a IamMember resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -353,14 +353,14 @@ Get an existing IamMember resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -371,12 +371,12 @@ Returns true if the given object is an instance of IamMember.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L49">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L49">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#IamMemberCondition'>IamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L53">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L53">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -384,7 +384,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="IamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -393,7 +393,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IamMember-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L57">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L57">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,12 +401,12 @@ deployments and may be missing (undefined) during planning phases.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L58">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L58">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L63">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L69">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L69">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IamMember-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L73">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L73">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -442,7 +442,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IamPolicy" data-link-title="IamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L22">
         Resource <strong>IamPolicy</strong>
     </a>
 </h3>
@@ -462,7 +462,7 @@ Three different resources help you manage your IAM policy for Cloud Run Service.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown.
 
 <h4 class="pdoc-member-header" id="IamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -476,7 +476,7 @@ Create a IamPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -487,14 +487,14 @@ Get an existing IamPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -505,7 +505,7 @@ Returns true if the given object is an instance of IamPolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L52">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L52">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="IamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -522,7 +522,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IamPolicy-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L56">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L56">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -530,7 +530,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L61">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L61">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -539,7 +539,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="IamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L66">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L66">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamPolicy-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L70">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L70">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -556,7 +556,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -565,7 +565,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L121">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -684,7 +684,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service.html.markdown.
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L194"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L194"> <b>constructor</b></a>
 </h4>
 
 
@@ -698,7 +698,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L130">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L130">method <b>get</b></a>
 </h4>
 
 
@@ -709,14 +709,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L121">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L121">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L141">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L141">method <b>isInstance</b></a>
 </h4>
 
 
@@ -727,7 +727,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-autogenerateRevisionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L155">property <b>autogenerateRevisionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L155">property <b>autogenerateRevisionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autogenerateRevisionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ is also set.
 this field is set to false, the revision name will still autogenerate.)
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L121">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L121">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -748,7 +748,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L159">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L159">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +756,7 @@ deployments and may be missing (undefined) during planning phases.
 The location of the cloud run instance. eg us-central1
 
 <h4 class="pdoc-member-header" id="Service-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L164">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L164">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceMetadata'>ServiceMetadata</a>&gt;;</code></pre>
@@ -765,7 +765,7 @@ Metadata associated with this Service, including name, namespace, labels,
 and annotations.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ and annotations.  Structure is documented below.
 Name of the environment variable.
 
 <h4 class="pdoc-member-header" id="Service-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L173">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L173">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -782,7 +782,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L177">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L177">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceStatus'>ServiceStatus</a>&gt;;</code></pre>
@@ -790,7 +790,7 @@ If it is not provided, the provider project is used.
 The current status of the Service.
 
 <h4 class="pdoc-member-header" id="Service-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L189">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L189">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplate'>ServiceTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -806,7 +806,7 @@ Cloud Run does not currently support referencing a build that is
 responsible for materializing the container image from source.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Service-traffics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L194">property <b>traffics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L194">property <b>traffics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>traffics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTraffic'>ServiceTraffic</a>[]&gt;;</code></pre>
@@ -815,7 +815,7 @@ Traffic specifies how to distribute traffic over a collection of Knative Revisio
 and Configurations  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L121">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L121">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -827,7 +827,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainMappingArgs" data-link-title="DomainMappingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L155">
         interface <strong>DomainMappingArgs</strong>
     </a>
 </h3>
@@ -837,7 +837,7 @@ deployments.
 The set of arguments for constructing a DomainMapping resource.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L159">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L159">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ The set of arguments for constructing a DomainMapping resource.
 The location of the cloud run instance. eg us-central1
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L163">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L163">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingMetadata'>DomainMappingMetadata</a>&gt;;</code></pre>
@@ -853,7 +853,7 @@ The location of the cloud run instance. eg us-central1
 Metadata associated with this DomainMapping.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ Metadata associated with this DomainMapping.  Structure is documented below.
 Name should be a verified domain
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L172">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L172">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -870,7 +870,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DomainMappingArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L176">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L176">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSpec'>DomainMappingSpec</a>&gt;;</code></pre>
@@ -878,7 +878,7 @@ If it is not provided, the provider project is used.
 The spec for this DomainMapping.  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DomainMappingState" data-link-title="DomainMappingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L124">
         interface <strong>DomainMappingState</strong>
     </a>
 </h3>
@@ -888,7 +888,7 @@ The spec for this DomainMapping.  Structure is documented below.
 Input properties used for looking up and filtering DomainMapping resources.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L128">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L128">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ Input properties used for looking up and filtering DomainMapping resources.
 The location of the cloud run instance. eg us-central1
 
 <h4 class="pdoc-member-header" id="DomainMappingState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L132">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L132">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingMetadata'>DomainMappingMetadata</a>&gt;;</code></pre>
@@ -904,7 +904,7 @@ The location of the cloud run instance. eg us-central1
 Metadata associated with this DomainMapping.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ Metadata associated with this DomainMapping.  Structure is documented below.
 Name should be a verified domain
 
 <h4 class="pdoc-member-header" id="DomainMappingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L141">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L141">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -921,7 +921,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L145">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L145">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSpec'>DomainMappingSpec</a>&gt;;</code></pre>
@@ -929,7 +929,7 @@ If it is not provided, the provider project is used.
 The spec for this DomainMapping.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DomainMappingState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/domainMapping.ts#L149">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/domainMapping.ts#L149">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingStatus'>DomainMappingStatus</a>&gt;;</code></pre>
@@ -937,7 +937,7 @@ The spec for this DomainMapping.  Structure is documented below.
 The current status of the DomainMapping.
 
 <h3 class="pdoc-module-header" id="IamBindingArgs" data-link-title="IamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L158">
         interface <strong>IamBindingArgs</strong>
     </a>
 </h3>
@@ -947,12 +947,12 @@ The current status of the DomainMapping.
 The set of arguments for constructing a IamBinding resource.
 
 <h4 class="pdoc-member-header" id="IamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L159">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L159">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#IamBindingCondition'>IamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamBindingArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L163">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L163">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -960,12 +960,12 @@ The set of arguments for constructing a IamBinding resource.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L164">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L164">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L169">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L169">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -974,7 +974,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L175">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L175">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -984,7 +984,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IamBindingArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L179">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L179">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -992,7 +992,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="IamBindingState" data-link-title="IamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L127">
         interface <strong>IamBindingState</strong>
     </a>
 </h3>
@@ -1002,12 +1002,12 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering IamBinding resources.
 
 <h4 class="pdoc-member-header" id="IamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L128">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L128">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#IamBindingCondition'>IamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L132">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L132">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ Input properties used for looking up and filtering IamBinding resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="IamBindingState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L136">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L136">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1023,12 +1023,12 @@ Input properties used for looking up and filtering IamBinding resources.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L137">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L137">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L142">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L142">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L148">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L148">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1047,7 +1047,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IamBindingState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamBinding.ts#L152">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamBinding.ts#L152">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1055,7 +1055,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="IamMemberArgs" data-link-title="IamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L158">
         interface <strong>IamMemberArgs</strong>
     </a>
 </h3>
@@ -1065,12 +1065,12 @@ Used to find the parent resource to bind the IAM policy to
 The set of arguments for constructing a IamMember resource.
 
 <h4 class="pdoc-member-header" id="IamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L159">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L159">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#IamMemberCondition'>IamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamMemberArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L163">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L163">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1078,12 +1078,12 @@ The set of arguments for constructing a IamMember resource.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L164">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L164">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L169">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L169">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1092,7 +1092,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L175">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L175">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IamMemberArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L179">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L179">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="IamMemberState" data-link-title="IamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L127">
         interface <strong>IamMemberState</strong>
     </a>
 </h3>
@@ -1120,12 +1120,12 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering IamMember resources.
 
 <h4 class="pdoc-member-header" id="IamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L128">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L128">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#IamMemberCondition'>IamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L132">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L132">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ Input properties used for looking up and filtering IamMember resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="IamMemberState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L136">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L136">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1141,12 +1141,12 @@ Input properties used for looking up and filtering IamMember resources.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L137">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L137">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L142">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L142">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L148">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L148">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1165,7 +1165,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IamMemberState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamMember.ts#L152">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamMember.ts#L152">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1173,7 +1173,7 @@ The role that should be applied. Only one
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="IamPolicyArgs" data-link-title="IamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L145">
         interface <strong>IamPolicyArgs</strong>
     </a>
 </h3>
@@ -1183,7 +1183,7 @@ Used to find the parent resource to bind the IAM policy to
 The set of arguments for constructing a IamPolicy resource.
 
 <h4 class="pdoc-member-header" id="IamPolicyArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L149">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L149">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ The set of arguments for constructing a IamPolicy resource.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L154">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L154">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1200,7 +1200,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="IamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L159">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L159">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1209,7 +1209,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamPolicyArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L163">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L163">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="IamPolicyState" data-link-title="IamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L117">
         interface <strong>IamPolicyState</strong>
     </a>
 </h3>
@@ -1227,7 +1227,7 @@ Used to find the parent resource to bind the IAM policy to
 Input properties used for looking up and filtering IamPolicy resources.
 
 <h4 class="pdoc-member-header" id="IamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L121">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L121">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ Input properties used for looking up and filtering IamPolicy resources.
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="IamPolicyState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L125">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L125">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ Input properties used for looking up and filtering IamPolicy resources.
 The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="IamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L130">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L130">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="IamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L135">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L135">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1261,7 +1261,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="IamPolicyState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/iamPolicy.ts#L139">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/iamPolicy.ts#L139">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1269,7 +1269,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 Used to find the parent resource to bind the IAM policy to
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L297">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L297">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -1279,7 +1279,7 @@ Used to find the parent resource to bind the IAM policy to
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-autogenerateRevisionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L305">property <b>autogenerateRevisionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L305">property <b>autogenerateRevisionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autogenerateRevisionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1291,7 +1291,7 @@ is also set.
 this field is set to false, the revision name will still autogenerate.)
 
 <h4 class="pdoc-member-header" id="ServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L309">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L309">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1299,7 @@ this field is set to false, the revision name will still autogenerate.)
 The location of the cloud run instance. eg us-central1
 
 <h4 class="pdoc-member-header" id="ServiceArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L314">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L314">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceMetadata'>ServiceMetadata</a>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ Metadata associated with this Service, including name, namespace, labels,
 and annotations.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L318">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ and annotations.  Structure is documented below.
 Name of the environment variable.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L323">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L323">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1325,7 +1325,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L335">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L335">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplate'>ServiceTemplate</a>&gt;;</code></pre>
@@ -1341,7 +1341,7 @@ Cloud Run does not currently support referencing a build that is
 responsible for materializing the container image from source.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-traffics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L340">property <b>traffics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L340">property <b>traffics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>traffics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTraffic'>ServiceTraffic</a>&gt;[]&gt;;</code></pre>
@@ -1350,7 +1350,7 @@ Traffic specifies how to distribute traffic over a collection of Knative Revisio
 and Configurations  Structure is documented below.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L244">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -1360,7 +1360,7 @@ and Configurations  Structure is documented below.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-autogenerateRevisionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L252">property <b>autogenerateRevisionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L252">property <b>autogenerateRevisionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autogenerateRevisionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1372,7 +1372,7 @@ is also set.
 this field is set to false, the revision name will still autogenerate.)
 
 <h4 class="pdoc-member-header" id="ServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L256">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L256">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1380,7 +1380,7 @@ this field is set to false, the revision name will still autogenerate.)
 The location of the cloud run instance. eg us-central1
 
 <h4 class="pdoc-member-header" id="ServiceState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L261">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L261">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceMetadata'>ServiceMetadata</a>&gt;;</code></pre>
@@ -1389,7 +1389,7 @@ Metadata associated with this Service, including name, namespace, labels,
 and annotations.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L265">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ and annotations.  Structure is documented below.
 Name of the environment variable.
 
 <h4 class="pdoc-member-header" id="ServiceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L270">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L270">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1406,7 +1406,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ServiceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L274">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L274">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceStatus'>ServiceStatus</a>&gt;;</code></pre>
@@ -1414,7 +1414,7 @@ If it is not provided, the provider project is used.
 The current status of the Service.
 
 <h4 class="pdoc-member-header" id="ServiceState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L286">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L286">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplate'>ServiceTemplate</a>&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ Cloud Run does not currently support referencing a build that is
 responsible for materializing the container image from source.  Structure is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceState-traffics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/cloudrun/service.ts#L291">property <b>traffics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/cloudrun/service.ts#L291">property <b>traffics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>traffics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTraffic'>ServiceTraffic</a>&gt;[]&gt;;</code></pre>

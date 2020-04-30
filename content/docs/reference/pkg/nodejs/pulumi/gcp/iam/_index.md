@@ -35,7 +35,7 @@ git_sha: "8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f"
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getRule" data-link-title="getRule">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L12">
         Function <strong>getRule</strong>
     </a>
 </h3>
@@ -51,7 +51,7 @@ Use this data source to get information about a Google IAM Role.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetRuleArgs" data-link-title="GetRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L28">
         interface <strong>GetRuleArgs</strong>
     </a>
 </h3>
@@ -61,7 +61,7 @@ Use this data source to get information about a Google IAM Role.
 A collection of arguments for invoking getRule.
 
 <h4 class="pdoc-member-header" id="GetRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L32">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L32">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -69,7 +69,7 @@ A collection of arguments for invoking getRule.
 The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` or `projects/{PROJECT_ID}/roles/{ROLE_NAME}`
 
 <h3 class="pdoc-module-header" id="GetRuleResult" data-link-title="GetRuleResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L38">
         interface <strong>GetRuleResult</strong>
     </a>
 </h3>
@@ -79,7 +79,7 @@ The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{
 A collection of values returned by getRule.
 
 <h4 class="pdoc-member-header" id="GetRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -87,7 +87,7 @@ A collection of values returned by getRule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRuleResult-includedPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L42">property <b>includedPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L42">property <b>includedPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedPermissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -95,12 +95,12 @@ The provider-assigned unique ID for this managed resource.
 specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
 
 <h4 class="pdoc-member-header" id="GetRuleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRuleResult-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L47">property <b>stage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L47">property <b>stage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -108,7 +108,7 @@ specifies the list of one or more permissions to include in the custom role, suc
 indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
 
 <h4 class="pdoc-member-header" id="GetRuleResult-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/{{< param git_sha >}}/sdk/nodejs/iam/getRule.ts#L51">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/8764e3ebbdbdbfb5c5377d5597fba904d9d64b0f/sdk/nodejs/iam/getRule.ts#L51">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

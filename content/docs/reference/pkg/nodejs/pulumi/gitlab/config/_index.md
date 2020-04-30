@@ -34,7 +34,7 @@ git_sha: "56ff40d7b87fbd3a9b600a20acab44c543faf5c4"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/56ff40d7b87fbd3a9b600a20acab44c543faf5c4/sdk/nodejs/config/vars.ts#L12">
         let <strong>baseUrl</strong>
     </a>
 </h3>
@@ -44,7 +44,7 @@ git_sha: "56ff40d7b87fbd3a9b600a20acab44c543faf5c4"
 The GitLab Base API URL
 
 <h3 class="pdoc-module-header" id="cacertFile" data-link-title="cacertFile">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/56ff40d7b87fbd3a9b600a20acab44c543faf5c4/sdk/nodejs/config/vars.ts#L16">
         let <strong>cacertFile</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ The GitLab Base API URL
 A file containing the ca certificate to use in case ssl certificate is not from a standard chain
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/56ff40d7b87fbd3a9b600a20acab44c543faf5c4/sdk/nodejs/config/vars.ts#L20">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ A file containing the ca certificate to use in case ssl certificate is not from 
 Disable SSL verification of API calls
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/56ff40d7b87fbd3a9b600a20acab44c543faf5c4/sdk/nodejs/config/vars.ts#L24">
         let <strong>token</strong>
     </a>
 </h3>
