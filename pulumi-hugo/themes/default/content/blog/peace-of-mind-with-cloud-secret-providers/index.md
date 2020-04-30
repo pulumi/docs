@@ -1,9 +1,9 @@
 ---
 title: "Peace of Mind with Cloud Secret Providers"
 
-date: 2020-04-29T14:26:35-07:00
-draft: true
-meta_desc: "Learn how to encrypt your Pulumi secrets with a cloud secrets provider to ensure secrets never leave your control"
+date: 2020-05-07T14:30:35-07:00
+draft: false
+meta_desc: "Encrypt your Pulumi secrets with a cloud secrets provider"
 meta_image: meta.png
 authors:
     - lee-briggs
