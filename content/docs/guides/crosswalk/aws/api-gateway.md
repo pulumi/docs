@@ -1,6 +1,6 @@
 ---
 title: "AWS API Gateway"
-meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming API Gateway.
+meta_desc: Pulumi Crosswalk for AWS provides a significantly easier way of programming API Gateway. Here is how.
 linktitle: API Gateway
 menu:
   userguides:
@@ -22,7 +22,7 @@ is inexpensive, has no minimum fees, and you only pay for the API calls you rece
 
 ## Overview
 
-Pulumi Crosswalk for AWS provides significantly easier ways of programming API Gateway. This includes using
+Pulumi Crosswalk for Amazon Web Services (AWS) provides better AWS API management through significantly easier ways of programming API Gateway. This includes using
 infrastructure as code techniques for simple, declarative APIs, including easy Lambda-based handlers.
 
 ## Defining an AWS API Gateway Endpoint and Routes
