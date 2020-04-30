@@ -47,7 +47,7 @@ const bwLimitRule1 = new openstack.networking.QosBandwidthLimitRule("bw_limit_ru
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QosBandwidthLimitRule</span><span class="p">(resource_name, opts=None, </span>direction=None<span class="p">, </span>max_burst_kbps=None<span class="p">, </span>max_kbps=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">QosBandwidthLimitRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>direction=None<span class="p">, </span>max_burst_kbps=None<span class="p">, </span>max_kbps=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -346,7 +346,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Bucket</span><span class="p">(resource_name, opts=None, </span>acceleration_status=None<span class="p">, </span>acl=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>bucket_prefix=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>grants=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>loggings=None<span class="p">, </span>object_lock_configuration=None<span class="p">, </span>policy=None<span class="p">, </span>region=None<span class="p">, </span>replication_configuration=None<span class="p">, </span>request_payer=None<span class="p">, </span>server_side_encryption_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>website_domain=None<span class="p">, </span>website_endpoint=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Bucket</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acceleration_status=None<span class="p">, </span>acl=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>bucket_prefix=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>grants=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>loggings=None<span class="p">, </span>object_lock_configuration=None<span class="p">, </span>policy=None<span class="p">, </span>region=None<span class="p">, </span>replication_configuration=None<span class="p">, </span>request_payer=None<span class="p">, </span>server_side_encryption_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>website_domain=None<span class="p">, </span>website_endpoint=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4445,7 +4445,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority associated with the rule.
+    <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4515,7 +4515,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The priority associated with the rule.
+    <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4585,7 +4585,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The priority associated with the rule.
+    <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4655,7 +4655,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The priority associated with the rule.
+    <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
 
     <dt class="property-optional"

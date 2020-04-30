@@ -13,8 +13,8 @@ meta_desc: "Explore the Distribution resource of the cloudfront module, includin
 Creates an Amazon CloudFront web distribution.
 
 For information about CloudFront distributions, see the
-[Amazon CloudFront Developer Guide][1]. For specific information about creating
-CloudFront web distributions, see the [POST Distribution][2] page in the Amazon
+[Amazon CloudFront Developer Guide](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html). For specific information about creating
+CloudFront web distributions, see the [POST Distribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) page in the Amazon
 CloudFront API Reference.
 
 > **NOTE:** CloudFront distributions take about 15 minutes to a deployed state
@@ -224,7 +224,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Distribution</span><span class="p">(resource_name, opts=None, </span>aliases=None<span class="p">, </span>comment=None<span class="p">, </span>custom_error_responses=None<span class="p">, </span>default_cache_behavior=None<span class="p">, </span>default_root_object=None<span class="p">, </span>enabled=None<span class="p">, </span>http_version=None<span class="p">, </span>is_ipv6_enabled=None<span class="p">, </span>logging_config=None<span class="p">, </span>ordered_cache_behaviors=None<span class="p">, </span>origin_groups=None<span class="p">, </span>origins=None<span class="p">, </span>price_class=None<span class="p">, </span>restrictions=None<span class="p">, </span>retain_on_delete=None<span class="p">, </span>tags=None<span class="p">, </span>viewer_certificate=None<span class="p">, </span>wait_for_deployment=None<span class="p">, </span>web_acl_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Distribution</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aliases=None<span class="p">, </span>comment=None<span class="p">, </span>custom_error_responses=None<span class="p">, </span>default_cache_behavior=None<span class="p">, </span>default_root_object=None<span class="p">, </span>enabled=None<span class="p">, </span>http_version=None<span class="p">, </span>is_ipv6_enabled=None<span class="p">, </span>logging_config=None<span class="p">, </span>ordered_cache_behaviors=None<span class="p">, </span>origin_groups=None<span class="p">, </span>origins=None<span class="p">, </span>price_class=None<span class="p">, </span>restrictions=None<span class="p">, </span>retain_on_delete=None<span class="p">, </span>tags=None<span class="p">, </span>viewer_certificate=None<span class="p">, </span>wait_for_deployment=None<span class="p">, </span>web_acl_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1276,7 +1276,7 @@ web site of your custom origin.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -1382,7 +1382,7 @@ web site of your custom origin.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -1488,7 +1488,7 @@ web site of your custom origin.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -1594,7 +1594,7 @@ web site of your custom origin.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -1885,7 +1885,7 @@ user requests for content.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -2179,7 +2179,7 @@ user requests for content.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -2473,7 +2473,7 @@ user requests for content.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -2767,7 +2767,7 @@ user requests for content.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
-route an [Alias Resource Record Set][7] to. This attribute is simply an
+route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
 
@@ -6879,7 +6879,7 @@ distribute your content (`blacklist`).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
+    <dd>{{% md %}}The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
@@ -6946,7 +6946,7 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
+    <dd>{{% md %}}The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
@@ -7013,7 +7013,7 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
+    <dd>{{% md %}}The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
@@ -7080,7 +7080,7 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
+    <dd>{{% md %}}The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.

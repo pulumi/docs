@@ -39,7 +39,7 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>flavor_id=None<span class="p">, </span>loadbalancer_provider=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tenant_id=None<span class="p">, </span>vip_address=None<span class="p">, </span>vip_subnet_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>flavor_id=None<span class="p">, </span>loadbalancer_provider=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tenant_id=None<span class="p">, </span>vip_address=None<span class="p">, </span>vip_subnet_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

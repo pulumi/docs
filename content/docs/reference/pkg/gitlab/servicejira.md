@@ -46,7 +46,7 @@ const jira = new gitlab.ServiceJira("jira", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServiceJira</span><span class="p">(resource_name, opts=None, </span>comment_on_event_enabled=None<span class="p">, </span>commit_events=None<span class="p">, </span>jira_issue_transition_id=None<span class="p">, </span>merge_requests_events=None<span class="p">, </span>password=None<span class="p">, </span>project=None<span class="p">, </span>project_key=None<span class="p">, </span>url=None<span class="p">, </span>username=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServiceJira</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment_on_event_enabled=None<span class="p">, </span>commit_events=None<span class="p">, </span>jira_issue_transition_id=None<span class="p">, </span>merge_requests_events=None<span class="p">, </span>password=None<span class="p">, </span>project=None<span class="p">, </span>project_key=None<span class="p">, </span>url=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

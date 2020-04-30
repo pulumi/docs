@@ -76,7 +76,7 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseCluster</span><span class="p">(resource_name, opts=None, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DatabaseCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

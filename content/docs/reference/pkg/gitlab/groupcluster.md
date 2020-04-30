@@ -52,7 +52,7 @@ const bar = new gitlab.GroupCluster("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupCluster</span><span class="p">(resource_name, opts=None, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>group=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">GroupCluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>enabled=None<span class="p">, </span>environment_scope=None<span class="p">, </span>group=None<span class="p">, </span>kubernetes_api_url=None<span class="p">, </span>kubernetes_authorization_type=None<span class="p">, </span>kubernetes_ca_cert=None<span class="p">, </span>kubernetes_token=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -59,7 +59,7 @@ const login = new vault.appRole.AuthBackendLogin("login", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendLogin</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>role_id=None<span class="p">, </span>secret_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendLogin</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>role_id=None<span class="p">, </span>secret_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

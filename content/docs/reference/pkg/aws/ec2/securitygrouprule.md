@@ -59,7 +59,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecurityGroupRule</span><span class="p">(resource_name, opts=None, </span>cidr_blocks=None<span class="p">, </span>description=None<span class="p">, </span>from_port=None<span class="p">, </span>ipv6_cidr_blocks=None<span class="p">, </span>prefix_list_ids=None<span class="p">, </span>protocol=None<span class="p">, </span>security_group_id=None<span class="p">, </span>self=None<span class="p">, </span>source_security_group_id=None<span class="p">, </span>to_port=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecurityGroupRule</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_blocks=None<span class="p">, </span>description=None<span class="p">, </span>from_port=None<span class="p">, </span>ipv6_cidr_blocks=None<span class="p">, </span>prefix_list_ids=None<span class="p">, </span>protocol=None<span class="p">, </span>security_group_id=None<span class="p">, </span>self=None<span class="p">, </span>source_security_group_id=None<span class="p">, </span>to_port=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -19,7 +19,7 @@ it is applied in the next maintenance window. Because of this, this provider may
 a difference in its planning phase because the actual modification has not yet taken
 place. You can use the `apply_immediately` flag to instruct the service to apply the
 change immediately. Using `apply_immediately` can result in a brief downtime as the server reboots.
-See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.
+See the AWS Docs on [Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Modify.html) for more information.
 
 {{% examples %}}
 ## Example Usage
@@ -87,7 +87,7 @@ const replica = new aws.elasticache.Cluster("replica", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>availability_zone=None<span class="p">, </span>az_mode=None<span class="p">, </span>cluster_id=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>num_cache_nodes=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>availability_zone=None<span class="p">, </span>az_mode=None<span class="p">, </span>cluster_id=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>maintenance_window=None<span class="p">, </span>node_type=None<span class="p">, </span>notification_topic_arn=None<span class="p">, </span>num_cache_nodes=None<span class="p">, </span>parameter_group_name=None<span class="p">, </span>port=None<span class="p">, </span>preferred_availability_zones=None<span class="p">, </span>replication_group_id=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>security_group_names=None<span class="p">, </span>snapshot_arns=None<span class="p">, </span>snapshot_name=None<span class="p">, </span>snapshot_retention_limit=None<span class="p">, </span>snapshot_window=None<span class="p">, </span>subnet_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -267,7 +267,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -731,7 +731,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -963,7 +963,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -1536,7 +1536,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -1804,7 +1804,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -2072,7 +2072,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 
@@ -2340,7 +2340,7 @@ for the cache cluster.
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-`false`. See [Amazon ElastiCache Documentation for more information.][1]
+`false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
 (Available since v0.6.0)
 {{% /md %}}</dd>
 

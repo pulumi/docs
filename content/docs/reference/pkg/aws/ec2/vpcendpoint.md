@@ -115,7 +115,7 @@ const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VpcEndpoint</span><span class="p">(resource_name, opts=None, </span>auto_accept=None<span class="p">, </span>policy=None<span class="p">, </span>private_dns_enabled=None<span class="p">, </span>route_table_ids=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>service_name=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_endpoint_type=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VpcEndpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_accept=None<span class="p">, </span>policy=None<span class="p">, </span>private_dns_enabled=None<span class="p">, </span>route_table_ids=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>service_name=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_endpoint_type=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

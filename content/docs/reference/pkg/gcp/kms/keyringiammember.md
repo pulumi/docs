@@ -1,7 +1,8 @@
 
 ---
 title: "KeyRingIAMMember"
-block_external_search_index: true
+title_tag: "Resource KeyRingIAMMember | Module kms | Package GCP"
+meta_desc: "Explore the KeyRingIAMMember resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for KMS key ring. Each of these resources serves a different use case:"
 ---
 
 
@@ -92,7 +93,7 @@ const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyRingIAMMember</span><span class="p">(resource_name, opts=None, </span>condition=None<span class="p">, </span>key_ring_id=None<span class="p">, </span>member=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KeyRingIAMMember</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>key_ring_id=None<span class="p">, </span>member=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1086,8 +1087,7 @@ project setting will be used as a fallback.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

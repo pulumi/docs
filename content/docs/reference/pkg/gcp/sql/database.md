@@ -1,7 +1,8 @@
 
 ---
 title: "Database"
-block_external_search_index: true
+title_tag: "Resource Database | Module sql | Package GCP"
+meta_desc: "Explore the Database resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a SQL database inside the Cloud SQL instance, hosted in"
 ---
 
 
@@ -23,7 +24,7 @@ Google's cloud.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, opts=None, </span>charset=None<span class="p">, </span>collation=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Database</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>charset=None<span class="p">, </span>collation=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -201,7 +202,8 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -210,10 +212,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -222,10 +225,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -234,7 +238,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -260,7 +265,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,10 +275,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -281,10 +288,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -293,7 +301,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +328,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -328,10 +338,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,10 +351,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -352,7 +364,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -378,7 +391,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -387,10 +401,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,10 +414,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -411,7 +427,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,10 +687,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -682,10 +700,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -694,7 +713,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -703,7 +723,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,10 +759,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,10 +772,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -762,7 +785,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -771,7 +795,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -806,10 +831,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -818,10 +844,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,7 +857,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,7 +867,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -874,10 +903,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The charset value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set
-Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres
-databases only support a value of 'UTF8' at creation time.
+    <dd>{{% md %}}The charset value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
+for more details and supported values. Postgres databases only support
+a value of `UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -886,10 +916,11 @@ databases only support a value of 'UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The collation value. See MySQL's [Supported Character Sets and
-Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Collation
-Support](https://www.postgresql.org/docs/9.6/static/collation.html) for more details and supported values. Postgres
-databases only support a value of 'en_US.UTF8' at creation time.
+    <dd>{{% md %}}The collation value. See MySQL's
+[Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
+and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
+for more details and supported values. Postgres databases only support
+a value of `en_US.UTF8` at creation time.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -898,7 +929,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project ID.
+    <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
+ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -907,7 +939,8 @@ databases only support a value of 'en_US.UTF8' at creation time.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+    <dd>{{% md %}}The name of the database in the Cloud SQL instance.
+This does not include the project ID or instance name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,8 +981,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

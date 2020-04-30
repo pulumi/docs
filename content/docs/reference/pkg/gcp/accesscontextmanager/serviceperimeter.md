@@ -1,7 +1,8 @@
 
 ---
 title: "ServicePerimeter"
-block_external_search_index: true
+title_tag: "Resource ServicePerimeter | Module accesscontextmanager | Package GCP"
+meta_desc: "Explore the ServicePerimeter resource of the accesscontextmanager module, including examples, input properties, output properties, lookup functions, and supporting types. ServicePerimeter describes a set of GCP resources which can freely import"
 ---
 
 
@@ -101,7 +102,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServicePerimeter</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>perimeter_type=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, </span>title=None<span class="p">, </span>use_explicit_dry_run_spec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ServicePerimeter</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>perimeter_type=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, </span>title=None<span class="p">, </span>use_explicit_dry_run_spec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -279,7 +280,8 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -297,7 +299,8 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,8 +309,9 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,14 +320,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -332,9 +342,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,8 +354,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,12 +365,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -374,7 +389,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -392,7 +408,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -401,8 +418,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -411,14 +429,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,9 +451,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -438,8 +463,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -448,12 +474,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -469,7 +498,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -487,7 +517,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -496,8 +527,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,14 +538,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,9 +560,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -533,8 +572,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,12 +583,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -564,7 +607,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -582,7 +626,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -591,8 +636,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,14 +647,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -617,9 +669,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Dict[Service<wbr>Perimeter<wbr>Spec]</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -628,8 +681,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Dict[Service<wbr>Perimeter<wbr>Status]</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,12 +692,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -937,7 +994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,8 +1004,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -956,7 +1015,8 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -965,14 +1025,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -981,9 +1047,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -992,8 +1059,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1020,12 +1088,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -1050,7 +1121,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,8 +1131,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1069,7 +1142,8 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1078,14 +1152,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,9 +1174,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1105,8 +1186,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1133,12 +1215,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -1163,7 +1248,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1172,8 +1258,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1182,7 +1269,8 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1191,14 +1279,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1207,9 +1301,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1218,8 +1313,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,12 +1342,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -1276,7 +1375,8 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect behavior.
+    <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
+behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,8 +1385,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include alphanumeric
-and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+    <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
+begin with a letter and only include alphanumeric and '_'.
+Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1295,7 +1396,8 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+    <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
+Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,14 +1406,20 @@ and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
-resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter. In
-addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A perimeter
-bridge only contains resources. Cross project operations are permitted if all effected resources share some perimeter
-(whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are governed entirely by
-the regular perimeter that resource is in. Perimeter Bridges are typically useful when building more complex topologies
-with many independent perimeters that need to share some data with a common perimeter, but should not be able to share
-data among themselves.
+    <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
+bridge. Regular Service Perimeter contains resources, access levels,
+and restricted services. Every resource can be in at most
+ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also
+be in zero or more perimeter bridges. A perimeter bridge only contains
+resources. Cross project operations are permitted if all effected
+resources share some perimeter (whether bridge or regular). Perimeter
+Bridge does not contain access levels or services: those are governed
+entirely by the regular perimeter that resource is in.
+Perimeter Bridges are typically useful when building more complex
+topologies with many independent perimeters that need to share some data
+with a common perimeter, but should not be able to share data among
+themselves.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1320,9 +1428,10 @@ data among themselves.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Dict[Service<wbr>Perimeter<wbr>Spec]</a></span>
     </dt>
-    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter
-configuration without enforcing actual access restrictions. Only allowed to be set when the 'useExplicitDryRunSpec' flag
-is set.
+    <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
+This configuration allows to specify and test ServicePerimeter configuration
+without enforcing actual access restrictions. Only allowed to be set when
+the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1331,8 +1440,9 @@ is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Dict[Service<wbr>Perimeter<wbr>Status]</a></span>
     </dt>
-    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
-perimeter content and boundaries.
+    <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
+restricted services and access levels that determine
+perimeter content and boundaries.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1359,12 +1469,15 @@ perimeter content and boundaries.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec
-is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the
-implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of
-the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing
-them. This testing is done through analyzing the differences between currently enforced and suggested restrictions.
-useExplicitDryRunSpec must bet set to True if any of the fields in the spec are set to non-default values.
+    <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
+for all Service Perimeters, and that spec is identical to the status for those
+Service Perimeters. When this flag is set, it inhibits the generation of the
+implicit spec, thereby allowing the user to explicitly provide a
+configuration ("spec") to use in a dry-run version of the Service Perimeter.
+This allows the user to test changes to the enforced config ("status") without
+actually enforcing them. This testing is done through analyzing the differences
+between currently enforced and suggested restrictions. useExplicitDryRunSpec must
+bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
 
 </dl>
@@ -1403,7 +1516,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1411,7 +1533,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1419,7 +1544,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1427,7 +1557,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1442,7 +1574,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1450,7 +1591,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1458,7 +1602,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1466,7 +1615,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1481,7 +1632,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1489,7 +1649,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1497,7 +1660,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1505,7 +1673,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1520,7 +1690,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1528,7 +1707,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1536,7 +1718,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1544,7 +1731,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Dict[Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1574,7 +1763,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1582,7 +1773,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1597,7 +1790,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1605,7 +1800,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1620,7 +1817,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1628,7 +1827,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1643,7 +1844,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1651,7 +1854,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1681,7 +1886,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1689,7 +1903,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1697,7 +1914,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1705,7 +1927,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1720,7 +1944,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1728,7 +1961,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1736,7 +1972,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1744,7 +1985,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1759,7 +2002,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1767,7 +2019,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1775,7 +2030,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1783,7 +2043,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1798,7 +2060,16 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
+the ServicePerimeter to be accessed from the internet.
+AccessLevels listed must be in the same policy as this
+ServicePerimeter. Referencing a nonexistent AccessLevel is a
+syntax error. If no AccessLevel names are listed, resources within
+the perimeter can only be accessed via GCP calls with request
+origins within the perimeter. For Service Perimeter Bridge, must
+be empty.
+Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1806,7 +2077,10 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
+Currently only projects are allowed.
+Format: projects/{project_number}
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1814,7 +2088,12 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}GCP services that are subject to the Service Perimeter
+restrictions. Must contain a list of services. For example, if
+`storage.googleapis.com` is specified, access to the storage
+buckets inside the perimeter must meet the perimeter's access
+restrictions.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1822,7 +2101,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Dict[Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
+Perimeter.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1852,7 +2133,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1860,7 +2143,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1875,7 +2160,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1883,7 +2170,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1898,7 +2187,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1906,7 +2197,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1921,7 +2214,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
+Must be empty unless `enableRestriction` is True.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1929,7 +2224,9 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
+list of APIs specified in 'allowedServices'.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1948,8 +2245,7 @@ useExplicitDryRunSpec must bet set to True if any of the fields in the spec are 
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

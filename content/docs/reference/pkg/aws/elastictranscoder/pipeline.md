@@ -48,7 +48,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pipeline</span><span class="p">(resource_name, opts=None, </span>aws_kms_key_arn=None<span class="p">, </span>content_config=None<span class="p">, </span>content_config_permissions=None<span class="p">, </span>input_bucket=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>output_bucket=None<span class="p">, </span>role=None<span class="p">, </span>thumbnail_config=None<span class="p">, </span>thumbnail_config_permissions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Pipeline</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aws_kms_key_arn=None<span class="p">, </span>content_config=None<span class="p">, </span>content_config_permissions=None<span class="p">, </span>input_bucket=None<span class="p">, </span>name=None<span class="p">, </span>notifications=None<span class="p">, </span>output_bucket=None<span class="p">, </span>role=None<span class="p">, </span>thumbnail_config=None<span class="p">, </span>thumbnail_config_permissions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

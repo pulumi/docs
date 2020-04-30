@@ -43,7 +43,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointGroup</span><span class="p">(resource_name, opts=None, </span>endpoint_configurations=None<span class="p">, </span>endpoint_group_region=None<span class="p">, </span>health_check_interval_seconds=None<span class="p">, </span>health_check_path=None<span class="p">, </span>health_check_port=None<span class="p">, </span>health_check_protocol=None<span class="p">, </span>listener_arn=None<span class="p">, </span>threshold_count=None<span class="p">, </span>traffic_dial_percentage=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>endpoint_configurations=None<span class="p">, </span>endpoint_group_region=None<span class="p">, </span>health_check_interval_seconds=None<span class="p">, </span>health_check_path=None<span class="p">, </span>health_check_port=None<span class="p">, </span>health_check_protocol=None<span class="p">, </span>listener_arn=None<span class="p">, </span>threshold_count=None<span class="p">, </span>traffic_dial_percentage=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

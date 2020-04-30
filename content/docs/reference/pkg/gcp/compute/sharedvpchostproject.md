@@ -1,7 +1,8 @@
 
 ---
 title: "SharedVPCHostProject"
-block_external_search_index: true
+title_tag: "Resource SharedVPCHostProject | Module compute | Package GCP"
+meta_desc: "Explore the SharedVPCHostProject resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Enables the Google Compute Engine"
 ---
 
 
@@ -31,7 +32,7 @@ where the Shared VPC feature is referred to by its former name "XPN".
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SharedVPCHostProject</span><span class="p">(resource_name, opts=None, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SharedVPCHostProject</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -540,8 +541,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

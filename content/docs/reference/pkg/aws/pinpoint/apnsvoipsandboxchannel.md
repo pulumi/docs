@@ -47,7 +47,7 @@ const apnsVoipSandbox = new aws.pinpoint.ApnsVoipSandboxChannel("apns_voip_sandb
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApnsVoipSandboxChannel</span><span class="p">(resource_name, opts=None, </span>application_id=None<span class="p">, </span>bundle_id=None<span class="p">, </span>certificate=None<span class="p">, </span>default_authentication_method=None<span class="p">, </span>enabled=None<span class="p">, </span>private_key=None<span class="p">, </span>team_id=None<span class="p">, </span>token_key=None<span class="p">, </span>token_key_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ApnsVoipSandboxChannel</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>application_id=None<span class="p">, </span>bundle_id=None<span class="p">, </span>certificate=None<span class="p">, </span>default_authentication_method=None<span class="p">, </span>enabled=None<span class="p">, </span>private_key=None<span class="p">, </span>team_id=None<span class="p">, </span>token_key=None<span class="p">, </span>token_key_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

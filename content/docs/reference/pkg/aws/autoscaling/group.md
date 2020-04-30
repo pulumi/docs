@@ -237,7 +237,7 @@ for more information.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, opts=None, </span>availability_zones=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>enabled_metrics=None<span class="p">, </span>force_delete=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>initial_lifecycle_hooks=None<span class="p">, </span>launch_configuration=None<span class="p">, </span>launch_template=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_instance_lifetime=None<span class="p">, </span>max_size=None<span class="p">, </span>metrics_granularity=None<span class="p">, </span>min_elb_capacity=None<span class="p">, </span>min_size=None<span class="p">, </span>mixed_instances_policy=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_group=None<span class="p">, </span>protect_from_scale_in=None<span class="p">, </span>service_linked_role_arn=None<span class="p">, </span>suspended_processes=None<span class="p">, </span>tags=None<span class="p">, </span>tags_collection=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>termination_policies=None<span class="p">, </span>vpc_zone_identifiers=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>wait_for_elb_capacity=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zones=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>enabled_metrics=None<span class="p">, </span>force_delete=None<span class="p">, </span>health_check_grace_period=None<span class="p">, </span>health_check_type=None<span class="p">, </span>initial_lifecycle_hooks=None<span class="p">, </span>launch_configuration=None<span class="p">, </span>launch_template=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_instance_lifetime=None<span class="p">, </span>max_size=None<span class="p">, </span>metrics_granularity=None<span class="p">, </span>min_elb_capacity=None<span class="p">, </span>min_size=None<span class="p">, </span>mixed_instances_policy=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_group=None<span class="p">, </span>protect_from_scale_in=None<span class="p">, </span>service_linked_role_arn=None<span class="p">, </span>suspended_processes=None<span class="p">, </span>tags=None<span class="p">, </span>tags_collection=None<span class="p">, </span>target_group_arns=None<span class="p">, </span>termination_policies=None<span class="p">, </span>vpc_zone_identifiers=None<span class="p">, </span>wait_for_capacity_timeout=None<span class="p">, </span>wait_for_elb_capacity=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,11 +464,6 @@ Capacity below.)
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +688,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -770,11 +770,6 @@ Capacity below.)
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,7 +994,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1076,11 +1076,6 @@ Capacity below.)
         <span class="property-type">Metric[]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1305,7 +1300,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1382,11 +1382,6 @@ Capacity below.)
         <span class="property-type">List[Metric]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1611,7 +1606,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1911,11 +1911,6 @@ Capacity below.)
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2159,7 +2154,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2226,11 +2226,6 @@ Capacity below.)
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2474,7 +2469,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2541,11 +2541,6 @@ Capacity below.)
         <span class="property-type">Metric[]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2789,7 +2784,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2856,11 +2856,6 @@ Capacity below.)
         <span class="property-type">List[Metric]</span>
     </dt>
     <dd>{{% md %}}A list of metrics to collect. The allowed values are `GroupDesiredCapacity`, `GroupInServiceCapacity`, `GroupPendingCapacity`, `GroupMinSize`, `GroupMaxSize`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupStandbyCapacity`, `GroupTerminatingCapacity`, `GroupTerminatingInstances`, `GroupTotalCapacity`, `GroupTotalInstances`.
-* `wait_for_capacity_timeout` (Default: "10m") A maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to "0" causes
-this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3104,7 +3099,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A maximum
+[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
+this provider to skip all Capacity Waiting behavior.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

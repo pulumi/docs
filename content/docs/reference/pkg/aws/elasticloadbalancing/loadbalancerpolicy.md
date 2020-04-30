@@ -99,6 +99,9 @@ This example shows how to enable backend authentication for an ELB as well as cu
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: aws.LoadBalancerPolicy has been deprecated in favour of aws.LoadBalancerPolicy
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.LoadBalancerPolicy has been deprecated in favour of aws.LoadBalancerPolicy{{% /md %}}</p>
 
 
 ## Create a LoadBalancerPolicy Resource {#create}
@@ -110,7 +113,7 @@ This example shows how to enable backend authentication for an ELB as well as cu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerPolicy</span><span class="p">(resource_name, opts=None, </span>load_balancer_name=None<span class="p">, </span>policy_attributes=None<span class="p">, </span>policy_name=None<span class="p">, </span>policy_type_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancerPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_attributes=None<span class="p">, </span>policy_name=None<span class="p">, </span>policy_type_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

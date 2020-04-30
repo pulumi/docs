@@ -1,7 +1,8 @@
 
 ---
 title: "User"
-block_external_search_index: true
+title_tag: "Resource User | Module sql | Package GCP"
+meta_desc: "Explore the User resource of the sql module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users)."
 ---
 
 
@@ -25,7 +26,7 @@ Creates a new Google SQL User on a Google SQL User Instance. For more informatio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, opts=None, </span>host=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">User</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>host=None<span class="p">, </span>instance=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -870,8 +871,7 @@ is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

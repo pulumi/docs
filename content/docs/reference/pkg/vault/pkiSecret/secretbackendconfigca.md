@@ -22,7 +22,7 @@ meta_desc: "Explore the SecretBackendConfigCa resource of the pkiSecret module, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendConfigCa</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>pem_bundle=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendConfigCa</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>pem_bundle=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

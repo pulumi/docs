@@ -11,7 +11,7 @@ meta_desc: "Explore the ClusterEndpoint resource of the rds module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a RDS Aurora Cluster Endpoint.
-You can refer to the [User Guide][1].
+You can refer to the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster).
 
 
 {{% examples %}}
@@ -87,7 +87,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterEndpoint</span><span class="p">(resource_name, opts=None, </span>cluster_endpoint_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>custom_endpoint_type=None<span class="p">, </span>excluded_members=None<span class="p">, </span>static_members=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ClusterEndpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_endpoint_identifier=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>custom_endpoint_type=None<span class="p">, </span>excluded_members=None<span class="p">, </span>static_members=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

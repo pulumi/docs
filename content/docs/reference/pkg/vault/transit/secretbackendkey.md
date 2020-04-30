@@ -46,7 +46,7 @@ const key = new vault.transit.SecretBackendKey("key", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendKey</span><span class="p">(resource_name, opts=None, </span>allow_plaintext_backup=None<span class="p">, </span>backend=None<span class="p">, </span>convergent_encryption=None<span class="p">, </span>deletion_allowed=None<span class="p">, </span>derived=None<span class="p">, </span>exportable=None<span class="p">, </span>min_decryption_version=None<span class="p">, </span>min_encryption_version=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SecretBackendKey</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_plaintext_backup=None<span class="p">, </span>backend=None<span class="p">, </span>convergent_encryption=None<span class="p">, </span>deletion_allowed=None<span class="p">, </span>derived=None<span class="p">, </span>exportable=None<span class="p">, </span>min_decryption_version=None<span class="p">, </span>min_encryption_version=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

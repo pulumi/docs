@@ -1,7 +1,8 @@
 
 ---
 title: "DataTransferConfig"
-block_external_search_index: true
+title_tag: "Resource DataTransferConfig | Module bigquery | Package GCP"
+meta_desc: "Explore the DataTransferConfig resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a data transfer configuration. A transfer configuration"
 ---
 
 
@@ -30,7 +31,7 @@ To get more information about Config, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataTransferConfig</span><span class="p">(resource_name, opts=None, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DataTransferConfig</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_refresh_window_days=None<span class="p">, </span>data_source_id=None<span class="p">, </span>destination_dataset_id=None<span class="p">, </span>disabled=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>params=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -244,9 +245,11 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,8 +267,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,10 +287,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -340,9 +346,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,8 +368,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -380,10 +388,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -436,9 +447,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,8 +469,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,10 +489,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -532,9 +548,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,8 +570,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -572,10 +590,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -833,9 +854,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -880,8 +903,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -920,10 +943,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -940,9 +966,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -987,8 +1015,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,10 +1055,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -1047,9 +1078,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1094,8 +1127,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1134,10 +1167,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -1154,9 +1190,11 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then
-every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if
-the data source supports the feature. Set the value to 0 to use the default value.
+    <dd>{{% md %}}The number of days to look back to automatically refresh the data.
+For example, if dataRefreshWindowDays = 10, then every day BigQuery
+reingests data for [today-10, today-1], rather than ingesting data for
+just [today-1]. Only valid if the data source supports the feature.
+Set the value to 0 to use the default value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1201,8 +1239,8 @@ the data source supports the feature. Set the value to 0 to use the default valu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is
-US.
+    <dd>{{% md %}}The geographic location where the transfer config should reside.
+Examples: US, EU, asia-northeast1. The default value is US.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1241,10 +1279,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the
-default value for the data source will be used. The specified times are in UTC. Examples of valid format: 1st,3rd monday
-of month 15:30, every wed,fri of jan, jun 13:15, and first sunday of quarter 00:00. See more explanation about the
-format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
+schedule, this should be empty. If it is empty, the default value for
+the data source will be used. The specified times are in UTC. Examples
+of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
+jun 13:15, and first sunday of quarter 00:00. See more explanation
+about the format here:
+https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
 {{% /md %}}</dd>
 
@@ -1267,8 +1308,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

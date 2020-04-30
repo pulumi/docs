@@ -56,7 +56,7 @@ const main = new aws.ec2.Vpc("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vpc</span><span class="p">(resource_name, opts=None, </span>assign_generated_ipv6_cidr_block=None<span class="p">, </span>cidr_block=None<span class="p">, </span>enable_classiclink=None<span class="p">, </span>enable_classiclink_dns_support=None<span class="p">, </span>enable_dns_hostnames=None<span class="p">, </span>enable_dns_support=None<span class="p">, </span>instance_tenancy=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vpc</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assign_generated_ipv6_cidr_block=None<span class="p">, </span>cidr_block=None<span class="p">, </span>enable_classiclink=None<span class="p">, </span>enable_classiclink_dns_support=None<span class="p">, </span>enable_dns_hostnames=None<span class="p">, </span>enable_dns_support=None<span class="p">, </span>instance_tenancy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,7 +256,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,7 +340,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,7 +424,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -508,7 +508,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1161,7 +1161,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1327,7 +1327,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1493,7 +1493,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1659,7 +1659,7 @@ the size of the CIDR block. Default is `false`.
     </dt>
     <dd>{{% md %}}A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
-See the [ClassicLink documentation][1] for more information. Defaults false.
+See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

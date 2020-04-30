@@ -1,7 +1,8 @@
 
 ---
 title: "Policy"
-block_external_search_index: true
+title_tag: "Resource Policy | Module dns | Package GCP"
+meta_desc: "Explore the Policy resource of the dns module, including examples, input properties, output properties, lookup functions, and supporting types. A policy is a collection of DNS rules applied to one or more Virtual"
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about Policy, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, opts=None, </span>alternative_name_server_config=None<span class="p">, </span>description=None<span class="p">, </span>enable_inbound_forwarding=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternative_name_server_config=None<span class="p">, </span>description=None<span class="p">, </span>enable_inbound_forwarding=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>networks=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -207,8 +208,9 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -217,7 +219,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -226,8 +228,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -236,7 +240,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,7 +259,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">List&lt;Policy<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -280,8 +285,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -290,7 +296,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -299,8 +305,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,7 +317,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -327,7 +336,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,8 +362,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -363,7 +373,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,8 +382,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -382,7 +394,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,7 +413,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">Policy<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,8 +439,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Dict[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -436,7 +450,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -445,8 +459,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -455,7 +471,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -473,7 +490,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -696,8 +713,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,7 +724,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,8 +733,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -725,7 +745,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -743,7 +764,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">List&lt;Policy<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -769,8 +790,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -779,7 +801,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -788,8 +810,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -798,7 +822,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -816,7 +841,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">[]Policy<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -842,8 +867,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -852,7 +878,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,8 +887,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -871,7 +899,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -889,7 +918,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">Policy<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -915,8 +944,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfig">Dict[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
-server that you choose. Names such as .internal are not available when an alternative name server is specified.
+    <dd>{{% md %}}Sets an alternative name server for the associated networks.
+When specified, all DNS queries are forwarded to a name server that you choose.
+Names such as .internal are not available when an alternative name server is specified.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,7 +955,7 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,8 +964,10 @@ server that you choose. Names such as .internal are not available when an altern
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
-enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+    <dd>{{% md %}}Allows networks bound to this policy to receive DNS queries sent
+by VMs or applications over VPN connections. When enabled, a
+virtual IP address will be allocated from each of the sub-networks
+that are bound to this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -944,7 +976,8 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+    <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
+Defaults to no logging if not set.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -962,7 +995,7 @@ enabled, a virtual IP address will be allocated from each of the sub-networks th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policynetwork">List[Policy<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
+    <dd>{{% md %}}List of network names specifying networks to which this policy is applied.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1011,7 +1044,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List&lt;Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1026,7 +1062,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">[]Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1041,7 +1080,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1056,7 +1098,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyalternativenameserverconfigtargetnameserver">List[Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets an alternative name server for the associated networks. When specified,
+all DNS queries are forwarded to a name server that you choose. Names such as .internal
+are not available when an alternative name server is specified.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1086,7 +1131,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IPv4 address to forward to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1101,7 +1147,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IPv4 address to forward to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1116,7 +1163,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IPv4 address to forward to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1131,7 +1179,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IPv4 address to forward to.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1161,7 +1210,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+`https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1176,7 +1228,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+`https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1191,7 +1246,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+`https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1206,7 +1264,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The fully qualified URL of the VPC network to bind to.
+This should be formatted like
+`https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1225,8 +1286,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

@@ -57,7 +57,7 @@ const test_snat = new f5bigip.ltm.Snat("test-snat", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snat</span><span class="p">(resource_name, opts=None, </span>autolasthop=None<span class="p">, </span>full_path=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>origins=None<span class="p">, </span>partition=None<span class="p">, </span>snatpool=None<span class="p">, </span>sourceport=None<span class="p">, </span>translation=None<span class="p">, </span>vlans=None<span class="p">, </span>vlansdisabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Snat</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autolasthop=None<span class="p">, </span>full_path=None<span class="p">, </span>mirror=None<span class="p">, </span>name=None<span class="p">, </span>origins=None<span class="p">, </span>partition=None<span class="p">, </span>snatpool=None<span class="p">, </span>sourceport=None<span class="p">, </span>translation=None<span class="p">, </span>vlans=None<span class="p">, </span>vlansdisabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -253,7 +253,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,7 +359,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +465,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -571,7 +571,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,7 +856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -962,7 +962,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1068,7 +1068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1174,7 +1174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul
+    <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

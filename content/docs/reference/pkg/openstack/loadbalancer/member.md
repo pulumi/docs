@@ -40,7 +40,7 @@ const member1 = new openstack.loadbalancer.Member("member_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Member</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>name=None<span class="p">, </span>pool_id=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Member</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>name=None<span class="p">, </span>pool_id=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

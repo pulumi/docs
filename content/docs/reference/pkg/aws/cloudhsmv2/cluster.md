@@ -13,7 +13,7 @@ meta_desc: "Explore the Cluster resource of the cloudhsmv2 module, including exa
 Creates an Amazon CloudHSM v2 cluster.
 
 For information about CloudHSM v2, see the
-[AWS CloudHSM User Guide][1] and the [Amazon
+[AWS CloudHSM User Guide](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html) and the [Amazon
 CloudHSM API Reference][2].
 
 > **NOTE:** CloudHSM can take up to several minutes to be set up.
@@ -73,7 +73,7 @@ const cloudhsmV2Cluster = new aws.cloudhsmv2.Cluster("cloudhsm_v2_cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>hsm_type=None<span class="p">, </span>source_backup_identifier=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hsm_type=None<span class="p">, </span>source_backup_identifier=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

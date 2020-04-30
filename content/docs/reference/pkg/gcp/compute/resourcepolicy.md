@@ -1,7 +1,8 @@
 
 ---
 title: "ResourcePolicy"
-block_external_search_index: true
+title_tag: "Resource ResourcePolicy | Module compute | Package GCP"
+meta_desc: "Explore the ResourcePolicy resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A policy that can be attached to a resource to specify or schedule actions on that resource."
 ---
 
 
@@ -74,7 +75,7 @@ const bar = new gcp.compute.ResourcePolicy("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourcePolicy</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ResourcePolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,10 +253,13 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -283,7 +287,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -299,10 +303,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -330,7 +337,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -346,10 +353,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -377,7 +387,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -393,10 +403,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,7 +437,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -673,10 +686,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -713,7 +729,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -729,10 +745,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -769,7 +788,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -785,10 +804,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -825,7 +847,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -841,10 +863,13 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63
-characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '[a-z]([-a-z0-9]*[a-z0-9])'? which means the first character must be a lowercase letter, and all following
-characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The name of the resource, provided by the client when initially creating
+the resource. The resource name must be 1-63 characters long, and comply
+with RFC1035. Specifically, the name must be 1-63 characters long and
+match the regular expression `a-z`? which means the
+first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character,
+which cannot be a dash.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -881,7 +906,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -920,7 +945,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -928,7 +954,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -936,7 +963,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -951,7 +979,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -959,7 +988,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -967,7 +997,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -982,7 +1013,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -990,7 +1022,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -998,7 +1031,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1013,7 +1047,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1021,7 +1056,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1029,7 +1065,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1059,7 +1096,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1067,7 +1105,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
+the source disk is deleted.
+Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1082,7 +1123,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1090,7 +1132,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
+the source disk is deleted.
+Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1105,7 +1150,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,7 +1159,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
+the source disk is deleted.
+Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1128,7 +1177,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1136,7 +1186,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
+the source disk is deleted.
+Valid options are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1166,7 +1219,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1174,7 +1228,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1182,7 +1237,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1197,7 +1253,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1205,7 +1262,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1213,7 +1271,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1228,7 +1287,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1236,7 +1296,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1244,7 +1305,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1259,7 +1321,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1267,7 +1330,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1275,7 +1339,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1305,7 +1370,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of days between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1313,7 +1379,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1328,7 +1396,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of days between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1336,7 +1405,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1351,7 +1422,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of days between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1359,7 +1431,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1374,7 +1448,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of days between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1382,7 +1457,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1412,7 +1489,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of hours between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1420,7 +1498,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1435,7 +1515,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of hours between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1443,7 +1524,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1458,7 +1541,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of hours between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1466,7 +1550,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1481,7 +1567,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of hours between snapshots.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1489,7 +1576,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1519,7 +1608,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1534,7 +1624,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">[]Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1549,7 +1640,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1564,7 +1656,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1594,7 +1687,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1602,7 +1696,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1617,7 +1713,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1625,7 +1722,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1640,7 +1739,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1648,7 +1748,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1663,7 +1765,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1671,7 +1774,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time within the window to start the operations.
+It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1701,7 +1806,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1709,7 +1815,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key-value pairs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1717,7 +1824,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
+(regional or multi-regional)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1732,7 +1841,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1740,7 +1850,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key-value pairs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1748,7 +1859,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
+(regional or multi-regional)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1763,7 +1876,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1771,7 +1885,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key-value pairs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1779,7 +1894,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
+(regional or multi-regional)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1794,7 +1911,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1802,7 +1920,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A set of key-value pairs.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1810,7 +1929,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
+(regional or multi-regional)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1829,8 +1950,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

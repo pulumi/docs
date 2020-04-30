@@ -1,7 +1,8 @@
 
 ---
 title: "ObjectAccessControl"
-block_external_search_index: true
+title_tag: "Resource ObjectAccessControl | Module storage | Package GCP"
+meta_desc: "Explore the ObjectAccessControl resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The ObjectAccessControls resources represent the Access Control Lists"
 ---
 
 
@@ -40,7 +41,7 @@ To get more information about ObjectAccessControl, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ObjectAccessControl</span><span class="p">(resource_name, opts=None, </span>bucket=None<span class="p">, </span>entity=None<span class="p">, </span>object=None<span class="p">, </span>role=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ObjectAccessControl</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>entity=None<span class="p">, </span>object=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,9 +228,15 @@ The ObjectAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -272,9 +279,15 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -317,9 +330,15 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -362,9 +381,15 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -802,9 +827,15 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -892,9 +923,15 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -982,9 +1019,15 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1072,9 +1115,15 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
+    <dd>{{% md %}}The entity holding the permission, in one of the following forms:
+* user-{{userId}}
+* user-{{email}} (such as "user-liz@example.com")
+* group-{{groupId}}
+* group-{{email}} (such as "group-example@googlegroups.com")
+* domain-{{domain}} (such as "domain-example.com")
+* project-team-{{projectId}}
+* allUsers
+* allAuthenticatedUsers
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1254,8 +1303,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

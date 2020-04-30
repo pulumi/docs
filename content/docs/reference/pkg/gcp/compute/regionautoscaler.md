@@ -1,7 +1,8 @@
 
 ---
 title: "RegionAutoscaler"
-block_external_search_index: true
+title_tag: "Resource RegionAutoscaler | Module compute | Package GCP"
+meta_desc: "Explore the RegionAutoscaler resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an Autoscaler resource."
 ---
 
 
@@ -33,7 +34,7 @@ To get more information about RegionAutoscaler, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RegionAutoscaler</span><span class="p">(resource_name, opts=None, </span>autoscaling_policy=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RegionAutoscaler</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling_policy=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -211,9 +212,11 @@ The RegionAutoscaler resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -222,7 +225,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -240,9 +245,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,9 +282,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -288,7 +295,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,9 +315,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,9 +352,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -354,7 +365,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,9 +385,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -409,9 +422,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -420,7 +435,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -438,9 +455,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -744,9 +761,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,9 +792,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -812,7 +831,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
 </dl>
@@ -828,9 +849,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -857,9 +880,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -896,7 +919,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
 </dl>
@@ -912,9 +937,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -941,9 +968,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -980,7 +1007,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
 </dl>
@@ -996,9 +1025,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an
-autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the
-default will be to autoscale based on cpuUtilization to 0.6 or 60%.
+    <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
+define one or more of the policies for an autoscaler: cpuUtilization,
+customMetricUtilizations, and loadBalancingUtilization.
+If none of these are specified, the default will be to autoscale based
+on cpuUtilization to 0.6 or 60%.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1025,9 +1056,9 @@ default will be to autoscale based on cpuUtilization to 0.6 or 60%.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1064,7 +1095,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale.
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
 {{% /md %}}</dd>
 
 </dl>
@@ -1103,7 +1136,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances that the autoscaler can scale up
+to. This is required when creating or updating an autoscaler. The
+maximum number of replicas should not be lower than minimal number
+of replicas.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1111,7 +1148,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale down
+to. This cannot be less than 0. If not provided, autoscaler will
+choose a default value depending on maximum number of instances
+allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1119,7 +1160,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds that the autoscaler should wait before it
+starts collecting information from a new instance. This prevents
+the autoscaler from collecting information when the instance is
+initializing, during which the collected usage would not be
+reliable. The default time autoscaler waits is 60 seconds.
+Virtual machine initialization times might vary because of
+numerous factors. We recommend that you test how long an
+instance may take to initialize. To do this, create an instance
+and time the startup process.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1127,7 +1177,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
+scale based on the average CPU utilization of a managed instance
+group.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1135,7 +1188,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1143,7 +1197,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1158,7 +1213,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances that the autoscaler can scale up
+to. This is required when creating or updating an autoscaler. The
+maximum number of replicas should not be lower than minimal number
+of replicas.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1166,7 +1225,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale down
+to. This cannot be less than 0. If not provided, autoscaler will
+choose a default value depending on maximum number of instances
+allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1174,7 +1237,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds that the autoscaler should wait before it
+starts collecting information from a new instance. This prevents
+the autoscaler from collecting information when the instance is
+initializing, during which the collected usage would not be
+reliable. The default time autoscaler waits is 60 seconds.
+Virtual machine initialization times might vary because of
+numerous factors. We recommend that you test how long an
+instance may take to initialize. To do this, create an instance
+and time the startup process.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1182,7 +1254,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
+scale based on the average CPU utilization of a managed instance
+group.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1190,7 +1265,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1198,7 +1274,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">[]Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1213,7 +1290,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances that the autoscaler can scale up
+to. This is required when creating or updating an autoscaler. The
+maximum number of replicas should not be lower than minimal number
+of replicas.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1221,7 +1302,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale down
+to. This cannot be less than 0. If not provided, autoscaler will
+choose a default value depending on maximum number of instances
+allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1229,7 +1314,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds that the autoscaler should wait before it
+starts collecting information from a new instance. This prevents
+the autoscaler from collecting information when the instance is
+initializing, during which the collected usage would not be
+reliable. The default time autoscaler waits is 60 seconds.
+Virtual machine initialization times might vary because of
+numerous factors. We recommend that you test how long an
+instance may take to initialize. To do this, create an instance
+and time the startup process.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1237,7 +1331,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
+scale based on the average CPU utilization of a managed instance
+group.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1245,7 +1342,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1253,7 +1351,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1268,7 +1367,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances that the autoscaler can scale up
+to. This is required when creating or updating an autoscaler. The
+maximum number of replicas should not be lower than minimal number
+of replicas.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1276,7 +1379,11 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale down
+to. This cannot be less than 0. If not provided, autoscaler will
+choose a default value depending on maximum number of instances
+allowed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1284,7 +1391,16 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of seconds that the autoscaler should wait before it
+starts collecting information from a new instance. This prevents
+the autoscaler from collecting information when the instance is
+initializing, during which the collected usage would not be
+reliable. The default time autoscaler waits is 60 seconds.
+Virtual machine initialization times might vary because of
+numerous factors. We recommend that you test how long an
+instance may take to initialize. To do this, create an instance
+and time the startup process.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1292,7 +1408,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
+scale based on the average CPU utilization of a managed instance
+group.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1300,7 +1419,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Dict[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1308,7 +1428,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1338,7 +1459,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1353,7 +1477,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1368,7 +1495,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1383,7 +1513,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1413,7 +1546,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1428,7 +1564,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1443,7 +1582,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1458,7 +1600,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1488,7 +1633,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1496,7 +1644,34 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1504,7 +1679,21 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+`pubsub.googleapis.com/subscription/num_undelivered_messages`
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can't include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1512,7 +1701,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1520,7 +1712,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how target utilization value is expressed for a
+Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
+or DELTA_PER_MINUTE.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1535,7 +1730,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1543,7 +1741,34 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1551,7 +1776,21 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+`pubsub.googleapis.com/subscription/num_undelivered_messages`
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can't include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1559,7 +1798,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1567,7 +1809,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how target utilization value is expressed for a
+Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
+or DELTA_PER_MINUTE.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1582,7 +1827,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1590,7 +1838,34 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1598,7 +1873,21 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+`pubsub.googleapis.com/subscription/num_undelivered_messages`
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can't include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1606,7 +1895,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1614,7 +1906,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how target utilization value is expressed for a
+Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
+or DELTA_PER_MINUTE.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1629,7 +1924,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
+The metric cannot have negative values.
+The metric must have a value type of INT64 or DOUBLE.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1637,7 +1935,34 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A filter string to be used as the filter string for
+a Stackdriver Monitoring TimeSeries.list API call.
+This filter is used to select a specific TimeSeries for
+the purpose of autoscaling and to determine whether the metric
+is exporting per-instance or per-group data.
+You can only use the AND operator for joining selectors.
+You can only use direct equality comparison operator (=) without
+any functions for each selector.
+You can specify the metric in both the filter string and in the
+metric field. However, if specified in both places, the metric must
+be identical.
+The monitored resource type determines what kind of values are
+expected for the metric. If it is a gce_instance, the autoscaler
+expects the metric to include a separate TimeSeries for each
+instance in a group. In such a case, you cannot filter on resource
+labels.
+If the resource type is any other value, the autoscaler expects
+this metric to contain values that apply to the entire autoscaled
+instance group and resource label filtering can be performed to
+point autoscaler at the correct TimeSeries to scale upon.
+This is called a per-group metric for the purpose of autoscaling.
+If not specified, the type defaults to gce_instance.
+You should provide a filter that is selective enough to pick just
+one TimeSeries for the autoscaled group or for each of the instances
+(if you are using gce_instance resource type). If multiple
+TimeSeries are returned upon the query execution, the autoscaler
+will sum their respective values to obtain its scaling value.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1645,7 +1970,21 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If scaling is based on a per-group metric value that represents the
+total amount of work to be done or resource usage, set this value to
+an amount assigned for a single instance of the scaled group.
+The autoscaler will keep the number of instances proportional to the
+value of this metric, the metric itself should not change value due
+to group resizing.
+For example, a good metric to use with the target is
+`pubsub.googleapis.com/subscription/num_undelivered_messages`
+or a custom metric exporting the total number of requests coming to
+your instances.
+A bad example would be a metric exporting an average or median
+latency, since this value can't include a chunk assignable to a
+single instance, it could be better used with utilization_target
+instead.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1653,7 +1992,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
+balancing configuration) that autoscaler should maintain. Must
+be a positive float value. If not defined, the default is 0.8.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1661,7 +2003,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how target utilization value is expressed for a
+Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND,
+or DELTA_PER_MINUTE.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1680,8 +2025,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

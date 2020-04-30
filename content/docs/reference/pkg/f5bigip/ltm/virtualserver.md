@@ -29,7 +29,7 @@ For resources should be named with their "full path". The full path is the combi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualServer</span><span class="p">(resource_name, opts=None, </span>client_profiles=None<span class="p">, </span>default_persistence_profile=None<span class="p">, </span>description=None<span class="p">, </span>destination=None<span class="p">, </span>fallback_persistence_profile=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>irules=None<span class="p">, </span>mask=None<span class="p">, </span>name=None<span class="p">, </span>persistence_profiles=None<span class="p">, </span>policies=None<span class="p">, </span>pool=None<span class="p">, </span>port=None<span class="p">, </span>profiles=None<span class="p">, </span>server_profiles=None<span class="p">, </span>snatpool=None<span class="p">, </span>source=None<span class="p">, </span>source_address_translation=None<span class="p">, </span>state=None<span class="p">, </span>translate_address=None<span class="p">, </span>translate_port=None<span class="p">, </span>vlans=None<span class="p">, </span>vlans_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualServer</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_profiles=None<span class="p">, </span>default_persistence_profile=None<span class="p">, </span>description=None<span class="p">, </span>destination=None<span class="p">, </span>fallback_persistence_profile=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>irules=None<span class="p">, </span>mask=None<span class="p">, </span>name=None<span class="p">, </span>persistence_profiles=None<span class="p">, </span>policies=None<span class="p">, </span>pool=None<span class="p">, </span>port=None<span class="p">, </span>profiles=None<span class="p">, </span>server_profiles=None<span class="p">, </span>snatpool=None<span class="p">, </span>source=None<span class="p">, </span>source_address_translation=None<span class="p">, </span>state=None<span class="p">, </span>translate_address=None<span class="p">, </span>translate_port=None<span class="p">, </span>vlans=None<span class="p">, </span>vlans_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -269,7 +269,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,7 +481,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +693,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +905,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1296,7 +1296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1720,7 +1720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1932,7 +1932,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}all, tcp, udp
+    <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

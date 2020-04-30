@@ -1,7 +1,8 @@
 
 ---
 title: "SshPublicKey"
-block_external_search_index: true
+title_tag: "Resource SshPublicKey | Module oslogin | Package GCP"
+meta_desc: "Explore the SshPublicKey resource of the oslogin module, including examples, input properties, output properties, lookup functions, and supporting types. The SSH public key information associated with a Google account."
 ---
 
 
@@ -29,7 +30,7 @@ To get more information about SSHPublicKey, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SshPublicKey</span><span class="p">(resource_name, opts=None, </span>expiration_time_usec=None<span class="p">, </span>key=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SshPublicKey</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expiration_time_usec=None<span class="p">, </span>key=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -754,8 +755,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

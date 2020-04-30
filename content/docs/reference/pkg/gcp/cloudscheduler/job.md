@@ -1,7 +1,8 @@
 
 ---
 title: "Job"
-block_external_search_index: true
+title_tag: "Resource Job | Module cloudscheduler | Package GCP"
+meta_desc: "Explore the Job resource of the cloudscheduler module, including examples, input properties, output properties, lookup functions, and supporting types. A scheduled job that can publish a pubsub message or a http request"
 ---
 
 
@@ -76,7 +77,7 @@ const job = new gcp.cloudscheduler.Job("job", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, opts=None, </span>app_engine_http_target=None<span class="p">, </span>attempt_deadline=None<span class="p">, </span>description=None<span class="p">, </span>http_target=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>pubsub_target=None<span class="p">, </span>region=None<span class="p">, </span>retry_config=None<span class="p">, </span>schedule=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Job</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_engine_http_target=None<span class="p">, </span>attempt_deadline=None<span class="p">, </span>description=None<span class="p">, </span>http_target=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>pubsub_target=None<span class="p">, </span>region=None<span class="p">, </span>retry_config=None<span class="p">, </span>schedule=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -254,8 +255,9 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -264,11 +266,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,7 +281,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,7 +291,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -314,7 +321,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -332,8 +341,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -351,8 +361,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -368,8 +378,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -378,11 +389,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -391,7 +404,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,7 +414,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,7 +444,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,8 +464,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,8 +484,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -482,8 +501,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,11 +512,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -505,7 +527,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -514,7 +537,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,7 +567,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -560,8 +587,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -579,8 +607,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -596,8 +624,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Dict[Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -606,11 +635,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,7 +650,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -628,7 +660,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Dict[Job<wbr>Http<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -656,7 +690,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Dict[Job<wbr>Pubsub<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -674,8 +710,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Dict[Job<wbr>Retry<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,8 +730,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -907,8 +944,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -917,11 +955,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -930,7 +970,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -939,7 +980,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -967,7 +1010,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,8 +1030,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,8 +1050,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1021,8 +1067,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1031,11 +1078,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1044,7 +1093,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1053,7 +1103,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1081,7 +1133,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1099,8 +1153,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1118,8 +1173,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1135,8 +1190,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1145,11 +1201,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1158,7 +1216,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1226,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Job<wbr>Http<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1195,7 +1256,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1213,8 +1276,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Job<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1232,8 +1296,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1249,8 +1313,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptarget">Dict[Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service
-instance
+    <dd>{{% md %}}App Engine HTTP target.
+If the job providers a App Engine HTTP target the cron will
+send a request to the service instance  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1259,11 +1324,13 @@ instance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled
-and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in execution logs. Cloud
-Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP
-targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours. A duration
-in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
+    <dd>{{% md %}}The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+The allowed duration for this deadline is:
+* For HTTP targets, between 15 seconds and 30 minutes.
+* For App Engine HTTP targets, between 15 seconds and 24 hours.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1272,7 +1339,8 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A human-readable description for the job. This string must not contain more than 500 characters.
+    <dd>{{% md %}}A human-readable description for the job.
+This string must not contain more than 500 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1281,7 +1349,9 @@ in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptarget">Dict[Job<wbr>Http<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}HTTP target. If the job providers a http_target the cron will send a request to the targeted url
+    <dd>{{% md %}}HTTP target.
+If the job providers a http_target the cron will
+send a request to the targeted url  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1309,7 +1379,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpubsubtarget">Dict[Job<wbr>Pubsub<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}Pub/Sub target If the job providers a Pub/Sub target the cron will publish a message to the provided topic
+    <dd>{{% md %}}Pub/Sub target
+If the job providers a Pub/Sub target the cron will publish
+a message to the provided topic  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1327,8 +1399,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobretryconfig">Dict[Job<wbr>Retry<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}By default, if a job does not complete successfully, meaning that an acknowledgement is not received from the handler,
-then it will be retried with exponential backoff according to the settings
+    <dd>{{% md %}}By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
+then it will be retried with exponential backoff according to the settings  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1346,8 +1419,8 @@ then it will be retried with exponential backoff according to the settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the
-tz database.
+    <dd>{{% md %}}Specifies the time zone to be used in interpreting schedule.
+The value of this field must be a time zone name from the tz database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1386,7 +1459,12 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative URI.
+The relative URL must begin with "/" and must be a valid HTTP relative URL.
+It can contain a path, query string arguments, and \# fragments.
+If the relative URL is empty, then the root path "/" will be used.
+No spaces are allowed, and the maximum length allowed is 2083 characters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1394,7 +1472,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App Engine Routing setting for the job.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1402,7 +1481,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1410,7 +1492,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1418,7 +1502,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1433,7 +1518,12 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative URI.
+The relative URL must begin with "/" and must be a valid HTTP relative URL.
+It can contain a path, query string arguments, and \# fragments.
+If the relative URL is empty, then the root path "/" will be used.
+No spaces are allowed, and the maximum length allowed is 2083 characters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1441,7 +1531,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App Engine Routing setting for the job.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1449,7 +1540,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1457,7 +1551,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1465,7 +1561,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1480,7 +1577,12 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative URI.
+The relative URL must begin with "/" and must be a valid HTTP relative URL.
+It can contain a path, query string arguments, and \# fragments.
+If the relative URL is empty, then the root path "/" will be used.
+No spaces are allowed, and the maximum length allowed is 2083 characters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1488,7 +1590,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App Engine Routing setting for the job.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1496,7 +1599,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1504,7 +1610,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1512,7 +1620,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1527,7 +1636,12 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The relative URI.
+The relative URL must begin with "/" and must be a valid HTTP relative URL.
+It can contain a path, query string arguments, and \# fragments.
+If the relative URL is empty, then the root path "/" will be used.
+No spaces are allowed, and the maximum length allowed is 2083 characters
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1535,7 +1649,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobappenginehttptargetappenginerouting">Dict[Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App Engine Routing setting for the job.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1543,7 +1658,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1551,7 +1669,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1559,7 +1679,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1589,7 +1710,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the job is sent to an instance which is available when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1597,7 +1720,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the job is sent to the service which is the default service when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1605,7 +1730,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the job is sent to the version which is the default version when the job is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1620,7 +1747,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the job is sent to an instance which is available when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1628,7 +1757,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the job is sent to the service which is the default service when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1636,7 +1767,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the job is sent to the version which is the default version when the job is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1651,7 +1784,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the job is sent to an instance which is available when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1659,7 +1794,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the job is sent to the service which is the default service when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1667,7 +1804,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the job is sent to the version which is the default version when the job is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1682,7 +1821,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App instance.
+By default, the job is sent to an instance which is available when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1690,7 +1831,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App service.
+By default, the job is sent to the service which is the default service when the job is attempted.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1698,7 +1841,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}App version.
+By default, the job is sent to the version which is the default version when the job is attempted.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1728,7 +1873,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full URI path that the request will be sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1736,7 +1882,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1744,7 +1893,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1752,7 +1903,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1760,7 +1912,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OAuth token.
+This type of authorization should be used when sending requests to a GCP endpoint.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1768,7 +1922,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
+This type of authorization should be used when sending requests to third party endpoints or Cloud Run.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1783,7 +1939,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full URI path that the request will be sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1791,7 +1948,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1799,7 +1959,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1807,7 +1969,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1815,7 +1978,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OAuth token.
+This type of authorization should be used when sending requests to a GCP endpoint.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1823,7 +1988,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
+This type of authorization should be used when sending requests to third party endpoints or Cloud Run.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1838,7 +2005,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full URI path that the request will be sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1846,7 +2014,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1854,7 +2025,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1862,7 +2035,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1870,7 +2044,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OAuth token.
+This type of authorization should be used when sending requests to a GCP endpoint.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1878,7 +2054,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
+This type of authorization should be used when sending requests to third party endpoints or Cloud Run.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1893,7 +2071,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full URI path that the request will be sent to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1901,7 +2080,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+It is an error to set body on a job with an incompatible HttpMethod.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1909,7 +2091,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This map contains the header field names and values.
+Repeated headers are not supported, but a header value can contain commas.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1917,7 +2101,8 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Which HTTP method to use for the request.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1925,7 +2110,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoauthtoken">Dict[Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OAuth token.
+This type of authorization should be used when sending requests to a GCP endpoint.  Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1933,7 +2120,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhttptargetoidctoken">Dict[Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains information needed for generating an OpenID Connect token.
+This type of authorization should be used when sending requests to third party endpoints or Cloud Run.  Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1963,7 +2152,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1971,7 +2162,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth scope to be used for generating OAuth access token. If not specified,
+"https://www.googleapis.com/auth/cloud-platform" will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1986,7 +2179,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1994,7 +2189,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth scope to be used for generating OAuth access token. If not specified,
+"https://www.googleapis.com/auth/cloud-platform" will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2009,7 +2206,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2017,7 +2216,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth scope to be used for generating OAuth access token. If not specified,
+"https://www.googleapis.com/auth/cloud-platform" will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2032,7 +2233,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2040,7 +2243,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}OAuth scope to be used for generating OAuth access token. If not specified,
+"https://www.googleapis.com/auth/cloud-platform" will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2070,7 +2275,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2078,7 +2285,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. If not specified,
+the URI specified in target will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2093,7 +2302,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2101,7 +2312,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. If not specified,
+the URI specified in target will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2116,7 +2329,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2124,7 +2339,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. If not specified,
+the URI specified in target will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2139,7 +2356,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Service account email to be used for generating OAuth token.
+The service account must be within the same project as the job.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2147,7 +2366,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Audience to be used when generating OIDC token. If not specified,
+the URI specified in target will be used.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2177,7 +2398,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full resource name for the Cloud Pub/Sub topic to which
+messages will be published when a job is delivered. ~>**NOTE**:
+The topic name must be in the same format as required by PubSub's
+PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2185,7 +2410,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2193,7 +2420,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The message payload for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2208,7 +2437,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full resource name for the Cloud Pub/Sub topic to which
+messages will be published when a job is delivered. ~>**NOTE**:
+The topic name must be in the same format as required by PubSub's
+PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2216,7 +2449,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2224,7 +2459,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The message payload for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2239,7 +2476,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full resource name for the Cloud Pub/Sub topic to which
+messages will be published when a job is delivered. ~>**NOTE**:
+The topic name must be in the same format as required by PubSub's
+PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2247,7 +2488,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2255,7 +2498,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The message payload for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2270,7 +2515,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The full resource name for the Cloud Pub/Sub topic to which
+messages will be published when a job is delivered. ~>**NOTE**:
+The topic name must be in the same format as required by PubSub's
+PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2278,7 +2527,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2286,7 +2537,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The message payload for PubsubMessage.
+Pubsub message must contain either non-empty data, or at least one attribute.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2316,7 +2569,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2324,7 +2579,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A job's retry interval starts at minBackoffDuration,
+then doubles maxDoublings times, then increases linearly,
+and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2332,7 +2591,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time limit for retrying a failed job, measured from time when an execution was first attempted.
+If specified with retryCount, the job will be retried until both limits are reached.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2340,7 +2602,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2348,7 +2612,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of attempts that the system will make to run a
+job using the exponential backoff procedure described by maxDoublings.
+Values greater than 5 and negative values are not allowed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2363,7 +2630,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2371,7 +2640,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A job's retry interval starts at minBackoffDuration,
+then doubles maxDoublings times, then increases linearly,
+and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2379,7 +2652,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time limit for retrying a failed job, measured from time when an execution was first attempted.
+If specified with retryCount, the job will be retried until both limits are reached.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2387,7 +2663,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2395,7 +2673,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of attempts that the system will make to run a
+job using the exponential backoff procedure described by maxDoublings.
+Values greater than 5 and negative values are not allowed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2410,7 +2691,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2418,7 +2701,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A job's retry interval starts at minBackoffDuration,
+then doubles maxDoublings times, then increases linearly,
+and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2426,7 +2713,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time limit for retrying a failed job, measured from time when an execution was first attempted.
+If specified with retryCount, the job will be retried until both limits are reached.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2434,7 +2724,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2442,7 +2734,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of attempts that the system will make to run a
+job using the exponential backoff procedure described by maxDoublings.
+Values greater than 5 and negative values are not allowed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2457,7 +2752,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2465,7 +2762,11 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time between retries will double maxDoublings times.
+A job's retry interval starts at minBackoffDuration,
+then doubles maxDoublings times, then increases linearly,
+and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2473,7 +2774,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time limit for retrying a failed job, measured from time when an execution was first attempted.
+If specified with retryCount, the job will be retried until both limits are reached.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2481,7 +2785,9 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of time to wait before retrying a job after it fails.
+A duration in seconds with up to nine fractional digits, terminated by 's'.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2489,7 +2795,10 @@ tz database.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of attempts that the system will make to run a
+job using the exponential backoff procedure described by maxDoublings.
+Values greater than 5 and negative values are not allowed.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2508,8 +2817,7 @@ tz database.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

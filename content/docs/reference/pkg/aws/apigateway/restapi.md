@@ -58,7 +58,7 @@ const example = new aws.apigateway.RestApi("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RestApi</span><span class="p">(resource_name, opts=None, </span>api_key_source=None<span class="p">, </span>binary_media_types=None<span class="p">, </span>body=None<span class="p">, </span>description=None<span class="p">, </span>endpoint_configuration=None<span class="p">, </span>minimum_compression_size=None<span class="p">, </span>name=None<span class="p">, </span>policy=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">RestApi</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_key_source=None<span class="p">, </span>binary_media_types=None<span class="p">, </span>body=None<span class="p">, </span>description=None<span class="p">, </span>endpoint_configuration=None<span class="p">, </span>minimum_compression_size=None<span class="p">, </span>name=None<span class="p">, </span>policy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

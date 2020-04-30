@@ -1,7 +1,8 @@
 
 ---
 title: "Instance"
-block_external_search_index: true
+title_tag: "Resource Instance | Module redis | Package GCP"
+meta_desc: "Explore the Instance resource of the redis module, including examples, input properties, output properties, lookup functions, and supporting types. A Google Cloud Redis instance."
 ---
 
 
@@ -41,7 +42,7 @@ const cache = new gcp.redis.Instance("cache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>alternative_location_id=None<span class="p">, </span>authorized_network=None<span class="p">, </span>connect_mode=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>location_id=None<span class="p">, </span>memory_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redis_configs=None<span class="p">, </span>redis_version=None<span class="p">, </span>region=None<span class="p">, </span>reserved_ip_range=None<span class="p">, </span>tier=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternative_location_id=None<span class="p">, </span>authorized_network=None<span class="p">, </span>connect_mode=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>location_id=None<span class="p">, </span>memory_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redis_configs=None<span class="p">, </span>redis_version=None<span class="p">, </span>region=None<span class="p">, </span>reserved_ip_range=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,8 +229,10 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -238,8 +241,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -248,8 +252,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -276,9 +281,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,8 +313,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -317,8 +324,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,9 +345,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,8 +358,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -373,8 +385,10 @@ available primary/replica instances
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,8 +397,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,8 +408,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,9 +437,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -451,8 +469,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -462,8 +480,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -481,9 +501,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,8 +514,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -518,8 +541,10 @@ available primary/replica instances
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -528,8 +553,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -538,8 +564,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -566,9 +593,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -596,8 +625,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -607,8 +636,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -626,9 +657,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -637,8 +670,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -663,8 +697,10 @@ available primary/replica instances
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -673,8 +709,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -683,8 +720,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -711,9 +749,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -741,8 +781,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -752,8 +792,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -771,9 +813,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -782,8 +826,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -1148,8 +1193,10 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1158,8 +1205,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1168,8 +1216,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1225,9 +1274,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1273,8 +1324,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -1284,8 +1335,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1303,9 +1356,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1314,8 +1369,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -1331,8 +1387,10 @@ available primary/replica instances
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1341,8 +1399,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,8 +1410,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1408,9 +1468,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1456,8 +1518,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -1467,8 +1529,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1486,9 +1550,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1497,8 +1563,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -1514,8 +1581,10 @@ available primary/replica instances
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1524,8 +1593,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1534,8 +1604,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,9 +1662,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1639,8 +1712,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -1650,8 +1723,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1669,9 +1744,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1680,8 +1757,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -1697,8 +1775,10 @@ available primary/replica instances
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two
-zones. If provided, it must be a different zone from the one provided in [locationId].
+    <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
+against zonal failures by provisioning it across two zones.
+If provided, it must be a different zone from the one provided in
+[locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1707,8 +1787,9 @@ zones. If provided, it must be a different zone from the one provided in [locati
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The full name of the Google Compute Engine network to which the instance is connected. If left unspecified, the default
-network will be used.
+    <dd>{{% md %}}The full name of the Google Compute Engine network to which the
+instance is connected. If left unspecified, the default network
+will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1717,8 +1798,9 @@ network will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The connection mode of the Redis instance. Can be either 'DIRECT_PEERING' or 'PRIVATE_SERVICE_ACCESS'. The default
-connect mode if not provided is 'DIRECT_PEERING'.
+    <dd>{{% md %}}The connection mode of the Redis instance. Can be either
+`DIRECT_PEERING` or `PRIVATE_SERVICE_ACCESS`. The default
+connect mode if not provided is `DIRECT_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1774,9 +1856,11 @@ connect mode if not provided is 'DIRECT_PEERING'.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided, the service will choose a zone for the instance. For
-STANDARD_HA tier, instances will be created across two zones for protection against zonal failures. If
-[alternativeLocationId] is also provided, it must be different from [locationId].
+    <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
+the service will choose a zone for the instance. For STANDARD_HA tier,
+instances will be created across two zones for protection against
+zonal failures. If [alternativeLocationId] is also provided, it must
+be different from [locationId].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1822,8 +1906,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for
-the list of supported parameters:
+    <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
+Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
 
@@ -1833,8 +1917,10 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values
-are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibility
+    <dd>{{% md %}}The version of Redis software. If not provided, latest supported
+version will be used. Currently, the supported values are:
+- REDIS_4_0 for Redis 4.0 compatibility
+- REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1852,9 +1938,11 @@ are: - REDIS_4_0 for Redis 4.0 compatibility - REDIS_3_2 for Redis 3.2 compatibi
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an
-unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing
-subnets in an authorized network.
+    <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
+instance. If not provided, the service will choose an unused /29
+block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
+unique and non-overlapping with existing subnets in an authorized
+network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1863,8 +1951,9 @@ subnets in an authorized network.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The service tier of the instance. Must be one of these values: - BASIC: standalone instance - STANDARD_HA: highly
-available primary/replica instances
+    <dd>{{% md %}}The service tier of the instance. Must be one of these values:
+- BASIC: standalone instance
+- STANDARD_HA: highly available primary/replica instances
 {{% /md %}}</dd>
 
 </dl>
@@ -1886,8 +1975,7 @@ available primary/replica instances
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

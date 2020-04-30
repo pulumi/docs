@@ -37,7 +37,7 @@ probably be SQS queues.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TopicSubscription</span><span class="p">(resource_name, opts=None, </span>confirmation_timeout_in_minutes=None<span class="p">, </span>delivery_policy=None<span class="p">, </span>endpoint=None<span class="p">, </span>endpoint_auto_confirms=None<span class="p">, </span>filter_policy=None<span class="p">, </span>protocol=None<span class="p">, </span>raw_message_delivery=None<span class="p">, </span>topic=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TopicSubscription</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>confirmation_timeout_in_minutes=None<span class="p">, </span>delivery_policy=None<span class="p">, </span>endpoint=None<span class="p">, </span>endpoint_auto_confirms=None<span class="p">, </span>filter_policy=None<span class="p">, </span>protocol=None<span class="p">, </span>raw_message_delivery=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

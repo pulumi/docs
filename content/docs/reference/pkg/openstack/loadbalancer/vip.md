@@ -42,7 +42,7 @@ const vip1 = new openstack.loadbalancer.Vip("vip_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vip</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>conn_limit=None<span class="p">, </span>description=None<span class="p">, </span>floating_ip=None<span class="p">, </span>name=None<span class="p">, </span>persistence=None<span class="p">, </span>pool_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Vip</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>conn_limit=None<span class="p">, </span>description=None<span class="p">, </span>floating_ip=None<span class="p">, </span>name=None<span class="p">, </span>persistence=None<span class="p">, </span>pool_id=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

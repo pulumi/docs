@@ -55,6 +55,9 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
 }, { dependsOn: [withLb] });
 ```
 
+Deprecated: aws.TargetGroupAttachment has been deprecated in favour of aws.TargetGroupAttachment
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.TargetGroupAttachment has been deprecated in favour of aws.TargetGroupAttachment{{% /md %}}</p>
 
 
 ## Create a TargetGroupAttachment Resource {#create}
@@ -66,7 +69,7 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TargetGroupAttachment</span><span class="p">(resource_name, opts=None, </span>availability_zone=None<span class="p">, </span>port=None<span class="p">, </span>target_group_arn=None<span class="p">, </span>target_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TargetGroupAttachment</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>availability_zone=None<span class="p">, </span>port=None<span class="p">, </span>target_group_arn=None<span class="p">, </span>target_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

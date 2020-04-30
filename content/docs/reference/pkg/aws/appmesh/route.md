@@ -120,7 +120,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, opts=None, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Route</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1620,7 +1620,6 @@ You can specify one or more targets and their relative weights with which to dis
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1665,7 +1664,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1710,7 +1708,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1755,7 +1752,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1975,7 +1971,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1984,7 +1979,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2028,7 +2024,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2037,7 +2032,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2081,7 +2077,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2090,7 +2085,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2134,7 +2130,6 @@ This parameter must always start with /, which by itself matches all requests to
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2143,7 +2138,8 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

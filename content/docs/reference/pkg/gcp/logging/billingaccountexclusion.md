@@ -1,7 +1,8 @@
 
 ---
 title: "BillingAccountExclusion"
-block_external_search_index: true
+title_tag: "Resource BillingAccountExclusion | Module logging | Package GCP"
+meta_desc: "Explore the BillingAccountExclusion resource of the logging module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a billing account logging exclusion. For more information see"
 ---
 
 
@@ -46,7 +47,7 @@ const my_exclusion = new gcp.logging.BillingAccountExclusion("my-exclusion", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BillingAccountExclusion</span><span class="p">(resource_name, opts=None, </span>billing_account=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">BillingAccountExclusion</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>billing_account=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -867,8 +868,7 @@ write a filter.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

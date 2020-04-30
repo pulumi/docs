@@ -22,7 +22,7 @@ meta_desc: "Explore the Node resource of the ltm module, including examples, inp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Node</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>connection_limit=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_ratio=None<span class="p">, </span>fqdn=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>rate_limit=None<span class="p">, </span>ratio=None<span class="p">, </span>state=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Node</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>connection_limit=None<span class="p">, </span>description=None<span class="p">, </span>dynamic_ratio=None<span class="p">, </span>fqdn=None<span class="p">, </span>monitor=None<span class="p">, </span>name=None<span class="p">, </span>rate_limit=None<span class="p">, </span>ratio=None<span class="p">, </span>state=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -262,8 +262,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,8 +358,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -456,8 +454,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -553,8 +550,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,8 +843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -944,8 +939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1041,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is
-'disabled'.
+    <dd>{{% md %}}Specifies the maximum number of connections per second allowed for a node or node address. The default value is 'disabled'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

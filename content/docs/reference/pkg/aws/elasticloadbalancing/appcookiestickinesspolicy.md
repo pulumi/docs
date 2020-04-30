@@ -39,6 +39,9 @@ const foo = new aws.elb.AppCookieStickinessPolicy("foo", {
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: aws.AppCookieStickinessPolicy has been deprecated in favour of aws.AppCookieStickinessPolicy
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.AppCookieStickinessPolicy has been deprecated in favour of aws.AppCookieStickinessPolicy{{% /md %}}</p>
 
 
 ## Create a AppCookieStickinessPolicy Resource {#create}
@@ -50,7 +53,7 @@ const foo = new aws.elb.AppCookieStickinessPolicy("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppCookieStickinessPolicy</span><span class="p">(resource_name, opts=None, </span>cookie_name=None<span class="p">, </span>lb_port=None<span class="p">, </span>load_balancer=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AppCookieStickinessPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cookie_name=None<span class="p">, </span>lb_port=None<span class="p">, </span>load_balancer=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

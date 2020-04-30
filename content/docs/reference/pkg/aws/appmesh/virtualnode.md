@@ -183,7 +183,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualNode</span><span class="p">(resource_name, opts=None, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualNode</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1602,7 +1602,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-* `interval_millis`- (Required) The time period in milliseconds between each health check execution.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1611,7 +1610,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time period in milliseconds between each health check execution.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1672,7 +1672,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-* `interval_millis`- (Required) The time period in milliseconds between each health check execution.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1681,7 +1680,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time period in milliseconds between each health check execution.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1742,7 +1742,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-* `interval_millis`- (Required) The time period in milliseconds between each health check execution.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1751,7 +1750,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time period in milliseconds between each health check execution.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1812,7 +1812,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-* `interval_millis`- (Required) The time period in milliseconds between each health check execution.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1821,7 +1820,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The time period in milliseconds between each health check execution.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

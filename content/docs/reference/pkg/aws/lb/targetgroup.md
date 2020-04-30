@@ -80,7 +80,7 @@ const lambda_example = new aws.lb.TargetGroup("lambda-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TargetGroup</span><span class="p">(resource_name, opts=None, </span>deregistration_delay=None<span class="p">, </span>health_check=None<span class="p">, </span>lambda_multi_value_headers_enabled=None<span class="p">, </span>load_balancing_algorithm_type=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy_protocol_v2=None<span class="p">, </span>slow_start=None<span class="p">, </span>stickiness=None<span class="p">, </span>tags=None<span class="p">, </span>target_type=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">TargetGroup</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>deregistration_delay=None<span class="p">, </span>health_check=None<span class="p">, </span>lambda_multi_value_headers_enabled=None<span class="p">, </span>load_balancing_algorithm_type=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>proxy_protocol_v2=None<span class="p">, </span>slow_start=None<span class="p">, </span>stickiness=None<span class="p">, </span>tags=None<span class="p">, </span>target_type=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1753,7 +1753,8 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1798,7 +1799,6 @@ You can't specify publicly routable IP addresses.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
-* `matcher` (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
 {{% /md %}}</dd>
 
 </dl>
@@ -1841,7 +1841,8 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1886,7 +1887,6 @@ You can't specify publicly routable IP addresses.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
-* `matcher` (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
 {{% /md %}}</dd>
 
 </dl>
@@ -1929,7 +1929,8 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1974,7 +1975,6 @@ You can't specify publicly routable IP addresses.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
-* `matcher` (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
 {{% /md %}}</dd>
 
 </dl>
@@ -2017,7 +2017,8 @@ You can't specify publicly routable IP addresses.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2062,7 +2063,6 @@ You can't specify publicly routable IP addresses.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
-* `matcher` (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
 {{% /md %}}</dd>
 
 </dl>

@@ -69,6 +69,9 @@ const foo = new aws.elb.SslNegotiationPolicy("foo", {
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: aws.SslNegotiationPolicy has been deprecated in favour of aws.SslNegotiationPolicy
+
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.SslNegotiationPolicy has been deprecated in favour of aws.SslNegotiationPolicy{{% /md %}}</p>
 
 
 ## Create a SslNegotiationPolicy Resource {#create}
@@ -80,7 +83,7 @@ const foo = new aws.elb.SslNegotiationPolicy("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SslNegotiationPolicy</span><span class="p">(resource_name, opts=None, </span>attributes=None<span class="p">, </span>lb_port=None<span class="p">, </span>load_balancer=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SslNegotiationPolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>lb_port=None<span class="p">, </span>load_balancer=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -1,7 +1,8 @@
 
 ---
 title: "InstanceGroupManager"
-block_external_search_index: true
+title_tag: "Resource InstanceGroupManager | Module compute | Package GCP"
+meta_desc: "Explore the InstanceGroupManager resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. The Google Compute Engine Instance Group Manager API creates and manages pools"
 ---
 
 
@@ -27,7 +28,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroupMa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGroupManager</span><span class="p">(resource_name, opts=None, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">InstanceGroupManager</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_healing_policies=None<span class="p">, </span>base_instance_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>named_ports=None<span class="p">, </span>project=None<span class="p">, </span>target_pools=None<span class="p">, </span>target_size=None<span class="p">, </span>update_policy=None<span class="p">, </span>versions=None<span class="p">, </span>wait_for_instances=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2497,8 +2498,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

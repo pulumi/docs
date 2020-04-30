@@ -1,7 +1,8 @@
 
 ---
 title: "MangedSslCertificate"
-block_external_search_index: true
+title_tag: "Resource MangedSslCertificate | Module compute | Package GCP"
+meta_desc: "Explore the MangedSslCertificate resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -10,6 +11,9 @@ block_external_search_index: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+Deprecated: gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate
+
+<p class="resource-deprecated">Deprecated: {{% md %}}gcp.MangedSslCertificate has been deprecated in favour of gcp.ManagedSslCertificate{{% /md %}}</p>
 
 
 ## Create a MangedSslCertificate Resource {#create}
@@ -21,7 +25,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MangedSslCertificate</span><span class="p">(resource_name, opts=None, </span>certificate_id=None<span class="p">, </span>description=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MangedSslCertificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_id=None<span class="p">, </span>description=None<span class="p">, </span>managed=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1283,8 +1287,7 @@ namespace as the managed SSL certificates.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
-	
 </dl>
 

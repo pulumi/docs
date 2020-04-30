@@ -22,7 +22,7 @@ meta_desc: "Explore the UserPassword resource of the MySQL package, including ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPassword</span><span class="p">(resource_name, opts=None, </span>host=None<span class="p">, </span>pgp_key=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">UserPassword</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>host=None<span class="p">, </span>pgp_key=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

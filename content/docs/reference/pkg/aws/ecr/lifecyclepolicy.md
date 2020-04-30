@@ -96,7 +96,7 @@ const foopolicy = new aws.ecr.LifecyclePolicy("foopolicy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LifecyclePolicy</span><span class="p">(resource_name, opts=None, </span>policy=None<span class="p">, </span>repository=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LifecyclePolicy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>policy=None<span class="p">, </span>repository=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

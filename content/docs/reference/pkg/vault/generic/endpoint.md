@@ -22,7 +22,7 @@ meta_desc: "Explore the Endpoint resource of the generic module, including examp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Endpoint</span><span class="p">(resource_name, opts=None, </span>data_json=None<span class="p">, </span>disable_delete=None<span class="p">, </span>disable_read=None<span class="p">, </span>ignore_absent_fields=None<span class="p">, </span>path=None<span class="p">, </span>write_fields=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Endpoint</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>data_json=None<span class="p">, </span>disable_delete=None<span class="p">, </span>disable_read=None<span class="p">, </span>ignore_absent_fields=None<span class="p">, </span>path=None<span class="p">, </span>write_fields=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

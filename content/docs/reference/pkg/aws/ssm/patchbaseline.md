@@ -161,7 +161,7 @@ const windowsOsApps = new aws.ssm.PatchBaseline("windows_os_apps", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PatchBaseline</span><span class="p">(resource_name, opts=None, </span>approval_rules=None<span class="p">, </span>approved_patches=None<span class="p">, </span>approved_patches_compliance_level=None<span class="p">, </span>description=None<span class="p">, </span>global_filters=None<span class="p">, </span>name=None<span class="p">, </span>operating_system=None<span class="p">, </span>rejected_patches=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PatchBaseline</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approval_rules=None<span class="p">, </span>approved_patches=None<span class="p">, </span>approved_patches_compliance_level=None<span class="p">, </span>description=None<span class="p">, </span>global_filters=None<span class="p">, </span>name=None<span class="p">, </span>operating_system=None<span class="p">, </span>rejected_patches=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1273,7 +1273,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1317,7 +1316,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1361,7 +1359,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1405,7 +1402,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-* `PATCH_SET` defaults to `OS` if unspecified
 {{% /md %}}</dd>
 
     <dt class="property-optional"

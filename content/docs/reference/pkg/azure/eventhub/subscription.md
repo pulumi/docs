@@ -15,6 +15,9 @@ Manages a ServiceBus Subscription.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.Subscription has been deprecated in favour of azure.Subscription
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Subscription has been deprecated in favour of azure.Subscription{{% /md %}}</p>
 
 
 ## Create a Subscription Resource {#create}

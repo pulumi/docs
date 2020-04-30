@@ -98,7 +98,7 @@ const exampleStage = new aws.apigateway.Stage("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Stage</span><span class="p">(resource_name, opts=None, </span>access_log_settings=None<span class="p">, </span>cache_cluster_enabled=None<span class="p">, </span>cache_cluster_size=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>deployment=None<span class="p">, </span>description=None<span class="p">, </span>documentation_version=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_name=None<span class="p">, </span>tags=None<span class="p">, </span>variables=None<span class="p">, </span>xray_tracing_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Stage</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_log_settings=None<span class="p">, </span>cache_cluster_enabled=None<span class="p">, </span>cache_cluster_size=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>deployment=None<span class="p">, </span>description=None<span class="p">, </span>documentation_version=None<span class="p">, </span>rest_api=None<span class="p">, </span>stage_name=None<span class="p">, </span>tags=None<span class="p">, </span>variables=None<span class="p">, </span>xray_tracing_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

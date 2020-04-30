@@ -70,7 +70,7 @@ const exampleAuthBackendLogin = new vault.aws.AuthBackendLogin("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendLogin</span><span class="p">(resource_name, opts=None, </span>backend=None<span class="p">, </span>iam_http_request_method=None<span class="p">, </span>iam_request_body=None<span class="p">, </span>iam_request_headers=None<span class="p">, </span>iam_request_url=None<span class="p">, </span>identity=None<span class="p">, </span>nonce=None<span class="p">, </span>pkcs7=None<span class="p">, </span>role=None<span class="p">, </span>signature=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuthBackendLogin</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>iam_http_request_method=None<span class="p">, </span>iam_request_body=None<span class="p">, </span>iam_request_headers=None<span class="p">, </span>iam_request_url=None<span class="p">, </span>identity=None<span class="p">, </span>nonce=None<span class="p">, </span>pkcs7=None<span class="p">, </span>role=None<span class="p">, </span>signature=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

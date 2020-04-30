@@ -31,7 +31,7 @@ Let's Encrypt.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, opts=None, </span>certificate_chain=None<span class="p">, </span>domains=None<span class="p">, </span>leaf_certificate=None<span class="p">, </span>name=None<span class="p">, </span>private_key=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Certificate</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domains=None<span class="p">, </span>leaf_certificate=None<span class="p">, </span>name=None<span class="p">, </span>private_key=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

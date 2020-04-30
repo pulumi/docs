@@ -42,7 +42,7 @@ const floatip1 = new openstack.networking.FloatingIp("floatip_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FloatingIp</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>pool=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">FloatingIp</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>dns_name=None<span class="p">, </span>fixed_ip=None<span class="p">, </span>pool=None<span class="p">, </span>port_id=None<span class="p">, </span>region=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

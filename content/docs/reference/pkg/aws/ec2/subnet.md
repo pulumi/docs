@@ -68,7 +68,7 @@ const inSecondaryCidr = new aws.ec2.Subnet("in_secondary_cidr", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnet</span><span class="p">(resource_name, opts=None, </span>assign_ipv6_address_on_creation=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_id=None<span class="p">, </span>cidr_block=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>map_public_ip_on_launch=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Subnet</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assign_ipv6_address_on_creation=None<span class="p">, </span>availability_zone=None<span class="p">, </span>availability_zone_id=None<span class="p">, </span>cidr_block=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>map_public_ip_on_launch=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

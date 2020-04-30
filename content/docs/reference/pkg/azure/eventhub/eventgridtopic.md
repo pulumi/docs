@@ -17,6 +17,9 @@ Manages an EventGrid Topic
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.EventGridTopic has been deprecated in favour of azure.Topic
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.EventGridTopic has been deprecated in favour of azure.Topic{{% /md %}}</p>
 
 
 ## Create a EventGridTopic Resource {#create}

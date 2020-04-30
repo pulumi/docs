@@ -50,7 +50,7 @@ const test = new aws.dms.ReplicationTask("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationTask</span><span class="p">(resource_name, opts=None, </span>cdc_start_time=None<span class="p">, </span>migration_type=None<span class="p">, </span>replication_instance_arn=None<span class="p">, </span>replication_task_id=None<span class="p">, </span>replication_task_settings=None<span class="p">, </span>source_endpoint_arn=None<span class="p">, </span>table_mappings=None<span class="p">, </span>tags=None<span class="p">, </span>target_endpoint_arn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ReplicationTask</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cdc_start_time=None<span class="p">, </span>migration_type=None<span class="p">, </span>replication_instance_arn=None<span class="p">, </span>replication_task_id=None<span class="p">, </span>replication_task_settings=None<span class="p">, </span>source_endpoint_arn=None<span class="p">, </span>table_mappings=None<span class="p">, </span>tags=None<span class="p">, </span>target_endpoint_arn=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -70,7 +70,7 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">L7RuleV2</span><span class="p">(resource_name, opts=None, </span>admin_state_up=None<span class="p">, </span>compare_type=None<span class="p">, </span>invert=None<span class="p">, </span>key=None<span class="p">, </span>l7policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">L7RuleV2</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>compare_type=None<span class="p">, </span>invert=None<span class="p">, </span>key=None<span class="p">, </span>l7policy_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

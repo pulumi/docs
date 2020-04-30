@@ -15,6 +15,9 @@ Manages a Traffic Manager Endpoint.
 {{% examples %}}
 {{% /examples %}}
 
+Deprecated: azure.Endpoint has been deprecated in favour of azure.TrafficManagerEndpoint
+
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.Endpoint has been deprecated in favour of azure.TrafficManagerEndpoint{{% /md %}}</p>
 
 
 ## Create a Endpoint Resource {#create}

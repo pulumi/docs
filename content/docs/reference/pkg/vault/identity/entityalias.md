@@ -22,7 +22,7 @@ meta_desc: "Explore the EntityAlias resource of the identity module, including e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EntityAlias</span><span class="p">(resource_name, opts=None, </span>canonical_id=None<span class="p">, </span>mount_accessor=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EntityAlias</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>canonical_id=None<span class="p">, </span>mount_accessor=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
