@@ -22,7 +22,7 @@ First of all follow the instructions for creating a Pulumi stack. There are thre
 
 1. [Clone an Existing Example](https://github.com/pulumi/examples)
 2. [Use the New Project Wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to select a template.
+3. [Download the CLI]({{< prelref "/docs/get-started/install" >}}) and run `pulumi new` to select a template.
 
 Then [signup for a Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/) and [create a pipeline](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/pipelines/). There is no special setup needed on the Codefresh side (i.e. you can use Pulumi on both free and paid Codefresh accounts).
 

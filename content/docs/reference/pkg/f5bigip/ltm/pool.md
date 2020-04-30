@@ -189,11 +189,11 @@ Resources should be named with their "full path". The full path is the combinati
 
 ## Pool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Pool resource accepts the following [input]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 

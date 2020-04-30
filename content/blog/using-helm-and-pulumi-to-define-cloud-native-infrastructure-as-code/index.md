@@ -116,6 +116,6 @@ can make the best use of existing tools such as Helm, and also reduce
 the friction caused by multiple deployment tools and models across
 complex architectures.
 
-- Find out more about our [Azure]({{< relref "/partner/azure" >}}) and
-  [Kubernetes]({{< relref "/topics/kubernetes" >}}) support
+- Find out more about our [Azure]({{< prelref "/partner/azure" >}}) and
+  [Kubernetes]({{< prelref "/topics/kubernetes" >}}) support
 - Join the Slack community at <https://slack.pulumi.com>

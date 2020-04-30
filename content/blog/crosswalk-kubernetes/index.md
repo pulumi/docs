@@ -8,9 +8,9 @@ date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
-Today we announced [Pulumi Crosswalk for Kubernetes]({{< relref "/crosswalk/kubernetes" >}}), a collection of open source tools, libraries, and playbooks to help developers and operators work together to bring Kubernetes into their organizations. They capture the lessons we learned this past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads. By releasing these as open source, we hope to help everybody be more successful with their Kubernetes projects &mdash; as we have learned through experience, it isn't easy going!
+Today we announced [Pulumi Crosswalk for Kubernetes]({{< prelref "/crosswalk/kubernetes" >}}), a collection of open source tools, libraries, and playbooks to help developers and operators work together to bring Kubernetes into their organizations. They capture the lessons we learned this past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads. By releasing these as open source, we hope to help everybody be more successful with their Kubernetes projects &mdash; as we have learned through experience, it isn't easy going!
 
-If you want to dive straight in, [browse to the documentation]({{< relref "/docs/guides/crosswalk/kubernetes" >}}). Below is the backstory and why we’re so excited about this release.
+If you want to dive straight in, [browse to the documentation]({{< prelref "/docs/guides/crosswalk/kubernetes" >}}). Below is the backstory and why we’re so excited about this release.
 
 ## Applying infrastructure as code to Kubernetes
 
@@ -234,6 +234,6 @@ CQL also supports live streaming queries, which the CLI will display results fro
 
 Everything above is [open source](https://github.com/pulumi) and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using real languages.
 
-To get started, check out the [documentation]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), or [get started with the open source SDK now]({{< relref "/docs/get-started/kubernetes" >}}).
+To get started, check out the [documentation]({{< prelref "/docs/guides/crosswalk/kubernetes" >}}), or [get started with the open source SDK now]({{< prelref "/docs/get-started/kubernetes" >}}).
 
-We sincerely hope that your team can be successful in your Kubernetes journey as a result of these lessons learned from others. Additionally, Pulumi offers training and services, so if we can help in any way, please [join our entire team and thousands of practitioners on our Community Slack](https://slack.pulumi.com) &mdash; or simply [contact us]({{< relref "/contact.md" >}}) and we’ll be in touch.
+We sincerely hope that your team can be successful in your Kubernetes journey as a result of these lessons learned from others. Additionally, Pulumi offers training and services, so if we can help in any way, please [join our entire team and thousands of practitioners on our Community Slack](https://slack.pulumi.com) &mdash; or simply [contact us]({{< prelref "/contact.md" >}}) and we’ll be in touch.

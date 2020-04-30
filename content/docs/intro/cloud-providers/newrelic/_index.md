@@ -13,11 +13,11 @@ menu:
 The New Relic provider for Pulumi can be used to provision any of the cloud resources available in [New Relic](https://newrelic.com/).
 The New Relic provider must be configured with credentials to deploy and update resources in New Relic.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/newrelic" >}}) for complete details of the available New Relic provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/newrelic" >}}) for complete details of the available New Relic provider APIs.
 
 ## Setup
 
-The New Relic provider supports several options for providing access to New Relic credentials.  See the [New Relic setup page]({{< relref "setup" >}}) for details.
+The New Relic provider supports several options for providing access to New Relic credentials.  See the [New Relic setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

@@ -3,12 +3,12 @@ title: Alibaba Cloud Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi Alibaba Cloud Provider.
 ---
 
-The [Pulumi Alibaba Cloud provider]({{< relref "./" >}}) uses the Alibaba Cloud SDK to manage and provision resources.
+The [Pulumi Alibaba Cloud provider]({{< prelref "./" >}}) uses the Alibaba Cloud SDK to manage and provision resources.
 
 > Pulumi relies on the Alibaba Cloud SDK to authenticate requests from your computer to Alibaba Cloud. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi Alibaba Cloud Provider]({{< relref "./" >}}) needs to be configured with Alibaba Cloud credentials
+The [Pulumi Alibaba Cloud Provider]({{< prelref "./" >}}) needs to be configured with Alibaba Cloud credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

@@ -183,11 +183,11 @@ Assigns a given Principal (User or Application) to a given Role.
 
 ## Assignment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Assignment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Assignment resource accepts the following [input]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 

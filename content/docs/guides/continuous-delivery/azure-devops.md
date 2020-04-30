@@ -27,7 +27,7 @@ the steps outlined in the sample YAML file below to the Visual Designer as well.
 
 - An account on [https://app.pulumi.com](https://app.pulumi.com).
 - The latest CLI.
-    - Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+    - Installation instructions are [here]({{< prelref "/docs/get-started/install" >}}).
 - A git repo with your Azure DevOps project set as the remote URL.
     - To learn more about how to create a git repo in your DevOps project, click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav).
 
@@ -55,7 +55,7 @@ acme-ui
 Once you login into the `pulumi` CLI on your machine, you can create a stack by running `pulumi stack init`.
 To create a `pulumi` program using one of the many available templates, you may run `pulumi new <template>`.
 You can find a suitable template to run, using the command `pulumi new --help`.
-Learn more about the `pulumi` CLI commands [here]({{< relref "/docs/reference/cli" >}}).
+Learn more about the `pulumi` CLI commands [here]({{< prelref "/docs/reference/cli" >}}).
 
 Once your stack has been initialized, the `Pulumi.<stack-name>.yaml` file will be created with some basic configuration.
 The yaml file is used just for configuration values. All of your infrastructure will be built using your `pulumi` program.
@@ -65,7 +65,7 @@ For this walkthrough, we will assume a `TypeScript`-based `pulumi` program, whic
 ### About The `pulumi` Program
 
 The code inside `infra/index.ts` creates a resource group, a storage account and a blob container in the storage account. It then `exports` three
-values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here]({{< relref "programming-model#stack-outputs" >}}).
+values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here]({{< prelref "programming-model#stack-outputs" >}}).
 
 ## Build Variables
 
@@ -83,14 +83,14 @@ You can set [job-scoped output variables](https://docs.microsoft.com/en-us/azure
 
 `pulumi` requires a few environment variables in order to work in a CI/CD environment. More specifically, `PULUMI_ACCESS_TOKEN` is required
 to allow the `pulumi` CLI to perform an unattended login. In addition to this, you will also need to set the cloud provider-specific
-variables. For Azure, the environment variables you will need are documented [here]({{< relref "/docs/get-started/azure" >}}).
+variables. For Azure, the environment variables you will need are documented [here]({{< prelref "/docs/get-started/azure" >}}).
 
 **Note**: If you are using the [Pulumi task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) for Azure Pipelines, you don't need to manually configure the environment variables in your pipeline builds. You can use [Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops) to centralize access to your Azure subscription(s).
 
 ## Agents
 
 Azure DevOps allows you to specify a build agent for each of your jobs in your pipeline. You may have a requirement to run certain jobs on a
-Ubuntu agent, and some on a Windows agent. `pulumi` can be installed on these agents by following the directions from [this]({{< relref "/docs/get-started/install" >}}) page.
+Ubuntu agent, and some on a Windows agent. `pulumi` can be installed on these agents by following the directions from [this]({{< prelref "/docs/get-started/install" >}}) page.
 
 ## Setup
 

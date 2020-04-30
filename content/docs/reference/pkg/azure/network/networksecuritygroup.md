@@ -190,11 +190,11 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 
 ## NetworkSecurityGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NetworkSecurityGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NetworkSecurityGroup resource accepts the following [input]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 

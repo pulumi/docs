@@ -15,7 +15,7 @@ menu:
 
 [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) codifies best practices for AWS. It is an [open source](https://github.com/pulumi/pulumi-policy-aws) library that you can configure and use to enforce these best practices for your own Pulumi stacks or organization.
 
-For more information on Pulumi's Policy as Code solution, visit our [docs]({{< relref "/docs/get-started/crossguard" >}}).
+For more information on Pulumi's Policy as Code solution, visit our [docs]({{< prelref "/docs/get-started/crossguard" >}}).
 
 ## Trying AWSGuard
 
@@ -23,7 +23,7 @@ In this guide, we'll show you how to create a Policy Pack that configures and us
 
 ### Prerequisites
 
-- [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+- [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
 - [Install Node.js](https://nodejs.org/en/download/)
 
 ### Verify your version of the Pulumi CLI
@@ -171,6 +171,6 @@ aws:s3:Bucket (my-bucket):
 
 ## Next Steps
 
-Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Console to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}).
+Once you've validated the behavior of the AWSGuard policies you've configured in your Policy Pack, an organization administrator can publish the Policy Pack to the Pulumi Console to be enforced across your organization. To learn more see [Enforcing a Policy Pack Across an Organization]({{< prelref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}).
 
-Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}) to get started.
+Now that you've seen how to configure and use AWSGuard policies, you may want to write your own policies. See the [Getting Started tutorial]({{< prelref "/docs/get-started/crossguard" >}}) to get started.

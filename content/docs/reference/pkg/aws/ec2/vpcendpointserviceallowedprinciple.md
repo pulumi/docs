@@ -209,11 +209,11 @@ const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allow_me_to
 
 ## VpcEndpointServiceAllowedPrinciple Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VpcEndpointServiceAllowedPrinciple resource accepts the following [input]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 

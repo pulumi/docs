@@ -207,11 +207,11 @@ const container1 = new openstack.objectstorage.Container("container_1", {
 
 ## Container Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Container resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Container resource accepts the following [input]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 

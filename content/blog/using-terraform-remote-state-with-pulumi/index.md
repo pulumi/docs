@@ -19,25 +19,25 @@ by different teams. For example, it's common to see an application team
 deploying into a VPC owned and managed by a network operations team.
 
 Pulumi supports
-[this kind of workflow]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}})
-natively using the [`StackReference`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference" >}})
+[this kind of workflow]({{< prelref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}})
+natively using the [`StackReference`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference" >}})
 type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:
 
-- The [`aws.cloudformation.getStack()`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
+- The [`aws.cloudformation.getStack()`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
   function can be used to obtain the outputs from a CloudFormation
   Stack.
 
-- The [`get`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
+- The [`get`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
   method of the
-  [`azure.core.TemplateDeployment`]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
+  [`azure.core.TemplateDeployment`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
   class can be used to obtain the outputs of an ARM Template Deployment.
 
 We recently added similar support for reading the outputs of a Terraform
 state file - both from local `.tfstate` files, and from all of the
 remote state backends supported by Terraform. This is exposed via the
-[`terraform.state.RemoteStateReference`]({{< relref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) type in the
+[`terraform.state.RemoteStateReference`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference" >}}) type in the
 [`@pulumi/terraform`](https://www.npmjs.com/package/@pulumi/terraform)
 NPM package.
 <!--more-->
@@ -130,7 +130,7 @@ can do the following:
 3. In the `index.ts` file, create a
     `terraform.state.RemoteStateReference` resource to access the state.
     Note that we can use [Pulumi
-    secrets]({{< relref "managing-secrets-with-pulumi" >}})
+    secrets]({{< prelref "managing-secrets-with-pulumi" >}})
     to ensure that our Terraform Enterprise token is encrypted and never
     stored in plaintext by Pulumi:
 
@@ -174,10 +174,10 @@ environments. Resources which were provisioned by CloudFormation, ARM or
 Terraform can remain in place, while still allowing those values to be
 dynamically consumed by a Pulumi program.
 
-Pulumi is free and open-source, and you can [get started today]({{< relref "/docs/get-started" >}}).
+Pulumi is free and open-source, and you can [get started today]({{< prelref "/docs/get-started" >}}).
 To learn more about migrating
 from Terraform to Pulumi, check out
-[From Terraform to Infrastructure as Software]({{< relref "from-terraform-to-infrastructure-as-software" >}})
-and the [Terraform comparison documentation]({{< relref "/docs/intro/vs/terraform" >}}), or join us in
+[From Terraform to Infrastructure as Software]({{< prelref "from-terraform-to-infrastructure-as-software" >}})
+and the [Terraform comparison documentation]({{< prelref "/docs/intro/vs/terraform" >}}), or join us in
 the [Pulumi Community Slack](https://slack.pulumi.com/) to discuss with
 the Pulumi community.

@@ -13,11 +13,11 @@ menu:
 The PostgreSQL provider for Pulumi can be used to provision any of the resources available for PostgreSQL.
 The PostgreSQL provider must be configured with credentials to deploy and update resources in PostgreSQL.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/postgresql" >}}) for complete details of the available PostgreSQL provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/postgresql" >}}) for complete details of the available PostgreSQL provider APIs.
 
 ## Setup
 
-The PostgreSQL provider supports several options for providing access to PostgreSQL credentials.  See the [PostgreSQL setup page]({{< relref "setup" >}}) for details.
+The PostgreSQL provider supports several options for providing access to PostgreSQL credentials.  See the [PostgreSQL setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

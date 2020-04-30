@@ -13,7 +13,7 @@ In this tutorial, we'll show you how to write a Pulumi program that creates a se
 
 ### Step 1: Create a new project from a template
 
-Create a project directory, `ahoy-pulumi`, and change into it. Run [`pulumi new aws-javascript --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for JavaScript. Replace `myproject` with your desired project name.
+Create a project directory, `ahoy-pulumi`, and change into it. Run [`pulumi new aws-javascript --name myproject`]({{< prelref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for JavaScript. Replace `myproject` with your desired project name.
 
 ```bash
 $ mkdir ahoy-pulumi && cd ahoy-pulumi
@@ -32,8 +32,8 @@ After some dependency installations from npm, you'll see the few files that have
 
 Let's review those files:
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/docs/intro/concepts/config" >}}) for the stack you initialized in the previous step.
+- `Pulumi.yaml` defines the [project]({{< prelref "/docs/intro/concepts/project" >}}).
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< prelref "/docs/intro/concepts/config" >}}) for the stack you initialized in the previous step.
 - `www` contains the sample static content for this tutorial.
 - `index.js` is the key file for defining your stack resources (which we will look at in the next step).
 
@@ -75,11 +75,11 @@ const endpoint = new awsx.apigateway.API("hello", {
 exports.url = endpoint.url;
 ```
 
-This example uses the [`@pulumi/awsx`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) package in JavaScript and TypeScript to create a public HTTP endpoint, and define the static and event handler routes. See [Module apigateway]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway" >}}) to learn more about Pulumi's API Gateway module and components.
+This example uses the [`@pulumi/awsx`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) package in JavaScript and TypeScript to create a public HTTP endpoint, and define the static and event handler routes. See [Module apigateway]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway" >}}) to learn more about Pulumi's API Gateway module and components.
 
 ### Step 4: Preview and deploy your resources
 
-To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.
+To preview your Pulumi program, run [`pulumi up`]({{< prelref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.
 
 ```bash
 $ pulumi up
@@ -123,6 +123,6 @@ In this tutorial, we showed you the following:
 
 ## Next Steps
 
-- [EC2 Linux WebServer]({{< relref "ec2-webserver" >}})
-- [Containers on ECS Fargate]({{< relref "ecs-fargate" >}})
-- [Serve a Static Website from S3]({{< relref "s3-website" >}})
+- [EC2 Linux WebServer]({{< prelref "ec2-webserver" >}})
+- [Containers on ECS Fargate]({{< prelref "ecs-fargate" >}})
+- [Serve a Static Website from S3]({{< prelref "s3-website" >}})

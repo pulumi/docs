@@ -96,7 +96,7 @@ will it proceed (with a full audit history):
     ...
 
 Learn more about working with Pulumi and Google Cloud infrastructure in
-this [GCE Web Server]({{< relref "/docs/tutorials/gcp/gce-webserver" >}})
+this [GCE Web Server]({{< prelref "/docs/tutorials/gcp/gce-webserver" >}})
 tutorial.
 
 ## Working with Kubernetes and Google Container Engine (GKE)
@@ -160,13 +160,13 @@ k8s_cluster = Cluster('gke-cluster',
 ```
 
 Learn more about using Pulumi with Kubernetes and GKE in this
-[Hello GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}) tutorial.
+[Hello GKE]({{< prelref "/docs/tutorials/kubernetes/gke" >}}) tutorial.
 
 ## Super Simple Serverless with Google Cloud Functions
 
 Serverless has never been simpler than it is with Pulumi + Google Cloud
 Functions. Thanks to Pulumi's
-["magic functions"]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}),
+["magic functions"]({{< prelref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}),
 we can write callbacks in our language of choice, using a natural
 event-driven style, and Pulumi will handle the rest.
 
@@ -196,7 +196,7 @@ requests.onMessagePublished("newMessage", (data) => {
 ```
 
 And for quick inner loop development, the
-[`pulumi logs`]({{< relref "unified-logs-with-pulumi-logs" >}})
+[`pulumi logs`]({{< prelref "unified-logs-with-pulumi-logs" >}})
 command supports pulling logs for your Google Cloud Functions from
 StackDriver, aggregating all compute logs in your program into one
 unified stream:
@@ -222,7 +222,7 @@ lines to your CI/CD system.
 
 For teams working with Google Cloud Build, Pulumi deployments can be
 integrated into your continuous delivery with just
-[a few steps]({{< relref "/docs/guides/continuous-delivery/google-cloud-build" >}}). And
+[a few steps]({{< prelref "/docs/guides/continuous-delivery/google-cloud-build" >}}). And
 for teams working with GitHub, Pulumi's GitHub App gives you rich
 feedback on what changes will be deployed as part of a Pull Request, so
 you can see and approve infrastructure changes before they happen:
@@ -230,7 +230,7 @@ you can see and approve infrastructure changes before they happen:
 ![Pulumi in a Pull Request](./pulumi_pr.png)
 
 Learn more about integrating Pulumi with CI/CD in our
-[continuous delivery]({{< relref "/docs/guides/continuous-delivery" >}}) documentation.
+[continuous delivery]({{< prelref "/docs/guides/continuous-delivery" >}}) documentation.
 
 ## Managing Deployment with the Pulumi Console
 
@@ -263,9 +263,9 @@ Pulumi is free and open source. You can get started with Pulumi today.
 Here are a few resources to learn more about working with Pulumi and
 GCP:
 
-- [Google Cloud Platform Getting Started Guide]({{< relref "/docs/get-started/gcp" >}})
-- [GKE Tutorial]({{< relref "/docs/tutorials/kubernetes/gke" >}})
-- [GCE Tutorial]({{< relref "/docs/tutorials/gcp/gce-webserver" >}})
+- [Google Cloud Platform Getting Started Guide]({{< prelref "/docs/get-started/gcp" >}})
+- [GKE Tutorial]({{< prelref "/docs/tutorials/kubernetes/gke" >}})
+- [GCE Tutorial]({{< prelref "/docs/tutorials/gcp/gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
 - [Pulumi Community Slack](https://slack.pulumi.com/)

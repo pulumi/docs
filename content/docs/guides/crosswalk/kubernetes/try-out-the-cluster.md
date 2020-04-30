@@ -11,7 +11,7 @@ menu:
 {{< chooser cloud "aws,azure,gcp" / >}}
 
 After the cluster is created with a Pulumi update, there will be
-[outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) with fields like the cluster's `kubeconfig` file
+[outputs]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) with fields like the cluster's `kubeconfig` file
 contents, and its cluster name for reference.
 
 {{% choosable cloud aws %}}
@@ -182,10 +182,10 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 
 <!-- markdownlint-disable url -->
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
-[aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
-[aws-devs-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-developers" >}}
+[aws-admin-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
+[aws-devs-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-developers" >}}
 [aws-cluster-config-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
-[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+[crosswalk-configure-access]: {{< prelref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
@@ -228,9 +228,9 @@ $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
 <!-- markdownlint-disable url -->
-[azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
+[azure-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
 [aks-cluster-roles]: https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access#available-cluster-roles-permissions
-[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+[crosswalk-configure-access]: {{< prelref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 <!-- markdownlint-enable url -->
 
 {{% /choosable %}}
@@ -272,9 +272,9 @@ $ pulumi stack output --show-secrets kubeconfig > kubeconfig.json
 $ export KUBECONFIG=`pwd`/kubeconfig.json
 ```
 
-[gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
-[gcp-devs-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-developers" >}}
-[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+[gcp-admin-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
+[gcp-devs-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-developers" >}}
+[crosswalk-configure-access]: {{< prelref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 
 {{% /choosable %}}
 

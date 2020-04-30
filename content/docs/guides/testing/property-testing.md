@@ -8,7 +8,7 @@ menu:
     parent: testing
 ---
 
-[Policy as Code]({{< relref "../crossguard" >}}) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. Typically, policy packs would run across multiple projects and stacks to apply organization-wide rules.
+[Policy as Code]({{< prelref "../crossguard" >}}) (also known as "CrossGuard") is Pulumi's offering to set guardrails and enforce compliance for cloud resources. Typically, policy packs would run across multiple projects and stacks to apply organization-wide rules.
 
 **Property Testing** repurposes the power of policy definitions for developers to define invariants, or properties, that must hold for a specific stack they are working on. While Policy as Code and Property Testing both use the same technology, the goals and workflows are different.
 

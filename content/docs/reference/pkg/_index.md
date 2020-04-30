@@ -21,13 +21,13 @@ Kubernetes cluster, and building and publishing containers to private registries
 Reference documentation and examples for major cloud providers.
 
 <div class="tiles">
-    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/aws" >}}">
+    <a class="tile flex-1 p-8" href="{{< prelref "/docs/reference/pkg/aws" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
     </a>
-    <a class="tile flex-1 p-8 md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
+    <a class="tile flex-1 p-8 md:mx-4 my-4 md:my-0" href="{{< prelref "/docs/reference/pkg/azure" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
     </a>
-    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/gcp" >}}">
+    <a class="tile flex-1 p-8" href="{{< prelref "/docs/reference/pkg/gcp" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
 </div>
@@ -47,17 +47,17 @@ configuration, and other components directly. Additional general-purpose package
 used across all cloud platforms:
 
 {{% choosable language "javascript,typescript" %}}
-* [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
-* [**Docker** (`@pulumi/docker`)]({{< relref "nodejs/pulumi/docker" >}})
-* [**Policy** (`@pulumi/policy`)]({{< relref "nodejs/pulumi/policy" >}})
-* [**Random** (`@pulumi/random`)]({{< relref "nodejs/pulumi/random" >}})
+* [**Pulumi SDK** (`@pulumi/pulumi`)]({{< prelref "nodejs/pulumi/pulumi" >}})
+* [**Docker** (`@pulumi/docker`)]({{< prelref "nodejs/pulumi/docker" >}})
+* [**Policy** (`@pulumi/policy`)]({{< prelref "nodejs/pulumi/policy" >}})
+* [**Random** (`@pulumi/random`)]({{< prelref "nodejs/pulumi/random" >}})
 {{% /choosable %}}
 
 {{% choosable language python %}}
-* [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
-* [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
-* [**Policy** (`pulumi_policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "python/pulumi_policy" >}})
-* [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
+* [**Pulumi SDK** (`pulumi`)]({{< prelref "python/pulumi" >}})
+* [**Docker** (`pulumi_docker`)]({{< prelref "python/pulumi_docker" >}})
+* [**Policy** (`pulumi_policy`) <span class="badge badge-preview">PREVIEW</span>]({{< prelref "python/pulumi_policy" >}})
+* [**Random** (`pulumi_random`)]({{< prelref "python/pulumi_random" >}})
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -76,86 +76,86 @@ used across all cloud platforms:
 Each cloud vendor has a dedicated package for deploying resources to it:
 
 {{% choosable language "javascript,typescript" %}}
-* [**AWS** (`@pulumi/aws`)]({{< relref "nodejs/pulumi/aws" >}})
-    * [**AWS Extensions** (`@pulumi/awsx`)]({{< relref "nodejs/pulumi/awsx" >}}) - simpler interfaces for common AWS patterns
-    * [**AWS EKS Cluster** (`@pulumi/eks`)]({{< relref "nodejs/pulumi/eks" >}}) - simpler interface for working with AWS EKS
-* [**Azure** (`@pulumi/azure`)]({{< relref "nodejs/pulumi/azure" >}})
-    * [**Azure Active Directory** (`@pulumi/azuread`)]({{< relref "nodejs/pulumi/azuread" >}})
-* [**Google Cloud** (`@pulumi/gcp`)]({{< relref "nodejs/pulumi/gcp" >}})
-* [**Kubernetes** (`@pulumi/kubernetes`)]({{< relref "nodejs/pulumi/kubernetes" >}})
-    * [**Kubernetes Extensions** (`@pulumi/kubernetesx`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/kubernetesx" >}}) - simpler interface for working with Kubernetes
+* [**AWS** (`@pulumi/aws`)]({{< prelref "nodejs/pulumi/aws" >}})
+    * [**AWS Extensions** (`@pulumi/awsx`)]({{< prelref "nodejs/pulumi/awsx" >}}) - simpler interfaces for common AWS patterns
+    * [**AWS EKS Cluster** (`@pulumi/eks`)]({{< prelref "nodejs/pulumi/eks" >}}) - simpler interface for working with AWS EKS
+* [**Azure** (`@pulumi/azure`)]({{< prelref "nodejs/pulumi/azure" >}})
+    * [**Azure Active Directory** (`@pulumi/azuread`)]({{< prelref "nodejs/pulumi/azuread" >}})
+* [**Google Cloud** (`@pulumi/gcp`)]({{< prelref "nodejs/pulumi/gcp" >}})
+* [**Kubernetes** (`@pulumi/kubernetes`)]({{< prelref "nodejs/pulumi/kubernetes" >}})
+    * [**Kubernetes Extensions** (`@pulumi/kubernetesx`) <span class="badge badge-preview">PREVIEW</span>]({{< prelref "nodejs/pulumi/kubernetesx" >}}) - simpler interface for working with Kubernetes
 
-* [**Aiven** (`@pulumi/aiven`)]({{< relref "nodejs/pulumi/aiven" >}})
-* [**Alibaba Cloud** (`@pulumi/alicloud`)]({{< relref "nodejs/pulumi/alicloud" >}})
-* [**CloudAMQP** (`@pulumi/cloudamqp`)]({{< relref "nodejs/pulumi/cloudamqp" >}})
-* [**Cloudflare** (`@pulumi/cloudflare`)]({{< relref "nodejs/pulumi/cloudflare" >}})
-* [**HashiCorp Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
-* [**Datadog** (`@pulumi/datadog`)]({{< relref "nodejs/pulumi/datadog" >}})
-* [**DigitalOcean** (`@pulumi/digitalocean`)]({{< relref "nodejs/pulumi/digitalocean" >}})
-* [**DNSimple** (`@pulumi/dnsimple`)]({{< relref "nodejs/pulumi/dnsimple" >}})
-* [**Fastly** (`@pulumi/fastly`)]({{< relref "nodejs/pulumi/fastly" >}})
-* [**F5 BigIP** (`@pulumi/f5bigip`)]({{< relref "nodejs/pulumi/f5bigip" >}})
-* [**GitHub** (`@pulumi/github`)]({{< relref "nodejs/pulumi/github" >}})
-* [**GitLab** (`@pulumi/gitlab`)]({{< relref "nodejs/pulumi/gitlab" >}})
-* [**Kafka** (`@pulumi/kafka`)]({{< relref "nodejs/pulumi/kafka" >}})
-* [**Keycloak** (`@pulumi/keycloak`)]({{< relref "nodejs/pulumi/keycloak" >}})
-* [**Linode** (`@pulumi/linode`)]({{< relref "nodejs/pulumi/linode" >}})
-* [**Mailgun** (`@pulumi/mailgun`)]({{< relref "nodejs/pulumi/mailgun" >}})
-* [**MongoDB Atlas** (`@pulumi/mongodbatlas`)]({{< relref "nodejs/pulumi/mongodbatlas" >}})
-* [**MySQL** (`@pulumi/mysql`)]({{< relref "nodejs/pulumi/mysql" >}})
-* [**New Relic** (`@pulumi/newrelic`)]({{< relref "nodejs/pulumi/newrelic" >}})
-* [**Okta** (`@pulumi/okta`)]({{< relref "nodejs/pulumi/okta" >}})
-* [**OpenStack** (`@pulumi/openstack`)]({{< relref "nodejs/pulumi/openstack" >}})
-* [**Packet** (`@pulumi/packet`)]({{< relref "nodejs/pulumi/packet" >}})
-* [**PostgreSQL** (`@pulumi/postgresql`)]({{< relref "nodejs/pulumi/postgresql" >}})
-* [**RabbitMQ** (`@pulumi/rabbitmq`)]({{< relref "nodejs/pulumi/rabbitmq" >}})
-* [**Rancher2** (`@pulumi/rancher2`)]({{< relref "nodejs/pulumi/rancher2" >}})
-* [**SignalFX** (`@pulumi/signalfx`)]({{< relref "nodejs/pulumi/signalfx" >}})
-* [**SpotInst** (`@pulumi/spotinst`)]({{< relref "nodejs/pulumi/spotinst" >}})
-* [**Terraform** (`@pulumi/terraform`)]({{< relref "nodejs/pulumi/terraform" >}})
-* [**TLS** (`@pulumi/tls`)]({{< relref "nodejs/pulumi/tls" >}})
-* [**Hashicorp Vault** (`@pulumi/vault`)]({{< relref "nodejs/pulumi/vault" >}})
-* [**vSphere** (`@pulumi/vsphere`)]({{< relref "nodejs/pulumi/vsphere" >}})
+* [**Aiven** (`@pulumi/aiven`)]({{< prelref "nodejs/pulumi/aiven" >}})
+* [**Alibaba Cloud** (`@pulumi/alicloud`)]({{< prelref "nodejs/pulumi/alicloud" >}})
+* [**CloudAMQP** (`@pulumi/cloudamqp`)]({{< prelref "nodejs/pulumi/cloudamqp" >}})
+* [**Cloudflare** (`@pulumi/cloudflare`)]({{< prelref "nodejs/pulumi/cloudflare" >}})
+* [**HashiCorp Consul** (`@pulumi/consul`)]({{< prelref "nodejs/pulumi/consul" >}})
+* [**Datadog** (`@pulumi/datadog`)]({{< prelref "nodejs/pulumi/datadog" >}})
+* [**DigitalOcean** (`@pulumi/digitalocean`)]({{< prelref "nodejs/pulumi/digitalocean" >}})
+* [**DNSimple** (`@pulumi/dnsimple`)]({{< prelref "nodejs/pulumi/dnsimple" >}})
+* [**Fastly** (`@pulumi/fastly`)]({{< prelref "nodejs/pulumi/fastly" >}})
+* [**F5 BigIP** (`@pulumi/f5bigip`)]({{< prelref "nodejs/pulumi/f5bigip" >}})
+* [**GitHub** (`@pulumi/github`)]({{< prelref "nodejs/pulumi/github" >}})
+* [**GitLab** (`@pulumi/gitlab`)]({{< prelref "nodejs/pulumi/gitlab" >}})
+* [**Kafka** (`@pulumi/kafka`)]({{< prelref "nodejs/pulumi/kafka" >}})
+* [**Keycloak** (`@pulumi/keycloak`)]({{< prelref "nodejs/pulumi/keycloak" >}})
+* [**Linode** (`@pulumi/linode`)]({{< prelref "nodejs/pulumi/linode" >}})
+* [**Mailgun** (`@pulumi/mailgun`)]({{< prelref "nodejs/pulumi/mailgun" >}})
+* [**MongoDB Atlas** (`@pulumi/mongodbatlas`)]({{< prelref "nodejs/pulumi/mongodbatlas" >}})
+* [**MySQL** (`@pulumi/mysql`)]({{< prelref "nodejs/pulumi/mysql" >}})
+* [**New Relic** (`@pulumi/newrelic`)]({{< prelref "nodejs/pulumi/newrelic" >}})
+* [**Okta** (`@pulumi/okta`)]({{< prelref "nodejs/pulumi/okta" >}})
+* [**OpenStack** (`@pulumi/openstack`)]({{< prelref "nodejs/pulumi/openstack" >}})
+* [**Packet** (`@pulumi/packet`)]({{< prelref "nodejs/pulumi/packet" >}})
+* [**PostgreSQL** (`@pulumi/postgresql`)]({{< prelref "nodejs/pulumi/postgresql" >}})
+* [**RabbitMQ** (`@pulumi/rabbitmq`)]({{< prelref "nodejs/pulumi/rabbitmq" >}})
+* [**Rancher2** (`@pulumi/rancher2`)]({{< prelref "nodejs/pulumi/rancher2" >}})
+* [**SignalFX** (`@pulumi/signalfx`)]({{< prelref "nodejs/pulumi/signalfx" >}})
+* [**SpotInst** (`@pulumi/spotinst`)]({{< prelref "nodejs/pulumi/spotinst" >}})
+* [**Terraform** (`@pulumi/terraform`)]({{< prelref "nodejs/pulumi/terraform" >}})
+* [**TLS** (`@pulumi/tls`)]({{< prelref "nodejs/pulumi/tls" >}})
+* [**Hashicorp Vault** (`@pulumi/vault`)]({{< prelref "nodejs/pulumi/vault" >}})
+* [**vSphere** (`@pulumi/vsphere`)]({{< prelref "nodejs/pulumi/vsphere" >}})
 {{% /choosable %}}
 
 {{% choosable language python %}}
-* [**AWS** (`pulumi_aws`)]({{< relref "python/pulumi_aws" >}})
-* [**Azure** (`pulumi_azure`)]({{< relref "python/pulumi_azure" >}})
-    * [**Azure Active Directory** (`pulumi_azuread`)]({{< relref "python/pulumi_azuread" >}})
-* [**Google Cloud** (`pulumi_gcp`)]({{< relref "python/pulumi_gcp" >}})
-* [**Kubernetes** (`pulumi_kubernetes`)]({{< relref "python/pulumi_kubernetes" >}})
+* [**AWS** (`pulumi_aws`)]({{< prelref "python/pulumi_aws" >}})
+* [**Azure** (`pulumi_azure`)]({{< prelref "python/pulumi_azure" >}})
+    * [**Azure Active Directory** (`pulumi_azuread`)]({{< prelref "python/pulumi_azuread" >}})
+* [**Google Cloud** (`pulumi_gcp`)]({{< prelref "python/pulumi_gcp" >}})
+* [**Kubernetes** (`pulumi_kubernetes`)]({{< prelref "python/pulumi_kubernetes" >}})
 
-* [**Aiven** (`pulumi_aiven`)]({{< relref "python/pulumi_aiven" >}})
-* [**Alibaba Cloud** (`pulumi_alicloud`)]({{< relref "python/pulumi_alicloud" >}})
-* [**CloudAMQP** (`pulumi_cloudamqp`)]({{< relref "python/pulumi_cloudamqp" >}})
-* [**Cloudflare** (`pulumi_cloudflare`)]({{< relref "python/pulumi_cloudflare" >}})
-* [**HashiCorp Consul** (`pulumi_consul`)]({{< relref "python/pulumi_consul" >}})
-* [**Datadog** (`pulumi_datadog`)]({{< relref "python/pulumi_datadog" >}})
-* [**DigitalOcean** (`pulumi_digitalocean`)]({{< relref "python/pulumi_digitalocean" >}})
-* [**DNSimple** (`pulumi_dnsimple`)]({{< relref "python/pulumi_dnsimple" >}})
-* [**Fastly** (`pulumi_fastly`)]({{< relref "python/pulumi_fastly" >}})
-* [**F5 BigIP** (`pulumi_f5bigip`)]({{< relref "python/pulumi_f5bigip" >}})
-* [**GitHub** (`pulumi_github`)]({{< relref "python/pulumi_github" >}})
-* [**GitLab** (`pulumi_gitlab`)]({{< relref "python/pulumi_gitlab" >}})
-* [**Kafka** (`pulumi_kafka`)]({{< relref "python/pulumi_kafka" >}})
-* [**Keycloak** (`pulumi_keycloak`)]({{< relref "python/pulumi_keycloak" >}})
-* [**Linode** (`pulumi_linode`)]({{< relref "python/pulumi_linode" >}})
-* [**Mailgun** (`pulumi_mailgun`)]({{< relref "python/pulumi_mailgun" >}})
-* [**MongoDB Atlas** (`pulumi_mongodbatlas`)]({{< relref "python/pulumi_mongodbatlas" >}})
-* [**MySQL** (`pulumi_mysql`)]({{< relref "python/pulumi_mysql" >}})
-* [**New Relic** (`pulumi_newrelic`)]({{< relref "python/pulumi_newrelic" >}})
-* [**Okta** (`pulumi_okta`)]({{< relref "python/pulumi_okta" >}})
-* [**OpenStack** (`pulumi_openstack`)]({{< relref "python/pulumi_openstack" >}})
-* [**Packet** (`pulumi_packet`)]({{< relref "python/pulumi_packet" >}})
-* [**PostgreSQL** (`pulumi_postgresql`)]({{< relref "python/pulumi_postgresql" >}})
-* [**RabbitMQ** (`pulumi_rabbitmq`)]({{< relref "python/pulumi_rabbitmq" >}})
-* [**Rancher2** (`pulumi_rancher2`)]({{< relref "python/pulumi_rancher2" >}})
-* [**SignalFX** (`pulumi_signalfx`)]({{< relref "python/pulumi_signalfx" >}})
-* [**SpotInst** (`pulumi_spotinst`)]({{< relref "python/pulumi_spotinst" >}})
-* [**Terraform** (`pulumi_terraform`)]({{< relref "python/pulumi_terraform" >}})
-* [**TLS** (`pulumi_tls`)]({{< relref "python/pulumi_tls" >}})
-* [**Hashicorp Vault** (`pulumi_vault`)]({{< relref "python/pulumi_vault" >}})
-* [**vSphere** (`pulumi_vsphere`)]({{< relref "python/pulumi_vsphere" >}})
+* [**Aiven** (`pulumi_aiven`)]({{< prelref "python/pulumi_aiven" >}})
+* [**Alibaba Cloud** (`pulumi_alicloud`)]({{< prelref "python/pulumi_alicloud" >}})
+* [**CloudAMQP** (`pulumi_cloudamqp`)]({{< prelref "python/pulumi_cloudamqp" >}})
+* [**Cloudflare** (`pulumi_cloudflare`)]({{< prelref "python/pulumi_cloudflare" >}})
+* [**HashiCorp Consul** (`pulumi_consul`)]({{< prelref "python/pulumi_consul" >}})
+* [**Datadog** (`pulumi_datadog`)]({{< prelref "python/pulumi_datadog" >}})
+* [**DigitalOcean** (`pulumi_digitalocean`)]({{< prelref "python/pulumi_digitalocean" >}})
+* [**DNSimple** (`pulumi_dnsimple`)]({{< prelref "python/pulumi_dnsimple" >}})
+* [**Fastly** (`pulumi_fastly`)]({{< prelref "python/pulumi_fastly" >}})
+* [**F5 BigIP** (`pulumi_f5bigip`)]({{< prelref "python/pulumi_f5bigip" >}})
+* [**GitHub** (`pulumi_github`)]({{< prelref "python/pulumi_github" >}})
+* [**GitLab** (`pulumi_gitlab`)]({{< prelref "python/pulumi_gitlab" >}})
+* [**Kafka** (`pulumi_kafka`)]({{< prelref "python/pulumi_kafka" >}})
+* [**Keycloak** (`pulumi_keycloak`)]({{< prelref "python/pulumi_keycloak" >}})
+* [**Linode** (`pulumi_linode`)]({{< prelref "python/pulumi_linode" >}})
+* [**Mailgun** (`pulumi_mailgun`)]({{< prelref "python/pulumi_mailgun" >}})
+* [**MongoDB Atlas** (`pulumi_mongodbatlas`)]({{< prelref "python/pulumi_mongodbatlas" >}})
+* [**MySQL** (`pulumi_mysql`)]({{< prelref "python/pulumi_mysql" >}})
+* [**New Relic** (`pulumi_newrelic`)]({{< prelref "python/pulumi_newrelic" >}})
+* [**Okta** (`pulumi_okta`)]({{< prelref "python/pulumi_okta" >}})
+* [**OpenStack** (`pulumi_openstack`)]({{< prelref "python/pulumi_openstack" >}})
+* [**Packet** (`pulumi_packet`)]({{< prelref "python/pulumi_packet" >}})
+* [**PostgreSQL** (`pulumi_postgresql`)]({{< prelref "python/pulumi_postgresql" >}})
+* [**RabbitMQ** (`pulumi_rabbitmq`)]({{< prelref "python/pulumi_rabbitmq" >}})
+* [**Rancher2** (`pulumi_rancher2`)]({{< prelref "python/pulumi_rancher2" >}})
+* [**SignalFX** (`pulumi_signalfx`)]({{< prelref "python/pulumi_signalfx" >}})
+* [**SpotInst** (`pulumi_spotinst`)]({{< prelref "python/pulumi_spotinst" >}})
+* [**Terraform** (`pulumi_terraform`)]({{< prelref "python/pulumi_terraform" >}})
+* [**TLS** (`pulumi_tls`)]({{< prelref "python/pulumi_tls" >}})
+* [**Hashicorp Vault** (`pulumi_vault`)]({{< prelref "python/pulumi_vault" >}})
+* [**vSphere** (`pulumi_vsphere`)]({{< prelref "python/pulumi_vsphere" >}})
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -241,7 +241,7 @@ Pulumi offers a highly productive, cloud-agnostic package for container and serv
 programming in the `@pulumi/cloud` package which currently allows writing applications
 once and deploying to either AWS or Azure.
 
-* [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/cloud" >}})
+* [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< prelref "nodejs/pulumi/cloud" >}})
 {{% /choosable %}}
 
 {{% choosable language "python,go,csharp" %}}

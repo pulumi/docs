@@ -3,11 +3,11 @@ title: Project and Stack Management
 meta_desc: An overivew of Project and Stack Management within the Pulumi Cloud Service.
 ---
 
-> While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "stack-permissions" >}}).
+> While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< prelref "stack-permissions" >}}).
 
 The Pulumi Console automatically manages deployment state and gives you a comprehensive view of your projects and stacks. In your browser, navigate to [app.pulumi.com](https://app.pulumi.com). Once signed in, you can:
 
-* Create new projects and get detailed instructions for deploying your stack via the [Pulumi CLI]({{< relref "/docs/reference/cli" >}})
+* Create new projects and get detailed instructions for deploying your stack via the [Pulumi CLI]({{< prelref "/docs/reference/cli" >}})
 * View your organization stacks
 * View stack outputs and configurations
 * Review your stack activity, resources, and settings
@@ -20,13 +20,13 @@ If you have been added to a Pulumi organization with no existing projects, the C
 
 Click **Create Project** to get started with your project. The confirmation page gives you installation, setup, and stack deployment instructions.
 
-To create a new project via the CLI, see [pulumi new]({{< relref "/docs/reference/cli/pulumi_new" >}}).
+To create a new project via the CLI, see [pulumi new]({{< prelref "/docs/reference/cli/pulumi_new" >}}).
 
 {{< get-started-note >}}
 
 ## Managing your Stacks
 
-Every Pulumi program is deployed to a [stack]({{< relref "/docs/intro/concepts/stack" >}}). If you have followed the instructions after creating your project, you can view your newly-created stack in the Pulumi Console unless you have [explicitly opted out]({{< relref "/docs/intro/concepts/state" >}}). The Pulumi Console provides safe locking so that your resource state can never get corrupted by a concurrent update.
+Every Pulumi program is deployed to a [stack]({{< prelref "/docs/intro/concepts/stack" >}}). If you have followed the instructions after creating your project, you can view your newly-created stack in the Pulumi Console unless you have [explicitly opted out]({{< prelref "/docs/intro/concepts/state" >}}). The Pulumi Console provides safe locking so that your resource state can never get corrupted by a concurrent update.
 
 ### Viewing your organization stacks
 
@@ -34,7 +34,7 @@ Once signed in, select your organization from the drop-down list on the upper le
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/organization-stacks.png" alt="Stack Outputs and Configuration">
 
-The **Stacks** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< relref "/docs/intro/concepts/project" >}}) but you may group them by [tag]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}). Click on the stack name to drill into a specific stack.
+The **Stacks** tab displays a card-based view of your stacks with relevant details including the project name and description, language, stack name, last update information, and resource count. This example shows an organization backed by GitHub and sorts the stacks by their GitHub repositories. By default, stacks are grouped by [project]({{< prelref "/docs/intro/concepts/project" >}}) but you may group them by [tag]({{< prelref "/docs/intro/concepts/stack#stack-tags" >}}). Click on the stack name to drill into a specific stack.
 
 ### Viewing a specific stack
 
@@ -46,11 +46,11 @@ Clicking on a specific stack update takes you to the Stack tab. This tab display
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/stack-outputs-and-configuration.png" alt="Stack Outputs and Configuration">
 
-You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with your workflow, such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), you should also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
+You can see other details such as who applied the update and when, as well as counts of added, updated, and unchanged resources. If your stack is integrated with your workflow, such as [GitHub Actions]({{< prelref "/docs/guides/continuous-delivery/github-actions" >}}), you should also see useful links to data like your Git commit hash, mapped branch, and pull request ID.
 
 ##### Stack tags
 
-Custom [stack tags]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}) can be managed within the Stack tab. Click the **NEW** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
+Custom [stack tags]({{< prelref "/docs/intro/concepts/stack#stack-tags" >}}) can be managed within the Stack tab. Click the **NEW** button to create a new tag, the pencil to edit an existing tag, or the trash can to permanently delete a tag.
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/stack-tags.png" alt="Stack Tags">
 
@@ -92,8 +92,8 @@ The Resource graph view does not include a search and filtering feature, but you
 
 ### Deleting a stack
 
-When drilling into a specific stack, organization members with [sufficient permissions]({{< relref "/docs/intro/console/collaboration/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
+When drilling into a specific stack, organization members with [sufficient permissions]({{< prelref "/docs/intro/console/collaboration/organization-roles#stack-deletion" >}}) have the additional option of being able to delete the stack. Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
 
 ## Next Steps
 
-* [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})
+* [Continuous Delivery]({{< prelref "/docs/guides/continuous-delivery" >}})

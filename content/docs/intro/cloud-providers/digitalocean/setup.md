@@ -4,12 +4,12 @@ meta_desc: This page provides an overview on how to configure credentials for th
 aliases: ["/docs/reference/clouds/digitalocean/setup/"]
 ---
 
-The [Pulumi DigitalOcean provider]({{< relref "./" >}}) uses the DigitalOcean SDK to manage and provision resources.
+The [Pulumi DigitalOcean provider]({{< prelref "./" >}}) uses the DigitalOcean SDK to manage and provision resources.
 
 > Pulumi relies on the DigitalOcean SDK to authenticate requests from your computer to DigitalOcean. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi DigitalOcean Provider]({{< relref "./" >}}) needs to be configured with DigitalOcean credentials
+The [Pulumi DigitalOcean Provider]({{< prelref "./" >}}) needs to be configured with DigitalOcean credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

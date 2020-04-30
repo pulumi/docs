@@ -19,7 +19,7 @@ Similarly, Pulumi provides multiple testing styles for cloud programs:
 
 The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**]({{< relref "./unit" >}})    | [**Property Tests**]({{< relref "./property-testing" >}})  | [**Integration Tests**]({{< relref "./integration" >}})  |
+|                                | [**Unit Tests**]({{< prelref "./unit" >}})    | [**Property Tests**]({{< prelref "./property-testing" >}})  | [**Integration Tests**]({{< prelref "./integration" >}})  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |
@@ -37,17 +37,17 @@ Unit tests are authored in the same language as the Pulumi program under test. Y
 
 Because cloud resources are not created, you can't write a test that would evaluate the behavior of infrastructure. For example, you can't make HTTP requests to endpoints, because there's no webserver to serve them.
 
-[**Learn more and get started with Unit Testing**]({{< relref "./unit" >}}).
+[**Learn more and get started with Unit Testing**]({{< prelref "./unit" >}}).
 
 ## Property Testing
 
-Property tests are based on [Policy as Code]({{< relref "../crossguard" >}}) (also known as "CrossGuard"), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, CrossGuard enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
+Property tests are based on [Policy as Code]({{< prelref "../crossguard" >}}) (also known as "CrossGuard"), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, CrossGuard enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
 
 Property tests run inside the Pulumi CLI before and after infrastructure provisioning. In contrast to "black-box" integration testing, policy rules have access to all input and output values of all cloud resources in the stack. As opposed to unit testing, property tests can evaluate real values returned from the cloud provider instead of the mocked ones.
 
 Property tests can run against any cloud environment: it can be a persistent "acceptance" stack, an ephemeral cloud environment created for each pull request, or a combination of those.
 
-[**Learn more and get started with Property Testing**]({{< relref "./property-testing" >}}).
+[**Learn more and get started with Property Testing**]({{< prelref "./property-testing" >}}).
 
 ## Integration Testing
 
@@ -59,7 +59,7 @@ The great advantage of integration tests is the ability to test the actual cloud
 
 Depending on the type of resources and frequency of testing, even short-lived ephemeral environments may incur notable charges from the cloud provider. Be sure to plan accordingly and measure frequently.
 
-[**Learn more and get started with Integration Testing**]({{< relref "./integration" >}}).
+[**Learn more and get started with Integration Testing**]({{< prelref "./integration" >}}).
 
 ## Examples
 

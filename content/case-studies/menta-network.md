@@ -89,8 +89,8 @@ entire development lifecycle, container registry and continuous integration / co
 deployment (CI/CD) process. Pulumi provided a unique alternative that allowed engineers to
 define both their load testing application and associated infrastructure in the same
 language and tooling --- perfectly fitting infrastructure into their existing [GitLab CI/CD
-pipeline]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}). [Support for
-GitLab login]({{< relref "/blog/welcoming-gitlab-users-to-pulumi" >}}) further simplified
+pipeline]({{< prelref "/docs/guides/continuous-delivery/gitlab-ci" >}}). [Support for
+GitLab login]({{< prelref "/blog/welcoming-gitlab-users-to-pulumi" >}}) further simplified
 engineering workflows.
 
 > "Using Pulumi and GitLab provides the Menta team with a simple and robust platform for

@@ -14,19 +14,19 @@ aliases: ["/docs/reference/clouds/azure/"]
 
 The Azure provider for Pulumi can be used to provision any of the cloud resources available in [Azure](https://azure.microsoft.com/en-us/) via Azure Resource Manager (ARM).  The Azure provider must be configured with credentials to deploy and update resources in Azure.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/azure" >}}) for complete details of the available Azure provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/azure" >}}) for complete details of the available Azure provider APIs.
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< prelref "/docs/intro/cloud-providers/azure/setup" >}}) for details.
 
 ## Getting Started
 
-The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/docs/get-started/azure" >}}) guide.
+The quickest way to get started with Azure is to follow the [Get Started]({{< prelref "/docs/get-started/azure" >}}) guide.
 
 Additionally, a tutorial is available to follow:
 
-* [Azure Container Instances Web Server]({{< relref "/docs/tutorials/azure/container-webserver" >}}): Create an NGINX web server Azure Container Instance
+* [Azure Container Instances Web Server]({{< prelref "/docs/tutorials/azure/container-webserver" >}}): Create an NGINX web server Azure Container Instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

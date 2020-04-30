@@ -3,12 +3,12 @@ title: PostgreSQL Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi PostgreSQL Provider.
 ---
 
-The [Pulumi PostgreSQL provider]({{< relref "./" >}}) uses the PostgreSQL SDK to manage and provision resources.
+The [Pulumi PostgreSQL provider]({{< prelref "./" >}}) uses the PostgreSQL SDK to manage and provision resources.
 
 > Pulumi relies on the PostgreSQL SDK to authenticate requests from your computer to PostgreSQL. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi PostgreSQL Provider]({{< relref "./" >}}) needs to be configured with PostgreSQL credentials
+The [Pulumi PostgreSQL Provider]({{< prelref "./" >}}) needs to be configured with PostgreSQL credentials
 before it can be used to manage resources.
 
 ### Configuring Credentials

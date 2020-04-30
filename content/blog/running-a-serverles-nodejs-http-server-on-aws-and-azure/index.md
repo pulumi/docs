@@ -127,7 +127,7 @@ with a simpler approach for these cloud ecosystems. To further this
 goal, we've created a new API called
 [cloud.HttpServer](https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts).
 `HttpServer` is a Pulumi
-[Resource]({{< relref "/docs/intro/concepts/programming-model#resources" >}}),
+[Resource]({{< prelref "/docs/intro/concepts/programming-model#resources" >}}),
 but is designed to work well with the existing large middleware
 ecosystem out there. And critically, the same HttpServer API can be
 implemented consistently on AWS, Azure and GCP - so you can write once
@@ -242,6 +242,6 @@ the cloud at runtime! That magic, along with powerful components like
 the new HttpServer API can help make cloud applications dramatically
 simpler to write and maintain. Happy coding!
 
-You can dig in to [serverless coding with Pulumi here]({{< relref "/docs/tutorials/cloudfx/rest-api" >}}),
+You can dig in to [serverless coding with Pulumi here]({{< prelref "/docs/tutorials/cloudfx/rest-api" >}}),
 and join us on Wednesday 3rd October at 11am PDT to hear more about
 [serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM).

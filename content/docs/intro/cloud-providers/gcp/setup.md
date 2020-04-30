@@ -5,7 +5,7 @@ meta_desc: This page provides an overview on how to setup the Google Cloud
 aliases: ["/docs/reference/clouds/gcp/setup/"]
 ---
 
-[Pulumi Google Cloud Platform Provider]: {{< relref "./" >}}
+[Pulumi Google Cloud Platform Provider]: {{< prelref "./" >}}
 
 The [Pulumi Google Cloud Platform Provider] needs to be configured with Google credentials
 before it can be used to create resources.
@@ -18,7 +18,7 @@ $ gcloud config set project <YOUR_GCP_PROJECT_HERE>
 $ gcloud auth application-default login
 ```
 
-If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account" >}}) instead.
+If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< prelref "service-account" >}}) instead.
 
 ## Optional Settings
 

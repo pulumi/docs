@@ -17,10 +17,10 @@ with other developers.
 If you're an admin of a Pulumi organization, you have the
 ability to:
 
-* [Add users]({{< relref "../collaboration/organization-roles/#organization-membership" >}})
+* [Add users]({{< prelref "../collaboration/organization-roles/#organization-membership" >}})
 * Manage default stack permissions for the organization
-* Create [teams]({{< relref "../collaboration/teams" >}}) and manage their permissions
-* Assign [organization roles]({{< relref "../collaboration/organization-roles" >}}) for role-based access control (RBAC)
+* Create [teams]({{< prelref "../collaboration/teams" >}}) and manage their permissions
+* Assign [organization roles]({{< prelref "../collaboration/organization-roles" >}}) for role-based access control (RBAC)
 to your organization's stacks
 
 ## Creating a New Organization
@@ -50,8 +50,8 @@ Similarly, as soon as someone loses access to the GitHub organization, they will
 longer have access to the Pulumi organization it is backing.
 
 {{% notes %}}
-See <a href="{{< relref "organization-roles" >}}">Organization Roles</a> or
-<a href="{{< relref "accounts#adding-new-identities" >}}">Adding New Identities</a>
+See <a href="{{< prelref "organization-roles" >}}">Organization Roles</a> or
+<a href="{{< prelref "accounts#adding-new-identities" >}}">Adding New Identities</a>
 for more information.
 {{% /notes %}}
 
@@ -110,17 +110,17 @@ The Pulumi Enterprise edition provides more options for identity and access, inc
 support for
 any SAML 2.0-based identity provider.
 
-[Learn more]({{< relref "/docs/guides/saml" >}}) about configuring a SAML-based
+[Learn more]({{< prelref "/docs/guides/saml" >}}) about configuring a SAML-based
 organization on Pulumi. Or refer to one
 of our guides:
 
-* [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
-* [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
-* [Okta]({{< relref "/docs/guides/saml/okta" >}})
+* [Azure Active Directory]({{< prelref "/docs/guides/saml/aad" >}})
+* [G Suite]({{< prelref "/docs/guides/saml/gsuite" >}})
+* [Okta]({{< prelref "/docs/guides/saml/okta" >}})
 
 If you need help configuring or would like us to officially support another SAML identity
 provider,
-please [contact us]({{< relref "/about#contact-us" >}}).
+please [contact us]({{< prelref "/about#contact-us" >}}).
 
 ## Switching Organizations
 
@@ -141,13 +141,13 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management"
+| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< prelref "../collaboration/project-and-stack-management"
 >}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
-| Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
-| Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
-| Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
+| Teams | A [Team Pro]({{< prelref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
+| Webhooks | A [Team Pro]({{< prelref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
+| Settings | A place for you to manage your organization settings including subscription and payment information and history, base permissions to all of the organization's stacks (including stack creation and deletion), and links to Pulumi's [continuous delivery guides]({{< prelref "/docs/guides/continuous-delivery" >}}). |
 
 ## Next Steps
 
-* [Organization Roles]({{< relref "../collaboration/organization-roles" >}})
+* [Organization Roles]({{< prelref "../collaboration/organization-roles" >}})

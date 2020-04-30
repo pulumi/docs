@@ -40,11 +40,11 @@ These stack permissions allow users to perform the following actions:
 Stack permissions can be assigned in three different ways. The permissions granted
 from these sources are merged together, granting the highest permission available.
 
-- **Organization Settings**. An organization admin can configure [base permissions]({{< relref "organization-roles#organization-settings" >}}) for the organization's stacks, granting all members of the organization a minimum permission level.
+- **Organization Settings**. An organization admin can configure [base permissions]({{< prelref "organization-roles#organization-settings" >}}) for the organization's stacks, granting all members of the organization a minimum permission level.
 - **Stack Creator**. The user who created the stack is given `ADMIN` permission, even if the organization's
   base permission for stacks is `NONE`. An organization admin can remove the stack creator by navigating to **Stack > Settings > Access** and clicking **Remove**.
-- **Team Membership**. Organization admins can grant members of a [team]({{< relref "teams" >}}) access to stacks and set their permissions.
+- **Team Membership**. Organization admins can grant members of a [team]({{< prelref "teams" >}}) access to stacks and set their permissions.
 
 ## Next Steps
 
-- [Project and Stack Management]({{< relref "project-and-stack-management" >}})
+- [Project and Stack Management]({{< prelref "project-and-stack-management" >}})

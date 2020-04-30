@@ -8,7 +8,7 @@ date: "2019-12-03"
 meta_image: "iam-aa-crossguard.png"
 ---
 
-Yesterday AWS announced an exciting new feature &mdash; [the AWS Identity and Access Management (IAM) Access Analyzer](https://aws.amazon.com/blogs/aws/identify-unintended-resource-access-with-aws-identity-and-access-management-iam-access-analyzer/) &mdash; a service powered by automated reasoning that detects potentially-insecure access to your AWS resources, including S3 Buckets, SQS Queues, Lambdas, and more. At the same time, Pulumi announced [a new policy as code solution, CrossGuard]({{< relref "/blog/announcing-crossguard-preview" >}}), that validates policies at deployment time. The question is: Can IAM Access Analyzer and Pulumi CrossGuard be combined to get the best of both solutions? The answer is Yes!
+Yesterday AWS announced an exciting new feature &mdash; [the AWS Identity and Access Management (IAM) Access Analyzer](https://aws.amazon.com/blogs/aws/identify-unintended-resource-access-with-aws-identity-and-access-management-iam-access-analyzer/) &mdash; a service powered by automated reasoning that detects potentially-insecure access to your AWS resources, including S3 Buckets, SQS Queues, Lambdas, and more. At the same time, Pulumi announced [a new policy as code solution, CrossGuard]({{< prelref "/blog/announcing-crossguard-preview" >}}), that validates policies at deployment time. The question is: Can IAM Access Analyzer and Pulumi CrossGuard be combined to get the best of both solutions? The answer is Yes!
 
 ## Fast Forward to Security By Default
 
@@ -224,4 +224,4 @@ mandatory: [iam-access-analyzer] Resource has IAM Access Analyzer errors.
 
 In this article, we've seen how to enforce AWS's new IAM Access Analyzer policies at deployment time, using Pulumi's new CrossGuard feature. This helps to catch security mistakes when you do a deployment &mdash; instead of later on, when the cost of a mistake is potentially significantly greater. Although both features are early and will evolve in the weeks to come, it's nice to see it so easy to quickly combine two features the day after they were both announced, to advance the security of your infrastructure.
 
-To give it a try, [download and install Pulumi]({{< relref "/docs/get-started" >}}), [grab the code from GitHub](https://gist.github.com/joeduffy/ecb6946d94312f96c22153d659b5dfb4), and [get started with policy as code]({{< relref "/docs/get-started/crossguard" >}}), all using free open source.
+To give it a try, [download and install Pulumi]({{< prelref "/docs/get-started" >}}), [grab the code from GitHub](https://gist.github.com/joeduffy/ecb6946d94312f96c22153d659b5dfb4), and [get started with policy as code]({{< prelref "/docs/get-started/crossguard" >}}), all using free open source.

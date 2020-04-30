@@ -3,12 +3,12 @@ title: Mailgun Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi Mailgun Provider.
 ---
 
-The [Pulumi Mailgun provider]({{< relref "./" >}}) uses the Mailgun SDK to manage and provision resources.
+The [Pulumi Mailgun provider]({{< prelref "./" >}}) uses the Mailgun SDK to manage and provision resources.
 
 > Pulumi relies on the Mailgun SDK to authenticate requests from your computer to Mailgun. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi Mailgun Provider]({{< relref "./" >}}) needs to be configured with Mailgun credentials
+The [Pulumi Mailgun Provider]({{< prelref "./" >}}) needs to be configured with Mailgun credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

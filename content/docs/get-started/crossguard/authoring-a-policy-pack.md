@@ -23,7 +23,7 @@ Python support is currently in preview.
 
 1. Install prerequisites.
 
-   - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   - [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
    - [Install Node.js](https://nodejs.org/en/download/)
 
 1. Verify your version of Pulumi.
@@ -82,7 +82,7 @@ Python support is currently in preview.
 
 1. Install prerequisites.
 
-   - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   - [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
    - [Install Python](https://www.python.org/downloads/)
 
 1. Verify your version of Pulumi.
@@ -149,7 +149,7 @@ Python support is currently in preview.
 
 {{< /chooser >}}
 
-You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices]({{< relref "/docs/guides/crossguard/best-practices" >}}) details the best practices for writing a Policy Pack.
+You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices]({{< prelref "/docs/guides/crossguard/best-practices" >}}) details the best practices for writing a Policy Pack.
 
 ## Running Locally {#running-locally}
 

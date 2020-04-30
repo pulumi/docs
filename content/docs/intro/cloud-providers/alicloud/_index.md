@@ -15,7 +15,7 @@ The Alibaba Cloud provider must be configured with credentials to deploy and upd
 
 ## Setup
 
-The Alibaba Cloud provider supports several options for providing access to Alibaba Cloud credentials.  See the [Alibaba Cloud setup page]({{< relref "setup" >}}) for details.
+The Alibaba Cloud provider supports several options for providing access to Alibaba Cloud credentials.  See the [Alibaba Cloud setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

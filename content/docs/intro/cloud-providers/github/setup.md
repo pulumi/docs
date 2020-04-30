@@ -3,12 +3,12 @@ title: GitHub Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi GitHub Provider.
 ---
 
-The [Pulumi GitHub provider]({{< relref "./" >}}) uses the GitHub SDK to manage and provision resources.
+The [Pulumi GitHub provider]({{< prelref "./" >}}) uses the GitHub SDK to manage and provision resources.
 
 > Pulumi relies on the GitHub SDK to authenticate requests from your computer to GitHub. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi GitHub Provider]({{< relref "./" >}}) needs to be configured with GitHub credentials
+The [Pulumi GitHub Provider]({{< prelref "./" >}}) needs to be configured with GitHub credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

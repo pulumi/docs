@@ -11,9 +11,9 @@ tags: ["Kubernetes"]
 <p><!-- spacer --></p>
 
 > This post is part 3 in a series on the Kubernetes API. Earlier,
-> [Part 1]({{< relref "kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images" >}})
+> [Part 1]({{< prelref "kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images" >}})
 > focused on the lifecycle of a `Pod`, and later
-> [Part 3]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}})
+> [Part 3]({{< prelref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}})
 > details how Kubernetes deployments work.
 
 Why isn't my `Pod` getting any traffic?
@@ -64,7 +64,7 @@ One of our major goals in this work was to make deploying an application
 to Kubernetes as simple as possible, by presenting a concise summary of
 this information in the CLI experience. See
 [my tweetstorm](https://twitter.com/hausdorff_space/status/1039940379301179392)
-on the subject, or [try it out]({{< relref "/topics/kubernetes" >}}) for
+on the subject, or [try it out]({{< prelref "/topics/kubernetes" >}}) for
 yourself!
 
 ![status-rich](./status-rich.gif)
@@ -136,5 +136,5 @@ enough tools to really dig into what is happening when you roll out your
 app.
 
 In the mean time, if you enjoyed this post, or are curious to see how
-this lifecycle is baked into the Pulumi CLI, [give it a spin]({{< relref "/topics/kubernetes" >}})!
+this lifecycle is baked into the Pulumi CLI, [give it a spin]({{< prelref "/topics/kubernetes" >}})!
 We'd love to have your feedback.

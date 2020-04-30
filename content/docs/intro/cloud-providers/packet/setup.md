@@ -4,12 +4,12 @@ meta_desc: This page provides an overview of how to setup the Packet.net SDK to 
 aliases: ["/docs/reference/clouds/packet/setup/"]
 ---
 
-The [Pulumi Packet provider]({{< relref "./" >}}) uses the Packet.net SDK to manage and provision resources.
+The [Pulumi Packet provider]({{< prelref "./" >}}) uses the Packet.net SDK to manage and provision resources.
 
 > Pulumi relies on the Packet.net SDK to authenticate requests from your computer to Packet.net. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi Packet.net Provider]({{< relref "./" >}}) needs to be configured with Packet.net credentials
+The [Pulumi Packet.net Provider]({{< prelref "./" >}}) needs to be configured with Packet.net credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

@@ -11,7 +11,7 @@ aliases: ["/docs/get-started/policy-as-code/enforcing-a-policy-pack/"]
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Console to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Console will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Console so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
 
-> Note: Support for publishing Policy Packs written in Python is [coming soon](https://github.com/pulumi/pulumi-policy/issues/211). Until then, Python Policy Packs can be [run locally]({{< relref "/docs/get-started/crossguard/authoring-a-policy-pack#running-locally" >}}). Policy Packs written in TypeScript/JavaScript (Node.js) can be published and applied to stacks written in any language.
+> Note: Support for publishing Policy Packs written in Python is [coming soon](https://github.com/pulumi/pulumi-policy/issues/211). Until then, Python Policy Packs can be [run locally]({{< prelref "/docs/get-started/crossguard/authoring-a-policy-pack#running-locally" >}}). Policy Packs written in TypeScript/JavaScript (Node.js) can be published and applied to stacks written in any language.
 
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
@@ -50,4 +50,4 @@ Once you’ve validated the behavior of your policies, an organization administr
 
 ## Next Steps
 
-Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide]({{< relref "/docs/guides/crossguard" >}}).
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide]({{< prelref "/docs/guides/crossguard" >}}).

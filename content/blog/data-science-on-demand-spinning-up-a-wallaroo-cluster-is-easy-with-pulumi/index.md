@@ -75,7 +75,7 @@ Let's jump into it!
 
 First of all, if you'd like to follow along (and spend some money
 provisioning EC2 servers), please
-[download and set up Pulumi]({{< relref "/docs/get-started/install" >}}).
+[download and set up Pulumi]({{< prelref "/docs/get-started/install" >}}).
 
 Next, [clone the wallaroo blog examples repo](https://github.com/WallarooLabs/wallaroo_blog_examples) and
 navigate to `provisioned-classifier`. If you followed along with the

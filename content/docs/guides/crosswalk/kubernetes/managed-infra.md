@@ -23,7 +23,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 <!-- markdownlint-disable url -->
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/02-managed-infra
-[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
+[crosswalk-aws]: {{< prelref "/docs/guides/crosswalk/aws" >}}
 [aws-managed-svcs]: https://aws.amazon.com/products/
 [aws-vpc]: https://aws.amazon.com/vpc/
 [aws-azs]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
@@ -127,12 +127,12 @@ export const publicSubnetIds = vpc.publicSubnetIds;
 export const privateSubnetIds = vpc.privateSubnetIds;
 ```
 
-[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
-[vpc]: {{< relref "/docs/guides/crosswalk/aws/vpc#setting-up-a-new-vpc" >}}
-[vpc-azs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-availability-zones-for-an-aws-vpc" >}}
-[vpc-subnets]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc" >}}
-[vpc-gw]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc" >}}
-[vpc-sg]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
+[crosswalk-aws]: {{< prelref "/docs/guides/crosswalk/aws" >}}
+[vpc]: {{< prelref "/docs/guides/crosswalk/aws/vpc#setting-up-a-new-vpc" >}}
+[vpc-azs]: {{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-availability-zones-for-an-aws-vpc" >}}
+[vpc-subnets]: {{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc" >}}
+[vpc-gw]: {{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc" >}}
+[vpc-sg]: {{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
 
 {{% /choosable %}}
 
@@ -300,10 +300,10 @@ See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 [AWS EFS docs][aws-efs] for more details.
 
 <!-- markdownlint-disable url -->
-[pulumi-efs]: {{< relref "/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks" >}}
+[pulumi-efs]: {{< prelref "/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks" >}}
 [aws-efs]: https://aws.amazon.com/efs/
-[pulumi-s3]: {{< relref "/docs/aws/s3" >}}
-[crosswalk-ecr]: {{< relref "/docs/guides/crosswalk/aws/ecr" >}}
+[pulumi-s3]: {{< prelref "/docs/aws/s3" >}}
+[crosswalk-ecr]: {{< prelref "/docs/guides/crosswalk/aws/ecr" >}}
 [aws-ecr]: https://aws.amazon.com/ecr/
 [aws-s3]: https://aws.amazon.com/s3
 <!-- markdownlint-enable url -->
@@ -445,7 +445,7 @@ const picture = new gcp.storage.BucketObject("picture", {
 {{% /choosable %}}
 
 <!-- markdownlint-disable url -->
-[crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
-[crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
+[crosswalk-cluster-svcs]: {{< prelref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
+[crosswalk-app-svcs]: {{< prelref "/docs/guides/crosswalk/kubernetes/app-services" >}}
 [k8s-pvs]: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 <!-- markdownlint-enable url -->

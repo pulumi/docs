@@ -32,7 +32,7 @@ for it. There are three ways to do this:
 
 1. [Clone an existing Pulumi example](https://github.com/pulumi/examples)
 2. [Use the New Project wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to
+3. [Download the CLI]({{< prelref "/docs/get-started/install" >}}) and run `pulumi new` to
    select a template
 
 ## Creating a Workflow
@@ -142,10 +142,10 @@ GitHub Action to communicate with the Pulumi service on your behalf.
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
 
-* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}})
+* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< prelref "/docs/intro/cloud-providers/aws/setup" >}})
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< prelref "/docs/intro/cloud-providers/azure/setup" >}})
+* `GOOGLE_CREDENTIALS` for [GCP]({{< prelref "/docs/intro/cloud-providers/gcp/setup" >}})
+* `KUBECONFIG` for [Kubernetes]({{< prelref "/docs/intro/cloud-providers/kubernetes/setup" >}})
 
 ## Try It Out!
 
@@ -160,7 +160,7 @@ deployment on the Pulumi Console with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
-For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "github-app" >}})!
+For even better Pull Request integration, make sure to also [install our GitHub App]({{< prelref "github-app" >}})!
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 
@@ -175,7 +175,7 @@ the GitHub Actions container directly.
 
 ### Pulumi GitHub App
 
-The [Pulumi GitHub App]({{< relref "github-app" >}}) is something you install on your
+The [Pulumi GitHub App]({{< prelref "github-app" >}}) is something you install on your
 GitHub organization. It allows the Pulumi service to leave comments on Pull Requests but does not give it access to your source code.
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of
@@ -278,14 +278,14 @@ stack, and then use Pull Requests to promote code between the two. This mappings
 intentionally flexible.
 
 Note that you'll need to create these stacks [in the usual
-way]({{< relref "/docs/intro/concepts/stack" >}}) using the Pulumi Console or CLI.
+way]({{< prelref "/docs/intro/concepts/stack" >}}) using the Pulumi Console or CLI.
 After setting this up, everything will be on autopilot.
 
 ## Demos and Examples
 
 To see some examples of this in action, see the following links:
 
-* [Our introductory blog post]({{< relref "continuous-delivery-to-any-cloud-using-github-actions-and-pulumi" >}})
+* [Our introductory blog post]({{< prelref "continuous-delivery-to-any-cloud-using-github-actions-and-pulumi" >}})
 * [Dockerized Ruby on Rails, in Kubernetes, with hosted Cloud SQL](https://github.com/pulumi/actions-example-gke-rails)
 * [Short 90 second video from GitHub Universe Keynote](https://www.youtube.com/watch?time_continue=56&v=59SxB2uY9E0)
 * [Short 90 second video on GitOps and Pull Request workflows](https://www.youtube.com/watch?v=MKbDVDBuKUA)

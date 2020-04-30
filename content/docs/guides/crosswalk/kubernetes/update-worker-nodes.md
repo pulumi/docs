@@ -127,7 +127,7 @@ See the official GKE [docs][gke-upgrade-docs], and [cluster autoscaler docs][gke
 For an example of migrating node groups, see the general steps outlined in [Migrating Node Groups with Zero Downtime][migrate-ng-tutorial].
 
 <!-- markdownlint-disable url -->
-[migrate-ng-tutorial]: {{< relref "/docs/tutorials/kubernetes/eks-migrate-nodegroups" >}}
+[migrate-ng-tutorial]: {{< prelref "/docs/tutorials/kubernetes/eks-migrate-nodegroups" >}}
 [k8s-stateless]: https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment
 [k8s-stateful]: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset
 [k8s-affinity]: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#inter-pod-affinity-and-anti-affinity-beta-feature

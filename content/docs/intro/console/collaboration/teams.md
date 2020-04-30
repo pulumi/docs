@@ -9,7 +9,7 @@ aliases:
 The Pulumi Console offers role-based access control (RBAC) using teams.
 
 > Note: This feature is only available to organizations using the Pulumi Team Pro or
-> Enterprise editions. To learn more about Pulumi editions, see the [pricing page]({{< relref "/pricing" >}}).
+> Enterprise editions. To learn more about Pulumi editions, see the [pricing page]({{< prelref "/pricing" >}}).
 
 ## Teams
 
@@ -43,4 +43,4 @@ stack in the team. For example, members of `network-team` may have `WRITE` acces
 
 ## Next Steps
 
-* [Stack Permissions]({{< relref "stack-permissions" >}})
+* [Stack Permissions]({{< prelref "stack-permissions" >}})

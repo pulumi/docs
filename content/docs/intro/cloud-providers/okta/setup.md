@@ -3,7 +3,7 @@ title: Okta Setup
 meta_desc: This page provides an overview on how to configure the Pulumi Okta Provider.
 ---
 
-The [Pulumi Okta provider]({{< relref "./" >}}) uses the Okta SDK to manage resources.
+The [Pulumi Okta provider]({{< prelref "./" >}}) uses the Okta SDK to manage resources.
 
 > Pulumi relies on the Okta SDK to authenticate requests from your computer to Okta. Your credentials are never sent
 > to pulumi.com.

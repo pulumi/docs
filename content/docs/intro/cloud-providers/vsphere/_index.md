@@ -13,11 +13,11 @@ aliases: ["/docs/reference/clouds/vsphere/"]
 The vSphere provider for Pulumi can be used to provision any of the cloud resources available in [vSphere](https://www.vmware.com/products/vsphere.html).
 The vSphere provider must be configured with credentials to deploy and update resources in vSphere.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/vsphere" >}}) for complete details of the available vSphere provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/vsphere" >}}) for complete details of the available vSphere provider APIs.
 
 ## Setup
 
-The vSphere provider supports several options for providing access to vSphere credentials.  See [vSphere setup page]({{< relref "/docs/intro/cloud-providers/vsphere/setup" >}}) for details.
+The vSphere provider supports several options for providing access to vSphere credentials.  See [vSphere setup page]({{< prelref "/docs/intro/cloud-providers/vsphere/setup" >}}) for details.
 
 ## Example
 

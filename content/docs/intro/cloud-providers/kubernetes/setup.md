@@ -5,16 +5,16 @@ aliases: ["/docs/reference/clouds/kubernetes/setup/"]
 ---
 
 <!-- markdownlint-disable url -->
-[pulumi-kubernetes-provider]: {{< relref "./" >}}
+[pulumi-kubernetes-provider]: {{< prelref "./" >}}
 [client-go]: https://github.com/kubernetes/client-go
-[gke-tutorial]: {{< relref "/docs/tutorials/kubernetes/gke" >}}
-[eks-tutorial]: {{< relref "/docs/tutorials/kubernetes/eks" >}}
-[aks-tutorial]: {{< relref "/docs/tutorials/kubernetes/aks" >}}
+[gke-tutorial]: {{< prelref "/docs/tutorials/kubernetes/gke" >}}
+[eks-tutorial]: {{< prelref "/docs/tutorials/kubernetes/eks" >}}
+[aks-tutorial]: {{< prelref "/docs/tutorials/kubernetes/aks" >}}
 [Heptio AWS quickstart]: https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/
-[provider-args]: {{< relref "/docs/reference/pkg/kubernetes/provider" >}}
-[provider-kubeconfig]: {{< relref "/docs/reference/pkg/kubernetes/provider#inputs" >}}
+[provider-args]: {{< prelref "/docs/reference/pkg/kubernetes/provider" >}}
+[provider-kubeconfig]: {{< prelref "/docs/reference/pkg/kubernetes/provider#inputs" >}}
 [kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-[install]: {{< relref "/docs/get-started/install" >}}
+[install]: {{< prelref "/docs/get-started/install" >}}
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
 [yarn]: https://yarnpkg.com/en/docs/install
@@ -33,7 +33,7 @@ following steps.
 
 1. Follow the directions [here][install] to install the Pulumi CLI.
 1. Install a package manager for your Pulumi program language runtime, such as [npm] or [Yarn] for [Node.js][nodejs], or PyPI for Python.
-1. Provision a Kubernetes cluster. For a new managed Kubernetes cluster, check out the [cluster guides.]({{< relref "/docs/tutorials/kubernetes#clusters" >}})
+1. Provision a Kubernetes cluster. For a new managed Kubernetes cluster, check out the [cluster guides.]({{< prelref "/docs/tutorials/kubernetes#clusters" >}})
 1. Download [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and verify the cluster is up and running.
 
 ## Steps
@@ -51,7 +51,7 @@ already.
 Once the cluster is accessible, setup is complete and you can proceed to the
 desired tutorials.
 
-> Note: Pulumi **never** sends **any** authentication secrets or credentials to the Pulumi service. See the [FAQ]({{< relref "faq#does-the-pulumi-service-see-my-credentials-in-the-kubeconfig-file">}}) for more detail.
+> Note: Pulumi **never** sends **any** authentication secrets or credentials to the Pulumi service. See the [FAQ]({{< prelref "faq#does-the-pulumi-service-see-my-credentials-in-the-kubeconfig-file">}}) for more detail.
 
 ## Misc.
 

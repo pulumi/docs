@@ -63,7 +63,7 @@ $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-s
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-[aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
+[aws-admin-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 {{% /choosable %}}
 {{% choosable cloud azure %}}
 Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] stack.
@@ -73,7 +73,7 @@ $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-[azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
+[azure-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
 
 {{% /choosable %}}
 
@@ -86,7 +86,7 @@ $ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
 $ export KUBECONFIG=`pwd`/kubeconfig.json
 ```
 
-[gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
+[gcp-admin-identity-stack]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
 
 {{% /choosable %}}
 

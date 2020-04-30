@@ -19,7 +19,7 @@ automated testing failures that leak cloud resources, and we can very quickly ge
 spiral out of control.
 
 There are multiple ways that Pulumi can help you deal with this situation. [Joe Duffy](https://twitter.com/funcofjoe) wrote a blog post on
-[Automatically Enforcing Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
+[Automatically Enforcing Tagging Policies]({{< prelref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
 to demonstrate how Policy as Code can ensure that tags are automatically added to any Pulumi managed infrastructure.
 If your company doesn't use Pulumi to build and manage their infrastructure, then you can still use Pulumi in collaboration
 with AWS Lambda to build and deploy an application that can monitor your cloud costs.
@@ -309,7 +309,7 @@ You can continue adding new segments to the cleanup lambda to help cleanup your 
 ## Deploying To Multiple Regions
 
 We want to ensure that all of our regions are cleaned up; therefore, we need to change the structure of the code. We can
-take advantage of [explicit provider configuration]({< relref "/docs/intro/concepts/programming-model#explicit-provider-configuration" >}})
+take advantage of [explicit provider configuration]({< prelref "/docs/intro/concepts/programming-model#explicit-provider-configuration" >}})
 to allow us to target the deployment of a resource to a specific region.
 
 Let's assume we want to deploy our application to `us-east-1`, `us-east-2`, `eu-west-1`, `eu-west-2` and `us-west-2`. We can

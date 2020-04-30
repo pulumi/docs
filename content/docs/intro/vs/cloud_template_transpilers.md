@@ -9,7 +9,7 @@ menu:
     weight: 3
 ---
 
-Because of [the challenges of writing raw YAML/JSON by hand]({{< relref "cloud_templates" >}}), two notable
+Because of [the challenges of writing raw YAML/JSON by hand]({{< prelref "cloud_templates" >}}), two notable
 projects exist to compile higher-level languages into AWS CloudFormation YAML/JSON templates:
 
 * **Troposphere**: a community-led open source project created in 2013
@@ -18,7 +18,7 @@ projects exist to compile higher-level languages into AWS CloudFormation YAML/JS
 Similar to Pulumi, these projects let you author infrastructure as code using general-purpose languages like TypeScript,
 JavaScript, and Python. Unlike Pulumi, however, whose open source engine understands these languages, a _transpiler_
 a.k.a., [_source-to-source compiler_](https://en.wikipedia.org/wiki/Source-to-source_compiler), translates this program
-into [AWS CloudFormation YAML/JSON]({{< relref "cloud_templates" >}}). The resulting markup file is then submitted
+into [AWS CloudFormation YAML/JSON]({{< prelref "cloud_templates" >}}). The resulting markup file is then submitted
 to the closed source AWS CloudFormation servers to provision infrastructure on AWS in the usual ways.
 
 ## Pulumi Supports Many Clouds
@@ -47,7 +47,7 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
 * Pulumi's engine is [open source](https://github.com/pulumi/pulumi), whereas Troposphere and CDK depend on the closed
   source CloudFormation engine. This means more of Pulumi is accessible to community contributions.
 
-* The Pulumi CLI and Console are co-designed to [make team collaboration simple]({{< relref "/docs/intro/console" >}}),
+* The Pulumi CLI and Console are co-designed to [make team collaboration simple]({{< prelref "/docs/intro/console" >}}),
   especially with organization-wide sharing of projects and stacks. This is closer to "GitHub for DevOps" and delivers
   a rich experience including diffs and previews of updates before they are made. Troposphere and CDK rely on
   CloudFormation which is known to be more challenging in these areas.
@@ -59,17 +59,17 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
   underlying building block services in your target cloud, or even HashiCorp Vault, to deliver an easy experience
   with secrets management automatic best practices built-in.
 
-* Pulumi integrates with [a number of CI/CD providers]({{< relref "/docs/guides/continuous-delivery" >}}) and
+* Pulumi integrates with [a number of CI/CD providers]({{< prelref "/docs/guides/continuous-delivery" >}}) and
   source control systems (SCMs) out of the box, for easy continuous delivery with systems you might already be using.
   Although CloudFormation can be used in this manner, it requires manual configuration, and is designed to work
   best with AWS's own CodeBuild/Pipeline products.
 
 * Pulumi integrates with your identity provider---including GitHub, GitLab, Atlassian, or
-  [any SAML/SSO 2.0 provider]({{< relref "/docs/guides/saml" >}}) (such as Azure Active Directory, Google G Suite,
+  [any SAML/SSO 2.0 provider]({{< prelref "/docs/guides/saml" >}}) (such as Azure Active Directory, Google G Suite,
   or Okta)---for auditing and access controls using your existing enterprise systems of record. AWS CloudFormation can
   be manually integrated with those systems with greater effort.
 
-* Pulumi can use [custom state management]({{< relref "/docs/intro/concepts/state#self-managed-backend" >}})
+* Pulumi can use [custom state management]({{< prelref "/docs/intro/concepts/state#self-managed-backend" >}})
   and offers a self-hosting option for greater control, including "behind the firewall" on-premises and hybrid
   options. Troposphere and CDK exclusively rely on the server-side AWS CloudFormation runtime. Pulumi offers a free
   hosted backend as its default offering but gives you more flexibility and control.

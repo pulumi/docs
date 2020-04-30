@@ -6,7 +6,7 @@ layout: aws-list
 
 ## Multi-cloud development with `@pulumi\cloud`
 
-For a higher-level abstraction, and greater portability, the [`@pulumi\cloud-aws`]({{< relref "/docs/tutorials/cloudfx" >}}) library provides a set of classes that enable productive development for any cloud. When instantiated for AWS, code is adapted to use the available services in AWS, and the supporting services necessary to deploy them (e.g. IAM roles).
+For a higher-level abstraction, and greater portability, the [`@pulumi\cloud-aws`]({{< prelref "/docs/tutorials/cloudfx" >}}) library provides a set of classes that enable productive development for any cloud. When instantiated for AWS, code is adapted to use the available services in AWS, and the supporting services necessary to deploy them (e.g. IAM roles).
 
 ```javascript
 var cloud = require("@pulumi/cloud-aws");

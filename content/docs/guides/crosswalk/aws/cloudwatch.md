@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/cloudwatch/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="{{< prelref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -54,12 +54,12 @@ Pulumi Crosswalk for AWS supports configuring CloudWatch logging in the followin
 
 * _Creating Log Groups_: A log group is a collection of logs with certain policies around retention and archival,
   to which logs may be sent from numerous AWS services. The
-  [`aws.cloudwatch.LogGroup` class]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#LogGroup" >}})
+  [`aws.cloudwatch.LogGroup` class]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#LogGroup" >}})
   may be used to create and configure new log groups.
 
 * _Forwarding to Log Groups_: From any of the supported services, a CloudWatch log group may be supplied to configure
   said service to forward logs to that log group. Many services support doing so. For example,
-  [ECS tasks and services]({{< relref "ecs" >}}) offer a `logGroup` property that, when set, forwards all logs
+  [ECS tasks and services]({{< prelref "ecs" >}}) offer a `logGroup` property that, when set, forwards all logs
   from your container instances.
 
 * _Automatic Smart Defaults_: In many cases, using Pulumi Crosswalk for AWS uses smart defaults for whatever service
@@ -70,7 +70,7 @@ Pulumi Crosswalk for AWS supports configuring CloudWatch logging in the followin
   will aggregate and stream recent log entries to the console. The `--follow` option enables you to watch the
   logs unfold in real time, `--since` looks at log entries only within a certain time period, and `--resource` allows
   you to filter to specific log groups. Read more at
-  [Unified Logs with Pulumi Logs]({{< relref "unified-logs-with-pulumi-logs" >}}).
+  [Unified Logs with Pulumi Logs]({{< prelref "unified-logs-with-pulumi-logs" >}}).
 
 As an example, this code configures a custom CloudWatch log group with a 1 week retention policy for our ECS service:
 
@@ -96,7 +96,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 
 For details on all the capabilities of CloudWatch log groups, please refer to the [Amazon CloudWatch Logs documentation](
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html), in addition to the
-[Pulumi CloudWatch API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}).
+[Pulumi CloudWatch API documentation]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}).
 
 ## Subscribing to CloudWatch Metrics
 
@@ -149,7 +149,7 @@ const funcMetric = new awsx.cloudwatch.Metric({
 More commonly, applications will want to work with existing metrics produced by AWS services, using
 [pre-defined metrics](#using-a-pre-defined-metric). In the event that you'd like to create a CloudWatch custom metric, or use a
 service not already pre-defined, however, refer to the [API documentation for properties used when creating a new
-`Metric` object]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#MetricArgs" >}}).
+`Metric` object]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#MetricArgs" >}}).
 
 ### Using a Pre-Defined Metric
 
@@ -185,23 +185,23 @@ event in question for information about what is available.
 For details about all available CloudWatch Metrics in Pulumi Crosswalk for AWS, refer to the API documentation.
 Here is a list of the AWS services that export metrics:
 
-* [AWS Certificate Manager Private Certificate Authority (ACM PCA) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/acmpca#metrics" >}})
-* [AWS API Gateway CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#metrics" >}})
-* [AWS Autoscaling CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#metrics" >}})
-* [AWS CloudFront CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudfront#metrics" >}})
-* [AWS CodeBuild CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/codebuild#metrics" >}})
-* [AWS Cognito CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cognito#metrics" >}})
-* [AWS DynamoDB CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/dynamodb#metrics" >}})
-* [AWS Elastic Block Store (EBS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ebs#metrics" >}})
-* [AWS Elastic Compute Cloud (EC2) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ec2#metrics" >}})
-* [AWS Elastic Container Service (ECS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs#metrics" >}})
-* [AWS Elastic File System (EFS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/efs#metrics" >}})
-* [AWS Elastic Load Balancing (ELB) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lb#metrics" >}})
-* [AWS Lambda CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lambda#metrics" >}})
-* [AWS Relational Database Service (RDS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/rds#metrics" >}})
-* [AWS Simple Storage Service (S3) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/s3#metrics" >}})
-* [AWS Simple Notification Service (SNS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/sns#metrics" >}})
-* [AWS Simple Queue Service (SQS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/sqs#metrics" >}})
+* [AWS Certificate Manager Private Certificate Authority (ACM PCA) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/acmpca#metrics" >}})
+* [AWS API Gateway CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#metrics" >}})
+* [AWS Autoscaling CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#metrics" >}})
+* [AWS CloudFront CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudfront#metrics" >}})
+* [AWS CodeBuild CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/codebuild#metrics" >}})
+* [AWS Cognito CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cognito#metrics" >}})
+* [AWS DynamoDB CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/dynamodb#metrics" >}})
+* [AWS Elastic Block Store (EBS) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/ebs#metrics" >}})
+* [AWS Elastic Compute Cloud (EC2) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/ec2#metrics" >}})
+* [AWS Elastic Container Service (ECS) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs#metrics" >}})
+* [AWS Elastic File System (EFS) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/efs#metrics" >}})
+* [AWS Elastic Load Balancing (ELB) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/lb#metrics" >}})
+* [AWS Lambda CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/lambda#metrics" >}})
+* [AWS Relational Database Service (RDS) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/rds#metrics" >}})
+* [AWS Simple Storage Service (S3) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/s3#metrics" >}})
+* [AWS Simple Notification Service (SNS) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/sns#metrics" >}})
+* [AWS Simple Queue Service (SQS) CloudWatch Metrics]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/sqs#metrics" >}})
 
 If certain metrics or services are missing from the list, please refer to [this list](
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html) for names
@@ -264,11 +264,11 @@ const alarm = funcMetric.createAlarm("alarm", {
 });
 ```
 
-Such an approach can be combined with [Pulumi Crosswalk for AWS Lambda]({{< relref "lambda" >}}) to define and run
+Such an approach can be combined with [Pulumi Crosswalk for AWS Lambda]({{< prelref "lambda" >}}) to define and run
 custom code in response to metric alarms being triggered.
 
 CloudWatch metrics may also be used to trigger changes to [Autoscaling Scaling Policies](
-{{< relref "autoscaling#scaling-policies" >}}) in response to events indicating that more or less capacity is desired.
+{{< prelref "autoscaling#scaling-policies" >}}) in response to events indicating that more or less capacity is desired.
 
 ## Defining CloudWatch Dashboards in Code
 
@@ -295,29 +295,29 @@ environments as they come online using Pulumi's standard support for stacks and 
 Dashboards are created from Widgets that are then automatically placed on a 24 unit wide, infinitely tall grid, based
 on flow constraints. When creating widgets, a desired Width-x-Height cab be supplied (otherwise a default size of
 6x6 is used). Widgets can then be related to other widgets by either placing them in a [Column](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#ColumnWidget" >}}) or in a [Row](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#RowWidget" >}}). Widgets placed in a column can flow vertically as far as
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#ColumnWidget" >}}) or in a [Row](
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#RowWidget" >}}). Widgets placed in a column can flow vertically as far as
 necessary. Widgets placed in a row will wrap automatically after 24 grid spaces.
 
 #### Adding Text to a Dashboard
 
 You can place a simple piece of text on the dashboard using a [Text Widget](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#TextWidget" >}}). These can contain markdown and will be rendered by the
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#TextWidget" >}}). These can contain markdown and will be rendered by the
 dashboard in the requested location and size.
 
 #### Adding Spacing to a Dashboard
 
 The [Space Widget](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#SpaceWidget" >}}) acts as a simple mechanism to place a gap (with a desired
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#SpaceWidget" >}}) acts as a simple mechanism to place a gap (with a desired
 Width-x-Height) in between other widgets.
 
 #### Adding Metrics to a Dashboard
 
 The most common widgets that will be added to a Dashboard are metric widgets, i.e. widgets that display the latest
 reported values of some metric. These metrics can be shown on the dashboard as either a [line graph](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#LineGraphMetricWidget" >}}), [stacked area graph](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#StackedAreaGraphMetricWidget" >}}), or as a [single number](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#SingleNumberMetricWidget" >}}).
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#LineGraphMetricWidget" >}}), [stacked area graph](
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#StackedAreaGraphMetricWidget" >}}), or as a [single number](
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch#SingleNumberMetricWidget" >}}).
 
 Creating a metric widget on your dashboard can be done like so:
 
@@ -397,7 +397,7 @@ const dashboard = new awsx.cloudwatch.Dashboard("TopicData", {
 ```
 
 More complex widget customization is possible. See the individual types and arguments in the
-[Cloudwatch API]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}) for more details.
+[Cloudwatch API]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}) for more details.
 
 ## Additional CloudWatch Resources
 
@@ -405,4 +405,4 @@ For more information about Amazon CloudWatch, please see the following:
 
 * [Amazon CloudWatch homepage](https://aws.amazon.com/cloudwatch/)
 
-Or [get started]({{< relref "/docs/get-started/aws" >}}) with Pulumi.
+Or [get started]({{< prelref "/docs/get-started/aws" >}}) with Pulumi.

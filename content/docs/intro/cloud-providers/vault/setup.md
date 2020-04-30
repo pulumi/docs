@@ -3,7 +3,7 @@ title: HashiCorp Vault Setup
 meta_desc: This page provides an overview on how to configure the Pulumi Vault Provider.
 ---
 
-The [Pulumi Vault provider]({{< relref "./" >}}) uses the Vault SDK to manage resources.
+The [Pulumi Vault provider]({{< prelref "./" >}}) uses the Vault SDK to manage resources.
 
 > Pulumi relies on the Vault SDK to authenticate requests from your computer to HashiCorp Vault. Your credentials are never sent
 > to pulumi.com.

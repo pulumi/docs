@@ -14,63 +14,63 @@ aliases: ["/docs/reference/clouds/"]
 
 ## Core Providers
 
-* [AWS]({{< relref "./aws" >}})
-* [Azure]({{< relref "./azure" >}})
-* [Google Cloud]({{< relref "./gcp" >}})
-* [Kubernetes]({{< relref "./kubernetes" >}})
+* [AWS]({{< prelref "./aws" >}})
+* [Azure]({{< prelref "./azure" >}})
+* [Google Cloud]({{< prelref "./gcp" >}})
+* [Kubernetes]({{< prelref "./kubernetes" >}})
 
 ## Cloud Providers
 
-* [Alibaba Cloud]({{< relref "./alicloud" >}})
-* [CloudAMQP]({{< relref "./cloudamqp" >}})
-* [Fastly]({{< relref "./fastly" >}})
-* [DigitalOcean]({{< relref "./digitalocean" >}})
-* [Linode]({{< relref "./linode" >}})
-* [OpenStack]({{< relref "./openstack" >}})
-* [Packet.net]({{< relref "./packet" >}})
-* [vSphere]({{< relref "./vsphere" >}})
+* [Alibaba Cloud]({{< prelref "./alicloud" >}})
+* [CloudAMQP]({{< prelref "./cloudamqp" >}})
+* [Fastly]({{< prelref "./fastly" >}})
+* [DigitalOcean]({{< prelref "./digitalocean" >}})
+* [Linode]({{< prelref "./linode" >}})
+* [OpenStack]({{< prelref "./openstack" >}})
+* [Packet.net]({{< prelref "./packet" >}})
+* [vSphere]({{< prelref "./vsphere" >}})
 
 ## Infrastructure Providers
 
-* [Aiven]({{< relref "./aiven" >}})
-* [Consul]({{< relref "./consul" >}})
-* [Docker]({{< relref "./docker" >}})
-* [Kafka]({{< relref "./kafka" >}})
-* [Mailgun]({{< relref "./mailgun" >}})
-* [MongoDB Atlas]({{< relref "./mongodbatlas" >}})
-* [Okta]({{< relref "./okta" >}})
-* [RabbitMQ]({{< relref "./rabbitmq" >}})
-* [Rancher2]({{< relref "./rancher2" >}})
-* [Spotinst]({{< relref "./spotinst" >}})
-* [Vault]({{< relref "./vault" >}})
+* [Aiven]({{< prelref "./aiven" >}})
+* [Consul]({{< prelref "./consul" >}})
+* [Docker]({{< prelref "./docker" >}})
+* [Kafka]({{< prelref "./kafka" >}})
+* [Mailgun]({{< prelref "./mailgun" >}})
+* [MongoDB Atlas]({{< prelref "./mongodbatlas" >}})
+* [Okta]({{< prelref "./okta" >}})
+* [RabbitMQ]({{< prelref "./rabbitmq" >}})
+* [Rancher2]({{< prelref "./rancher2" >}})
+* [Spotinst]({{< prelref "./spotinst" >}})
+* [Vault]({{< prelref "./vault" >}})
 
 ## Database Providers
 
-* [MySQL]({{< relref "./mysql" >}})
-* [PostgreSQL]({{< relref "./postgresql" >}})
+* [MySQL]({{< prelref "./mysql" >}})
+* [PostgreSQL]({{< prelref "./postgresql" >}})
 
 ## Monitoring Providers
 
-* [Datadog]({{< relref "./datadog" >}})
-* [New Relic]({{< relref "./newrelic" >}})
-* [SignalFx]({{< relref "./signalfx" >}})
+* [Datadog]({{< prelref "./datadog" >}})
+* [New Relic]({{< prelref "./newrelic" >}})
+* [SignalFx]({{< prelref "./signalfx" >}})
 
 ## Network Providers
 
-* [Cloudflare]({{< relref "./cloudflare" >}})
-* [DNSimple]({{< relref "./dnsimple" >}})
-* [F5 BIG-IP]({{< relref "./f5bigip" >}})
+* [Cloudflare]({{< prelref "./cloudflare" >}})
+* [DNSimple]({{< prelref "./dnsimple" >}})
+* [F5 BIG-IP]({{< prelref "./f5bigip" >}})
 
 ## VCS Providers
 
-* [GitHub]({{< relref "./github" >}})
-* [GitLab]({{< relref "./gitlab" >}})
+* [GitHub]({{< prelref "./github" >}})
+* [GitLab]({{< prelref "./gitlab" >}})
 
 ## Misc. Providers
 
-* [Random]({{< relref "./random" >}})
-* [TLS]({{< relref "./tls" >}})
+* [Random]({{< prelref "./random" >}})
+* [TLS]({{< prelref "./tls" >}})
 
 If your provider isn't listed, check out the [Pulumi GitHub](https://github.com/pulumi) and
 [Pulumi Examples](https://github.com/pulumi/examples) repositories. If you can't find what you're looking for,
-[contact us]({{< relref "/docs/troubleshooting#contact-us" >}}) and let us know.
+[contact us]({{< prelref "/docs/troubleshooting#contact-us" >}}) and let us know.

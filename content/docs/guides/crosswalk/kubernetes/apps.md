@@ -488,7 +488,7 @@ const nginx = new k8s.helm.v2.Chart("nginx",
 [nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 [nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
-[crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
+[crosswalk-k8s-defaults]: {{< prelref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
 <!-- markdownlint-enable url -->
 
 ## Deploy Wordpress
@@ -670,7 +670,7 @@ For a complete example, check out the [Graceful App Rollout][tutorial-app-rollou
 tutorial for more details on how to update a Deployment automatically
 when it's ConfigMap changes.
 
-[tutorial-app-rollout]: {{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}}
+[tutorial-app-rollout]: {{< prelref "/docs/tutorials/kubernetes/configmap-rollout" >}}
 
 ## Deploy a Job
 
@@ -1020,4 +1020,4 @@ Coming soon.
 To learn more about how to work with Kubernetes and Pulumi, check out the
 [Kubernetes Tutorials][k8s-tutorials] for details.
 
-[k8s-tutorials]: {{< relref "/docs/tutorials/kubernetes" >}}
+[k8s-tutorials]: {{< prelref "/docs/tutorials/kubernetes" >}}

@@ -130,7 +130,7 @@ $ pulumi preview --policy-pack <path-to-policy-pack-directory> --policy-pack-con
 
 ## Using the Pulumi Console
 
-Configuration can also be added, edited and enabled via the Pulumi Console. Once a Policy Pack has been [published to the Pulumi Console]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), organization administrators can enable the pack with configuration on a Policy Group using the console.
+Configuration can also be added, edited and enabled via the Pulumi Console. Once a Policy Pack has been [published to the Pulumi Console]({{< prelref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), organization administrators can enable the pack with configuration on a Policy Group using the console.
 
 On a Policy Group page, you can click the ADD button to enable a new Policy Pack.
 
@@ -146,7 +146,7 @@ The `pulumi` CLI can also be used to interact with Policy Packs enforced by the 
 
 #### Validating Configuration
 
-If the Policy Pack has already been [published to the Pulumi Console]({{< relref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), you can validate the configuration using the `pulumi policy validate-config` command.
+If the Policy Pack has already been [published to the Pulumi Console]({{< prelref "/docs/get-started/crossguard/enforcing-a-policy-pack" >}}), you can validate the configuration using the `pulumi policy validate-config` command.
 
 ```bash
 $ pulumi policy validate-config <org-name>/<policy-pack-name> <version> --config <path-to-policy-pack-config-file>

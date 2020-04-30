@@ -10,13 +10,13 @@ tags: ["Kubernetes"]
 <p><!-- spacer --></p>
 
 > This post is the first part in a series on the Kubernetes API. Future installments include
-> [Part 2]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
+> [Part 2]({{< prelref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
 > focused on the lifecycle of a `Service` and
-> [Part 3]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}})
+> [Part 3]({{< prelref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}})
 > details how Kubernetes deployments work.
 
 One of the most popular features of the recent
-[v0.15.2 release]({{< relref "cloud-native-infrastructure-with-kubernetes-and-pulumi" >}})
+[v0.15.2 release]({{< prelref "cloud-native-infrastructure-with-kubernetes-and-pulumi" >}})
 of Pulumi is fine-grained status updates for Kubernetes resources. On
 the CLI they look like this:
 <!--more-->
@@ -113,5 +113,5 @@ practices we've accumulated, and describe how we solved the problem of
 repeatable `Pod` deployments in Pulumi.
 
 If you enjoyed this post, or are curious to see how this lifecycle is
-baked into the Pulumi CLI, [give us a shot]({{< relref "/topics/kubernetes" >}})!
+baked into the Pulumi CLI, [give us a shot]({{< prelref "/topics/kubernetes" >}})!
 We'd love to have your feedback.

@@ -54,7 +54,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
-[configure your AWS account]({{< relref "/docs/get-started/aws" >}}).
+[configure your AWS account]({{< prelref "/docs/get-started/aws" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.

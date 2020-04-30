@@ -8,14 +8,14 @@ meta_image: "terminal-logs.png"
 ---
 
 Pulumi makes developing and deploying
-[rich serverless and container-based applications]({{< relref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}})
+[rich serverless and container-based applications]({{< prelref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}})
 a breeze. But how do you monitor and observe those applications while
 they are being developed and once they are deployed? There are many
 great answers: from the built-in capabilities of the underlying cloud
 services (Lambda, ECS, Kubernetes, and more), to great 3rd party
 solutions like [IOpipe](https://github.com/pulumi/pulumi-iopipe) and
 [Epsagon](https://github.com/pulumi/pulumi-epsagon) which
-[we highlighted recently]({{< relref "pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications" >}})
+[we highlighted recently]({{< prelref "pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications" >}})
 on this blog.
 
 The Pulumi CLI provides another way to do logging, without requiring the
@@ -177,7 +177,7 @@ to have access to these logs at the click of a button - and this is
 something we're also excited to enable in the near future.
 
 You can take `pulumi` for a spin today by checking out the
-[Getting Started Guide]({{< relref "/docs/get-started" >}}) guide or some of the
+[Getting Started Guide]({{< prelref "/docs/get-started" >}}) guide or some of the
 [Pulumi Examples](https://github.com/pulumi/examples) on GitHub. Then join us in the
 [Pulumi Community Slack](https://slack.pulumi.com) to chat about where
 you want to see us go (and where you'd like to help out!) with

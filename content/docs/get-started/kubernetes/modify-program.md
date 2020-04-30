@@ -350,7 +350,7 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< relref "/docs/intro/concepts/config" >}}) value to indicate whether the program is being deployed to Minikube or not.
+Our program now creates a service to access the NGINX deployment, and requires a new [config]({{< prelref "/docs/intro/concepts/config" >}}) value to indicate whether the program is being deployed to Minikube or not.
 
 The configuration value can be set for the stack using `pulumi config set isMinikube <true|false>` command.
 

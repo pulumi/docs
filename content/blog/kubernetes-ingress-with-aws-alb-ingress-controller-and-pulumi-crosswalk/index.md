@@ -47,10 +47,10 @@ packages.
 
 ## Step 1: Initialize Pulumi project and stack
 
-[Install pulumi CLI]({{< relref "/docs/get-started" >}})
-and set up your [AWS credentials]({{< relref "/docs/get-started/aws" >}}).
-Initialize a new [Pulumi project]({{< relref "/docs/intro/concepts/project" >}})
-and [Pulumi stack]({{< relref "/docs/reference/cli/pulumi_stack" >}}) from
+[Install pulumi CLI]({{< prelref "/docs/get-started" >}})
+and set up your [AWS credentials]({{< prelref "/docs/get-started/aws" >}}).
+Initialize a new [Pulumi project]({{< prelref "/docs/intro/concepts/project" >}})
+and [Pulumi stack]({{< prelref "/docs/reference/cli/pulumi_stack" >}}) from
 available programming [language
 templates](https://github.com/pulumi/templates). We will use the
 `aws-typescript` template here and install all library
@@ -395,6 +395,6 @@ be to access your newly deployed 2048 game -- have fun!
 Pulumi is open source and free to use. For more information on our
 product platform, check out the following resources:
 
-- [Pulumi Crosswalk for AWS Announcement]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
-- [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
-- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< relref "/docs/guides/crosswalk/aws" >}})
+- [Pulumi Crosswalk for AWS Announcement]({{< prelref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}})
+- [Mapbox IOT-as-Code with Pulumi Crosswalk for AWS]({{< prelref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
+- [Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more]({{< prelref "/docs/guides/crosswalk/aws" >}})

@@ -9,8 +9,8 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 ## Prerequisites
 
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Configure Azure credentials]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
+1. [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
+1. [Configure Azure credentials]({{< prelref "/docs/intro/cloud-providers/azure/setup" >}})
 
 ## Create a container in Azure Container Instance {#ACI}
 
@@ -50,7 +50,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
     exports.publicIP = container.ipAddress;
     ```
 
-    This example uses the [@pulumi/azure]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure" >}}) package to create and manage two Azure resources including: an [azure.core.ResourceGroup]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#ResourceGroup" >}}) which will contain the ACI instance and [azure.containerservice.Group]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/containerservice#Group" >}}) which will run an `nginx` Docker container.
+    This example uses the [@pulumi/azure]({{< prelref "/docs/reference/pkg/nodejs/pulumi/azure" >}}) package to create and manage two Azure resources including: an [azure.core.ResourceGroup]({{< prelref "/docs/reference/pkg/nodejs/pulumi/azure/core#ResourceGroup" >}}) which will contain the ACI instance and [azure.containerservice.Group]({{< prelref "/docs/reference/pkg/nodejs/pulumi/azure/containerservice#Group" >}}) which will run an `nginx` Docker container.
 
 1. To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
 
@@ -87,7 +87,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1. To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output]({{< relref "/docs/intro/concepts/stack#output" >}}) corresponding to the private IP address of the nginx container we've created.
+1. To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output]({{< prelref "/docs/intro/concepts/stack#output" >}}) corresponding to the private IP address of the nginx container we've created.
 
         $ pulumi stack
         ...

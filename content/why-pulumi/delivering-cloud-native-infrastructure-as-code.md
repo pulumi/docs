@@ -93,7 +93,7 @@ DevOps teams have taken it upon themselves to become those DSL experts, but are 
 
 ## Pulumi Provides a Cloud Native Programming Model
 
-Using real languages changes everything. [The Pulumi Cloud Development Platform]({{< relref "/product" >}}) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
+Using real languages changes everything. [The Pulumi Cloud Development Platform]({{< prelref "/product" >}}) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
 
 At the center of Pulumi is an open source cloud object model, coupled with an evaluation runtime that understands how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
 

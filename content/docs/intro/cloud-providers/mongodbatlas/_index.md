@@ -13,11 +13,11 @@ menu:
 The MongoDB Atlas provider for Pulumi can be used to provision any of the resources available for MongoDB Atlas.
 The MongoDB Atlas provider must be configured with credentials to deploy and update resources in MongoDB Atlas.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/mongodbatlas" >}}) for complete details of the available MongoDB Atlas provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/mongodbatlas" >}}) for complete details of the available MongoDB Atlas provider APIs.
 
 ## Setup
 
-The MongoDB Atlas provider supports several options for providing access to MongoDB Atlas credentials.  See the [MongoDB Atlas setup page]({{< relref "setup" >}}) for details.
+The MongoDB Atlas provider supports several options for providing access to MongoDB Atlas credentials.  See the [MongoDB Atlas setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

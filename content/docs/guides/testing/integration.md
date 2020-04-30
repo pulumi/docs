@@ -140,9 +140,9 @@ Like our previous runtime validation checks, this will run in the harness right 
 
 ## Ephemeral Environments
 
-A very powerful capability is the ability to spin up ephemeral environments solely for purposes of acceptance testing. Pulumi's concept of [projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) is designed to make it easy to stand up entirely isolated and independent environments and to tear them down, including by using the integration testing framework.
+A very powerful capability is the ability to spin up ephemeral environments solely for purposes of acceptance testing. Pulumi's concept of [projects and stacks]({{< prelref "/docs/intro/concepts/organizing-stacks-projects" >}}) is designed to make it easy to stand up entirely isolated and independent environments and to tear them down, including by using the integration testing framework.
 
-If you are using GitHub, Pulumi offers a [GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) that helps to glue together your Pull Request workflow with this sort of acceptance testing run inside of your CI pipelines. Install the App into your GitHub repos, and Pulumi in your CI, and your Pull Requests will light up with infrastructure previews, updates, and test results:
+If you are using GitHub, Pulumi offers a [GitHub App]({{< prelref "/docs/guides/continuous-delivery/github-app" >}}) that helps to glue together your Pull Request workflow with this sort of acceptance testing run inside of your CI pipelines. Install the App into your GitHub repos, and Pulumi in your CI, and your Pull Requests will light up with infrastructure previews, updates, and test results:
 
 ![pr-comment](../pr-comment.png)
 

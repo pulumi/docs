@@ -18,7 +18,7 @@ in short order.
 
 If you want to follow along and try some of this out, Pulumi is
 [open source on GitHub](https://github.com/pulumi/pulumi), free to download
-and use, and [the quickstart]({{< relref "/docs/get-started" >}}) will acquaint you with the CLI. Most of
+and use, and [the quickstart]({{< prelref "/docs/get-started" >}}) will acquaint you with the CLI. Most of
 the examples are directly runnable and available in [our examples repo](https://github.com/pulumi/examples), and are just a
 `pulumi up` away, unlike other approaches that
 require you to point-and-click around in your cloud's console, and/or

@@ -73,9 +73,9 @@ In this tutorial, we'll create a simplified version of the example above, that j
     ```
 
 <!-- markdownlint-disable url -->
-[pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
-[Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
+[pulumi.ComponentResource]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
+[Component]: {{< prelref "/docs/intro/concepts/programming-model#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[S3 website example]: {{< relref "/docs/tutorials/aws/s3-website" >}}
+[S3 website example]: {{< prelref "/docs/tutorials/aws/s3-website" >}}
 <!-- markdownlint-enable url -->

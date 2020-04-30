@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/autoscaling/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="{{< prelref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -26,7 +26,7 @@ resources needed to run your applications and any associated Amazon CloudWatch m
 
 Pulumi Crosswalk for AWS enables easy definition of Auto Scaling Groups (ASGs) to configure scaling of EC2
 instances, for either VM or container workloads using ECS. Using this, combined with [Pulumi Crosswalk for AWS's
-support for Amazon CloudWatch]({{< relref "cloudwatch" >}}), you can create powerful scaling policies that
+support for Amazon CloudWatch]({{< prelref "cloudwatch" >}}), you can create powerful scaling policies that
 meet your performance and scaling needs, while also maximizing cost effectiveness.
 
 ## Creating and Configuring Auto Scaling Groups
@@ -65,14 +65,14 @@ const autoScalingGroup = new awsx.autoscaling.AutoScalingGroup("testing", {
 For detailed information about configuring your ASG, see
 [Configuring Your Auto Scaling Group](#configuring-your-auto-scaling-group),
 in addition to [the `AutoScalingGroup` API documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#AutoScalingGroup" >}}).
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#AutoScalingGroup" >}}).
 
 #### Creating An Auto Scaling Group for ECS
 
 Another way to create an ASG is to define it on an `awsx.ecs.Cluster` when auto-scaling the EC2 instances powering
 our ECS cluster. This is not necessary when using ECS "Fargate", but by defining an ASG, you have complete control
 over the scaling of your ECS cluster. For more information about ECS specifically, please see the associated
-[Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}).
+[Pulumi Crosswalk for AWS ECS documentation]({{< prelref "ecs" >}}).
 
 To make this easier, the `awsx.ecs.Cluster` class offers a `createAutoScalingGroup` class that associates the newly
 created ASG with the ECS cluster, and runs all container compute on it. For example:
@@ -113,7 +113,7 @@ example, the following are supported:
    This cooldown period helps avoid rapid runaway scaling scenarios from happening.
 
 For full details about what properties are available, refer to [the API Documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#TemplateParameters" >}})
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#TemplateParameters" >}})
 
 ### Specifying the Launch Configuration for EC2 Instances
 
@@ -127,7 +127,7 @@ EC2 instance before, you specified the same information in order to launch the i
 properties, a default configuration will be created on your behalf with basic values set as appropriate.
 
 For full details about what properties are available, refer to [the API Documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#AutoScalingLaunchConfigurationArgs" >}}).
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#AutoScalingLaunchConfigurationArgs" >}}).
 
 ## Automatically Scaling Based on a Schedule
 
@@ -138,7 +138,7 @@ decrease on Friday, you can plan your scaling actions based on the predictable t
 Scaling actions are performed automatically as a function of time and date.
 
 To create an ASG schedule, use [the `scaleOnSchedule` function](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#AutoScalingGroup-scaleOnSchedule" >}}) on the `AutoScalingGroup` class:
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling#AutoScalingGroup-scaleOnSchedule" >}}) on the `AutoScalingGroup` class:
 
 ```typescript
 // Schedule the ASG to go up to 20 instances on Friday and back down to 10 on Monday.
@@ -263,7 +263,7 @@ Target Tracking Scaling for ASGs offer several pre-defined scaling metrics.
 #### Using Custom Metric Target Tracking Scaling
 
 On top of the predefined targets defined above, you can also scale using [a CloudWatch metric](
-{{< relref "cloudwatch#subscribing-to-cloudwatch-metrics" >}}), such as based on CPU or memory utilization.
+{{< prelref "cloudwatch#subscribing-to-cloudwatch-metrics" >}}), such as based on CPU or memory utilization.
 
 Not all metrics work for target tracking, an important point when specifying a customized metric. The metric must be a
 valid utilization metric and describe how busy an instance is. The metric value must increase or decrease proportionally

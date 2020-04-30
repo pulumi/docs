@@ -25,7 +25,7 @@ altered to fit into any existing type of deployment setup.
 - An account on [https://app.pulumi.com](https://app.pulumi.com) and that you have created a new project.
     - This just means you will sign-in using your GitLab credentials.
     - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
-- The latest CLI. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+- The latest CLI. Installation instructions are [here]({{< prelref "/docs/get-started/install" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -38,7 +38,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 You may choose a naming convention that best suits your organization.
 
 Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< relref "/docs/reference/cli/pulumi_new" >}}).
+Learn more [here]({{< prelref "/docs/reference/cli/pulumi_new" >}}).
 
 ## GitLab CI Runners
 

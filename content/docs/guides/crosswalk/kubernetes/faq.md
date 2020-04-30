@@ -53,7 +53,7 @@ linktitle: FAQ
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-docs]: https://github.com/pulumi/docs
 [pulumi-guides]: https://github.com/pulumi/kubernetes-guides
-[cw-playbooks]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
+[cw-playbooks]: {{< prelref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [pulumi-kx]: https://github.com/pulumi/pulumi-kubernetesx
 [pulumi-kq]: https://github.com/pulumi/pulumi-query

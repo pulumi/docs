@@ -8,16 +8,16 @@ meta_desc: "Use Pulumi AWS, Azure, and GCP libraries to provision and manage inf
 ---
 
 If you've been following the blog, you know that Pulumi is great for
-building [serverless applications]({{< relref "code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi" >}}),
-[container-based applications]({{< relref "deploying-production-ready-containers-with-pulumi" >}}),
-and a [combination of the two]({{< relref "build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws" >}}).
+building [serverless applications]({{< prelref "code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi" >}}),
+[container-based applications]({{< prelref "deploying-production-ready-containers-with-pulumi" >}}),
+and a [combination of the two]({{< prelref "build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws" >}}).
 But, did you know that you can manage any cloud resource in AWS, Azure, or Google Cloud Platform?
 <!--more-->
 
 You can use the
-[AWS]({{< relref "/docs/reference/pkg/aws" >}}),
-[Azure]({{< relref "/docs/reference/pkg/azure" >}}),
-or [Google Cloud]({{< relref "/docs/reference/pkg/gcp" >}})
+[AWS]({{< prelref "/docs/reference/pkg/aws" >}}),
+[Azure]({{< prelref "/docs/reference/pkg/azure" >}}),
+or [Google Cloud]({{< prelref "/docs/reference/pkg/gcp" >}})
 libraries to manage cloud resources. Using these libraries, you can
 directly manage the properties of any cloud resource.
 
@@ -108,11 +108,11 @@ just a few lines of JavaScript:
 
 These are just a few examples of the AWS resources you can manage in
 Pulumi. You can provision
-[Athena databases]({{< relref "/docs/reference/pkg/aws/athena" >}}),
-[DynamoDB tables]({{< relref "/docs/reference/pkg/aws/dynamodb" >}}),
-[IAM users, roles, groups, and role policies]({{< relref "/docs/reference/pkg/aws/iam" >}}),
-[Kinesis streams]({{< relref "/docs/reference/pkg/aws/kinesis" >}}), and more.
+[Athena databases]({{< prelref "/docs/reference/pkg/aws/athena" >}}),
+[DynamoDB tables]({{< prelref "/docs/reference/pkg/aws/dynamodb" >}}),
+[IAM users, roles, groups, and role policies]({{< prelref "/docs/reference/pkg/aws/iam" >}}),
+[Kinesis streams]({{< prelref "/docs/reference/pkg/aws/kinesis" >}}), and more.
 
 To learn more, take a look at the
-[AWS API documentation]({{< relref "/docs/reference/pkg/aws" >}})
+[AWS API documentation]({{< prelref "/docs/reference/pkg/aws" >}})
 and the [sample code that provisions a variety of infrastructure resources](https://github.com/pulumi/examples/blob/master/aws-ts-resources/index.ts).

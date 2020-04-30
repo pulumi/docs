@@ -3,12 +3,12 @@ title: CloudAMQP Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi CloudAMQP Provider.
 ---
 
-The [Pulumi CloudAMQP provider]({{< relref "./" >}}) uses the CloudAMQP SDK to manage and provision resources.
+The [Pulumi CloudAMQP provider]({{< prelref "./" >}}) uses the CloudAMQP SDK to manage and provision resources.
 
 > Pulumi relies on the CloudAMQP SDK to authenticate requests from your computer to CloudAMQP. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi CloudAMQP Provider]({{< relref "./" >}}) needs to be configured with CloudAMQP credentials
+The [Pulumi CloudAMQP Provider]({{< prelref "./" >}}) needs to be configured with CloudAMQP credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

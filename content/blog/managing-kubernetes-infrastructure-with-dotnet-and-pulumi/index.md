@@ -302,4 +302,4 @@ Check out the full [DigitalOcean Kubernetes Cluster in C#](https://github.com/pu
 
 ## Conclusion
 
-Kubernetes support is one of several significant new additions to the Pulumi .NET support, and [many more improvements](https://github.com/pulumi/pulumi/issues/3470) are in progress over the coming weeks. [Get started]({{< relref "/docs/get-started/kubernetes" >}}) with Kubernetes and .NET today, and let us know what you think!
+Kubernetes support is one of several significant new additions to the Pulumi .NET support, and [many more improvements](https://github.com/pulumi/pulumi/issues/3470) are in progress over the coming weeks. [Get started]({{< prelref "/docs/get-started/kubernetes" >}}) with Kubernetes and .NET today, and let us know what you think!

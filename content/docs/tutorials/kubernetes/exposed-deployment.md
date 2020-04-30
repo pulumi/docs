@@ -23,8 +23,8 @@ Start by downloading the example code
 [here](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/README.md)
 
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}) to get setup with
+Setup]({{< prelref "/docs/get-started/install" >}}) and [Configuring Pulumi
+Kubernetes]({{< prelref "/docs/intro/cloud-providers/kubernetes/setup" >}}) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

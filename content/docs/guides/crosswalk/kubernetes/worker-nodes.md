@@ -102,7 +102,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 ```
 
 [aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
-[crosswalk-aws-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+[crosswalk-aws-identity]: {{< prelref "/docs/guides/crosswalk/kubernetes/identity" >}}
 
 {{% /choosable %}}
 
@@ -164,7 +164,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
-[crosswalk-sgs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
+[crosswalk-sgs]: {{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
 
 {{% /choosable %}}
 

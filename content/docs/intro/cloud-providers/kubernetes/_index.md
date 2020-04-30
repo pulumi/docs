@@ -15,7 +15,7 @@ aliases: ["/docs/reference/clouds/kubernetes/"]
 [Kubernetes][k8s] is an open source project for running and managing containerized applications
 on a cluster of machines.
 
-[Pulumi]({{< relref "/docs/get-started" >}}) is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
+[Pulumi]({{< prelref "/docs/get-started" >}}) is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
 SDK, alongside other SDKs which span common cloud native utilities, cloud
 provider IaaS offerings, and their catalog of services - managed Kubernetes included.
 
@@ -40,7 +40,7 @@ Kubernetes and Pulumi can:
 
 ## Getting Started
 
-The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/get-started/kubernetes" >}}) guide.
+The quickest way to get started with Kubernetes is to follow the [Get Started]({{< prelref "/docs/get-started/kubernetes" >}}) guide.
 
 ## Library Packages
 
@@ -65,7 +65,7 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 
 ## Crosswalk for Kubernetes
 
-<a href="{{< relref "./" >}}">
+<a href="{{< prelref "./" >}}">
     <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -75,6 +75,6 @@ best-practices for managing Kubernetes, and its infrastructure in production.
 [Get started][crosswalk-control-plane] by deploying stacks of infrastructure architected to enable teams
 to run and manage Kubernetes in production.
 
-[crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
-[crosswalk-k8s]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
-[prod-arch-for-teams]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
+[crosswalk-control-plane]: {{< prelref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
+[crosswalk-k8s]: {{< prelref "/docs/guides/crosswalk/kubernetes" >}}
+[prod-arch-for-teams]: {{< prelref "/docs/guides/crosswalk/kubernetes" >}}

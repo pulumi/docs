@@ -3,12 +3,12 @@ title: RabbitMQ Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi RabbitMQ Provider.
 ---
 
-The [Pulumi RabbitMQ provider]({{< relref "./" >}}) uses the RabbitMQ SDK to manage and provision resources.
+The [Pulumi RabbitMQ provider]({{< prelref "./" >}}) uses the RabbitMQ SDK to manage and provision resources.
 
 > Pulumi relies on the RabbitMQ SDK to authenticate requests from your computer to RabbitMQ. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi RabbitMQ Provider]({{< relref "./" >}}) needs to be configured with RabbitMQ credentials
+The [Pulumi RabbitMQ Provider]({{< prelref "./" >}}) needs to be configured with RabbitMQ credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

@@ -130,12 +130,12 @@ to protect the rendered files.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open
+infrastructure and Kubernetes through code, [get started today]({{< prelref "/docs/get-started" >}}). Pulumi is open
 source and free to use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< prelref "/docs/tutorials/kubernetes" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on

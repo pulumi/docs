@@ -12,7 +12,7 @@ aliases: ["/docs/reference/vs/terraform/"]
 
 Terraform and Pulumi hold a lot of similarities, but they differ in a few key ways. This page helps provide a rundown of the differences. First, Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. But where
 Terraform requires the use of a custom programming language, however, Pulumi allows you to use familiar general purpose languages and tools to accomplish the same goals. Like Terraform, Pulumi is
-[open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use]({{< relref "/docs/get-started" >}}).
+[open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use]({{< prelref "/docs/get-started" >}}).
 
 ## Summary
 
@@ -37,7 +37,7 @@ The major differences between Terraform and Pulumi are as follows:
 3. Terraform, by default, requires that you manage concurrency and state manually, by way of its "state files." Pulumi,
    in contrast, uses the free app.pulumi.com service to eliminate these concerns. This makes getting started with
    Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, [it is possible to use
-   Pulumi without the service]({{< relref "/docs/troubleshooting/faq#can-i-use-pulumi-without-depending-on-pulumicom" >}}),
+   Pulumi without the service]({{< prelref "/docs/troubleshooting/faq#can-i-use-pulumi-without-depending-on-pulumicom" >}}),
    which works a lot more like Terraform, but it is harder to do and opt-in. Pulumi errs on the side of ease-of-use.
 
 4. Pulumi has deep support for cloud native technologies, like Kubernetes, and supports advanced deployment
@@ -45,7 +45,7 @@ The major differences between Terraform and Pulumi are as follows:
    sidecar injection, and more. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).
 
 For some concrete examples of these differences, please see our article, [From Terraform to Infrastructure as Software](
-{{< relref "from-terraform-to-infrastructure-as-software" >}}).
+{{< prelref "from-terraform-to-infrastructure-as-software" >}}).
 
 ## Using Terraform Providers
 
@@ -69,13 +69,13 @@ Pulumi offers a tool, [`tf2pulumi`](https://github.com/pulumi/tf2pulumi), that c
 open source on GitHub, and works for most projects we have come across; if you run into a snag, Issues and Pull
 Requests are welcome! [Download and use it now.](https://github.com/pulumi/tf2pulumi)
 
-To learn more, [see Referencing Terraform State in our Adopting Pulumi user guide]({{< relref "/docs/guides/adopting/from_terraform#referencing-terraform-state" >}}).
+To learn more, [see Referencing Terraform State in our Adopting Pulumi user guide]({{< prelref "/docs/guides/adopting/from_terraform#referencing-terraform-state" >}}).
 
 ## Using Pulumi and Terraform Side-by-Side
 
 Pulumi supports
 [consuming local or remote Terraform state](
-{{< relref "using-terraform-remote-state-with-pulumi" >}})
+{{< prelref "using-terraform-remote-state-with-pulumi" >}})
 from your Pulumi programs. This helps with
 incremental adoption, whereby you continue managing a subset of your infrastructure with Terraform, while you
 incrementally move to Pulumi.
@@ -85,4 +85,4 @@ avoid any disruption, or maybe because some of the team would like to stay on Te
 state reference support described above, you can author higher level infrastructure in Pulumi that consumes the
 Terraform-provisioned VPC information (like the VPC ID, Subnet IDs, etc), making the co-existence of Pulumi and Terraform easy to automate.
 
-To learn more, [see Converting Terraform HCL to Pulumi in our Adopting Pulumi user guide]({{< relref "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" >}}).
+To learn more, [see Converting Terraform HCL to Pulumi in our Adopting Pulumi user guide]({{< prelref "/docs/guides/adopting/from_terraform#converting-terraform-hcl-to-pulumi" >}}).

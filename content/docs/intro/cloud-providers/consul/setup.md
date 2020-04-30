@@ -3,7 +3,7 @@ title: HashiCorp Consul Setup
 meta_desc: This page provides an overview on how to configure the Pulumi Consul Provider.
 ---
 
-The [Pulumi Consul provider]({{< relref "./" >}}) uses the Consul SDK to manage resources.
+The [Pulumi Consul provider]({{< prelref "./" >}}) uses the Consul SDK to manage resources.
 
 > Pulumi relies on the Consul SDK to authenticate requests from your computer to HashiCorp Consul. Your credentials are never sent
 > to pulumi.com.

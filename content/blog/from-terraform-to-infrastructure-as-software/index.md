@@ -232,7 +232,7 @@ translation automatically for you. This is a great place to get started
 to leverage languages better.
 
 The first step is to create a Pulumi project.
-[Download Pulumi here]({{< relref "/docs/get-started/install" >}}), and then run:
+[Download Pulumi here]({{< prelref "/docs/get-started/install" >}}), and then run:
 
 ```
 $ pulumi new aws-typescript

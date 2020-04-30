@@ -35,11 +35,11 @@ a cloud storage service
 ### Pulumi Service backend
 
 The Pulumi Service backend requires no additional configuration after
-[installing the CLI]({{< relref "/docs/get-started/install" >}}). By default, the CLI
+[installing the CLI]({{< prelref "/docs/get-started/install" >}}). By default, the CLI
 uses the Service backend hosted at [app.pulumi.com](https://app.pulumi.com).
 
 Pulumi offers this backend as a free service with
-[advanced tiers]({{< relref "/pricing" >}}) for team and
+[advanced tiers]({{< prelref "/pricing" >}}) for team and
 enterprise features. Using the [Pulumi Service backend](#pulumi-backend-features)
 and the CLI together provides a great combination of usability, safety, and
 security for most users.
@@ -66,11 +66,11 @@ of your S3 bucket.
 Visit the following links for details on cloud provider
 CLI and storage setup:
 
-- **AWS S3.** _See [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
+- **AWS S3.** _See [AWS Setup]({{< prelref "/docs/intro/cloud-providers/aws/setup" >}})
 and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)._
-- **Azure Blob.** _See [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}})
+- **Azure Blob.** _See [Azure Setup]({{< prelref "/docs/intro/cloud-providers/azure/setup" >}})
 and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli)._
-- **Google Cloud Storage.** _See [GCP Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
+- **Google Cloud Storage.** _See [GCP Setup]({{< prelref "/docs/intro/cloud-providers/gcp/setup" >}})
 and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts)._
 
 ### Pulumi Service backend features
@@ -96,12 +96,12 @@ Pulumi enterprise users have a self-hosting option, for using the Pulumi Service
 <img src="/images/docs/reference/state_enterprise.png" alt="Pulumi Enterprise
 Architecture" class="img-bordered">
 
-[Contact us]({{< relref "/pricing#contact" >}}) for more information on
+[Contact us]({{< prelref "/pricing#contact" >}}) for more information on
 Pulumi Enterprise.
 
 ## Logging in
 
-The `pulumi login` <a href="{{< relref "/docs/reference/cli/pulumi_login" >}}"
+The `pulumi login` <a href="{{< prelref "/docs/reference/cli/pulumi_login" >}}"
 target="_blank">CLI command</a> lets you log in to a backend. By default,
 you will be prompted to log in anytime you try to do something that requires stacks or state.
 
@@ -113,7 +113,7 @@ To quickly check your backend login info, run `pulumi whoami` with the `v` or ve
 $ pulumi whoami -v
 ```
 
-See [pulumi whoami]({{< relref "/docs/reference/cli/pulumi_whoami" >}}) for more details.
+See [pulumi whoami]({{< prelref "/docs/reference/cli/pulumi_whoami" >}}) for more details.
 
 #### Example response
 
@@ -325,5 +325,5 @@ passphrase-based secrets provider.
 ## Logging out
 
 To delete stored credentials on your machine and log out from your current
-backend, run `pulumi logout`. See [pulumi logout]({{< relref "/docs/reference/cli/pulumi_logout" >}})
+backend, run `pulumi logout`. See [pulumi logout]({{< prelref "/docs/reference/cli/pulumi_logout" >}})
 for more details.

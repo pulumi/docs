@@ -22,9 +22,9 @@ What do many of the most innovative companies in the modern cloud era have in co
 
 ![S3 buckets open to public](Slurp-Amazon-AWS-S3-Bucket-Enumerator.png)
 
-Pulumi's CrossGuard helps customers adhere to security best practices by checking the final state of a deployment against a set of policies and revealing any non-compliant services. CrossGuard is an SDK for writing policies for services, and it includes best practices playbooks for cloud providers such as AWS, Azure, and Google Cloud Platform. The [Getting Started with PaC]({{< relref "/docs/get-started/crossguard" >}}) covers the case of leaking S3 buckets, but let’s do a quick review with an example showing how we can detect a leaky bucket before it gets deployed.
+Pulumi's CrossGuard helps customers adhere to security best practices by checking the final state of a deployment against a set of policies and revealing any non-compliant services. CrossGuard is an SDK for writing policies for services, and it includes best practices playbooks for cloud providers such as AWS, Azure, and Google Cloud Platform. The [Getting Started with PaC]({{< prelref "/docs/get-started/crossguard" >}}) covers the case of leaking S3 buckets, but let’s do a quick review with an example showing how we can detect a leaky bucket before it gets deployed.
 
-> Note: If you haven’t installed Pulumi, follow the [Pulumi Getting Started]({{< relref "/docs/get-started/install" >}})
+> Note: If you haven’t installed Pulumi, follow the [Pulumi Getting Started]({{< prelref "/docs/get-started/install" >}})
 Start by creating an S3 bucket with Pulumi.
 
 ```bash
@@ -122,7 +122,7 @@ const example = new aws.elasticsearch.Domain("example", {
 });
 ```
 
-In this example, we’ll use [AWSGuard]({{< relref "/docs/guides/crossguard/awsguard" >}}), which is a set of best practice policies for AWS. First, create a directory, change into it, and create a new policy.
+In this example, we’ll use [AWSGuard]({{< prelref "/docs/guides/crossguard/awsguard" >}}), which is a set of best practice policies for AWS. First, create a directory, change into it, and create a new policy.
 
 ```bash
 $ mkdir awsguard && cd awsguard

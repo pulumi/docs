@@ -3,12 +3,12 @@ title: SignalFx Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi SignalFx Provider.
 ---
 
-The [Pulumi SignalFx provider]({{< relref "./" >}}) uses the SignalFx SDK to manage and provision resources.
+The [Pulumi SignalFx provider]({{< prelref "./" >}}) uses the SignalFx SDK to manage and provision resources.
 
 > Pulumi relies on the SignalFx SDK to authenticate requests from your computer to SignalFx. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi SignalFx Provider]({{< relref "./" >}}) needs to be configured with SignalFx credentials
+The [Pulumi SignalFx Provider]({{< prelref "./" >}}) needs to be configured with SignalFx credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

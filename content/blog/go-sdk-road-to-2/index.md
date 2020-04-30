@@ -7,7 +7,7 @@ meta_desc: "Pulumi + Go is a powerful combo for your cloud-native infrastructure
 meta_image: "pulumigo.png"
 ---
 
-Here at Pulumi, everyone on our engineering team is a Gopher. Go has quickly become the "language of the cloud," and so when we chose to build our open-source [pulumi/pulumi engine](https://github.com/pulumi/pulumi) and SaaS backend, we chose Go. As such, we are very excited to welcome Go to the family of supported infrastructure as code languages as part of [Pulumi 2.0]({{< relref "/blog/pulumi-2-0-roadmap#better-language-support" >}}).
+Here at Pulumi, everyone on our engineering team is a Gopher. Go has quickly become the "language of the cloud," and so when we chose to build our open-source [pulumi/pulumi engine](https://github.com/pulumi/pulumi) and SaaS backend, we chose Go. As such, we are very excited to welcome Go to the family of supported infrastructure as code languages as part of [Pulumi 2.0]({{< prelref "/blog/pulumi-2-0-roadmap#better-language-support" >}}).
 
 ## What is Pulumi?
 
@@ -54,16 +54,16 @@ Although this code looks remarkably similar to using your cloud's Go SDK to impe
 
 Making Go a first-class citizen is a goal for the Pulumi 2.0 release. We especially wanted Go to have more idiomatic and stronger typing than `interface{}`.
 
-Pulumi’s [programming model]({{< relref "/docs/intro/concepts/programming-model" >}}) is inherently asynchronous. Consider creating a new AWS SecurityGroup, and using it to provision an EC2 instance. The EC2 instance must wait for the Group to finish provisioning, and the Pulumi engine must track this dependency. While two resources, modern cloud deployments commonly manage hundreds of resources. Pulumi models these resources using promise-like wrappers referred to as Inputs and Outputs allowing us to build a dependency graph, and parallelize cloud resource provisioning where possible.
+Pulumi’s [programming model]({{< prelref "/docs/intro/concepts/programming-model" >}}) is inherently asynchronous. Consider creating a new AWS SecurityGroup, and using it to provision an EC2 instance. The EC2 instance must wait for the Group to finish provisioning, and the Pulumi engine must track this dependency. While two resources, modern cloud deployments commonly manage hundreds of resources. Pulumi models these resources using promise-like wrappers referred to as Inputs and Outputs allowing us to build a dependency graph, and parallelize cloud resource provisioning where possible.
 
-Inputs, Outputs, and functions that operate over them ([All]({{< relref "/docs/intro/concepts/programming-model#all" >}}), [Apply]({{< relref "/docs/intro/concepts/programming-model#apply" >}}), [Sprintf]({{< relref "/docs/intro/concepts/programming-model#outputs-and-strings" >}})) must be compatible with raw type primitives (string, integer, list, map, boolean), and user-defined structs. In other words, we must support polymorphism in a language that doesn’t have generics. We hide the gritty details behind a rich, strongly-typed API that we were able to iterate on easily thanks to the utilization of [code generation](https://github.com/pulumi/pulumi/blob/master/sdk/go/pulumi/types_builtins.go).
+Inputs, Outputs, and functions that operate over them ([All]({{< prelref "/docs/intro/concepts/programming-model#all" >}}), [Apply]({{< prelref "/docs/intro/concepts/programming-model#apply" >}}), [Sprintf]({{< prelref "/docs/intro/concepts/programming-model#outputs-and-strings" >}})) must be compatible with raw type primitives (string, integer, list, map, boolean), and user-defined structs. In other words, we must support polymorphism in a language that doesn’t have generics. We hide the gritty details behind a rich, strongly-typed API that we were able to iterate on easily thanks to the utilization of [code generation](https://github.com/pulumi/pulumi/blob/master/sdk/go/pulumi/types_builtins.go).
 
 ## Try Pulumi + Go Today
 
 Although Pulumi for Go is in “preview” status until 2.0 is released, it supports all of the essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback and over the next few weeks, and work hard to improve the Go experience across the board, including more examples and better documentation. To get started check out:
 
 - [GoDoc](https://godoc.org/github.com/pulumi/pulumi)
-- Getting started with Go and [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), or [Google Cloud]({{< relref "/docs/get-started/gcp" >}}).
+- Getting started with Go and [AWS]({{< prelref "/docs/get-started/aws" >}}), [Azure]({{< prelref "/docs/get-started/azure" >}}), or [Google Cloud]({{< prelref "/docs/get-started/gcp" >}}).
 - Author and deploy serverless functions in Go on [AWS Lambda](https://github.com/pulumi/examples/tree/master/aws-go-lambda) and [GCP Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-go-functions).
 - Build a serverless container-based application on [AWS ECS Fargate](https://github.com/pulumi/examples/tree/master/aws-go-fargate).
 - Deploy a web server on a virtual machine with [AWS](https://github.com/pulumi/examples/tree/master/aws-go-webserver) or [Azure](https://github.com/pulumi/examples/tree/master/azure-go-webserver-component).

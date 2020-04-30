@@ -17,9 +17,9 @@ write this as a simple example using Pulumi SDKs.
 
 ## Prerequisites
 
-1. [Install `pulumi` CLI]({{< relref "/docs/get-started/install" >}})
-    and set up your [*Azure credentials*]({{< relref "/docs/get-started/azure" >}})
-2. Initialize a new [Pulumi project]({{< relref "/docs/intro/concepts/project" >}}) from available
+1. [Install `pulumi` CLI]({{< prelref "/docs/get-started/install" >}})
+    and set up your [*Azure credentials*]({{< prelref "/docs/get-started/azure" >}})
+2. Initialize a new [Pulumi project]({{< prelref "/docs/intro/concepts/project" >}}) from available
     templates. We use **`****`azure-typescript`****`** template here to
     install all dependencies and save the configuration.
 
@@ -193,4 +193,4 @@ For more examples visit our [GitHub examples](https://github.com/pulumi/examples
 
 If you want to additionally look at how to integrate Azure DevOps with
 Pulumi, check out our other post
-[CI/CD made easy with Pulumi and Azure Pipelines]({{< relref "cd-made-easy-with-pulumi-and-azure-pipelines" >}}).
+[CI/CD made easy with Pulumi and Azure Pipelines]({{< prelref "cd-made-easy-with-pulumi-and-azure-pipelines" >}}).

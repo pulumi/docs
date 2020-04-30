@@ -22,22 +22,22 @@ The fastest way to get up and running is to choose from one of the following Get
 
 <div class="tiles mt-4">
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/aws" >}}">
+        <a class="tile p-4" href="{{< prelref "/docs/get-started/aws" >}}">
             <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
         </a>
     </div>
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/azure" >}}">
+        <a class="tile p-4" href="{{< prelref "/docs/get-started/azure" >}}">
             <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
         </a>
     </div>
     <div class="flex-1 pb-4 md:mr-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/gcp" >}}">
+        <a class="tile p-4" href="{{< prelref "/docs/get-started/gcp" >}}">
             <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
         </a>
     </div>
     <div class="flex-1 pb-4">
-        <a class="tile p-4" href="{{< relref "/docs/get-started/kubernetes" >}}">
+        <a class="tile p-4" href="{{< prelref "/docs/get-started/kubernetes" >}}">
             <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
         </a>
     </div>
@@ -50,7 +50,7 @@ The fastest way to get up and running is to choose from one of the following Get
 
 Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.1 or later. If you follow the Getting Started guides above, they will walk you through doing this.
 
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+1. [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
 1. [Install .NET Core SDK 3.1](https://dotnet.microsoft.com/download)
 
 ## Example
@@ -177,7 +177,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new csharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.csproj` file that holds references used by the project, a `Program.cs` file, containing the program entry point, and a `MyStack.cs` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `csproj` file name.
+This will create a `Pulumi.yaml` [project file]({{< prelref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.csproj` file that holds references used by the project, a `Program.cs` file, containing the program entry point, and a `MyStack.cs` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `csproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -196,7 +196,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new fsharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml` and as the `fsproj` file name.
+This will create a `Pulumi.yaml` [project file]({{< prelref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml` and as the `fsproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -215,7 +215,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new visualbasic
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.vbproj` file that holds references used by the project, a `Program.vb` file, containing the program entry point, and a `MyStack.vb` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `vbproj` file name.
+This will create a `Pulumi.yaml` [project file]({{< prelref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.vbproj` file that holds references used by the project, a `Program.vb` file, containing the program entry point, and a `MyStack.vb` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `vbproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -246,16 +246,16 @@ In addition to the CLI-driven workflows shown above, you can continuously deploy
 
 Pulumi can deploy infrastructure changes from your Azure DevOps Pipelines. This enables easy integration with your existing automation while using .NET Core for your infrastructure as code, leveraging the Pulumi task in the Visual Studio Marketplace.
 
-To learn more, [see the Pulumi Azure DevOps user guide]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}}).
+To learn more, [see the Pulumi Azure DevOps user guide]({{< prelref "/docs/guides/continuous-delivery/azure-devops" >}}).
 
 ### GitHub Actions
 
 <img src="/logos/tech/githubactions.png" align="right" width="120" style="padding:0 0 16px 32px">
 
-Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}).
+Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide]({{< prelref "/docs/guides/continuous-delivery/github-actions" >}}).
 
-There is also a Pulumi GitHub App that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate. [Read more here about how to install this app into your organization]({{< relref "/docs/guides/continuous-delivery/github-app" >}}).
+There is also a Pulumi GitHub App that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate. [Read more here about how to install this app into your organization]({{< prelref "/docs/guides/continuous-delivery/github-app" >}}).
 
 ### Other CI/CD Integrations
 
-If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other CI/CD integrations. For a complete list, [go here]({{< relref "/docs/guides/continuous-delivery" >}}).
+If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other CI/CD integrations. For a complete list, [go here]({{< prelref "/docs/guides/continuous-delivery" >}}).

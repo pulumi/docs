@@ -17,7 +17,7 @@ In this section, we will see the most basic concepts required to start declaring
 
 ## Programs {#programs}
 
-Pulumi programs are written in general-purpose programming languages, including [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}), [TypeScript]({{< relref "/docs/intro/languages/javascript" >}}), [Python]({{< relref "/docs/intro/languages/python" >}}), [Go]({{< relref "/docs/intro/languages/go" >}}) or [any .NET language]({{< relref "/docs/intro/languages/dotnet" >}}) such as C#, F#, or VB. You use the language's native tools and libraries, including [Pulumi's own packages]({{< relref "/docs/reference/pkg" >}}) containing infrastructure resource types.
+Pulumi programs are written in general-purpose programming languages, including [JavaScript]({{< prelref "/docs/intro/languages/javascript" >}}), [TypeScript]({{< prelref "/docs/intro/languages/javascript" >}}), [Python]({{< prelref "/docs/intro/languages/python" >}}), [Go]({{< prelref "/docs/intro/languages/go" >}}) or [any .NET language]({{< prelref "/docs/intro/languages/dotnet" >}}) such as C#, F#, or VB. You use the language's native tools and libraries, including [Pulumi's own packages]({{< prelref "/docs/reference/pkg" >}}) containing infrastructure resource types.
 
 Although you use general-purpose languages, Pulumi is still a declarative infrastructure as code tool. After writing a program, you run the Pulumi CLI command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared. The CLI will show you a preview of changes to be made, including all new resources to be created and existing resources to update or destroy. After confirming, Pulumi will carry out the changes.
 
@@ -26,12 +26,12 @@ Although you use general-purpose languages, Pulumi is still a declarative infras
 Pulumi programs are structured as projects and stacks. The distinction between them is:
 
 * [Program](#programs): a collection of files written in your chosen programming language
-* [Project]({{< relref "project" >}}): a directory containing a program, with metadata, so Pulumi knows how to run it
-* [Stack]({{< relref "stack" >}}): an instance of your project, each often corresponding to a different cloud environment
+* [Project]({{< prelref "project" >}}): a directory containing a program, with metadata, so Pulumi knows how to run it
+* [Stack]({{< prelref "stack" >}}): an instance of your project, each often corresponding to a different cloud environment
 
 Infrastructure and application artifacts can be managed together or separately. For instance, Pulumi can build and publish Docker container images containing application code when you do a `pulumi up`, alongside the private registry and container service infrastructure that consumes it. Equally as well, however, your infrastructure can reference independently deployed artifacts.
 
-A program becomes a project by virtue of a `Pulumi.yaml` manifest that describes it in the root directory. Each project can be instantiated multiple times. For instance, you can have distinct development, staging, and production stacks. Learn more about projects [here]({{< relref "project" >}}) and stacks [here]({{< relref "stack" >}}).
+A program becomes a project by virtue of a `Pulumi.yaml` manifest that describes it in the root directory. Each project can be instantiated multiple times. For instance, you can have distinct development, staging, and production stacks. Learn more about projects [here]({{< prelref "project" >}}) and stacks [here]({{< prelref "stack" >}}).
 
 ### Declaring Infrastructure
 
@@ -350,7 +350,7 @@ var res = new Resource(name, args, options);
 
 {{< /chooser >}}
 
-All resources have a required [`name`](#names) argument, which must be unique across resources of the same kind in a [stack]({{< relref "stack" >}}). This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
+All resources have a required [`name`](#names) argument, which must be unique across resources of the same kind in a [stack]({{< prelref "stack" >}}). This _logical name_ influences the _physical name_ assigned by your infrastructure's cloud provider, although [Pulumi auto-names resources](#autonaming) by default, so they may differ.
 
 The `args` argument is an object with a set of named property input values that are used to initialize the resource. These can be normal raw values---such as strings, integers, lists, and maps---or [outputs from other resources](#outputs).
 
@@ -557,7 +557,7 @@ Resources constructed as children of a [component](#components) should make sure
 
 ##### Resource Arguments
 
-A resource's expected argument parameter will differ by resource type. Each resource specifies a number of named input properties that control all of the behavior of the resulting infrastructure. To determine what arguments a resource supports, refer to that resource's [API documentation]({{< relref "/docs/reference/pkg" >}}).
+A resource's expected argument parameter will differ by resource type. Each resource specifies a number of named input properties that control all of the behavior of the resulting infrastructure. To determine what arguments a resource supports, refer to that resource's [API documentation]({{< prelref "/docs/reference/pkg" >}}).
 
 ##### Resource Options {#resourceoptions}
 
@@ -1593,7 +1593,7 @@ Upon creating a new instance of `MyComponent`, the call to the base constructor 
 
 A component must register a unique type name, such as `pkg:index:MyComponent` in the previous example. To reduce the potential of other type name conflicts, this name contains the package and module name, in addition to the type:  `<package>:<module>:<type>`. These names are namespaced alongside non-component resources, such as `aws:lambda:Function`.
 
-For more information about components, [see the Pulumi Components tutorial]({{< relref "/docs/tutorials/aws/s3-folder-component" >}}).
+For more information about components, [see the Pulumi Components tutorial]({{< prelref "/docs/tutorials/aws/s3-folder-component" >}}).
 
 ##### Creating Child Resources
 
@@ -2312,11 +2312,11 @@ Output<string[]> Split(Input<string> input)
 
 ### Secrets {#secrets}
 
-All resource input and output values are recorded as [state]({{< relref "state" >}}), either stored in the Pulumi Service, a file, or a pluggable provider of your own choosing. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
+All resource input and output values are recorded as [state]({{< prelref "state" >}}), either stored in the Pulumi Service, a file, or a pluggable provider of your own choosing. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
 
-The Pulumi Service transmits and stores entire state files securely, however, Pulumi also supports encrypting specific values as "secrets" beyond this for extra protection. This ensures that these values never appear as plaintext in your state. The encryption uses automatic per-stack encryption keys provided by the Pulumi Service by default, or [you can use a provider of your own choosing]({{< relref "config#configuring-secrets-encryption" >}}).
+The Pulumi Service transmits and stores entire state files securely, however, Pulumi also supports encrypting specific values as "secrets" beyond this for extra protection. This ensures that these values never appear as plaintext in your state. The encryption uses automatic per-stack encryption keys provided by the Pulumi Service by default, or [you can use a provider of your own choosing]({{< prelref "config#configuring-secrets-encryption" >}}).
 
-There is a CLI aspect to secrets, in that the CLI's [`config set` command]({{< relref "config#configuration" >}}) supports a [`--secret` flag]({{< relref "config#secrets" >}}) to encrypt your stack's configuration settings.
+There is a CLI aspect to secrets, in that the CLI's [`config set` command]({{< prelref "config#configuration" >}}) supports a [`--secret` flag]({{< prelref "config#secrets" >}}) to encrypt your stack's configuration settings.
 
 There is also a runtime aspect to secrets, in that any {{< pulumi-output >}} value may be marked secret. If an output is a secret, then any computed values from it---such as those derived through an {{< pulumi-apply >}} call---will themselves be marked secret. All such values are stored encrypted inside of your state, and never in plaintext.
 
@@ -2338,20 +2338,20 @@ There are two ways to programmatically create secret values:
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 {{% choosable language javascript %}}
 
-* Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
-* Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+* Using [`getSecret(key)`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
+* Calling [`pulumi.secret(value)`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language typescript %}}
 
-* Using [`getSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
-* Calling [`pulumi.secret(value)`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
+* Using [`getSecret(key)`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}) or [`requireSecret(key)`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}) when reading a value from config.
+* Calling [`pulumi.secret(value)`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#secret" >}}) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
-* Using [`get_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}}) or [`require_secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}) when reading a value from config.
-* Calling [`Output.secret`]({{< relref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}}) to construct a secret from an existing value.
+* Using [`get_secret`]({{< prelref "/docs/reference/pkg/python/pulumi#pulumi.Config.get_secret" >}}) or [`require_secret`]({{< prelref "/docs/reference/pkg/python/pulumi#pulumi.Config.require_secret" >}}) when reading a value from config.
+* Calling [`Output.secret`]({{< prelref "/docs/reference/pkg/python/pulumi#pulumi.Output.secret" >}}) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -2449,11 +2449,11 @@ An {{< pulumi-apply >}}'s callback is given the plaintext value of the underlyin
 
 It is possible to mark resource outputs as containg secrets. In this case, Pulumi will automatically treat those outputs
 as secrets and encrypt them in the state file and anywhere they flow to. To do so,
-[use the "additional secret outputs" option, as described above]({{< relref "#additionalsecretoutputs" >}}).
+[use the "additional secret outputs" option, as described above]({{< prelref "#additionalsecretoutputs" >}}).
 
 ### Stack Outputs {#stack-outputs}
 
-A stack may export values as [stack outputs]({{< relref "stack#outputs" >}}). These outputs are shown during an update, can be easily retrieved from the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs and computed IP addresses and DNS names. They can also be used for [inter-stack dependencies](#stack-references), such as when a lower layer of infrastructure needs to export values for consumption elsewhere.
+A stack may export values as [stack outputs]({{< prelref "stack#outputs" >}}). These outputs are shown during an update, can be easily retrieved from the Pulumi CLI, and are displayed in the Pulumi Console. They can be used for important values like resource IDs and computed IP addresses and DNS names. They can also be used for [inter-stack dependencies](#stack-references), such as when a lower layer of infrastructure needs to export values for consumption elsewhere.
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
@@ -2507,7 +2507,7 @@ public class MyStack : Stack
 
 {{< /chooser >}}
 
-From the CLI, you can then use [`pulumi stack output url`]({{< relref "/docs/reference/cli/pulumi_stack_output" >}}) to get the value and incorporate into other scripts or tools.
+From the CLI, you can then use [`pulumi stack output url`]({{< prelref "/docs/reference/cli/pulumi_stack_output" >}}) to get the value and incorporate into other scripts or tools.
 
 The right-hand side of a stack export can be a regular value, an [Output](#outputs), or a `Promise` (effectively, the same as an [Input](#outputs)). The actual values are resolved at the end of `pulumi up`.
 
@@ -2662,7 +2662,7 @@ Stack names must be fully qualified, including the organization, project, and st
 
 Configuration allows you to parameterize your program based on externally managed configuration. This can be helpful if you want to, say, have a different number of servers in your production stack than in development.
 
-> This section describes how to programmatically interact with configuration that has already been set. For more information on how to do so using the CLI, see [Configuration and Secrets]({{< relref "/docs/intro/concepts/config" >}}).
+> This section describes how to programmatically interact with configuration that has already been set. For more information on how to do so using the CLI, see [Configuration and Secrets]({{< prelref "/docs/intro/concepts/config" >}}).
 
 #### Reading Configuration Values
 
@@ -2823,7 +2823,7 @@ Console.WriteLine($"Active: {data.GetProperty("active")}");
 
 You can use packages from your language's native package manager: for example, NPM for Node.js, Pip for Python, Go modules for Go, and NuGet for .NET. These packages may transitively depend on the Pulumi SDK, which itself is just a native package. The Pulumi SDK defines how resources created by a program will be communicated to the Pulumi engine. The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other native package.
 
-Any packages that create custom resources---classes that derive from the {{< pulumi-customresource >}} base class---will cause Pulumi to load an associated "resource provider plugin" at runtime, which is a binary that implements the Create, Read, Update, and Delete resources defined by the package. Normally plugins are installed automatically when you install the package, but you can also [manage plugins explicitly using the CLI]({{< relref "/docs/reference/cli/pulumi_plugin" >}}).
+Any packages that create custom resources---classes that derive from the {{< pulumi-customresource >}} base class---will cause Pulumi to load an associated "resource provider plugin" at runtime, which is a binary that implements the Create, Read, Update, and Delete resources defined by the package. Normally plugins are installed automatically when you install the package, but you can also [manage plugins explicitly using the CLI]({{< prelref "/docs/reference/cli/pulumi_plugin" >}}).
 
 This is in contrast to a component resource---classes that derive from the {{< pulumi-componentresource >}} base class--whose logic is written entirely within that library itself, without any external plugin required. A component resource does not manage any external infrastructure state; instead, it simply aggregates existing resources into a larger abstraction.
 
@@ -3320,7 +3320,7 @@ Dynamic providers are a flexible and low-level mechanism to plug arbitrary code 
 
 In fact, these two phases of execution actually run in completely separate processes. The construction of a `new MyResource` happens inside the JavaScript, Python, or Go process running your Pulumi program. But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`. This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine.
 
-Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "/docs/tutorials/aws/serializing-functions" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
+Because your implementation of the resource provider interface must be used by a different process, potentially at a different point in time, dynamic providers are built on top of the same [function serialization]({{< prelref "/docs/tutorials/aws/serializing-functions" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions. Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
 
 ##### Dynamic Resource Inputs
 
@@ -4068,7 +4068,7 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 
 {{< /chooser >}}
 
-Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}) API, which takes a JavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
+Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}) API, which takes a JavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
 
 When serializing a function to text, the following steps are taken:
 
@@ -4076,4 +4076,4 @@ When serializing a function to text, the following steps are taken:
 2. The values of those variables are serialized.
 3. When the values are objects, all properties and prototype chains are serialized.  When the values are functions, those functions are serialized by following these same steps.
 
-See [Serializing Functions]({{< relref "/docs/tutorials/aws/serializing-functions" >}}) for more details.
+See [Serializing Functions]({{< prelref "/docs/tutorials/aws/serializing-functions" >}}) for more details.

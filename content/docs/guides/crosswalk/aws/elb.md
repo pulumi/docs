@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/elb/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="{{< prelref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -23,8 +23,8 @@ Availability Zones.
 ## Overview
 
 Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
-integrates with functionality for other services, including [API Gateway]({{< relref "api-gateway" >}}),
-[Elastic Container Service (ECS)]({{< relref "ecs" >}}), [Lambda]({{< relref "lambda" >}}), and [VPC]({{< relref "vpc" >}}), to provide
+integrates with functionality for other services, including [API Gateway]({{< prelref "api-gateway" >}}),
+[Elastic Container Service (ECS)]({{< prelref "ecs" >}}), [Lambda]({{< prelref "lambda" >}}), and [VPC]({{< prelref "vpc" >}}), to provide
 configurable network accessibility to the different kinds of compute you will run inside of AWS.
 
 Elastic Load Balancing offers multiple types of load balancers that all feature the high availability, automatic
@@ -177,8 +177,8 @@ to configure the way that traffic is forwarded, health checks, and so on, see
 For more advanced cases, you will most likely want to use [EC2 Auto Scaling](
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html), rather than hard-coding
 the number of and placement of VMs. Please refer to the API docs for
-[LaunchConfiguration]({{< relref "/docs/reference/pkg/aws/ec2/launchconfiguration" >}}) and
-[AutoScalingGroup]({{< relref "/docs/reference/pkg/aws/autoscaling/group" >}}) for details on how to do so.
+[LaunchConfiguration]({{< prelref "/docs/reference/pkg/aws/ec2/launchconfiguration" >}}) and
+[AutoScalingGroup]({{< prelref "/docs/reference/pkg/aws/autoscaling/group" >}}) for details on how to do so.
 
 ## Load Balancing ECS Service Targets
 
@@ -216,7 +216,7 @@ const nginx = new awsx.ecs.FargateService("nginx-task", {
 export const endpoint = listener.endpoint.hostname;
 ```
 
-> [Pulumi Crosswalk for AWS ECS]({{< relref "ecs" >}}) -- those classes in the `awsx.ecs` package -- will automatically create the
+> [Pulumi Crosswalk for AWS ECS]({{< prelref "ecs" >}}) -- those classes in the `awsx.ecs` package -- will automatically create the
 > right ingress and egress rules. If you are using raw `aws.ecs`, you will need to manually manage the security group
 > ingress and egress rules, much like the [EC2 Instance](#load-balancing-ec2-instances) example earlier.
 
@@ -291,7 +291,7 @@ const listener = alb.createListener("web-listener", { port: 80 });
 export const endpoint = listener.endpoint;
 ```
 
-For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC]({{< relref "vpc" >}}).
+For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC]({{< prelref "vpc" >}}).
 
 ## Advanced Load Balancer Listener and Target Group Configuration
 
@@ -439,4 +439,4 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balance
 ## Additional ELB Resources
 
 For detailed reference documentation, please visit [the API docs](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lb" >}}).
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/lb" >}}).

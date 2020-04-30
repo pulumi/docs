@@ -22,7 +22,7 @@ jump out that may resonate with you as well:
 
 ## Prerequisites
 
-- [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+- [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
 - [Install Node.js version 6 or later](https://nodejs.org/en/download/)
 - Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install)
 - [Install Google Cloud SDK](https://cloud.google.com/sdk/docs/downloads-interactive)

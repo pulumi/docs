@@ -15,7 +15,7 @@ In this tutorial, we'll show you how to provision raw resources in AWS using the
 
 ### Step 1: Create a new project from a template
 
-Create a project directory, `s3website`, and change into it. Run [`pulumi new javascript --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the JavaScript template. Replace `myproject` with your desired project name.
+Create a project directory, `s3website`, and change into it. Run [`pulumi new javascript --name myproject`]({{< prelref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the JavaScript template. Replace `myproject` with your desired project name.
 
 ```bash
 $ mkdir s3website && cd s3website
@@ -87,11 +87,11 @@ Configure the AWS region to deploy to, such as `us-west-2`.
 $ pulumi config set aws:region us-west-2
 ```
 
-Notice how a new file, `Pulumi.website-testing.yaml`, got created in the root directory for your project next to your [Pulumi.yaml project file]({{< relref "/docs/intro/concepts/project" >}}). See [Defining and setting stack settings]({{< relref "/docs/intro/concepts/config#config-stack" >}}) for more information about this file.
+Notice how a new file, `Pulumi.website-testing.yaml`, got created in the root directory for your project next to your [Pulumi.yaml project file]({{< prelref "/docs/intro/concepts/project" >}}). See [Defining and setting stack settings]({{< prelref "/docs/intro/concepts/config#config-stack" >}}) for more information about this file.
 
 ### Step 6: Preview and deploy your resources
 
-To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment. Select `yes` to create a stack component, a Bucket and two S3 Objects (one for each file in the `www` folder).
+To preview your Pulumi program, run [`pulumi up`]({{< prelref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment. Select `yes` to create a stack component, a Bucket and two S3 Objects (one for each file in the `www` folder).
 
 ### Step 7: View your stack resources
 
@@ -224,23 +224,23 @@ You also learned how to work with the Pulumi CLI. To recap:
 ## Next steps
 
 - [S3 Folder Pulumi Component](https://www.pulumi.com/docs/tutorials/aws/s3-folder-component/)
-- [EC2 Linux WebServer Instance]({{< relref "/docs/tutorials/aws/ec2-webserver" >}})
-- [Containers on ECS Fargate]({{< relref "/docs/tutorials/aws/ecs-fargate" >}})
-- [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
+- [EC2 Linux WebServer Instance]({{< prelref "/docs/tutorials/aws/ec2-webserver" >}})
+- [Containers on ECS Fargate]({{< prelref "/docs/tutorials/aws/ecs-fargate" >}})
+- [API Gateways and Lambda]({{< prelref "/docs/tutorials/aws/rest-api" >}})
 
 <!-- markdownlint-disable url -->
-[@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
-[aws.s3.Bucket]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
-[aws.s3.Bucket.bucket]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
-[aws.s3.BucketObject]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#BucketObject" >}}
-[pulumi.asset.FileAsset]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset#FileAsset" >}}
-[aws.s3.BucketPolicy]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#BucketPolicy" >}}
-[aws.s3.Bucket.websites]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
-[pulumi.Output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
-[pulumi.Output.apply]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
-[pulumi.Input]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
-[pulumi.ComponentResource]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
-[Component]: {{< relref "/docs/intro/concepts/programming-model#components" >}}
-[Pulumi Cloud]: {{< relref "/docs/tutorials/cloudfx" >}}
+[@pulumi/aws]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
+[aws.s3.Bucket]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[aws.s3.Bucket.bucket]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[aws.s3.BucketObject]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#BucketObject" >}}
+[pulumi.asset.FileAsset]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset#FileAsset" >}}
+[aws.s3.BucketPolicy]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#BucketPolicy" >}}
+[aws.s3.Bucket.websites]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[pulumi.Output]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
+[pulumi.Output.apply]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
+[pulumi.Input]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
+[pulumi.ComponentResource]: {{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
+[Component]: {{< prelref "/docs/intro/concepts/programming-model#components" >}}
+[Pulumi Cloud]: {{< prelref "/docs/tutorials/cloudfx" >}}
 [in Python]: https://github.com/pulumi/examples/tree/master/aws-py-s3-folder
 <!-- markdownlint-enable url -->

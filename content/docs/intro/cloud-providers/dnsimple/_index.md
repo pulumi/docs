@@ -13,11 +13,11 @@ menu:
 The DNSimple provider for Pulumi can be used to provision any of the cloud resources available in [DNSimple](https://dnsimple.com/).
 The DNSimple provider must be configured with credentials to deploy and update resources in DNSimple.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/dnsimple" >}}) for complete details of the available DNSimple provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/dnsimple" >}}) for complete details of the available DNSimple provider APIs.
 
 ## Setup
 
-The DNSimple provider supports several options for providing access to DNSimple credentials.  See the [DNSimple setup page]({{< relref "setup" >}}) for details.
+The DNSimple provider supports several options for providing access to DNSimple credentials.  See the [DNSimple setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

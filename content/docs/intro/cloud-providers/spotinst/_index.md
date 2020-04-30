@@ -12,11 +12,11 @@ menu:
 
 The Spotinst provider for Pulumi can be used to provision any of the resources available in [Spotinst](https://spotinst.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/spotinst" >}}) for complete details of the available Spotinst provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/spotinst" >}}) for complete details of the available Spotinst provider APIs.
 
 ## Setup
 
-The Spotinst provider supports several options for interacting with Spotinst.  See the [Spotinst setup page]({{< relref "setup" >}}) for details.
+The Spotinst provider supports several options for interacting with Spotinst.  See the [Spotinst setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

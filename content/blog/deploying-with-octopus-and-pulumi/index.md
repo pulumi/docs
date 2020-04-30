@@ -15,7 +15,7 @@ Continuous delivery is about making changes in your application and getting them
 
 Deployment targets are grouped in **environments** in Octopus. Environments represent different stages of the deployment pipeline that your software passes through on its way to a release. A common practice is to create unique Development, Test, and Production environments. Octopus Deploy lets you deploy the correct versions of your software, with the right configuration for the appropriate environment.
 
-Pulumi's [guide]({{< relref "/docs/guides/continuous-delivery/octopus-deploy" >}}) to implementing Octopus Deploy walks you through the process of implementing an environment for deploying a Python flask application on [AWS Fargate](https://aws.amazon.com/fargate/). Before starting, make sure you have met the [prerequisites]({{< relref "/docs/guides/continuous-delivery/octopus-deploy#prerequisites" >}}).
+Pulumi's [guide]({{< prelref "/docs/guides/continuous-delivery/octopus-deploy" >}}) to implementing Octopus Deploy walks you through the process of implementing an environment for deploying a Python flask application on [AWS Fargate](https://aws.amazon.com/fargate/). Before starting, make sure you have met the [prerequisites]({{< prelref "/docs/guides/continuous-delivery/octopus-deploy#prerequisites" >}}).
 
 Octopus environments are analogous to Pulumi stacks. If you have Development, Test, and Production Octopus environments, you would create a Pulumi stack for each environment. The application being deployed is a Pulumi project. Octopus uses packages that contain the source code bundled in a supported format such as .zip files, gzip or bzip tar files,  Java archive formats such as .jar or .war, and Docker images. Pulumi apps can be packaged in the desired format and extracted onto a Octopus worker that the Pulumi CLI can access.
 
@@ -25,4 +25,4 @@ In Octopus, a **Process** is made up of the steps needed to execute a project. T
 
 To deploy your Pulumi package, select **Add Step** again and search for the `Pulumi` template from the **Community Library Steps**. Fill out the template with the appropriate configuration parameters for your stack. Next, create a release from by selecting **Releases** and click **Create Release** and follow the instructions.
 
-Using a CI/CD to build and deploy Pulumi applications can be a straightforward process. Try deploying a Pulumi application with Octopus Deploy with our [continuous delivery guide]({{< relref "/docs/guides/continuous-delivery/octopus-deploy" >}}).
+Using a CI/CD to build and deploy Pulumi applications can be a straightforward process. Try deploying a Pulumi application with Octopus Deploy with our [continuous delivery guide]({{< prelref "/docs/guides/continuous-delivery/octopus-deploy" >}}).

@@ -100,7 +100,7 @@ rpa = aws.iam.RolePolicyAttachment('task-exec-policy',
 )
 ```
 
-To learn more about creating [reusable components]({{< relref "/docs/intro/concepts/programming-model#components" >}}), read about Pulumi's programming model, which shows how to author components.
+To learn more about creating [reusable components]({{< prelref "/docs/intro/concepts/programming-model#components" >}}), read about Pulumi's programming model, which shows how to author components.
 
 ## Polyglot applications
 
@@ -163,7 +163,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - Scheduled profile - warming is applied during peak use.
 - Autoscaling-based utilization - adds workers as service utilization increases.
 
-Deploying infrastructure with code lets you implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
+Deploying infrastructure with code lets you implement these [strategies]({{< prelref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. The code snippet below is an example of provisioned concurrency; a fully [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
 
 ```ts
 // Read the config of whether to provision fixed concurrency for Lambda
@@ -198,4 +198,4 @@ if (provisionedConcurrentExecutions) {
 
 ## Conclusion
 
-Serverless is an attractive alternative to architectures that require hands-on management of servers. Despite this, it does not relieve you of the tasks needed to create and manage the ancillary resources needed for a modern application in production. Architecture as code enables you to declare resources and reuse them to ensure a standard and reproducible infrastructure. Also, you can deploy multiple functions and applications with a single Pulumi project, saving time and effort required to deploy them individually. Finally, you can tune your deployment strategies to overcome cold-start issues. [Pulumi tutorials]({{< relref "/docs/tutorials" >}}) can get you started with serverless deployments.
+Serverless is an attractive alternative to architectures that require hands-on management of servers. Despite this, it does not relieve you of the tasks needed to create and manage the ancillary resources needed for a modern application in production. Architecture as code enables you to declare resources and reuse them to ensure a standard and reproducible infrastructure. Also, you can deploy multiple functions and applications with a single Pulumi project, saving time and effort required to deploy them individually. Finally, you can tune your deployment strategies to overcome cold-start issues. [Pulumi tutorials]({{< prelref "/docs/tutorials" >}}) can get you started with serverless deployments.

@@ -6,7 +6,7 @@ no_on_this_page: true
 
 ## Migrating to 2.0
 
-Upgrading to 2.0 is simple. First, you will [install the 2.0 CLI]({{< relref "/docs/get-started/install" >}}). Then, update each of your Pulumi programs to utilize the new SDK. If you're using JavaScript or TypeScript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
+Upgrading to 2.0 is simple. First, you will [install the 2.0 CLI]({{< prelref "/docs/get-started/install" >}}). Then, update each of your Pulumi programs to utilize the new SDK. If you're using JavaScript or TypeScript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
 
 ## Update CLI Scripts
 
@@ -44,7 +44,7 @@ const version: Promise<string> = gcp.container.getEngineVersions().then(v => v.l
 const version: Output<string> = pulumi.output(gcp.container.getEngineVersions()).latestMasterVersion;
 ```
 
-Optionally, you can use an `async` function [entrypoint]({{< relref "/docs/intro/languages/javascript#entrypoint" >}}) to more easily write `async/await` code throughout the rest of your program.
+Optionally, you can use an `async` function [entrypoint]({{< prelref "/docs/intro/languages/javascript#entrypoint" >}}) to more easily write `async/await` code throughout the rest of your program.
 
 {{% /choosable %}}
 
@@ -117,7 +117,7 @@ var clientConfig = await Pulumi.Azure.Core.GetClientConfig.InvokeAsync();
 We recommend switching to Pulumi 2.0 if possible. We will only push critical security and bug fixes into the `1.x` branch. Other fixes, feature enhancements, and
 new functionality will not be supported in the `1.x` branch. In addition, provider updates will only be built against Pulumi 2.0.
 
-If you wish to remain on the `1.x` CLI, you can continue to download the CLI by referring to [the manual installation instructions]({{< relref "/docs/get-started/install#manual-installation" >}}) and [choosing a specific version]({{< relref "/docs/get-started/install/versions" >}}).
+If you wish to remain on the `1.x` CLI, you can continue to download the CLI by referring to [the manual installation instructions]({{< prelref "/docs/get-started/install#manual-installation" >}}) and [choosing a specific version]({{< prelref "/docs/get-started/install/versions" >}}).
 
 `pulumi new` will attempt to use the latest versions of the templates, which pull in the `2.0` SDK. You can continue to use the `1.x` templates by running `pulumi new https://github.com/pulumi/templates/tree/1.x`.
 

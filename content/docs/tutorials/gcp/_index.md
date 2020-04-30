@@ -14,7 +14,7 @@ aliases: ["/docs/reference/tutorials/gcp/"]
 The following tutorials highlight the Google Cloud platform using complete end-to-end scenarios.
 
 > If this is your first time getting started with Pulumi for GCP, try the
-> easy <a href="{{< relref "/docs/get-started/gcp" >}}">Get Started guide</a> first.
+> easy <a href="{{< prelref "/docs/get-started/gcp" >}}">Get Started guide</a> first.
 
 ## Featured Tutorials
 
@@ -22,7 +22,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-server pr-2"></i>
-            <a href="{{< relref "gce-webserver" >}}" style="color: #4387c7">
+            <a href="{{< prelref "gce-webserver" >}}" style="color: #4387c7">
                 GCE Virtual Machine
             </a>
         </h3>
@@ -33,7 +33,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-boxes pr-2"></i>
-            <a href="{{< relref "../kubernetes/gke" >}}" style="color: #4387c7">
+            <a href="{{< prelref "../kubernetes/gke" >}}" style="color: #4387c7">
                 GKE Cluster
             </a>
         </h3>
@@ -47,7 +47,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-bolt pr-2"></i>
-            <a href="{{< relref "gcp-ts-functions" >}}" style="color: #4387c7">
+            <a href="{{< prelref "gcp-ts-functions" >}}" style="color: #4387c7">
                 Google Functions
             </a>
         </h3>
@@ -58,7 +58,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-database pr-2"></i>
-            <a href="{{< relref "gcp-ts-k8s-ruby-on-rails-postgresql" >}}" style="color: #4387c7">
+            <a href="{{< prelref "gcp-ts-k8s-ruby-on-rails-postgresql" >}}" style="color: #4387c7">
                 Containerized App
             </a>
         </h3>

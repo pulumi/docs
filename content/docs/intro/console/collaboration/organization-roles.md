@@ -14,7 +14,7 @@ organization.
 > Organizations billed per stack have slightly different rules regarding membership.
 
 To become a member of a Pulumi organization, you must be added by an existing Pulumi
-organization administrator. However, depending on the [organization type]({{< relref "/docs/intro/console/accounts-and-organizations/organizations#organization-kind" >}}), you must also be a member of the third-party organization or group backing the Pulumi
+organization administrator. However, depending on the [organization type]({{< prelref "/docs/intro/console/accounts-and-organizations/organizations#organization-kind" >}}), you must also be a member of the third-party organization or group backing the Pulumi
 organization.
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
@@ -27,7 +27,7 @@ There are several kinds of organization roles a user may be assigned.
 
 `**MEMBER**`
 
-A member of a Pulumi organization can be added to organization [teams]({{< relref "/docs/intro/console/collaboration/teams" >}}), and
+A member of a Pulumi organization can be added to organization [teams]({{< prelref "/docs/intro/console/collaboration/teams" >}}), and
 depending on organization settings, may be able to create or delete stacks.
 
 `**ADMIN**`
@@ -52,8 +52,8 @@ For example, if the organization's base permissions is `WRITE`, then
 any organization member can update any organization stack.
 
 If the default stack permission is `NONE`, then organization members must be
-granted access using [teams]({{< relref "teams" >}}) in order to update, or even [view the organization
-stacks]({{< relref "project-and-stack-management#viewing-your-organization-stacks" >}}).
+granted access using [teams]({{< prelref "teams" >}}) in order to update, or even [view the organization
+stacks]({{< prelref "project-and-stack-management#viewing-your-organization-stacks" >}}).
 
 ### Stack Creation
 
@@ -77,4 +77,4 @@ it. Otherwise, only Pulumi  organization admins can.
 
 ## Next Steps
 
-* [Teams]({{< relref "teams" >}})
+* [Teams]({{< prelref "teams" >}})

@@ -13,11 +13,11 @@ menu:
 The Mailgun provider for Pulumi can be used to provision any of the cloud resources available in [Mailgun](https://www.mailgun.com/).
 The Mailgun provider must be configured with credentials to deploy and update resources in Mailgun.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/mailgun" >}}) for complete details of the available Mailgun provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/nodejs/pulumi/mailgun" >}}) for complete details of the available Mailgun provider APIs.
 
 ## Setup
 
-The Mailgun provider supports several options for providing access to Mailgun credentials.  See the [Mailgun setup page]({{< relref "setup" >}}) for details.
+The Mailgun provider supports several options for providing access to Mailgun credentials.  See the [Mailgun setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

@@ -13,11 +13,11 @@ menu:
 The Aiven provider for Pulumi can be used to provision any of the cloud resources available in [Aiven](https://aiven.io/).
 The Aiven provider must be configured with credentials to deploy and update resources in Aiven.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/aiven" >}}) for complete details of the available Aiven provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aiven" >}}) for complete details of the available Aiven provider APIs.
 
 ## Setup
 
-The Aiven provider supports several options for providing access to Aiven credentials.  See the [Aiven setup page]({{< relref "setup" >}}) for details.
+The Aiven provider supports several options for providing access to Aiven credentials.  See the [Aiven setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

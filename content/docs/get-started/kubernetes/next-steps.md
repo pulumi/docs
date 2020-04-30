@@ -22,19 +22,19 @@ From here, you can dive deeper with additional tutorials:
 The following tutorials are focused on creating managed Kubernetes clusters
 across the major cloud providers.
 
-- [AWS EKS - Hello World!]({{< relref "/docs/tutorials/kubernetes/eks" >}})
-- [Azure AKS - Hello World!]({{< relref "/docs/tutorials/kubernetes/aks" >}})
-- [Google Cloud GKE - Hello World!]({{< relref "/docs/tutorials/kubernetes/gke" >}})
+- [AWS EKS - Hello World!]({{< prelref "/docs/tutorials/kubernetes/eks" >}})
+- [Azure AKS - Hello World!]({{< prelref "/docs/tutorials/kubernetes/aks" >}})
+- [Google Cloud GKE - Hello World!]({{< prelref "/docs/tutorials/kubernetes/gke" >}})
 
 ## Workloads
 
 The following tutorials are focused on deploying app workloads to running Kubernetes clusters, managed or self-managed.
 
-1. [Hello, World!]({{< relref "/docs/tutorials/kubernetes/exposed-deployment" >}})
-2. [Deploying the WordPress Helm Chart]({{< relref "/docs/tutorials/kubernetes/wordpress-chart" >}})
-3. [Guestbook App with Redis and Nginx]({{< relref "/docs/tutorials/kubernetes/guestbook" >}})
-4. [Graceful App Rollout]({{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}})
-5. [Gating rollout on Prometheus checks]({{< relref "/docs/tutorials/kubernetes/p8s-rollout" >}})
-6. [Run a Stateless App Deployment]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}})
+1. [Hello, World!]({{< prelref "/docs/tutorials/kubernetes/exposed-deployment" >}})
+2. [Deploying the WordPress Helm Chart]({{< prelref "/docs/tutorials/kubernetes/wordpress-chart" >}})
+3. [Guestbook App with Redis and Nginx]({{< prelref "/docs/tutorials/kubernetes/guestbook" >}})
+4. [Graceful App Rollout]({{< prelref "/docs/tutorials/kubernetes/configmap-rollout" >}})
+5. [Gating rollout on Prometheus checks]({{< prelref "/docs/tutorials/kubernetes/p8s-rollout" >}})
+6. [Run a Stateless App Deployment]({{< prelref "/docs/tutorials/kubernetes/stateless-app" >}})
 
 {{< get-started-stepper >}}

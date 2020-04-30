@@ -16,18 +16,18 @@ aliases:
 
 ## Product Editions
 
-To learn about Pulumi's different subscription plans, see [Pulumi Product Editions]({{< relref "editions" >}}).
+To learn about Pulumi's different subscription plans, see [Pulumi Product Editions]({{< prelref "editions" >}}).
 
 ## Accounts
 
-Create a [Pulumi user account]({{< relref "accounts" >}}) for free by signing into the
+Create a [Pulumi user account]({{< prelref "accounts" >}}) for free by signing into the
 Pulumi Console with one of the provided identity options. This is how you will authenticate
-into the Console, until you [add new identities]({{< relref "accounts/#adding-new-identities" >}})
-including one from your [SAML 2.0 provider]({{< relref "/docs/guides/saml" >}}).
+into the Console, until you [add new identities]({{< prelref "accounts/#adding-new-identities" >}})
+including one from your [SAML 2.0 provider]({{< prelref "/docs/guides/saml" >}}).
 
 ## Organizations
 
 When you create an account, an organization that is subscribed to [the Community
-Edition]({{< relref "editions#community-edition" >}}) gets created with it. Start creating and
+Edition]({{< prelref "editions#community-edition" >}}) gets created with it. Start creating and
 managing your stacks with it, or create a new
-[Pulumi Organization]({{< relref "organizations" >}}) to collaborate with your team.
+[Pulumi Organization]({{< prelref "organizations" >}}) to collaborate with your team.

@@ -29,7 +29,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new javascript
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< prelref "../concepts/project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 ## Entrypoint
 
@@ -95,7 +95,7 @@ export = async () => {
 
 {{< /chooser >}}
 
-Most Pulumi programs use the first option, but programs that need to do async work at the top level (such as calling [`getOutputValue`]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference-getOutputValue" >}})) may find they want to use the second.
+Most Pulumi programs use the first option, but programs that need to do async work at the top level (such as calling [`getOutputValue`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference-getOutputValue" >}})) may find they want to use the second.
 
 ## TypeScript
 

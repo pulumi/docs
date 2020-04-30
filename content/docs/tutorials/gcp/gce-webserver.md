@@ -9,8 +9,8 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
 ## Prerequisites
 
-1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-1. [Configure GCP credentials]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
+1. [Install Pulumi]({{< prelref "/docs/get-started/install" >}})
+1. [Configure GCP credentials]({{< prelref "/docs/intro/cloud-providers/gcp/setup" >}})
 
 ## Create a Virtual Machine with SSH access {#webserver}
 
@@ -55,7 +55,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
     exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
     ```
 
-    This example uses the [@pulumi/gcp]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Instance" >}}) which is created inside the network from the Debian 9 base image.
+    This example uses the [@pulumi/gcp]({{< prelref "/docs/reference/pkg/nodejs/pulumi/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< prelref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< prelref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< prelref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Instance" >}}) which is created inside the network from the Debian 9 base image.
 
 1. To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
@@ -97,7 +97,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1. To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.
+1. To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< prelref "/docs/intro/concepts/stack#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.
 
     ```
     $ pulumi stack

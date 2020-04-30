@@ -7,7 +7,7 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
 ---
 
-> Update: Check out the [Learning Machine Case Study]({{< relref "/case-studies/learning-machine" >}}) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.
+> Update: Check out the [Learning Machine Case Study]({{< prelref "/case-studies/learning-machine" >}}) where provisioning went from 3 weeks to 1 hour with Pulumi and AWS.
 >
 > *"The impact of serverless capabilities was also transformative for the Learning Machine business. Pulumi enabled a rapid shift to Amazon ECS, AWS Fargate and AWS Lambda — the net effect of which was a 67% reduction in AWS charges. This enabled the team to spend less time focused on maintaining existing infrastructure and more time deploying new applications on AWS and adding new customers.*
 >
@@ -89,7 +89,7 @@ export const url = web.endpoint.hostname;
 ## Step 1. Create a Cluster
 
 The opening stanza imports Pulumi's
-[open source AWSX NPM package]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), `@pulumi/awsx`. It
+[open source AWSX NPM package]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), `@pulumi/awsx`. It
 contains high level AWS best practices and patterns, and leverages real
 languages to eliminate boilerplate YAML templating:
 
@@ -240,7 +240,7 @@ Pulumi's "everything is code" approach means deploying everything can be
 done with a CLI command, unlocking the power of the entire Docker
 platform with a great inner development loop, that works from the
 desktop all the way to production. This entire flow can be
-[easily integrated into your favorite CI/CD pipeline]({{< relref "/docs/guides/continuous-delivery" >}}),
+[easily integrated into your favorite CI/CD pipeline]({{< prelref "/docs/guides/continuous-delivery" >}}),
 including GitOps workflows.
 
 If we want to augment our service with other AWS resources -- like S3
@@ -254,4 +254,4 @@ but also Azure and GCP cloud providers, in addition to Kubernetes!
 Want to go deeper?
 
 - [Check out this example on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate)
-- [Get Started with your favorite cloud and scenario now]({{< relref "/docs/get-started" >}})
+- [Get Started with your favorite cloud and scenario now]({{< prelref "/docs/get-started" >}})

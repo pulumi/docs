@@ -14,7 +14,7 @@ meta_desc: Pulumi API is one of the components required for self-hosting Pulumi.
     </p>
 </div>
 
-The Pulumi API is one of the components required for self-hosting Pulumi in your organization's environment. It provides the necessary APIs for both the CLI and the [Console]({{< relref "console" >}}).
+The Pulumi API is one of the components required for self-hosting Pulumi in your organization's environment. It provides the necessary APIs for both the CLI and the [Console]({{< prelref "console" >}}).
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ The API service is a Go-based application. This is a single binary application t
 | ------------- | ----------- |
 | PULUMI_OBJECTS_BUCKET | S3 bucket name for persisting state for stacks.<br><br>**Note**:Only used if hosted on AWS. |
 | RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a site key and a secret key from Google [here](https://www.google.com/recaptcha/admin). |
-| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. |
+| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< prelref "../saml/sso#terminology" >}}) to sign SAML assertions. |
 | SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. |
 | GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
 | GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |

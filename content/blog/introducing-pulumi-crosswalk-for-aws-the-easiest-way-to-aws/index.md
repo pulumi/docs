@@ -19,7 +19,7 @@ of minutes or hours. And AWS building block services frequently leave
 you to re-implement (and re-discover) best-practices instead of
 providing these as smart defaults.
 
-[Pulumi Crosswalk for AWS]({{< relref "/crosswalk/aws" >}}) is a
+[Pulumi Crosswalk for AWS]({{< prelref "/crosswalk/aws" >}}) is a
 new open source library of infrastructure-as-code components that make
 it easier to get from zero to production on AWS, easier to adopt AWS
 best practices by default, and easier to evolve your AWS infrastructure
@@ -55,7 +55,7 @@ enterprise application to cloud-native infrastructure, or delivering a
 new service as part of an established cloud application, Crosswalk for
 AWS provides the easiest way to get from zero to production, and to then
 evolve with your projects' needs. You can
-[get started with Crosswalk for AWS]({{< relref "/docs/guides/crosswalk/aws" >}}) today!
+[get started with Crosswalk for AWS]({{< prelref "/docs/guides/crosswalk/aws" >}}) today!
 
 > *Note:* Crosswalk for AWS projects are authored using the Pulumi
 > infrastructure-as-code tools. Pulumi allows you to define your
@@ -95,10 +95,10 @@ By building on top of great AWS building blocks like Lambda, API
 Gateway, IAM and more, we avoid needing to worry about infrastructure,
 pay nearly zero fixed costs, and gain the ability to iterate quickly.
 With just a few more lines of code, we can
-[wire up to our own domain]({{< relref "/docs/guides/crosswalk/aws/api-gateway#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm" >}}),
-[add authorization]({{< relref "/docs/guides/crosswalk/aws/api-gateway#controlling-and-managing-access-to-apis" >}}),
-[provision a database]({{< relref "/docs/reference/pkg/aws/dynamodb/table" >}}),
-or [chain together a more complex event-driven application]({{< relref "/docs/guides/crosswalk/aws/lambda#available-aws-services-with-event-sources" >}}).
+[wire up to our own domain]({{< prelref "/docs/guides/crosswalk/aws/api-gateway#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm" >}}),
+[add authorization]({{< prelref "/docs/guides/crosswalk/aws/api-gateway#controlling-and-managing-access-to-apis" >}}),
+[provision a database]({{< prelref "/docs/reference/pkg/aws/dynamodb/table" >}}),
+or [chain together a more complex event-driven application]({{< prelref "/docs/guides/crosswalk/aws/lambda#available-aws-services-with-event-sources" >}}).
 
 ### Containers (ECS, Fargate)
 
@@ -136,9 +136,9 @@ export const url = web.endpoint.hostname;
 Using ECS, Fargate, ECR and ELB, we get a robust production-ready
 container deployment - horizontally scaled out, load-balanced, and
 integrated with a private image repository. With just a few more lines
-of code, we can [add autoscaling]({{< relref "/docs/guides/crosswalk/aws/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances" >}}),
-[customize our ECS cluster]({{< relref "/docs/guides/crosswalk/aws/ecs#explicitly-creating-ecs-clusters-for-ec2-or-fargate" >}}),
-or [wire through advanced container configuration]({{< relref "/docs/guides/crosswalk/aws/ecs#ecs-tasks-containers-and-services" >}})
+of code, we can [add autoscaling]({{< prelref "/docs/guides/crosswalk/aws/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances" >}}),
+[customize our ECS cluster]({{< prelref "/docs/guides/crosswalk/aws/ecs#explicitly-creating-ecs-clusters-for-ec2-or-fargate" >}}),
+or [wire through advanced container configuration]({{< prelref "/docs/guides/crosswalk/aws/ecs#ecs-tasks-containers-and-services" >}})
 (volumes, environment variables, and more).
 
 ### Networking (VPC)
@@ -167,9 +167,9 @@ design patterns based on [AWS guidance and documentation](https://docs.aws.amazo
 By building in simple defaults for routing, subnet structure, NATs and
 multi-AZ you can get started quickly without having to re-discover these
 best practices. And as your needs grow, you can deeply customize and
-evolve your VPC structure - [defining custom CIDR blocks]({{< relref "/docs/guides/crosswalk/aws/vpc#configuring-cidr-blocks-for-a-vpc" >}}),
-[customizing Internet and NAT Gateways]({{< relref "/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc" >}})
-or [additional additional private subnets]({{< relref "/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc" >}}).
+evolve your VPC structure - [defining custom CIDR blocks]({{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-cidr-blocks-for-a-vpc" >}}),
+[customizing Internet and NAT Gateways]({{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc" >}})
+or [additional additional private subnets]({{< prelref "/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc" >}}).
 
 ### Kubernetes (EKS)
 
@@ -203,9 +203,9 @@ export const kubeconfig = cluster.kubeconfig;
 Building on EKS we get all the benefits of managed Kubernetes paired
 with the platform capabilities of AWS. With Crosswalk for AWS, we can
 get started quickly, and then evolve to take advantage of all of these
-platform features, like [customized node groups]({{< relref "/docs/guides/crosswalk/aws/eks#configuring-your-eks-cluster-s-worker-nodes-and-node-groups" >}}),
-[private networking]({{< relref "/docs/guides/crosswalk/aws/eks#configuring-your-eks-cluster-s-networking" >}}),
-and even [deploying Kubernetes YAML and Helm charts]({{< relref "/docs/guides/crosswalk/aws/eks#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster" >}})
+platform features, like [customized node groups]({{< prelref "/docs/guides/crosswalk/aws/eks#configuring-your-eks-cluster-s-worker-nodes-and-node-groups" >}}),
+[private networking]({{< prelref "/docs/guides/crosswalk/aws/eks#configuring-your-eks-cluster-s-networking" >}}),
+and even [deploying Kubernetes YAML and Helm charts]({{< prelref "/docs/guides/crosswalk/aws/eks#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster" >}})
 to our cluster.
 
 ### Monitoring (CloudWatch)
@@ -244,9 +244,9 @@ export const dashboardUrl =
 With CloudWatch being deeply integrated into all AWS services, we can
 easily build up robust logging, alerting and dashboarding solutions
 across our AWS infrastructure. With just a few more lines of code we can
-[get logs for our functions and containers]({{< relref "/docs/guides/crosswalk/aws/cloudwatch#configuring-cloudwatch-logging" >}}),
-[create alarms when we cross critical thresholds]({{< relref "/docs/guides/crosswalk/aws/cloudwatch#creating-cloudwatch-alarms" >}}),
-and [create rich dashboard layouts]({{< relref "/docs/guides/crosswalk/aws/cloudwatch#defining-cloudwatch-dashboards-in-code" >}})
+[get logs for our functions and containers]({{< prelref "/docs/guides/crosswalk/aws/cloudwatch#configuring-cloudwatch-logging" >}}),
+[create alarms when we cross critical thresholds]({{< prelref "/docs/guides/crosswalk/aws/cloudwatch#creating-cloudwatch-alarms" >}}),
+and [create rich dashboard layouts]({{< prelref "/docs/guides/crosswalk/aws/cloudwatch#defining-cloudwatch-dashboards-in-code" >}})
 all of which will version along with our infrastructure!
 
 ## Early Feedback
@@ -299,13 +299,13 @@ deploy natively in the cloud will unlock creativity and empower
 developers to take advantage of more of the rich capabilities of AWS. We
 can't wait to see what you build with Crosswalk!
 
-Crosswalk for AWS is free and open source, and you can [get started today]({{< relref "/crosswalk/aws" >}}).
+Crosswalk for AWS is free and open source, and you can [get started today]({{< prelref "/crosswalk/aws" >}}).
 
 For more on Crosswalk for AWS see:
 
-- [Pulumi Crosswalk for AWS documentation]({{< relref "/crosswalk/aws" >}})
-- [Get Started with Docker on AWS Fargate using Pulumi]({{< relref "get-started-with-docker-on-aws-fargate-using-pulumi" >}})
-- [Easy Serverless Apps and Infrastructure -- Real Events, Real Code]({{< relref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}})
-- [Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi]({{< relref "easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}})
-- [Serving a Static Website on AWS with Pulumi]({{< relref "serving-a-static-website-on-aws-with-pulumi" >}})
-- [IoT as Code with MapBox and Pulumi]({{< relref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})
+- [Pulumi Crosswalk for AWS documentation]({{< prelref "/crosswalk/aws" >}})
+- [Get Started with Docker on AWS Fargate using Pulumi]({{< prelref "get-started-with-docker-on-aws-fargate-using-pulumi" >}})
+- [Easy Serverless Apps and Infrastructure -- Real Events, Real Code]({{< prelref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}})
+- [Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi]({{< prelref "easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}})
+- [Serving a Static Website on AWS with Pulumi]({{< prelref "serving-a-static-website-on-aws-with-pulumi" >}})
+- [IoT as Code with MapBox and Pulumi]({{< prelref "mapbox-iot-as-code-with-pulumi-crosswalk-for-aws" >}})

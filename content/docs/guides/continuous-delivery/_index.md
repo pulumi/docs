@@ -21,57 +21,57 @@ analysis tools, and running unit and integration tests as appropriate. It all "j
 infrastructure the same way it would for your application code.
 
 Pulumi can easily integrate into any continuous integration/continuous deliver (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see our guide for using Pulumi
-within a [generic CI/CD system]({{< relref "other" >}}).
+within a [generic CI/CD system]({{< prelref "other" >}}).
 
 <div class="supported-cicd-platforms">
-    <a href="{{< relref aws-code-services >}}">
+    <a href="{{< prelref aws-code-services >}}">
         <img src="/logos/tech/ci-cd/aws-codedeploy.svg" alt="AWS Code Services">
         <h4 class="no-anchor">AWS Code Services</h4>
     </a>
-    <a href="{{< relref azure-devops >}}">
+    <a href="{{< prelref azure-devops >}}">
         <img src="/logos/tech/ci-cd/azure-devops.svg" alt="Azure DevOps">
         <h4 class="no-anchor">Azure DevOps</h4>
     </a>
-    <a href="{{< relref circleci >}}">
+    <a href="{{< prelref circleci >}}">
         <img src="/logos/tech/ci-cd/circleci.svg" alt="CircleCI">
         <h4 class="no-anchor">CircleCI</h4>
     </a>
-    <a href="{{< relref codefresh >}}">
+    <a href="{{< prelref codefresh >}}">
         <img style="width: 120px;" src="/logos/tech/ci-cd/codefresh.svg" alt="Codefresh">
         <h4 class="no-anchor">Codefresh</h4>
     </a>
-    <a href="{{< relref github-actions >}}">
+    <a href="{{< prelref github-actions >}}">
         <img style="width: 120px;" src="/logos/tech/ci-cd/github-actions.svg" alt="GitHub Actions">
         <h4 class="no-anchor">GitHub Actions</h4>
     </a>
-    <a href="{{< relref gitlab-ci >}}">
+    <a href="{{< prelref gitlab-ci >}}">
         <img src="/logos/tech/ci-cd/gitlab-ci.svg" alt="GitLab CI">
         <h4 class="no-anchor">GitLab CI</h4>
     </a>
-    <a href="{{< relref google-cloud-build >}}">
+    <a href="{{< prelref google-cloud-build >}}">
         <img src="/logos/tech/ci-cd/google-cloud-build.png" alt="Google Cloud Build">
         <h4 class="no-anchor">Google Cloud Build</h4>
     </a>
-    <a href="{{< relref jenkins >}}">
+    <a href="{{< prelref jenkins >}}">
         <img src="/logos/tech/ci-cd/jenkins.svg" alt="Jenkins">
         <h4 class="no-anchor">Jenkins</h4>
     </a>
-    <a href="{{< relref octopus-deploy >}}">
+    <a href="{{< prelref octopus-deploy >}}">
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
-    <a href="{{< relref teamcity >}}">
+    <a href="{{< prelref teamcity >}}">
             <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
             <h4 class="no-anchor">JetBrains TeamCity</h4>
         </a>
-    <a href="{{< relref travis >}}">
+    <a href="{{< prelref travis >}}">
         <img src="/logos/tech/ci-cd/travis-ci.svg" alt="TravisCI">
         <h4 class="no-anchor">TravisCI</h4>
     </a>
 </div>
 
 > Pulumi can also bridge results from your CI/CD system with GitHub, surfacing the results of stack updates
-> on GitHub pull requests. See the [Pulumi GitHub App]({{< relref "github-app" >}}) for more information.
+> on GitHub pull requests. See the [Pulumi GitHub App]({{< prelref "github-app" >}}) for more information.
 
 ### Configuration and Secrets
 
@@ -81,20 +81,20 @@ The source is effectively everything that Pulumi needs to for deployment, with m
 
 Secret configuration values are encrypted on [app.pulumi.com](https://app.pulumi.com) and are safe to check into your
 source code repository. But you can use your own secrets provider, ensuring that only you have access to your
-sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-secrets-with-pulumi" >}}) for more information.
+sensitive information. See [Managing Secrets with Pulumi]({{< prelref "managing-secrets-with-pulumi" >}}) for more information.
 
 ### Managing Complex Environments
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
-and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
+and application stacks. Pulumi [supports "stack references"]({{< prelref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
 permit one stack to depend upon another. This facilitates continuous delivery and integration at scale.
 
 ### Using Branches for Environments
 
 Pulumi is agnostic to what sort of branching strategy you take. Most customers use Git-based flows; the most common is
-to use one branch-per-[stack]({{< relref "/docs/intro/concepts/stack" >}}). This allows you to control deployments to environments
+to use one branch-per-[stack]({{< prelref "/docs/intro/concepts/stack" >}}). This allows you to control deployments to environments
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App]({{< relref "github-app" >}}). This gives you interactive infrastructure change previews
+[Pulumi GitHub App]({{< prelref "github-app" >}}). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.

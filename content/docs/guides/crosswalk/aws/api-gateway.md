@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/api-gateway/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="{{< prelref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -204,7 +204,7 @@ export const url = api.url;
 ```
 
 For more complete information about creating Lambda Functions, please
-[see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}). Any of the techniques described may be used
+[see the Pulumi Crosswalk for AWS Lambda documentation]({{< prelref "lambda" >}}). Any of the techniques described may be used
 in combination with the `awsx.apigateway.API` class.
 
 ### Defining a Static Route Served by S3
@@ -533,7 +533,7 @@ The `awsx.apigateway.API` class supports three specific methods of controlling a
 * *Usage plans* let you provide *API keys* to customers, and then track and limit usage of your APIs.
 
 Details on each is below. For those not directly supported, all of these capabilities are accessible to you in the
-[AWS package]({{< relref "/docs/reference/pkg/aws" >}}), and are described in depth in the article
+[AWS package]({{< prelref "/docs/reference/pkg/aws" >}}), and are described in depth in the article
 [Controlling and Managing Access to a REST API in AWS API Gateway](
 https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html).
 
@@ -584,7 +584,7 @@ parameters (i.e. headers, path parameter or query parameters).
 To define an Authorizer, you provide a Lambda that fulfills
 `aws.lambda.EventHandler<AuthorizerEvent, AuthorizerResponse>` or you provide information on a pre-existing Lambda
 Authorizer. The example below shows defining the Authorizer Lambda directly inline. See
-[Pulumi Crosswalk for AWS Lambda]({{< relref "lambda" >}}) for other ways you can define your Lambda for the Authorizer.
+[Pulumi Crosswalk for AWS Lambda]({{< prelref "lambda" >}}) for other ways you can define your Lambda for the Authorizer.
 
 #### Creating a Lambda-based Request Authorizer
 
@@ -807,7 +807,7 @@ const api = new awsx.apigateway.API("myapi", {
 ```
 
 For more information about creating and managing IAM Roles, please refer to the
-[Pulumi Crosswalk for AWS IAM]({{< relref "iam" >}}) documentation.
+[Pulumi Crosswalk for AWS IAM]({{< prelref "iam" >}}) documentation.
 
 #### Generating Authorizer Responses Easily
 
@@ -836,7 +836,7 @@ const api = new awsx.apigateway.API("myapi", {
 ```
 
 If you prefer, you can return the [AuthorizerResponse](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#Authorizer" >}}) data structure explicitly.
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#Authorizer" >}}) data structure explicitly.
 
 ### Tracking and Limiting Requests with Usage Plans with API Keys
 

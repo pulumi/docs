@@ -5,7 +5,7 @@ aliases: ["/docs/reference/clouds/openstack/setup/"]
 ---
 
 <!-- markdownlint-disable url -->
-[Pulumi OpenStack Provider]: {{< relref "./" >}}
+[Pulumi OpenStack Provider]: {{< prelref "./" >}}
 [Download your OpenStack credentials]: https://docs.openstack.org/newton/user-guide/common/cli-set-environment-variables-using-openstack-rc.html
 <!-- markdownlint-enable url -->
 

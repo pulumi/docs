@@ -149,12 +149,12 @@ load testing and decommissioning of the original node group.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [get started today]({{< prelref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< prelref "/docs/tutorials/kubernetes" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -164,12 +164,12 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
-migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact.md" >}}).
+migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< prelref "/contact.md" >}}).
 
 [eks-amis]: https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
 [echoserver]: https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml
 [pod-lifecycle]: https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods
-[eks-nodegroup-tutorial]: {{< relref "/docs/tutorials/kubernetes/eks-migrate-nodegroups" >}}
-[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}.
-[tutorial-ha-refs]: {{< relref "/docs/tutorials/kubernetes/eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}
+[eks-nodegroup-tutorial]: {{< prelref "/docs/tutorials/kubernetes/eks-migrate-nodegroups" >}}
+[crosswalk-aws]: {{< prelref "/docs/guides/crosswalk/aws" >}}.
+[tutorial-ha-refs]: {{< prelref "/docs/tutorials/kubernetes/eks-migrate-nodegroups#kubernetes-workloads-high-availability-ha-rolling-updates" >}}

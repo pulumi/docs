@@ -8,7 +8,7 @@ meta_desc: "A reusable component to build highly-available, low-latency applicat
 date: "2019-09-24"
 ---
 
-In a [previous blog post]({{< relref "/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included" >}}), I shared how easy it is to create a globally distributed, highly-available, low-latency application with Azure Functions, Azure Cosmos DB, and Pulumi.
+In a [previous blog post]({{< prelref "/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included" >}}), I shared how easy it is to create a globally distributed, highly-available, low-latency application with Azure Functions, Azure Cosmos DB, and Pulumi.
 
 Today, I want to show how the same approach can be generalized for any cloud compute service, including containers, virtual machines, and serverless functions.
 

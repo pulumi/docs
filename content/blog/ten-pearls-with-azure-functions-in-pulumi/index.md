@@ -134,7 +134,7 @@ While mixing infrastructure and application code in the same file may seem count
 - Eliminate the need for boilerplate configuration like `host.json` and `function.json` files
 - Robust typing out-of-the-box: For instance, you can flawlessly "dot into" the `content` and `req` object above.
 
-You can read more about the motivation in [Serverless as Simple Callbacks with Pulumi and Azure Functions]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}).
+You can read more about the motivation in [Serverless as Simple Callbacks with Pulumi and Azure Functions]({{< prelref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}).
 
 The previous example deployed a Function App with a single Function. However, Azure supports applications with multiple Functions bundled together.
 
@@ -206,7 +206,7 @@ It's easy to imagine a custom component `WarmedFunctionApp` which appends a stan
 
 ## Cloud Event Handling
 
-While HTTP is a widespread use case, Azure Functions support many other trigger types too. [The previous post]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}) featured Storage Queues and ServiceBus Topics. Pulumi supports Timers, Events Hubs, Event Grid, Storage Blobs, Service Bus Queues, and Cosmos DB Change Feed events, too! Let's see how that looks using Azure Event Hubs.
+While HTTP is a widespread use case, Azure Functions support many other trigger types too. [The previous post]({{< prelref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}) featured Storage Queues and ServiceBus Topics. Pulumi supports Timers, Events Hubs, Event Grid, Storage Blobs, Service Bus Queues, and Cosmos DB Change Feed events, too! Let's see how that looks using Azure Event Hubs.
 
 ### 6. Process Events from Azure Event Hubs
 
@@ -357,4 +357,4 @@ It's possible to have multiple input and output bindings, and any combination of
 
 In this post, we've seen some of the exciting things you can do with Azure Functions in Pulumi. Developers use serverless functions as a glue between managed cloud services. Pulumi offers a compelling way to define the links between these pieces of cloud infrastructure in a simple and expressive way.
 
-For a streamlined Pulumi walkthrough, including language runtime installation and cloud configuration, see the  [Azure Quickstart]({{< relref "/docs/get-started/azure" >}}), check more examples at [Pulumi Azure GitHub](https://github.com/pulumi/pulumi-azure/tree/master/examples), and join the [Pulumi Community Slack](https://slack.pulumi.com/).
+For a streamlined Pulumi walkthrough, including language runtime installation and cloud configuration, see the  [Azure Quickstart]({{< prelref "/docs/get-started/azure" >}}), check more examples at [Pulumi Azure GitHub](https://github.com/pulumi/pulumi-azure/tree/master/examples), and join the [Pulumi Community Slack](https://slack.pulumi.com/).

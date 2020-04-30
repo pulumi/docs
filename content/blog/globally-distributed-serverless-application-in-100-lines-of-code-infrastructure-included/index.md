@@ -9,7 +9,7 @@ tags: ["Serverless", "Azure"]
 ---
 
 Pulumi is excellent at connecting multiple cloud components into a
-cohesive application. In my [previous post]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}),
+cohesive application. In my [previous post]({{< prelref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}}),
 I introduced the way to mix JavaScript or TypeScript serverless
 functions directly into the cloud infrastructure programs.
 
@@ -86,7 +86,7 @@ const collection = new azure.cosmosdb.SqlContainer("Urls", {
 ### Function App
 
 Serverless Azure Functions are going to handle the HTTP layer in my
-application. I use the technique of [serverless functions as callbacks]({{< relref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}})
+application. I use the technique of [serverless functions as callbacks]({{< prelref "serverless-as-simple-callbacks-with-pulumi-and-azure-functions" >}})
 to define Azure Functions inline inside my Pulumi program:
 
 ```typescript

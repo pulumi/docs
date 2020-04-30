@@ -47,7 +47,7 @@ started.
 For local clusters such as those that are self-managed, or provisioned by a
 tool like Docker Desktop, Pulumi can still deploy workloads to these these
 systems given that the [`pulumi/kubernetes`][pulumi-kubernetes] workload SDK only requires a valid `kubeconfig`
-file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}).
+file. For more information on Pulumi's Kubernetes support, check out the [Kubernetes reference page]({{< prelref "/docs/intro/cloud-providers/kubernetes" >}}).
 
 We will use the cloud SDKs to provision the managed Kubernetes clusters. Given
 that we're working with real code, we are afforded developer benefits such as:
@@ -89,12 +89,12 @@ operates in the various contexts.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes multi-cloud capabilities through code, [get started today]({{< relref "/docs/get-started" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes multi-cloud capabilities through code, [get started today]({{< prelref "/docs/get-started" >}}). Pulumi is open source and free to
 use.
 
 For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
-[Kubernetes tutorials]({{< relref "/docs/tutorials/kubernetes" >}}).
+[Kubernetes tutorials]({{< prelref "/docs/tutorials/kubernetes" >}}).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
@@ -104,7 +104,7 @@ join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
-migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< relref "/contact.md" >}}).
+migrating your existing configuration code to Pulumi, please don't hesitate to [drop us a line]({{< prelref "/contact.md" >}}).
 
 We also encourage you to watch Pulumi team member [Levi Blackstone][levi-blackstone]
 demo this post in an episode of the [Kubernetes Community Meeting](https://kubernetes.io/community).
@@ -113,8 +113,8 @@ demo this post in an episode of the [Kubernetes Community Meeting](https://kuber
 
 <!-- markdownlint-disable url -->
 [multicloud-example]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-multicloud
-[levi-blackstone]: {{< relref "/authors/levi-blackstone" >}}
+[levi-blackstone]: {{< prelref "/authors/levi-blackstone" >}}
 [pulumi-kubernetes]: https://github.com/pulumi/pulumi-kubernetes
 [client-go]: https://github.com/kubernetes/client-go
-[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
+[crosswalk-aws]: {{< prelref "/docs/guides/crosswalk/aws" >}}
 <!-- markdownlint-enable url -->

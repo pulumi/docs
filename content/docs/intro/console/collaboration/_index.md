@@ -17,20 +17,20 @@ resource state against concurrent updates and offers detailed insights into stac
 
 Collaboration features are found in the Pulumi Team and Enterprise editions.
 Some team features are only available on the Pro edition.
-See [product editions]({{< relref "editions" >}}) for more information.
+See [product editions]({{< prelref "editions" >}}) for more information.
 
 ## Permissions
 
 There are two permissions systems used when determining a user's access to a stack.
 
-First is the user's [role in the organization]({{< relref "organization-roles" >}}). Administrators
+First is the user's [role in the organization]({{< prelref "organization-roles" >}}). Administrators
 of a Pulumi organization have broad access to the organization settings, including configuring
 the specific permissions for other members of the organization.
 
-Second is the specific [stack permissions]({{< relref "stack-permissions" >}}) a user may be
-granted to a stack. For example, by being a member of a [team]({{< relref "teams" >}}), or
+Second is the specific [stack permissions]({{< prelref "stack-permissions" >}}) a user may be
+granted to a stack. For example, by being a member of a [team]({{< prelref "teams" >}}), or
 by being the stack creator.
 
 ## Project and Stack Management
 
-Learn about the benefits of using the Pulumi Console to [manage your projects and stacks]({{< relref "project-and-stack-management" >}}).
+Learn about the benefits of using the Pulumi Console to [manage your projects and stacks]({{< prelref "project-and-stack-management" >}}).

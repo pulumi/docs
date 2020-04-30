@@ -62,7 +62,7 @@ Resources:
 Duration: 12s
 ```
 
-You can see we now have an `ip` [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) that we can `curl` to get the output from the service.
+You can see we now have an `ip` [stack output]({{< prelref "/docs/intro/concepts/stack#outputs" >}}) that we can `curl` to get the output from the service.
 
 <!-- markdownlint-disable blanks-around-fences -->
 > **Using Minikube:** Note that Minikube does not support type `LoadBalancer`. If you are deploying to Minikube, see the following example to run the `kubectl port-forward service/YOUR_SERVICE_NAME 8080:80` command to forward the cluster port to the local machine. Then, the service can be accessed via `curl http://localhost:8080`, which will get the same result as `curl $(pulumi stack output ip)` as in the environment without using Minikube.

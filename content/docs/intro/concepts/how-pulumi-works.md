@@ -10,7 +10,7 @@ menu:
 aliases: ["/docs/reference/how/"]
 ---
 
-Pulumi uses a desired state model for managing infrastructure. A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), [Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}), and so on.) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
+Pulumi uses a desired state model for managing infrastructure. A Pulumi program is executed by a _language host_ to compute a desired state for a stack's infrastructure. The _deployment engine_ compares this desired state with the stack's current state and determines what resources need to be created, updated or deleted. The engine uses a set of _resource providers_ (such as [AWS]({{< prelref "/docs/get-started/aws" >}}), [Azure]({{< prelref "/docs/get-started/azure" >}}), [Kubernetes]({{< prelref "/docs/get-started/kubernetes" >}}), and so on.) in order to manage the individual resources.  As it operates, the engine updates the _state_ of your infrastructure with information about all resources that have been provisioned as well as any pending operations.
 
 The following diagram illustrates the interaction between these parts of the system:
 
@@ -35,10 +35,10 @@ The deployment engine is embedded in the `pulumi` CLI itself.
 
 A resource provider is made up of two different pieces:
 
-1. A _resource plugin_, which is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`]({{< relref "/docs/reference/cli/pulumi_plugin" >}}) set of commands.
+1. A _resource plugin_, which is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`]({{< prelref "/docs/reference/cli/pulumi_plugin" >}}) set of commands.
 2. An _SDK_ which provides bindings for each type of resource the provider can manage.
 
-Like the language runtime itself, the SDKs are available as regular packages.  For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`]({{< relref "/docs/reference/cli/pulumi_plugin_install" >}})  behind the scenes in order to download the resource plugin from pulumi.com.
+Like the language runtime itself, the SDKs are available as regular packages.  For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`]({{< prelref "/docs/reference/cli/pulumi_plugin_install" >}})  behind the scenes in order to download the resource plugin from pulumi.com.
 
 ## Putting it all together
 
@@ -120,7 +120,7 @@ stack mystack
    - aws.s3.Bucket "content-bucket125ce"
 ```
 
-Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
+Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming]({{< prelref "/docs/intro/concepts/programming-model#autonaming" >}}), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to make the S3 `media-bucket` publicly readable.  We change our program to express this new desired state:
 
@@ -268,6 +268,6 @@ This time, the engine will not need to make any changes to `media-bucket` since 
 
 ## Creation and Deletion Order
 
-Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources.  If an [output]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations.  This list can also be augmented by using the [dependsOn]({{< relref "/docs/intro/concepts/programming-model#dependson" >}}) resource option.
+Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources.  If an [output]({{< prelref "/docs/intro/concepts/programming-model#outputs" >}}) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations.  This list can also be augmented by using the [dependsOn]({{< prelref "/docs/intro/concepts/programming-model#dependson" >}}) resource option.
 
-By default, if a resource must be replaced, Pulumi will attempt to create a new copy the the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace]({{< relref "/docs/intro/concepts/programming-model#deletebeforereplace" >}}) option. If you have disabled [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}) by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
+By default, if a resource must be replaced, Pulumi will attempt to create a new copy the the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace]({{< prelref "/docs/intro/concepts/programming-model#deletebeforereplace" >}}) option. If you have disabled [auto-naming]({{< prelref "/docs/intro/concepts/programming-model#autonaming" >}}) by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).

@@ -23,7 +23,7 @@ This article is the second part of a series on best practices for securely manag
 
 Other posts in this series:
 
-- [Create a dedicated IAM User for your CI/CD]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1" >}}) (Series Start)
+- [Create a dedicated IAM User for your CI/CD]({{< prelref "/blog/managing-aws-credentials-on-cicd-part-1" >}}) (Series Start)
 - [Provide the IAM User’s credentials to your CI/CD system](#providing-iam-credentials)
 - [Comparison with using hosted secret managers](#using-a-secrets-service)
 - [Automate Rotating and Revoking AWS Credentials](#automating-key-rotation)
@@ -32,7 +32,7 @@ Other posts in this series:
 
 ## Provide IAM credentials to your CI/CD system {#providing-iam-credentials}
 
-In the [first post]({{< relref "/blog/managing-aws-credentials-on-cicd-part-1">}}) in our series, we created a dedicated IAM User to perform updates to AWS resources within your CI/CD system. The next step is to pass the AWS access keys for that user to your CI/CD system.
+In the [first post]({{< prelref "/blog/managing-aws-credentials-on-cicd-part-1">}}) in our series, we created a dedicated IAM User to perform updates to AWS resources within your CI/CD system. The next step is to pass the AWS access keys for that user to your CI/CD system.
 
 We need to take great caution. [AWS's documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) states, **"Do not provide your access keys to a third party"**.
 
@@ -102,7 +102,7 @@ First, it creates a new access key and pushes the new value out. On the next ite
 
 ### Periodically Invoking an AWS Lambda
 
-The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing]({{< relref "/docs/guides/crosswalk/aws/lambda" >}})
+The heart of the application is triggering it to execute on a fixed interval. Thankfully this is super-easy to do using Pulumi since it allows you to seamlessly blend your "cloud infrastructure" with "code" in a natural way. The user guide for Pulumi Crosswalk for AWS has more information on [serverless eventing]({{< prelref "/docs/guides/crosswalk/aws/lambda" >}})
 if you would like to learn more.
 
 The following snippet is the core part of the credential rotator app. We define a function to handle the logic of key rotation in `rotateIAMUserKeys`. Then we create an AWS Lambda resource

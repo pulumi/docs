@@ -167,7 +167,7 @@ Note also that the `CallbackFunction` class -- the powerful abstraction
 behind all of this -- is exported, and offers some knobs,
 in case you want to do things like reuse existing IAM roles rather than
 creating new ones.
-See the [`pulumi/aws/lambda` documentation]({{< relref "/docs/reference/pkg/aws/lambda" >}}) for details.
+See the [`pulumi/aws/lambda` documentation]({{< prelref "/docs/reference/pkg/aws/lambda" >}}) for details.
 For instance, say we want to increase the RAM available to our function from 128MB to 256MB:
 
 ```typescript
@@ -245,7 +245,7 @@ bucket name, so we use an environment variable. This highlights both the
 benefits and drawbacks to programming at this level -- we need to know
 how to configure all of these ancillary resources, but as a result,
 the
-[entire power of Lambda is at our fingertips]({{< relref "/docs/reference/pkg/aws/lambda/function" >}}).
+[entire power of Lambda is at our fingertips]({{< prelref "/docs/reference/pkg/aws/lambda/function" >}}).
 
 Notice that we've pointed to our application logic inside of `./app`.
 Pulumi will create the zipfile for you. If we instead wanted to use a
@@ -258,7 +258,7 @@ zipfile we've already packaged, just change `code` as follows:
 ```
 
 Using Pulumi's
-[`Asset` and `Archive` classes]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}),
+[`Asset` and `Archive` classes]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}),
 we can fetch code from anywhere -- even the network.
 
 Although managing your functions manually isn't quite as magical, it is
@@ -288,7 +288,7 @@ We've given the function's ID, `zipTpsReports-19d51dc`, which allows
 Pulumi to locate it in your account and reuse it. This can make it easy
 to incrementally adopt Pulumi one piece at a time, collaborate between
 teams, or stitch together resources
-[managed by different stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
+[managed by different stacks]({{< prelref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
 ## More About Functions
 
@@ -358,12 +358,12 @@ pace.
 Lastly, it's possible to use Pulumi stacks to actually break apart your
 cloud resources and functions into independently deployable pieces. This
 allows teams to leverage features
-like [RBAC]({{< relref "/docs/intro/console/collaboration" >}}).
+like [RBAC]({{< prelref "/docs/intro/console/collaboration" >}}).
 For instance, it's common for the DevOps team to manage the physical
 cloud resources like queues, topics, and buckets, while the development
 team authors and manages the serverless functions attached to them. Read
 more about
-this [here]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
+this [here]({{< prelref "/docs/intro/concepts/organizing-stacks-projects" >}}).
 
 ## More About Event Sources
 
@@ -376,10 +376,10 @@ The simplest answer here is to create a new resource in your Pulumi
 program using `new`, as we saw above. Because Pulumi is an
 infrastructure as code platform, any resources in any cloud are
 available --
-[AWS]({{< relref "/docs/get-started/aws" >}}),
-[Azure]({{< relref "/docs/get-started/azure" >}}),
-[GCP]({{< relref "/docs/get-started/gcp" >}}),
-[Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}), etc. When
+[AWS]({{< prelref "/docs/get-started/aws" >}}),
+[Azure]({{< prelref "/docs/get-started/azure" >}}),
+[GCP]({{< prelref "/docs/get-started/gcp" >}}),
+[Kubernetes]({{< prelref "/docs/get-started/kubernetes" >}}), etc. When
 you `new` one up, Pulumi understands how to provision and manage it.
 
 We saw simple examples of this earlier:
@@ -441,26 +441,26 @@ exposed in the AWS package:
 
 - [`apigateway.x.API`](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway):
   create serverless APIs using an Express.js style
-- [`cloudwatch.onSchedule`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}):
+- [`cloudwatch.onSchedule`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}):
   fire a CloudWatch event on a particular schedule, e.g. a cron
   expression
-- [`cloudwatch.Event.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}):
+- [`cloudwatch.Event.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}):
   fire an event when a particular CloudWatch event occurs
-- [`cloudwatch.LogGroup.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}):
+- [`cloudwatch.LogGroup.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}):
   fire an event when a CloudWatch logs event occurs
-- [`dynamodb.Table.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}):
+- [`dynamodb.Table.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}):
   fire events for DynamoDB insert, modify, or remove operations
-- [`kinesis.Stream.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}):
+- [`kinesis.Stream.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}):
   fire Kinesis Stream events at particular times or batch sizes
-- [`s3.Bucket.onObjectCreated`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}):
+- [`s3.Bucket.onObjectCreated`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}):
   trigger a function anytime an object is created in an S3 Bucket
-- [`s3.Bucket.onObjectRemoved`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}):
+- [`s3.Bucket.onObjectRemoved`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}):
   trigger a function anytime an object is removed from an S3 Bucket
-- [`s3.Bucket.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}):
+- [`s3.Bucket.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}):
   trigger a function for a wide range of S3 Bucket events
-- [`sns.Topic.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}):
+- [`sns.Topic.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}):
   fire SNS Topic events when new messages arrive
-- [`sqs.Queue.onEvent`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}):
+- [`sqs.Queue.onEvent`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}):
   fire SQS Queue events when new messages are enqueued (or on DLQ
   events, etc)
 

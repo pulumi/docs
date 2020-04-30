@@ -42,7 +42,7 @@ Automatic **horizontal scaling** solves the problem. At any point in time, sever
 
 The deployment artifact is just the code packaged as a zip archive and uploaded to Blob Storage. **Scale Controller** is an internal Azure component that observes the target queue and allocates Function App instances based on the queue length fluctuations. Each instance bootstraps itself with a zip file, connects to the queue, and pulls messages to process.
 
-The cloud provider manages all the components of the system, so developers can focus on writing business logic code. It can be [as simple as a JavaScript callback]({{< relref "/blog/ten-pearls-with-azure-functions-in-pulumi" >}}):
+The cloud provider manages all the components of the system, so developers can focus on writing business logic code. It can be [as simple as a JavaScript callback]({{< prelref "/blog/ten-pearls-with-azure-functions-in-pulumi" >}}):
 
 ``` ts
 queue.onEvent("MyHandler", async (context, msg) => {

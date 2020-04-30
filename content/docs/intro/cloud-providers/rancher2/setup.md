@@ -3,12 +3,12 @@ title: Rancher2 Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi Rancher2 Provider.
 ---
 
-The [Pulumi Rancher2 provider]({{< relref "./" >}}) uses the Rancher2 SDK to manage and provision resources.
+The [Pulumi Rancher2 provider]({{< prelref "./" >}}) uses the Rancher2 SDK to manage and provision resources.
 
 > Pulumi relies on the Rancher2 SDK to authenticate requests from your computer to Rancher2. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi Rancher2 Provider]({{< relref "./" >}}) needs to be configured with Rancher2 credentials
+The [Pulumi Rancher2 Provider]({{< prelref "./" >}}) needs to be configured with Rancher2 credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

@@ -18,11 +18,11 @@ When working with existing resources, there are two primary scenarios:
 * You need to reference existing resources to use as inputs to new resources in Pulumi
 * You need to adopt existing resources under management so they can be managed by Pulumi
 
-For the first situation, please consult [the user guide index]({{< relref "/docs/guides/adopting#coexistence" >}}). For the second, let's now see how to adopt existing resources.
+For the first situation, please consult [the user guide index]({{< prelref "/docs/guides/adopting#coexistence" >}}). For the second, let's now see how to adopt existing resources.
 
 ## Adopting Existing Resources
 
-To adopt existing resources so that Pulumi is able to manage subsequent updates to them, Pulumi offers the [`import`]({{< relref "/docs/intro/concepts/programming-model#import" >}}) resource option. This option request that a resource defined in your Pulumi program adopts an existing resource in the cloud provider instead of creating a new one as would normally occur. In keeping with its focus on infrastructure as _code_, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in a manual workflow.
+To adopt existing resources so that Pulumi is able to manage subsequent updates to them, Pulumi offers the [`import`]({{< prelref "/docs/intro/concepts/programming-model#import" >}}) resource option. This option request that a resource defined in your Pulumi program adopts an existing resource in the cloud provider instead of creating a new one as would normally occur. In keeping with its focus on infrastructure as _code_, Pulumi lets you specify this `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in a manual workflow.
 
 This example imports an existing AWS EC2 security group with ID `sg-04aeda9a214730248`:
 
@@ -204,7 +204,7 @@ Diagnostics:
     error: imported resource sg-04aeda9a214730248's property 'ingress' does not match the existing value
 ```
 
-> **Note:** Because of [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
+> **Note:** Because of [auto-naming]({{< prelref "/docs/intro/concepts/programming-model#autonaming" >}}), it's common to accidentally get in a situation where names don't match. For example, if we left off the security group's name, `"my-sg-62a569b"`, in the earlier example, Pulumi would still auto-name the resource, leading to an error `imported resource sg-04aeda9a214730248's property 'name' does not match the existing value`. To fix this problem, make sure to specify names for all resources explicitly.
 
 ### More Complex ID Mappings
 
@@ -216,6 +216,6 @@ Because a resource's `import` ID is provided in code, it can be configured in ma
 * Look up import IDs from a JSON or CSV file
 * Programmatically construct IDs from predictable names using project and stack names
 * Conditionally add the import ID property, enabling you to have some stacks that import, and others that provision new infrastructure
-* Use the [`transformations`]({{< relref "/docs/intro/concepts/programming-model#transformations" >}}) capability to inject resource IDs at runtime
+* Use the [`transformations`]({{< prelref "/docs/intro/concepts/programming-model#transformations" >}}) capability to inject resource IDs at runtime
 
 For small numbers of resources, you can just paste in individual resource IDs. For larger conversions, you will likely want to automate the mapping of IDs to resources (such as with an external file and using `import: idMapping[name]`). If you are importing or migrating dozens of stacks, you can even select between which of these mappings to use via a Pulumi config setting.

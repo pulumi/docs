@@ -15,11 +15,11 @@ aliases: ["/docs/reference/clouds/digitalocean/"]
 The DigitalOcean provider for Pulumi can be used to provision any of the cloud resources available in [DigitalOcean](https://www.digitalocean.com/).
 The DigitalOcean provider must be configured with credentials to deploy and update resources in a DigitalOcean cloud.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/digitalocean" >}}) for complete details of the available DigitalOcean provider APIs.
+See the [full API documentation]({{< prelref "/docs/reference/pkg/digitalocean" >}}) for complete details of the available DigitalOcean provider APIs.
 
 ## Setup
 
-The DigitalOcean provider supports several options for providing access to DigitalOcean credentials.  See the [DigitalOcean setup page]({{< relref "setup" >}}) for details.
+The DigitalOcean provider supports several options for providing access to DigitalOcean credentials.  See the [DigitalOcean setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

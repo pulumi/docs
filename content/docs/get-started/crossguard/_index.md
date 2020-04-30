@@ -28,7 +28,7 @@ Python support is currently in preview.
 * **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
 * **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
 
-Learn more about [Policy as Code core concepts]({{< relref "/docs/guides/crossguard/core-concepts" >}}).
+Learn more about [Policy as Code core concepts]({{< prelref "/docs/guides/crossguard/core-concepts" >}}).
 
 ## Creating a Policy Pack
 

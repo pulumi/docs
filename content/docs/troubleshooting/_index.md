@@ -151,7 +151,7 @@ The version information for these providers is stored in the deployment for each
 This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
 to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your pulumi program.
 
-To be more specific, the error occurs because the `pulumi` [plugin cache]({{< relref "/docs/reference/cli/pulumi_plugin_ls" >}}) does not have the required version installed.
+To be more specific, the error occurs because the `pulumi` [plugin cache]({{< prelref "/docs/reference/cli/pulumi_plugin_ls" >}}) does not have the required version installed.
 This is especially more likely to occur if you are running `pulumi` in a CI/CD environment, since your plugin cache is likely not saved across builds.
 
 Please note that, it is fine to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
@@ -252,7 +252,7 @@ to manually edit the stack's existing state to fix the corruption.
 
 Note that this is an advanced operation and should be an absolute last resort.
 
-If you intend to unprotect or delete a resource, consider using the [`pulumi state`]({{< relref "/docs/reference/cli/pulumi_state" >}}) command to
+If you intend to unprotect or delete a resource, consider using the [`pulumi state`]({{< prelref "/docs/reference/cli/pulumi_state" >}}) command to
 do so instead of editing your state directly. `pulumi state` also makes surgical fixes to your state but without
 requiring you to edit the JSON representation of your stack's current state.
 
@@ -345,7 +345,7 @@ introduced in Traefik 1.7.0.
 > Note: asynchronous calls are the default in `@pulumi/pulumi>=2.0.0` and the below only applies to programs using the `1.x` SDK.
 
 The warning occurs when invoking a resource function synchronously while also using
-[an explicit provider object]({{< relref "/docs/intro/concepts/programming-model#providers" >}}) that isn't yet ready to use.
+[an explicit provider object]({{< prelref "/docs/intro/concepts/programming-model#providers" >}}) that isn't yet ready to use.
 For example:
 
 ```ts
@@ -385,7 +385,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
 
 This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously,
 returning their result through a `Promise<...>`.  The result of the call is then wrapped into an `Output` so it can easily be
-passed as a resource input and to make it [simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
+passed as a resource input and to make it [simple to access properties]({{< prelref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 If you do not want to change all calls to be `async` (perhaps because only one is encountering a problem), you can alternatively
 update only specific problematic calls to be asynchronous like so:
@@ -399,7 +399,7 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 
 In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  The result
 of the call is then wrapped into an `Output` so it can easily be passed as a resource input and to make it
-[simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
+[simple to access properties]({{< prelref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 Sometimes, however, this approach is not possible because the call to the resource function happens a layer deeper (possibly in a
 component not under your control).  In that case, we recommend the solution in the next section:
@@ -453,7 +453,7 @@ const val = stackReference.getOutput("outputName");
 ```
 
 In this form the result of the call is an `Output` (which internally asynchronously retrieves the stack output value).  This can
-easily be passed as a resource input and supports [simple to access properties]({{< relref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
+easily be passed as a resource input and supports [simple to access properties]({{< prelref "/docs/intro/concepts/programming-model#lifting" >}}) off of it.
 
 However, because the value is not known synchronously, it is not possible to have the value affect the flow of your application.
 For example if the output value is an array, there is no way to know the length of the array in order to make specific resources

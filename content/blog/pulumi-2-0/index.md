@@ -12,10 +12,10 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
 <!--more-->
 
 <div class="header-hero-actions mt-8 mb-4 text-center">
-    <a class="btn btn-lg mr-2" href="{{< relref "/docs/get-started" >}}">
+    <a class="btn btn-lg mr-2" href="{{< prelref "/docs/get-started" >}}">
         Get Started
     </a>
-    <a class="btn btn-lg btn-orange ml-2" href="{{< relref "/superpowers" >}}">
+    <a class="btn btn-lg btn-orange ml-2" href="{{< prelref "/superpowers" >}}">
         Learn More
     </a>
 </div>
@@ -42,17 +42,17 @@ The main theme of 2.0 is something we've taken to calling "superpowers." This is
 
 ## What is Pulumi 2.0?
 
-After [shipping 1.0 last year]({{< relref "/blog/pulumi-1-0" >}}), we've been hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
+After [shipping 1.0 last year]({{< prelref "/blog/pulumi-1-0" >}}), we've been hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
 
-* **Provisioning**. All core language SDKs are now at parity, including all existing languages &mdash; [Node.js (JavaScript, TypeScript)]({{< relref "/docs/intro/languages/javascript" >}}) and [Python]({{< relref "/docs/intro/languages/python" >}}) &mdash; as well as the new additions to the family &mdash; [.NET (C#, F#, etc)]({{< relref "/docs/intro/languages/dotnet" >}}) and [Go]({{< relref "/docs/intro/languages/go" >}}). We've also significantly expanded upon the [supported cloud resource providers]({{< relref "/docs/intro/cloud-providers" >}}), totalling above three dozen, and rolled out [entirely new API documentation]({{< relref "/docs/reference/pkg" >}}).
+* **Provisioning**. All core language SDKs are now at parity, including all existing languages &mdash; [Node.js (JavaScript, TypeScript)]({{< prelref "/docs/intro/languages/javascript" >}}) and [Python]({{< prelref "/docs/intro/languages/python" >}}) &mdash; as well as the new additions to the family &mdash; [.NET (C#, F#, etc)]({{< prelref "/docs/intro/languages/dotnet" >}}) and [Go]({{< prelref "/docs/intro/languages/go" >}}). We've also significantly expanded upon the [supported cloud resource providers]({{< prelref "/docs/intro/cloud-providers" >}}), totalling above three dozen, and rolled out [entirely new API documentation]({{< prelref "/docs/reference/pkg" >}}).
 
-* **Delivery**. As we've worked with customers to go from development to production, we've added [more CI/CD integrations]({{< relref "/docs/guides/continuous-delivery" >}}) as well as [environment management capabilities to help at scale]({{< relref "/blog/pulumi-service-improvements_02-2020" >}}), such as [project and stack tagging and filtering]({{< relref "/docs/intro/concepts/stack#stack-tags" >}}).
+* **Delivery**. As we've worked with customers to go from development to production, we've added [more CI/CD integrations]({{< prelref "/docs/guides/continuous-delivery" >}}) as well as [environment management capabilities to help at scale]({{< prelref "/blog/pulumi-service-improvements_02-2020" >}}), such as [project and stack tagging and filtering]({{< prelref "/docs/intro/concepts/stack#stack-tags" >}}).
 
-* **Architecture**. Customers are [building their own platforms]({{< relref "/webinars/building-self-service-clouds" >}}) that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options]({{< relref "/docs/guides/adopting" >}}) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
+* **Architecture**. Customers are [building their own platforms]({{< prelref "/webinars/building-self-service-clouds" >}}) that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options]({{< prelref "/docs/guides/adopting" >}}) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
 
-* **Policy**. [Our new policy as code framework, CrossGuard]({{< relref "/docs/guides/crossguard" >}}), lets you define policies using real languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs]({{< relref "/docs/guides/crossguard/configuration" >}}) let you write a single policy and apply it flexibly across your projects.
+* **Policy**. [Our new policy as code framework, CrossGuard]({{< prelref "/docs/guides/crossguard" >}}), lets you define policies using real languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs]({{< prelref "/docs/guides/crossguard/configuration" >}}) let you write a single policy and apply it flexibly across your projects.
 
-* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways]({{< relref "/docs/guides/testing" >}}). This includes [unit testing using familiar frameworks and new mocking capabilities]({{< relref "/docs/guides/testing/unit" >}}) through [integration testing for short- and long-lived environments]({{< relref "/docs/guides/testing/integration" >}}).
+* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways]({{< prelref "/docs/guides/testing" >}}). This includes [unit testing using familiar frameworks and new mocking capabilities]({{< prelref "/docs/guides/testing/unit" >}}) through [integration testing for short- and long-lived environments]({{< prelref "/docs/guides/testing/integration" >}}).
 
 ## Welcome to the Team, Pulumipus!
 
@@ -66,13 +66,13 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
-To learn more, [join us for our launch event next Wednesday]({{< relref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< relref "/superpowers" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< relref "/docs/get-started" >}}). If you're upgrading from Pulumi 1.0, [please see our migration guide]({{< relref "/docs/get-started/install/migrating-2.0.md" >}}).
+To learn more, [join us for our launch event next Wednesday]({{< prelref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< prelref "/superpowers" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< prelref "/docs/get-started" >}}). If you're upgrading from Pulumi 1.0, [please see our migration guide]({{< prelref "/docs/get-started/install/migrating-2.0.md" >}}).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
-    <a class="btn btn-lg mr-2" href="{{< relref "/docs/get-started" >}}">
+    <a class="btn btn-lg mr-2" href="{{< prelref "/docs/get-started" >}}">
         Get Started
     </a>
-    <a class="btn btn-lg btn-orange ml-2" href="{{< relref "/superpowers" >}}">
+    <a class="btn btn-lg btn-orange ml-2" href="{{< prelref "/superpowers" >}}">
         Learn More
     </a>
 </div>

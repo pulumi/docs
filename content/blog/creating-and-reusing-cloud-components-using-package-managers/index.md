@@ -10,7 +10,7 @@ meta_image: "pulumi-resource-visualization.png"
 
 
 Hello! A few weeks back I wrote
-a post on [serving static websites on AWS with Pulumi]({{< relref "serving-a-static-website-on-aws-with-pulumi" >}})
+a post on [serving static websites on AWS with Pulumi]({{< prelref "serving-a-static-website-on-aws-with-pulumi" >}})
 detailing how to host a static website on AWS. Pulumi allowed me to wire four
 different AWS products together in only 200 lines of code. It would be a
 shame, however if I needed to copy and paste that code every time I
@@ -83,7 +83,7 @@ become just a few lines of very simple, understandable code.
 ## Reusing Infrastructure as Code
 
 To use this new package, head on over to a Pulumi program, or
-[create a new one]({{< relref "/docs/get-started" >}})
+[create a new one]({{< prelref "/docs/get-started" >}})
 (for instance, with `pulumi new aws-typescript`).
 Then just add a reference like any other dependency:
 
@@ -210,7 +210,7 @@ richer visualization in the [Pulumi Console](https://app.pulumi.com):
 ![pulumi app graph](./pulumi-resource-visualization.png)
 
 If you want to learn more about components, see the
-[documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
+[documentation]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
 
 ## Package Everything!
 

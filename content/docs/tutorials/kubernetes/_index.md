@@ -14,7 +14,7 @@ aliases: ["/docs/reference/tutorials/kubernetes/"]
 The following tutorials highlight the Kubernetes platform using complete end-to-end scenarios.
 
 > If this is your first time getting started with Pulumi for Kubernetes, try the
-> easy <a href="{{< relref "/docs/get-started/kubernetes" >}}">Get Started guide</a> first.
+> easy <a href="{{< prelref "/docs/get-started/kubernetes" >}}">Get Started guide</a> first.
 
 ## Featured Tutorials
 
@@ -31,7 +31,7 @@ These tutorials will help you provision a Kubernetes cluster on your cloud of ch
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/3 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
-            <a href="{{< relref "aks" >}}" style="color: #4387c7">
+            <a href="{{< prelref "aks" >}}" style="color: #4387c7">
                 <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
                 AKS
             </a>
@@ -39,7 +39,7 @@ These tutorials will help you provision a Kubernetes cluster on your cloud of ch
     </div>
     <div class="w-1/3 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
-            <a href="{{< relref "eks" >}}" style="color: #4387c7">
+            <a href="{{< prelref "eks" >}}" style="color: #4387c7">
                 <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
                 EKS
             </a>
@@ -47,7 +47,7 @@ These tutorials will help you provision a Kubernetes cluster on your cloud of ch
     </div>
     <div class="w-1/3 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
-            <a href="{{< relref "gke" >}}" style="color: #4387c7">
+            <a href="{{< prelref "gke" >}}" style="color: #4387c7">
                 <img class="h-5" src="/logos/tech/gcp.svg" alt="GCP">
                 GKE
             </a>
@@ -63,7 +63,7 @@ These tutorials deploy application workloads to any Kubernetes cluster, managed 
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-boxes pr-2"></i>
-            <a href="{{< relref "exposed-deployment" >}}" style="color: #4387c7">
+            <a href="{{< prelref "exposed-deployment" >}}" style="color: #4387c7">
                 Hello, World
             </a>
         </h3>
@@ -75,7 +75,7 @@ These tutorials deploy application workloads to any Kubernetes cluster, managed 
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-map pr-2"></i>
-            <a href="{{< relref "wordpress-chart" >}}" style="color: #4387c7">
+            <a href="{{< prelref "wordpress-chart" >}}" style="color: #4387c7">
                 Helm Charts
             </a>
         </h3>
@@ -89,7 +89,7 @@ These tutorials deploy application workloads to any Kubernetes cluster, managed 
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-book pr-2"></i>
-            <a href="{{< relref "guestbook" >}}" style="color: #4387c7">
+            <a href="{{< prelref "guestbook" >}}" style="color: #4387c7">
                 Guestbook App
             </a>
         </h3>
@@ -101,7 +101,7 @@ These tutorials deploy application workloads to any Kubernetes cluster, managed 
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-spinner pr-2"></i>
-            <a href="{{< relref "configmap-rollout" >}}" style="color: #4387c7">
+            <a href="{{< prelref "configmap-rollout" >}}" style="color: #4387c7">
                 Graceful App Rollout
             </a>
         </h3>
@@ -116,7 +116,7 @@ These tutorials deploy application workloads to any Kubernetes cluster, managed 
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-bolt pr-2"></i>
-            <a href="{{< relref "stateless-app" >}}" style="color: #4387c7">
+            <a href="{{< prelref "stateless-app" >}}" style="color: #4387c7">
                 Stateless Application
             </a>
         </h3>
@@ -135,7 +135,7 @@ These tutorials tackle difficult "day two" tasks:
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-signal pr-2"></i>
-            <a href="{{< relref "p8s-rollout" >}}" style="color: #4387c7">
+            <a href="{{< prelref "p8s-rollout" >}}" style="color: #4387c7">
                 Gated Rollouts
             </a>
         </h3>
@@ -147,7 +147,7 @@ These tutorials tackle difficult "day two" tasks:
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-stopwatch pr-2"></i>
-            <a href="{{< relref "eks-migrate-nodegroups" >}}" style="color: #4387c7">
+            <a href="{{< prelref "eks-migrate-nodegroups" >}}" style="color: #4387c7">
                 Zero Downtime Upgrades
             </a>
         </h3>

@@ -14,7 +14,7 @@ create reusable components for CircleCI workflows. Orbs enable you to
 simplify your CI/CD configuration by reusing existing orb jobs or
 commands, in much the same way Pulumi enables you to simplify the
 delivery of your cloud native infrastructure by sharing and reusing
-[existing components]({{< relref "creating-and-reusing-cloud-components-using-package-managers" >}}).
+[existing components]({{< prelref "creating-and-reusing-cloud-components-using-package-managers" >}}).
 
 Pulumi is proud to be a [CircleCI technology partner](https://circleci.com/partners/), and we were excited to get a
 head start on seeing how orbs could make it easier to take Pulumi into
@@ -75,7 +75,7 @@ that happened during a CircleCI workflow.
 
 Also, if you are using CircleCI with GitHub, you can consider installing
 the
-[Pulumi GitHub application]({{< relref "/docs/guides/continuous-delivery/github-app" >}}. The Pulumi
+[Pulumi GitHub application]({{< prelref "/docs/guides/continuous-delivery/github-app" >}}. The Pulumi
 GitHub app will surface the results of any previews or updates from your
 CI/CD on the source GitHub pull request. It's always good to know if a
 pull request is going to lead to changes to your cloud infrastructure!
@@ -85,7 +85,7 @@ Deployment" part of CI/CD workflows, and with the release of CircleCIs
 Orbs, it's just that much easier.
 
 Having trouble? Questions? Join our [community Slack](https://slack.pulumi.com/)
-or [drop us a line]({{< relref "/contact.md" >}}).
+or [drop us a line]({{< prelref "/contact.md" >}}).
 
 Links:
 

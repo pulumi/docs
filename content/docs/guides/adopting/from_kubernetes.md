@@ -13,7 +13,7 @@ Pulumi makes it easy to author your Kubernetes configuration in your choice of l
 
 Pulumi also enables you to render the Kubernetes objects in your program into YAML which eases adoption in the opposite direction: you can use Pulumi to author your configuration, getting the benefits of general-purpose and familiar programming languages, while still being able to deploy the resulting YAML with existing toolchains like `kubectl` or your CI/CD vendor's Kubernetes support.
 
-> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}) or jump straight in with [the Getting Started Guide]({{< relref "/docs/get-started/kubernetes" >}}).
+> To learn more about Pulumi's Kubernetes support, see [the Kubernetes Overview]({{< prelref "/docs/intro/cloud-providers/kubernetes" >}}) or jump straight in with [the Getting Started Guide]({{< prelref "/docs/get-started/kubernetes" >}}).
 
 ## Deploying Kubernetes YAML
 
@@ -476,7 +476,7 @@ $ curl http://$(pulumi stack output frontendIp)
 
 While Pulumi has excellent support for deploying and updating Kubernetes resources on a cluster, Pulumi also offers the ability to render YAML to make it easier to integrate into existing workflows. This gives you the ability to author Kubernetes configuration using general-purpose programming languages, consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
 
-To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< relref "/docs/intro/concepts/programming-model#explicit-provider-configuration" >}}) object.
+To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< prelref "/docs/intro/concepts/programming-model#explicit-provider-configuration" >}}) object.
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 
@@ -844,4 +844,4 @@ Although this example shows the YAML `ConfigFile` resource, the same behavior is
 
 ## Provisioning Mixed Configurations
 
-It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependences between them. For an example of doing so, see [this blog post]({{< relref "/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code" >}}) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.
+It is possible to provision a combination of native Kubernetes objects, YAML files, Helm Charts, and other cloud resources all together, with dependences between them. For an example of doing so, see [this blog post]({{< prelref "/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code" >}}) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm Chart that consumes this secret and connects to the CosmosDB database.

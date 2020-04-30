@@ -15,7 +15,7 @@ these languages, like flow control, inheritance, composition, and so on,
 provide the right abstractions to effectively build up infrastructure in
 a simple and familiar way.
 
-In a [previous post]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}})
+In a [previous post]({{< prelref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}})
 we focused on how Pulumi could allow you to simply create an AWS Lambda
 out of your own JavaScript function. While this was much easier than
 having to manually create a [Lambda Deployment Package](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)
@@ -37,7 +37,7 @@ const bucket = new aws.s3.Bucket("testbucket", {
 
 // Create a lambda that will post a message to slack when the bucket changes.
 // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
-// See: www.pulumi.com{{< relref "/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
+// See: www.pulumi.com{{< prelref "/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
 const lambda = new aws.lambda.CallbackFunction("postToSlack", {
     callback: async (e) => {
       const client = new slack.WebClient(...);

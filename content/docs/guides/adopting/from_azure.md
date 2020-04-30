@@ -12,7 +12,7 @@ menu:
 If your team has already provisioned infrastructure using Azure Resource Manager (ARM) Templates, and you'd like to adopt Pulumi, you have three primary strategies you can take:
 
 * [**Coexist**](#referencing-deployment-outputs) with resources provisioned by ARM by referencing deployment outputs.
-* [**Import**]({{< relref "import" >}}) existing resources into Pulumi in the usual way.
+* [**Import**]({{< prelref "import" >}}) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-deployments-and-resources) your deployments to use Pulumi and then incrementally migrate resources.
 
 ## Referencing Stack Outputs
@@ -215,7 +215,7 @@ Depending on what you're trying to accomplish, you may prefer to start with (1) 
 
 ### Deploy Templates Using Pulumi
 
-The Pulumi Azure package [provides an ARM TemplateDeployment]({{< relref "/docs/reference/pkg/azure/core/templatedeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
+The Pulumi Azure package [provides an ARM TemplateDeployment]({{< prelref "/docs/reference/pkg/azure/core/templatedeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
 
 For instance, this code deploys a simple ARM template using the given parameters, and exports the resulting Storage Account name:
 
@@ -602,7 +602,7 @@ Now let's see how to actually migrate your ARM-managed resources fully to Pulumi
 
 Note that you can always skip the intermediate step of deploying your ARM template using Pulumi and go straight to migrating your resources. For deployments with many resources, however, doing this in multiple incremental steps can help minimize disruption and allow you to do this migration more slowly over time.
 
-Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import]({{< relref "import" >}}) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
+Our example below will result in a Pulumi program that creates a Storage Account equivalent to the above ARM template example. The example will also use [import]({{< prelref "import" >}}) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
 > This requires that we are using ARM's "incremental" deployment mode. This is the default mode, however, if you've specified that your ARM deployment should use "complete" mode, the import flow below will be complicated because ARM prefers to delete any resources it doesn't recognize as belonging to the template. [Read more about ARM deployment modes here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-modes).
 

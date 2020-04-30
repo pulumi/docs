@@ -17,7 +17,7 @@ This guide walks you through configuring your Azure Active Directory (Azure AD) 
 
 ## Prerequisites
 
-- [Single Sign-On]({{< relref "sso" >}})
+- [Single Sign-On]({{< prelref "sso" >}})
 
 ## Configuring Azure AD
 
@@ -121,4 +121,4 @@ sign into to your Azure AD instance, and then immediately redirected back to the
 ## Troubleshooting
 
 If you have any trouble configuring Azure AD, signing into Pulumi, or need additional assistance, please
-[contact us]({{< relref "/about#contact-us" >}}).
+[contact us]({{< prelref "/about#contact-us" >}}).

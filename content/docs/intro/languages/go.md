@@ -20,13 +20,13 @@ Pulumi supports writing your infrastructure as code using the Go language.
 The fastest way to get up and running is to choose from one of the following Getting Started guides:
 
 <div class="tiles my-4">
-    <a class="tile flex-1 p-4" href="{{< relref "/docs/get-started/aws" >}}">
+    <a class="tile flex-1 p-4" href="{{< prelref "/docs/get-started/aws" >}}">
         <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
     </a>
-    <a class="tile md:mx-4 flex-1 p-4" href="{{< relref "/docs/get-started/azure" >}}">
+    <a class="tile md:mx-4 flex-1 p-4" href="{{< prelref "/docs/get-started/azure" >}}">
         <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
     </a>
-    <a class="tile flex-1 p-4" href="{{< relref "/docs/get-started/gcp" >}}">
+    <a class="tile flex-1 p-4" href="{{< prelref "/docs/get-started/gcp" >}}">
         <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
 </div>
@@ -42,7 +42,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new go
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change) and a `main.go` file containing your program. The name of the directory is used as the project name in `Pulumi.yaml`. Use your favorite Go dependency manager (such as Go's built-in modules system, by running `go mod init` in your project's directory).
+This will create a `Pulumi.yaml` [project file]({{< prelref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change) and a `main.go` file containing your program. The name of the directory is used as the project name in `Pulumi.yaml`. Use your favorite Go dependency manager (such as Go's built-in modules system, by running `go mod init` in your project's directory).
 
 To deploy your infrastructure, first build your Go program: `go build -o $(basename $(pwd))`. Then run `pulumi up` and Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 

@@ -17,7 +17,7 @@ This guide walks you through configuring your G Suite service as a SAML SSO iden
 
 ## Prerequisites
 
-- [Single Sign-On]({{< relref "sso" >}})
+- [Single Sign-On]({{< prelref "sso" >}})
 
 ## Creating the SAML Application
 
@@ -111,4 +111,4 @@ name of your Pulumi organization.
 ## Troubleshooting
 
 If you have any trouble configuring G Suite, signing into Pulumi, or need additional assistance, please
-[contact us]({{< relref "/about#contact-us" >}}).
+[contact us]({{< prelref "/about#contact-us" >}}).

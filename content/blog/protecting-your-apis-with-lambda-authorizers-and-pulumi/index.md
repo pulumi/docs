@@ -9,13 +9,13 @@ tags: ["Serverless","AWS","Lambda","Auth","APIGateway"]
 
 Creating serverless applications just got even easier! You can now
 protect your application APIs in just three easy steps. We've already
-posted about how [easy it is to create serverless apps in Pulumi]({{< relref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}}).
+posted about how [easy it is to create serverless apps in Pulumi]({{< prelref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}}).
 Now, we're helping you simplify protecting those apps with API
 Gateway and Lambda authorizers.
 
 With Pulumi's new [AWSX](https://github.com/pulumi/pulumi-awsx) package, you
 can quickly define a Lambda and an AWS Lambda authorizer to protect it.
-We're once again harnessing the power of [Lambdas as Lambdas]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}})
+We're once again harnessing the power of [Lambdas as Lambdas]({{< prelref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}})
 to allow developers to focus on writing code.
 
 Today, we will walkthrough creating a simple serverless app using AWS
@@ -287,7 +287,7 @@ enable developers to get their code production ready faster.
 
 Get going with these resources:
 
-- [Getting Started]({{< relref "/docs/get-started" >}})
+- [Getting Started]({{< prelref "/docs/get-started" >}})
 - [Serverless REST API on AWS](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway)
 
 To learn more about using Pulumi and Lambda authorizers

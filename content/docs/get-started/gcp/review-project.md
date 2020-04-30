@@ -14,8 +14,8 @@ aliases: ["/docs/quickstart/gcp/review-project/"]
 
 Let's review some of the generated project files:
 
-- `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+- `Pulumi.yaml` defines the [project]({{< prelref "/docs/intro/concepts/project" >}}).
+- `Pulumi.dev.yaml` contains [configuration]({{< prelref "/docs/intro/concepts/config" >}}) values for the [stack]({{< prelref "/docs/intro/concepts/stack" >}}) we initialized.
 
 {{% choosable language csharp %}}
 

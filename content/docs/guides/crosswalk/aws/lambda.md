@@ -11,7 +11,7 @@ menu:
 aliases: ["/docs/reference/crosswalk/aws/lambda/"]
 ---
 
-<a href="{{< relref "./" >}}">
+<a href="{{< prelref "./" >}}">
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
@@ -29,7 +29,7 @@ configuration of the associated AWS resources. This lets you focus on your appli
 worry about boilerplate, and with confidence that the resulting infrastructure automatically uses AWS best practices.
 
 With Pulumi Crosswalk for AWS, event sources are available on all native resource types, including AWS S3, SQS,
-DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway]({{< relref "api-gateway" >}}).
+DynamoDB, CloudWatch, Kinesis, and more, in addition to full support for [API Gateway]({{< prelref "api-gateway" >}}).
 This improves discoverability of event sources in addition to adding strong typing to the event handler
 inputs and outputs that AWS Lambda will deliver to your code.
 
@@ -65,17 +65,17 @@ tbody tr td:first-child {
 
 | AWS Service | Event | Description |
 |-------------|-------|-------------|
-| API Gateway | [awsx.apigateway.API]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#API" >}}) | create serverless APIs using a simple approach |
-| CloudWatch  | [aws.cloudwatch.onSchedule]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}) | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
-| CloudWatch  | [aws.cloudwatch.EventRule.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}) | fire an event when a particular CloudWatch event occurs |
-| CloudWatch  | [aws.cloudwatch.LogGroup.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}) | fire an event when a CloudWatch logs event occurs |
-| DynamoDB    | [aws.dynamodb.Table.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}) | fire events for DynamoDB insert, modify, or remove operations |
-| Kinesis     | [aws.kinesis.Stream.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}) | fire Kinesis Stream events at particular times or batch sizes |
-| S3          | [aws.s3.Bucket.onObjectCreated]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}) | trigger a function anytime an object is created in an S3 Bucket |
-| S3          | [aws.s3.Bucket.onObjectRemoved]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}) | trigger a function anytime an object is removed from an S3 Bucket |
-| S3          | [aws.s3.Bucket.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}) | trigger a function for a wide range of S3 Bucket events |
-| SNS         | [aws.sns.Topic.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}) | fire SNS Topic events when new messages arrive |
-| SQS         | [aws.sqs.Queue.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
+| API Gateway | [awsx.apigateway.API]({{< prelref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#API" >}}) | create serverless APIs using a simple approach |
+| CloudWatch  | [aws.cloudwatch.onSchedule]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}) | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
+| CloudWatch  | [aws.cloudwatch.EventRule.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}) | fire an event when a particular CloudWatch event occurs |
+| CloudWatch  | [aws.cloudwatch.LogGroup.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}) | fire an event when a CloudWatch logs event occurs |
+| DynamoDB    | [aws.dynamodb.Table.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}) | fire events for DynamoDB insert, modify, or remove operations |
+| Kinesis     | [aws.kinesis.Stream.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}) | fire Kinesis Stream events at particular times or batch sizes |
+| S3          | [aws.s3.Bucket.onObjectCreated]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}) | trigger a function anytime an object is created in an S3 Bucket |
+| S3          | [aws.s3.Bucket.onObjectRemoved]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}) | trigger a function anytime an object is removed from an S3 Bucket |
+| S3          | [aws.s3.Bucket.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}) | trigger a function for a wide range of S3 Bucket events |
+| SNS         | [aws.sns.Topic.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}) | fire SNS Topic events when new messages arrive |
+| SQS         | [aws.sqs.Queue.onEvent]({{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
 
 There are multiple approaches to creating a Lambda function. For these examples, we will trigger the Lambda's
 execution when an S3 Bucket receives a new Object, however the manner of registering a handler is the same across
@@ -96,7 +96,7 @@ defined -- or even use functions that already exist, and simply glue them togeth
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
 without any downtime required. This is as easy to do by hand as it is in
-[CI/CD]({{< relref "/docs/guides/continuous-delivery" >}}).
+[CI/CD]({{< prelref "/docs/guides/continuous-delivery" >}}).
 
 ### Register an Event Handler Using a Magic Lambda Function
 
@@ -155,7 +155,7 @@ docsBucket.onObjectCreated("docsHandler", new aws.lambda.CallbackFunction("docsH
 ```
 
 For more information about the properties available on `CallbackFunction`, refer to the [API documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/aws/lambda#FunctionArgs" >}}).
+{{< prelref "/docs/reference/pkg/nodejs/pulumi/aws/lambda#FunctionArgs" >}}).
 
 ### Register an Event Handler by Creating a Lambda Function Resource
 
@@ -220,7 +220,7 @@ instead wanted to use a zipfile we've already packaged, just change code as foll
 // ...
 ```
 
-Using [Pulumi's Asset and Archive classes]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}), we can
+Using [Pulumi's Asset and Archive classes]({{< prelref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}), we can
 fetch code from anywhere -- in-memory, on disk, or even over the network. Pulumi will detect changes in the contents
 of these assets and archives so that when you run `pulumi up`, diffs will be detected and updated.
 
@@ -330,11 +330,11 @@ Lastly, it's possible to use Pulumi stacks to actually break apart your cloud re
 independently deployable pieces. This allows teams to leverage features like RBAC. For instance, it's common for the
 DevOps team to manage the physical cloud resources like queues, topics, and buckets, while the development team
 authors and manages the serverless functions attached to them. For more information on this idea, please see
-[Organizing Projects and Stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}})
+[Organizing Projects and Stacks]({{< prelref "/docs/intro/concepts/organizing-stacks-projects" >}})
 
 ## Easy Lambda Log Consumption
 
-[Pulumi Crosswalk for AWS CloudWatch]({{< relref "cloudwatch" >}}) ensures that resources have built-in
+[Pulumi Crosswalk for AWS CloudWatch]({{< prelref "cloudwatch" >}}) ensures that resources have built-in
 logging, with easy ways to customize associated policies. Additionally, the `pulumi logs` CLI command allows
 us to monitor logs in realtime from any CloudWatch resources in our program. For Lambda Functions, this means
 we can simply run `pulumi logs -f` to tail all of the logs for all of our Lambdas in a program.

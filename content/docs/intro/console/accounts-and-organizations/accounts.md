@@ -19,9 +19,9 @@ Your account lets you authenticate into the Pulumi Console, where you can do the
 following:
 
 * Manage your profile settings, including your account password, access tokens, and subscriptions
-* [Add an organization]({{< relref "organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
+* [Add an organization]({{< prelref "organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
   2.0-compatible identity provider, such as Active Directory, Okta, or G Suite
-* [Manage your projects and stacks]({{< relref "../collaboration/project-and-stack-management" >}})
+* [Manage your projects and stacks]({{< prelref "../collaboration/project-and-stack-management" >}})
 
 ## Profile
 
@@ -39,7 +39,7 @@ From this tab, you can:
 
 * Update your display name and Avatar URL
 * Update the email address associated with your Pulumi account
-* Add third party identities for [collaborating with other developers]({{< relref "../collaboration/organization-roles" >}})
+* Add third party identities for [collaborating with other developers]({{< prelref "../collaboration/organization-roles" >}})
 
 ### Adding New Identities{#adding-new-identities}
 
@@ -64,7 +64,7 @@ This tab lets you change your password. Note that your password must be at least
 
 This tab lets you manage the [access tokens](https://en.wikipedia.org/wiki/Access_token) used for logging into the Pulumi service. It provides a list of all the access tokens associated with your account, including a description and last used information for each token.
 
-When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Console and lets you interact with the Pulumi service and manage your stacks.
+When you run [`pulumi login`]({{< prelref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Console and lets you interact with the Pulumi service and manage your stacks.
 
 <img class="shadow-2xl lg:max-w-xl" src="/images/docs/reference/service/access-tokens.png" alt="Pulumi GitHub App">
 
@@ -80,4 +80,4 @@ This tab provides a list of Pulumi's Continuous Delivery guides. Click on your f
 
 ## Next Steps
 
-* [Organizations]({{< relref "organizations" >}})
+* [Organizations]({{< prelref "organizations" >}})

@@ -69,7 +69,7 @@ and best-practices, such as version pinning, resource tags, and control plane lo
 
 ## Identity
 
-In [Identity]({{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}) we demonstrate how to create typical IAM resources for use in Kubernetes. You'll want to create the Identity stack first.
+In [Identity]({{< prelref "/docs/guides/crosswalk/kubernetes/identity" >}}) we demonstrate how to create typical IAM resources for use in Kubernetes. You'll want to create the Identity stack first.
 
 Separation of identities is important for several reasons: it can be used to
 limit the scope of damage if a given group is compromised, can regulate the number
@@ -93,7 +93,7 @@ We configure applications and service principals using the `@pulumi/azuread` pac
 For **users**, we create an `admins` role for cluster administrators with
 root privileges, and a limited scope `devs` role for general purpose
 execution of workloads. Both roles will be tied into Kubernetes RBAC in
-[Configure Access Control]({{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}).
+[Configure Access Control]({{< prelref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}).
 
 For **worker nodes**, we create separate roles for a few typical
 classes of worker node groups: a standard pool of nodes, and a performant
@@ -103,8 +103,8 @@ Now that we have created roles for the users, we configure user identities
 using roleMappings, and map it into Kubernetes RBAC as shown in the
 [docs](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
-Pulumi provides the following interfaces to map IAM into Kubernetes: [`RoleMapping`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#RoleMapping" >}}) and
-[`UserMapping`]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#UserMapping" >}}). Below we demonstrate using a `RoleMapping`.
+Pulumi provides the following interfaces to map IAM into Kubernetes: [`RoleMapping`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/eks#RoleMapping" >}}) and
+[`UserMapping`]({{< prelref "/docs/reference/pkg/nodejs/pulumi/eks#UserMapping" >}}). Below we demonstrate using a `RoleMapping`.
 
 ```typescript
 import * as eks from "@pulumi/eks";
@@ -134,7 +134,7 @@ const cluster = new eks.Cluster(`${projectName}`, {
 For users, we create and use a ServicePrincipal for cluster administrators with
 root privileges, and a limited scope `devs` user group for general purpose
 execution of workloads. Both identities will be tied into Kubernetes RBAC in
-[Configure Access Control]({{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}).
+[Configure Access Control]({{< prelref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}).
 
 We configure the principal identities using `servicePrincipal` to create the
 cluster, and set up `roleBasedAccessControl` to manage authentication into the cluster.
@@ -168,9 +168,9 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 For users, we create and use a ServiceAccount for cluster administrators with
 root privileges, and a limited scope `devs` ServiceAccount for general purpose
 execution of workloads. Both identities will be tied into Kubernetes RBAC in
-[Configure Access Control]({{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}).
+[Configure Access Control]({{< prelref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}).
 
-By authenticating with the ServiceAccount using `gcloud`, as outlined in [Identity]({{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}), we automatically bind the ServiceAccount to be a cluster admin and no further action is required.
+By authenticating with the ServiceAccount using `gcloud`, as outlined in [Identity]({{< prelref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}), we automatically bind the ServiceAccount to be a cluster admin and no further action is required.
 
 {{% /choosable %}}
 
@@ -179,7 +179,7 @@ By authenticating with the ServiceAccount using `gcloud`, as outlined in [Identi
 #### Worker Node Groups
 
 We configure the worker identities using `instanceRoles` in the cluster.
-Later on, when we [define the node groups]({{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}), we'll use an [instance
+Later on, when we [define the node groups]({{< prelref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}), we'll use an [instance
 profile](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) of each group's role to allow them to join the
 cluster per the configuration below.
 
@@ -200,7 +200,7 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 ## Managed Infrastructure
 
-In [Managed Infrastructure]({{< relref "/docs/guides/crosswalk/kubernetes/managed-infra" >}}) we demonstrate deploying managed services
+In [Managed Infrastructure]({{< prelref "/docs/guides/crosswalk/kubernetes/managed-infra" >}}) we demonstrate deploying managed services
 and how to create or use an existing virtual network with Kubernetes.
 
 You'll want to create the Managed Infrastructure stack next, before the Cluster
@@ -237,7 +237,7 @@ and they'll typically be shielded within your VPC.
 EKS will automatically manage Kubernetes Pod networking through
 the use of the [AWS CNI Plugin](https://github.com/aws/amazon-vpc-cni-k8s/). This plugin is deployed by
 default on worker nodes as a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) named `aws-node` in all clusters
-provisioned with `pulumi/eks` and is [configurable]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#VpcCniOptions" >}}).
+provisioned with `pulumi/eks` and is [configurable]({{< prelref "/docs/reference/pkg/nodejs/pulumi/eks#VpcCniOptions" >}}).
 
 ```typescript
 import * as eks from "@pulumi/eks";
@@ -685,7 +685,7 @@ general best-practices and recommendations to configure in the cluster.
 * Tag resources under management, which makes it easier to manage, search and
   filter them.
 * Skip enabling the default node group in favor of managing them separately from
-  the control plane, as demonstrated in [Create the Worker Nodes]({{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}).
+  the control plane, as demonstrated in [Create the Worker Nodes]({{< prelref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}).
 * Enable control plane logging for diagnostics of the control
   plane's actions, and for use in debugging and auditing.
 * (Optional) Configure private accessibility of the control plane /
@@ -748,7 +748,7 @@ general best-practices and recommendations to configure in the cluster.
 
 * Enable [PodSecurityPolicies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/) using `podSecurityPolicyConfig: { enabled: true }`
 * Skip enabling the default node group in favor of managing them separately from
-  the control plane, as demonstrated in [Create the Worker Nodes]({{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}).
+  the control plane, as demonstrated in [Create the Worker Nodes]({{< prelref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}).
 * [Disable legacy metadata APIs](https://cloud.google.com/kubernetes-engine/docs/how-to/protecting-cluster-metadata#disable-legacy-apis) that are not v1 and do not enforce internal GCP metadata headers
 * Enable control plane logging and monitoring through `oauthScopes` to have diagnostics of the control
   plane's actions, and for use in debugging and auditing.

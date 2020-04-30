@@ -13,9 +13,9 @@ Atlassian identity. This also means you can connect your Atlassian
 identity with an existing Pulumi account.
 
 This work follows on from the support for
-[GitLab identity]({{< relref "welcoming-gitlab-users-to-pulumi" >}})
+[GitLab identity]({{< prelref "welcoming-gitlab-users-to-pulumi" >}})
 and also the ability to
-[connect identities]({{< relref "connecting-multiple-identities-to-pulumi" >}}),
+[connect identities]({{< prelref "connecting-multiple-identities-to-pulumi" >}}),
 eliminating the need for users to create multiple accounts on Pulumi.
 
 This helps users with repos across the major version control systems to
@@ -52,20 +52,20 @@ Team-backed organization, you can invite the same members to collaborate
 on Pulumi.
 
 This allows you to set permissions on
-[Stacks]({{< relref "/docs/intro/concepts/stack" >}}) owned by your
+[Stacks]({{< prelref "/docs/intro/concepts/stack" >}}) owned by your
 organization. You can learn more about
-[Teams & Collaboration]({{< relref "/docs/intro/console/collaboration" >}})
+[Teams & Collaboration]({{< prelref "/docs/intro/console/collaboration" >}})
 in the Pulumi and how those permissions get applied too.
 
 ## CI Integration
 
 Did you also know that the Pulumi CLI can be used in most, if not all,
 CI/CD workflows? Check out our
-[documentation]({{< relref "/docs/guides/continuous-delivery" >}}) for integrating
+[documentation]({{< prelref "/docs/guides/continuous-delivery" >}}) for integrating
 with several popular CI/CD systems. Get up and running with Pulumi in CI
-on [GitLab]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}),
-[Travis]({{< relref "/docs/guides/continuous-delivery/travis" >}}),
-[Azure DevOps]({{< relref "/docs/guides/continuous-delivery/azure-devops" >}}) and more.
+on [GitLab]({{< prelref "/docs/guides/continuous-delivery/gitlab-ci" >}}),
+[Travis]({{< prelref "/docs/guides/continuous-delivery/travis" >}}),
+[Azure DevOps]({{< prelref "/docs/guides/continuous-delivery/azure-devops" >}}) and more.
 Don't see docs for a particular CI system? Let us know or better yet
 file an issue [here](https://github.com/pulumi/docs/issues).
 

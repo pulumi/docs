@@ -3,12 +3,12 @@ title: MySQL Setup
 meta_desc: This page provides an overview on how to configure credentials for the Pulumi MySQL Provider.
 ---
 
-The [Pulumi MySQL provider]({{< relref "./" >}}) uses the MySQL SDK to manage and provision resources.
+The [Pulumi MySQL provider]({{< prelref "./" >}}) uses the MySQL SDK to manage and provision resources.
 
 > Pulumi relies on the MySQL SDK to authenticate requests from your computer to MySQL. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi MySQL Provider]({{< relref "./" >}}) needs to be configured with MySQL credentials
+The [Pulumi MySQL Provider]({{< prelref "./" >}}) needs to be configured with MySQL credentials
 before it can be used to manage resources.
 
 ### Configuring Credentials

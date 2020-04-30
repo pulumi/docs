@@ -4,11 +4,11 @@ meta_desc: This page provides an overview on how to setup the Linode SDK for Pul
 aliases: ["/docs/reference/clouds/linode/setup/"]
 ---
 
-The [Pulumi Linode provider]({{< relref "./" >}}) uses the Linode SDK to manage and provision resources.
+The [Pulumi Linode provider]({{< prelref "./" >}}) uses the Linode SDK to manage and provision resources.
 
 > Pulumi relies on the Linode SDK to authenticate requests from your computer to Linode. Your credentials are never sent
 > to pulumi.com.
-The [Pulumi Linode Provider]({{< relref "./" >}}) needs to be configured with Linode credentials
+The [Pulumi Linode Provider]({{< prelref "./" >}}) needs to be configured with Linode credentials
 before it can be used to create resources.
 
 ### Configuring Credentials

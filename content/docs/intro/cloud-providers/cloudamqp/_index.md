@@ -15,7 +15,7 @@ The CloudAMQP provider must be configured with credentials to deploy and update 
 
 ## Setup
 
-The CloudAMQP provider supports several options for providing access to CloudAMQP credentials.  See the [CloudAMQP setup page]({{< relref "setup" >}}) for details.
+The CloudAMQP provider supports several options for providing access to CloudAMQP credentials.  See the [CloudAMQP setup page]({{< prelref "setup" >}}) for details.
 
 ## Example
 

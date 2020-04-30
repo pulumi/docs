@@ -12,28 +12,28 @@ aliases: [/docs/reference/commands/]
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service
 to deploy changes to your cloud apps and infrastructure.  It keeps a history of who updated what in your team and when.
 This CLI has been designed for great inner loop productivity, in addition to
-[continuous integration and delivery]({{< relref "/docs/guides/continuous-delivery" >}}) scenarios.
+[continuous integration and delivery]({{< prelref "/docs/guides/continuous-delivery" >}}) scenarios.
 
 ## Installation
 
 The Pulumi CLI is free to download and install:
 
-<a class="btn" href="{{< relref "/docs/get-started/install" >}}">INSTALL PULUMI</a>
+<a class="btn" href="{{< prelref "/docs/get-started/install" >}}">INSTALL PULUMI</a>
 
 ## Common Commands
 
 The most common commands in the CLI that you'll be using are as follows:
 
-* [`pulumi new`]({{< relref "pulumi_new" >}}): creates a new project using a template
-* [`pulumi stack`]({{< relref "pulumi_stack" >}}): manage your stacks (at least one is required to perform an update)
-* [`pulumi config`]({{< relref "pulumi_config" >}}): configure variables such as keys, regions, and so on
-* [`pulumi up`]({{< relref "pulumi_up" >}}): preview and deploy changes to your program and/or infrastructure
-* [`pulumi preview`]({{< relref "pulumi_preview" >}}): preview your changes explicitly before deploying
-* [`pulumi destroy`]({{< relref "pulumi_destroy" >}}): destroy your program and its infrastructure when you're done
+* [`pulumi new`]({{< prelref "pulumi_new" >}}): creates a new project using a template
+* [`pulumi stack`]({{< prelref "pulumi_stack" >}}): manage your stacks (at least one is required to perform an update)
+* [`pulumi config`]({{< prelref "pulumi_config" >}}): configure variables such as keys, regions, and so on
+* [`pulumi up`]({{< prelref "pulumi_up" >}}): preview and deploy changes to your program and/or infrastructure
+* [`pulumi preview`]({{< prelref "pulumi_preview" >}}): preview your changes explicitly before deploying
+* [`pulumi destroy`]({{< prelref "pulumi_destroy" >}}): destroy your program and its infrastructure when you're done
 
 ## Environment Variables
 
-For a list of environment variables that you can use to work with the Pulumi CLI, see [Environment Variables]({{< relref "/docs/reference/cli/environment-variables" >}}).
+For a list of environment variables that you can use to work with the Pulumi CLI, see [Environment Variables]({{< prelref "/docs/reference/cli/environment-variables" >}}).
 
 ## Complete Reference
 
