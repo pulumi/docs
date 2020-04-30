@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.bigquery"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.bigquery"></span><dl class="py class">
 <dt id="pulumi_gcp.bigquery.AppProfile">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AppProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_profile_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ignore_warnings=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">multi_cluster_routing_use_any=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">single_cluster_routing=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AppProfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_profile_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_warnings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_cluster_routing_use_any</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_cluster_routing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -41,55 +41,55 @@ If it is not provided, the provider project is used.</p></li>
 It is unsafe to send these requests to the same table/row/column in multiple clusters.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The cluster to which read/write requests should be routed.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.app_profile_id">
-<code class="sig-name descname">app_profile_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.app_profile_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">app_profile_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.app_profile_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique name of the app profile in the form <code class="docutils literal notranslate"><span class="pre">[_a-zA-Z0-9][-_.a-zA-Z0-9]*</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Long form description of the use case for this app profile.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.ignore_warnings">
-<code class="sig-name descname">ignore_warnings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.ignore_warnings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ignore_warnings</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.ignore_warnings" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, ignore safety checks when deleting/updating the app profile.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.instance">
-<code class="sig-name descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.instance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the instance to create the app profile within.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any">
-<code class="sig-name descname">multi_cluster_routing_use_any</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">multi_cluster_routing_use_any</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.multi_cluster_routing_use_any" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique name of the requested app profile. Values are of the form
 ‘projects/<span class="raw-html-m2r"><project></span>/instances/<span class="raw-html-m2r"><instance></span>/appProfiles/<span class="raw-html-m2r"><appProfileId></span>’.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.AppProfile.single_cluster_routing">
-<code class="sig-name descname">single_cluster_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.single_cluster_routing" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">single_cluster_routing</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.single_cluster_routing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use a single-cluster routing policy.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowTransactionalWrites</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
@@ -98,9 +98,9 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.AppProfile.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_profile_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ignore_warnings=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">multi_cluster_routing_use_any=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">single_cluster_routing=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">app_profile_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_warnings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_cluster_routing_use_any</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">single_cluster_routing</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AppProfile resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -132,9 +132,9 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.AppProfile.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -150,9 +150,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.AppProfile.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AppProfile.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -170,14 +170,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AwaitableGetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">AwaitableGetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.AwaitableGetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DataTransferConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_refresh_window_days=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">destination_dataset_id=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DataTransferConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_refresh_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a data transfer configuration. A transfer configuration
 contains all metadata needed to perform a data transfer.</p>
 <p>To get more information about Config, see:</p>
@@ -219,9 +219,9 @@ NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days">
-<code class="sig-name descname">data_refresh_window_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_refresh_window_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_refresh_window_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
@@ -229,61 +229,61 @@ just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.data_source_id">
-<code class="sig-name descname">data_source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_source_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_source_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.data_source_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The data source id. Cannot be changed once the transfer config is created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.destination_dataset_id">
-<code class="sig-name descname">destination_dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.destination_dataset_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">destination_dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.destination_dataset_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The BigQuery target dataset id.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.disabled">
-<code class="sig-name descname">disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.disabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.disabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>When set to true, no runs are scheduled for a given transfer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.display_name">
-<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.display_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user specified display name for the transfer config.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.params">
-<code class="sig-name descname">params</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.params" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">params</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.params" title="Permalink to this definition">¶</a></dt>
 <dd><p>These parameters are specific to each data source.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.schedule">
-<code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.schedule" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">schedule</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Data transfer schedule. If the data source does not support a custom
 schedule, this should be empty. If it is empty, the default value for
 the data source will be used. The specified times are in UTC. Examples
@@ -294,9 +294,9 @@ about the format here:
 NOTE: the granularity should be at least 8 hours, or less frequent.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_refresh_window_days=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">destination_dataset_id=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_refresh_window_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_source_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedule</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DataTransferConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -335,9 +335,9 @@ NOTE: the granularity should be at least 8 hours, or less frequent.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -353,9 +353,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.DataTransferConfig.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DataTransferConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -373,9 +373,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.Dataset">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_encryption_configuration=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_partition_expiration_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_contents_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Datasets allow you to organize and control access to your tables.</p>
 <p>To get more information about Dataset, see:</p>
 <ul class="simple">
@@ -448,9 +448,9 @@ is 1,024 characters.</p></li>
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.accesses">
-<code class="sig-name descname">accesses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.accesses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">accesses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.accesses" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of objects that define dataset access for one or more entities.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A domain to grant access to. Any users signed in with the
@@ -481,21 +481,21 @@ is 1,024 characters.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.creation_time">
-<code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.creation_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creation_time</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.creation_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time when this dataset was created, in milliseconds since the epoch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.dataset_id">
-<code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.dataset_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.dataset_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the dataset containing this table.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.default_encryption_configuration">
-<code class="sig-name descname">default_encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_encryption_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_encryption_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_encryption_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.  Structure is documented below.</p>
@@ -506,82 +506,82 @@ access to this encryption key.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms">
-<code class="sig-name descname">default_partition_expiration_ms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_partition_expiration_ms</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_partition_expiration_ms" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.default_table_expiration_ms">
-<code class="sig-name descname">default_table_expiration_ms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_table_expiration_ms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_table_expiration_ms</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.default_table_expiration_ms" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.delete_contents_on_destroy">
-<code class="sig-name descname">delete_contents_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.delete_contents_on_destroy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_contents_on_destroy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.delete_contents_on_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A user-friendly description of the dataset</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.etag">
-<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.etag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.etag" title="Permalink to this definition">¶</a></dt>
 <dd><p>A hash of the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.friendly_name">
-<code class="sig-name descname">friendly_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.friendly_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">friendly_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.friendly_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A descriptive name for the dataset</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>The labels associated with this dataset. You can use these to
 organize and group your datasets</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.last_modified_time">
-<code class="sig-name descname">last_modified_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.last_modified_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">last_modified_time</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.last_modified_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The geographic location where the dataset should reside.
 See <a class="reference external" href="https://cloud.google.com/bigquery/docs/dataset-locations">official docs</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Dataset.self_link">
-<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.self_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">self_link</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Dataset.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_encryption_configuration=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accesses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_partition_expiration_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_table_expiration_ms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_contents_on_destroy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_modified_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Dataset resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -654,9 +654,9 @@ access to this encryption key.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Dataset.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -672,9 +672,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Dataset.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -692,9 +692,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.DatasetAccess">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DatasetAccess</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">group_by_email=None</em>, <em class="sig-param">iam_member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">special_group=None</em>, <em class="sig-param">user_by_email=None</em>, <em class="sig-param">view=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">DatasetAccess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_by_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">special_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_by_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">view</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives dataset access for a single entity. This resource is intended to be used in cases where
 it is not possible to compile a full list of access blocks to include in a
 <code class="docutils literal notranslate"><span class="pre">bigquery.Dataset</span></code> resource, to enable them to be added separately.</p>
@@ -751,42 +751,42 @@ needs to be granted again via an update operation.  Structure is documented belo
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.dataset_id">
-<code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.dataset_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.dataset_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the dataset containing this table.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.domain">
-<code class="sig-name descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">domain</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.group_by_email">
-<code class="sig-name descname">group_by_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.group_by_email" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">group_by_email</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.group_by_email" title="Permalink to this definition">¶</a></dt>
 <dd><p>An email address of a Google Group to grant access to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.iam_member">
-<code class="sig-name descname">iam_member</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.iam_member" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iam_member</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.iam_member" title="Permalink to this definition">¶</a></dt>
 <dd><p>Some other type of member that appears in the IAM Policy but isn’t a user,
 group, domain, or special group. For example: <code class="docutils literal notranslate"><span class="pre">allUsers</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the rights granted to the user specified by the other
 member of the access object. Primitive, Predefined and custom
 roles are supported. Predefined roles that have equivalent
@@ -795,22 +795,22 @@ counterparts, and will show a diff post-create. See
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/access-control">official docs</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.special_group">
-<code class="sig-name descname">special_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.special_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">special_group</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.special_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>A special group to grant access to. Possible values include:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.user_by_email">
-<code class="sig-name descname">user_by_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.user_by_email" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_by_email</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.user_by_email" title="Permalink to this definition">¶</a></dt>
 <dd><p>An email address of a user to grant access to. For example:
 <a class="reference external" href="mailto:fred&#37;&#52;&#48;example&#46;com">fred<span>&#64;</span>example<span>&#46;</span>com</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.view">
-<code class="sig-name descname">view</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.view" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">view</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.view" title="Permalink to this definition">¶</a></dt>
 <dd><p>A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
@@ -825,9 +825,9 @@ is 1,024 characters.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">group_by_email=None</em>, <em class="sig-param">iam_member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">special_group=None</em>, <em class="sig-param">user_by_email=None</em>, <em class="sig-param">view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_by_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_member</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">special_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_by_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">view</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatasetAccess resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -872,9 +872,9 @@ is 1,024 characters.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -890,9 +890,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.DatasetAccess.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.DatasetAccess.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -910,18 +910,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">GetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">GetDefaultServiceAccountResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDefaultServiceAccount.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult.email">
 <code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult.email" title="Permalink to this definition">¶</a></dt>
 <dd><p>The email address of the service account. This value is often used to refer to the service account
 in order to grant IAM permissions.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.GetDefaultServiceAccountResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.GetDefaultServiceAccountResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
@@ -929,9 +929,9 @@ in order to grant IAM permissions.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.Reservation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Reservation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ignore_idle_slots=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">slot_capacity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Reservation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_idle_slots</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slot_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A reservation is a mechanism used to guarantee BigQuery slots to users.</p>
 <p>To get more information about Reservation, see:</p>
 <ul class="simple">
@@ -960,44 +960,44 @@ unit of parallelism. Queries using this reservation might use more slots during 
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.ignore_idle_slots">
-<code class="sig-name descname">ignore_idle_slots</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.ignore_idle_slots" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ignore_idle_slots</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.ignore_idle_slots" title="Permalink to this definition">¶</a></dt>
 <dd><p>If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the reservation. This field must only contain alphanumeric characters or dash.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Reservation.slot_capacity">
-<code class="sig-name descname">slot_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.slot_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">slot_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.slot_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Reservation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ignore_idle_slots=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">slot_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_idle_slots</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">slot_capacity</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Reservation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1021,9 +1021,9 @@ unit of parallelism. Queries using this reservation might use more slots during 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Reservation.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1039,9 +1039,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Reservation.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Reservation.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1059,9 +1059,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_gcp.bigquery.Table">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusterings=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">external_data_configuration=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">range_partitioning=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">table_id=None</em>, <em class="sig-param">time_partitioning=None</em>, <em class="sig-param">view=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clusterings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_data_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">range_partitioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_partitioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">view</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">API</a>.</p>
@@ -1208,36 +1208,36 @@ one partition per day based on data loading time.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useLegacySql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to use BigQuery’s legacy SQL for this view.
 The default value is true. If set to false, the view will use BigQuery’s standard SQL.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.clusterings">
-<code class="sig-name descname">clusterings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.clusterings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clusterings</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.clusterings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
 descending priority order.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.creation_time">
-<code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.creation_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creation_time</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.creation_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time when this table was created, in milliseconds since the epoch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.dataset_id">
-<code class="sig-name descname">dataset_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.dataset_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dataset_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.dataset_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The dataset ID to create the table in.
 Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The field description.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.encryption_configuration">
-<code class="sig-name descname">encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.encryption_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">encryption_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.encryption_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
 is transparent to the user.  Structure is documented below.</p>
@@ -1250,24 +1250,24 @@ encrypt/decrypt permissions on this key - you may want to see the
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.etag">
-<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.etag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.etag" title="Permalink to this definition">¶</a></dt>
 <dd><p>A hash of the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.expiration_time">
-<code class="sig-name descname">expiration_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.expiration_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">expiration_time</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.expiration_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
 indefinitely. Expired tables will be deleted and their storage
 reclaimed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.external_data_configuration">
-<code class="sig-name descname">external_data_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.external_data_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">external_data_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.external_data_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
 By defining these properties, the data source can then be queried as
@@ -1329,58 +1329,58 @@ your data in Google Cloud.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.friendly_name">
-<code class="sig-name descname">friendly_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.friendly_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">friendly_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.friendly_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A descriptive name for the table.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of labels to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.last_modified_time">
-<code class="sig-name descname">last_modified_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.last_modified_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">last_modified_time</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.last_modified_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time when this table was last modified, in milliseconds since the epoch.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The geographic location where the table resides. This value is inherited from the dataset.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.num_bytes">
-<code class="sig-name descname">num_bytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.num_bytes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">num_bytes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.num_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of this table in bytes, excluding any data in the streaming buffer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.num_long_term_bytes">
-<code class="sig-name descname">num_long_term_bytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.num_long_term_bytes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">num_long_term_bytes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.num_long_term_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of bytes in the table that are considered “long-term storage”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.num_rows">
-<code class="sig-name descname">num_rows</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.num_rows" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">num_rows</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.num_rows" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of rows of data in this table, excluding any data in the streaming buffer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.range_partitioning">
-<code class="sig-name descname">range_partitioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.range_partitioning" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">range_partitioning</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.range_partitioning" title="Permalink to this definition">¶</a></dt>
 <dd><p>If specified, configures range-based
 partitioning for this table. Structure is documented below.</p>
 <ul class="simple">
@@ -1397,9 +1397,9 @@ Structure is documented below.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.schema">
-<code class="sig-name descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.schema" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">schema</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>A JSON schema for the table. Schema is required
 for CSV and JSON formats and is disallowed for Google Cloud
 Bigtable, Cloud Datastore backups, and Avro formats when using
@@ -1413,22 +1413,22 @@ field type, we currently cannot suppress the recurring diff this causes.
 As a workaround, we recommend using the schema as returned by the API.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.self_link">
-<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.self_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">self_link</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.table_id">
-<code class="sig-name descname">table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.table_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">table_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique ID for the resource.
 Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.time_partitioning">
-<code class="sig-name descname">time_partitioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.time_partitioning" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">time_partitioning</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.time_partitioning" title="Permalink to this definition">¶</a></dt>
 <dd><p>If specified, configures time-based
 partitioning for this table. Structure is documented below.</p>
 <ul class="simple">
@@ -1444,16 +1444,16 @@ one partition per day based on data loading time.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The only type supported is DAY, which will generate
 one partition per day based on data loading time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.bigquery.Table.view">
-<code class="sig-name descname">view</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.view" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">view</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.view" title="Permalink to this definition">¶</a></dt>
 <dd><p>If specified, configures this table as a view.
 Structure is documented below.</p>
 <ul class="simple">
@@ -1463,9 +1463,9 @@ The default value is true. If set to false, the view will use BigQuery’s stand
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Table.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusterings=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">external_data_configuration=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">num_bytes=None</em>, <em class="sig-param">num_long_term_bytes=None</em>, <em class="sig-param">num_rows=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">range_partitioning=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">table_id=None</em>, <em class="sig-param">time_partitioning=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clusterings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dataset_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_data_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_modified_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_long_term_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_rows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">range_partitioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">self_link</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">table_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_partitioning</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">view</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Table resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1625,9 +1625,9 @@ The default value is true. If set to false, the view will use BigQuery’s stand
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Table.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1643,9 +1643,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.bigquery.Table.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1663,9 +1663,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_gcp.bigquery.get_default_service_account">
-<code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">get_default_service_account</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.get_default_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">get_default_service_account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.get_default_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the email address of a project’s unique BigQuery service account.</p>
 <p>Each Google Cloud project has a unique service account used by BigQuery. When using
 BigQuery with <a class="reference external" href="https://cloud.google.com/bigquery/docs/customer-managed-encryption">customer-managed encryption keys</a>,

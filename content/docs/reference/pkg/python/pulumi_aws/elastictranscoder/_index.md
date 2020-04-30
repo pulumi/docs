@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.elastictranscoder"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.elastictranscoder"></span><dl class="py class">
 <dt id="pulumi_aws.elastictranscoder.Pipeline">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aws_kms_key_arn=None</em>, <em class="sig-param">content_config=None</em>, <em class="sig-param">content_config_permissions=None</em>, <em class="sig-param">input_bucket=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_bucket=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">thumbnail_config=None</em>, <em class="sig-param">thumbnail_config_permissions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_config_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnail_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnail_config_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder pipeline resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -64,15 +64,15 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">grantee</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS user or group that you want to have access to thumbnail files.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">granteeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify the type of value that appears in the <code class="docutils literal notranslate"><span class="pre">thumbnail_config_permissions.grantee</span></code> object.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.aws_kms_key_arn">
-<code class="sig-name descname">aws_kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.aws_kms_key_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aws_kms_key_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.aws_kms_key_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.content_config">
-<code class="sig-name descname">content_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.content_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">content_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.content_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</p></li>
@@ -80,9 +80,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.content_config_permissions">
-<code class="sig-name descname">content_config_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.content_config_permissions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">content_config_permissions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.content_config_permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The permissions for the <code class="docutils literal notranslate"><span class="pre">content_config</span></code> object. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">accesses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The permission that you want to give to the AWS user that you specified in <code class="docutils literal notranslate"><span class="pre">content_config_permissions.grantee</span></code></p></li>
@@ -91,21 +91,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.input_bucket">
-<code class="sig-name descname">input_bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.input_bucket" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">input_bucket</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.input_bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the pipeline. Maximum 40 characters</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.notifications">
-<code class="sig-name descname">notifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.notifications" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notifications</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.notifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">completed</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.</p></li>
@@ -115,21 +115,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.output_bucket">
-<code class="sig-name descname">output_bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.output_bucket" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">output_bucket</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.output_bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.thumbnail_config">
-<code class="sig-name descname">thumbnail_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.thumbnail_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">thumbnail_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.thumbnail_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.</p></li>
@@ -137,9 +137,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.thumbnail_config_permissions">
-<code class="sig-name descname">thumbnail_config_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.thumbnail_config_permissions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">thumbnail_config_permissions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.thumbnail_config_permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The permissions for the <code class="docutils literal notranslate"><span class="pre">thumbnail_config</span></code> object. (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">accesses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The permission that you want to give to the AWS user that you specified in <code class="docutils literal notranslate"><span class="pre">thumbnail_config_permissions.grantee</span></code>.</p></li>
@@ -148,9 +148,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">aws_kms_key_arn=None</em>, <em class="sig-param">content_config=None</em>, <em class="sig-param">content_config_permissions=None</em>, <em class="sig-param">input_bucket=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">output_bucket=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">thumbnail_config=None</em>, <em class="sig-param">thumbnail_config_permissions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aws_kms_key_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_config_permissions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnail_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnail_config_permissions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Pipeline resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -203,9 +203,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -221,9 +221,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.elastictranscoder.Pipeline.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -241,9 +241,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.elastictranscoder.Preset">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Preset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audio=None</em>, <em class="sig-param">audio_codec_options=None</em>, <em class="sig-param">container=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">thumbnails=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">video=None</em>, <em class="sig-param">video_codec_options=None</em>, <em class="sig-param">video_watermarks=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elastictranscoder.</code><code class="sig-name descname">Preset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audio_codec_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video_codec_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video_watermarks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder preset resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -317,9 +317,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalAlign</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The vertical position of the watermark unless you specify a nonzero value for <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">Top</span></code>, <code class="docutils literal notranslate"><span class="pre">Bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">Center</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verticalOffset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The amount by which you want the vertical position of the watermark to be offset from the position specified by <code class="docutils literal notranslate"><span class="pre">vertical_align</span></code></p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.audio">
-<code class="sig-name descname">audio</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.audio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">audio</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.audio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Audio parameters object (documented below).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audioPackingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.</p></li>
@@ -330,9 +330,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.audio_codec_options">
-<code class="sig-name descname">audio_codec_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.audio_codec_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">audio_codec_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.audio_codec_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Codec options for the audio parameters (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bitDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are <code class="docutils literal notranslate"><span class="pre">16</span></code> and <code class="docutils literal notranslate"><span class="pre">24</span></code>. (FLAC/PCM Only)</p></li>
@@ -342,27 +342,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.container">
-<code class="sig-name descname">container</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.container" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">container</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.container" title="Permalink to this definition">¶</a></dt>
 <dd><p>The container type for the output file. Valid values are <code class="docutils literal notranslate"><span class="pre">flac</span></code>, <code class="docutils literal notranslate"><span class="pre">flv</span></code>, <code class="docutils literal notranslate"><span class="pre">fmp4</span></code>, <code class="docutils literal notranslate"><span class="pre">gif</span></code>, <code class="docutils literal notranslate"><span class="pre">mp3</span></code>, <code class="docutils literal notranslate"><span class="pre">mp4</span></code>, <code class="docutils literal notranslate"><span class="pre">mpg</span></code>, <code class="docutils literal notranslate"><span class="pre">mxf</span></code>, <code class="docutils literal notranslate"><span class="pre">oga</span></code>, <code class="docutils literal notranslate"><span class="pre">ogg</span></code>, <code class="docutils literal notranslate"><span class="pre">ts</span></code>, and <code class="docutils literal notranslate"><span class="pre">webm</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the preset (maximum 255 characters)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the preset. (maximum 40 characters)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.thumbnails">
-<code class="sig-name descname">thumbnails</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.thumbnails" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">thumbnails</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.thumbnails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thumbnail parameters object (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">aspectRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9</p></li>
@@ -376,9 +376,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.video">
-<code class="sig-name descname">video</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">video</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Video parameters object (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">aspectRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display aspect ratio of the video in the output file. Valid values are: <code class="docutils literal notranslate"><span class="pre">auto</span></code>, <code class="docutils literal notranslate"><span class="pre">1:1</span></code>, <code class="docutils literal notranslate"><span class="pre">4:3</span></code>, <code class="docutils literal notranslate"><span class="pre">3:2</span></code>, <code class="docutils literal notranslate"><span class="pre">16:9</span></code>. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values <code class="docutils literal notranslate"><span class="pre">max_width</span></code>, <code class="docutils literal notranslate"><span class="pre">max_height</span></code>, <code class="docutils literal notranslate"><span class="pre">sizing_policy</span></code>, <code class="docutils literal notranslate"><span class="pre">padding_policy</span></code>, and <code class="docutils literal notranslate"><span class="pre">display_aspect_ratio</span></code> instead of <code class="docutils literal notranslate"><span class="pre">resolution</span></code> and <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code>.)</p></li>
@@ -397,15 +397,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.video_codec_options">
-<code class="sig-name descname">video_codec_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video_codec_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">video_codec_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video_codec_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Codec options for the video parameters</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.video_watermarks">
-<code class="sig-name descname">video_watermarks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video_watermarks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">video_watermarks</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.video_watermarks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Watermark parameters for the video parameters (documented below)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">horizontalAlign</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The horizontal position of the watermark unless you specify a nonzero value for <code class="docutils literal notranslate"><span class="pre">horzontal_offset</span></code>.</p></li>
@@ -421,9 +421,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.elastictranscoder.Preset.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">audio=None</em>, <em class="sig-param">audio_codec_options=None</em>, <em class="sig-param">container=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">thumbnails=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">video=None</em>, <em class="sig-param">video_codec_options=None</em>, <em class="sig-param">video_watermarks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">audio_codec_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thumbnails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video_codec_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">video_watermarks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Preset resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -501,9 +501,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.elastictranscoder.Preset.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -519,9 +519,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.elastictranscoder.Preset.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

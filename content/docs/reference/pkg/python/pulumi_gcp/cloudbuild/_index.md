@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_gcp.cloudbuild"></span><dl class="class">
+<span class="target" id="module-pulumi_gcp.cloudbuild"></span><dl class="py class">
 <dt id="pulumi_gcp.cloudbuild.Trigger">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudbuild.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">github=None</em>, <em class="sig-param">ignored_files=None</em>, <em class="sig-param">included_files=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">substitutions=None</em>, <em class="sig-param">trigger_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudbuild.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">github</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignored_files</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">included_files</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">substitutions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trigger_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for an automated build in response to source repository changes.</p>
 <p>To get more information about Trigger, see:</p>
 <ul class="simple">
@@ -179,9 +179,9 @@ omitted, the project ID requesting the build is assumed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tagName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
 This field is a regular expression.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.build">
-<code class="sig-name descname">build</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.build" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">build</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">images</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of images to be pushed upon the successful completion of all build steps.
@@ -256,33 +256,33 @@ completes or the build itself times out.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.create_time">
-<code class="sig-name descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.create_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.create_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time when the trigger was created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Human-readable description of the trigger.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.disabled">
-<code class="sig-name descname">disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.disabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.disabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the trigger is disabled or not. If true, the trigger will never result in a build.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.filename">
-<code class="sig-name descname">filename</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.filename" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">filename</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.filename" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.github">
-<code class="sig-name descname">github</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.github" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">github</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.github" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of <code class="docutils literal notranslate"><span class="pre">trigger_template</span></code> or <code class="docutils literal notranslate"><span class="pre">github</span></code> must be provided.  Structure is documented below.</p>
 <ul class="simple">
@@ -306,9 +306,9 @@ Docker volumes. Each named volume must be used by at least two build steps.</p><
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.ignored_files">
-<code class="sig-name descname">ignored_files</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.ignored_files" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ignored_files</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.ignored_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a>
 extended with support for <code class="docutils literal notranslate"><span class="pre">**</span></code>.
 If ignoredFiles and changed files are both empty, then they are not
@@ -318,9 +318,9 @@ of the ignored_file globs. If the change has no files that are outside
 of the ignoredFiles globs, then we do not trigger a build.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.included_files">
-<code class="sig-name descname">included_files</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.included_files" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">included_files</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.included_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>ignoredFiles and includedFiles are file glob matches using <a class="reference external" href="https://golang.org/pkg/path/filepath/#Match">https://golang.org/pkg/path/filepath/#Match</a>
 extended with support for <code class="docutils literal notranslate"><span class="pre">**</span></code>.
 If any of the files altered in the commit pass the ignoredFiles filter
@@ -332,36 +332,36 @@ those files matches a includedFiles glob. If not, then we do not trigger
 a build.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for
 Docker volumes. Each named volume must be used by at least two build steps.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.substitutions">
-<code class="sig-name descname">substitutions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.substitutions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">substitutions</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.substitutions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Substitutions data for Build resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.trigger_id">
-<code class="sig-name descname">trigger_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.trigger_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">trigger_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.trigger_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique identifier for the trigger.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.trigger_template">
-<code class="sig-name descname">trigger_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.trigger_template" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">trigger_template</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.trigger_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
@@ -388,9 +388,9 @@ This field is a regular expression.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.cloudbuild.Trigger.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build=None</em>, <em class="sig-param">create_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">github=None</em>, <em class="sig-param">ignored_files=None</em>, <em class="sig-param">included_files=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">substitutions=None</em>, <em class="sig-param">trigger_id=None</em>, <em class="sig-param">trigger_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">build</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">github</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignored_files</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">included_files</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">substitutions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trigger_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trigger_template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Trigger resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -551,9 +551,9 @@ This field is a regular expression.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.cloudbuild.Trigger.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -569,9 +569,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_gcp.cloudbuild.Trigger.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

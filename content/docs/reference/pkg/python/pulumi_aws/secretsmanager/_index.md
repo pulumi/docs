@@ -13,69 +13,69 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.secretsmanager"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.secretsmanager"></span><dl class="py class">
 <dt id="pulumi_aws.secretsmanager.AwaitableGetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">rotation_enabled=None</em>, <em class="sig-param">rotation_lambda_arn=None</em>, <em class="sig-param">rotation_rules=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_lambda_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.secretsmanager.AwaitableGetSecretVersionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">AwaitableGetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">secret_binary=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">secret_string=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">version_stage=None</em>, <em class="sig-param">version_stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.AwaitableGetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">AwaitableGetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_binary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stages</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.AwaitableGetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">rotation_enabled=None</em>, <em class="sig-param">rotation_lambda_arn=None</em>, <em class="sig-param">rotation_rules=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">GetSecretResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_lambda_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.kms_key_id">
 <code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.policy">
 <code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource-based policy document that’s attached to the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.rotation_enabled">
 <code class="sig-name descname">rotation_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.rotation_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether rotation is enabled or not.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.rotation_lambda_arn">
 <code class="sig-name descname">rotation_lambda_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.rotation_lambda_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.rotation_rules">
 <code class="sig-name descname">rotation_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.rotation_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotation rules if rotation is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tags of the secret.</p>
@@ -83,35 +83,35 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">GetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">secret_binary=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">secret_string=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">version_stage=None</em>, <em class="sig-param">version_stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">GetSecretVersionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_binary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stages</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecretVersion.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult.secret_binary">
 <code class="sig-name descname">secret_binary</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult.secret_binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult.secret_string">
 <code class="sig-name descname">secret_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult.secret_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>The decrypted part of the protected secret information that was originally provided as a string.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult.version_id">
 <code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult.version_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique identifier of this version of the secret.</p>
@@ -119,9 +119,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.secretsmanager.Secret">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">recovery_window_in_days=None</em>, <em class="sig-param">rotation_lambda_arn=None</em>, <em class="sig-param">rotation_rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_lambda_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the <cite>``secretsmanager.SecretVersion`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html</a>&gt;`_.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -145,78 +145,78 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticallyAfterDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days between automatic scheduled rotations of the secret.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.kms_key_id">
-<code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_key_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don’t specify this value, then Secrets Manager defaults to using the AWS account’s default CMK (the one named <code class="docutils literal notranslate"><span class="pre">aws/secretsmanager</span></code>). If the default KMS CMK with that name doesn’t yet exist, then AWS Secrets Manager creates it for you automatically the first time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: <code class="docutils literal notranslate"><span class="pre">/_+=.&#64;-</span></code> Conflicts with <code class="docutils literal notranslate"><span class="pre">name_prefix</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.name_prefix">
-<code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.name_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A valid JSON document representing a <a class="reference external" href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">resource policy</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.recovery_window_in_days">
-<code class="sig-name descname">recovery_window_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.recovery_window_in_days" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recovery_window_in_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.recovery_window_in_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be <code class="docutils literal notranslate"><span class="pre">0</span></code> to force deletion without recovery or range from <code class="docutils literal notranslate"><span class="pre">7</span></code> to <code class="docutils literal notranslate"><span class="pre">30</span></code> days. The default value is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.rotation_enabled">
-<code class="sig-name descname">rotation_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.rotation_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotation_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.rotation_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether automatic rotation is enabled for this secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.rotation_lambda_arn">
-<code class="sig-name descname">rotation_lambda_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.rotation_lambda_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotation_lambda_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.rotation_lambda_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ARN of the Lambda function that can rotate the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.rotation_rules">
-<code class="sig-name descname">rotation_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.rotation_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotation_rules</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.rotation_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A structure that defines the rotation configuration for this secret. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automaticallyAfterDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days between automatic scheduled rotations of the secret.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.Secret.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a key-value map of user-defined tags that are attached to the secret.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.secretsmanager.Secret.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">recovery_window_in_days=None</em>, <em class="sig-param">rotation_enabled=None</em>, <em class="sig-param">rotation_lambda_arn=None</em>, <em class="sig-param">rotation_rules=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">recovery_window_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_lambda_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rotation_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Secret resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -246,9 +246,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.secretsmanager.Secret.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -264,9 +264,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.secretsmanager.Secret.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -284,9 +284,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.secretsmanager.SecretVersion">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">SecretVersion</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">secret_binary=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">secret_string=None</em>, <em class="sig-param">version_stages=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">SecretVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_binary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stages</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Secrets Manager secret version including its secret value. To manage secret metadata, see the <cite>``secretsmanager.Secret`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html</a>&gt;`_.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If the <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> staging label is present on this version during resource deletion, that label cannot be removed and will be skipped to prevent errors when fully deleting the secret. That label will leave this secret version active even after the resource is deleted from this provider unless the secret itself is deleted. Move the <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> staging label before or after deleting this resource from this provider to fully trigger version deprecation if necessary.</p>
@@ -303,45 +303,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.secret_binary">
-<code class="sig-name descname">secret_binary</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.secret_binary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">secret_binary</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.secret_binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.secret_id">
-<code class="sig-name descname">secret_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.secret_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">secret_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.secret_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.secret_string">
-<code class="sig-name descname">secret_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.secret_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">secret_string</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.secret_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.version_id">
-<code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.version_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.version_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique identifier of the version of the secret.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.version_stages">
-<code class="sig-name descname">version_stages</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.version_stages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version_stages</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.version_stages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that’s already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label <code class="docutils literal notranslate"><span class="pre">AWSCURRENT</span></code> to this new version on creation.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">secret_binary=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">secret_string=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">version_stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_binary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stages</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecretVersion resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -361,9 +361,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -379,9 +379,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.secretsmanager.SecretVersion.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -399,9 +399,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.secretsmanager.get_secret">
-<code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the <cite>``secretsmanager.SecretVersion`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html</a>&gt;`_.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -413,9 +413,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.secretsmanager.get_secret_version">
-<code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param">secret_id=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">version_stage=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.secretsmanager.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_stage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the <cite>``secretsmanager.Secret`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html</a>&gt;`_.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -7,9 +7,9 @@ notitle: true
 
 <div class="section" id="module-pulumi_kubernetes.discovery.v1beta1">
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.discovery.v1beta1" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.discovery.v1beta1.</code><code class="sig-name descname">EndpointSlice</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_type=None</em>, <em class="sig-param">endpoints=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.discovery.v1beta1.</code><code class="sig-name descname">EndpointSlice</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice" title="Permalink to this definition">¶</a></dt>
 <dd><p>EndpointSlice represents a subset of the endpoints that implement a service. For a given service
 there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce
 the full set of endpoints.</p>
@@ -34,25 +34,25 @@ ports”. Each slice may include a maximum of 100 ports.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.apiVersion">
-<code class="sig-name descname">apiVersion</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.apiVersion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apiVersion</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.apiVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized values.
 More info: <a class="reference external" href="https://git.k8s.io/community/contributors/devel/api-conventions.md#resources">https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.kind">
-<code class="sig-name descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.kind" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kind</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.kind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kind is a string value representing the REST resource this object represents. Servers may infer
 this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More
 info: <a class="reference external" href="https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds">https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.address_type">
-<code class="sig-name descname">address_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.address_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">address_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.address_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>addressType specifies the type of address carried by this EndpointSlice. All addresses in this
 slice must be the same type. This field is immutable after creation. The following address types
 are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address.</p>
@@ -61,31 +61,31 @@ are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents 
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.endpoints">
-<code class="sig-name descname">endpoints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.endpoints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">endpoints</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.endpoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000
 endpoints.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.metadata">
-<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metadata</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Standard object’s metadata.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.ports">
-<code class="sig-name descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ports</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>ports specifies the list of network ports exposed by each endpoint in this slice. Each port must
 have a unique name. When ports is empty, it indicates that there are no defined ports. When a
 port is defined with a nil port value, it indicates “all ports”. Each slice may include a
 maximum of 100 ports.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the state of an existing <code class="docutils literal notranslate"><span class="pre">EndpointSlice</span></code> resource, as identified by <code class="docutils literal notranslate"><span class="pre">id</span></code>.
 The ID is of the form <code class="docutils literal notranslate"><span class="pre">[namespace]/[name]</span></code>; if <code class="docutils literal notranslate"><span class="pre">[namespace]</span></code> is omitted,
 then (per Kubernetes convention) the ID becomes <code class="docutils literal notranslate"><span class="pre">default/[name]</span></code>.</p>
@@ -103,9 +103,9 @@ resource’s behavior.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -121,9 +121,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSlice.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSlice.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -141,9 +141,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.discovery.v1beta1.</code><code class="sig-name descname">EndpointSliceList</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">items=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.discovery.v1beta1.</code><code class="sig-name descname">EndpointSliceList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">items</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList" title="Permalink to this definition">¶</a></dt>
 <dd><p>EndpointSliceList represents a list of endpoint slices</p>
 <p>Create a EndpointSliceList resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
@@ -156,37 +156,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.apiVersion">
-<code class="sig-name descname">apiVersion</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.apiVersion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apiVersion</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.apiVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized values.
 More info: <a class="reference external" href="https://git.k8s.io/community/contributors/devel/api-conventions.md#resources">https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.kind">
-<code class="sig-name descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.kind" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kind</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.kind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kind is a string value representing the REST resource this object represents. Servers may infer
 this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More
 info: <a class="reference external" href="https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds">https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.items">
-<code class="sig-name descname">items</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.items" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">items</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.items" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of endpoint slices</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.metadata">
-<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metadata</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Standard list metadata.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the state of an existing <code class="docutils literal notranslate"><span class="pre">EndpointSliceList</span></code> resource, as identified by <code class="docutils literal notranslate"><span class="pre">id</span></code>.
 The ID is of the form <code class="docutils literal notranslate"><span class="pre">[namespace]/[name]</span></code>; if <code class="docutils literal notranslate"><span class="pre">[namespace]</span></code> is omitted,
 then (per Kubernetes convention) the ID becomes <code class="docutils literal notranslate"><span class="pre">default/[name]</span></code>.</p>
@@ -204,9 +204,9 @@ resource’s behavior.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -222,9 +222,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.discovery.v1beta1.EndpointSliceList.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

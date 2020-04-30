@@ -13,19 +13,19 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.msk"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.msk"></span><dl class="py class">
 <dt id="pulumi_aws.msk.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_brokers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_brokers_tls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zookeeper_connect_string</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.msk.AwaitableGetConfigurationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">AwaitableGetConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_versions=None</em>, <em class="sig-param">latest_revision=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">server_properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.AwaitableGetConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">AwaitableGetConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_revision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.AwaitableGetConfigurationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.msk.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">logging_info=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_node_group_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enhanced_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages AWS Managed Streaming for Kafka cluster</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -120,27 +120,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.bootstrap_brokers">
-<code class="sig-name descname">bootstrap_brokers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.bootstrap_brokers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bootstrap_brokers</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.bootstrap_brokers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.bootstrap_brokers_tls">
-<code class="sig-name descname">bootstrap_brokers_tls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.bootstrap_brokers_tls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bootstrap_brokers_tls</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.bootstrap_brokers_tls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.broker_node_group_info">
-<code class="sig-name descname">broker_node_group_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.broker_node_group_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">broker_node_group_info</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.broker_node_group_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for the broker nodes of the Kafka cluster.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">azDistribution</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The distribution of broker nodes across availability zones (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution">documentation</a>). Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
@@ -151,9 +151,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.client_authentication">
-<code class="sig-name descname">client_authentication</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.client_authentication" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_authentication</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.client_authentication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for specifying a client authentication. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for specifying TLS client authentication. See below.</p>
@@ -164,15 +164,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.cluster_name">
-<code class="sig-name descname">cluster_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.cluster_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.cluster_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the MSK cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.configuration_info">
-<code class="sig-name descname">configuration_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.configuration_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">configuration_info</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.configuration_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p></li>
@@ -180,18 +180,18 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.current_version">
-<code class="sig-name descname">current_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.current_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">current_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.current_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current version of the MSK Cluster used for updates, e.g. <code class="docutils literal notranslate"><span class="pre">K13V1IB3VIYZZH</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encryption_info.0.encryption_at_rest_kms_key_arn</span></code> - The ARN of the KMS key used for encryption at rest of the broker data volumes.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.encryption_info">
-<code class="sig-name descname">encryption_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.encryption_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">encryption_info</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.encryption_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for specifying encryption. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encryptionAtRestKmsKeyArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (‘aws/msk’ managed service) key will be used for encrypting the data at rest.</p></li>
@@ -204,21 +204,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.enhanced_monitoring">
-<code class="sig-name descname">enhanced_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.enhanced_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enhanced_monitoring</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.enhanced_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the desired enhanced MSK CloudWatch monitoring level.  See <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html">Monitoring Amazon MSK with Amazon CloudWatch</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.kafka_version">
-<code class="sig-name descname">kafka_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.kafka_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kafka_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.kafka_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the desired Kafka software version.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.logging_info">
-<code class="sig-name descname">logging_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.logging_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">logging_info</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.logging_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">brokerLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for Broker Logs settings for logging info. See below.</p>
@@ -247,15 +247,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.number_of_broker_nodes">
-<code class="sig-name descname">number_of_broker_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.number_of_broker_nodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number_of_broker_nodes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.number_of_broker_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.open_monitoring">
-<code class="sig-name descname">open_monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.open_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">open_monitoring</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.open_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for JMX and Node monitoring for the MSK cluster. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for Prometheus settings for open monitoring. See below.</p>
@@ -275,21 +275,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Cluster.zookeeper_connect_string">
-<code class="sig-name descname">zookeeper_connect_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.zookeeper_connect_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zookeeper_connect_string</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.zookeeper_connect_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.msk.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">current_version=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">logging_info=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_brokers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_brokers_tls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">broker_node_group_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_authentication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enhanced_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logging_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open_monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zookeeper_connect_string</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -403,9 +403,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.msk.Cluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -421,9 +421,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.msk.Cluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -441,9 +441,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.msk.Configuration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kafka_versions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">server_properties=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon Managed Streaming for Kafka configuration. More information can be found on the <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration.html">MSK Developer Guide</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The API does not support deleting MSK configurations. Removing this resource will only remove the this provider state for it.</p>
@@ -461,45 +461,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Configuration.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Configuration.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Configuration.kafka_versions">
-<code class="sig-name descname">kafka_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.kafka_versions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kafka_versions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.kafka_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of Apache Kafka versions which can use this configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Configuration.latest_revision">
-<code class="sig-name descname">latest_revision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.latest_revision" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">latest_revision</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.latest_revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Latest revision of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Configuration.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.Configuration.server_properties">
-<code class="sig-name descname">server_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.server_properties" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">server_properties</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Configuration.server_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of the server.properties file. Supported properties are documented in the <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html">MSK Developer Guide</a>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.msk.Configuration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kafka_versions=None</em>, <em class="sig-param">latest_revision=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">server_properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_revision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Configuration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -520,9 +520,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.msk.Configuration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -538,9 +538,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.msk.Configuration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -558,53 +558,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.msk.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_brokers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_brokers_tls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_broker_nodes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zookeeper_connect_string</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the MSK cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.bootstrap_brokers">
 <code class="sig-name descname">bootstrap_brokers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.bootstrap_brokers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more hostname:port pairs of Kafka brokers suitable to boostrap connectivity to the Kafka cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.bootstrap_brokers_tls">
 <code class="sig-name descname">bootstrap_brokers_tls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.bootstrap_brokers_tls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.kafka_version">
 <code class="sig-name descname">kafka_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.kafka_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apache Kafka version.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.number_of_broker_nodes">
 <code class="sig-name descname">number_of_broker_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.number_of_broker_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of broker nodes in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of key-value pairs assigned to the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.zookeeper_connect_string">
 <code class="sig-name descname">zookeeper_connect_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.zookeeper_connect_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.</p>
@@ -612,41 +612,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.msk.GetConfigurationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">GetConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kafka_versions=None</em>, <em class="sig-param">latest_revision=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">server_properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">GetConfigurationResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_revision</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_properties</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getConfiguration.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetConfigurationResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetConfigurationResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetConfigurationResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetConfigurationResult.kafka_versions">
 <code class="sig-name descname">kafka_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.kafka_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of Apache Kafka versions which can use this configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetConfigurationResult.latest_revision">
 <code class="sig-name descname">latest_revision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.latest_revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Latest revision of the configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.msk.GetConfigurationResult.server_properties">
 <code class="sig-name descname">server_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.server_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of the server.properties file.</p>
@@ -654,9 +654,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.msk.get_cluster">
-<code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -668,9 +668,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.msk.get_configuration">
-<code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_configuration</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

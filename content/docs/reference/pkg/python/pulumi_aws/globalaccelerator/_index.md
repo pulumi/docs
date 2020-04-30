@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.globalaccelerator"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.globalaccelerator"></span><dl class="py class">
 <dt id="pulumi_aws.globalaccelerator.Accelerator">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Accelerator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Accelerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Global Accelerator accelerator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -36,9 +36,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">flowLogsS3Bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Amazon S3 bucket for the flow logs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flowLogsS3Prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix for the location in the Amazon S3 bucket for the flow logs.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.attributes">
-<code class="sig-name descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The attributes of the accelerator. Fields documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">flowLogsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether flow logs are enabled.</p></li>
@@ -47,9 +47,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.dns_name">
-<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.dns_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.dns_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS name of the accelerator. For example, <code class="docutils literal notranslate"><span class="pre">a5d53ff5ee6bca4ce.awsglobalaccelerator.com</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> –  The Global Accelerator Route 53 zone ID that can be used to
@@ -58,21 +58,21 @@ is simply an alias for the zone ID <code class="docutils literal notranslate"><s
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether the accelerator is enabled. The value is true or false. The default value is true.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.ip_address_type">
-<code class="sig-name descname">ip_address_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.ip_address_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_address_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.ip_address_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value for the address type must be <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.ip_sets">
-<code class="sig-name descname">ip_sets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.ip_sets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_sets</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.ip_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>IP address set associated with the accelerator.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP addresses in the IP address set.</p></li>
@@ -80,21 +80,21 @@ is simply an alias for the zone ID <code class="docutils literal notranslate"><s
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the accelerator.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">ip_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosted_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_sets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Accelerator resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -137,9 +137,9 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -155,9 +155,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -175,9 +175,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">EndpointGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">endpoint_group_region=None</em>, <em class="sig-param">health_check_interval_seconds=None</em>, <em class="sig-param">health_check_path=None</em>, <em class="sig-param">health_check_port=None</em>, <em class="sig-param">health_check_protocol=None</em>, <em class="sig-param">listener_arn=None</em>, <em class="sig-param">threshold_count=None</em>, <em class="sig-param">traffic_dial_percentage=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">EndpointGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_group_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_dial_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator endpoint group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -201,9 +201,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.endpoint_configurations">
-<code class="sig-name descname">endpoint_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.endpoint_configurations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">endpoint_configurations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.endpoint_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of endpoint objects. Fields documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.</p></li>
@@ -211,57 +211,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.endpoint_group_region">
-<code class="sig-name descname">endpoint_group_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.endpoint_group_region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">endpoint_group_region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.endpoint_group_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the AWS Region where the endpoint group is located.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.health_check_interval_seconds">
-<code class="sig-name descname">health_check_interval_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_interval_seconds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">health_check_interval_seconds</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_interval_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.health_check_path">
-<code class="sig-name descname">health_check_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">health_check_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.health_check_port">
-<code class="sig-name descname">health_check_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">health_check_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.health_check_protocol">
-<code class="sig-name descname">health_check_protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">health_check_protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.health_check_protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.listener_arn">
-<code class="sig-name descname">listener_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.listener_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">listener_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.listener_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of the listener.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.threshold_count">
-<code class="sig-name descname">threshold_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.threshold_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">threshold_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.threshold_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.traffic_dial_percentage">
-<code class="sig-name descname">traffic_dial_percentage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.traffic_dial_percentage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">traffic_dial_percentage</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.traffic_dial_percentage" title="Permalink to this definition">¶</a></dt>
 <dd><p>The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">endpoint_group_region=None</em>, <em class="sig-param">health_check_interval_seconds=None</em>, <em class="sig-param">health_check_path=None</em>, <em class="sig-param">health_check_port=None</em>, <em class="sig-param">health_check_protocol=None</em>, <em class="sig-param">listener_arn=None</em>, <em class="sig-param">threshold_count=None</em>, <em class="sig-param">traffic_dial_percentage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_group_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_interval_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listener_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">traffic_dial_percentage</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EndpointGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -289,9 +289,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -307,9 +307,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -327,9 +327,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.globalaccelerator.Listener">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accelerator_arn=None</em>, <em class="sig-param">client_affinity=None</em>, <em class="sig-param">port_ranges=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accelerator_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator listener.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -348,21 +348,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The first port in the range of ports, inclusive.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The last port in the range of ports, inclusive.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Listener.accelerator_arn">
-<code class="sig-name descname">accelerator_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.accelerator_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">accelerator_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.accelerator_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of your accelerator.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Listener.client_affinity">
-<code class="sig-name descname">client_affinity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.client_affinity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_affinity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.client_affinity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Direct all requests from a user to the same endpoint. Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">SOURCE_IP</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. If <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, Global Accelerator uses the “five-tuple” properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If <code class="docutils literal notranslate"><span class="pre">SOURCE_IP</span></code>, Global Accelerator uses the “two-tuple” properties of source (client) IP address and destination IP address to select the hash value.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Listener.port_ranges">
-<code class="sig-name descname">port_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.port_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port_ranges</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.port_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of port ranges for the connections from clients to the accelerator. Fields documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The first port in the range of ports, inclusive.</p></li>
@@ -370,15 +370,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.globalaccelerator.Listener.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The protocol for the connections from clients to the accelerator. Valid values are <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.Listener.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accelerator_arn=None</em>, <em class="sig-param">client_affinity=None</em>, <em class="sig-param">port_ranges=None</em>, <em class="sig-param">protocol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accelerator_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_affinity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Listener resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -401,9 +401,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.Listener.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -419,9 +419,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.globalaccelerator.Listener.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

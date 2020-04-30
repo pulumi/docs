@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.policy"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.policy"></span><dl class="py class">
 <dt id="pulumi_azure.policy.Assignment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Assignment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_scopes=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definition_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Assignment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -40,21 +40,21 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this Policy Assignment. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), or <code class="docutils literal notranslate"><span class="pre">None</span></code> (no use of a Managed Service Identity).</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description to use for this Policy Assignment. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.display_name">
-<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.display_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A friendly display name to use for this Policy Assignment. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.identity">
-<code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.identity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">identity</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
@@ -63,45 +63,45 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Policy Assignment. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.not_scopes">
-<code class="sig-name descname">not_scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.not_scopes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">not_scopes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.not_scopes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the Policy Assignment’s excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or Resource Groups e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.policy_definition_id">
-<code class="sig-name descname">policy_definition_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.policy_definition_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_definition_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.policy_definition_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Policy Definition to be applied at the specified Scope.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Assignment.scope">
-<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Scope at which the Policy Assignment should be applied, which must be a Resource ID (such as Subscription e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or a Resource Group e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>). Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Assignment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_scopes=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definition_id=None</em>, <em class="sig-param">scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_scopes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definition_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Assignment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -130,9 +130,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Assignment.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -148,9 +148,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Assignment.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -168,19 +168,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.AwaitableGetPolicyDefintionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">AwaitableGetPolicyDefintionResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.AwaitableGetPolicyDefintionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">AwaitableGetPolicyDefintionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.AwaitableGetPolicyDefintionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.AwaitableGetPolicySetDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">AwaitableGetPolicySetDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definitions=None</em>, <em class="sig-param">policy_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.AwaitableGetPolicySetDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">AwaitableGetPolicySetDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.AwaitableGetPolicySetDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.Definition">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Definition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a policy rule definition on a management group or your provider subscription.</p>
 <p>Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.</p>
 <dl class="field-list simple">
@@ -209,72 +209,72 @@ a then block.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the policy definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.display_name">
-<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.display_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name of the policy definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.management_group_name">
-<code class="sig-name descname">management_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.management_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.management_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.metadata">
-<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metadata</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>The metadata for the policy definition. This
 is a json object representing additional metadata that should be stored
 with the policy definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.mode">
-<code class="sig-name descname">mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be “All”, “Indexed” or
 “NotSpecified”. Changing this resource forces a new resource to be
 created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the policy definition. Changing this forces a
 new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters for the policy definition. This field
 is a json object that allows you to parameterize your policy definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.policy_rule">
-<code class="sig-name descname">policy_rule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.policy_rule" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_rule</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.policy_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy rule for the policy definition. This
 is a json object representing the rule that contains an if and
 a then block.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Definition.policy_type">
-<code class="sig-name descname">policy_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.policy_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.policy_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy type. Possible values are <code class="docutils literal notranslate"><span class="pre">BuiltIn</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code> and <code class="docutils literal notranslate"><span class="pre">NotSpecified</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Definition.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">policy_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Definition resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -306,9 +306,9 @@ a then block.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Definition.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -324,9 +324,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Definition.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -344,47 +344,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">GetPolicyDefintionResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">GetPolicyDefintionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_rule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicyDefintion.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Description of the Policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any Metadata defined in the Policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any Parameters defined in the Policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.policy_rule">
 <code class="sig-name descname">policy_rule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.policy_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Rule as defined (in JSON) in the Policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.policy_type">
 <code class="sig-name descname">policy_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.policy_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Type of the Policy. Possible values are “BuiltIn”, “Custom” and “NotSpecified”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Type of Policy.</p>
@@ -392,41 +392,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">GetPolicySetDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definitions=None</em>, <em class="sig-param">policy_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">GetPolicySetDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicySetDefinition.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Description of the Policy Set Definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any Metadata defined in the Policy Set Definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Any Parameters defined in the Policy Set Definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.policy_definitions">
 <code class="sig-name descname">policy_definitions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.policy_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy definitions contained within the policy set definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.GetPolicySetDefinitionResult.policy_type">
 <code class="sig-name descname">policy_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.GetPolicySetDefinitionResult.policy_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Type of the Policy Set Definition.</p>
@@ -434,9 +434,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.PolicySetDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">PolicySetDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definitions=None</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">PolicySetDefinition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a policy set definition.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong>  Policy set definitions (also known as policy initiatives) do not take effect until they are assigned to a scope using a Policy Set Assignment.</p>
@@ -457,57 +457,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the policy set definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.display_name">
-<code class="sig-name descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.display_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The display name of the policy set definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.management_group_id">
-<code class="sig-name descname">management_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.management_group_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.management_group_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.metadata">
-<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metadata</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the policy set definition. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.policy_definitions">
-<code class="sig-name descname">policy_definitions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.policy_definitions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_definitions</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.policy_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.policy_type">
-<code class="sig-name descname">policy_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.policy_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.policy_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy set type. Possible values are <code class="docutils literal notranslate"><span class="pre">BuiltIn</span></code> or <code class="docutils literal notranslate"><span class="pre">Custom</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.PolicySetDefinition.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definitions=None</em>, <em class="sig-param">policy_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PolicySetDefinition resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -529,9 +529,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.PolicySetDefinition.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -547,9 +547,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.PolicySetDefinition.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -567,9 +567,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.policy.Remediation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Remediation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location_filters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_assignment_id=None</em>, <em class="sig-param">policy_definition_reference_id=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">Remediation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_assignment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definition_reference_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Policy Remediation at the specified Scope.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -584,39 +584,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Remediation.location_filters">
-<code class="sig-name descname">location_filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.location_filters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location_filters</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.location_filters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the resource locations that will be remediated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Remediation.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Policy Remediation. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Remediation.policy_assignment_id">
-<code class="sig-name descname">policy_assignment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.policy_assignment_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_assignment_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.policy_assignment_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource ID of the policy assignment that should be remediated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Remediation.policy_definition_reference_id">
-<code class="sig-name descname">policy_definition_reference_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.policy_definition_reference_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_definition_reference_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.policy_definition_reference_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.policy.Remediation.scope">
-<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Remediation.scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Scope at which the Policy Remediation should be applied. Changing this forces a new resource to be created. A scope must be a Resource ID out of one of the following list:</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Remediation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location_filters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_assignment_id=None</em>, <em class="sig-param">policy_definition_reference_id=None</em>, <em class="sig-param">scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_assignment_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_definition_reference_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Remediation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -635,9 +635,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Remediation.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -653,9 +653,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.policy.Remediation.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Remediation.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -673,9 +673,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.policy.get_policy_defintion">
-<code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_defintion</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_defintion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Policy Definition, both custom and built in. Retrieves Policy Definitions from your current subscription by default.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -688,9 +688,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.policy.get_policy_set_definition">
-<code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_set_definition</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_set_definition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_set_definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_set_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Policy Set Definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

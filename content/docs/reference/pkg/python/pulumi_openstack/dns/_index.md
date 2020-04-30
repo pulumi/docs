@@ -13,112 +13,112 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_openstack.dns"></span><dl class="class">
+<span class="target" id="module-pulumi_openstack.dns"></span><dl class="py class">
 <dt id="pulumi_openstack.dns.AwaitableGetDnsZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">AwaitableGetDnsZoneResult</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">masters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">transferred_at=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.AwaitableGetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">AwaitableGetDnsZoneResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serial</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transferred_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.AwaitableGetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">GetDnsZoneResult</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">masters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">transferred_at=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">GetDnsZoneResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serial</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transferred_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDnsZone.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.attributes">
 <code class="sig-name descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attributes of the DNS Service scheduler.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.created_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time the zone was created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.email">
 <code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.email" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.masters">
 <code class="sig-name descname">masters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.masters" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of master DNS servers. When <code class="docutils literal notranslate"><span class="pre">type</span></code> is  <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.pool_id">
 <code class="sig-name descname">pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the pool hosting the zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.project_id">
 <code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project ID that owns the zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.serial">
 <code class="sig-name descname">serial</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.serial" title="Permalink to this definition">¶</a></dt>
 <dd><p>The serial number of the zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.transferred_at">
 <code class="sig-name descname">transferred_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.transferred_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time the zone was transferred.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.ttl">
 <code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.updated_at">
 <code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.updated_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time the zone was last updated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the zone.</p>
@@ -126,9 +126,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_openstack.dns.RecordSet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">RecordSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">RecordSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS record set in the OpenStack DNS Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -154,65 +154,65 @@ Changing this creates a new DNS  record set.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the  record set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the record set. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.records">
-<code class="sig-name descname">records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.records" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">records</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.records" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of DNS records. <em>Note:</em> if an IPv6 address
 contains brackets (<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>), the brackets will be stripped and the modified
 address will be recorded in the state.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 DNS client.
 If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.ttl">
-<code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time to live (TTL) of the record set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of record set. Examples: “A”, “MX”.
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.value_specs">
-<code class="sig-name descname">value_specs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.value_specs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">value_specs</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.value_specs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of additional options. Changing this creates a
 new record set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.RecordSet.zone_id">
-<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.zone_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.dns.RecordSet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RecordSet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -242,9 +242,9 @@ Changing this creates a new DNS  record set.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.dns.RecordSet.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -260,9 +260,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.dns.RecordSet.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -280,9 +280,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_openstack.dns.Zone">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">masters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_specs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS zone in the OpenStack DNS Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -309,71 +309,71 @@ new zone.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.attributes">
-<code class="sig-name descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attributes</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attributes for the DNS Service scheduler.
 Changing this creates a new zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.email">
-<code class="sig-name descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.email" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">email</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.email" title="Permalink to this definition">¶</a></dt>
 <dd><p>The email contact for the zone record.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.masters">
-<code class="sig-name descname">masters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.masters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">masters</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.masters" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of master DNS servers. For when <code class="docutils literal notranslate"><span class="pre">type</span></code> is
 <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the zone. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.
 Changing this creates a new DNS zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.ttl">
-<code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time to live (TTL) of the zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of zone. Can either be <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.
 Changing this creates a new zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.dns.Zone.value_specs">
-<code class="sig-name descname">value_specs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.value_specs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">value_specs</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.value_specs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of additional options. Changing this creates a
 new zone.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.dns.Zone.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">masters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_specs</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -404,9 +404,9 @@ new zone.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.dns.Zone.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -422,9 +422,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.dns.Zone.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -442,9 +442,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_openstack.dns.get_dns_zone">
-<code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">get_dns_zone</code><span class="sig-paren">(</span><em class="sig-param">attributes=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">masters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">transferred_at=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.get_dns_zone" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_openstack.dns.</code><code class="sig-name descname">get_dns_zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">masters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serial</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transferred_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.get_dns_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack DNS zone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

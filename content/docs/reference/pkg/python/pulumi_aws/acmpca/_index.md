@@ -13,14 +13,14 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.acmpca"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.acmpca"></span><dl class="py class">
 <dt id="pulumi_aws.acmpca.AwaitableGetCertificateAuthorityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">AwaitableGetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.AwaitableGetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">AwaitableGetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_signing_request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revocation_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serial</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.AwaitableGetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.acmpca.CertificateAuthority">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">CertificateAuthority</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_authority_configuration=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">permanent_deletion_time_in_days=None</em>, <em class="sig-param">revocation_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">CertificateAuthority</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_authority_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permanent_deletion_time_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revocation_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code class="docutils literal notranslate"><span class="pre">PENDING_CERTIFICATE</span></code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code class="docutils literal notranslate"><span class="pre">certificate_signing_request</span></code> attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.</p>
@@ -72,21 +72,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the certificate authority.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.certificate">
-<code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">certificate</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.certificate_authority_configuration">
-<code class="sig-name descname">certificate_authority_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate_authority_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">certificate_authority_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate_authority_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing algorithms and certificate subject information. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">keyAlgorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the <a class="reference external" href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html">ACM PCA Documentation</a>.</p></li>
@@ -111,45 +111,45 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.certificate_chain">
-<code class="sig-name descname">certificate_chain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate_chain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">certificate_chain</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate_chain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.certificate_signing_request">
-<code class="sig-name descname">certificate_signing_request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate_signing_request" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">certificate_signing_request</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.certificate_signing_request" title="Permalink to this definition">¶</a></dt>
 <dd><p>The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.not_after">
-<code class="sig-name descname">not_after</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.not_after" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">not_after</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.not_after" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.not_before">
-<code class="sig-name descname">not_before</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.not_before" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">not_before</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.not_before" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.permanent_deletion_time_in_days">
-<code class="sig-name descname">permanent_deletion_time_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.permanent_deletion_time_in_days" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">permanent_deletion_time_in_days</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.permanent_deletion_time_in_days" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.revocation_configuration">
-<code class="sig-name descname">revocation_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.revocation_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">revocation_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.revocation_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing revocation configuration. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">crlConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.</p>
@@ -163,33 +163,33 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.serial">
-<code class="sig-name descname">serial</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.serial" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">serial</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.serial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Status of the certificate authority.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a key-value map of user-defined tags that are attached to the certificate authority.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the certificate authority. Defaults to <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_authority_configuration=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">permanent_deletion_time_in_days=None</em>, <em class="sig-param">revocation_configuration=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_authority_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_signing_request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permanent_deletion_time_in_days</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revocation_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serial</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CertificateAuthority resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -250,9 +250,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -268,9 +268,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -288,47 +288,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">GetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">certificate_signing_request=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">not_before=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">serial=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">GetCertificateAuthorityResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_signing_request</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_after</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">not_before</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revocation_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serial</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificateAuthority.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate">
 <code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate_chain">
 <code class="sig-name descname">certificate_chain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate_chain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate_signing_request">
 <code class="sig-name descname">certificate_signing_request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate_signing_request" title="Permalink to this definition">¶</a></dt>
 <dd><p>The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.not_after">
 <code class="sig-name descname">not_after</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.not_after" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.not_before">
 <code class="sig-name descname">not_before</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.not_before" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.revocation_configurations">
 <code class="sig-name descname">revocation_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.revocation_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested attribute containing revocation configuration.</p>
@@ -341,25 +341,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.serial">
 <code class="sig-name descname">serial</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.serial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Status of the certificate authority.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a key-value map of user-defined tags that are attached to the certificate authority.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the certificate authority.</p>
@@ -367,9 +367,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.acmpca.get_certificate_authority">
-<code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">get_certificate_authority</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.get_certificate_authority" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">get_certificate_authority</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">revocation_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.get_certificate_authority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

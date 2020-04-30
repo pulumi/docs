@@ -13,24 +13,24 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-alicloud/issues">pulumi/pulumi-alicloud repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_alicloud.emr"></span><dl class="class">
+<span class="target" id="module-pulumi_alicloud.emr"></span><dl class="py class">
 <dt id="pulumi_alicloud.emr.AwaitableGetDiskTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.emr.AwaitableGetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_local_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_node_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.emr.AwaitableGetMainVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">AwaitableGetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emr_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">main_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.AwaitableGetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.emr.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">charge_type=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">deposit_type=None</em>, <em class="sig-param">eas_enable=None</em>, <em class="sig-param">emr_ver=None</em>, <em class="sig-param">high_availability_enable=None</em>, <em class="sig-param">host_groups=None</em>, <em class="sig-param">is_open_public_ip=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">master_pwd=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_software_lists=None</em>, <em class="sig-param">related_cluster_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">ssh_enable=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_local_metadb=None</em>, <em class="sig-param">user_defined_emr_ecs_role=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deposit_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eas_enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emr_ver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">high_availability_enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_open_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_pwd</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">option_software_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">related_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_local_metadb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_defined_emr_ecs_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a EMR Cluster resource. With this you can create, read, and release  EMR Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.57.0+.</p>
@@ -87,27 +87,27 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">sysDiskCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System disk capacity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sysDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.charge_type">
-<code class="sig-name descname">charge_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.charge_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">charge_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.charge_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.cluster_type">
-<code class="sig-name descname">cluster_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.cluster_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.cluster_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported ‘GATEWAY’ available in 1.61.0+.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.emr_ver">
-<code class="sig-name descname">emr_ver</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.emr_ver" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">emr_ver</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.emr_ver" title="Permalink to this definition">¶</a></dt>
 <dd><p>EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.host_groups">
-<code class="sig-name descname">host_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.host_groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_groups</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.host_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_renew</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Auto renew for prepaid, true of false. Default is false.</p></li>
@@ -127,21 +127,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>bootstrap action name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.zone_id">
-<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.zone_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Zone ID, e.g. cn-huhehaote-a</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.</p></li>
@@ -159,9 +159,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.emr.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">charge_type=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">deposit_type=None</em>, <em class="sig-param">eas_enable=None</em>, <em class="sig-param">emr_ver=None</em>, <em class="sig-param">high_availability_enable=None</em>, <em class="sig-param">host_groups=None</em>, <em class="sig-param">is_open_public_ip=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">master_pwd=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_software_lists=None</em>, <em class="sig-param">related_cluster_id=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">ssh_enable=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_local_metadb=None</em>, <em class="sig-param">user_defined_emr_ecs_role=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bootstrap_actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deposit_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eas_enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emr_ver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">high_availability_enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_open_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_pwd</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">option_software_lists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">related_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_local_metadb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_defined_emr_ecs_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -219,9 +219,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.emr.Cluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -237,9 +237,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.emr.Cluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -257,23 +257,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetDiskTypesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDiskTypes.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of data disk and system disk type IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult.types">
 <code class="sig-name descname">types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.types" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of emr instance types. Each element contains the following attributes:</p>
@@ -281,29 +281,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">types=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetInstanceTypesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_local_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_node_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceTypes.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of emr instance types IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.types">
 <code class="sig-name descname">types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.types" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of emr instance types. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.zone_id">
 <code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The available zone id in Alibaba Cloud account</p>
@@ -311,29 +311,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">main_versions=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">GetMainVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emr_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">main_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMainVersions.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.emr_version">
 <code class="sig-name descname">emr_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.emr_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the emr cluster instance.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of emr instance types IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.main_versions">
 <code class="sig-name descname">main_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.main_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of versions of the emr cluster instance. Each element contains the following attributes:</p>
@@ -341,9 +341,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.emr.get_disk_types">
-<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_disk_types</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_disk_types" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_disk_types</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_disk_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">emr.getDiskTypes</span></code> data source provides a collection of data disk and 
 system disk types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
@@ -362,9 +362,9 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.emr.get_instance_types">
-<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_instance_types</code><span class="sig-paren">(</span><em class="sig-param">cluster_type=None</em>, <em class="sig-param">destination_resource=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">support_local_storage=None</em>, <em class="sig-param">support_node_types=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_instance_types" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_instance_types</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_charge_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_local_storage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">support_node_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_instance_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">emr.getInstanceTypes</span></code> data source provides a collection of ecs
 instance types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
@@ -386,9 +386,9 @@ Possible values may be any one or combination of these: [“MASTER”, “CORE�
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.emr.get_main_versions">
-<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_main_versions</code><span class="sig-paren">(</span><em class="sig-param">cluster_types=None</em>, <em class="sig-param">emr_version=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_main_versions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.emr.</code><code class="sig-name descname">get_main_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cluster_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">emr_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.emr.get_main_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">emr.getMainVersions</span></code> data source provides a collection of emr 
 main versions available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>

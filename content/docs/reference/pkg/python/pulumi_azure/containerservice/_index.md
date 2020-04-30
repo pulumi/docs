@@ -13,152 +13,152 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.containerservice"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.containerservice"></span><dl class="py class">
 <dt id="pulumi_azure.containerservice.AwaitableGetKubernetesClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">AwaitableGetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param">addon_profiles=None</em>, <em class="sig-param">agent_pool_profiles=None</em>, <em class="sig-param">api_server_authorized_ip_ranges=None</em>, <em class="sig-param">dns_prefix=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kube_admin_config_raw=None</em>, <em class="sig-param">kube_admin_configs=None</em>, <em class="sig-param">kube_config_raw=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">kubernetes_version=None</em>, <em class="sig-param">linux_profiles=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">node_resource_group=None</em>, <em class="sig-param">private_cluster_enabled=None</em>, <em class="sig-param">private_fqdn=None</em>, <em class="sig-param">private_link_enabled=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role_based_access_controls=None</em>, <em class="sig-param">service_principals=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">windows_profiles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.AwaitableGetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">AwaitableGetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">addon_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">agent_pool_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_server_authorized_ip_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_admin_config_raw</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_admin_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config_raw</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linux_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_based_access_controls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_profiles</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.AwaitableGetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.AwaitableGetKubernetesServiceVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">AwaitableGetKubernetesServiceVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">include_preview=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">versions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.AwaitableGetKubernetesServiceVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">AwaitableGetKubernetesServiceVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_preview</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.AwaitableGetKubernetesServiceVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.AwaitableGetRegistryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">AwaitableGetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param">admin_enabled=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">login_server=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.AwaitableGetRegistryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">AwaitableGetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">admin_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.AwaitableGetRegistryResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param">addon_profiles=None</em>, <em class="sig-param">agent_pool_profiles=None</em>, <em class="sig-param">api_server_authorized_ip_ranges=None</em>, <em class="sig-param">dns_prefix=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">kube_admin_config_raw=None</em>, <em class="sig-param">kube_admin_configs=None</em>, <em class="sig-param">kube_config_raw=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">kubernetes_version=None</em>, <em class="sig-param">linux_profiles=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">node_resource_group=None</em>, <em class="sig-param">private_cluster_enabled=None</em>, <em class="sig-param">private_fqdn=None</em>, <em class="sig-param">private_link_enabled=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role_based_access_controls=None</em>, <em class="sig-param">service_principals=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">windows_profiles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">addon_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">agent_pool_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_server_authorized_ip_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_admin_config_raw</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_admin_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config_raw</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linux_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_based_access_controls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_profiles</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKubernetesCluster.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.addon_profiles">
 <code class="sig-name descname">addon_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.addon_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.agent_pool_profiles">
 <code class="sig-name descname">agent_pool_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.agent_pool_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.api_server_authorized_ip_ranges">
 <code class="sig-name descname">api_server_authorized_ip_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.api_server_authorized_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP ranges to whitelist for incoming traffic to the masters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.dns_prefix">
 <code class="sig-name descname">dns_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.dns_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS Prefix of the managed Kubernetes cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.fqdn">
 <code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.fqdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The FQDN of the Azure Kubernetes Managed Cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_config_raw">
 <code class="sig-name descname">kube_admin_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_config_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raw Kubernetes config for the admin account to be used by <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a> and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_configs">
 <code class="sig-name descname">kube_admin_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_admin_config</span></code> block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_config_raw">
 <code class="sig-name descname">kube_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_config_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64 encoded Kubernetes configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_configs">
 <code class="sig-name descname">kube_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_config</span></code> block as defined below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kubernetes_version">
 <code class="sig-name descname">kubernetes_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kubernetes_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of Kubernetes used on the managed Kubernetes Cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.linux_profiles">
 <code class="sig-name descname">linux_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.linux_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure Region in which the managed Kubernetes Cluster exists.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name assigned to this pool of agents.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.network_profiles">
 <code class="sig-name descname">network_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.network_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.node_resource_group">
 <code class="sig-name descname">node_resource_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.node_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Auto-generated Resource Group containing AKS Cluster resources.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.private_cluster_enabled">
 <code class="sig-name descname">private_cluster_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.private_cluster_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>If the cluster has the Kubernetes API only exposed on internal IP addresses.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.private_fqdn">
 <code class="sig-name descname">private_fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.private_fqdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.role_based_access_controls">
 <code class="sig-name descname">role_based_access_controls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.role_based_access_controls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">role_based_access_control</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.service_principals">
 <code class="sig-name descname">service_principals</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.service_principals" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">service_principal</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.windows_profiles">
 <code class="sig-name descname">windows_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.windows_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">windows_profile</span></code> block as documented below.</p>
@@ -166,23 +166,23 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.GetKubernetesServiceVersionsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">GetKubernetesServiceVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">include_preview=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">versions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesServiceVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">GetKubernetesServiceVersionsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_preview</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesServiceVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKubernetesServiceVersions.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesServiceVersionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesServiceVersionsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesServiceVersionsResult.latest_version">
 <code class="sig-name descname">latest_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesServiceVersionsResult.latest_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The most recent version available. If <code class="docutils literal notranslate"><span class="pre">include_preview</span> <span class="pre">==</span> <span class="pre">false</span></code>, this is the most recent non-preview version available.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesServiceVersionsResult.versions">
 <code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesServiceVersionsResult.versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of all supported versions.</p>
@@ -190,59 +190,59 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.GetRegistryResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">GetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param">admin_enabled=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">login_server=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">GetRegistryResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">admin_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistry.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.admin_enabled">
 <code class="sig-name descname">admin_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.admin_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is the Administrator account enabled for this Container Registry.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.admin_password">
 <code class="sig-name descname">admin_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.admin_password" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Password associated with the Container Registry Admin account - if the admin account is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.admin_username">
 <code class="sig-name descname">admin_username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.admin_username" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Username associated with the Container Registry Admin account - if the admin account is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure Region in which this Container Registry exists.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.login_server">
 <code class="sig-name descname">login_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.login_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL that can be used to log into the container registry.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SKU of this Container Registry, such as <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.storage_account_id">
 <code class="sig-name descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.storage_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Storage Account used for this Container Registry. This is only returned for <code class="docutils literal notranslate"><span class="pre">Classic</span></code> SKU’s.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of tags assigned to the Container Registry.</p>
@@ -250,9 +250,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.Group">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">containers=None</em>, <em class="sig-param">diagnostics=None</em>, <em class="sig-param">dns_name_label=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">image_registry_credentials=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profile_id=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restart_policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">containers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diagnostics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_registry_credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profile_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restart_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages as an Azure Container Group instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -364,9 +364,9 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address to use to connect to the registry without protocol (“https”/”http”). For example: “myacr.acr.io”. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.containers">
-<code class="sig-name descname">containers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.containers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">containers</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.containers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The definition of a container that is part of the group as documented in the <code class="docutils literal notranslate"><span class="pre">container</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of commands which should be run on the container. Changing this forces a new resource to be created.</p></li>
@@ -435,9 +435,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.diagnostics">
-<code class="sig-name descname">diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.diagnostics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">diagnostics</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">diagnostics</span></code> block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">log_analytics</span></code> block as defined below. Changing this forces a new resource to be created.</p>
@@ -451,21 +451,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.dns_name_label">
-<code class="sig-name descname">dns_name_label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.dns_name_label" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_name_label</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.dns_name_label" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS label/name for the container groups IP. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.fqdn">
-<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.fqdn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fqdn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.fqdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The FQDN of the container group derived from <code class="docutils literal notranslate"><span class="pre">dns_name_label</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.identity">
-<code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.identity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">identity</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Changing this forces a new resource to be created.</p></li>
@@ -474,9 +474,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.image_registry_credentials">
-<code class="sig-name descname">image_registry_credentials</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.image_registry_credentials" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">image_registry_credentials</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.image_registry_credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">image_registry_credential</span></code> block as documented below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
@@ -485,63 +485,63 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.ip_address">
-<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address allocated to the container group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.ip_address_type">
-<code class="sig-name descname">ip_address_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.ip_address_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_address_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.ip_address_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the ip address type of the container. <code class="docutils literal notranslate"><span class="pre">Public</span></code> or <code class="docutils literal notranslate"><span class="pre">Private</span></code>. Changing this forces a new resource to be created. If set to <code class="docutils literal notranslate"><span class="pre">Private</span></code>, <code class="docutils literal notranslate"><span class="pre">network_profile_id</span></code> also needs to be set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Container Group. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.network_profile_id">
-<code class="sig-name descname">network_profile_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.network_profile_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_profile_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.network_profile_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Network profile ID for deploying to virtual network.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.os_type">
-<code class="sig-name descname">os_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.os_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">os_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.os_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The OS for the container group. Allowed values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.restart_policy">
-<code class="sig-name descname">restart_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.restart_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restart_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.restart_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart policy for the container group. Allowed values are <code class="docutils literal notranslate"><span class="pre">Always</span></code>, <code class="docutils literal notranslate"><span class="pre">Never</span></code>, <code class="docutils literal notranslate"><span class="pre">OnFailure</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Always</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Group.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.Group.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">containers=None</em>, <em class="sig-param">diagnostics=None</em>, <em class="sig-param">dns_name_label=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">image_registry_credentials=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profile_id=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restart_policy=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">containers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diagnostics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_name_label</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_registry_credentials</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_address_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profile_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">restart_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Group resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -659,9 +659,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.Group.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -677,9 +677,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.Group.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -697,9 +697,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.KubernetesCluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addon_profile=None</em>, <em class="sig-param">api_server_authorized_ip_ranges=None</em>, <em class="sig-param">default_node_pool=None</em>, <em class="sig-param">dns_prefix=None</em>, <em class="sig-param">enable_pod_security_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">kubernetes_version=None</em>, <em class="sig-param">linux_profile=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">node_resource_group=None</em>, <em class="sig-param">private_cluster_enabled=None</em>, <em class="sig-param">private_link_enabled=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role_based_access_control=None</em>, <em class="sig-param">service_principal=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">windows_profile=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addon_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_server_authorized_ip_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_pod_security_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linux_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_based_access_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -832,9 +832,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Password for Windows VMs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Username for Windows VMs.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.addon_profile">
-<code class="sig-name descname">addon_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.addon_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">addon_profile</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.addon_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> block. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal">Create and configure an AKS cluster to use virtual nodes</a>.</p>
@@ -868,15 +868,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.api_server_authorized_ip_ranges">
-<code class="sig-name descname">api_server_authorized_ip_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.api_server_authorized_ip_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">api_server_authorized_ip_ranges</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.api_server_authorized_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP ranges to whitelist for incoming traffic to the masters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.default_node_pool">
-<code class="sig-name descname">default_node_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.default_node_pool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_node_pool</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.default_node_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">default_node_pool</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Availability Zones across which the Node Pool should be spread.</p></li>
@@ -897,27 +897,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.dns_prefix">
-<code class="sig-name descname">dns_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.dns_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.dns_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.enable_pod_security_policy">
-<code class="sig-name descname">enable_pod_security_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.enable_pod_security_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_pod_security_policy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.enable_pod_security_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether Pod Security Policies are enabled. Note that this also requires role based access control to be enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.fqdn">
-<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.fqdn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fqdn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.fqdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The FQDN of the Azure Kubernetes Managed Cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.identity">
-<code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.identity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">identity</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The principal id of the system assigned identity which is used by master components.</p></li>
@@ -926,15 +926,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_admin_config_raw">
-<code class="sig-name descname">kube_admin_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_admin_config_raw" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kube_admin_config_raw</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_admin_config_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raw Kubernetes config for the admin account to be used by <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a> and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_admin_configs">
-<code class="sig-name descname">kube_admin_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_admin_configs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kube_admin_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_admin_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_admin_config</span></code> block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.</p></li>
@@ -946,15 +946,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_config_raw">
-<code class="sig-name descname">kube_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_config_raw" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kube_config_raw</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_config_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raw Kubernetes config to be used by <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a> and other compatible tools</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_configs">
-<code class="sig-name descname">kube_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_configs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kube_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_config</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.</p></li>
@@ -966,9 +966,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kubelet_identities">
-<code class="sig-name descname">kubelet_identities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kubelet_identities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kubelet_identities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kubelet_identities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">kubelet_identity</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client ID for the Service Principal.</p></li>
@@ -977,15 +977,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kubernetes_version">
-<code class="sig-name descname">kubernetes_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kubernetes_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kubernetes_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kubernetes_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won’t auto-upgrade).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.linux_profile">
-<code class="sig-name descname">linux_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.linux_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">linux_profile</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.linux_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Admin Username for the Cluster. Changing this forces a new resource to be created.</p></li>
@@ -997,21 +997,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.network_profile">
-<code class="sig-name descname">network_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.network_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_profile</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.network_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
@@ -1033,33 +1033,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.node_resource_group">
-<code class="sig-name descname">node_resource_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.node_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_resource_group</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.node_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group where the Kubernetes Nodes should exist. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.private_cluster_enabled">
-<code class="sig-name descname">private_cluster_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.private_cluster_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_cluster_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.private_cluster_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Should this Kubernetes Cluster have it’s API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.private_fqdn">
-<code class="sig-name descname">private_fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.private_fqdn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_fqdn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.private_fqdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The FQDN for the Kubernetes Cluster when private link has been enabled, which is only resolvable inside the Virtual Network used by the Kubernetes Cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.role_based_access_control">
-<code class="sig-name descname">role_based_access_control</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.role_based_access_control" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role_based_access_control</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.role_based_access_control" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">role_based_access_control</span></code> block. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block.</p>
@@ -1074,9 +1074,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.service_principal">
-<code class="sig-name descname">service_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.service_principal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_principal</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.service_principal" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">service_principal</span></code> block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client ID for the Service Principal.</p></li>
@@ -1084,15 +1084,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.windows_profile">
-<code class="sig-name descname">windows_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.windows_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">windows_profile</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.windows_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">windows_profile</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Admin Password for Windows VMs.</p></li>
@@ -1100,9 +1100,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addon_profile=None</em>, <em class="sig-param">api_server_authorized_ip_ranges=None</em>, <em class="sig-param">default_node_pool=None</em>, <em class="sig-param">dns_prefix=None</em>, <em class="sig-param">enable_pod_security_policy=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">kube_admin_config_raw=None</em>, <em class="sig-param">kube_admin_configs=None</em>, <em class="sig-param">kube_config_raw=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">kubelet_identities=None</em>, <em class="sig-param">kubernetes_version=None</em>, <em class="sig-param">linux_profile=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">node_resource_group=None</em>, <em class="sig-param">private_cluster_enabled=None</em>, <em class="sig-param">private_fqdn=None</em>, <em class="sig-param">private_link_enabled=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role_based_access_control=None</em>, <em class="sig-param">service_principal=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">windows_profile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">addon_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_server_authorized_ip_ranges</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_node_pool</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_pod_security_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">identity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_admin_config_raw</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_admin_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_config_raw</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubelet_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linux_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_based_access_control</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_principal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">windows_profile</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KubernetesCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1272,9 +1272,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1290,9 +1290,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1310,9 +1310,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">KubernetesClusterNodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">enable_auto_scaling=None</em>, <em class="sig-param">enable_node_public_ip=None</em>, <em class="sig-param">kubernetes_cluster_id=None</em>, <em class="sig-param">max_count=None</em>, <em class="sig-param">max_pods=None</em>, <em class="sig-param">min_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_labels=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">os_disk_size_gb=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">vnet_subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">KubernetesClusterNodePool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_auto_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_node_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_pods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_taints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vnet_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Node Pool within a Kubernetes Cluster</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Multiple Node Pools are only supported when the Kubernetes Cluster is using Virtual Machine Scale Sets.</p>
@@ -1341,105 +1341,105 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.availability_zones">
-<code class="sig-name descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.availability_zones" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">availability_zones</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Availability Zones where the Nodes in this Node Pool should be created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.enable_auto_scaling">
-<code class="sig-name descname">enable_auto_scaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.enable_auto_scaling" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_auto_scaling</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.enable_auto_scaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler">auto-scaler</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.enable_node_public_ip">
-<code class="sig-name descname">enable_node_public_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.enable_node_public_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_node_public_ip</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.enable_node_public_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Should each node have a Public IP Address? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.kubernetes_cluster_id">
-<code class="sig-name descname">kubernetes_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.kubernetes_cluster_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kubernetes_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.kubernetes_cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.max_count">
-<code class="sig-name descname">max_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.max_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.max_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be greater than or equal to <code class="docutils literal notranslate"><span class="pre">min_count</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.max_pods">
-<code class="sig-name descname">max_pods</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.max_pods" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_pods</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.max_pods" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.min_count">
-<code class="sig-name descname">min_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.min_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.min_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be less than or equal to <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.node_count">
-<code class="sig-name descname">node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The initial number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be a value in the range <code class="docutils literal notranslate"><span class="pre">min_count</span></code> - <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.node_labels">
-<code class="sig-name descname">node_labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_labels</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of Kubernetes labels which should be applied to nodes in this Node Pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.node_taints">
-<code class="sig-name descname">node_taints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_taints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_taints</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_taints" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code class="docutils literal notranslate"><span class="pre">key=value:NoSchedule</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.os_disk_size_gb">
-<code class="sig-name descname">os_disk_size_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.os_disk_size_gb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">os_disk_size_gb</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.os_disk_size_gb" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Agent Operating System disk size in GB. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.os_type">
-<code class="sig-name descname">os_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.os_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">os_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.os_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.vm_size">
-<code class="sig-name descname">vm_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.vm_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vm_size</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.vm_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.vnet_subnet_id">
-<code class="sig-name descname">vnet_subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.vnet_subnet_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vnet_subnet_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.vnet_subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Subnet where this Node Pool should exist.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">enable_auto_scaling=None</em>, <em class="sig-param">enable_node_public_ip=None</em>, <em class="sig-param">kubernetes_cluster_id=None</em>, <em class="sig-param">max_count=None</em>, <em class="sig-param">max_pods=None</em>, <em class="sig-param">min_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_labels=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">os_disk_size_gb=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">vnet_subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_auto_scaling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_node_public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_cluster_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_pods</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_taints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_disk_size_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">os_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vnet_subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KubernetesClusterNodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1470,9 +1470,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1488,9 +1488,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1508,9 +1508,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.Registry">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_enabled=None</em>, <em class="sig-param">georeplication_locations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rule_set=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">georeplication_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_rule_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1545,51 +1545,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.admin_enabled">
-<code class="sig-name descname">admin_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">admin_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether the admin user is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.admin_password">
-<code class="sig-name descname">admin_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">admin_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_password" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Password associated with the Container Registry Admin account - if the admin account is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.admin_username">
-<code class="sig-name descname">admin_username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_username" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">admin_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_username" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Username associated with the Container Registry Admin account - if the admin account is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.georeplication_locations">
-<code class="sig-name descname">georeplication_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.georeplication_locations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">georeplication_locations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.georeplication_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Azure locations where the container registry should be geo-replicated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.login_server">
-<code class="sig-name descname">login_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.login_server" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">login_server</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.login_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL that can be used to log into the container registry.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Container Registry. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.network_rule_set">
-<code class="sig-name descname">network_rule_set</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.network_rule_set" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_rule_set</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.network_rule_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_rule_set</span></code> block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behaviour for requests matching no rules. Either <code class="docutils literal notranslate"><span class="pre">Allow</span></code> or <code class="docutils literal notranslate"><span class="pre">Deny</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Allow</span></code></p></li>
@@ -1608,33 +1608,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.sku">
-<code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.sku" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sku</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SKU name of the container registry. Possible values are  <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>) is supported only for existing resources.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.storage_account_id">
-<code class="sig-name descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.storage_account_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">storage_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.storage_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.Registry.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.Registry.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_enabled=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">georeplication_locations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">login_server=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rule_set=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">georeplication_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login_server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_rule_set</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Registry resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1676,9 +1676,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.Registry.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1694,9 +1694,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.Registry.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1714,9 +1714,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.RegistryWebhook">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebhook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry Webhook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1735,63 +1735,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.actions">
-<code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.actions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">actions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">quarantine</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_push</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_delete</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.custom_headers">
-<code class="sig-name descname">custom_headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.custom_headers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_headers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.custom_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Custom headers that will be added to the webhook notifications request.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.registry_name">
-<code class="sig-name descname">registry_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.registry_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">registry_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.registry_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.scope">
-<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the scope of repositories that can trigger an event. For example, <code class="docutils literal notranslate"><span class="pre">foo:*</span></code> means events for all tags under repository <code class="docutils literal notranslate"><span class="pre">foo</span></code>. <code class="docutils literal notranslate"><span class="pre">foo:bar</span></code> means events for ‘foo:bar’ only. <code class="docutils literal notranslate"><span class="pre">foo</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">foo:latest</span></code>. Empty means all events.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.service_uri">
-<code class="sig-name descname">service_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.service_uri" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.service_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the service URI for the Webhook to post notifications.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies if this Webhook triggers notifications or not. Valid values: <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegistryWebhook resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1814,9 +1814,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1832,9 +1832,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.RegistryWebhook.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1852,9 +1852,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.containerservice.RegistryWebook">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry Webhook.</p>
 <p>Deprecated: azure.RegistryWebook has been deprecated in favour of azure.RegistryWebhook</p>
 <dl class="field-list simple">
@@ -1874,63 +1874,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.actions">
-<code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.actions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">actions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">quarantine</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_push</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_delete</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.custom_headers">
-<code class="sig-name descname">custom_headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.custom_headers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_headers</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.custom_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Custom headers that will be added to the webhook notifications request.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.registry_name">
-<code class="sig-name descname">registry_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.registry_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">registry_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.registry_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.scope">
-<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the scope of repositories that can trigger an event. For example, <code class="docutils literal notranslate"><span class="pre">foo:*</span></code> means events for all tags under repository <code class="docutils literal notranslate"><span class="pre">foo</span></code>. <code class="docutils literal notranslate"><span class="pre">foo:bar</span></code> means events for ‘foo:bar’ only. <code class="docutils literal notranslate"><span class="pre">foo</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">foo:latest</span></code>. Empty means all events.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.service_uri">
-<code class="sig-name descname">service_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.service_uri" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.service_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the service URI for the Webhook to post notifications.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.containerservice.RegistryWebook.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies if this Webhook triggers notifications or not. Valid values: <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.RegistryWebook.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">registry_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegistryWebook resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1953,9 +1953,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.RegistryWebook.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1971,9 +1971,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.containerservice.RegistryWebook.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1991,9 +1991,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.containerservice.get_kubernetes_cluster">
-<code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">private_cluster_enabled=None</em>, <em class="sig-param">private_link_enabled=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_cluster_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_link_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2006,9 +2006,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.containerservice.get_kubernetes_service_versions">
-<code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_service_versions</code><span class="sig-paren">(</span><em class="sig-param">include_preview=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">version_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_service_versions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_service_versions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">include_preview</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_service_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the version of Kubernetes supported by Azure Kubernetes Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2021,9 +2021,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.containerservice.get_registry">
-<code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_registry</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_registry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_registry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Container Registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

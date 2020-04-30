@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.macie"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.macie"></span><dl class="py class">
 <dt id="pulumi_aws.macie.MemberAccountAssociation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.macie.</code><code class="sig-name descname">MemberAccountAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">member_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.macie.</code><code class="sig-name descname">MemberAccountAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an AWS account with Amazon Macie as a member account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
@@ -29,15 +29,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.macie.MemberAccountAssociation.member_account_id">
-<code class="sig-name descname">member_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.member_account_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">member_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.member_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that you want to associate with Amazon Macie as a member account.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.macie.MemberAccountAssociation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">member_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_account_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MemberAccountAssociation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -52,9 +52,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.macie.MemberAccountAssociation.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -70,9 +70,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.macie.MemberAccountAssociation.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -90,9 +90,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.macie.S3BucketAssociation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.macie.</code><code class="sig-name descname">S3BucketAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_name=None</em>, <em class="sig-param">classification_type=None</em>, <em class="sig-param">member_account_id=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.macie.</code><code class="sig-name descname">S3BucketAssociation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">classification_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
@@ -116,15 +116,15 @@ The only valid value is the default value, <code class="docutils literal notrans
 <li><p><code class="docutils literal notranslate"><span class="pre">oneTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> and <code class="docutils literal notranslate"><span class="pre">FULL</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code> indicating that Macie only classifies objects that are added after the association was created.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.macie.S3BucketAssociation.bucket_name">
-<code class="sig-name descname">bucket_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.bucket_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bucket_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.bucket_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the S3 bucket that you want to associate with Amazon Macie.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.macie.S3BucketAssociation.classification_type">
-<code class="sig-name descname">classification_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.classification_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">classification_type</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.classification_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration of how Amazon Macie classifies the S3 objects.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">continuous</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
@@ -134,21 +134,21 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">NO
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.macie.S3BucketAssociation.member_account_id">
-<code class="sig-name descname">member_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.member_account_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">member_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.member_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If <code class="docutils literal notranslate"><span class="pre">member_account_id</span></code> isn’t specified, the action associates specified S3 resources with Macie for the current master account.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.macie.S3BucketAssociation.prefix">
-<code class="sig-name descname">prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Object key prefix identifying one or more S3 objects to which the association applies.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.macie.S3BucketAssociation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_name=None</em>, <em class="sig-param">classification_type=None</em>, <em class="sig-param">member_account_id=None</em>, <em class="sig-param">prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">classification_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing S3BucketAssociation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -173,9 +173,9 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">NO
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.macie.S3BucketAssociation.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -191,9 +191,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.macie.S3BucketAssociation.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

@@ -13,19 +13,19 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.lb"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.lb"></span><dl class="py class">
 <dt id="pulumi_azure.lb.AwaitableGetBackendAddressPoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">AwaitableGetBackendAddressPoolResult</code><span class="sig-paren">(</span><em class="sig-param">backend_ip_configurations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.AwaitableGetBackendAddressPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">AwaitableGetBackendAddressPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.AwaitableGetBackendAddressPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.AwaitableGetLBResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">AwaitableGetLBResult</code><span class="sig-paren">(</span><em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">private_ip_addresses=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.AwaitableGetLBResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">AwaitableGetLBResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.AwaitableGetLBResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.BackendAddressPool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">BackendAddressPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">BackendAddressPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Backend Address Pool.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
@@ -41,39 +41,39 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.backend_ip_configurations">
-<code class="sig-name descname">backend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.backend_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_ip_configurations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.backend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Backend IP Configurations associated with this Backend Address Pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.load_balancing_rules">
-<code class="sig-name descname">load_balancing_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.load_balancing_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_balancing_rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.load_balancing_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Load Balancing Rules associated with this Backend Address Pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.loadbalancer_id">
-<code class="sig-name descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">loadbalancer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Load Balancer in which to create the Backend Address Pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Backend Address Pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.BackendAddressPool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_ip_configurations=None</em>, <em class="sig-param">load_balancing_rules=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BackendAddressPool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -92,9 +92,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.BackendAddressPool.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -110,9 +110,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.BackendAddressPool.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -130,23 +130,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.GetBackendAddressPoolResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">GetBackendAddressPoolResult</code><span class="sig-paren">(</span><em class="sig-param">backend_ip_configurations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">GetBackendAddressPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBackendAddressPool.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetBackendAddressPoolResult.backend_ip_configurations">
 <code class="sig-name descname">backend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult.backend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of references to IP addresses defined in network interfaces.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetBackendAddressPoolResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetBackendAddressPoolResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Backend Address Pool.</p>
@@ -154,53 +154,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.GetLBResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">GetLBResult</code><span class="sig-paren">(</span><em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">private_ip_addresses=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetLBResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">GetLBResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetLBResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLB.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.frontend_ip_configurations">
 <code class="sig-name descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) A <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> block as documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure location where the Load Balancer exists.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Frontend IP Configuration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.private_ip_address">
 <code class="sig-name descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.private_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Private IP Address to assign to the Load Balancer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.private_ip_addresses">
 <code class="sig-name descname">private_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.private_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of private IP address assigned to the load balancer in <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks, if any.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SKU of the Load Balancer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.GetLBResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags assigned to the resource.</p>
@@ -208,9 +208,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.LoadBalancer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -241,9 +241,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which should be associated with the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of Availability Zones which the Load Balancer’s IP Addresses should be created in.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.frontend_ip_configurations">
-<code class="sig-name descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_ip_configurations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the Frontend IP Configuration.</p></li>
@@ -261,51 +261,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure Region where the Load Balancer should be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Load Balancer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.private_ip_address">
-<code class="sig-name descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.private_ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_ip_address</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.private_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Private IP Address to assign to the Load Balancer. The last one and first four IPs in any range are reserved and cannot be manually assigned.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.private_ip_addresses">
-<code class="sig-name descname">private_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.private_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">private_ip_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.private_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of private IP address assigned to the load balancer in <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks, if any.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which to create the Load Balancer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.sku">
-<code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.sku" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sku</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SKU of the Azure Load Balancer. Accepted values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.LoadBalancer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">private_ip_addresses=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -342,9 +342,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.LoadBalancer.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -360,9 +360,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.LoadBalancer.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -380,9 +380,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.NatPool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">NatPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_port=None</em>, <em class="sig-param">frontend_ip_configuration_name=None</em>, <em class="sig-param">frontend_port_end=None</em>, <em class="sig-param">frontend_port_start=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">NatPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port_end</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer NAT pool.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource cannot be used with with virtual machines, instead use the <code class="docutils literal notranslate"><span class="pre">lb.NatRule</span></code> resource.</p>
@@ -404,57 +404,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.backend_port">
-<code class="sig-name descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.backend_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.backend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port used for the internal endpoint. Possible values range between 1 and 65535, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.frontend_ip_configuration_name">
-<code class="sig-name descname">frontend_ip_configuration_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.frontend_ip_configuration_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_ip_configuration_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.frontend_ip_configuration_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the frontend IP configuration exposing this rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.frontend_port_end">
-<code class="sig-name descname">frontend_port_end</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.frontend_port_end" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_port_end</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.frontend_port_end" title="Permalink to this definition">¶</a></dt>
 <dd><p>The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with this Load Balancer. Possible values range between 1 and 65534, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.frontend_port_start">
-<code class="sig-name descname">frontend_port_start</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.frontend_port_start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_port_start</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.frontend_port_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with this Load Balancer. Possible values range between 1 and 65534, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.loadbalancer_id">
-<code class="sig-name descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">loadbalancer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Load Balancer in which to create the NAT pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the NAT pool.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatPool.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.NatPool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_port=None</em>, <em class="sig-param">frontend_ip_configuration_id=None</em>, <em class="sig-param">frontend_ip_configuration_name=None</em>, <em class="sig-param">frontend_port_end=None</em>, <em class="sig-param">frontend_port_start=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port_end</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port_start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NatPool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -476,9 +476,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.NatPool.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -494,9 +494,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.NatPool.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -514,9 +514,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.NatRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">NatRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_port=None</em>, <em class="sig-param">enable_floating_ip=None</em>, <em class="sig-param">enable_tcp_reset=None</em>, <em class="sig-param">frontend_ip_configuration_name=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">NatRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_floating_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tcp_reset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer NAT Rule.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource cannot be used with with virtual machine scale sets, instead use the <code class="docutils literal notranslate"><span class="pre">lb.NatPool</span></code> resource.</p>
@@ -540,69 +540,69 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.backend_port">
-<code class="sig-name descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.backend_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.backend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port used for internal connections on the endpoint. Possible values range between 1 and 65535, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.enable_floating_ip">
-<code class="sig-name descname">enable_floating_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.enable_floating_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_floating_ip</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.enable_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Are the Floating IPs enabled for this Load Balncer Rule? A “floating” IP is reassigned to a secondary server in case the primary server fails. Required to configure a SQL AlwaysOn Availability Group. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.enable_tcp_reset">
-<code class="sig-name descname">enable_tcp_reset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_tcp_reset</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is TCP Reset enabled for this Load Balancer Rule? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.frontend_ip_configuration_name">
-<code class="sig-name descname">frontend_ip_configuration_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.frontend_ip_configuration_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_ip_configuration_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.frontend_ip_configuration_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the frontend IP configuration exposing this rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.frontend_port">
-<code class="sig-name descname">frontend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.frontend_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.frontend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 1 and 65534, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.idle_timeout_in_minutes">
-<code class="sig-name descname">idle_timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">idle_timeout_in_minutes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the idle timeout in minutes for TCP connections. Valid values are between <code class="docutils literal notranslate"><span class="pre">4</span></code> and <code class="docutils literal notranslate"><span class="pre">30</span></code> minutes. Defaults to <code class="docutils literal notranslate"><span class="pre">4</span></code> minutes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.loadbalancer_id">
-<code class="sig-name descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">loadbalancer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Load Balancer in which to create the NAT Rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the NAT Rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code>, <code class="docutils literal notranslate"><span class="pre">Tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.NatRule.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.NatRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_ip_configuration_id=None</em>, <em class="sig-param">backend_port=None</em>, <em class="sig-param">enable_floating_ip=None</em>, <em class="sig-param">enable_tcp_reset=None</em>, <em class="sig-param">frontend_ip_configuration_id=None</em>, <em class="sig-param">frontend_ip_configuration_name=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_ip_configuration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_floating_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tcp_reset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NatRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -626,9 +626,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.NatRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -644,9 +644,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.NatRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -664,9 +664,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.OutboundRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">OutboundRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_outbound_ports=None</em>, <em class="sig-param">backend_address_pool_id=None</em>, <em class="sig-param">enable_tcp_reset=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">OutboundRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocated_outbound_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_address_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tcp_reset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Outbound Rule.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration and a Backend Address Pool Attached.</p>
@@ -693,27 +693,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Load Balancer Outbound Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.allocated_outbound_ports">
-<code class="sig-name descname">allocated_outbound_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.allocated_outbound_ports" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">allocated_outbound_ports</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.allocated_outbound_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of outbound ports to be used for NAT.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.backend_address_pool_id">
-<code class="sig-name descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_address_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Backend Address Pool. Outbound traffic is randomly load balanced across IPs in the backend IPs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.enable_tcp_reset">
-<code class="sig-name descname">enable_tcp_reset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_tcp_reset</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.frontend_ip_configurations">
-<code class="sig-name descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_ip_configurations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Load Balancer Outbound Rule.</p></li>
@@ -721,39 +721,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.idle_timeout_in_minutes">
-<code class="sig-name descname">idle_timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">idle_timeout_in_minutes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The timeout for the TCP idle connection</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.loadbalancer_id">
-<code class="sig-name descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">loadbalancer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Load Balancer in which to create the Outbound Rule. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Outbound Rule. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code>, <code class="docutils literal notranslate"><span class="pre">Tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.OutboundRule.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.OutboundRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_outbound_ports=None</em>, <em class="sig-param">backend_address_pool_id=None</em>, <em class="sig-param">enable_tcp_reset=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocated_outbound_ports</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_address_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tcp_reset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configurations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OutboundRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -781,9 +781,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.OutboundRule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -799,9 +799,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.OutboundRule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -819,9 +819,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.Probe">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">Probe</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">interval_in_seconds=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_probes=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">request_path=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">Probe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval_in_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a LoadBalancer Probe Resource.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
@@ -842,57 +842,57 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.interval_in_seconds">
-<code class="sig-name descname">interval_in_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.interval_in_seconds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">interval_in_seconds</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.interval_in_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>The interval, in seconds between probes to the backend endpoint for health status. The default value is 15, the minimum value is 5.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.loadbalancer_id">
-<code class="sig-name descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">loadbalancer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the LoadBalancer in which to create the NAT Rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Probe.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.number_of_probes">
-<code class="sig-name descname">number_of_probes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.number_of_probes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number_of_probes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.number_of_probes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of failed probe attempts after which the backend endpoint is removed from rotation. The default value is 2. NumberOfProbes multiplied by intervalInSeconds value must be greater or equal to 10.Endpoints are returned to rotation when at least one probe is successful.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.port">
-<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Port on which the Probe queries the backend endpoint. Possible values range from 1 to 65535, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the protocol of the end point. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code>, <code class="docutils literal notranslate"><span class="pre">Https</span></code> or <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>. If Tcp is specified, a received ACK is required for the probe to be successful. If Http is specified, a 200 OK response from the specified URI is required for the probe to be successful.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.request_path">
-<code class="sig-name descname">request_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.request_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">request_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.request_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI used for requesting health status from the backend endpoint. Required if protocol is set to Http. Otherwise, it is not allowed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Probe.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.Probe.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">interval_in_seconds=None</em>, <em class="sig-param">load_balancer_rules=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_probes=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">request_path=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interval_in_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">number_of_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Probe resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -914,9 +914,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.Probe.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -932,9 +932,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.Probe.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -952,9 +952,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.lb.Rule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_address_pool_id=None</em>, <em class="sig-param">backend_port=None</em>, <em class="sig-param">disable_outbound_snat=None</em>, <em class="sig-param">enable_floating_ip=None</em>, <em class="sig-param">enable_tcp_reset=None</em>, <em class="sig-param">frontend_ip_configuration_name=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">load_distribution=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">probe_id=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_address_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_outbound_snat</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_floating_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tcp_reset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_distribution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">probe_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Rule.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
@@ -981,93 +981,93 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.backend_address_pool_id">
-<code class="sig-name descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_address_pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>A reference to a Backend Address Pool over which this Load Balancing Rule operates.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.backend_port">
-<code class="sig-name descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.disable_outbound_snat">
-<code class="sig-name descname">disable_outbound_snat</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.disable_outbound_snat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_outbound_snat</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.disable_outbound_snat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is snat enabled for this Load Balancer Rule? Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.enable_floating_ip">
-<code class="sig-name descname">enable_floating_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.enable_floating_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_floating_ip</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.enable_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Are the Floating IPs enabled for this Load Balncer Rule? A “floating” IP is reassigned to a secondary server in case the primary server fails. Required to configure a SQL AlwaysOn Availability Group. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.enable_tcp_reset">
-<code class="sig-name descname">enable_tcp_reset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_tcp_reset</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is TCP Reset enabled for this Load Balancer Rule? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.frontend_ip_configuration_name">
-<code class="sig-name descname">frontend_ip_configuration_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.frontend_ip_configuration_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_ip_configuration_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.frontend_ip_configuration_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the frontend IP configuration to which the rule is associated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.frontend_port">
-<code class="sig-name descname">frontend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.frontend_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.frontend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 0 and 65534, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.idle_timeout_in_minutes">
-<code class="sig-name descname">idle_timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">idle_timeout_in_minutes</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the idle timeout in minutes for TCP connections. Valid values are between <code class="docutils literal notranslate"><span class="pre">4</span></code> and <code class="docutils literal notranslate"><span class="pre">30</span></code> minutes. Defaults to <code class="docutils literal notranslate"><span class="pre">4</span></code> minutes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.load_distribution">
-<code class="sig-name descname">load_distribution</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.load_distribution" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_distribution</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.load_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the load balancing distribution type to be used by the Load Balancer. Possible values are: <code class="docutils literal notranslate"><span class="pre">Default</span></code> – The load balancer is configured to use a 5 tuple hash to map traffic to available servers. <code class="docutils literal notranslate"><span class="pre">SourceIP</span></code> – The load balancer is configured to use a 2 tuple hash to map traffic to available servers. <code class="docutils literal notranslate"><span class="pre">SourceIPProtocol</span></code> – The load balancer is configured to use a 3 tuple hash to map traffic to available servers. Also known as Session Persistence, where  the options are called <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">IP</span></code> and <code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">IP</span> <span class="pre">and</span> <span class="pre">Protocol</span></code> respectively.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.loadbalancer_id">
-<code class="sig-name descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">loadbalancer_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Load Balancer in which to create the Rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the LB Rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.probe_id">
-<code class="sig-name descname">probe_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.probe_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">probe_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.probe_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>A reference to a Probe used by this Load Balancing Rule.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.protocol">
-<code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.protocol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">protocol</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.lb.Rule.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.Rule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_address_pool_id=None</em>, <em class="sig-param">backend_port=None</em>, <em class="sig-param">disable_outbound_snat=None</em>, <em class="sig-param">enable_floating_ip=None</em>, <em class="sig-param">enable_tcp_reset=None</em>, <em class="sig-param">frontend_ip_configuration_id=None</em>, <em class="sig-param">frontend_ip_configuration_name=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">load_distribution=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">probe_id=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_address_pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_outbound_snat</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_floating_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_tcp_reset</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_ip_configuration_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">idle_timeout_in_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_distribution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">probe_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Rule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1095,9 +1095,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.Rule.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1113,9 +1113,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.lb.Rule.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1133,9 +1133,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.lb.get_backend_address_pool">
-<code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">get_backend_address_pool</code><span class="sig-paren">(</span><em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_backend_address_pool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">get_backend_address_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">loadbalancer_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_backend_address_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer’s Backend Address Pool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1147,9 +1147,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_azure.lb.get_lb">
-<code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">get_lb</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_lb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azure.lb.</code><code class="sig-name descname">get_lb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_lb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

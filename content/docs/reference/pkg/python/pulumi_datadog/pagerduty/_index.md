@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-datadog/issues">pulumi/pulumi-datadog repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/issues">terraform-providers/terraform-provider-datadog repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_datadog.pagerduty"></span><dl class="class">
+<span class="target" id="module-pulumi_datadog.pagerduty"></span><dl class="py class">
 <dt id="pulumi_datadog.pagerduty.Integration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.pagerduty.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_token=None</em>, <em class="sig-param">individual_services=None</em>, <em class="sig-param">schedules=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">subdomain=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.pagerduty.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">individual_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Integration resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -29,27 +29,27 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">service_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Your Service name associated service key in Pagerduty.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Your Service name in PagerDuty.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.pagerduty.Integration.api_token">
-<code class="sig-name descname">api_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.api_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">api_token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.api_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Your PagerDuty API token.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.pagerduty.Integration.individual_services">
-<code class="sig-name descname">individual_services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.individual_services" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">individual_services</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.individual_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean to specify whether or not individual service objects specified by <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource are to be used. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">services</span></code> key.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.pagerduty.Integration.schedules">
-<code class="sig-name descname">schedules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.schedules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">schedules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.schedules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of your schedule URLs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.pagerduty.Integration.services">
-<code class="sig-name descname">services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.services" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">services</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of PagerDuty service objects. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">services</span></code> list is now deprecated in favour of <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource. Note that <code class="docutils literal notranslate"><span class="pre">individual_services</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to ignore the <code class="docutils literal notranslate"><span class="pre">service</span></code> attribute and use individual services properly.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">service_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Your Service name associated service key in Pagerduty.</p></li>
@@ -57,15 +57,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.pagerduty.Integration.subdomain">
-<code class="sig-name descname">subdomain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.subdomain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subdomain</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.subdomain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Your PagerDuty account’s personalized subdomain name.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.pagerduty.Integration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_token=None</em>, <em class="sig-param">individual_services=None</em>, <em class="sig-param">schedules=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">subdomain=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">individual_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schedules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomain</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -91,9 +91,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.pagerduty.Integration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -109,9 +109,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.pagerduty.Integration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -129,9 +129,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_datadog.pagerduty.ServiceObject">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.pagerduty.</code><code class="sig-name descname">ServiceObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">service_key=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.pagerduty.</code><code class="sig-name descname">ServiceObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to individual Service Objects of Datadog - PagerDuty integrations. Note that the Datadog - PagerDuty integration must be activated (either manually in the Datadog UI or by using <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty.html">pagerduty.Integration</a>) in order for this resource to be usable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -142,15 +142,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.pagerduty.ServiceObject.service_name">
-<code class="sig-name descname">service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.service_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.service_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Your Service name in PagerDuty.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.pagerduty.ServiceObject.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">service_key=None</em>, <em class="sig-param">service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServiceObject resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -165,9 +165,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.pagerduty.ServiceObject.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -183,9 +183,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.pagerduty.ServiceObject.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

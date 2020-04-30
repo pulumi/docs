@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.hpc"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.hpc"></span><dl class="py class">
 <dt id="pulumi_azure.hpc.Cache">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">Cache</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_size_in_gb=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">Cache</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_size_in_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HPC Cache.</p>
 <blockquote>
 <div><p><strong>Note</strong>: During the first several months of the GA release, a request must be made to the Azure HPC Cache team to add your subscription to the access list before it can be used to create a cache instance. Fill out <a class="reference external" href="https://aka.ms/onboard-hpc-cache">this form</a> to request access.</p>
@@ -34,51 +34,51 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.cache_size_in_gb">
-<code class="sig-name descname">cache_size_in_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.cache_size_in_gb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cache_size_in_gb</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.cache_size_in_gb" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the HPC Cache, in GB. Possible values are <code class="docutils literal notranslate"><span class="pre">3072</span></code>, <code class="docutils literal notranslate"><span class="pre">6144</span></code>, <code class="docutils literal notranslate"><span class="pre">12288</span></code>, <code class="docutils literal notranslate"><span class="pre">24576</span></code>, and <code class="docutils literal notranslate"><span class="pre">49152</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure Region where the HPC Cache should be created. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.mount_addresses">
-<code class="sig-name descname">mount_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.mount_addresses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mount_addresses</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.mount_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of IP Addresses where the HPC Cache can be mounted.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the HPC Cache. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which to create the HPC Cache. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.sku_name">
-<code class="sig-name descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.sku_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sku_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.sku_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SKU of HPC Cache to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_2G</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_4G</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_8G</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.Cache.subnet_id">
-<code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.subnet_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnet_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.Cache.subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Subnet for the HPC Cache. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.Cache.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_size_in_gb=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">mount_addresses=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_size_in_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mount_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sku_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cache resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -99,9 +99,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.Cache.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -117,9 +117,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.Cache.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.Cache.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -137,9 +137,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.hpc.CacheBlobTarget">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheBlobTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_path=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_container_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheBlobTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_container_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Blob Target within a HPC Cache.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -154,39 +154,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.cache_name">
-<code class="sig-name descname">cache_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.cache_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cache_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.cache_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name HPC Cache, which the HPC Cache Blob Target will be added to. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the HPC Cache Blob Target. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.namespace_path">
-<code class="sig-name descname">namespace_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.namespace_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">namespace_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.namespace_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The client-facing file path of the HPC Cache Blob Target.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which to create the HPC Cache Blob Target. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.storage_container_id">
-<code class="sig-name descname">storage_container_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.storage_container_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">storage_container_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.storage_container_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Resource Manager ID of the Storage Container used as the HPC Cache Blob Target. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_path=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_container_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">storage_container_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CacheBlobTarget resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -205,9 +205,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -223,9 +223,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.CacheBlobTarget.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -243,9 +243,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.hpc.CacheNfsTarget">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheNfsTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_junctions=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">target_host_name=None</em>, <em class="sig-param">usage_model=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheNfsTarget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_junctions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a NFS Target within a HPC Cache.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -267,21 +267,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">nfsExport</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The NFS export of this NFS target within the HPC Cache NFS Target.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The relative subdirectory path from the <code class="docutils literal notranslate"><span class="pre">nfs_export</span></code> to map to the <code class="docutils literal notranslate"><span class="pre">namespace_path</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, in which case the whole <code class="docutils literal notranslate"><span class="pre">nfs_export</span></code> is exported.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.cache_name">
-<code class="sig-name descname">cache_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.cache_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cache_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.cache_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the HPC Cache NFS Target. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.namespace_junctions">
-<code class="sig-name descname">namespace_junctions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.namespace_junctions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">namespace_junctions</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.namespace_junctions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times to define multiple <code class="docutils literal notranslate"><span class="pre">namespace_junction</span></code>. Each <code class="docutils literal notranslate"><span class="pre">namespace_juntion</span></code> block supports fields documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client-facing file path of this NFS target within the HPC Cache NFS Target.</p></li>
@@ -290,27 +290,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which to create the HPC Cache NFS Target. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.target_host_name">
-<code class="sig-name descname">target_host_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.target_host_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">target_host_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.target_host_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address or fully qualified domain name (FQDN) of the HPC Cache NFS target. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.usage_model">
-<code class="sig-name descname">usage_model</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.usage_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">usage_model</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.usage_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of usage of the HPC Cache NFS Target.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_junctions=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">target_host_name=None</em>, <em class="sig-param">usage_model=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace_junctions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">usage_model</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CacheNfsTarget resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -336,9 +336,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -354,9 +354,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.hpc.CacheNfsTarget.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

@@ -31,6 +31,7 @@ TOOLS_REPOS=(
     "pulumi-keycloak"
     "pulumi-kubernetes"
     "pulumi-kubernetesx"
+    "pulumi-kong"
     "pulumi-linode"
     "pulumi-mailgun"
     "pulumi-mongodbatlas"
