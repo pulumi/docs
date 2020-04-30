@@ -13,33 +13,33 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-alicloud/issues">pulumi/pulumi-alicloud repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_alicloud.pvtz"></span><dl class="class">
+<span class="target" id="module-pulumi_alicloud.pvtz"></span><dl class="py class">
 <dt id="pulumi_alicloud.pvtz.AwaitableGetZoneRecordsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">AwaitableGetZoneRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.AwaitableGetZoneRecordsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">AwaitableGetZoneRecordsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.AwaitableGetZoneRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.pvtz.AwaitableGetZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.pvtz.GetZoneRecordsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">GetZoneRecordsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZoneRecordsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">GetZoneRecordsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">records</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZoneRecordsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZoneRecords.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZoneRecordsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZoneRecordsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZoneRecordsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZoneRecordsResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Private Zone Record IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZoneRecordsResult.records">
 <code class="sig-name descname">records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZoneRecordsResult.records" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of zone records. Each element contains the following attributes:</p>
@@ -47,29 +47,29 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.pvtz.GetZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZones.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZonesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZonesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZonesResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of zone IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZonesResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZonesResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of zone names.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.GetZonesResult.zones">
 <code class="sig-name descname">zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.GetZonesResult.zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of zones. Each element contains the following attributes:</p>
@@ -77,9 +77,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.pvtz.Zone">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proxy_pattern=None</em>, <em class="sig-param">remark=None</em>, <em class="sig-param">user_client_ip=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remark</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_client_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Zone resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -98,21 +98,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.Zone.lang">
-<code class="sig-name descname">lang</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.lang" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lang</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.lang" title="Permalink to this definition">¶</a></dt>
 <dd><p>The language. Valid values: “zh”, “en”, “jp”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.Zone.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Private Zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.Zone.proxy_pattern">
-<code class="sig-name descname">proxy_pattern</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.proxy_pattern" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">proxy_pattern</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.proxy_pattern" title="Permalink to this definition">¶</a></dt>
 <dd><p>The recursive DNS proxy. Valid values:</p>
 <ul class="simple">
 <li><p>ZONE: indicates that the recursive DNS proxy is disabled.</p></li>
@@ -120,27 +120,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.Zone.record_count">
-<code class="sig-name descname">record_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.record_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">record_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.record_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The count of the Private Zone Record.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.Zone.remark">
-<code class="sig-name descname">remark</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.remark" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remark</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.remark" title="Permalink to this definition">¶</a></dt>
 <dd><p>The remark of the Private Zone.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.Zone.user_client_ip">
-<code class="sig-name descname">user_client_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.user_client_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_client_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.user_client_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address of the client.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.Zone.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">is_ptr=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proxy_pattern=None</em>, <em class="sig-param">record_count=None</em>, <em class="sig-param">remark=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">user_client_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_ptr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy_pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">record_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remark</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_client_ip</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -170,9 +170,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.Zone.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -188,9 +188,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.Zone.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.Zone.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -208,9 +208,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">ZoneAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">user_client_ip=None</em>, <em class="sig-param">vpc_ids=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">ZoneAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_client_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpcs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ZoneAttachment resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -224,27 +224,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">regionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region of the vpc. If not set, the current region will instead of.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Id of the vpc.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.lang">
-<code class="sig-name descname">lang</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.lang" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lang</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.lang" title="Permalink to this definition">¶</a></dt>
 <dd><p>The language of code.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.user_client_ip">
-<code class="sig-name descname">user_client_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.user_client_ip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_client_ip</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.user_client_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user custom IP address.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.vpc_ids">
-<code class="sig-name descname">vpc_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.vpc_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpc_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.vpc_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id List of the VPC with the same region, for example:[“vpc-1”,”vpc-2”].</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.vpcs">
-<code class="sig-name descname">vpcs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.vpcs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vpcs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The List of the VPC:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">regionId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region of the vpc. If not set, the current region will instead of.</p></li>
@@ -252,15 +252,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.zone_id">
-<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.zone_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Private Zone Record.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">user_client_ip=None</em>, <em class="sig-param">vpc_ids=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lang</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_client_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpcs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ZoneAttachment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -284,9 +284,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -302,9 +302,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.ZoneAttachment.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneAttachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -322,9 +322,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">ZoneRecord</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">resource_record=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">ZoneRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_record</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ZoneRecord resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -334,51 +334,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] type: The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
 :param pulumi.Input[str] value: The value of the Private Zone Record.
 :param pulumi.Input[str] zone_id: The name of the Private Zone Record.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.priority">
-<code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.priority" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">priority</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>The priority of the Private Zone Record. At present, only can “MX” record support it. Valid values: [1-50]. Default to 1.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.record_id">
-<code class="sig-name descname">record_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.record_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">record_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.record_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Private Zone Record ID.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.resource_record">
-<code class="sig-name descname">resource_record</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.resource_record" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_record</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.resource_record" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource record of the Private Zone Record.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.ttl">
-<code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ttl of the Private Zone Record.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.type">
-<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.value">
-<code class="sig-name descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">value</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value of the Private Zone Record.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.zone_id">
-<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.zone_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Private Zone Record.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">record_id=None</em>, <em class="sig-param">resource_record=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">record_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_record</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ZoneRecord resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -399,9 +399,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -417,9 +417,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_alicloud.pvtz.ZoneRecord.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.ZoneRecord.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -437,9 +437,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.pvtz.get_zone_records">
-<code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zone_records</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zone_records" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zone_records</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zone_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides Private Zone Records resource information owned by an Alibaba Cloud account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -452,9 +452,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.pvtz.get_zones">
-<code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zones" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyword</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
