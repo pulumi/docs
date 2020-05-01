@@ -13,11 +13,11 @@ notitle: true
 <dd><p>Create a Acl resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] acl_resource_name: The name of the resouce</p>
+:param pulumi.Input[str] acl_resource_name: The name of the resource</p>
 <dl class="py attribute">
 <dt id="pulumi_kafka.Acl.acl_resource_name">
 <code class="sig-name descname">acl_resource_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kafka.Acl.acl_resource_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resouce</p>
+<dd><p>The name of the resource</p>
 </dd></dl>
 
 <dl class="py method">
@@ -31,7 +31,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>acl_resource_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resouce</p></li>
+<li><p><strong>acl_resource_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource</p></li>
 </ul>
 </dd>
 </dl>
