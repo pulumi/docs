@@ -26,6 +26,7 @@ Explore the resources and functions of the polardb module in the AliCloud packag
     <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
     <li><a href="getdatabases" title="GetDatabases"><span class="symbol function"></span>GetDatabases</a></li>
     <li><a href="getendpoints" title="GetEndpoints"><span class="symbol function"></span>GetEndpoints</a></li>
+    <li><a href="getnodeclasses" title="GetNodeClasses"><span class="symbol function"></span>GetNodeClasses</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
@@ -38,6 +39,6 @@ Explore the resources and functions of the polardb module in the AliCloud packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.3</dd>
 </dl>
 

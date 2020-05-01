@@ -426,7 +426,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ram.GetAccountAliasResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetAccountAliasResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -444,7 +444,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ram.GetAccountAliasesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetAccountAliasesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -462,7 +462,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ram.GetGroupsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -480,7 +480,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ram.GetPoliciesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetPoliciesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -510,7 +510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ram.GetRolesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetRolesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -540,7 +540,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ram.GetUsersResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ram.GetUsersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1619,17 +1619,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ids</strong> (<em>list</em>) – A list of ram role IDs.</p></li>
-<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the role name.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – <ul>
+<li><p>A list of ram role IDs.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available 1.53.0+) - A list of ram role IDs.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the role name.</p></li>
 <li><p><strong>policy_name</strong> (<em>str</em>) – Filter results by a specific policy name. If you set this parameter without setting <code class="docutils literal notranslate"><span class="pre">policy_type</span></code>, the later will be automatically set to <code class="docutils literal notranslate"><span class="pre">System</span></code>. The resulting roles will be attached to the specified policy.</p></li>
 <li><p><strong>policy_type</strong> (<em>str</em>) – Filter results by a specific policy type. Valid values are <code class="docutils literal notranslate"><span class="pre">Custom</span></code> and <code class="docutils literal notranslate"><span class="pre">System</span></code>. If you set this parameter, you must set <code class="docutils literal notranslate"><span class="pre">policy_name</span></code> as well.</p></li>
 </ul>
@@ -1645,17 +1639,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>group_name</strong> (<em>str</em>) – Filter results by a specific group name. Returned users are in the specified group.</p></li>
-<li><p><strong>ids</strong> (<em>list</em>) – A list of ram user IDs.</p></li>
-<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter resulting users by their names.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – <ul>
+<li><p>A list of ram user IDs.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available 1.53.0+) - A list of ram user IDs.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter resulting users by their names.</p></li>
 <li><p><strong>policy_name</strong> (<em>str</em>) – Filter results by a specific policy name. If you set this parameter without setting <code class="docutils literal notranslate"><span class="pre">policy_type</span></code>, the later will be automatically set to <code class="docutils literal notranslate"><span class="pre">System</span></code>. Returned users are attached to the specified policy.</p></li>
 <li><p><strong>policy_type</strong> (<em>str</em>) – Filter results by a specific policy type. Valid values are <code class="docutils literal notranslate"><span class="pre">Custom</span></code> and <code class="docutils literal notranslate"><span class="pre">System</span></code>. If you set this parameter, you must set <code class="docutils literal notranslate"><span class="pre">policy_name</span></code> as well.</p></li>
 </ul>

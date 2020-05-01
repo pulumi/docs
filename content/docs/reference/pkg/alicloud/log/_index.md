@@ -12,6 +12,7 @@ Explore the resources and functions of the log module in the AliCloud package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alert" title="Alert"><span class="symbol resource"></span>Alert</a></li>
+    <li><a href="audit" title="Audit"><span class="symbol resource"></span>Audit</a></li>
     <li><a href="logtailattachment" title="LogTailAttachment"><span class="symbol resource"></span>LogTailAttachment</a></li>
     <li><a href="logtailconfig" title="LogTailConfig"><span class="symbol resource"></span>LogTailConfig</a></li>
     <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>
@@ -29,6 +30,6 @@ Explore the resources and functions of the log module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.3</dd>
 </dl>
 

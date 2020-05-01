@@ -263,6 +263,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.polardb.AwaitableGetNodeClassesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetNodeClassesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_node_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetNodeClassesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.polardb.AwaitableGetZonesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zones</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -412,6 +417,12 @@ databases.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.polardb.Cluster.connection_string">
+<code class="sig-name descname">connection_string</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Cluster.connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.Cluster.db_node_class">
 <code class="sig-name descname">db_node_class</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Cluster.db_node_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>The db_node_class of cluster node.</p>
@@ -505,7 +516,7 @@ databases.</p>
 
 <dl class="py method">
 <dt id="pulumi_alicloud.polardb.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_node_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintain_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modify_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewal_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_node_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintain_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">modify_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewal_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -515,6 +526,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.</p></li>
+<li><p><strong>connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.81.0+) PolarDB cluster connection string. Only return the Primary endpoint address if security_ips is configured.</p></li>
 <li><p><strong>db_node_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The db_node_class of cluster node.</p></li>
 <li><p><strong>db_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database type. Value options: MySQL, Oracle, PostgreSQL.</p></li>
 <li><p><strong>db_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> <code class="docutils literal notranslate"><span class="pre">DBVersion</span></code>.</p>
@@ -950,7 +962,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.GetAccountsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetAccountsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -986,7 +998,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.GetClustersResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetClustersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1016,7 +1028,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.GetDatabasesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetDatabasesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1046,7 +1058,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.GetEndpointsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetEndpointsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.polardb.GetNodeClassesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">GetNodeClassesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_node_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.GetNodeClassesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNodeClasses.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.polardb.GetNodeClassesResult.classes">
+<code class="sig-name descname">classes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetNodeClassesResult.classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of PolarDB node classes. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.polardb.GetNodeClassesResult.db_node_class">
+<code class="sig-name descname">db_node_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetNodeClassesResult.db_node_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>PolarDB node available class.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.polardb.GetNodeClassesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetNodeClassesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.polardb.GetNodeClassesResult.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetNodeClassesResult.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Zone to launch the PolarDB cluster.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1058,7 +1100,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.polardb.GetZonesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1149,6 +1191,27 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>db_cluster_id</strong> (<em>str</em>) – PolarDB cluster ID.</p></li>
 <li><p><strong>db_endpoint_id</strong> (<em>str</em>) – endpoint of the cluster.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.polardb.get_node_classes">
+<code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">get_node_classes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db_node_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">db_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.get_node_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides the PolarDB node classes resource available info of Alibaba Cloud.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.81.0+</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_node_class</strong> (<em>str</em>) – The PolarDB node class type by the user.</p></li>
+<li><p><strong>db_type</strong> (<em>str</em>) – Database type. Options are <code class="docutils literal notranslate"><span class="pre">MySQL</span></code>, <code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code>, <code class="docutils literal notranslate"><span class="pre">Oracle</span></code>. If db_type is set, db_version also needs to be set.</p></li>
+<li><p><strong>db_version</strong> (<em>str</em>) – Database version required by the user. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/98169.htm">detail info</a> <code class="docutils literal notranslate"><span class="pre">DBVersion</span></code>. If db_version is set, db_type also needs to be set.</p></li>
+<li><p><strong>pay_type</strong> (<em>str</em>) – Filter the results by charge type. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code> and <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>region_id</strong> (<em>str</em>) – The Region to launch the PolarDB cluster.</p></li>
+<li><p><strong>zone_id</strong> (<em>str</em>) – The Zone to launch the PolarDB cluster.</p></li>
 </ul>
 </dd>
 </dl>

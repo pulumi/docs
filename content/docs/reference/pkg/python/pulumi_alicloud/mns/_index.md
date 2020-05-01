@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_alicloud.mns.GetQueuesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetQueuesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -59,7 +59,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_alicloud.mns.GetTopicSubscriptionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicSubscriptionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -83,7 +83,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_alicloud.mns.GetTopicsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.GetTopicsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -311,6 +311,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Two topics subscription on a single account in the same topic cannot have the same name. A topic subscription name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
 <li><p><strong>notify_content_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. The valid values: ‘SIMPLIFIED’, ‘XML’ and ‘JSON’. Default to ‘SIMPLIFIED’.</p></li>
 <li><p><strong>notify_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyStrategy attribute of Subscription. This attribute specifies the retry strategy when message sending fails. the attribute has two value EXPONENTIAL_DECAY_RETR or BACKOFF_RETRY. Default value to BACKOFF_RETRY .</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The topic which The subscription belongs to was named with the name.A topic name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
 </ul>
 </dd>
 </dl>
@@ -349,6 +350,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The NotifyStrategy attribute of Subscription. This attribute specifies the retry strategy when message sending fails. the attribute has two value EXPONENTIAL_DECAY_RETR or BACKOFF_RETRY. Default value to BACKOFF_RETRY .</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_alicloud.mns.TopicSubscription.topic_name">
+<code class="sig-name descname">topic_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mns.TopicSubscription.topic_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The topic which The subscription belongs to was named with the name.A topic name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_alicloud.mns.TopicSubscription.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter_tag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_content_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.TopicSubscription.get" title="Permalink to this definition">¶</a></dt>
@@ -376,6 +383,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Two topics subscription on a single account in the same topic cannot have the same name. A topic subscription name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
 <li><p><strong>notify_content_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyContentFormat attribute of Subscription. This attribute specifies the content format of the messages pushed to users. The valid values: ‘SIMPLIFIED’, ‘XML’ and ‘JSON’. Default to ‘SIMPLIFIED’.</p></li>
 <li><p><strong>notify_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NotifyStrategy attribute of Subscription. This attribute specifies the retry strategy when message sending fails. the attribute has two value EXPONENTIAL_DECAY_RETR or BACKOFF_RETRY. Default value to BACKOFF_RETRY .</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The topic which The subscription belongs to was named with the name.A topic name must start with an English letter or a digit, and can contain English letters, digits, and hyphens, with the length not exceeding 256 characters.</p></li>
 </ul>
 </dd>
 </dl>

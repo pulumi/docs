@@ -14,6 +14,250 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.ecs"></span><dl class="py class">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AutoProvisioningGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_provisioning_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_provisioning_group_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_target_capacity_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_as_you_go_allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_as_you_go_target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_instance_interruption_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a ECS auto provisioning group resource which is a solution that uses preemptive instances and pay_as_you_go instances to rapidly deploy clusters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.79.0+</p>
+</div></blockquote>
+<p>The config mapping supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> - (Optional) The instance type of the Nth extended configurations of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_price</span></code> - (Required) The maximum price of the instance type specified in the Nth extended configurations of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> - (Required) The ID of the VSwitch in the Nth extended configurations of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weighted_capacity</span></code> - (Optional) The weight of the instance type specified in the Nth extended configurations of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> - (Optional) The priority of the instance type specified in the Nth extended configurations of the launch template. A value of 0 indicates the highest priority.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_target_capacity_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of supplemental instances. When the total value of <cite>PayAsYouGoTargetCapacity</cite> and <cite>SpotTargetCapacity</cite> is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:<cite>PayAsYouGo</cite>: Pay-as-you-go instances; <cite>Spot</cite>: Preemptible instances, Default value: <code class="docutils literal notranslate"><span class="pre">Spot</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the auto provisioning group.</p></li>
+<li><p><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code> and <code class="docutils literal notranslate"><span class="pre">termination</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>.</p></li>
+<li><p><strong>launch_template_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – DataDisk mappings to attach to ecs instance. See Block config below for details.</p></li>
+<li><p><strong>launch_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance launch template associated with the auto provisioning group.</p></li>
+<li><p><strong>launch_template_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the instance launch template associated with the auto provisioning group.</p></li>
+<li><p><strong>max_spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The global maximum price for preemptible instances in the auto provisioning group. If both the <code class="docutils literal notranslate"><span class="pre">MaxSpotPrice</span></code> and <code class="docutils literal notranslate"><span class="pre">LaunchTemplateConfig.N.MaxPrice</span></code> parameters are specified, the maximum price is the lower value of the two.</p></li>
+<li><p><strong>pay_as_you_go_allocation_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scale-out policy for pay-as-you-go instances. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code> and <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><strong>pay_as_you_go_target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target capacity of pay-as-you-go instances in the auto provisioning group.</p></li>
+<li><p><strong>spot_allocation_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scale-out policy for preemptible instances. Valid values:<cite>lowest-price</cite> and <code class="docutils literal notranslate"><span class="pre">diversified</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><strong>spot_instance_interruption_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default behavior after preemptible instances are shut down. Value values: <code class="docutils literal notranslate"><span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">terminate</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p></li>
+<li><p><strong>spot_instance_pools_to_use_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – This parameter takes effect when the <code class="docutils literal notranslate"><span class="pre">SpotAllocationStrategy</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>. The auto provisioning group selects instance types of the lowest cost to create instances.</p></li>
+<li><p><strong>spot_target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target capacity of preemptible instances in the auto provisioning group.</p></li>
+<li><p><strong>terminate_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to release instances of the auto provisioning group. Valid values:<cite>false</cite> and <code class="docutils literal notranslate"><span class="pre">true</span></code>, default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>terminate_instances_with_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code>, default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>total_target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.</p></li>
+<li><p><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the <code class="docutils literal notranslate"><span class="pre">valid_until</span></code> parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.</p></li>
+<li><p><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the <code class="docutils literal notranslate"><span class="pre">valid_from</span></code> parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>launch_template_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.default_target_capacity_type">
+<code class="sig-name descname">default_target_capacity_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.default_target_capacity_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of supplemental instances. When the total value of <code class="docutils literal notranslate"><span class="pre">PayAsYouGoTargetCapacity</span></code> and <code class="docutils literal notranslate"><span class="pre">SpotTargetCapacity</span></code> is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:<cite>PayAsYouGo</cite>: Pay-as-you-go instances; <cite>Spot</cite>: Preemptible instances, Default value: <code class="docutils literal notranslate"><span class="pre">Spot</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the auto provisioning group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.excess_capacity_termination_policy">
+<code class="sig-name descname">excess_capacity_termination_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.excess_capacity_termination_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code> and <code class="docutils literal notranslate"><span class="pre">termination</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.launch_template_configs">
+<code class="sig-name descname">launch_template_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.launch_template_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>DataDisk mappings to attach to ecs instance. See Block config below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.launch_template_id">
+<code class="sig-name descname">launch_template_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.launch_template_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the instance launch template associated with the auto provisioning group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.launch_template_version">
+<code class="sig-name descname">launch_template_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.launch_template_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the instance launch template associated with the auto provisioning group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.max_spot_price">
+<code class="sig-name descname">max_spot_price</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.max_spot_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>The global maximum price for preemptible instances in the auto provisioning group. If both the <code class="docutils literal notranslate"><span class="pre">MaxSpotPrice</span></code> and <code class="docutils literal notranslate"><span class="pre">LaunchTemplateConfig.N.MaxPrice</span></code> parameters are specified, the maximum price is the lower value of the two.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.pay_as_you_go_allocation_strategy">
+<code class="sig-name descname">pay_as_you_go_allocation_strategy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.pay_as_you_go_allocation_strategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scale-out policy for pay-as-you-go instances. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code> and <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.pay_as_you_go_target_capacity">
+<code class="sig-name descname">pay_as_you_go_target_capacity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.pay_as_you_go_target_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target capacity of pay-as-you-go instances in the auto provisioning group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.spot_allocation_strategy">
+<code class="sig-name descname">spot_allocation_strategy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.spot_allocation_strategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scale-out policy for preemptible instances. Valid values:<code class="docutils literal notranslate"><span class="pre">lowest-price</span></code> and <code class="docutils literal notranslate"><span class="pre">diversified</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.spot_instance_interruption_behavior">
+<code class="sig-name descname">spot_instance_interruption_behavior</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.spot_instance_interruption_behavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default behavior after preemptible instances are shut down. Value values: <code class="docutils literal notranslate"><span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">terminate</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.spot_instance_pools_to_use_count">
+<code class="sig-name descname">spot_instance_pools_to_use_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.spot_instance_pools_to_use_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>This parameter takes effect when the <code class="docutils literal notranslate"><span class="pre">SpotAllocationStrategy</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>. The auto provisioning group selects instance types of the lowest cost to create instances.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.spot_target_capacity">
+<code class="sig-name descname">spot_target_capacity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.spot_target_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target capacity of preemptible instances in the auto provisioning group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.terminate_instances">
+<code class="sig-name descname">terminate_instances</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.terminate_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to release instances of the auto provisioning group. Valid values:<code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code>, default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.terminate_instances_with_expiration">
+<code class="sig-name descname">terminate_instances_with_expiration</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.terminate_instances_with_expiration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code>, default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.total_target_capacity">
+<code class="sig-name descname">total_target_capacity</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.total_target_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.valid_from">
+<code class="sig-name descname">valid_from</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.valid_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the <code class="docutils literal notranslate"><span class="pre">valid_until</span></code> parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.valid_until">
+<code class="sig-name descname">valid_until</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.valid_until" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the <code class="docutils literal notranslate"><span class="pre">valid_from</span></code> parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_provisioning_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_provisioning_group_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_target_capacity_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_as_you_go_allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pay_as_you_go_target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_instance_interruption_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">total_target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AutoProvisioningGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_target_capacity_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of supplemental instances. When the total value of <cite>PayAsYouGoTargetCapacity</cite> and <cite>SpotTargetCapacity</cite> is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:<cite>PayAsYouGo</cite>: Pay-as-you-go instances; <cite>Spot</cite>: Preemptible instances, Default value: <code class="docutils literal notranslate"><span class="pre">Spot</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the auto provisioning group.</p></li>
+<li><p><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code> and <code class="docutils literal notranslate"><span class="pre">termination</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>.</p></li>
+<li><p><strong>launch_template_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – DataDisk mappings to attach to ecs instance. See Block config below for details.</p></li>
+<li><p><strong>launch_template_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance launch template associated with the auto provisioning group.</p></li>
+<li><p><strong>launch_template_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the instance launch template associated with the auto provisioning group.</p></li>
+<li><p><strong>max_spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The global maximum price for preemptible instances in the auto provisioning group. If both the <code class="docutils literal notranslate"><span class="pre">MaxSpotPrice</span></code> and <code class="docutils literal notranslate"><span class="pre">LaunchTemplateConfig.N.MaxPrice</span></code> parameters are specified, the maximum price is the lower value of the two.</p></li>
+<li><p><strong>pay_as_you_go_allocation_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scale-out policy for pay-as-you-go instances. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code> and <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><strong>pay_as_you_go_target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target capacity of pay-as-you-go instances in the auto provisioning group.</p></li>
+<li><p><strong>spot_allocation_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scale-out policy for preemptible instances. Valid values:<cite>lowest-price</cite> and <code class="docutils literal notranslate"><span class="pre">diversified</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><strong>spot_instance_interruption_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default behavior after preemptible instances are shut down. Value values: <code class="docutils literal notranslate"><span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">terminate</span></code>,Default value: <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p></li>
+<li><p><strong>spot_instance_pools_to_use_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – This parameter takes effect when the <code class="docutils literal notranslate"><span class="pre">SpotAllocationStrategy</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>. The auto provisioning group selects instance types of the lowest cost to create instances.</p></li>
+<li><p><strong>spot_target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target capacity of preemptible instances in the auto provisioning group.</p></li>
+<li><p><strong>terminate_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to release instances of the auto provisioning group. Valid values:<cite>false</cite> and <code class="docutils literal notranslate"><span class="pre">true</span></code>, default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>terminate_instances_with_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code>, default value: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>total_target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.</p></li>
+<li><p><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the <code class="docutils literal notranslate"><span class="pre">valid_until</span></code> parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.</p></li>
+<li><p><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the <code class="docutils literal notranslate"><span class="pre">valid_from</span></code> parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>launch_template_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.ecs.AutoProvisioningGroup.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AutoProvisioningGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetDisksResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetDisksResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -686,7 +930,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetDisksResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDisksResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -728,7 +972,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetEipsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetEipsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -758,7 +1002,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetImagesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetImagesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -788,7 +1032,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypeFamiliesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -818,7 +1062,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetInstanceTypesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -854,7 +1098,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetInstancesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -932,7 +1176,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetKeyPairsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetKeyPairsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -968,7 +1212,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetNetworkInterfacesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetNetworkInterfacesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1040,7 +1284,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupRulesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupRulesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1082,7 +1326,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetSecurityGroupsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSecurityGroupsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1130,7 +1374,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.GetSnapshotsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetSnapshotsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2040,12 +2284,11 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 <li><p><code class="docutils literal notranslate"><span class="pre">cloud_essd</span></code>: The ESSD cloud disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ephemeral_ssd</span></code>: The local SSD disk.
 Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the data disk.</p>
 <ul>
@@ -2108,12 +2351,11 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><code class="docutils literal notranslate"><span class="pre">cloud_essd</span></code>: The ESSD cloud disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ephemeral_ssd</span></code>: The local SSD disk.
 Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the data disk.</p>
 <ul>
@@ -2551,12 +2793,11 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 <li><p><code class="docutils literal notranslate"><span class="pre">cloud_essd</span></code>: The ESSD cloud disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ephemeral_ssd</span></code>: The local SSD disk.
 Default to <code class="docutils literal notranslate"><span class="pre">cloud_efficiency</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool, ForceNew) Encrypted the data in this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the data disk.</p>
 <ul>
@@ -2858,6 +3099,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ram_role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RAM role name of the instance. You can use the RAM API ListRoles to query instance RAM role names.</p></li>
 <li><p><strong>security_enhancement_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether or not to activate the security enhancement feature and install network security software free of charge. Optional values: Active | Deactive.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group ID must be one in the same VPC.</p></li>
+<li><p><strong>spot_price_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – -(Optional)        Sets the maximum hourly instance price. Supports up to three decimal places.</p></li>
 <li><p><strong>spot_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The spot strategy for a Pay-As-You-Go instance. This parameter is valid and required only when InstanceChargeType is set to PostPaid. Value range:</p></li>
 </ul>
 </dd>
@@ -2916,7 +3158,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_ssd and cloud_essd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool) Encrypted the data in this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the data disk.</p>
 <ul>
@@ -2959,7 +3201,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_ssd and cloud_essd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - -(Optional, Bool) Encrypted the data in this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the data disk.</p>
 <ul>
@@ -3096,6 +3338,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.LaunchTemplate.spot_price_limit">
+<code class="sig-name descname">spot_price_limit</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.LaunchTemplate.spot_price_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>-(Optional)         Sets the maximum hourly instance price. Supports up to three decimal places.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.LaunchTemplate.spot_strategy">
 <code class="sig-name descname">spot_strategy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.LaunchTemplate.spot_strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The spot strategy for a Pay-As-You-Go instance. This parameter is valid and required only when InstanceChargeType is set to PostPaid. Value range:</p>
@@ -3224,6 +3472,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ram_role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RAM role name of the instance. You can use the RAM API ListRoles to query instance RAM role names.</p></li>
 <li><p><strong>security_enhancement_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether or not to activate the security enhancement feature and install network security software free of charge. Optional values: Active | Deactive.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group ID must be one in the same VPC.</p></li>
+<li><p><strong>spot_price_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – -(Optional)        Sets the maximum hourly instance price. Supports up to three decimal places.</p></li>
 <li><p><strong>spot_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The spot strategy for a Pay-As-You-Go instance. This parameter is valid and required only when InstanceChargeType is set to PostPaid. Value range:</p></li>
 </ul>
 </dd>
@@ -3282,7 +3531,7 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete_with_instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_ssd and cloud_essd disk. If the category of this data disk was ephemeral_ssd, please don’t set this param.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the data disk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - -(Optional, Bool) Encrypted the data in this disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the data disk.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the data disk.</p>
 <ul>

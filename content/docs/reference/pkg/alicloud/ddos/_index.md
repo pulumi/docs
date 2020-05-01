@@ -9,6 +9,12 @@ meta_desc: "Explore the resources and functions of the ddos module in the AliClo
 
 Explore the resources and functions of the ddos module in the AliCloud package.
 
+<h2 id="resources">Resources</h2>
+<ul class="api">
+    <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
+    <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
+</ul>
+
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getddosbgpinstances" title="GetDdosBgpInstances"><span class="symbol function"></span>GetDdosBgpInstances</a></li>
@@ -24,6 +30,6 @@ Explore the resources and functions of the ddos module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.3</dd>
 </dl>
 

@@ -229,6 +229,108 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.log.Audit">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">Audit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aliuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variable_map</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Audit" title="Permalink to this definition">¶</a></dt>
+<dd><p>SLS log audit exists in the form of log service app.</p>
+<p>In addition to inheriting all SLS functions, it also enhances the real-time automatic centralized collection of audit related logs across multi cloud products under multi accounts, and provides support for storage, query and information summary required by audit. It covers actiontrail, OSS, NAS, SLB, API gateway, RDS, WAF, cloud firewall, cloud security center and other products.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.81.0</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>aliuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aliuid value of your account.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SLS log audit.</p></li>
+<li><p><strong>multi_accounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – .Multi-account configuration, please fill in multiple aliuid.</p></li>
+<li><p><strong>variable_map</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Log audit detailed configuration.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.log.Audit.aliuid">
+<code class="sig-name descname">aliuid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Audit.aliuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aliuid value of your account.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.log.Audit.display_name">
+<code class="sig-name descname">display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Audit.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of SLS log audit.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.log.Audit.multi_accounts">
+<code class="sig-name descname">multi_accounts</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Audit.multi_accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>.Multi-account configuration, please fill in multiple aliuid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.log.Audit.variable_map">
+<code class="sig-name descname">variable_map</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.Audit.variable_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log audit detailed configuration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.log.Audit.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">aliuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multi_accounts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">variable_map</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Audit.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Audit resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>aliuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aliuid value of your account.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of SLS log audit.</p></li>
+<li><p><strong>multi_accounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – .Multi-account configuration, please fill in multiple aliuid.</p></li>
+<li><p><strong>variable_map</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Log audit detailed configuration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.log.Audit.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Audit.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.log.Audit.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.Audit.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.log.LogTailAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.log.</code><code class="sig-name descname">LogTailAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logtail_config_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">machine_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.log.LogTailAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Logtail access service is a log collection agent provided by Log Service.
@@ -447,33 +549,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Create a MachineGroup resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] identify_lists: The machine identification.
-:param pulumi.Input[str] identify_type: The machine identification type, including IP and user-defined identity. Valid values are “ip” and “userdefined”. Default to “ip”.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine group name, which is unique in the same project.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name to the machine group belongs.</p></li>
-<li><p><strong>topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The topic of a machine group.</p></li>
-</ul>
-</dd>
-</dl>
+:param pulumi.Input[list] identify_lists: The specific machine identification, which can be an IP address or user-defined identity.
+:param pulumi.Input[str] identify_type: The machine identification type, including IP and user-defined identity. Valid values are “ip” and “userdefined”. Default to “ip”.
+:param pulumi.Input[str] name: The machine group name, which is unique in the same project.
+:param pulumi.Input[str] project: The project name to the machine group belongs.
+:param pulumi.Input[str] topic: The topic of a machine group.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.log.MachineGroup.identify_lists">
 <code class="sig-name descname">identify_lists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.MachineGroup.identify_lists" title="Permalink to this definition">¶</a></dt>
-<dd><p>The machine identification.</p>
+<dd><p>The specific machine identification, which can be an IP address or user-defined identity.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_alicloud.log.MachineGroup.identify_type">
 <code class="sig-name descname">identify_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.log.MachineGroup.identify_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The machine identification type, including IP and user-defined identity. Valid values are “ip” and “userdefined”. Default to “ip”.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identify_list</span></code>- (Required) The specific machine identification, which can be an IP address or user-defined identity.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -505,17 +595,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>identify_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The machine identification.</p></li>
+<li><p><strong>identify_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The specific machine identification, which can be an IP address or user-defined identity.</p></li>
 <li><p><strong>identify_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine identification type, including IP and user-defined identity. Valid values are “ip” and “userdefined”. Default to “ip”.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `identify_list`- (Required) The specific machine identification, which can be an IP address or user-defined identity.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine group name, which is unique in the same project.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project name to the machine group belongs.</p></li>
 <li><p><strong>topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The topic of a machine group.</p></li>

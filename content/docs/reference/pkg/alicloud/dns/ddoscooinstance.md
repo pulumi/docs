@@ -28,7 +28,7 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const newInstance = new alicloud.dns.DdosCooInstance("newInstance", {
+const newInstance = new alicloud.ddos.DdosCooInstance("newInstance", {
     bandwidth: "30",
     baseBandwidth: "30",
     domainCount: "50",
@@ -40,6 +40,9 @@ const newInstance = new alicloud.dns.DdosCooInstance("newInstance", {
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: alicloud.dns.DdosCooInstance has been deprecated in favour of alicloud.ddos.DdosCooInstance
+
+<p class="resource-deprecated">Deprecated: {{% md %}}alicloud.dns.DdosCooInstance has been deprecated in favour of alicloud.ddos.DdosCooInstance{{% /md %}}</p>
 
 
 ## Create a DdosCooInstance Resource {#create}
