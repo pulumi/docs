@@ -60,7 +60,8 @@ for REPO in "${REPOS[@]}" ; do \
     ./scripts/gen_resource_docs.sh "$REPO" true
 
     if [ -n "${GIT_COMMIT:-}" ]; then
-      git add .
+      git add "./content/docs/reference/pkg/${REPO}/*"
+      git add "./content/docs/reference/pkg/${REPO}/**/*"
       git commit -am "Generate resource docs for pulumi-${REPO}"
     fi
 done
