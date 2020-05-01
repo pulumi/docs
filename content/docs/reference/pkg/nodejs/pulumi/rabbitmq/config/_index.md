@@ -35,35 +35,35 @@ git_sha: "8eebbe7bf97f98c06fd8e24cd11811b03016000b"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="cacertFile" data-link-title="cacertFile">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/8eebbe7bf97f98c06fd8e24cd11811b03016000b/sdk/nodejs/config/vars.ts#L9">
         let <strong>cacertFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cacertFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cacertFile&#34;) || utilities.getEnv(&#34;RABBITMQ_CACERT&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="endpoint" data-link-title="endpoint">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/8eebbe7bf97f98c06fd8e24cd11811b03016000b/sdk/nodejs/config/vars.ts#L10">
         let <strong>endpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpoint&#34;) || utilities.getEnv(&#34;RABBITMQ_ENDPOINT&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/8eebbe7bf97f98c06fd8e24cd11811b03016000b/sdk/nodejs/config/vars.ts#L11">
         let <strong>insecure</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insecure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecure&#34;) || utilities.getEnvBoolean(&#34;RABBITMQ_INSECURE&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/8eebbe7bf97f98c06fd8e24cd11811b03016000b/sdk/nodejs/config/vars.ts#L12">
         let <strong>password</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;) || utilities.getEnv(&#34;RABBITMQ_PASSWORD&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="username" data-link-title="username">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/8eebbe7bf97f98c06fd8e24cd11811b03016000b/sdk/nodejs/config/vars.ts#L13">
         let <strong>username</strong>
     </a>
 </h3>
