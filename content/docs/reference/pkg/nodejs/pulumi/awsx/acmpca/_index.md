@@ -27,14 +27,14 @@ git_sha: "6e41506897a3d7bf3985beb8ecdc596638047699"
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="AcmpcaMetricName" data-link-title="AcmpcaMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L20">
         type <strong>AcmpcaMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> AcmpcaMetricName = <span class='s2'>"CRLGenerated"</span> | <span class='s2'>"MisconfiguredCRLBucket"</span> | <span class='s2'>"Time"</span> | <span class='s2'>"Success"</span> | <span class='s2'>"Failure"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="crlGenerated" data-link-title="crlGenerated">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L42">
         function <strong>crlGenerated</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ git_sha: "6e41506897a3d7bf3985beb8ecdc596638047699"
 A certificate revocation list (CRL) was generated. This metric applies only to a private CA.
 
 <h3 class="pdoc-module-header" id="failure" data-link-title="failure">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L74">
         function <strong>failure</strong>
     </a>
 </h3>
@@ -58,7 +58,7 @@ A certificate revocation list (CRL) was generated. This metric applies only to a
 Indicates that an operation failed. This metric applies only to the IssueCertificate operation.
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L31">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ Note, individual metrics can easily be obtained without supplying the name using
 [metricXXX] functions.
 
 <h3 class="pdoc-module-header" id="misconfiguredCRLBucket" data-link-title="misconfiguredCRLBucket">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L50">
         function <strong>misconfiguredCRLBucket</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ The S3 bucket specified for the CRL is not correctly configured. Check the bucke
 metric applies only to a private CA.
 
 <h3 class="pdoc-module-header" id="success" data-link-title="success">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L67">
         function <strong>success</strong>
     </a>
 </h3>
@@ -101,7 +101,7 @@ Specifies whether a certificate was successfully issued. This metric applies onl
 IssueCertificate operation.
 
 <h3 class="pdoc-module-header" id="time" data-link-title="time">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/acmpca/metrics.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/acmpca/metrics.ts#L59">
         function <strong>time</strong>
     </a>
 </h3>
