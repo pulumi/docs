@@ -23,7 +23,7 @@ PULUMI_DOC_DATA_BASE=./data/pkg/nodejs/pulumi
 PARALLEL=0
 
 # Generates API documentation for a given package. The arguments are:
-#     * $1 - the simple name of the package
+#     * $1 - the simple name of the package (e.g., "azure" for the pulumi-azure package)
 #     * $2 - the package root directory (to run `make ensure` for dependency updates)
 #     * $3 - the package source directory, relative to the root, optionally empty if the same
 # If the PKGS envvar is set, only packages in that list (space delimited) are regenerated.
