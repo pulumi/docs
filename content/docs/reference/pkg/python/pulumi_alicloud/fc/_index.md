@@ -225,7 +225,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.fc.GetFunctionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetFunctionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -249,7 +249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.fc.GetServicesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetServicesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -279,7 +279,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.fc.GetTriggersResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetTriggersResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -309,7 +309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.fc.GetZonesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.fc.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -646,17 +646,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ids</strong> (<em>list</em>) – A list of functions ids.</p></li>
-<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by function name.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – <ul>
+<li><p>A list of functions ids.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of functions ids.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – Name of the service that contains the functions to find.</p>
+</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by function name.</p></li>
+<li><p><strong>service_name</strong> (<em>str</em>) – Name of the service that contains the functions to find.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -668,14 +664,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ids</strong> (<em>list</em>) – A list of FC services ids.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – <ul>
+<li><p>A list of FC services ids.</p></li>
+</ul>
+</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC service name.</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of FC services ids.
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="py function">
@@ -686,17 +682,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>function_name</strong> (<em>str</em>) – FC function name.</p></li>
-<li><p><strong>ids</strong> (<em>list</em>) – A list of FC triggers ids.</p></li>
-<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC trigger name.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – <ul>
+<li><p>A list of FC triggers ids.</p></li>
 </ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ids` (Optional, Available in 1.53.0+) - A list of FC triggers ids.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – FC service name.</p>
+</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by FC trigger name.</p></li>
+<li><p><strong>service_name</strong> (<em>str</em>) – FC service name.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

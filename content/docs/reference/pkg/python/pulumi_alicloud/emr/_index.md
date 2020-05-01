@@ -42,28 +42,26 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported ‘GATEWAY’ available in 1.61.0+.</p></li>
+<li><p><strong>deposit_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster deposit type, HALF_MANAGED or FULL_MANAGED.</p></li>
+<li><p><strong>eas_enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – High security cluster (true) or not. Default value is false.</p></li>
 <li><p><strong>emr_ver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.</p></li>
+<li><p><strong>high_availability_enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.</p></li>
 <li><p><strong>host_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p></li>
+<li><p><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Ssh key pair.</p></li>
+<li><p><strong>master_pwd</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Master ssh password.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – bootstrap action name.</p></li>
+<li><p><strong>option_software_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional software list.</p></li>
+<li><p><strong>related_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This specify the related cluster id, if this cluster is a Gateway.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Security Group ID for Cluster, you can also specify this key for each host group.</p></li>
+<li><p><strong>ssh_enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this is set true, we can ssh into cluster. Default value is false.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>use_local_metadb</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use local metadb. Default is false.</p></li>
+<li><p><strong>user_defined_emr_ecs_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.</p></li>
+<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Global vswitch id, you can also specify it in host group.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone ID, e.g. cn-huhehaote-a</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-</pre></div>
-</div>
 <p>The <strong>bootstrap_actions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action args, e.g. “–a=b”.</p></li>
@@ -100,9 +98,27 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.deposit_type">
+<code class="sig-name descname">deposit_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.deposit_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cluster deposit type, HALF_MANAGED or FULL_MANAGED.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.eas_enable">
+<code class="sig-name descname">eas_enable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.eas_enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>High security cluster (true) or not. Default value is false.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.emr_ver">
 <code class="sig-name descname">emr_ver</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.emr_ver" title="Permalink to this definition">¶</a></dt>
 <dd><p>EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.high_availability_enable">
+<code class="sig-name descname">high_availability_enable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.high_availability_enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -128,9 +144,45 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.key_pair_name">
+<code class="sig-name descname">key_pair_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.key_pair_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ssh key pair.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.master_pwd">
+<code class="sig-name descname">master_pwd</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.master_pwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Master ssh password.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>bootstrap action name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.option_software_lists">
+<code class="sig-name descname">option_software_lists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.option_software_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional software list.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.related_cluster_id">
+<code class="sig-name descname">related_cluster_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.related_cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>This specify the related cluster id, if this cluster is a Gateway.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.security_group_id">
+<code class="sig-name descname">security_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security Group ID for Cluster, you can also specify this key for each host group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.ssh_enable">
+<code class="sig-name descname">ssh_enable</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.ssh_enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this is set true, we can ssh into cluster. Default value is false.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -140,23 +192,27 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.use_local_metadb">
+<code class="sig-name descname">use_local_metadb</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.use_local_metadb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use local metadb. Default is false.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.user_defined_emr_ecs_role">
+<code class="sig-name descname">user_defined_emr_ecs_role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.user_defined_emr_ecs_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.emr.Cluster.vswitch_id">
+<code class="sig-name descname">vswitch_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.vswitch_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global vswitch id, you can also specify it in host group.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.emr.Cluster.zone_id">
 <code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.Cluster.zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Zone ID, e.g. cn-huhehaote-a</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> (Optional, ForceNew) Global vswitch id, you can also specify it in host group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">option_software_list</span></code> (Optional, ForceNew) Optional software list.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">high_availability_enable</span></code> (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">use_local_metadb</span></code> (Optional, ForceNew) Use local metadb. Default is false.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssh_enable</span></code> (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">master_pwd</span></code> (Optional, ForceNew) Master ssh password.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eas_enable</span></code> (Optional, ForceNew) High security cluster (true) or not. Default value is false.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_defined_emr_ecs_role</span></code> (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_pair_name</span></code> (Optional, ForceNew) Ssh key pair.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deposit_type</span></code> (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">related_cluster_id</span></code> (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -172,28 +228,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.</p></li>
 <li><p><strong>cluster_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported ‘GATEWAY’ available in 1.61.0+.</p></li>
+<li><p><strong>deposit_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cluster deposit type, HALF_MANAGED or FULL_MANAGED.</p></li>
+<li><p><strong>eas_enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – High security cluster (true) or not. Default value is false.</p></li>
 <li><p><strong>emr_ver</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.</p></li>
+<li><p><strong>high_availability_enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.</p></li>
 <li><p><strong>host_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).</p></li>
+<li><p><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Ssh key pair.</p></li>
+<li><p><strong>master_pwd</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Master ssh password.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – bootstrap action name.</p></li>
+<li><p><strong>option_software_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional software list.</p></li>
+<li><p><strong>related_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This specify the related cluster id, if this cluster is a Gateway.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Security Group ID for Cluster, you can also specify this key for each host group.</p></li>
+<li><p><strong>ssh_enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this is set true, we can ssh into cluster. Default value is false.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>use_local_metadb</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Use local metadb. Default is false.</p></li>
+<li><p><strong>user_defined_emr_ecs_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.</p></li>
+<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Global vswitch id, you can also specify it in host group.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Zone ID, e.g. cn-huhehaote-a</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-</pre></div>
-</div>
 <p>The <strong>bootstrap_actions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - bootstrap action args, e.g. “–a=b”.</p></li>
@@ -264,7 +318,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetDiskTypesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetDiskTypesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -288,7 +342,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetInstanceTypesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetInstanceTypesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -324,7 +378,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.emr.GetMainVersionsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.emr.GetMainVersionsResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">

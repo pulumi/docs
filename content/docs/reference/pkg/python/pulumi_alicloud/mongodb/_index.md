@@ -36,7 +36,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_alicloud.mongodb.GetInstancesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.GetInstancesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -78,7 +78,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_alicloud.mongodb.GetZonesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.GetZonesResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -122,18 +122,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.</p></li>
 <li><p><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of replica set nodes. Valid values: [3, 5, 7]</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).</p></li>
 <li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p></li>
+<li><p><strong>storage_engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
@@ -235,9 +227,6 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 <dt id="pulumi_alicloud.mongodb.Instance.replication_factor">
 <code class="sig-name descname">replication_factor</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.replication_factor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of replica set nodes. Valid values: [3, 5, 7]</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_engine</span></code> (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -268,6 +257,12 @@ The multiple zone ID can be retrieved by setting <code class="docutils literal n
 <dt id="pulumi_alicloud.mongodb.Instance.ssl_status">
 <code class="sig-name descname">ssl_status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.ssl_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Status of the SSL feature. <cite>Open</cite>: SSL is turned on; <cite>Closed</cite>: SSL is turned off.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.mongodb.Instance.storage_engine">
+<code class="sig-name descname">storage_engine</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.Instance.storage_engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -335,20 +330,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.</p></li>
 <li><p><strong>replica_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the mongo replica set</p></li>
 <li><p><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of replica set nodes. Valid values: [3, 5, 7]</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Instance log backup retention days. Available in 1.42.0+.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).</p></li>
 <li><p><strong>ssl_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Actions performed on SSL functions, Valid values: <cite>Open</cite>: turn on SSL encryption; <cite>Close</cite>: turn off SSL encryption; <code class="docutils literal notranslate"><span class="pre">Update</span></code>: update SSL certificate.</p></li>
 <li><p><strong>ssl_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the SSL feature. <cite>Open</cite>: SSL is turned on; <cite>Closed</cite>: SSL is turned off.</p></li>
+<li><p><strong>storage_engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
@@ -407,52 +394,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] account_password: Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
 :param pulumi.Input[list] backup_periods: MongoDB Instance backup period. It is required when <code class="docutils literal notranslate"><span class="pre">backup_time</span></code> was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
 :param pulumi.Input[str] backup_time: MongoDB instance backup time. It is required when <code class="docutils literal notranslate"><span class="pre">backup_period</span></code> was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like “23:00Z-24:00Z”.
-:param pulumi.Input[str] engine_version: Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/61884.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>,System default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
-<li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a instance. If the <code class="docutils literal notranslate"><span class="pre">account_password</span></code> is filled in, this field will be ignored.</p></li>
-<li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating instance with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
-</p></li>
-<li><p><strong>mongo_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The mongo-node count can be purchased is in range of [2, 32].</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
-<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.</p></li>
-<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
-<li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to <code class="docutils literal notranslate"><span class="pre">[&quot;127.0.0.1&quot;]</span></code>.</p></li>
-<li><p><strong>shard_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – the shard-node count can be purchased is in range of [2, 32].</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
-<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
-<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
-If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in one of them.</p></li>
-</ul>
-</dd>
-</dl>
+:param pulumi.Input[str] engine_version: Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/61884.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>. 
+:param pulumi.Input[str] instance_charge_type: Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>,System default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.
+:param pulumi.Input[str] kms_encrypted_password: An KMS encrypts password used to a instance. If the <code class="docutils literal notranslate"><span class="pre">account_password</span></code> is filled in, this field will be ignored.
+:param pulumi.Input[dict] kms_encryption_context: An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating instance with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.
+:param pulumi.Input[list] mongo_lists: The mongo-node count can be purchased is in range of [2, 32].
+:param pulumi.Input[str] name: The name of DB instance. It a string of 2 to 256 characters.
+:param pulumi.Input[float] period: The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.
+:param pulumi.Input[str] security_group_id: The Security Group ID of ECS.
+:param pulumi.Input[list] security_ip_lists: List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to <code class="docutils literal notranslate"><span class="pre">[&quot;127.0.0.1&quot;]</span></code>.
+:param pulumi.Input[list] shard_lists: the shard-node count can be purchased is in range of [2, 32].
+:param pulumi.Input[str] storage_engine: Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
+:param pulumi.Input[str] tde_status: The TDE(Transparent Data Encryption) status.
+:param pulumi.Input[str] vswitch_id: The virtual switch ID to launch DB instances in one VPC.
+:param pulumi.Input[str] zone_id: The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.</p>
+<blockquote>
+<div><p>If it is a multi-zone and <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code> is specified, the vswitch must in one of them.</p>
+</div></blockquote>
 <p>The <strong>mongo_lists</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Mongo node connection string</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the shard-node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Mongo node port</p>
 <ul>
@@ -462,7 +424,7 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </ul>
 <p>The <strong>shard_lists</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the shard-node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) -</p>
 <ul>
@@ -493,9 +455,6 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 <dt id="pulumi_alicloud.mongodb.ShardingInstance.engine_version">
 <code class="sig-name descname">engine_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/61884.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_engine</span></code> (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -521,16 +480,12 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 <code class="sig-name descname">mongo_lists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.mongo_lists" title="Permalink to this definition">¶</a></dt>
 <dd><p>The mongo-node count can be purchased is in range of [2, 32].</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">node_class</span></code> -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p>
-<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">connectString</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Mongo node connection string</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the shard-node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Mongo node port</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">shard_list</span></code></p></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -571,9 +526,7 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 <code class="sig-name descname">shard_lists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.shard_lists" title="Permalink to this definition">¶</a></dt>
 <dd><p>the shard-node count can be purchased is in range of [2, 32].</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">node_class</span></code> -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the shard-node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) -</p>
 <ul>
@@ -582,8 +535,12 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </ul>
 </li>
 </ul>
-</li>
-</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.mongodb.ShardingInstance.storage_engine">
+<code class="sig-name descname">storage_engine</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.mongodb.ShardingInstance.storage_engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -621,44 +578,18 @@ properties used to qualify the lookup.</p>
 <li><p><strong>backup_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – MongoDB instance backup time. It is required when <code class="docutils literal notranslate"><span class="pre">backup_period</span></code> was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like “23:00Z-24:00Z”.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Database version. Value options can refer to the latest docs <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/61884.htm">CreateDBInstance</a> <code class="docutils literal notranslate"><span class="pre">EngineVersion</span></code>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `storage_engine` (Optional, ForceNew) Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>instance_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>,System default to <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
 <li><p><strong>kms_encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An KMS encrypts password used to a instance. If the <code class="docutils literal notranslate"><span class="pre">account_password</span></code> is filled in, this field will be ignored.</p></li>
 <li><p><strong>kms_encryption_context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An KMS encryption context used to decrypt <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> before creating or updating instance with <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code>. See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/42975.htm">Encryption Context</a>. It is valid when <code class="docutils literal notranslate"><span class="pre">kms_encrypted_password</span></code> is set.</p>
 </p></li>
 <li><p><strong>mongo_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The mongo-node count can be purchased is in range of [2, 32].</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of DB instance. It a string of 2 to 256 characters.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy DB instance (in month). It is valid when instance_charge_type is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>. Valid values: [1~9], 12, 24, 36. System default to 1.</p></li>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Instance log backup retention days. Available in 1.42.0+.</p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Security Group ID of ECS.</p></li>
 <li><p><strong>security_ip_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to <code class="docutils literal notranslate"><span class="pre">[&quot;127.0.0.1&quot;]</span></code>.</p></li>
 <li><p><strong>shard_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – the shard-node count can be purchased is in range of [2, 32].</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `node_class` -(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+<li><p><strong>storage_engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.</p></li>
 <li><p><strong>tde_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TDE(Transparent Data Encryption) status.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The virtual switch ID to launch DB instances in one VPC.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
@@ -669,7 +600,7 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 <p>The <strong>mongo_lists</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Mongo node connection string</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the shard-node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Mongo node port</p>
 <ul>
@@ -679,7 +610,7 @@ If it is a multi-zone and <code class="docutils literal notranslate"><span class
 </ul>
 <p>The <strong>shard_lists</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodeClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -(Required) Node specification. see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/57141.htm">Instance specifications</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the shard-node.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) -</p>
 <ul>

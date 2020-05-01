@@ -27,15 +27,6 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 <li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of the resources associated with the alarm rule, such as “instanceId”, “device” and “port”. Each key’s value is a string and it uses comma to split multiple items. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p></li>
 <li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable alarm rule. Default to true.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – It has been deprecated from provider version 1.50.0 and ‘effective_interval’ instead.</p></li>
 <li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the monitoring metrics corresponding to a project, such as “CPUUtilization” and “networkin_rate”. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p>
 </p></li>
@@ -49,6 +40,7 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 <li><p><strong>statistics</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Statistical method. It must be consistent with that defined for metrics. Valid values: [“Average”, “Minimum”, “Maximum”]. Default to “Average”.</p></li>
 <li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alarm threshold value, which must be a numeric value currently.</p></li>
 <li><p><strong>triggered_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.</p></li>
+<li><p><strong>webhook</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.</p></li>
 </ul>
 </dd>
 </dl>
@@ -74,9 +66,6 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 <dt id="pulumi_alicloud.cms.Alarm.enabled">
 <code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.Alarm.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable alarm rule. Default to true.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">webhook</span></code>- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -151,6 +140,12 @@ Details for <a class="reference external" href="https://www.alibabacloud.com/hel
 <dd><p>Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_alicloud.cms.Alarm.webhook">
+<code class="sig-name descname">webhook</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cms.Alarm.webhook" title="Permalink to this definition">¶</a></dt>
+<dd><p>The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_alicloud.cms.Alarm.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">contact_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dimensions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">effective_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">operator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silence_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">statistics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triggered_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cms.Alarm.get" title="Permalink to this definition">¶</a></dt>
@@ -167,15 +162,6 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>effective_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The interval of effecting alarm rule. It foramt as “hh:mm-hh:mm”, like “0:00-4:00”. Default to “00:00-23:59”.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable alarm rule. Default to true.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `webhook`- (Optional, Available in 1.46.0+) The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – It has been deprecated from provider version 1.50.0 and ‘effective_interval’ instead.</p></li>
 <li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the monitoring metrics corresponding to a project, such as “CPUUtilization” and “networkin_rate”. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28619.htm">Metrics Reference</a>.</p>
 </p></li>
@@ -190,6 +176,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current alarm rule status.</p></li>
 <li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alarm threshold value, which must be a numeric value currently.</p></li>
 <li><p><strong>triggered_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of consecutive times it has been detected that the values exceed the threshold. Default to 3.</p></li>
+<li><p><strong>webhook</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.</p></li>
 </ul>
 </dd>
 </dl>

@@ -26,7 +26,7 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instance = new alicloud.dns.DdosBgpInstance("instance", {
+const instance = new alicloud.ddos.DdosBgpInstance("instance", {
     bandwidth: 201,
     baseBandwidth: 20,
     ipCount: 100,
@@ -36,6 +36,9 @@ const instance = new alicloud.dns.DdosBgpInstance("instance", {
 {{% /example %}}
 {{% /examples %}}
 
+Deprecated: alicloud.dns.DdosBgpInstance has been deprecated in favour of alicloud.ddos.DdosBgpInstance
+
+<p class="resource-deprecated">Deprecated: {{% md %}}alicloud.dns.DdosBgpInstance has been deprecated in favour of alicloud.ddos.DdosBgpInstance{{% /md %}}</p>
 
 
 ## Create a DdosBgpInstance Resource {#create}

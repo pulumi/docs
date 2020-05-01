@@ -29,6 +29,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="datahub/">datahub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ddos/">ddos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dds/">dds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dms/">dms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="drds/">drds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ecs/">ecs</a></li>
@@ -37,6 +38,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="ess/">ess</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fc/">fc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gpdb/">gpdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hbase/">hbase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kvstore/">kvstore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="log/">log</a></li>

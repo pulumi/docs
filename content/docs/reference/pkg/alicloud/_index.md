@@ -28,6 +28,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="datahub/" title="datahub"><span class="symbol module"></span>datahub</a></li>
     <li><a href="ddos/" title="ddos"><span class="symbol module"></span>ddos</a></li>
     <li><a href="dds/" title="dds"><span class="symbol module"></span>dds</a></li>
+    <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="drds/" title="drds"><span class="symbol module"></span>drds</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
@@ -36,6 +37,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
     <li><a href="fc/" title="fc"><span class="symbol module"></span>fc</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
+    <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
     <li><a href="log/" title="log"><span class="symbol module"></span>log</a></li>
@@ -81,6 +83,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.3</dd>
 </dl>
 
