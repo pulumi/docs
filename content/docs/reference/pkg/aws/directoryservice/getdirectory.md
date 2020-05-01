@@ -785,6 +785,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#GetDirectoryConnectSetting">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Outputs.GetDirectoryConnectSetting.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -970,6 +974,10 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#GetDirectoryVpcSetting">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Outputs.GetDirectoryVpcSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

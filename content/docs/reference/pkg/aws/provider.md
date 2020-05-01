@@ -995,6 +995,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#ProviderAssumeRoleArgs">input</a>   API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.ProviderAssumeRoleArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1164,6 +1168,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#ProviderEndpointArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.ProviderEndpointArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 
@@ -5527,6 +5535,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/?tab=doc#ProviderIgnoreTagsArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.ProviderIgnoreTagsArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
 
 

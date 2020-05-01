@@ -724,6 +724,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableAssociationType">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTableAssociation.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -947,6 +951,10 @@ The following output properties are available:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableFilter">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetRouteTableFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTableFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1068,6 +1076,10 @@ A Route Table will be selected if any one of the given values matches.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetRouteTableRoute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetRouteTableRoute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1205,6 +1205,10 @@ The following state arguments are supported:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#OrganizationAccountOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.OrganizationAccount.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1426,6 +1430,10 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#OrganizationNonMasterAccountOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.OrganizationNonMasterAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1651,6 +1659,10 @@ The following state arguments are supported:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#OrganizationRootOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.OrganizationRoot.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1836,6 +1848,10 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#OrganizationRootPolicyTypeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.OrganizationRootPolicyType.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

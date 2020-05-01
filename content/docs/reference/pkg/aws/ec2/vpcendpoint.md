@@ -1789,6 +1789,10 @@ Defaults to `false`.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointDnsEntryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.VpcEndpointDnsEntry.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 

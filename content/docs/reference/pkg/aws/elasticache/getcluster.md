@@ -1029,6 +1029,10 @@ begin taking a daily snapshot of the cache cluster.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#GetClusterCacheNode">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.Outputs.GetClusterCacheNode.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 

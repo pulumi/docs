@@ -549,6 +549,10 @@ The following output properties are available:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram?tab=doc#GetResourceShareFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ram?tab=doc#GetResourceShareFilter">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.Inputs.GetResourceShareFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ram.Outputs.GetResourceShareFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 

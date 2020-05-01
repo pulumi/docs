@@ -490,6 +490,10 @@ of the job queue.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#GetJobQueueComputeEnvironmentOrder">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.GetJobQueueComputeEnvironmentOrder.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 

@@ -772,6 +772,10 @@ The following output properties are available:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatement">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatement.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1183,6 +1187,10 @@ to. This is required by AWS if used for an IAM policy.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementCondition">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1366,6 +1374,10 @@ the service name.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipal">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementNotPrincipalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementNotPrincipal.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1483,6 +1495,10 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipal">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Outputs.GetPolicyDocumentStatementPrincipal.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -489,6 +489,10 @@ The number of available cluster certificates may vary depending on state of the 
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudhsmv2?tab=doc#GetClusterClusterCertificates">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudHsmV2.Outputs.GetClusterClusterCertificates.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 

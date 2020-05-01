@@ -1714,6 +1714,10 @@ You can't specify publicly routable IP addresses.
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Inputs.TargetGroupHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.TargetGroupHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -2079,6 +2083,10 @@ You can't specify publicly routable IP addresses.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupStickinessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#TargetGroupStickinessOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Inputs.TargetGroupStickinessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.TargetGroupStickiness.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

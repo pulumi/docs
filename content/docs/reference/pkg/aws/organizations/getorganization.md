@@ -532,6 +532,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationAccount">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationAccount.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -753,6 +757,10 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationNonMasterAccount">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationNonMasterAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -978,6 +986,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationRoot">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationRoot.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1163,6 +1175,10 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/organizations?tab=doc#GetOrganizationRootPolicyType">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.Outputs.GetOrganizationRootPolicyType.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

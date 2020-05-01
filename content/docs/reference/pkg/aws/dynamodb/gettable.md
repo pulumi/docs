@@ -893,6 +893,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableAttribute">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableAttribute.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1002,6 +1006,10 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableGlobalSecondaryIndex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableGlobalSecondaryIndex.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1275,6 +1283,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableLocalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableLocalSecondaryIndex.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1450,6 +1462,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTablePointInTimeRecovery">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTablePointInTimeRecovery.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1525,6 +1541,10 @@ The following output properties are available:
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableReplica">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableReplica.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1598,6 +1618,10 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableServerSideEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableServerSideEncryption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GetTableServerSideEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableServerSideEncryption.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1705,6 +1729,10 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableTtl">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableTtl.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

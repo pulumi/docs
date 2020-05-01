@@ -1377,6 +1377,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateBlockDeviceMapping">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMapping.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1546,6 +1550,10 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateBlockDeviceMappingEb">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMappingEb.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1815,6 +1823,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateCreditSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1890,6 +1902,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateElasticGpuSpecification">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateElasticGpuSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1963,6 +1979,10 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateFilter">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchTemplateFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2080,6 +2100,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateHibernationOption">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateHibernationOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -2153,6 +2177,10 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateIamInstanceProfile">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateIamInstanceProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2270,6 +2298,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateInstanceMarketOption">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -2375,6 +2407,10 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateInstanceMarketOptionSpotOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOptionSpotOption.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2580,6 +2616,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateMetadataOption">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMetadataOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -2731,6 +2771,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateMonitoring">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMonitoring.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -2804,6 +2848,10 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateNetworkInterface">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3237,6 +3285,10 @@ Interfaces below for more details.
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplatePlacement">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplatePlacement.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -3470,6 +3522,10 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateTagSpecification">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateTagSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

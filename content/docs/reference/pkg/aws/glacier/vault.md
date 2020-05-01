@@ -949,6 +949,10 @@ The heredoc syntax or `file` function is helpful here. Use the [Glacier Develope
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultNotificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glacier.Inputs.VaultNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glacier.Outputs.VaultNotification.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 

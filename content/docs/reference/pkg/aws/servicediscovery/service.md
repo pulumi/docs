@@ -1027,6 +1027,10 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceDnsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceDnsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Inputs.ServiceDnsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Outputs.ServiceDnsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1178,6 +1182,10 @@ The following state arguments are supported:
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceDnsConfigDnsRecordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceDnsConfigDnsRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Inputs.ServiceDnsConfigDnsRecordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Outputs.ServiceDnsConfigDnsRecord.html">output</a> API doc for this type.
+{{% /choosable %}}
+
 
 
 
@@ -1291,6 +1299,10 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceHealthCheckConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceHealthCheckConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Inputs.ServiceHealthCheckConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Outputs.ServiceHealthCheckConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1442,6 +1454,10 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceHealthCheckCustomConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/servicediscovery?tab=doc#ServiceHealthCheckCustomConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Inputs.ServiceHealthCheckCustomConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceDiscovery.Outputs.ServiceHealthCheckCustomConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
