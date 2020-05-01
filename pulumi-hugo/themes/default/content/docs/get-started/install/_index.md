@@ -162,7 +162,7 @@ If a new version of Pulumi is available, the CLI produces the following example 
 warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
    $ curl -sSL https://get.pulumi.com | sh
 
-or visit https://pulumi.com/docs/install/ for manual instructions and release notes.
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
 ```
 
 {{< skip-version-check >}}

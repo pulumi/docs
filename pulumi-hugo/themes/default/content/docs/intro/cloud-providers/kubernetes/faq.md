@@ -20,7 +20,7 @@ In fact, Pulumi's Kubernetes SDK are manufactured by automatically wrapping our 
 the Kubernetes resource [OpenAPI spec][openapi] as soon as a new version is released!
 Ultimately, this means that Pulumi users do not have to learn a new
 Kubernetes API model, nor wait long to work with the latest versions available. See the [Kubernetes][api-reference] and
-[Pulumi]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}}) API documentation for more
+[Pulumi]({{< relref "/docs/reference/pkg/kubernetes" >}}) API documentation for more
 details.
 
 Notably, Pulumi also supports alpha and beta APIs.

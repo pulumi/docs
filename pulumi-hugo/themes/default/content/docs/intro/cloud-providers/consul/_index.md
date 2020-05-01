@@ -12,7 +12,7 @@ menu:
 
 The HashiCorp Consul provider for Pulumi can be used to provision any of the resources available in [Consul](https://www.consul.io/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/consul" >}}) for complete details of the available Consul provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/consul" >}}) for complete details of the available Consul provider APIs.
 
 ## Setup
 
@@ -59,7 +59,7 @@ node = consul.Node("compute",
 
 ```go
 import (
-  consul "github.com/pulumi/pulumi-consul/sdk/go/consul"
+  consul "github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
 )
 
 node, _ := consul.NewNode(ctx, "compute", &consul.NodeArgs{

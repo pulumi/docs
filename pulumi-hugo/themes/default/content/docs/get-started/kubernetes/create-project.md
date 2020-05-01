@@ -14,7 +14,7 @@ aliases: ["/docs/quickstart/kubernetes/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< chooser language "javascript,typescript,python,csharp" / >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language javascript %}}
 
@@ -37,6 +37,14 @@ $ pulumi new kubernetes-typescript
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-python
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new kubernetes-go
 ```
 
 {{% /choosable %}}
@@ -78,6 +86,10 @@ After some dependency installations from `npm`, the project and stack will be re
 {{% /choosable %}}
 
 {{% choosable language python %}}
+After the command completes, the project and stack will be ready.
+{{% /choosable %}}
+
+{{% choosable language go %}}
 After the command completes, the project and stack will be ready.
 {{% /choosable %}}
 

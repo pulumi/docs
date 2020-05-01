@@ -10,7 +10,7 @@ menu:
 
 The TLS provider for Pulumi can be used to help to create TLS keys and certitifcate for use with Pulumi resources.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/tls" >}}) for complete details of the available TLS provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/tls" >}}) for complete details of the available TLS provider APIs.
 
 ## Example
 
@@ -56,7 +56,7 @@ key = tls.PrivateKey("my-private-key",
 
 ```go
 import (
-  tls "github.com/pulumi/pulumi-tls/sdk/go/tls"
+  tls "github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
 )
 
 key, _ := tls.NewPrivateKey(ctx, "my-private-key", &tls.PrivateKeyArgs{

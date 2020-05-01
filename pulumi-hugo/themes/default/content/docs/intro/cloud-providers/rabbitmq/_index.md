@@ -13,7 +13,7 @@ menu:
 The RabbitMQ provider for Pulumi can be used to provision any of the resources available for RabbitMQ.
 The RabbitMQ provider must be configured with credentials to deploy and update resources in Fastly.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/rabbitmq" >}}) for complete details of the available RabbitMQ provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/rabbitmq" >}}) for complete details of the available RabbitMQ provider APIs.
 
 ## Setup
 
@@ -60,7 +60,7 @@ user = rabbitmq.User("user",
 
 ```go
 import (
-  rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq"
+  rabbitmq "github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
 )
 
 user, _ := rabbitmq.NewUser(ctx, "user", &rabbitmq.UserArgs{

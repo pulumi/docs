@@ -51,9 +51,6 @@ $ pulumi new azure-csharp
 {{% choosable language go %}}
 
 ```bash
-# install the pulumi azure plugin
-# check for the release version here https://github.com/pulumi/pulumi-azure/releases
-$ pulumi plugin install resource azure 2.3.1
 # from within your $GOPATH
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-go
@@ -78,7 +75,7 @@ Created project 'quickstart'
 stack name: (dev)
 Created stack 'dev'
 
-azure:environment: The Azure environment to use (`public`, `usgovernment`, `german`, `china`): (public)
+azure:location: The Azure location to use: (WestUS)
 Saved config
 ```
 
@@ -90,7 +87,7 @@ Next, you will be asked for the name of a stack. Hit `ENTER` to accept the defau
 
 Next, you will be prompted for some configuration values for the stack.
 
-For Azure projects, you will be prompted for the Azure environment. You can accept the default value of `public` or choose another environment.
+For Azure projects, you will be prompted for the Azure location. You can accept the default value of `WestUS` or choose another location.
 
 {{% choosable language "javascript,typescript" %}}
 After some dependency installations from `npm`, the project and stack will be ready.

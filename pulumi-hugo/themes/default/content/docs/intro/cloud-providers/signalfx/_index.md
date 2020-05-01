@@ -13,7 +13,7 @@ menu:
 The SignalFx provider for Pulumi can be used to provision any of the cloud resources available in [SignalFx](https://datadoghq.com/).
 The SignalFx provider must be configured with credentials to deploy and update resources in SignalFx.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/signalfx" >}}) for complete details of the available SignalFx provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/signalfx" >}}) for complete details of the available SignalFx provider APIs.
 
 ## Setup
 
@@ -60,7 +60,7 @@ group = signalfx.DashboardGroup("my-group",
 
 ```go
 import (
-  signalfx "github.com/pulumi/pulumi-signalfx/sdk/go/signalfx"
+  signalfx "github.com/pulumi/pulumi-signalfx/sdk/v2/go/signalfx"
 )
 
 group, _ := signalfx.NewDashboardGroup(ctx, "my-group", &signalfx.DashboardGroupArgs{

@@ -12,7 +12,7 @@ menu:
 
 The Spotinst provider for Pulumi can be used to provision any of the resources available in [Spotinst](https://spotinst.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/spotinst" >}}) for complete details of the available Spotinst provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/spotinst" >}}) for complete details of the available Spotinst provider APIs.
 
 ## Setup
 
@@ -53,7 +53,7 @@ deployment = spotinst.multai.Deployment("my_deployment")
 
 ```go
 import (
-  multai "github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai"
+  multai "github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
 )
 
 deployment, _ := multai.NewDeployment(ctx, "example", &multai.DeploymentArgs{})

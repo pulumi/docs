@@ -27,3 +27,46 @@
 .blink {
     animation: fadeIn 500ms linear infinite alternate;
 }
+
+@keyframes sparkle-primary {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .6;
+    }
+}
+
+@keyframes sparkle-secondary {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+.sparkle {
+    &.primary {
+        animation: sparkle-primary .6s ease-in infinite alternate;
+    }
+
+    &.secondary {
+        animation: sparkle-secondary .6s ease-in infinite alternate;
+    }
+}
+
+@keyframes hero-clouds {
+    from {
+        left: 0;
+        top: 2%;
+    }
+    to {
+        left: 100%;
+        top: 2%;
+    }
+}
+
+.hero-clouds {
+    animation: hero-clouds 420s linear infinite alternate;
+}

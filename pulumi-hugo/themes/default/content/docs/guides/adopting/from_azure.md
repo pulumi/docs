@@ -215,7 +215,7 @@ Depending on what you're trying to accomplish, you may prefer to start with (1) 
 
 ### Deploy Templates Using Pulumi
 
-The Pulumi Azure package [provides an ARM TemplateDeployment]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
+The Pulumi Azure package [provides an ARM TemplateDeployment]({{< relref "/docs/reference/pkg/azure/core/templatedeployment" >}}) resource type. Using this type, you can deploy an existing ARM template written in JSON without needing to make any edits to it.
 
 For instance, this code deploys a simple ARM template using the given parameters, and exports the resulting Storage Account name:
 

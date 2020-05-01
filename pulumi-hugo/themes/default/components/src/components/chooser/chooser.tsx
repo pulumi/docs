@@ -219,14 +219,21 @@ export class Chooser {
     private parseOptions() {
         this.currentOptions = [];
 
-        if (this.type && this.options) {
-            try {
-                const keys: string[] = this.options.split(",").map(s => s.trim());
-                this.mapOptions(this.type, keys as ChooserKey[]);
-            }
-            catch (err) {
-                console.error(`Error parsing chooser options "${this.options}"`, err);
-            }
+        if (!this.type) {
+            throw new Error("Chooser attribute `type` is required.");
+        }
+
+        if (!this.options) {
+            throw new Error("Chooser attribute `options` is required.");
+        }
+
+        try {
+            const keys: string[] = this.options.split(",").map(s => s.trim());
+            this.mapOptions(this.type, keys as ChooserKey[]);
+        }
+        catch (err) {
+            console.error(`Error parsing chooser options "${this.options}"`);
+            throw(err);
         }
     }
 

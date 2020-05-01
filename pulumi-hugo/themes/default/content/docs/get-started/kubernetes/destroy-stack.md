@@ -30,6 +30,9 @@ Previewing destroy (dev):
  -   ├─ kubernetes:core:Service     nginx           delete
  -   └─ kubernetes:apps:Deployment  nginx           delete
 
+Outputs:
+  - ip: "10.105.234.140"
+
 Resources:
     - 3 to delete
 
@@ -40,6 +43,9 @@ Destroying (dev):
  -   pulumi:pulumi:Stack            quickstart-dev  deleted
  -   ├─ kubernetes:core:Service     nginx           deleted
  -   └─ kubernetes:apps:Deployment  nginx           deleted
+
+Outputs:
+  - ip: "10.105.234.140"
 
 Resources:
     - 3 deleted

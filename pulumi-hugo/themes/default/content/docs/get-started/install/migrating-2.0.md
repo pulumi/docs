@@ -6,33 +6,7 @@ no_on_this_page: true
 
 ## Migrating to 2.0
 
-Upgrading to 2.0 is simple. First, you will download the 2.0 CLI, which is required to use the 2.0 SDK. Then, update each of your Pulumi programs to utilize the new SDK. If you're using JavaScript or TypeScript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
-
-## Install Pulumi 2.0 CLI
-
-{{< chooser os "macos,linux,windows" >}}
-
-{{% choosable os "macos,linux" %}}
-
-```bash
-curl -sSL https://get.pulumi.com | bash -s -- --version 2.0.0-beta.2
-```
-
-{{% /choosable %}}
-
-{{% choosable os "windows" %}}
-
-```bat
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '2.0.0-beta.2'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Alternatively, you can obtain the latest binaries from the [versions]({{< relref "versions" >}}) page. Then, follow the [manual installation]({{< relref "./#manual-installation" >}}) steps for your operating system.
-
-> Note: once the final 2.0.0 release is published, you'll also be able to install via all currently supported installation methods, including Homebrew and Chocolatey.
+Upgrading to 2.0 is simple. First, you will [install the 2.0 CLI]({{< relref "/docs/get-started/install" >}}). Then, update each of your Pulumi programs to utilize the new SDK. If you're using JavaScript or TypeScript, you'll also need to ensure you're using invokes asynchronously. We provide detailed instructions on each of these steps below.
 
 ## Update CLI Scripts
 
@@ -52,12 +26,12 @@ Previously, the Pulumi CLI would assume `--yes` when used in non-interactive mod
 ### Update Dependencies
 
 ```bash
-npm install @pulumi/pulumi@^2.0.0-beta.2
+npm install @pulumi/pulumi@^2.0.0
 ```
 
 ### Remove synchronous invokes
 
-Pulumi 2.0 no longer supports synchronous invokes. As a result, the return value of all `getSomething` operations are now `Promise<Something>` values, instead of `Something` values, and should be processed using `.then`, `async/await` or by passing the results to `pulumi.output()`. Similarly, the the `StackReference` operations `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
+Due to [inconsistent support between versions of NodeJS](https://github.com/pulumi/pulumi/issues/4462#issuecomment-617367272), Pulumi 2.0 no longer supports synchronous invokes. As a result, the return value of all `getSomething` operations are now `Promise<Something>` values, instead of `Something` values, and should be processed using `.then`, `async/await` or by passing the results to `pulumi.output()`. Similarly, the `StackReference` operations `getOutputSync` and `requireOutputSync` are no longer supported and you should move to using the `Output`-based versions of `getOutput` and `requireOutput`.
 
 ```javascript
 //Before:
@@ -70,6 +44,8 @@ const version: Promise<string> = gcp.container.getEngineVersions().then(v => v.l
 const version: Output<string> = pulumi.output(gcp.container.getEngineVersions()).latestMasterVersion;
 ```
 
+Optionally, you can use an `async` function [entrypoint]({{< relref "/docs/intro/languages/javascript#entrypoint" >}}) to more easily write `async/await` code throughout the rest of your program.
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -79,8 +55,8 @@ const version: Output<string> = pulumi.output(gcp.container.getEngineVersions())
 Modify your `requirements.txt` file to update the Pulumi SDK and related providers as below:
 
 ```
-pulumi>=2.0.0-beta.2
-pulumi-aws>=2.0.0-beta.1
+pulumi>=2.0.0
+pulumi-aws>=2.0.0
 ```
 
 Then run `pip install`:
@@ -98,8 +74,8 @@ Pulumi 2.0 now supports Go modules. In `go.mod`, you can depend on the Pulumi SD
 
 ```
 require (
-    github.com/pulumi/pulumi/sdk/v2 v2.0.0-beta.2
-    github.com/pulumi/pulumi-aws/sdk/v2/go/aws v2.0.0-beta.1
+    github.com/pulumi/pulumi/sdk/v2 v2.0.0
+    github.com/pulumi/pulumi-aws/sdk/v2/go/aws v2.0.0
 )
 ```
 
@@ -113,7 +89,7 @@ Then run `go mod download`
 Update your package reference to the latest version of the SDK:
 
 ```csharp
-<PackageReference Include="Pulumi" Version="2.0.0-beta.2" />
+<PackageReference Include="Pulumi" Version="2.*" />
 ```
 
 ### Update Invokes
@@ -135,3 +111,14 @@ var clientConfig = await Pulumi.Azure.Core.GetClientConfig.InvokeAsync();
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Remaining on Pulumi 1.0
+
+We recommend switching to Pulumi 2.0 if possible. We will only push critical security and bug fixes into the `1.x` branch. Other fixes, feature enhancements, and
+new functionality will not be supported in the `1.x` branch. In addition, provider updates will only be built against Pulumi 2.0.
+
+If you wish to remain on the `1.x` CLI, you can continue to download the CLI by referring to [the manual installation instructions]({{< relref "/docs/get-started/install#manual-installation" >}}) and [choosing a specific version]({{< relref "/docs/get-started/install/versions" >}}).
+
+`pulumi new` will attempt to use the latest versions of the templates, which pull in the `2.0` SDK. You can continue to use the `1.x` templates by running `pulumi new https://github.com/pulumi/templates/tree/1.x`.
+
+Note that previous `1.x` templates for Python had `>=1.0.0` in `requirements.txt`. As a result, you may accidentally end up on the `2.x` SDK when updating dependencies from the `1.x` template.  We encourage updating to `>=1.0.0,<2.0.0` if you intend to remain on the `1.x` releases.

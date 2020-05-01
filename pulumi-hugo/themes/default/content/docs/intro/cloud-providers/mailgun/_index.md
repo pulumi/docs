@@ -77,7 +77,7 @@ route = mailgun.Route("test-route",
 
 ```go
 import (
-  mailgun "github.com/pulumi/pulumi-mailgun/sdk/go/mailgun"
+  mailgun "github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun"
 )
 
 route, _ := mailgun.NewRoute(ctx, "test-route", &mailgun.RouteArgs{
