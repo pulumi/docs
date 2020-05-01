@@ -1,7 +1,7 @@
 ---
-title: Configure Cloud Access | AWS
-h1: Configure Cloud Access
-linktitle: Configure Cloud Access
+title: Configure AWS | AWS
+h1: Configure AWS
+linktitle: Configure AWS
 meta_desc: This page provides an overview of how to configure an AWS project.
 weight: 4
 menu:

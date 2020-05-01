@@ -1,7 +1,7 @@
 ---
-title: Configure Cluster Access | Kubernetes
-h1: Configure Cluster Access
-linktitle: Configure Cluster Access
+title: Configure Kubernetes | Kubernetes
+h1: Configure Kubernetes
+linktitle: Configure Kubernetes
 meta_desc: This page provides an overview of how to configure a Kubernetes project.
 weight: 4
 menu:
