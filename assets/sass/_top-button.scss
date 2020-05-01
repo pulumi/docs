@@ -1,7 +1,7 @@
 .top-button {
     border-radius: 3px;
     color: #fff!important;
-    line-height: 20px;
+    line-height: 25px;
     transition: all .5s ease-in-out;
     background: linear-gradient(180deg,#90a4ae,#78909c);
     width: 40px;
@@ -15,12 +15,3 @@
     text-align: center;
 }
 
-.top-button::after {
-    content: "🔝";
-    font-family: "Font Awesome 5 Free";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 27px;
-    color: #fff;
-}
