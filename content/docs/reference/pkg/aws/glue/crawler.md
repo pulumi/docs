@@ -1694,7 +1694,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerCatalogTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerCatalogTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerCatalogTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerCatalogTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1813,7 +1812,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerDynamodbTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerDynamodbTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerDynamodbTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerDynamodbTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1896,7 +1894,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerJdbcTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerJdbcTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerJdbcTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerJdbcTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2051,7 +2048,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerS3TargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerS3TargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerS3TargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerS3Target.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2170,7 +2166,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerSchemaChangePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#CrawlerSchemaChangePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CrawlerSchemaChangePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CrawlerSchemaChangePolicy.html">output</a> API doc for this type.
 {{% /choosable %}}

@@ -1731,7 +1731,6 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionInferenceAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionInferenceAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.TaskDefinitionInferenceAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.TaskDefinitionInferenceAccelerator.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1850,7 +1849,6 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionPlacementConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionPlacementConstraintOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.TaskDefinitionPlacementConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.TaskDefinitionPlacementConstraint.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1981,7 +1979,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionProxyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionProxyConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.TaskDefinitionProxyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.TaskDefinitionProxyConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2136,7 +2133,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.TaskDefinitionVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolume.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2331,7 +2327,6 @@ parameter of container definition in the `mountPoints` section.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionVolumeDockerVolumeConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionVolumeDockerVolumeConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.TaskDefinitionVolumeDockerVolumeConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeDockerVolumeConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2558,7 +2553,6 @@ parameter of container definition in the `mountPoints` section.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionVolumeEfsVolumeConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#TaskDefinitionVolumeEfsVolumeConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.TaskDefinitionVolumeEfsVolumeConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.TaskDefinitionVolumeEfsVolumeConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}

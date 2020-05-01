@@ -1107,7 +1107,6 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestination.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1190,7 +1189,6 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationBucketArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestinationBucket.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1417,7 +1415,6 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationBucketEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestinationBucketEncryption.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1536,7 +1533,6 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionSseKmsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryDestinationBucketEncryptionSseKmsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryDestinationBucketEncryptionSseKmsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryDestinationBucketEncryptionSseKms.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1619,7 +1615,6 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventoryFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1702,7 +1697,6 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#InventoryScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.InventoryScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.InventorySchedule.html">output</a> API doc for this type.
 {{% /choosable %}}

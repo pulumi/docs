@@ -2523,7 +2523,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionDeadLetterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionDeadLetterConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionDeadLetterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionDeadLetterConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2618,7 +2617,6 @@ which service is targeted.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEnvironmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEnvironmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEnvironment.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2701,7 +2699,6 @@ which service is targeted.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionTracingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionTracingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionTracingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionTracingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2800,7 +2797,6 @@ X-Ray for a tracing decision.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionVpcConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionVpcConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionVpcConfig.html">output</a> API doc for this type.
 {{% /choosable %}}

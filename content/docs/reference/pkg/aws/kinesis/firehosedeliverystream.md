@@ -1645,7 +1645,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2088,7 +2087,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2243,7 +2241,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2362,7 +2359,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2481,7 +2477,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2600,7 +2595,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3Configuration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3123,7 +3117,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3278,7 +3271,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3469,7 +3461,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3552,7 +3543,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3671,7 +3661,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3754,7 +3743,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3909,7 +3897,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3992,7 +3979,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4111,7 +4097,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4518,7 +4503,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4781,7 +4765,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5044,7 +5027,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5163,7 +5145,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5282,7 +5263,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5401,7 +5381,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5744,7 +5723,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5899,7 +5877,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamKinesisSourceConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamKinesisSourceConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamKinesisSourceConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamKinesisSourceConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6018,7 +5995,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6497,7 +6473,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6652,7 +6627,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6771,7 +6745,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6890,7 +6863,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7009,7 +6981,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7352,7 +7323,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7507,7 +7477,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamS3Configuration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7850,7 +7819,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8005,7 +7973,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamServerSideEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamServerSideEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamServerSideEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamServerSideEncryption.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8088,7 +8055,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8423,7 +8389,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8578,7 +8543,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8697,7 +8661,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8816,7 +8779,6 @@ be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
 {{% /choosable %}}

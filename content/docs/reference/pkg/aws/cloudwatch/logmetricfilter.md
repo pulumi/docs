@@ -791,7 +791,6 @@ for extracting metric data out of ingested log events.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogMetricFilterMetricTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogMetricFilterMetricTransformationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.LogMetricFilterMetricTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.LogMetricFilterMetricTransformation.html">output</a> API doc for this type.
 {{% /choosable %}}

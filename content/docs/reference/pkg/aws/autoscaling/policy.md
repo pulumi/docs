@@ -1378,7 +1378,6 @@ group scaling. These have the following structure:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyStepAdjustmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyStepAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyStepAdjustment.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1561,7 +1560,6 @@ must be greater than the lower bound.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1752,7 +1750,6 @@ must be greater than the lower bound.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1979,7 +1976,6 @@ must be greater than the lower bound.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2098,7 +2094,6 @@ must be greater than the lower bound.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}

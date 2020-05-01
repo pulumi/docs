@@ -2018,7 +2018,6 @@ for load balancers of type `network` will force a recreation of the resource.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#LoadBalancerAccessLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#LoadBalancerAccessLogsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.LoadBalancerAccessLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.LoadBalancerAccessLogs.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2173,7 +2172,6 @@ for load balancers of type `network` will force a recreation of the resource.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#LoadBalancerSubnetMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb?tab=doc#LoadBalancerSubnetMappingOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Inputs.LoadBalancerSubnetMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.LoadBalancerSubnetMapping.html">output</a> API doc for this type.
 {{% /choosable %}}

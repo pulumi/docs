@@ -1923,7 +1923,6 @@ cluster
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dax?tab=doc#ClusterNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dax.Outputs.ClusterNode.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2102,7 +2101,6 @@ cluster
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dax?tab=doc#ClusterServerSideEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dax?tab=doc#ClusterServerSideEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dax.Inputs.ClusterServerSideEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dax.Outputs.ClusterServerSideEncryption.html">output</a> API doc for this type.
 {{% /choosable %}}

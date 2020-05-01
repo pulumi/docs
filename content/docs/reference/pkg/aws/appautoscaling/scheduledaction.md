@@ -1173,7 +1173,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.ScheduledActionScalableTargetAction.html">output</a> API doc for this type.
 {{% /choosable %}}

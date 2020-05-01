@@ -705,7 +705,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#GeoMatchSetGeoMatchConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/waf?tab=doc#GeoMatchSetGeoMatchConstraintOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Inputs.GeoMatchSetGeoMatchConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.Outputs.GeoMatchSetGeoMatchConstraint.html">output</a> API doc for this type.
 {{% /choosable %}}

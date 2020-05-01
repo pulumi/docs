@@ -1024,7 +1024,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointIpAddressOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ResolverEndpointIpAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ResolverEndpointIpAddress.html">output</a> API doc for this type.
 {{% /choosable %}}

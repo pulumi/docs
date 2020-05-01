@@ -1176,7 +1176,6 @@ This argument should only be specified for `FORWARD` type rules.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverRuleTargetIpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverRuleTargetIpOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ResolverRuleTargetIpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ResolverRuleTargetIp.html">output</a> API doc for this type.
 {{% /choosable %}}

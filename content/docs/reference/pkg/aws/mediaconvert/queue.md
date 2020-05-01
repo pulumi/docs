@@ -982,7 +982,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mediaconvert?tab=doc#QueueReservationPlanSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/mediaconvert?tab=doc#QueueReservationPlanSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.Inputs.QueueReservationPlanSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.Outputs.QueueReservationPlanSettings.html">output</a> API doc for this type.
 {{% /choosable %}}

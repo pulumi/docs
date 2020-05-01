@@ -1137,7 +1137,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpec.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1296,7 +1295,6 @@ Routes are matched based on the specified value, where `0` is the highest priori
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRoute.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1415,7 +1413,6 @@ Routes are matched based on the specified value, where `0` is the highest priori
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteAction.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1502,7 +1499,6 @@ You can specify one or more targets and their relative weights with which to dis
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteActionWeightedTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1621,7 +1617,6 @@ You can specify one or more targets and their relative weights with which to dis
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1816,7 +1811,6 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeader.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1971,7 +1965,6 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatch.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2202,7 +2195,6 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatchRange.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2321,7 +2313,6 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRoute.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2404,7 +2395,6 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteAction.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2491,7 +2481,6 @@ You can specify one or more targets and their relative weights with which to dis
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteActionWeightedTarget.html">output</a> API doc for this type.
 {{% /choosable %}}

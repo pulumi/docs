@@ -1115,7 +1115,6 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneVpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneVpcOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ZoneVpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ZoneVpc.html">output</a> API doc for this type.
 {{% /choosable %}}

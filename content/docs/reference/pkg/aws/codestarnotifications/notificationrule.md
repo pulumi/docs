@@ -1051,7 +1051,6 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codestarnotifications?tab=doc#NotificationRuleTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codestarnotifications?tab=doc#NotificationRuleTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeStarNotifications.Inputs.NotificationRuleTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeStarNotifications.Outputs.NotificationRuleTarget.html">output</a> API doc for this type.
 {{% /choosable %}}

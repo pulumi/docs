@@ -1462,7 +1462,6 @@ See Reference Data Sources below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationCloudwatchLoggingOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1617,7 +1616,6 @@ See Reference Data Sources below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputs.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1996,7 +1994,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisFirehoseOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsKinesisFirehose.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2115,7 +2112,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisStreamArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisStreamOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsKinesisStreamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsKinesisStream.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2234,7 +2230,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsParallelismArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsParallelismOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsParallelismArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsParallelism.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2317,7 +2312,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsProcessingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2400,7 +2394,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationLambdaOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsProcessingConfigurationLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsProcessingConfigurationLambda.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2519,7 +2512,6 @@ See Processing Configuration below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsSchema.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2682,7 +2674,6 @@ See Record Format below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordColumnOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsSchemaRecordColumn.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2837,7 +2828,6 @@ See Record Format below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsSchemaRecordFormat.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2960,7 +2950,6 @@ See Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParameters.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3087,7 +3076,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3206,7 +3194,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3289,7 +3276,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsStartingPositionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsStartingPositionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationInputsStartingPositionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationInputsStartingPositionConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3368,7 +3354,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationOutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutput.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3639,7 +3624,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisFirehoseOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationOutputKinesisFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutputKinesisFirehose.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3758,7 +3742,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisStreamArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisStreamOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationOutputKinesisStreamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutputKinesisStream.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3877,7 +3860,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputLambdaOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationOutputLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutputLambda.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3996,7 +3978,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputSchemaOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationOutputSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationOutputSchema.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4079,7 +4060,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSources.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4270,7 +4250,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesS3Output">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesS3.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4425,7 +4404,6 @@ See Kinesis Stream below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesSchema.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4588,7 +4566,6 @@ See Record Format below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4743,7 +4720,6 @@ See Record Format below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4866,7 +4842,6 @@ See Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4993,7 +4968,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5112,7 +5086,6 @@ See JSON Mapping Parameters below for more details.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson.html">output</a> API doc for this type.
 {{% /choosable %}}

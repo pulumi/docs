@@ -1104,7 +1104,6 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionRetryStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionRetryStrategyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.JobDefinitionRetryStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.JobDefinitionRetryStrategy.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1187,7 +1186,6 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#JobDefinitionTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Inputs.JobDefinitionTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.Outputs.JobDefinitionTimeout.html">output</a> API doc for this type.
 {{% /choosable %}}

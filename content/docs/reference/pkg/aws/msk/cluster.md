@@ -1627,7 +1627,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterBrokerNodeGroupInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterBrokerNodeGroupInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterBrokerNodeGroupInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterBrokerNodeGroupInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1854,7 +1853,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterClientAuthenticationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterClientAuthentication.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1937,7 +1935,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterClientAuthenticationTlsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterClientAuthenticationTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterClientAuthenticationTls.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2020,7 +2017,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterConfigurationInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterConfigurationInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterConfigurationInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterConfigurationInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2139,7 +2135,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterEncryptionInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterEncryptionInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2258,7 +2253,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoEncryptionInTransitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterEncryptionInfoEncryptionInTransitOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterEncryptionInfoEncryptionInTransitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterEncryptionInfoEncryptionInTransit.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2377,7 +2371,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2460,7 +2453,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogs.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2603,7 +2595,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsCloudwatchLogsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogsCloudwatchLogs.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2722,7 +2713,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsFirehoseOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogsFirehose.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2841,7 +2831,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterLoggingInfoBrokerLogsS3Output">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterLoggingInfoBrokerLogsS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterLoggingInfoBrokerLogsS3.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2996,7 +2985,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoring.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3079,7 +3067,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoringPrometheus.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3198,7 +3185,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusJmxExporterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusJmxExporterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusJmxExporterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoringPrometheusJmxExporter.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3281,7 +3267,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusNodeExporterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/msk?tab=doc#ClusterOpenMonitoringPrometheusNodeExporterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Inputs.ClusterOpenMonitoringPrometheusNodeExporterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Outputs.ClusterOpenMonitoringPrometheusNodeExporter.html">output</a> API doc for this type.
 {{% /choosable %}}

@@ -994,7 +994,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#WorkgroupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#WorkgroupConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.Inputs.WorkgroupConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.Outputs.WorkgroupConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1185,7 +1184,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#WorkgroupConfigurationResultConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#WorkgroupConfigurationResultConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.Outputs.WorkgroupConfigurationResultConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1304,7 +1302,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#WorkgroupConfigurationResultConfigurationEncryptionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.Inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.Outputs.WorkgroupConfigurationResultConfigurationEncryptionConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}

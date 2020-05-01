@@ -932,7 +932,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Inputs.WebhookFilterGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Outputs.WebhookFilterGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1015,7 +1014,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#WebhookFilterGroupFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Inputs.WebhookFilterGroupFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.Outputs.WebhookFilterGroupFilter.html">output</a> API doc for this type.
 {{% /choosable %}}

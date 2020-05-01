@@ -1567,7 +1567,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterCertificateAuthorityOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterCertificateAuthority.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1650,7 +1649,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Inputs.ClusterEncryptionConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterEncryptionConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1769,7 +1767,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterEncryptionConfigProviderOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Inputs.ClusterEncryptionConfigProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterEncryptionConfigProvider.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1852,7 +1849,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterIdentityOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterIdentity.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1935,7 +1931,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterIdentityOidcOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterIdentityOidc.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2018,7 +2013,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#ClusterVpcConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Inputs.ClusterVpcConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.ClusterVpcConfig.html">output</a> API doc for this type.
 {{% /choosable %}}

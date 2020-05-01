@@ -1177,7 +1177,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1384,7 +1383,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfigurationStepAdjustment.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1527,7 +1525,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1766,7 +1763,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1973,7 +1969,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2088,7 +2083,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.html">output</a> API doc for this type.
 {{% /choosable %}}

@@ -1307,7 +1307,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetAudioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetAudio.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1534,7 +1533,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioCodecOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetAudioCodecOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetAudioCodecOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetAudioCodecOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1725,7 +1723,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetThumbnailsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetThumbnailsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetThumbnailsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetThumbnails.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2060,7 +2057,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetVideoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetVideo.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2575,7 +2571,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoWatermarkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elastictranscoder?tab=doc#PresetVideoWatermarkOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetVideoWatermarkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Outputs.PresetVideoWatermark.html">output</a> API doc for this type.
 {{% /choosable %}}

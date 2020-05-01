@@ -645,7 +645,6 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.RegexMatchSetRegexMatchTupleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.RegexMatchSetRegexMatchTuple.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -812,7 +811,6 @@ for all supported values.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleFieldToMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.RegexMatchSetRegexMatchTupleFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.RegexMatchSetRegexMatchTupleFieldToMatch.html">output</a> API doc for this type.
 {{% /choosable %}}

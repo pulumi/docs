@@ -1667,7 +1667,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordAliasOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordAliasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordAlias.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1822,7 +1821,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordFailoverRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordFailoverRoutingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1905,7 +1903,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordGeolocationRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordGeolocationRoutingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2060,7 +2057,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordLatencyRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordLatencyRoutingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2143,7 +2139,6 @@ Alias record documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordWeightedRoutingPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}

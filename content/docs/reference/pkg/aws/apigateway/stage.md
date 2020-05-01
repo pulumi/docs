@@ -1651,7 +1651,6 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageAccessLogSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageAccessLogSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.StageAccessLogSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.StageAccessLogSettings.html">output</a> API doc for this type.
 {{% /choosable %}}

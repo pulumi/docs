@@ -1392,7 +1392,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiAdditionalAuthenticationProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiAdditionalAuthenticationProviderOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.GraphQLApiAdditionalAuthenticationProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.GraphQLApiAdditionalAuthenticationProvider.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1547,7 +1546,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1738,7 +1736,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiAdditionalAuthenticationProviderUserPoolConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1893,7 +1890,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.GraphQLApiLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.GraphQLApiLogConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2012,7 +2008,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiOpenidConnectConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiOpenidConnectConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.GraphQLApiOpenidConnectConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2203,7 +2198,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiUserPoolConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#GraphQLApiUserPoolConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.GraphQLApiUserPoolConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.GraphQLApiUserPoolConfig.html">output</a> API doc for this type.
 {{% /choosable %}}

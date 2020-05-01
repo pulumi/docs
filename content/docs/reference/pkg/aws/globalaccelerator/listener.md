@@ -783,7 +783,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#ListenerPortRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#ListenerPortRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Inputs.ListenerPortRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Outputs.ListenerPortRange.html">output</a> API doc for this type.
 {{% /choosable %}}

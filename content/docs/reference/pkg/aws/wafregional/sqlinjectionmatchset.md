@@ -629,7 +629,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.SqlInjectionMatchSetSqlInjectionMatchTuple.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -764,7 +763,6 @@ for all supported values.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch.html">output</a> API doc for this type.
 {{% /choosable %}}

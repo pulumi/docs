@@ -977,7 +977,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetails.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1132,7 +1131,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetailsSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1359,7 +1357,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleCreateRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetailsScheduleCreateRule.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1514,7 +1511,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleRetainRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetailsScheduleRetainRule.html">output</a> API doc for this type.
 {{% /choosable %}}

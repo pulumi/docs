@@ -1024,7 +1024,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineArtifactStore.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1215,7 +1214,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineArtifactStoreEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineArtifactStoreEncryptionKey.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1334,7 +1332,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineStageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineStage.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1453,7 +1450,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codepipeline?tab=doc#PipelineStageActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineStageActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineStageAction.html">output</a> API doc for this type.
 {{% /choosable %}}

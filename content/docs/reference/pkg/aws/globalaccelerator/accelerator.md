@@ -1078,7 +1078,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Inputs.AcceleratorAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Outputs.AcceleratorAttributes.html">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1233,7 +1232,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorIpSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
-
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Outputs.AcceleratorIpSet.html">output</a> API doc for this type.
 {{% /choosable %}}
