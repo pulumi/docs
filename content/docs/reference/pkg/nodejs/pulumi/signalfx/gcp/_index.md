@@ -34,7 +34,7 @@ git_sha: "c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L42">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -74,7 +74,7 @@ const gcpMyteam = new signalfx.gcp.Integration("gcpMyteam", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/gcp_integration.html.markdown.
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -88,7 +88,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -99,14 +99,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -117,7 +117,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L72">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L72">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -134,7 +134,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="Integration-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L80">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L80">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pollRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ Name of the integration.
 GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).
 
 <h4 class="pdoc-member-header" id="Integration-projectServiceKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L84">property <b>projectServiceKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L84">property <b>projectServiceKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectServiceKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationProjectServiceKey'>IntegrationProjectServiceKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute o
 GCP projects to add.
 
 <h4 class="pdoc-member-header" id="Integration-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L88">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L88">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ GCP projects to add.
 GCP service metrics to import. Can be an empty list, or not included, to import 'All services'.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -178,7 +178,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L158">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -188,7 +188,7 @@ deployments.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L162">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L162">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ The set of arguments for constructing a Integration resource.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ Whether the integration is enabled.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L170">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L170">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ Name of the integration.
 GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-projectServiceKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L174">property <b>projectServiceKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L174">property <b>projectServiceKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectServiceKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationProjectServiceKey'>IntegrationProjectServiceKey</a>&gt;[]&gt;;</code></pre>
@@ -220,7 +220,7 @@ GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute o
 GCP projects to add.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L178">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L178">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -228,7 +228,7 @@ GCP projects to add.
 GCP service metrics to import. Can be an empty list, or not included, to import 'All services'.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L132">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -238,7 +238,7 @@ GCP service metrics to import. Can be an empty list, or not included, to import 
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L136">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L136">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ Input properties used for looking up and filtering Integration resources.
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ Whether the integration is enabled.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationState-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L144">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L144">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ Name of the integration.
 GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute or 5 minutes).
 
 <h4 class="pdoc-member-header" id="IntegrationState-projectServiceKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L148">property <b>projectServiceKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L148">property <b>projectServiceKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectServiceKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationProjectServiceKey'>IntegrationProjectServiceKey</a>&gt;[]&gt;;</code></pre>
@@ -270,7 +270,7 @@ GCP integration poll rate in seconds. Can be set to either 60 or 300 (1 minute o
 GCP projects to add.
 
 <h4 class="pdoc-member-header" id="IntegrationState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/{{< param git_sha >}}/sdk/nodejs/gcp/integration.ts#L152">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/c06c628f35eaa8fd40ed93f2fbe3dd68d87e9438/sdk/nodejs/gcp/integration.ts#L152">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
