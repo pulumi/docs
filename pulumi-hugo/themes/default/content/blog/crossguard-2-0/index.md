@@ -2,7 +2,7 @@
 title: "New Policy as Code Capabilities with CrossGuard"
 date: 2020-05-05
 meta_desc: "New CrossGuard features part of Pulumi's 2.0 release"
-meta_image: config.png
+meta_image: crossguard-mascot.png
 authors:
    - erin-krengel
 tags:
@@ -35,6 +35,8 @@ $ pulumi policy disable <organization>/<pack-name>
 ```
 
 By default, the `enable` and `disable` commands use an organization's default Policy Group. Using the `--policy-group` flag, you can specify another Policy Group. You can also specify `latest` instead of a specific Policy Pack version to enable the latest version of that Policy Pack.
+
+![Configuration](config.png)
 
 ### Options, Parent, and Dependencies
 
