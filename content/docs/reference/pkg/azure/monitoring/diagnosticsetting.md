@@ -1169,15 +1169,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1185,6 +1176,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1203,15 +1203,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1219,6 +1210,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1237,15 +1237,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1253,6 +1244,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1271,15 +1271,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1287,6 +1278,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1435,15 +1435,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1451,6 +1442,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1469,15 +1469,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
@@ -1485,6 +1476,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1503,15 +1503,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1519,6 +1510,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1537,15 +1537,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>retention_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A `retention_policy` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
@@ -1553,6 +1544,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retention_<wbr>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy]</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
 
 </dl>

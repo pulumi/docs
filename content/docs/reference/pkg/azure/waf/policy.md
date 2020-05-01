@@ -26,7 +26,7 @@ Manages a Azure Web Application Firewall Policy instance.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_rules=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>policy_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_rules=None<span class="p">, </span>location=None<span class="p">, </span>managed_rules=None<span class="p">, </span>name=None<span class="p">, </span>policy_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -200,6 +200,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
+        <span>Managed<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -213,7 +222,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -240,7 +249,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -261,6 +270,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
+        <span>Managed<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -274,7 +292,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">[]Policy<wbr>Custom<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -301,7 +319,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -322,6 +340,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
+        <span>managed<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -335,7 +362,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">Policy<wbr>Custom<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +389,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,6 +410,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
+        <span>managed_<wbr>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Dict[Policy<wbr>Managed<wbr>Rules]</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -396,7 +432,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">List[Policy<wbr>Custom<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -423,7 +459,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Dict[Policy<wbr>Policy<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -525,7 +561,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_rules=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>policy_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_rules=None<span class="p">, </span>location=None<span class="p">, </span>managed_rules=None<span class="p">, </span>name=None<span class="p">, </span>policy_settings=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -645,7 +681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -655,6 +691,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -672,7 +717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -706,7 +751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">[]Policy<wbr>Custom<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,6 +761,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -733,7 +787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -767,7 +821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">Policy<wbr>Custom<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -777,6 +831,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -794,7 +857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -828,7 +891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrule">List[Policy<wbr>Custom<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
+    <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -838,6 +901,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed_<wbr>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrules">Dict[Policy<wbr>Managed<wbr>Rules]</a></span>
+    </dt>
+    <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -855,7 +927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policypolicysettings">Dict[Policy<wbr>Policy<wbr>Settings]</a></span>
     </dt>
-    <dd>{{% md %}}A `policy_setting` block as defined below.
+    <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -912,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Actions
+    <dd>{{% md %}}Type of action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -921,7 +993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchcondition">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -930,7 +1002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -939,7 +1011,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the type of rule
+    <dd>{{% md %}}Describes the type of rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -948,7 +1020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Gets name of the resource that is unique within a policy. This name can be used to access the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -964,7 +1036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Actions
+    <dd>{{% md %}}Type of action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -973,7 +1045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchcondition">[]Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -982,7 +1054,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -991,7 +1063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the type of rule
+    <dd>{{% md %}}Describes the type of rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1000,7 +1072,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Gets name of the resource that is unique within a policy. This name can be used to access the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1016,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of Actions
+    <dd>{{% md %}}Type of action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1025,7 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchcondition">Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1034,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1043,7 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes the type of rule
+    <dd>{{% md %}}Describes the type of rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1052,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Gets name of the resource that is unique within a policy. This name can be used to access the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1068,7 +1140,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of Actions
+    <dd>{{% md %}}Type of action.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1077,7 +1149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchcondition">List[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1086,7 +1158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1095,7 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Describes the type of rule
+    <dd>{{% md %}}Describes the type of rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1104,7 +1176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Gets name of the resource that is unique within a policy. This name can be used to access the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1135,7 +1207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Match value
+    <dd>{{% md %}}A list of match values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1144,7 +1216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_variable` block defined below.
+    <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1153,7 +1225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes operator to be matched
+    <dd>{{% md %}}Describes operator to be matched.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,7 +1250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Match value
+    <dd>{{% md %}}A list of match values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1187,7 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">[]Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_variable` block defined below.
+    <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1196,7 +1268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes operator to be matched
+    <dd>{{% md %}}Describes operator to be matched.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1221,7 +1293,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Match value
+    <dd>{{% md %}}A list of match values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1230,7 +1302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_variable` block defined below.
+    <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1239,7 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Describes operator to be matched
+    <dd>{{% md %}}Describes operator to be matched.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1264,7 +1336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Match value
+    <dd>{{% md %}}A list of match values.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1273,7 +1345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">List[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_variable` block defined below.
+    <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1282,7 +1354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Describes operator to be matched
+    <dd>{{% md %}}Describes operator to be matched.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1407,6 +1479,534 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes field of the matchVariable collection
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="policymanagedrules">Policy<wbr>Managed<wbr>Rules</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyManagedRules">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyManagedRules">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Managed<wbr>Rule<wbr>Sets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `managed_rule_set` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exclusions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Exclusion<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `exclusion` block defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Managed<wbr>Rule<wbr>Sets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">[]Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `managed_rule_set` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exclusions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">[]Policy<wbr>Managed<wbr>Rules<wbr>Exclusion</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `exclusion` block defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>managed<wbr>Rule<wbr>Sets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `managed_rule_set` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exclusions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">Policy<wbr>Managed<wbr>Rules<wbr>Exclusion[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `exclusion` block defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>managed<wbr>Rule<wbr>Sets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">List[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `managed_rule_set` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exclusions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">List[Policy<wbr>Managed<wbr>Rules<wbr>Exclusion]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `exclusion` block defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="policymanagedrulesexclusion">Policy<wbr>Managed<wbr>Rules<wbr>Exclusion</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyManagedRulesExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyManagedRulesExclusion">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesExclusionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Match<wbr>Variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes field of the matchVariable collection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Selector<wbr>Match<wbr>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched. Possible values: `Contains`, `EndsWith`, `Equals`, `EqualsAny`, `StartsWith`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Match<wbr>Variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes field of the matchVariable collection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Selector<wbr>Match<wbr>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched. Possible values: `Contains`, `EndsWith`, `Equals`, `EqualsAny`, `StartsWith`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>match<wbr>Variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes field of the matchVariable collection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>selector<wbr>Match<wbr>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched. Possible values: `Contains`, `EndsWith`, `Equals`, `EqualsAny`, `StartsWith`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>match<wbr>Variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>selector</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes field of the matchVariable collection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>selector<wbr>Match<wbr>Operator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Describes operator to be matched. Possible values: `Contains`, `EndsWith`, `Equals`, `EqualsAny`, `StartsWith`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="policymanagedrulesmanagedruleset">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyManagedRulesManagedRuleSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyManagedRulesManagedRuleSet">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rule<wbr>Group<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `rule_group_override` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set type.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rule<wbr>Group<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">[]Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `rule_group_override` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set type.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rule<wbr>Group<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `rule_group_override` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set type.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rule<wbr>Group<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">List[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `rule_group_override` block defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The rule set type.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="policymanagedrulesmanagedrulesetrulegroupoverride">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicyManagedRulesManagedRuleSetRuleGroupOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicyManagedRulesManagedRuleSetRuleGroupOverride">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetRuleGroupOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/waf?tab=doc#PolicyManagedRulesManagedRuleSetRuleGroupOverrideOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Disabled<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more Rule ID's
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Rule<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Rule Group
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Disabled<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}One or more Rule ID's
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Rule<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Rule Group
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>disabled<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more Rule ID's
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>rule<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Rule Group
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>disabled<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more Rule ID's
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>rule<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Rule Group
 {{% /md %}}</dd>
 
 </dl>

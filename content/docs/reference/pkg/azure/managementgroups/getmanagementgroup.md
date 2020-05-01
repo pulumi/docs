@@ -15,9 +15,9 @@ Use this data source to access information about an existing Management Group.
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.getManagementGroup has been deprecated in favour of azure.getGroup
+Deprecated: azure.managementgroups.getManagementGroup has been deprecated in favour of azure.management.getGroup
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.getManagementGroup has been deprecated in favour of azure.getGroup{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.managementgroups.getManagementGroup has been deprecated in favour of azure.management.getGroup{{% /md %}}</p>
 
 
 ## Using GetManagementGroup {#using}

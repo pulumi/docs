@@ -15,9 +15,9 @@ Use this data source to access information about an existing EventHub Namespace.
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.getEventhubNamespace has been deprecated in favour of azure.getNamespace
+Deprecated: azure.eventhub.getEventhubNamespace has been deprecated in favour of azure.eventhub.getNamespace
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.getEventhubNamespace has been deprecated in favour of azure.getNamespace{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.getEventhubNamespace has been deprecated in favour of azure.eventhub.getNamespace{{% /md %}}</p>
 
 
 ## Using GetEventhubNamespace {#using}

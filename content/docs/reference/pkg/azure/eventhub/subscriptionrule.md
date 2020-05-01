@@ -12,9 +12,9 @@ meta_desc: "Explore the SubscriptionRule resource of the eventhub module, includ
 
 Manages a ServiceBus Subscription Rule.
 
-Deprecated: azure.SubscriptionRule has been deprecated in favour of azure.SubscriptionRule
+Deprecated: azure.eventhub.SubscriptionRule has been deprecated in favour of azure.servicebus.SubscriptionRule
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.SubscriptionRule has been deprecated in favour of azure.SubscriptionRule{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.SubscriptionRule has been deprecated in favour of azure.servicebus.SubscriptionRule{{% /md %}}</p>
 
 
 ## Create a SubscriptionRule Resource {#create}

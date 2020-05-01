@@ -12,9 +12,9 @@ meta_desc: "Explore the GetGeographicalLocation function of the trafficmanager m
 
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
-Deprecated: azure.getGeographicalLocation has been deprecated in favour of azure.getTrafficManager
+Deprecated: azure.trafficmanager.getGeographicalLocation has been deprecated in favour of azure.network.getTrafficManager
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.getGeographicalLocation has been deprecated in favour of azure.getTrafficManager{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.trafficmanager.getGeographicalLocation has been deprecated in favour of azure.network.getTrafficManager{{% /md %}}</p>
 
 
 ## Using GetGeographicalLocation {#using}

@@ -12,9 +12,9 @@ meta_desc: "Explore the GetUserAssignedIdentity function of the core module, inc
 
 Use this data source to access information about an existing User Assigned Identity.
 
-Deprecated: azure.getUserAssignedIdentity has been deprecated in favour of azure.getUserAssignedIdentity
+Deprecated: azure.core.getUserAssignedIdentity has been deprecated in favour of azure.authorization.getUserAssignedIdentity
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.getUserAssignedIdentity has been deprecated in favour of azure.getUserAssignedIdentity{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.core.getUserAssignedIdentity has been deprecated in favour of azure.authorization.getUserAssignedIdentity{{% /md %}}</p>
 
 
 ## Using GetUserAssignedIdentity {#using}

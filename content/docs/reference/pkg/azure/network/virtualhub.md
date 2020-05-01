@@ -1055,7 +1055,7 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>address<wbr>Prefixes</span>
+        <span>address_<wbr>prefixes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
