@@ -43,6 +43,8 @@ generate_docs() {
             plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
         elif [[ ${plugin_version} = sdk* ]]; then
             plugin_version=${plugin_version:4}
+        elif [[ ${plugin_version} = provider* ]]; then
+            plugin_version=${plugin_version:9}
         fi
 
         echo -e "\033[0;93mCheckout repo at tag $plugin_version\033[0m"
