@@ -81,6 +81,7 @@ REPOS=(
     "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
     "azure,pulumi-azure,sdk/nodejs"
+    "azuread,pulumi-azuread,sdk/nodejs"
     "cloud,pulumi-cloud/api"
     "cloudamqp,pulumi-cloudamqp,sdk/nodejs"
     "cloudflare,pulumi-cloudflare,sdk/nodejs"
@@ -116,11 +117,10 @@ REPOS=(
     "random,pulumi-random,sdk/nodejs"
     "signalfx,pulumi-signalfx,sdk/nodejs"
     "spotinst,pulumi-spotinst,sdk/nodejs"
-    "vsphere,pulumi-vsphere,sdk/nodejs"
-    "azuread,pulumi-azuread,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
     "tls,pulumi-tls,sdk/nodejs"
     "vault,pulumi-vault,sdk/nodejs"
+    "vsphere,pulumi-vsphere,sdk/nodejs"
 )
 
 PIDS=()
