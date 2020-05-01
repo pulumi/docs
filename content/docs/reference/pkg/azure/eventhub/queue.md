@@ -15,9 +15,9 @@ Manages a ServiceBus Queue.
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.Queue has been deprecated in favour of azure.Queue
+Deprecated: azure.eventhub.Queue has been deprecated in favour of azure.servicebus.Queue
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.Queue has been deprecated in favour of azure.Queue{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Queue has been deprecated in favour of azure.servicebus.Queue{{% /md %}}</p>
 
 
 ## Create a Queue Resource {#create}

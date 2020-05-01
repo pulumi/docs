@@ -17,9 +17,9 @@ Manages a ServiceBus Topic.
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.Topic has been deprecated in favour of azure.Topic
+Deprecated: azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.Topic has been deprecated in favour of azure.Topic{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.Topic has been deprecated in favour of azure.servicebus.Topic{{% /md %}}</p>
 
 
 ## Create a Topic Resource {#create}

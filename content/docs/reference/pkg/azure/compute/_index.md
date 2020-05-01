@@ -45,6 +45,7 @@ Explore the resources and functions of the compute module in the Azure package.
     <li><a href="getsharedimage" title="GetSharedImage"><span class="symbol function"></span>GetSharedImage</a></li>
     <li><a href="getsharedimagegallery" title="GetSharedImageGallery"><span class="symbol function"></span>GetSharedImageGallery</a></li>
     <li><a href="getsharedimageversion" title="GetSharedImageVersion"><span class="symbol function"></span>GetSharedImageVersion</a></li>
+    <li><a href="getsharedimageversions" title="GetSharedImageVersions"><span class="symbol function"></span>GetSharedImageVersions</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
     <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
 </ul>
@@ -58,6 +59,6 @@ Explore the resources and functions of the compute module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

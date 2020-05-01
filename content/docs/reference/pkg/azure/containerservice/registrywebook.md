@@ -15,9 +15,9 @@ Manages an Azure Container Registry Webhook.
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.RegistryWebook has been deprecated in favour of azure.RegistryWebhook
+Deprecated: azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.RegistryWebook has been deprecated in favour of azure.RegistryWebhook{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.containerservice.RegistryWebook has been deprecated in favour of azure.containerservice.RegistryWebhook{{% /md %}}</p>
 
 
 ## Create a RegistryWebook Resource {#create}

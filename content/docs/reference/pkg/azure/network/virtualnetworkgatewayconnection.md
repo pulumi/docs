@@ -353,9 +353,8 @@ in a different subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -540,9 +539,8 @@ in a different subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -727,9 +725,8 @@ in a different subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -914,9 +911,8 @@ in a different subscription.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1274,9 +1270,8 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1461,9 +1456,8 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1648,9 +1642,8 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,9 +1828,8 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The shared IPSec key. A key must be provided if a
-Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
-connections do not need a shared key.
+    <dd>{{% md %}}The shared IPSec key. A key could be provided if a
+Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -15,9 +15,9 @@ Use this data source to access information about an existing ServiceBus Namespac
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.getServiceBusNamespace has been deprecated in favour of azure.getNamespace
+Deprecated: azure.eventhub.getServiceBusNamespace has been deprecated in favour of azure.servicebus.getNamespace
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.getServiceBusNamespace has been deprecated in favour of azure.getNamespace{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.getServiceBusNamespace has been deprecated in favour of azure.servicebus.getNamespace{{% /md %}}</p>
 
 
 ## Using GetServiceBusNamespace {#using}

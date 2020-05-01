@@ -15,9 +15,9 @@ Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 {{% examples %}}
 {{% /examples %}}
 
-Deprecated: azure.TopicAuthorizationRule has been deprecated in favour of azure.TopicAuthorizationRule
+Deprecated: azure.eventhub.TopicAuthorizationRule has been deprecated in favour of azure.servicebus.TopicAuthorizationRule
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.TopicAuthorizationRule has been deprecated in favour of azure.TopicAuthorizationRule{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.eventhub.TopicAuthorizationRule has been deprecated in favour of azure.servicebus.TopicAuthorizationRule{{% /md %}}</p>
 
 
 ## Create a TopicAuthorizationRule Resource {#create}

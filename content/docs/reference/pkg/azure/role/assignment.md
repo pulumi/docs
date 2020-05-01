@@ -12,9 +12,9 @@ meta_desc: "Explore the Assignment resource of the role module, including exampl
 
 Assigns a given Principal (User or Application) to a given Role.
 
-Deprecated: azure.Assignment has been deprecated in favour of azure.Assignment
+Deprecated: azure.role.Assignment has been deprecated in favour of azure.authorization.Assignment
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.Assignment has been deprecated in favour of azure.Assignment{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.role.Assignment has been deprecated in favour of azure.authorization.Assignment{{% /md %}}</p>
 
 
 ## Create a Assignment Resource {#create}

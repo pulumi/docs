@@ -11,9 +11,9 @@ meta_desc: "Explore the GetRoleDefinition function of the role module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-Deprecated: azure.getRoleDefinition has been deprecated in favour of azure.getRoleDefinition
+Deprecated: azure.role.getRoleDefinition has been deprecated in favour of azure.authorization.getRoleDefinition
 
-<p class="resource-deprecated">Deprecated: {{% md %}}azure.getRoleDefinition has been deprecated in favour of azure.getRoleDefinition{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}azure.role.getRoleDefinition has been deprecated in favour of azure.authorization.getRoleDefinition{{% /md %}}</p>
 
 
 ## Using GetRoleDefinition {#using}
