@@ -32,7 +32,7 @@ git_sha: "3f67431a32e3b8bfb103238ada04779a6f57102c"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="account" data-link-title="account">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/config/vars.ts#L12">
         let <strong>account</strong>
     </a>
 </h3>
@@ -42,7 +42,7 @@ git_sha: "3f67431a32e3b8bfb103238ada04779a6f57102c"
 Spotinst Account ID
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/3f67431a32e3b8bfb103238ada04779a6f57102c/sdk/nodejs/config/vars.ts#L16">
         let <strong>token</strong>
     </a>
 </h3>
