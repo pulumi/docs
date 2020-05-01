@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs__ctor_" data-uid="Pulumi.Consul.ServiceArgs.#ctor*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs__ctor" data-uid="Pulumi.Consul.ServiceArgs.#ctor">ServiceArgs()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Address_" data-uid="Pulumi.Consul.ServiceArgs.Address*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Address" data-uid="Pulumi.Consul.ServiceArgs.Address">Address</h4>
@@ -128,7 +128,7 @@ address of the node.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Checks_" data-uid="Pulumi.Consul.ServiceArgs.Checks*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Checks" data-uid="Pulumi.Consul.ServiceArgs.Checks">Checks</h4>
@@ -136,7 +136,7 @@ address of the node.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ServiceChecksArgs&gt; Checks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ServiceCheckArgs&gt; Checks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,13 +148,13 @@ address of the node.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.ServiceChecksArgs.html">ServiceChecksArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Consul.Inputs.ServiceCheckArgs.html">ServiceCheckArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Datacenter_" data-uid="Pulumi.Consul.ServiceArgs.Datacenter*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Datacenter" data-uid="Pulumi.Consul.ServiceArgs.Datacenter">Datacenter</h4>
@@ -182,7 +182,7 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_External_" data-uid="Pulumi.Consul.ServiceArgs.External*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_External" data-uid="Pulumi.Consul.ServiceArgs.External">External</h4>
@@ -208,7 +208,7 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L165">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Meta_" data-uid="Pulumi.Consul.ServiceArgs.Meta*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Meta" data-uid="Pulumi.Consul.ServiceArgs.Meta">Meta</h4>
@@ -218,7 +218,7 @@ instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Meta { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputMap&lt;string&gt; Meta { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,17 +230,17 @@ instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L169">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Name_" data-uid="Pulumi.Consul.ServiceArgs.Name*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Name" data-uid="Pulumi.Consul.ServiceArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the header.</p>
+  <div class="markdown level1 summary"><p>The name of the health-check.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -263,7 +263,34 @@ instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L180">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_ServiceArgs_Namespace_" data-uid="Pulumi.Consul.ServiceArgs.Namespace*"></a>
+  <h4 id="Pulumi_Consul_ServiceArgs_Namespace" data-uid="Pulumi.Consul.ServiceArgs.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>The namespace to create the service within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Namespace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Node_" data-uid="Pulumi.Consul.ServiceArgs.Node*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Node" data-uid="Pulumi.Consul.ServiceArgs.Node">Node</h4>
@@ -290,7 +317,7 @@ instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Port_" data-uid="Pulumi.Consul.ServiceArgs.Port*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Port" data-uid="Pulumi.Consul.ServiceArgs.Port">Port</h4>
@@ -317,7 +344,7 @@ instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_ServiceId_" data-uid="Pulumi.Consul.ServiceArgs.ServiceId*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_ServiceId" data-uid="Pulumi.Consul.ServiceArgs.ServiceId">ServiceId</h4>
@@ -344,7 +371,7 @@ instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Consul_ServiceArgs_Tags_" data-uid="Pulumi.Consul.ServiceArgs.Tags*"></a>
   <h4 id="Pulumi_Consul_ServiceArgs_Tags" data-uid="Pulumi.Consul.ServiceArgs.Tags">Tags</h4>
@@ -378,7 +405,7 @@ but can be used to distinguish between services or nodes.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Service.cs/#L126" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Service.cs/#L131" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

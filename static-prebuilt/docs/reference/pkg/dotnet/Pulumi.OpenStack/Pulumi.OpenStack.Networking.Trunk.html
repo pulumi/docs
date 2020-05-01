@@ -72,9 +72,6 @@
   <h1 id="Pulumi_OpenStack_Networking_Trunk" data-uid="Pulumi.OpenStack.Networking.Trunk" class="text-break">Class Trunk
   </h1>
   <div class="markdown level0 summary"><p>Manages a networking V2 trunk resource within OpenStack.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk__ctor_" data-uid="Pulumi.OpenStack.Networking.Trunk.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk__ctor_System_String_Pulumi_OpenStack_Networking_TrunkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.Trunk.#ctor(System.String,Pulumi.OpenStack.Networking.TrunkArgs,System.Nullable{CustomResourceOptions})">Trunk(String, TrunkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_AdminStateUp_" data-uid="Pulumi.OpenStack.Networking.Trunk.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_AdminStateUp" data-uid="Pulumi.OpenStack.Networking.Trunk.AdminStateUp">AdminStateUp</h4>
@@ -164,7 +161,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_AllTags_" data-uid="Pulumi.OpenStack.Networking.Trunk.AllTags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_AllTags" data-uid="Pulumi.OpenStack.Networking.Trunk.AllTags">AllTags</h4>
@@ -192,7 +189,7 @@ explicitly and implicitly added.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_Description_" data-uid="Pulumi.OpenStack.Networking.Trunk.Description*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_Description" data-uid="Pulumi.OpenStack.Networking.Trunk.Description">Description</h4>
@@ -220,7 +217,7 @@ updates the name of the existing trunk.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_Name_" data-uid="Pulumi.OpenStack.Networking.Trunk.Name*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_Name" data-uid="Pulumi.OpenStack.Networking.Trunk.Name">Name</h4>
@@ -248,13 +245,11 @@ updates the <code>name</code> of an existing trunk.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_PortId_" data-uid="Pulumi.OpenStack.Networking.Trunk.PortId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_PortId" data-uid="Pulumi.OpenStack.Networking.Trunk.PortId">PortId</h4>
-  <div class="markdown level1 summary"><p>The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p>
+  <div class="markdown level1 summary"><p>The ID of the port to be made a subport of the trunk.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -277,7 +272,7 @@ port. Changing this creates a new trunk.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_Region_" data-uid="Pulumi.OpenStack.Networking.Trunk.Region*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_Region" data-uid="Pulumi.OpenStack.Networking.Trunk.Region">Region</h4>
@@ -307,7 +302,7 @@ trunk.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_SubPorts_" data-uid="Pulumi.OpenStack.Networking.Trunk.SubPorts*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_SubPorts" data-uid="Pulumi.OpenStack.Networking.Trunk.SubPorts">SubPorts</h4>
@@ -317,7 +312,7 @@ The structure of each subport is described below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;TrunkSubPorts&gt;&gt; SubPorts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;TrunkSubPort&gt;&gt; SubPorts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,13 +324,13 @@ The structure of each subport is described below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.TrunkSubPorts.html">TrunkSubPorts</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.TrunkSubPort.html">TrunkSubPort</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_Tags_" data-uid="Pulumi.OpenStack.Networking.Trunk.Tags*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_Tags" data-uid="Pulumi.OpenStack.Networking.Trunk.Tags">Tags</h4>
@@ -362,7 +357,7 @@ The structure of each subport is described below.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_TenantId_" data-uid="Pulumi.OpenStack.Networking.Trunk.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_TenantId" data-uid="Pulumi.OpenStack.Networking.Trunk.TenantId">TenantId</h4>
@@ -392,7 +387,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Networking_Trunk_Get_" data-uid="Pulumi.OpenStack.Networking.Trunk.Get*"></a>
   <h4 id="Pulumi_OpenStack_Networking_Trunk_Get_System_String_Input_System_String__Pulumi_OpenStack_Networking_TrunkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.Trunk.Get(System.String,Input{System.String},Pulumi.OpenStack.Networking.TrunkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TrunkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -462,7 +457,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Trunk.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Networking/Trunk.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

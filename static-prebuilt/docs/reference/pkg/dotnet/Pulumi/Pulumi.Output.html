@@ -79,45 +79,139 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Output</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Output_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Output</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Output : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
+  <h4 id="Pulumi_Output_All__1_IEnumerable_Pulumi_Input___0___" data-uid="Pulumi.Output.All``1(IEnumerable{Pulumi.Input{``0}})">All&lt;T&gt;(IEnumerable&lt;Input&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output.html#Pulumi_Output_All__1_Pulumi_Input___0____">All&lt;T&gt;(Input&lt;T&gt;[])</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(IEnumerable&lt;Input&lt;T&gt;&gt; inputs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">inputs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">ImmutableArray</span>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
+  <h4 id="Pulumi_Output_All__1_IEnumerable_Pulumi_Output___0___" data-uid="Pulumi.Output.All``1(IEnumerable{Pulumi.Output{``0}})">All&lt;T&gt;(IEnumerable&lt;Output&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output.html#Pulumi_Output_All__1_Pulumi_Output___0____">All&lt;T&gt;(Output&lt;T&gt;[])</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(IEnumerable&lt;Output&lt;T&gt;&gt; outputs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">outputs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">ImmutableArray</span>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
   <h4 id="Pulumi_Output_All__1_Pulumi_Input___0____" data-uid="Pulumi.Output.All``1(Pulumi.Input{``0}[])">All&lt;T&gt;(Input&lt;T&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> values in <code data-dev-comment-type="paramref" class="paramref">inputs</code> and combines
-them all into a single <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> with an <span class="xref">System.Collections.Immutable.ImmutableArray&lt;T&gt;</span>
+  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> values in <code data-dev-comment-type="paramref" class="paramref">inputs</code>
+into a single <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> with an <see cref="!:ImmutableArray&lt;T>"></see>
 containing all their underlying values.  If any of the <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s are not
 known, the final result will be not known.  Similarly, if any of the <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s are secrets, then the final result will be a secret.</p>
 </div>
@@ -153,7 +247,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;T&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">ImmutableArray</span>&lt;T&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -174,16 +268,19 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Output_All_" data-uid="Pulumi.Output.All*"></a>
-  <h4 id="Pulumi_Output_All__1_System_Collections_Immutable_ImmutableArray_Pulumi_Input___0___" data-uid="Pulumi.Output.All``1(System.Collections.Immutable.ImmutableArray{Pulumi.Input{``0}})">All&lt;T&gt;(ImmutableArray&lt;Input&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Pulumi.Output.html#Pulumi_Output_All__1_Pulumi_Input___0____">All&lt;T&gt;(Input&lt;T&gt;[])</a> for more details.</p>
+  <h4 id="Pulumi_Output_All__1_Pulumi_Output___0____" data-uid="Pulumi.Output.All``1(Pulumi.Output{``0}[])">All&lt;T&gt;(Output&lt;T&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Combines all the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> values in <code data-dev-comment-type="paramref" class="paramref">outputs</code>
+into a single <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> with an <see cref="!:ImmutableArray&lt;T>"></see>
+containing all their underlying values.  If any of the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are not
+known, the final result will be not known.  Similarly, if any of the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are secrets, then the final result will be a secret.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(ImmutableArray&lt;Input&lt;T&gt;&gt; inputs)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Output&lt;ImmutableArray&lt;T&gt;&gt; All&lt;T&gt;(params Output&lt;T&gt;[] outputs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,8 +293,8 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;T&gt;&gt;</td>
-        <td><span class="parametername">inputs</span></td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;T&gt;[]</td>
+        <td><span class="parametername">outputs</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -212,7 +309,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;T&gt;&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">ImmutableArray</span>&lt;T&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -233,7 +330,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Output_Create_" data-uid="Pulumi.Output.Create*"></a>
   <h4 id="Pulumi_Output_Create__1___0_" data-uid="Pulumi.Output.Create``1(``0)">Create&lt;T&gt;(T)</h4>
@@ -291,10 +388,10 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Output_Create_" data-uid="Pulumi.Output.Create*"></a>
-  <h4 id="Pulumi_Output_Create__1_System_Threading_Tasks_Task___0__" data-uid="Pulumi.Output.Create``1(System.Threading.Tasks.Task{``0})">Create&lt;T&gt;(Task&lt;T&gt;)</h4>
+  <h4 id="Pulumi_Output_Create__1_Task___0__" data-uid="Pulumi.Output.Create``1(Task{``0})">Create&lt;T&gt;(Task&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -312,7 +409,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="xref">Task</span>&lt;T&gt;</td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -349,7 +446,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Output_CreateSecret_" data-uid="Pulumi.Output.CreateSecret*"></a>
   <h4 id="Pulumi_Output_CreateSecret__1___0_" data-uid="Pulumi.Output.CreateSecret``1(``0)">CreateSecret&lt;T&gt;(T)</h4>
@@ -407,10 +504,10 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Output_CreateSecret_" data-uid="Pulumi.Output.CreateSecret*"></a>
-  <h4 id="Pulumi_Output_CreateSecret__1_System_Threading_Tasks_Task___0__" data-uid="Pulumi.Output.CreateSecret``1(System.Threading.Tasks.Task{``0})">CreateSecret&lt;T&gt;(Task&lt;T&gt;)</h4>
+  <h4 id="Pulumi_Output_CreateSecret__1_Task___0__" data-uid="Pulumi.Output.CreateSecret``1(Task{``0})">CreateSecret&lt;T&gt;(Task&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -428,7 +525,7 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="xref">Task</span>&lt;T&gt;</td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -465,13 +562,13 @@ known, the final result will be not known.  Similarly, if any of the <a class="x
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Output_Format_" data-uid="Pulumi.Output.Format*"></a>
-  <h4 id="Pulumi_Output_Format_System_FormattableString_" data-uid="Pulumi.Output.Format(System.FormattableString)">Format(FormattableString)</h4>
-  <div class="markdown level1 summary"><p>Takes in a <span class="xref">System.FormattableString</span> with potential <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s or
+  <h4 id="Pulumi_Output_Format_FormattableString_" data-uid="Pulumi.Output.Format(FormattableString)">Format(FormattableString)</h4>
+  <div class="markdown level1 summary"><p>Takes in a <see cref="!:FormattableString"></see> with potential <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s or
 <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> in the 'placeholder holes'.  Conceptually, this method unwraps
-all the underlying values in the holes, combines them appropriately with the <span class="xref">System.FormattableString.Format</span> string, and produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
+all the underlying values in the holes, combines them appropriately with the <see cref="!:FormattableString.Format"></see> string, and produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 containing the final result.</p>
 <p>
 If any of the <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are not known, the
@@ -494,7 +591,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.FormattableString</span></td>
+        <td><span class="xref">FormattableString</span></td>
         <td><span class="parametername">formattableString</span></td>
         <td></td>
       </tr>
@@ -516,7 +613,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__2_Pulumi_Input___0__Pulumi_Input___1__" data-uid="Pulumi.Output.Tuple``2(Pulumi.Input{``0},Pulumi.Input{``1})">Tuple&lt;T1, T2&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;)</h4>
@@ -584,7 +681,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__2_Pulumi_Output___0__Pulumi_Output___1__" data-uid="Pulumi.Output.Tuple``2(Pulumi.Output{``0},Pulumi.Output{``1})">Tuple&lt;T1, T2&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;)</h4>
@@ -652,7 +749,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__3_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__" data-uid="Pulumi.Output.Tuple``3(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2})">Tuple&lt;T1, T2, T3&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;)</h4>
@@ -729,7 +826,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__3_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__" data-uid="Pulumi.Output.Tuple``3(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2})">Tuple&lt;T1, T2, T3&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;)</h4>
@@ -806,7 +903,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__4_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__" data-uid="Pulumi.Output.Tuple``4(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3})">Tuple&lt;T1, T2, T3, T4&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;)</h4>
@@ -892,7 +989,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__4_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__" data-uid="Pulumi.Output.Tuple``4(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3})">Tuple&lt;T1, T2, T3, T4&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;)</h4>
@@ -978,7 +1075,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__5_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__" data-uid="Pulumi.Output.Tuple``5(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4})">Tuple&lt;T1, T2, T3, T4, T5&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;)</h4>
@@ -1073,7 +1170,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__5_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__" data-uid="Pulumi.Output.Tuple``5(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4})">Tuple&lt;T1, T2, T3, T4, T5&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;)</h4>
@@ -1168,7 +1265,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__6_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__" data-uid="Pulumi.Output.Tuple``6(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5})">Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;, Input&lt;T6&gt;)</h4>
@@ -1272,7 +1369,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__6_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__" data-uid="Pulumi.Output.Tuple``6(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5})">Tuple&lt;T1, T2, T3, T4, T5, T6&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;, Output&lt;T6&gt;)</h4>
@@ -1376,7 +1473,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__7_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__Pulumi_Input___6__" data-uid="Pulumi.Output.Tuple``7(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;, Input&lt;T6&gt;, Input&lt;T7&gt;)</h4>
@@ -1489,7 +1586,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__7_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__Pulumi_Output___6__" data-uid="Pulumi.Output.Tuple``7(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;, Output&lt;T6&gt;, Output&lt;T7&gt;)</h4>
@@ -1602,7 +1699,7 @@ final result will be not known.  Similarly, if any of the <a class="xref" href="
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__8_Pulumi_Input___0__Pulumi_Input___1__Pulumi_Input___2__Pulumi_Input___3__Pulumi_Input___4__Pulumi_Input___5__Pulumi_Input___6__Pulumi_Input___7__" data-uid="Pulumi.Output.Tuple``8(Pulumi.Input{``0},Pulumi.Input{``1},Pulumi.Input{``2},Pulumi.Input{``3},Pulumi.Input{``4},Pulumi.Input{``5},Pulumi.Input{``6},Pulumi.Input{``7})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Input&lt;T1&gt;, Input&lt;T2&gt;, Input&lt;T3&gt;, Input&lt;T4&gt;, Input&lt;T5&gt;, Input&lt;T6&gt;, Input&lt;T7&gt;, Input&lt;T8&gt;)</h4>
@@ -1728,7 +1825,7 @@ secret.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Output_Tuple_" data-uid="Pulumi.Output.Tuple*"></a>
   <h4 id="Pulumi_Output_Tuple__8_Pulumi_Output___0__Pulumi_Output___1__Pulumi_Output___2__Pulumi_Output___3__Pulumi_Output___4__Pulumi_Output___5__Pulumi_Output___6__Pulumi_Output___7__" data-uid="Pulumi.Output.Tuple``8(Pulumi.Output{``0},Pulumi.Output{``1},Pulumi.Output{``2},Pulumi.Output{``3},Pulumi.Output{``4},Pulumi.Output{``5},Pulumi.Output{``6},Pulumi.Output{``7})">Tuple&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Output&lt;T1&gt;, Output&lt;T2&gt;, Output&lt;T3&gt;, Output&lt;T4&gt;, Output&lt;T5&gt;, Output&lt;T6&gt;, Output&lt;T7&gt;, Output&lt;T8&gt;)</h4>
@@ -1856,7 +1953,7 @@ secret.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Output_Tuple.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

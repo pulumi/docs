@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">UserPoolEmailConfigurationArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">UserPoolEmailConfigurationArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Cognito.Inputs.html">Pulumi.Aws.Cognito.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L688">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Inputs/UserPoolEmailConfigurationArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs__ctor_" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs__ctor" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.#ctor">UserPoolEmailConfigurationArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L673">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Inputs/UserPoolEmailConfigurationArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_EmailSendingAccount_" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.EmailSendingAccount*"></a>
   <h4 id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_EmailSendingAccount" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.EmailSendingAccount">EmailSendingAccount</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EmailSendingAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EmailSendingAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L679">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Inputs/UserPoolEmailConfigurationArgs.cs/#L24">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_FromEmailAddress_" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.FromEmailAddress*"></a>
+  <h4 id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_FromEmailAddress" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.FromEmailAddress">FromEmailAddress</h4>
+  <div class="markdown level1 summary"><p>Sender’s email address or sender’s name with their email address (e.g. &quot;john@smith.com&amp;quot; or &quot;John Smith &lt;john@smith.com&gt;&quot;)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FromEmailAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Inputs/UserPoolEmailConfigurationArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_ReplyToEmailAddress_" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.ReplyToEmailAddress*"></a>
   <h4 id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_ReplyToEmailAddress" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.ReplyToEmailAddress">ReplyToEmailAddress</h4>
@@ -165,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ReplyToEmailAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ReplyToEmailAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L685">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Inputs/UserPoolEmailConfigurationArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_SourceArn_" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.SourceArn*"></a>
   <h4 id="Pulumi_Aws_Cognito_Inputs_UserPoolEmailConfigurationArgs_SourceArn" data-uid="Pulumi.Aws.Cognito.Inputs.UserPoolEmailConfigurationArgs.SourceArn">SourceArn</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SourceArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SourceArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,7 +202,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +214,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cognito/UserPool.cs/#L668" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Cognito/Inputs/UserPoolEmailConfigurationArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -80,9 +80,6 @@
       <section><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence this provider too) allows you to create as many aliases as
 the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.AliasArgs.html">AliasArgs</a></h4>
       <section></section>
@@ -97,9 +94,6 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
 <p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.CiphertextArgs.html">CiphertextArgs</a></h4>
       <section></section>
@@ -110,29 +104,36 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
 <blockquote>
 <p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.ExternalKeyArgs.html">ExternalKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.ExternalKeyState.html">ExternalKeyState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Kms.GetAlias.html">GetAlias</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetAliasArgs.html">GetAliasArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetAliasResult.html">GetAliasResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Kms.GetCipherText.html">GetCipherText</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetCipherTextArgs.html">GetCipherTextArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetCipherTextResult.html">GetCipherTextResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Kms.GetKey.html">GetKey</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetKeyArgs.html">GetKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetKeyResult.html">GetKeyResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Kms.GetSecret.html">GetSecret</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetSecretArgs.html">GetSecretArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetSecretResult.html">GetSecretResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Kms.GetSecrets.html">GetSecrets</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GetSecretsArgs.html">GetSecretsArgs</a></h4>
       <section></section>
@@ -140,21 +141,13 @@ the <a href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.Grant.html">Grant</a></h4>
       <section><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GrantArgs.html">GrantArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.GrantState.html">GrantState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Kms.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.Key.html">Key</a></h4>
       <section><p>Provides a KMS customer master key.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Kms.KeyArgs.html">KeyArgs</a></h4>
       <section></section>

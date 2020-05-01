@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">JobPigConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">JobPigConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Inputs.html">Pulumi.Gcp.Dataproc.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L574">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs__ctor_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs__ctor" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.#ctor">JobPigConfigArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L533">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_ContinueOnFailure_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.ContinueOnFailure*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_ContinueOnFailure" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.ContinueOnFailure">ContinueOnFailure</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ContinueOnFailure { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ContinueOnFailure { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,17 +121,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L538">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_JarFileUris_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.JarFileUris*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_JarFileUris" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.JarFileUris">JarFileUris</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>HCFS URIs of jar files to be added to the Spark CLASSPATH.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L544">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_LoggingConfig_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.LoggingConfig*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_LoggingConfig" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.LoggingConfig">LoggingConfig</h4>
@@ -189,7 +162,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;JobPigConfigLoggingConfigArgs&gt; LoggingConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;JobPigConfigLoggingConfigArgs&gt;? LoggingConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,17 +174,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigLoggingConfigArgs.html">JobPigConfigLoggingConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigLoggingConfigArgs.html">JobPigConfigLoggingConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L549">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_Properties_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.Properties*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_Properties" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.Properties">Properties</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -227,21 +201,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L555">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_QueryFileUri_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.QueryFileUri*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_QueryFileUri" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.QueryFileUri">QueryFileUri</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The HCFS URI of the script that contains SQL queries.
+Conflicts with <code>query_list</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; QueryFileUri { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? QueryFileUri { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L560">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_QueryLists_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.QueryLists*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_QueryLists" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.QueryLists">QueryLists</h4>
@@ -279,17 +255,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L568">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_ScriptVariables_" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.ScriptVariables*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_JobPigConfigArgs_ScriptVariables" data-uid="Pulumi.Gcp.Dataproc.Inputs.JobPigConfigArgs.ScriptVariables">ScriptVariables</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mapping of query variable names to values (equivalent to the Spark SQL command: <code>SET name=&amp;quot;value&amp;quot;;</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -305,7 +282,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -317,7 +294,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L531" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/JobPigConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

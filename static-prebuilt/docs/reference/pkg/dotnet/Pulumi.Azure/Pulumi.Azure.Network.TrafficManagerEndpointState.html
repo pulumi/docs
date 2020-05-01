@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TrafficManagerEndpointState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TrafficManagerEndpointState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L438">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L436">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState__ctor_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.#ctor*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState__ctor" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.#ctor">TrafficManagerEndpointState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_CustomHeaders_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.CustomHeaders*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_CustomHeaders" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.CustomHeaders">CustomHeaders</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;TrafficManagerEndpointCustomHeadersGetArgs&gt; CustomHeaders { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;TrafficManagerEndpointCustomHeaderGetArgs&gt; CustomHeaders { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.TrafficManagerEndpointCustomHeadersGetArgs.html">TrafficManagerEndpointCustomHeadersGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.TrafficManagerEndpointCustomHeaderGetArgs.html">TrafficManagerEndpointCustomHeaderGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L328">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L326">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_EndpointLocation_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.EndpointLocation*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_EndpointLocation" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.EndpointLocation">EndpointLocation</h4>
@@ -169,7 +140,7 @@ location of the Azure target resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EndpointLocation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +152,13 @@ location of the Azure target resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L331">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_EndpointMonitorStatus_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.EndpointMonitorStatus*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_EndpointMonitorStatus" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.EndpointMonitorStatus">EndpointMonitorStatus</h4>
@@ -195,7 +166,7 @@ location of the Azure target resource.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EndpointMonitorStatus { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointMonitorStatus { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +178,13 @@ location of the Azure target resource.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L336">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_EndpointStatus_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.EndpointStatus*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_EndpointStatus" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.EndpointStatus">EndpointStatus</h4>
@@ -223,7 +194,7 @@ either <code>Enabled</code> or <code>Disabled</code>. Defaults to <code>Enabled<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EndpointStatus { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EndpointStatus { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +206,13 @@ either <code>Enabled</code> or <code>Disabled</code>. Defaults to <code>Enabled<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L345">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_GeoMappings_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.GeoMappings*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_GeoMappings" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.GeoMappings">GeoMappings</h4>
@@ -262,13 +233,13 @@ either <code>Enabled</code> or <code>Disabled</code>. Defaults to <code>Enabled<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_MinChildEndpoints_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.MinChildEndpoints*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_MinChildEndpoints" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.MinChildEndpoints">MinChildEndpoints</h4>
@@ -281,7 +252,7 @@ and defaults to <code>1</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinChildEndpoints { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinChildEndpoints { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +264,13 @@ and defaults to <code>1</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L367">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L365">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_Name_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Name*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_Name" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Name">Name</h4>
@@ -309,7 +280,7 @@ new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,13 +292,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L376">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L374">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_Priority_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Priority*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_Priority" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Priority">Priority</h4>
@@ -339,7 +310,7 @@ omitted the value will be computed in order of creation.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Priority { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Priority { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,13 +322,13 @@ omitted the value will be computed in order of creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L383">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_ProfileName_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.ProfileName*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_ProfileName" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.ProfileName">ProfileName</h4>
@@ -367,7 +338,7 @@ create the Traffic Manager endpoint.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProfileName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProfileName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,13 +350,13 @@ create the Traffic Manager endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L390">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L388">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_ResourceGroupName_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_ResourceGroupName" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.ResourceGroupName">ResourceGroupName</h4>
@@ -395,7 +366,7 @@ create the Traffic Manager endpoint.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,13 +378,13 @@ create the Traffic Manager endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L397">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_Subnets_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Subnets*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_Subnets" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Subnets">Subnets</h4>
@@ -422,7 +393,7 @@ create the Traffic Manager endpoint.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;TrafficManagerEndpointSubnetsGetArgs&gt; Subnets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;TrafficManagerEndpointSubnetGetArgs&gt; Subnets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -434,13 +405,13 @@ create the Traffic Manager endpoint.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.TrafficManagerEndpointSubnetsGetArgs.html">TrafficManagerEndpointSubnetsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Inputs.TrafficManagerEndpointSubnetGetArgs.html">TrafficManagerEndpointSubnetGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L408">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_Target_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Target*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_Target" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Target">Target</h4>
@@ -451,7 +422,7 @@ will be computed.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Target { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Target { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -463,13 +434,13 @@ will be computed.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L418">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L416">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_TargetResourceId_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.TargetResourceId*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_TargetResourceId" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.TargetResourceId">TargetResourceId</h4>
@@ -480,7 +451,7 @@ target. This argument must be provided for an endpoint of type
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TargetResourceId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TargetResourceId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,13 +463,13 @@ target. This argument must be provided for an endpoint of type
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L427">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L425">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_Type_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Type*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_Type" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Type">Type</h4>
@@ -512,7 +483,7 @@ target. This argument must be provided for an endpoint of type
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,13 +495,13 @@ target. This argument must be provided for an endpoint of type
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L435">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_TrafficManagerEndpointState_Weight_" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Weight*"></a>
   <h4 id="Pulumi_Azure_Network_TrafficManagerEndpointState_Weight" data-uid="Pulumi.Azure.Network.TrafficManagerEndpointState.Weight">Weight</h4>
@@ -541,7 +512,7 @@ routing method. Supports values between 1 and 1000.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Weight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Weight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -553,7 +524,7 @@ routing method. Supports values between 1 and 1000.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -565,7 +536,7 @@ routing method. Supports values between 1 and 1000.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L307" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/TrafficManagerEndpoint.cs/#L305" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

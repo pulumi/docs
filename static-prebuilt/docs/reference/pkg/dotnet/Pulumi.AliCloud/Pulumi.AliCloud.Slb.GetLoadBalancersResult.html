@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetLoadBalancersResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetLoadBalancersResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetLoadBalancersResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L122">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_Address" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.Address">Address</h4>
   <div class="markdown level1 summary"><p>Service address of the SLB.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Address</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Address</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L126">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_Id" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_Ids" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>A list of slb IDs.</p>
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L134">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_MasterAvailabilityZone" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.MasterAvailabilityZone">MasterAvailabilityZone</h4>
   <div class="markdown level1 summary"><p>Master availability zone of the SLBs.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MasterAvailabilityZone</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MasterAvailabilityZone</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,20 +185,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_NameRegex" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_Names" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.Names">Names</h4>
   <div class="markdown level1 summary"><p>A list of slb names.</p>
@@ -260,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L143">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_NetworkType" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.NetworkType">NetworkType</h4>
   <div class="markdown level1 summary"><p>Network type of the SLB. Possible values: <code>vpc</code> and <code>classic</code>.</p>
@@ -274,7 +250,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NetworkType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NetworkType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,20 +262,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L144">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_OutputFile" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,20 +287,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L145">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_ResourceGroupId" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.ResourceGroupId">ResourceGroupId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ResourceGroupId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ResourceGroupId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,13 +312,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L149">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_SlaveAvailabilityZone" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.SlaveAvailabilityZone">SlaveAvailabilityZone</h4>
   <div class="markdown level1 summary"><p>Slave availability zone of the SLBs.</p>
@@ -350,7 +326,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SlaveAvailabilityZone</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SlaveAvailabilityZone</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,13 +338,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L153">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_Slbs" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.Slbs">Slbs</h4>
   <div class="markdown level1 summary"><p>A list of SLBs. Each element contains the following attributes:</p>
@@ -376,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLoadBalancersSlbsResult&gt; Slbs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetLoadBalancersSlbResult&gt; Slbs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -388,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.GetLoadBalancersSlbsResult.html">GetLoadBalancersSlbsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.GetLoadBalancersSlbResult.html">GetLoadBalancersSlbResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L157">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_Tags" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A map of tags assigned to the SLB instance.</p>
@@ -402,7 +378,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Tags</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Tags</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -414,13 +390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L161">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_VpcId" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.VpcId">VpcId</h4>
   <div class="markdown level1 summary"><p>ID of the VPC the SLB belongs to.</p>
@@ -428,7 +404,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VpcId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VpcId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -440,13 +416,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L165">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Slb_GetLoadBalancersResult_VswitchId" data-uid="Pulumi.AliCloud.Slb.GetLoadBalancersResult.VswitchId">VswitchId</h4>
   <div class="markdown level1 summary"><p>ID of the VSwitch the SLB belongs to.</p>
@@ -454,7 +430,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VswitchId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VswitchId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,7 +442,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -478,7 +454,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L113" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/GetLoadBalancers.cs/#L116" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

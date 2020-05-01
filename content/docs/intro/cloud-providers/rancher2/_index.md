@@ -13,7 +13,7 @@ menu:
 The Rancher2 provider for Pulumi can be used to provision any of the cloud resources available via [Rancher](https://rancher.com/).
 The Rancher2 provider must be configured with credentials to deploy and update resources for Rancher.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/rancher2" >}}) for complete details of the available Rancher2 provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/rancher2" >}}) for complete details of the available Rancher2 provider APIs.
 
 ## Setup
 
@@ -69,7 +69,7 @@ user = rancher2.User("my-user",
 
 ```go
 import (
-  rancher2 "github.com/pulumi/pulumi-rancher2/sdk/go/rancher2"
+  rancher2 "github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
 )
 
 user, _ := rancher2.NewUser(ctx, "my-user", &rancher2.UserArgs{

@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NodeStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class NodeStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class NodeStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17859">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18020">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Addresses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Addresses">Addresses</h4>
   <div class="markdown level1 summary"><p>List of addresses reachable to the node. Queried from cloud provider, if available. More
@@ -136,13 +112,13 @@ See <a href="http://pr.k8s.io/79391">http://pr.k8s.io/79391</a> for an example.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeAddress.html">NodeAddress</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeAddress.html">NodeAddress</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17865">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18026">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Allocatable" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Allocatable">Allocatable</h4>
   <div class="markdown level1 summary"><p>Allocatable represents the resources of a node that are available for scheduling.
@@ -163,13 +139,13 @@ Defaults to Capacity.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17871">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18032">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Capacity" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Capacity">Capacity</h4>
   <div class="markdown level1 summary"><p>Capacity represents the total resources of a node. More info:
@@ -190,13 +166,13 @@ Defaults to Capacity.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17877">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18038">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>Conditions is an array of current observed node conditions. More info:
@@ -217,13 +193,13 @@ Defaults to Capacity.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeCondition.html">NodeCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeCondition.html">NodeCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17882">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18043">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Config" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Config">Config</h4>
   <div class="markdown level1 summary"><p>Status of the config assigned to the node via the dynamic Kubelet config feature.</p>
@@ -249,7 +225,7 @@ Defaults to Capacity.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17887">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18048">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_DaemonEndpoints" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.DaemonEndpoints">DaemonEndpoints</h4>
   <div class="markdown level1 summary"><p>Endpoints of daemons running on the Node.</p>
@@ -275,7 +251,7 @@ Defaults to Capacity.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17892">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18053">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Images" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Images">Images</h4>
   <div class="markdown level1 summary"><p>List of container images on this node</p>
@@ -295,13 +271,13 @@ Defaults to Capacity.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerImage.html">ContainerImage</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerImage.html">ContainerImage</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17898">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18059">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_NodeInfo" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.NodeInfo">NodeInfo</h4>
   <div class="markdown level1 summary"><p>Set of ids/uuids to uniquely identify the node. More info:
@@ -328,7 +304,7 @@ Defaults to Capacity.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17905">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18066">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Phase" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Phase">Phase</h4>
   <div class="markdown level1 summary"><p>NodePhase is the recently observed lifecycle phase of the node. More info:
@@ -356,7 +332,7 @@ now is deprecated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17910">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18071">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_VolumesAttached" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.VolumesAttached">VolumesAttached</h4>
   <div class="markdown level1 summary"><p>List of volumes that are attached to the node.</p>
@@ -376,13 +352,13 @@ now is deprecated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.AttachedVolume.html">AttachedVolume</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.AttachedVolume.html">AttachedVolume</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17915">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18076">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_VolumesInUse" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.VolumesInUse">VolumesInUse</h4>
   <div class="markdown level1 summary"><p>List of attachable volumes in use (mounted) by the node.</p>
@@ -402,7 +378,7 @@ now is deprecated.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -414,7 +390,7 @@ now is deprecated.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17849" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L18010" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

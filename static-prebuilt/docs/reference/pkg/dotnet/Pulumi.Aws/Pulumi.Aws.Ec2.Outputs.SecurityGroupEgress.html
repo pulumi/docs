@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SecurityGroupEgress</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.Outputs.html">Pulumi.Aws.Ec2.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SecurityGroupEgress</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SecurityGroupEgress : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L573">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_CidrBlocks" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.CidrBlocks">CidrBlocks</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of CIDR blocks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -130,24 +107,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L580">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_Description" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.Description">Description</h4>
-  <div class="markdown level1 summary"><p>The security group description. Defaults to
-&quot;Managed by Pulumi&quot;. Cannot be &quot;&quot;. <strong>NOTE</strong>: This field maps to the AWS
-<code>GroupDescription</code> attribute, for which there is no Update API. If you'd like
-to classify your security groups in a way that can be updated, use <code>tags</code>.</p>
+  <div class="markdown level1 summary"><p>Description of this egress rule.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Description</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Description</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,16 +133,17 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L581">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_FromPort" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.FromPort">FromPort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The start port (or ICMP type number if protocol is &quot;icmp&quot;)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -190,10 +165,11 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L582">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_Ipv6CidrBlocks" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.Ipv6CidrBlocks">Ipv6CidrBlocks</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of IPv6 CIDR blocks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -209,16 +185,17 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L583">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_PrefixListIds" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.PrefixListIds">PrefixListIds</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of prefix list IDs (for allowing access to VPC endpoints)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -234,16 +211,18 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L40">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_Protocol" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.Protocol">Protocol</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The protocol. If you select a protocol of
+&quot;-1&quot; (semantically equivalent to <code>&amp;quot;all&amp;quot;</code>, which is not a valid value here), you must specify a &quot;from_port&quot; and &quot;to_port&quot; equal to 0. If not icmp, tcp, udp, or &quot;-1&quot; use the <a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -265,10 +244,12 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L585">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L45">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_SecurityGroups" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.SecurityGroups">SecurityGroups</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>List of security group Group Names if using
+EC2-Classic, or Group IDs if using a VPC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -284,16 +265,18 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L586">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L50">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_Self" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.Self">Self</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If true, the security group itself will be added as
+a source to this egress rule.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -315,10 +298,11 @@ to classify your security groups in a way that can be updated, use <code>tags</c
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L587">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_Outputs_SecurityGroupEgress_ToPort" data-uid="Pulumi.Aws.Ec2.Outputs.SecurityGroupEgress.ToPort">ToPort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The end range port (or ICMP code if protocol is &quot;icmp&quot;).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -346,7 +330,7 @@ to classify your security groups in a way that can be updated, use <code>tags</c
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SecurityGroup.cs/#L570" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Outputs/SecurityGroupEgress.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

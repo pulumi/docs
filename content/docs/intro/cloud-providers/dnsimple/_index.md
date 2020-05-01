@@ -13,7 +13,7 @@ menu:
 The DNSimple provider for Pulumi can be used to provision any of the cloud resources available in [DNSimple](https://dnsimple.com/).
 The DNSimple provider must be configured with credentials to deploy and update resources in DNSimple.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/dnsimple" >}}) for complete details of the available DNSimple provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/dnsimple" >}}) for complete details of the available DNSimple provider APIs.
 
 ## Setup
 
@@ -69,7 +69,7 @@ record = dnsimple.Record("test",
 
 ```go
 import (
-  dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/go/dnsimple"
+  dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple"
 )
 
 record, _ := dnsimple.NewRecord(ctx, "test", &dnsimple.RecordArgs{

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">VirtualNetworkGatewayConnectionIpsecPolicyArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">VirtualNetworkGatewayConnectionIpsecPolicyArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.Inputs.html">Pulumi.Azure.Network.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L505">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs__ctor_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs__ctor" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.#ctor">VirtualNetworkGatewayConnectionIpsecPolicyArgs()</h4>
@@ -129,11 +100,14 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L481">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_DhGroup_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.DhGroup*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_DhGroup" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.DhGroup">DhGroup</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The DH group used in IKE phase 1 for initial SA. Valid
+options are <code>DHGroup1</code>, <code>DHGroup14</code>, <code>DHGroup2</code>, <code>DHGroup2048</code>, <code>DHGroup24</code>,
+<code>ECP256</code>, <code>ECP384</code>, or <code>None</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,17 +123,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L484">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IkeEncryption_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IkeEncryption*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IkeEncryption" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IkeEncryption">IkeEncryption</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IKE encryption algorithm. Valid
+options are <code>AES128</code>, <code>AES192</code>, <code>AES256</code>, <code>DES</code>, or <code>DES3</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,17 +151,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L487">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IkeIntegrity_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IkeIntegrity*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IkeIntegrity" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IkeIntegrity">IkeIntegrity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IKE integrity algorithm. Valid
+options are <code>MD5</code>, <code>SHA1</code>, <code>SHA256</code>, or <code>SHA384</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,17 +179,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L490">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IpsecEncryption_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IpsecEncryption*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IpsecEncryption" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IpsecEncryption">IpsecEncryption</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IPSec encryption algorithm. Valid
+options are <code>AES128</code>, <code>AES192</code>, <code>AES256</code>, <code>DES</code>, <code>DES3</code>, <code>GCMAES128</code>, <code>GCMAES192</code>, <code>GCMAES256</code>, or <code>None</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -227,17 +207,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L493">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IpsecIntegrity_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IpsecIntegrity*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_IpsecIntegrity" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.IpsecIntegrity">IpsecIntegrity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IPSec integrity algorithm. Valid
+options are <code>GCMAES128</code>, <code>GCMAES192</code>, <code>GCMAES256</code>, <code>MD5</code>, <code>SHA1</code>, or <code>SHA256</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,17 +235,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L496">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_PfsGroup_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.PfsGroup*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_PfsGroup" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.PfsGroup">PfsGroup</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The DH group used in IKE phase 2 for new child SA.
+Valid options are <code>ECP256</code>, <code>ECP384</code>, <code>PFS1</code>, <code>PFS2</code>, <code>PFS2048</code>, <code>PFS24</code>,
+or <code>None</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,21 +264,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L499">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_SaDatasize_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.SaDatasize*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_SaDatasize" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.SaDatasize">SaDatasize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IPSec SA payload size in KB. Must be at least
+<code>1024</code> KB. Defaults to <code>102400000</code> KB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SaDatasize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SaDatasize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,21 +292,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L502">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_SaLifetime_" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.SaLifetime*"></a>
   <h4 id="Pulumi_Azure_Network_Inputs_VirtualNetworkGatewayConnectionIpsecPolicyArgs_SaLifetime" data-uid="Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayConnectionIpsecPolicyArgs.SaLifetime">SaLifetime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IPSec SA lifetime in seconds. Must be at least
+<code>300</code> seconds. Defaults to <code>27000</code> seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SaLifetime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SaLifetime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,7 +320,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -343,7 +332,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VirtualNetworkGatewayConnection.cs/#L479" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Inputs/VirtualNetworkGatewayConnectionIpsecPolicyArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

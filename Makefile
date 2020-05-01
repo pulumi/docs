@@ -19,6 +19,11 @@ ensure:
 	yarn install
 	yarn --cwd components install
 
+.PHONY: ensure_tools
+ensure_tools:
+	echo "Restoring resourcedocsgen deps..."
+	cd tools/resourcedocsgen && go mod tidy && go mod download
+
 .PHONY: lint_markdown
 lint_markdown:
 	yarn lint-markdown
@@ -43,10 +48,6 @@ generate:
 	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
-
-.PHONY: resource_docs
-resource_docs::
-	./scripts/gen_resource_docs.sh
 
 .PHONY: copy_static_prebuilt
 copy_static_prebuilt:

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">InstanceBootDiskGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">InstanceBootDiskGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Inputs.html">Pulumi.Gcp.Compute.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L842">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs__ctor_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs__ctor" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.#ctor">InstanceBootDiskGetArgs()</h4>
@@ -129,15 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L818">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_AutoDelete_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.AutoDelete*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_AutoDelete" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.AutoDelete">AutoDelete</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the disk will be auto-deleted when the instance
+is deleted. Defaults to true.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoDelete { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoDelete { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +122,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L821">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_DeviceName_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.DeviceName*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_DeviceName" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.DeviceName">DeviceName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Name with which the attached disk will be accessible
+under <code>/dev/disk/by-id/google-*</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DeviceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DeviceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +150,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L824">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_DiskEncryptionKeyRaw_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.DiskEncryptionKeyRaw*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_DiskEncryptionKeyRaw" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.DiskEncryptionKeyRaw">DiskEncryptionKeyRaw</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A 256-bit [customer-supplied encryption key]
+(<a href="https://cloud.google.com/compute/docs/disks/customer-supplied-encryption">https://cloud.google.com/compute/docs/disks/customer-supplied-encryption</a>),
+encoded in <a href="https://tools.ietf.org/html/rfc4648#section-4">RFC 4648 base64</a>
+to encrypt this disk. Only one of <code>kms_key_self_link</code> and <code>disk_encryption_key_raw</code> may be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DiskEncryptionKeyRaw { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DiskEncryptionKeyRaw { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L827">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_DiskEncryptionKeySha256_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.DiskEncryptionKeySha256*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_DiskEncryptionKeySha256" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.DiskEncryptionKeySha256">DiskEncryptionKeySha256</h4>
@@ -215,7 +194,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DiskEncryptionKeySha256 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DiskEncryptionKeySha256 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +206,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L830">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_InitializeParams_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.InitializeParams*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_InitializeParams" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.InitializeParams">InitializeParams</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Parameters for a new disk that will be created
+alongside the new instance. Either <code>initialize_params</code> or <code>source</code> must be set.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceBootDiskInitializeParamsGetArgs&gt; InitializeParams { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceBootDiskInitializeParamsGetArgs&gt;? InitializeParams { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +235,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsGetArgs.html">InstanceBootDiskInitializeParamsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsGetArgs.html">InstanceBootDiskInitializeParamsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L833">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_KmsKeySelfLink_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.KmsKeySelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_KmsKeySelfLink" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.KmsKeySelfLink">KmsKeySelfLink</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The self_link of the encryption key that is
+stored in Google Cloud KMS to encrypt this disk. Only one of <code>kms_key_self_link</code>
+and <code>disk_encryption_key_raw</code> may be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeySelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeySelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,21 +264,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L836">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_Mode_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.Mode*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_Mode" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.Mode">Mode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Either &quot;READ_ONLY&quot; or &quot;READ_WRITE&quot;, defaults to &quot;READ_WRITE&quot;
+If you have a persistent disk with data that you want to share
+between multiple instances, detach it from any read-write instances and
+attach it to one or more instances in read-only mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Mode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Mode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,21 +294,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L839">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_Source_" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.Source*"></a>
   <h4 id="Pulumi_Gcp_Compute_Inputs_InstanceBootDiskGetArgs_Source" data-uid="Pulumi.Gcp.Compute.Inputs.InstanceBootDiskGetArgs.Source">Source</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name or self_link of the disk to attach to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Source { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Source { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,7 +321,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -343,7 +333,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Instance.cs/#L816" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Inputs/InstanceBootDiskGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

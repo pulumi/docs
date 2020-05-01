@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetNetworkResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.html">Pulumi.Docker</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
   <h5 id="Pulumi_Docker_GetNetworkResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetNetworkResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetNetworkResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L53">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_Driver" data-uid="Pulumi.Docker.GetNetworkResult.Driver">Driver</h4>
   <div class="markdown level1 summary"><p>(Optional, string) The driver of the Docker network.
@@ -139,14 +115,14 @@ See [docker docs][networkdocs] for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_Id" data-uid="Pulumi.Docker.GetNetworkResult.Id">Id</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,13 +134,13 @@ See [docker docs][networkdocs] for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_Internal" data-uid="Pulumi.Docker.GetNetworkResult.Internal">Internal</h4>
   <div class="markdown level1 summary"></div>
@@ -189,14 +165,14 @@ See [docker docs][networkdocs] for more details.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_IpamConfigs" data-uid="Pulumi.Docker.GetNetworkResult.IpamConfigs">IpamConfigs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetNetworkIpamConfigsResult&gt; IpamConfigs</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetNetworkIpamConfigResult&gt; IpamConfigs</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,20 +184,20 @@ See [docker docs][networkdocs] for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.GetNetworkIpamConfigsResult.html">GetNetworkIpamConfigsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.GetNetworkIpamConfigResult.html">GetNetworkIpamConfigResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_Name" data-uid="Pulumi.Docker.GetNetworkResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +209,13 @@ See [docker docs][networkdocs] for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_Options" data-uid="Pulumi.Docker.GetNetworkResult.Options">Options</h4>
   <div class="markdown level1 summary"><p>(Optional, map) Only available with bridge networks. See
@@ -265,13 +241,13 @@ See [docker docs][networkdocs] for more details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L66">View Source</a>
   </span>
   <h4 id="Pulumi_Docker_GetNetworkResult_Scope" data-uid="Pulumi.Docker.GetNetworkResult.Scope">Scope</h4>
   <div class="markdown level1 summary"></div>
@@ -302,7 +278,7 @@ See [docker docs][networkdocs] for more details.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/GetNetwork.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/GetNetwork.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

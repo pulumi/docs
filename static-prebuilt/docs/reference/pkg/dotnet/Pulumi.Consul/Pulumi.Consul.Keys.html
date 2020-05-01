@@ -71,10 +71,7 @@
   
   <h1 id="Pulumi_Consul_Keys" data-uid="Pulumi.Consul.Keys" class="text-break">Class Keys
   </h1>
-  <div class="markdown level0 summary"><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/keys.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/keys.html.markdown</a>.</p>
-</blockquote>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -90,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Consul_Keys__ctor_" data-uid="Pulumi.Consul.Keys.#ctor*"></a>
   <h4 id="Pulumi_Consul_Keys__ctor_System_String_Pulumi_Consul_KeysArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Keys.#ctor(System.String,Pulumi.Consul.KeysArgs,System.Nullable{CustomResourceOptions})">Keys(String, KeysArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -134,7 +131,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Consul_Keys_Datacenter_" data-uid="Pulumi.Consul.Keys.Datacenter*"></a>
   <h4 id="Pulumi_Consul_Keys_Datacenter" data-uid="Pulumi.Consul.Keys.Datacenter">Datacenter</h4>
@@ -162,7 +159,7 @@ agent's default datacenter and the datacenter in the provider setup.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L25">View Source</a>
   </span>
   <a id="Pulumi_Consul_Keys_KeysCollection_" data-uid="Pulumi.Consul.Keys.KeysCollection*"></a>
   <h4 id="Pulumi_Consul_Keys_KeysCollection" data-uid="Pulumi.Consul.Keys.KeysCollection">KeysCollection</h4>
@@ -172,7 +169,7 @@ Supported values documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;KeysKeys&gt;&gt; KeysCollection { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;KeysKey&gt;&gt; KeysCollection { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,13 +181,40 @@ Supported values documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.KeysKeys.html">KeysKeys</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.KeysKey.html">KeysKey</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_Keys_Namespace_" data-uid="Pulumi.Consul.Keys.Namespace*"></a>
+  <h4 id="Pulumi_Consul_Keys_Namespace" data-uid="Pulumi.Consul.Keys.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>The namespace to create the keys within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Namespace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Consul_Keys_Token_" data-uid="Pulumi.Consul.Keys.Token*"></a>
   <h4 id="Pulumi_Consul_Keys_Token" data-uid="Pulumi.Consul.Keys.Token">Token</h4>
@@ -218,7 +242,7 @@ token that the agent provides by default.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Consul_Keys_Var_" data-uid="Pulumi.Consul.Keys.Var*"></a>
   <h4 id="Pulumi_Consul_Keys_Var" data-uid="Pulumi.Consul.Keys.Var">Var</h4>
@@ -226,7 +250,7 @@ token that the agent provides by default.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Var { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Var { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,7 +262,7 @@ token that the agent provides by default.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -246,7 +270,7 @@ token that the agent provides by default.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Consul_Keys_Get_" data-uid="Pulumi.Consul.Keys.Get*"></a>
   <h4 id="Pulumi_Consul_Keys_Get_System_String_Input_System_String__Pulumi_Consul_KeysState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Keys.Get(System.String,Input{System.String},Pulumi.Consul.KeysState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, KeysState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -316,7 +340,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Keys.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Keys.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

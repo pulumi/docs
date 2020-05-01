@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TableExternalDataConfigurationCsvOptionsArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TableExternalDataConfigurationCsvOptionsArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.html">Pulumi.Gcp.BigQuery.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L620">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs__ctor_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs__ctor" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.#ctor">TableExternalDataConfigurationCsvOptionsArgs()</h4>
@@ -129,15 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L602">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_AllowJaggedRows_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.AllowJaggedRows*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_AllowJaggedRows" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.AllowJaggedRows">AllowJaggedRows</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if BigQuery should accept rows
+that are missing trailing optional columns.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllowJaggedRows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowJaggedRows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +122,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L605">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_AllowQuotedNewlines_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.AllowQuotedNewlines*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_AllowQuotedNewlines" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.AllowQuotedNewlines">AllowQuotedNewlines</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if BigQuery should allow
+quoted data sections that contain newline characters in a CSV file.
+The default value is false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllowQuotedNewlines { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowQuotedNewlines { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +151,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L608">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_Encoding_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.Encoding*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_Encoding" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.Encoding">Encoding</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The character encoding of the data. The supported
+values are UTF-8 or ISO-8859-1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Encoding { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Encoding { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +179,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L611">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_FieldDelimiter_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.FieldDelimiter*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_FieldDelimiter" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.FieldDelimiter">FieldDelimiter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The separator for fields in a CSV file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FieldDelimiter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FieldDelimiter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,17 +206,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L614">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_Quote_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.Quote*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_Quote" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.Quote">Quote</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value that is used to quote data sections in a
+CSV file. If your data does not contain quoted sections, set the
+property value to an empty string. If your data contains quoted newline
+characters, you must also set the <code>allow_quoted_newlines</code> property to true.
+The API-side default is <code>&amp;quot;</code>, specified in the provider escaped as <code>\&amp;quot;</code>. Due to
+limitations with default values, this value is required to be
+explicitly set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,21 +239,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L617">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_SkipLeadingRows_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.SkipLeadingRows*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationCsvOptionsArgs_SkipLeadingRows" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.SkipLeadingRows">SkipLeadingRows</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of rows at the top of the sheet
+that BigQuery will skip when reading the data. At least one of <code>range</code> or
+<code>skip_leading_rows</code> must be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SkipLeadingRows { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SkipLeadingRows { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,7 +268,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +280,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L600" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationCsvOptionsArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

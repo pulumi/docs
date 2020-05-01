@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetFunctionResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.CloudFunctions.html">Pulumi.Gcp.CloudFunctions</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetFunctionResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetFunctionResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_AvailableMemoryMb" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.AvailableMemoryMb">AvailableMemoryMb</h4>
   <div class="markdown level1 summary"><p>Available memory (in MB) to the function.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Description" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>Description of the function.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_EntryPoint" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.EntryPoint">EntryPoint</h4>
   <div class="markdown level1 summary"><p>Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_EnvironmentVariables" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.EnvironmentVariables">EnvironmentVariables</h4>
   <div class="markdown level1 summary"></div>
@@ -208,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_EventTriggers" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.EventTriggers">EventTriggers</h4>
   <div class="markdown level1 summary"><p>A source that fires events in response to a condition in another service. Structure is documented below.</p>
@@ -222,7 +198,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetFunctionEventTriggersResult&gt; EventTriggers</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetFunctionEventTriggerResult&gt; EventTriggers</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionEventTriggersResult.html">GetFunctionEventTriggersResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionEventTriggerResult.html">GetFunctionEventTriggerResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_HttpsTriggerUrl" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.HttpsTriggerUrl">HttpsTriggerUrl</h4>
   <div class="markdown level1 summary"><p>If function is triggered by HTTP, trigger URL is set here.</p>
@@ -266,7 +242,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Id" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -292,7 +268,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L86">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_IngressSettings" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.IngressSettings">IngressSettings</h4>
+  <div class="markdown level1 summary"><p>Controls what traffic can reach the function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string IngressSettings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Labels" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Labels">Labels</h4>
   <div class="markdown level1 summary"><p>A map of labels applied to this function.</p>
@@ -312,13 +314,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L91">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_MaxInstances" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.MaxInstances">MaxInstances</h4>
   <div class="markdown level1 summary"></div>
@@ -343,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Name" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the Cloud Function.</p>
@@ -369,14 +371,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L96">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Project" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Project">Project</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Project</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Project</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -388,20 +390,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L97">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Region" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Region">Region</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Region</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Region</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -413,13 +415,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L101">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Runtime" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Runtime">Runtime</h4>
   <div class="markdown level1 summary"><p>The runtime in which the function is running.</p>
@@ -445,7 +447,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L105">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_ServiceAccountEmail" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.ServiceAccountEmail">ServiceAccountEmail</h4>
   <div class="markdown level1 summary"><p>The service account email to be assumed by the cloud function.</p>
@@ -471,7 +473,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L109">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_SourceArchiveBucket" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.SourceArchiveBucket">SourceArchiveBucket</h4>
   <div class="markdown level1 summary"><p>The GCS bucket containing the zip archive which contains the function.</p>
@@ -497,7 +499,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L113">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_SourceArchiveObject" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.SourceArchiveObject">SourceArchiveObject</h4>
   <div class="markdown level1 summary"><p>The source archive object (file) in archive bucket.</p>
@@ -523,14 +525,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_SourceRepositories" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.SourceRepositories">SourceRepositories</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetFunctionSourceRepositoriesResult&gt; SourceRepositories</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetFunctionSourceRepositoryResult&gt; SourceRepositories</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,13 +544,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionSourceRepositoriesResult.html">GetFunctionSourceRepositoriesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionSourceRepositoryResult.html">GetFunctionSourceRepositoryResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L118">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_Timeout" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.Timeout">Timeout</h4>
   <div class="markdown level1 summary"><p>Function execution timeout (in seconds).</p>
@@ -574,7 +576,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L122">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_TriggerHttp" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.TriggerHttp">TriggerHttp</h4>
   <div class="markdown level1 summary"><p>If function is triggered by HTTP, this boolean is set.</p>
@@ -600,14 +602,41 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L126">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_VpcConnector" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.VpcConnector">VpcConnector</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The VPC Network Connector that this cloud function can connect to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string VpcConnector</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L130">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_CloudFunctions_GetFunctionResult_VpcConnectorEgressSettings" data-uid="Pulumi.Gcp.CloudFunctions.GetFunctionResult.VpcConnectorEgressSettings">VpcConnectorEgressSettings</h4>
+  <div class="markdown level1 summary"><p>The egress settings for the connector, controlling what traffic is diverted through it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string VpcConnectorEgressSettings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,7 +660,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Cloudfunctions/GetFunction.cs/#L52" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/CloudFunctions/GetFunction.cs/#L55" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

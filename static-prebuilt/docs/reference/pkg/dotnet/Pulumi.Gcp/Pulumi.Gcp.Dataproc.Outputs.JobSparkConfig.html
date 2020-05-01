@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">JobSparkConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Outputs.html">Pulumi.Gcp.Dataproc.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class JobSparkConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class JobSparkConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_ArchiveUris" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.ArchiveUris">ArchiveUris</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1367">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_Args" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.Args">Args</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -155,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1368">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_FileUris" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.FileUris">FileUris</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -180,16 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_JarFileUris" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.JarFileUris">JarFileUris</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>HCFS URIs of jar files to be added to the Spark CLASSPATH.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -205,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1370">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_LoggingConfig" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.LoggingConfig">LoggingConfig</h4>
   <div class="markdown level1 summary"></div>
@@ -236,14 +216,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1371">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_MainClass" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.MainClass">MainClass</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MainClass</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MainClass</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,20 +235,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L37">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_MainJarFileUri" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.MainJarFileUri">MainJarFileUri</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with <code>main_class</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MainJarFileUri</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MainJarFileUri</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,20 +261,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Dataproc_Outputs_JobSparkConfig_Properties" data-uid="Pulumi.Gcp.Dataproc.Outputs.JobSparkConfig.Properties">Properties</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Properties</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Properties</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +287,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -317,7 +299,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Job.cs/#L1363" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Outputs/JobSparkConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

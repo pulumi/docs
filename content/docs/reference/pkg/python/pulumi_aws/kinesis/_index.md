@@ -13,12 +13,12 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.kinesis"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.kinesis"></span><dl class="py class">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">AnalyticsApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_logging_options=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">reference_data_sources=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">AnalyticsApplication</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_logging_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_data_sources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
-<p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html">Amazon Kinesis Analytics Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -201,15 +201,15 @@ See JSON Mapping Parameters below for more details.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The in-application Table Name.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the Kinesis Analytics Appliation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.cloudwatch_logging_options">
-<code class="sig-name descname">cloudwatch_logging_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.cloudwatch_logging_options" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cloudwatch_logging_options</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.cloudwatch_logging_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.</p>
 <ul class="simple">
@@ -219,27 +219,27 @@ See CloudWatch Logging Options below for more details.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.code">
-<code class="sig-name descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.code" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">code</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.code" title="Permalink to this definition">¶</a></dt>
 <dd><p>SQL Code to transform input data, and generate output.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.create_timestamp">
-<code class="sig-name descname">create_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.create_timestamp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_timestamp</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.create_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Timestamp when the application version was created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the application.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.inputs">
-<code class="sig-name descname">inputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.inputs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">inputs</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.inputs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input configuration of the application. See Inputs below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
@@ -321,21 +321,21 @@ See JSON Mapping Parameters below for more details.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.last_update_timestamp">
-<code class="sig-name descname">last_update_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.last_update_timestamp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">last_update_timestamp</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.last_update_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Timestamp when the application was last updated.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the Kinesis Analytics Application.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.outputs">
-<code class="sig-name descname">outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.outputs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">outputs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.outputs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output destination configuration of the application. See Outputs below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
@@ -368,9 +368,9 @@ See Kinesis Stream below for more details.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.reference_data_sources">
-<code class="sig-name descname">reference_data_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.reference_data_sources" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reference_data_sources</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.reference_data_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.</p>
 <ul class="simple">
@@ -423,27 +423,27 @@ See JSON Mapping Parameters below for more details.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Status of the application.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value mapping of tags for the Kinesis Analytics Application.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Version of the application.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cloudwatch_logging_options=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">create_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">last_update_timestamp=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">reference_data_sources=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudwatch_logging_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_update_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reference_data_sources</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AnalyticsApplication resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -636,9 +636,9 @@ See JSON Mapping Parameters below for more details.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -654,9 +654,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -674,16 +674,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.kinesis.AwaitableGetStreamResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">AwaitableGetStreamResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">closed_shards=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open_shards=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">shard_level_metrics=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AwaitableGetStreamResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">AwaitableGetStreamResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">closed_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_level_metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AwaitableGetStreamResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_s3_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis_source_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redshift_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">splunk_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
-<p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/firehose/">Amazon Kinesis Firehose Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -982,21 +982,21 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) specifying the Stream</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.destination">
-<code class="sig-name descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.destination" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">destination</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the destination to where the data is delivered. The only options are <code class="docutils literal notranslate"><span class="pre">s3</span></code> (Deprecated, use <code class="docutils literal notranslate"><span class="pre">extended_s3</span></code> instead), <code class="docutils literal notranslate"><span class="pre">extended_s3</span></code>, <code class="docutils literal notranslate"><span class="pre">redshift</span></code>, <code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code>, and <code class="docutils literal notranslate"><span class="pre">splunk</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.elasticsearch_configuration">
-<code class="sig-name descname">elasticsearch_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.elasticsearch_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">elasticsearch_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.elasticsearch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration options if elasticsearch is the destination. More details are given below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.</p></li>
@@ -1034,9 +1034,9 @@ be used.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.extended_s3_configuration">
-<code class="sig-name descname">extended_s3_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.extended_s3_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extended_s3_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.extended_s3_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enhanced configuration options for the s3 destination. More details are given below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the S3 bucket</p></li>
@@ -1163,9 +1163,9 @@ be used.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.kinesis_source_configuration">
-<code class="sig-name descname">kinesis_source_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.kinesis_source_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kinesis_source_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.kinesis_source_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kinesisStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kinesis stream used as the source of the firehose delivery stream.</p></li>
@@ -1173,16 +1173,16 @@ be used.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.redshift_configuration">
-<code class="sig-name descname">redshift_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.redshift_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">redshift_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.redshift_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration options if redshift is the destination.
 Using <code class="docutils literal notranslate"><span class="pre">redshift_configuration</span></code> requires the user to also specify a
 <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> block. More details are given below.</p>
@@ -1242,9 +1242,9 @@ be used.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.s3_configuration">
-<code class="sig-name descname">s3_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.s3_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">s3_configuration</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.s3_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Required for non-S3 destinations. For S3 destination, use <code class="docutils literal notranslate"><span class="pre">extended_s3_configuration</span></code> instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.</p>
 <ul class="simple">
@@ -1267,9 +1267,9 @@ be used.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.server_side_encryption">
-<code class="sig-name descname">server_side_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.server_side_encryption" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">server_side_encryption</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.server_side_encryption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p>
 <ul class="simple">
@@ -1277,21 +1277,21 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.version_id">
-<code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.version_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.version_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_s3_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kinesis_source_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redshift_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_side_encryption</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">splunk_configuration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FirehoseDeliveryStream resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1595,9 +1595,9 @@ be used.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1613,9 +1613,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1633,65 +1633,65 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.kinesis.GetStreamResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">GetStreamResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">closed_shards=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">open_shards=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">shard_level_metrics=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">GetStreamResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">closed_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_timestamp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">open_shards</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_level_metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStream.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.closed_shards">
 <code class="sig-name descname">closed_shards</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.closed_shards" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of shard ids in the CLOSED state. See [Shard State][2] for more.</p>
+<dd><p>The list of shard ids in the CLOSED state. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing">Shard State</a> for more.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.creation_timestamp">
 <code class="sig-name descname">creation_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.creation_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>The approximate UNIX timestamp that the stream was created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Kinesis Stream.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.open_shards">
 <code class="sig-name descname">open_shards</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.open_shards" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of shard ids in the OPEN state. See [Shard State][2] for more.</p>
+<dd><p>The list of shard ids in the OPEN state. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing">Shard State</a> for more.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.retention_period">
 <code class="sig-name descname">retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>Length of time (in hours) data records are accessible after they are added to the stream.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.shard_level_metrics">
 <code class="sig-name descname">shard_level_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.shard_level_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of shard-level CloudWatch metrics which are enabled for the stream. See [Monitoring with CloudWatch][3] for more.</p>
+<dd><p>A list of shard-level CloudWatch metrics which are enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current status of the stream. The stream status is one of CREATING, DELETING, ACTIVE, or UPDATING.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assigned to the stream.</p>
@@ -1699,12 +1699,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.kinesis.Stream">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">Stream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">encryption_type=None</em>, <em class="sig-param">enforce_consumer_deletion=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">shard_level_metrics=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">Stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_consumer_deletion</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_level_metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
-<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1717,70 +1717,71 @@ scales elastically for real-time processing of streaming big data.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</p></li>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</p></li>
 <li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shards that the stream will use.
-Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p></li>
-<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p></li>
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p></li>
+<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.encryption_type">
-<code class="sig-name descname">encryption_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.encryption_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">encryption_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.encryption_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The encryption type to use. The only acceptable values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> or <code class="docutils literal notranslate"><span class="pre">KMS</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.enforce_consumer_deletion">
-<code class="sig-name descname">enforce_consumer_deletion</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.enforce_consumer_deletion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enforce_consumer_deletion</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.enforce_consumer_deletion" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.kms_key_id">
-<code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_key_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.retention_period">
-<code class="sig-name descname">retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.retention_period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">retention_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.shard_count">
-<code class="sig-name descname">shard_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shard_count</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shards that the stream will use.
-Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p>
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.shard_level_metrics">
-<code class="sig-name descname">shard_level_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_level_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
+<code class="sig-name descname">shard_level_metrics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_level_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.Stream.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">encryption_type=None</em>, <em class="sig-param">enforce_consumer_deletion=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">retention_period=None</em>, <em class="sig-param">shard_count=None</em>, <em class="sig-param">shard_level_metrics=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encryption_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_consumer_deletion</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shard_level_metrics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Stream resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1795,18 +1796,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</p></li>
 <li><p><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</p></li>
-<li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shards that the stream will use.
-Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p></li>
-<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p></li>
+<li><p><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The number of shards that the stream will use.
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p>
+</p></li>
+<li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.Stream.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1822,9 +1825,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.Stream.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1842,11 +1845,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.kinesis.VideoStream">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">VideoStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_retention_in_hours=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">media_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">VideoStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_retention_in_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">media_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing.</p>
-<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1855,71 +1858,71 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>data_retention_in_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p></li>
 <li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p></li>
-<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p></li>
+<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.arn">
-<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.creation_time">
-<code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.creation_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creation_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.creation_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>A time stamp that indicates when the stream was created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.data_retention_in_hours">
-<code class="sig-name descname">data_retention_in_hours</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.data_retention_in_hours" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_retention_in_hours</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.data_retention_in_hours" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.device_name">
-<code class="sig-name descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.device_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">device_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.device_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.kms_key_id">
-<code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_key_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.media_type">
-<code class="sig-name descname">media_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.media_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p>
+<code class="sig-name descname">media_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.media_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.version">
-<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the stream.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.VideoStream.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_retention_in_hours=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">media_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_retention_in_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kms_key_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">media_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VideoStream resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1933,7 +1936,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>data_retention_in_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p></li>
 <li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p></li>
-<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p></li>
+<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -1943,9 +1947,9 @@ AWS account and region the Stream is created in.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.VideoStream.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -1961,9 +1965,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.kinesis.VideoStream.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1981,12 +1985,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.kinesis.get_stream">
-<code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">get_stream</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.get_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">get_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.get_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Kinesis Stream for use in other
 resources.</p>
-<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<p>For more details, see the <a class="reference external" href="https://aws.amazon.com/documentation/kinesis/">Amazon Kinesis Documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

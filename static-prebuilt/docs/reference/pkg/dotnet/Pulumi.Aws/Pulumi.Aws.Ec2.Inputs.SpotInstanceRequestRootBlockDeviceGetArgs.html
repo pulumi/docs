@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">SpotInstanceRequestRootBlockDeviceGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">SpotInstanceRequestRootBlockDeviceGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.Inputs.html">Pulumi.Aws.Ec2.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1444">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs__ctor_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs__ctor" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.#ctor">SpotInstanceRequestRootBlockDeviceGetArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1403">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_DeleteOnTermination_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.DeleteOnTermination*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_DeleteOnTermination" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.DeleteOnTermination">DeleteOnTermination</h4>
@@ -139,7 +110,7 @@ on instance termination (Default: <code>true</code>).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeleteOnTermination { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeleteOnTermination { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,24 +122,22 @@ on instance termination (Default: <code>true</code>).</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1411">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L25">View Source</a>
   </span>
-  <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_Encrypted_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.Encrypted*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_Encrypted" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.Encrypted">Encrypted</h4>
-  <div class="markdown level1 summary"><p>Enables <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
-encryption</a>
-on the volume (Default: <code>false</code>). Cannot be used with <code>snapshot_id</code>. Must be configured to perform drift detection.</p>
+  <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_DeviceName_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.DeviceName*"></a>
+  <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_DeviceName" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.DeviceName">DeviceName</h4>
+  <div class="markdown level1 summary"><p>The name of the device to mount.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Encrypted { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DeviceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,24 +149,52 @@ on the volume (Default: <code>false</code>). Cannot be used with <code>snapshot_
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1419">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_Encrypted_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.Encrypted*"></a>
+  <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_Encrypted" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.Encrypted">Encrypted</h4>
+  <div class="markdown level1 summary"><p>Enable volume encryption. (Default: <code>false</code>). Must be configured to perform drift detection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Encrypted { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_Iops_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.Iops*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_Iops" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.Iops">Iops</h4>
   <div class="markdown level1 summary"><p>The amount of provisioned
 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
-This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot;</code>.</p>
+This is only valid for <code>volume_type</code> of <code>&amp;quot;io1&amp;quot;</code>, and must be specified if
+using that type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Iops { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Iops { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +206,13 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1425">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_KmsKeyId_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.KmsKeyId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_KmsKeyId" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.KmsKeyId">KmsKeyId</h4>
@@ -224,7 +221,7 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsKeyId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsKeyId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,13 +233,13 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1428">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_VolumeId_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.VolumeId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_VolumeId" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.VolumeId">VolumeId</h4>
@@ -250,7 +247,7 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VolumeId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VolumeId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,13 +259,13 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1434">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_VolumeSize_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.VolumeSize*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_VolumeSize" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.VolumeSize">VolumeSize</h4>
@@ -277,7 +274,7 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; VolumeSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? VolumeSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,23 +286,22 @@ This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1441">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_VolumeType_" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.VolumeType*"></a>
   <h4 id="Pulumi_Aws_Ec2_Inputs_SpotInstanceRequestRootBlockDeviceGetArgs_VolumeType" data-uid="Pulumi.Aws.Ec2.Inputs.SpotInstanceRequestRootBlockDeviceGetArgs.VolumeType">VolumeType</h4>
-  <div class="markdown level1 summary"><p>The type of volume. Can be <code>&amp;quot;standard&amp;quot;</code>, <code>&amp;quot;gp2&amp;quot;</code>,
-or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;gp2&amp;quot;</code>).</p>
+  <div class="markdown level1 summary"><p>The type of volume. Can be <code>&amp;quot;standard&amp;quot;</code>, <code>&amp;quot;gp2&amp;quot;</code>, <code>&amp;quot;io1&amp;quot;</code>, <code>&amp;quot;sc1&amp;quot;</code>, or <code>&amp;quot;st1&amp;quot;</code>. (Default: <code>&amp;quot;standard&amp;quot;</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VolumeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VolumeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,7 +313,7 @@ or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;gp2&amp;quot;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -329,7 +325,7 @@ or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;gp2&amp;quot;
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/SpotInstanceRequest.cs/#L1397" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Inputs/SpotInstanceRequestRootBlockDeviceGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html">InvokeArgs</a></div>
-    <div class="level3"><span class="xref">GetNotificationChannelArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.InvokeArgs.html#Pulumi_InvokeArgs_Empty">InvokeArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">GetNotificationChannelArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Monitoring.html">Pulumi.Gcp.Monitoring</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs__ctor_" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs__ctor" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.#ctor">GetNotificationChannelArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_DisplayName_" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_DisplayName" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.DisplayName">DisplayName</h4>
@@ -137,7 +108,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DisplayName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? DisplayName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,17 +120,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_Labels_" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.Labels*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_Labels" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.Labels">Labels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Labels (corresponding to the
+NotificationChannelDescriptor schema) to filter the notification channels by.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -175,21 +148,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_Project_" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_Project" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.Project">Project</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +176,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_Type_" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.Type*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_Type" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The type of the notification channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,17 +203,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_UserLabels_" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.UserLabels*"></a>
   <h4 id="Pulumi_Gcp_Monitoring_GetNotificationChannelArgs_UserLabels" data-uid="Pulumi.Gcp.Monitoring.GetNotificationChannelArgs.UserLabels">UserLabels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>User-provided key-value labels to filter by.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,7 +230,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -265,7 +242,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Monitoring/GetNotificationChannel.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

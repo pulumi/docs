@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ProjectEnvironment</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.html">Pulumi.Aws.CodeBuild.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ProjectEnvironment</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ProjectEnvironment : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1660">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_Certificate" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.Certificate">Certificate</h4>
   <div class="markdown level1 summary"><p>The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Certificate</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Certificate</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1664">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_ComputeType" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.ComputeType">ComputeType</h4>
   <div class="markdown level1 summary"><p>Information about the compute resources the build project will use. Available values for this parameter are: <code>BUILD_GENERAL1_SMALL</code>, <code>BUILD_GENERAL1_MEDIUM</code>, <code>BUILD_GENERAL1_LARGE</code> or <code>BUILD_GENERAL1_2XLARGE</code>. <code>BUILD_GENERAL1_SMALL</code> is only valid if <code>type</code> is set to <code>LINUX_CONTAINER</code>. When <code>type</code> is set to <code>LINUX_GPU_CONTAINER</code>, <code>compute_type</code> need to be <code>BUILD_GENERAL1_LARGE</code>.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1668">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_EnvironmentVariables" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.EnvironmentVariables">EnvironmentVariables</h4>
   <div class="markdown level1 summary"><p>A set of environment variables to make available to builds for this build project.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ProjectEnvironmentEnvironmentVariables&gt; EnvironmentVariables</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ProjectEnvironmentEnvironmentVariable&gt; EnvironmentVariables</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironmentEnvironmentVariables.html">ProjectEnvironmentEnvironmentVariables</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironmentEnvironmentVariable.html">ProjectEnvironmentEnvironmentVariable</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1672">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_Image" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.Image">Image</h4>
   <div class="markdown level1 summary"><p>The Docker image to use for this build project. Valid values include <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images provided by CodeBuild</a> (e.g <code>aws/codebuild/standard:2.0</code>), <a href="https://hub.docker.com/">Docker Hub images</a> (e.g. <code>nginx:latest</code>), and full Docker repository URIs such as those for ECR (e.g. <code>137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest</code>).</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1676">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_ImagePullCredentialsType" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.ImagePullCredentialsType">ImagePullCredentialsType</h4>
   <div class="markdown level1 summary"><p>The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are <code>CODEBUILD</code> or <code>SERVICE_ROLE</code>. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to <code>CODEBUILD</code></p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ImagePullCredentialsType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ImagePullCredentialsType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1680">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_PrivilegedMode" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.PrivilegedMode">PrivilegedMode</h4>
   <div class="markdown level1 summary"><p>If set to true, enables running the Docker daemon inside a Docker container. Defaults to <code>false</code>.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1684">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_RegistryCredential" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.RegistryCredential">RegistryCredential</h4>
   <div class="markdown level1 summary"><p>Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.</p>
@@ -293,10 +269,10 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1688">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectEnvironment_Type" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectEnvironment.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The type of repository that contains the source code to be built. Valid values for this parameter are: <code>CODECOMMIT</code>, <code>CODEPIPELINE</code>, <code>GITHUB</code>, <code>GITHUB_ENTERPRISE</code>, <code>BITBUCKET</code> or <code>S3</code>.</p>
+  <div class="markdown level1 summary"><p>The type of build environment to use for related builds. Available values are: <code>LINUX_CONTAINER</code>, <code>LINUX_GPU_CONTAINER</code>, <code>WINDOWS_CONTAINER</code> or <code>ARM_CONTAINER</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -325,7 +301,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1654" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectEnvironment.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

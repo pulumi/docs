@@ -1,6 +1,6 @@
 dl {
 
-    &.resources-properties, &.package-details {
+    &.resources-properties, &.package-details, &.tabular {
         @apply mb-8 mt-4 p-1 flex flex-col items-start items-stretch bg-gray-100 border rounded border-gray-300 text-sm text-gray-700;
 
         @screen lg {
@@ -49,6 +49,10 @@ dl {
                     @apply border-gray-200;
                 }
             }
+
+            a {
+                @apply text-blue-600;
+            }
         }
 
         dt {
@@ -71,7 +75,11 @@ dl {
             &.property-deprecated {
                 ~ dd {
                     .property-message {
-                        @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+                        @apply bg-orange-200 text-orange-600 my-4 px-5 py-4 rounded text-sm;
+
+                        code {
+                            @apply bg-orange-200;
+                        }
                     }
                 }
             }
@@ -87,12 +95,5 @@ dl {
                 vertical-align: middle;
             }
         }
-
-        dd {
-            code {
-                @apply bg-white px-0;
-            }
-        }
     }
-
 }

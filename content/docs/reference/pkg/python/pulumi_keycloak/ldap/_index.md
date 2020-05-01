@@ -7,9 +7,9 @@ notitle: true
 
 <div class="section" id="module-pulumi_keycloak.ldap">
 <span id="ldap"></span><h1>ldap<a class="headerlink" href="#module-pulumi_keycloak.ldap" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.FullNameMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">FullNameMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_full_name_attribute=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">write_only=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">FullNameMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_full_name_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing full name mappers for Keycloak users federated
 via LDAP.</p>
 <p>The LDAP full name mapper can map a user’s full name from an LDAP attribute
@@ -23,9 +23,6 @@ to the first and last name attributes of a Keycloak user.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, updates to a user within Keycloak will not be written back to LDAP. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">write_only</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, this mapper will only be used to write updates to LDAP. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_full_name_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_full_name_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -37,27 +34,27 @@ to the first and last name attributes of a Keycloak user.</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.FullNameMapper.ldap_user_federation_id">
-<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ldap user federation provider to attach this mapper to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.FullNameMapper.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the mapper when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.FullNameMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm in which the ldap user federation provider exists.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.FullNameMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_full_name_attribute=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">write_only=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_full_name_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_only</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FullNameMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -74,9 +71,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.FullNameMapper.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -92,9 +89,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.FullNameMapper.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.FullNameMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -112,9 +109,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.GroupMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">GroupMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">drop_non_existing_groups_during_sync=None</em>, <em class="sig-param">group_name_ldap_attribute=None</em>, <em class="sig-param">group_object_classes=None</em>, <em class="sig-param">groups_ldap_filter=None</em>, <em class="sig-param">ignore_missing_groups=None</em>, <em class="sig-param">ldap_groups_dn=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">mapped_group_attributes=None</em>, <em class="sig-param">memberof_ldap_attribute=None</em>, <em class="sig-param">membership_attribute_type=None</em>, <em class="sig-param">membership_ldap_attribute=None</em>, <em class="sig-param">membership_user_ldap_attribute=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preserve_group_inheritance=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">user_roles_retrieve_strategy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">GroupMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drop_non_existing_groups_during_sync</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_object_classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups_ldap_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_missing_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_groups_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapped_group_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memberof_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_attribute_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_user_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserve_group_inheritance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_roles_retrieve_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing group mappers for Keycloak users federated
 via LDAP.</p>
 <p>The LDAP group mapper can be used to map an LDAP user’s groups from some DN
@@ -140,9 +137,6 @@ if they do not already exist.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">mapped_group_attributes</span></code> - (Optional) Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">drop_non_existing_groups_during_sync</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_group_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_group_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -154,27 +148,27 @@ if they do not already exist.</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.GroupMapper.ldap_user_federation_id">
-<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ldap user federation provider to attach this mapper to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.GroupMapper.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the mapper when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.GroupMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm in which the ldap user federation provider exists.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.GroupMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">drop_non_existing_groups_during_sync=None</em>, <em class="sig-param">group_name_ldap_attribute=None</em>, <em class="sig-param">group_object_classes=None</em>, <em class="sig-param">groups_ldap_filter=None</em>, <em class="sig-param">ignore_missing_groups=None</em>, <em class="sig-param">ldap_groups_dn=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">mapped_group_attributes=None</em>, <em class="sig-param">memberof_ldap_attribute=None</em>, <em class="sig-param">membership_attribute_type=None</em>, <em class="sig-param">membership_ldap_attribute=None</em>, <em class="sig-param">membership_user_ldap_attribute=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">preserve_group_inheritance=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">user_roles_retrieve_strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">drop_non_existing_groups_during_sync</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_name_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_object_classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups_ldap_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_missing_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_groups_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapped_group_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memberof_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_attribute_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_user_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preserve_group_inheritance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_roles_retrieve_strategy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -191,9 +185,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.GroupMapper.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -209,9 +203,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.GroupMapper.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.GroupMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -229,9 +223,101 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">HardcodedGroupMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a HardcodedGroupMapper resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] group: Group to grant to user.
+:param pulumi.Input[str] ldap_user_federation_id: The ldap user federation provider to attach this mapper to.
+:param pulumi.Input[str] name: Display name of the mapper when displayed in the console.
+:param pulumi.Input[str] realm_id: The realm in which the ldap user federation provider exists.</p>
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.group">
+<code class="sig-name descname">group</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group to grant to user.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.ldap_user_federation_id">
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ldap user federation provider to attach this mapper to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of the mapper when displayed in the console.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm in which the ldap user federation provider exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HardcodedGroupMapper resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group to grant to user.</p></li>
+<li><p><strong>ldap_user_federation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ldap user federation provider to attach this mapper to.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Display name of the mapper when displayed in the console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm in which the ldap user federation provider exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">HardcodedRoleMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">HardcodedRoleMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>This mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.</p>
 <p>The following arguments are supported:</p>
 <ul class="simple">
@@ -240,9 +326,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Display name of this mapper when displayed in the console.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> - (Required) The role which should be assigned to the users.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_hardcoded_role_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_hardcoded_role_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -255,33 +338,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.ldap_user_federation_id">
-<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ldap user federation provider to attach this mapper to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the mapper when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm in which the ldap user federation provider exists.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Role to grant to user.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HardcodedRoleMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -299,9 +382,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -317,9 +400,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -337,36 +420,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">MsadLdsUserAccountControlMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">MsadLdsUserAccountControlMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a MsadLdsUserAccountControlMapper resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] ldap_user_federation_id: The ldap user federation provider to attach this mapper to.
 :param pulumi.Input[str] name: Display name of the mapper when displayed in the console.
 :param pulumi.Input[str] realm_id: The realm in which the ldap user federation provider exists.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.ldap_user_federation_id">
-<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ldap user federation provider to attach this mapper to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the mapper when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm in which the ldap user federation provider exists.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MsadLdsUserAccountControlMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -383,9 +466,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -401,9 +484,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadLdsUserAccountControlMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -421,9 +504,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">MsadUserAccountControlMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_password_policy_hints_enabled=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">MsadUserAccountControlMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_password_policy_hints_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing MSAD user account control mappers for Keycloak
 users federated via LDAP.</p>
 <p>The MSAD (Microsoft Active Directory) user account control mapper is specific
@@ -437,9 +520,6 @@ or disabled accounts.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Display name of this mapper when displayed in the console.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ldap_password_policy_hints_enabled</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_msad_user_account_control_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_msad_user_account_control_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -451,27 +531,27 @@ or disabled accounts.</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.ldap_user_federation_id">
-<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ldap user federation provider to attach this mapper to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the mapper when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm in which the ldap user federation provider exists.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_password_policy_hints_enabled=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_password_policy_hints_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MsadUserAccountControlMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -488,9 +568,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -506,9 +586,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -526,9 +606,93 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
+<dt id="pulumi_keycloak.ldap.RoleMapper">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">RoleMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_roles_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memberof_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_attribute_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_user_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_object_classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles_ldap_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_realm_roles_mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_roles_retrieve_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RoleMapper resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] ldap_user_federation_id: The ldap user federation provider to attach this mapper to.
+:param pulumi.Input[str] name: Display name of the mapper when displayed in the console.
+:param pulumi.Input[str] realm_id: The realm in which the ldap user federation provider exists.</p>
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.RoleMapper.ldap_user_federation_id">
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ldap user federation provider to attach this mapper to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.RoleMapper.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of the mapper when displayed in the console.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_keycloak.ldap.RoleMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm in which the ldap user federation provider exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.ldap.RoleMapper.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_roles_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">memberof_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_attribute_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">membership_user_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_object_classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roles_ldap_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_realm_roles_mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_roles_retrieve_strategy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RoleMapper resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ldap_user_federation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ldap user federation provider to attach this mapper to.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Display name of the mapper when displayed in the console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm in which the ldap user federation provider exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.ldap.RoleMapper.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_keycloak.ldap.RoleMapper.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">UserAttributeMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">always_read_value_from_ldap=None</em>, <em class="sig-param">is_mandatory_in_ldap=None</em>, <em class="sig-param">ldap_attribute=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">user_model_attribute=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">UserAttributeMapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">always_read_value_from_ldap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_mandatory_in_ldap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_model_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing user attribute mappers for Keycloak users
 federated via LDAP.</p>
 <p>The LDAP user attribute mapper can be used to map a single LDAP attribute
@@ -544,9 +708,6 @@ to an attribute on the Keycloak user model.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">always_read_value_from_ldap</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the value fetched from LDAP will override the value stored in Keycloak. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_mandatory_in_ldap</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, this attribute must exist in LDAP. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_attribute_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_attribute_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -563,57 +724,57 @@ to an attribute on the Keycloak user model.</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.always_read_value_from_ldap">
-<code class="sig-name descname">always_read_value_from_ldap</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.always_read_value_from_ldap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">always_read_value_from_ldap</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.always_read_value_from_ldap" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, the value fetched from LDAP will override the value stored in Keycloak.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.is_mandatory_in_ldap">
-<code class="sig-name descname">is_mandatory_in_ldap</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.is_mandatory_in_ldap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">is_mandatory_in_ldap</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.is_mandatory_in_ldap" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, this attribute must exist in LDAP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.ldap_attribute">
-<code class="sig-name descname">ldap_attribute</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.ldap_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_attribute</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.ldap_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the mapped attribute on LDAP object.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.ldap_user_federation_id">
-<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ldap user federation provider to attach this mapper to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the mapper when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.read_only">
-<code class="sig-name descname">read_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.read_only" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_only</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.read_only" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, this attribute is not saved back to LDAP when the user attribute is updated in Keycloak.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm in which the ldap user federation provider exists.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.user_model_attribute">
-<code class="sig-name descname">user_model_attribute</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.user_model_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_model_attribute</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.user_model_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the UserModel property or attribute you want to map the LDAP attribute into.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">always_read_value_from_ldap=None</em>, <em class="sig-param">is_mandatory_in_ldap=None</em>, <em class="sig-param">ldap_attribute=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">user_model_attribute=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">always_read_value_from_ldap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_mandatory_in_ldap</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ldap_user_federation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_model_attribute</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserAttributeMapper resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -635,9 +796,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -653,9 +814,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.UserAttributeMapper.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserAttributeMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -673,9 +834,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_keycloak.ldap.UserFederation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">UserFederation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size_for_sync=None</em>, <em class="sig-param">bind_credential=None</em>, <em class="sig-param">bind_dn=None</em>, <em class="sig-param">cache_policy=None</em>, <em class="sig-param">changed_sync_period=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">connection_url=None</em>, <em class="sig-param">custom_user_search_filter=None</em>, <em class="sig-param">edit_mode=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">full_sync_period=None</em>, <em class="sig-param">import_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagination=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">rdn_ldap_attribute=None</em>, <em class="sig-param">read_timeout=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">search_scope=None</em>, <em class="sig-param">sync_registrations=None</em>, <em class="sig-param">use_truststore_spi=None</em>, <em class="sig-param">user_object_classes=None</em>, <em class="sig-param">username_ldap_attribute=None</em>, <em class="sig-param">users_dn=None</em>, <em class="sig-param">uuid_ldap_attribute=None</em>, <em class="sig-param">validate_password_policy=None</em>, <em class="sig-param">vendor=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">UserFederation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batch_size_for_sync</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bind_credential</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bind_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">changed_sync_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_user_search_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_sync_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pagination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync_registrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_truststore_spi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_object_classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_password_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vendor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing LDAP user federation providers within Keycloak.</p>
 <p>Keycloak can use an LDAP user federation provider to federate users to Keycloak
 from a directory system such as LDAP or Active Directory. Federated users
@@ -722,9 +883,6 @@ users can have their attributes defined using mappers.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">changed_sync_period</span></code> - (Optional) How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cache_policy</span></code> - (Optional) Can be one of <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_DAILY</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_WEEKLY</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX_LIFESPAN</span></code>, or <code class="docutils literal notranslate"><span class="pre">NO_CACHE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_federation.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -759,160 +917,160 @@ sync.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.batch_size_for_sync">
-<code class="sig-name descname">batch_size_for_sync</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.batch_size_for_sync" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">batch_size_for_sync</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.batch_size_for_sync" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of users to sync within a single transaction.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.bind_credential">
-<code class="sig-name descname">bind_credential</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.bind_credential" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bind_credential</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.bind_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Password of LDAP admin.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.bind_dn">
-<code class="sig-name descname">bind_dn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.bind_dn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bind_dn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.bind_dn" title="Permalink to this definition">¶</a></dt>
 <dd><p>DN of LDAP admin, which will be used by Keycloak to access LDAP server.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.changed_sync_period">
-<code class="sig-name descname">changed_sync_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.changed_sync_period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">changed_sync_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.changed_sync_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
 sync.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.connection_timeout">
-<code class="sig-name descname">connection_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.connection_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connection_timeout</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.connection_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>LDAP connection timeout (duration string)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.connection_url">
-<code class="sig-name descname">connection_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.connection_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connection_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.connection_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connection URL to the LDAP server.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.custom_user_search_filter">
-<code class="sig-name descname">custom_user_search_filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.custom_user_search_filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_user_search_filter</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.custom_user_search_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional LDAP filter for filtering searched users. Must begin with ‘(‘ and end with ‘)’.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.edit_mode">
-<code class="sig-name descname">edit_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.edit_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">edit_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.edit_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>When false, this provider will not be used when performing queries for users.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.full_sync_period">
-<code class="sig-name descname">full_sync_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.full_sync_period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">full_sync_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.full_sync_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.import_enabled">
-<code class="sig-name descname">import_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.import_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">import_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.import_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, LDAP users will be imported into the Keycloak database.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display name of the provider when displayed in the console.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.pagination">
-<code class="sig-name descname">pagination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.pagination" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pagination</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.pagination" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, Keycloak assumes the LDAP server supports pagination.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.priority">
-<code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.priority" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">priority</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Priority of this provider when looking up users. Lower values are first.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.rdn_ldap_attribute">
-<code class="sig-name descname">rdn_ldap_attribute</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.rdn_ldap_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rdn_ldap_attribute</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.rdn_ldap_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the LDAP attribute to use as the relative distinguished name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.read_timeout">
-<code class="sig-name descname">read_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.read_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_timeout</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.read_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>LDAP read timeout (duration string)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.realm_id">
-<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.realm_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">realm_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.realm_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The realm this provider will provide user federation for.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.search_scope">
-<code class="sig-name descname">search_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.search_scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_scope</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.search_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.sync_registrations">
-<code class="sig-name descname">sync_registrations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.sync_registrations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sync_registrations</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.sync_registrations" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, newly created users will be synced back to LDAP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.user_object_classes">
-<code class="sig-name descname">user_object_classes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.user_object_classes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_object_classes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.user_object_classes" title="Permalink to this definition">¶</a></dt>
 <dd><p>All values of LDAP objectClass attribute for users in LDAP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.username_ldap_attribute">
-<code class="sig-name descname">username_ldap_attribute</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.username_ldap_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">username_ldap_attribute</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.username_ldap_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the LDAP attribute to use as the Keycloak username.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.users_dn">
-<code class="sig-name descname">users_dn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.users_dn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">users_dn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.users_dn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full DN of LDAP tree where your users are.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.uuid_ldap_attribute">
-<code class="sig-name descname">uuid_ldap_attribute</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.uuid_ldap_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uuid_ldap_attribute</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.uuid_ldap_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.validate_password_policy">
-<code class="sig-name descname">validate_password_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.validate_password_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">validate_password_policy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.validate_password_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>When true, Keycloak will validate passwords using the realm policy before updating it.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_keycloak.ldap.UserFederation.vendor">
-<code class="sig-name descname">vendor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.vendor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vendor</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.vendor" title="Permalink to this definition">¶</a></dt>
 <dd><p>LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.UserFederation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size_for_sync=None</em>, <em class="sig-param">bind_credential=None</em>, <em class="sig-param">bind_dn=None</em>, <em class="sig-param">cache_policy=None</em>, <em class="sig-param">changed_sync_period=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">connection_url=None</em>, <em class="sig-param">custom_user_search_filter=None</em>, <em class="sig-param">edit_mode=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">full_sync_period=None</em>, <em class="sig-param">import_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagination=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">rdn_ldap_attribute=None</em>, <em class="sig-param">read_timeout=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">search_scope=None</em>, <em class="sig-param">sync_registrations=None</em>, <em class="sig-param">use_truststore_spi=None</em>, <em class="sig-param">user_object_classes=None</em>, <em class="sig-param">username_ldap_attribute=None</em>, <em class="sig-param">users_dn=None</em>, <em class="sig-param">uuid_ldap_attribute=None</em>, <em class="sig-param">validate_password_policy=None</em>, <em class="sig-param">vendor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batch_size_for_sync</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bind_credential</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bind_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">changed_sync_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connection_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_user_search_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">edit_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_sync_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">import_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pagination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rdn_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">read_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">search_scope</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync_registrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_truststore_spi</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_object_classes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">users_dn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">uuid_ldap_attribute</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_password_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vendor</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserFederation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -952,9 +1110,9 @@ sync.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.UserFederation.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -970,9 +1128,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_keycloak.ldap.UserFederation.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.UserFederation.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

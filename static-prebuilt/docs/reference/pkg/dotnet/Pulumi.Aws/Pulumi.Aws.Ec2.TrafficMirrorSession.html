@@ -73,53 +73,12 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides an Traffic mirror session.<br>
 Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">TrafficMirrorSession</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TrafficMirrorSession</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -130,16 +89,16 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession__ctor_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession__ctor_System_String_Pulumi_Aws_Ec2_TrafficMirrorSessionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.#ctor(System.String,Pulumi.Aws.Ec2.TrafficMirrorSessionArgs,Pulumi.CustomResourceOptions)">TrafficMirrorSession(String, TrafficMirrorSessionArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession__ctor_System_String_Pulumi_Aws_Ec2_TrafficMirrorSessionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.#ctor(System.String,Pulumi.Aws.Ec2.TrafficMirrorSessionArgs,System.Nullable{CustomResourceOptions})">TrafficMirrorSession(String, TrafficMirrorSessionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a TrafficMirrorSession resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TrafficMirrorSession(string name, TrafficMirrorSessionArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public TrafficMirrorSession(string name, TrafficMirrorSessionArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +123,7 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -174,7 +133,7 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_Description_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Description*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_Description" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Description">Description</h4>
@@ -183,7 +142,7 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,13 +154,13 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_NetworkInterfaceId_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.NetworkInterfaceId*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_NetworkInterfaceId" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.NetworkInterfaceId">NetworkInterfaceId</h4>
@@ -222,13 +181,13 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_PacketLength_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.PacketLength*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_PacketLength" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.PacketLength">PacketLength</h4>
@@ -249,13 +208,13 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_SessionNumber_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.SessionNumber*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_SessionNumber" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.SessionNumber">SessionNumber</h4>
@@ -278,13 +237,40 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_Tags_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Tags*"></a>
+  <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_Tags" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Key-value mapping of resource tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_TrafficMirrorFilterId_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.TrafficMirrorFilterId*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_TrafficMirrorFilterId" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.TrafficMirrorFilterId">TrafficMirrorFilterId</h4>
@@ -305,13 +291,13 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_TrafficMirrorTargetId_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.TrafficMirrorTargetId*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_TrafficMirrorTargetId" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.TrafficMirrorTargetId">TrafficMirrorTargetId</h4>
@@ -332,13 +318,13 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_VirtualNetworkId_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.VirtualNetworkId*"></a>
   <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_VirtualNetworkId" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.VirtualNetworkId">VirtualNetworkId</h4>
@@ -361,7 +347,7 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -369,17 +355,17 @@ Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_TrafficMirrorSession_Get_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_TrafficMirrorSessionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.TrafficMirrorSessionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TrafficMirrorSessionState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_TrafficMirrorSession_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_TrafficMirrorSessionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.TrafficMirrorSession.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.TrafficMirrorSessionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, TrafficMirrorSessionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing TrafficMirrorSession resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TrafficMirrorSession Get(string name, Input&lt;string&gt; id, TrafficMirrorSessionState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TrafficMirrorSession Get(string name, Input&lt;string&gt; id, TrafficMirrorSessionState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -398,7 +384,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -410,7 +396,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -439,7 +425,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/TrafficMirrorSession.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

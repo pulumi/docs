@@ -80,40 +80,16 @@ users must create.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ObjectMeta</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.html">Pulumi.Kubernetes.Types.Outputs.Meta.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ObjectMeta</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ObjectMeta : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27590">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Annotations" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Annotations">Annotations</h4>
   <div class="markdown level1 summary"><p>Annotations is an unstructured key value map stored with a resource that may be set by
@@ -136,13 +112,13 @@ should be preserved when modifying objects. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27355">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27598">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_ClusterName" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.ClusterName">ClusterName</h4>
   <div class="markdown level1 summary"><p>The name of the cluster which the object belongs to. This is used to distinguish
@@ -171,7 +147,7 @@ request.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27609">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_CreationTimestamp" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.CreationTimestamp">CreationTimestamp</h4>
   <div class="markdown level1 summary"><p>CreationTimestamp is a timestamp representing the server time when this object was
@@ -202,7 +178,7 @@ UTC.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27373">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27616">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_DeletionGracePeriodSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.DeletionGracePeriodSeconds">DeletionGracePeriodSeconds</h4>
   <div class="markdown level1 summary"><p>Number of seconds allowed for this object to gracefully terminate before it will be
@@ -230,7 +206,7 @@ shortened. Read-only.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27394">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27637">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_DeletionTimestamp" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.DeletionTimestamp">DeletionTimestamp</h4>
   <div class="markdown level1 summary"><p>DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This
@@ -271,7 +247,7 @@ deletion of the object has not been requested.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27409">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27652">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Finalizers" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Finalizers">Finalizers</h4>
   <div class="markdown level1 summary"><p>Must be empty before the object is deleted from the registry. Each entry is an
@@ -301,13 +277,13 @@ and are not vulnerable to ordering changes in the list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27427">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27670">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_GenerateName" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.GenerateName">GenerateName</h4>
   <div class="markdown level1 summary"><p>GenerateName is an optional prefix, used by the server, to generate a unique name ONLY
@@ -344,7 +320,7 @@ retry (optionally after the time indicated in the Retry-After header).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27433">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27676">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Generation" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Generation">Generation</h4>
   <div class="markdown level1 summary"><p>A sequence number representing a specific generation of the desired state. Populated by
@@ -371,7 +347,7 @@ the system. Read-only.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27683">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Labels" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Labels">Labels</h4>
   <div class="markdown level1 summary"><p>Map of string keys and values that can be used to organize and categorize (scope and
@@ -393,13 +369,13 @@ select) objects. May match selectors of replication controllers and services. Mo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27449">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27692">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_ManagedFields" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.ManagedFields">ManagedFields</h4>
   <div class="markdown level1 summary"><p>ManagedFields maps workflow-id and version to the set of fields that are managed by that
@@ -423,13 +399,13 @@ version that the workflow used when modifying the object.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ManagedFieldsEntry.html">ManagedFieldsEntry</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ManagedFieldsEntry.html">ManagedFieldsEntry</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27458">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27701">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Name">Name</h4>
   <div class="markdown level1 summary"><p>Name must be unique within a namespace. Is required when creating resources, although
@@ -459,7 +435,7 @@ definition. Cannot be updated. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27469">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27712">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Namespace" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Namespace">Namespace</h4>
   <div class="markdown level1 summary"><p>Namespace defines the space within each name must be unique. An empty namespace is
@@ -490,7 +466,7 @@ those objects will be empty.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27477">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27720">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_OwnerReferences" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.OwnerReferences">OwnerReferences</h4>
   <div class="markdown level1 summary"><p>List of objects depended by this object. If ALL objects in the list have been deleted,
@@ -513,13 +489,13 @@ true. There cannot be more than one managing controller.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.html">OwnerReference</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.html">OwnerReference</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27490">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27733">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_ResourceVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.ResourceVersion">ResourceVersion</h4>
   <div class="markdown level1 summary"><p>An opaque value that represents the internal version of this object that can be used by
@@ -552,7 +528,7 @@ More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27498">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27741">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_SelfLink" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.SelfLink">SelfLink</h4>
   <div class="markdown level1 summary"><p>SelfLink is a URL representing this object. Populated by the system. Read-only.</p>
@@ -580,7 +556,7 @@ planned to be removed in 1.21 release.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27508">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27751">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_ObjectMeta_Uid" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ObjectMeta.Uid">Uid</h4>
   <div class="markdown level1 summary"><p>UID is the unique in time and space value for this object. It is typically generated by
@@ -616,7 +592,7 @@ operations.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27338" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27581" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -80,40 +80,16 @@ is alive or ready to receive traffic.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Probe</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Probe</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Probe : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20004">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20178">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_Exec" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.Exec">Exec</h4>
   <div class="markdown level1 summary"><p>One and only one of the following should be specified. Exec specifies the action to
@@ -140,7 +116,7 @@ take.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20010">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20184">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_FailureThreshold" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.FailureThreshold">FailureThreshold</h4>
   <div class="markdown level1 summary"><p>Minimum consecutive failures for the probe to be considered failed after having
@@ -167,7 +143,7 @@ succeeded. Defaults to 3. Minimum value is 1.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20015">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20189">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_HttpGet" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.HttpGet">HttpGet</h4>
   <div class="markdown level1 summary"><p>HTTPGet specifies the http request to perform.</p>
@@ -193,7 +169,7 @@ succeeded. Defaults to 3. Minimum value is 1.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20022">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20196">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_InitialDelaySeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.InitialDelaySeconds">InitialDelaySeconds</h4>
   <div class="markdown level1 summary"><p>Number of seconds after the container has started before liveness probes are initiated.
@@ -221,7 +197,7 @@ More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20027">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20201">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_PeriodSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.PeriodSeconds">PeriodSeconds</h4>
   <div class="markdown level1 summary"><p>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</p>
@@ -247,7 +223,7 @@ More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20033">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20207">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_SuccessThreshold" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.SuccessThreshold">SuccessThreshold</h4>
   <div class="markdown level1 summary"><p>Minimum consecutive successes for the probe to be considered successful after having
@@ -274,7 +250,7 @@ failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.</
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20038">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20212">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_TcpSocket" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.TcpSocket">TcpSocket</h4>
   <div class="markdown level1 summary"><p>TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported</p>
@@ -300,7 +276,7 @@ failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.</
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L20045">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20219">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_Probe_TimeoutSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.Probe.TimeoutSeconds">TimeoutSeconds</h4>
   <div class="markdown level1 summary"><p>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value
@@ -334,7 +310,7 @@ is 1. More info:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19997" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L20171" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -80,40 +80,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">APIVersions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.html">Pulumi.Kubernetes.Types.Outputs.Meta.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIVersions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class APIVersions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class APIVersions : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26996">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27239">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIVersions_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIVersions.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -142,7 +118,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27004">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27247">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIVersions_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIVersions.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -171,7 +147,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27016">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27259">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIVersions_ServerAddressByClientCIDRs" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIVersions.ServerAddressByClientCIDRs">ServerAddressByClientCIDRs</h4>
   <div class="markdown level1 summary"><p>a map of client CIDR to server address that is serving this group. This is to help
@@ -198,13 +174,13 @@ the client IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ServerAddressByClientCIDR.html">ServerAddressByClientCIDR</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.ServerAddressByClientCIDR.html">ServerAddressByClientCIDR</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27021">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27264">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_APIVersions_Versions" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.APIVersions.Versions">Versions</h4>
   <div class="markdown level1 summary"><p>versions are the api versions that are available.</p>
@@ -224,7 +200,7 @@ the client IP.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -236,7 +212,7 @@ the client IP.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26987" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27230" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

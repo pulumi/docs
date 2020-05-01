@@ -13,14 +13,11 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-datadog/issues">pulumi/pulumi-datadog repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/issues">terraform-providers/terraform-provider-datadog repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_datadog.aws"></span><dl class="class">
+<span class="target" id="module-pulumi_datadog.aws"></span><dl class="py class">
 <dt id="pulumi_datadog.aws.Integration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">account_specific_namespace_rules=None</em>, <em class="sig-param">filter_tags=None</em>, <em class="sig-param">host_tags=None</em>, <em class="sig-param">role_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.aws.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_specific_namespace_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog - Amazon Web Services integration resource. This can be used to create and manage Datadog - Amazon Web Services integration.</p>
 <p>Update operations are currently not supported with datadog API so any change forces a new resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -34,45 +31,45 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.aws.Integration.account_id">
-<code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.account_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Your AWS Account ID without dashes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.aws.Integration.account_specific_namespace_rules">
-<code class="sig-name descname">account_specific_namespace_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.account_specific_namespace_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">account_specific_namespace_rules</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.account_specific_namespace_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the <a class="reference external" href="https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules">available namespace rules API endpoint</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.aws.Integration.external_id">
-<code class="sig-name descname">external_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.external_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">external_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.external_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>AWS External ID</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.aws.Integration.filter_tags">
-<code class="sig-name descname">filter_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.filter_tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">filter_tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.filter_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of EC2 tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code>) defines a filter that Datadog use when collecting metrics from EC2. Wildcards, such as <code class="docutils literal notranslate"><span class="pre">?</span></code> (for single characters) and <code class="docutils literal notranslate"><span class="pre">*</span></code> (for multiple characters) can also be used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.aws.Integration.host_tags">
-<code class="sig-name descname">host_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.host_tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">host_tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.host_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_datadog.aws.Integration.role_name">
-<code class="sig-name descname">role_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.role_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.role_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Your Datadog role delegation name.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.aws.Integration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">account_specific_namespace_rules=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">filter_tags=None</em>, <em class="sig-param">host_tags=None</em>, <em class="sig-param">role_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_specific_namespace_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -93,9 +90,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.aws.Integration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -111,9 +108,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_datadog.aws.Integration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

@@ -76,6 +76,15 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Storage.V1.CSIDriver.html">CSIDriver</a></h4>
+      <section><p>CSIDriver captures information about a Container Storage Interface (CSI) volume driver
+deployed on the cluster. Kubernetes attach detach controller uses this object to determine
+whether attach is required. Kubelet uses this object to determine whether pod information
+needs to be passed on mount. CSIDriver objects are non-namespaced.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Storage.V1.CSIDriverList.html">CSIDriverList</a></h4>
+      <section><p>CSIDriverList is a collection of CSIDriver objects.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Storage.V1.CSINode.html">CSINode</a></h4>
       <section><p>CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need
 to create the CSINode object directly. As long as they use the node-driver-registrar sidecar

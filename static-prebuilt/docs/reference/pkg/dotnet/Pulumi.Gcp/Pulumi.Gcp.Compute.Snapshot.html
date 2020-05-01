@@ -71,50 +71,28 @@
   
   <h1 id="Pulumi_Gcp_Compute_Snapshot" data-uid="Pulumi.Gcp.Compute.Snapshot" class="text-break">Class Snapshot
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a Persistent Disk Snapshot resource.</p>
+<p>Use snapshots to back up data from your persistent disks. Snapshots are
+different from public images and custom images, which are used primarily
+to create instances or configure instance templates. Snapshots are useful
+for periodic backup of the data on your persistent disks. You can create
+snapshots from persistent disks even while they are attached to running
+instances.</p>
+<p>Snapshots are incremental, so you can create regular snapshots on a
+persistent disk faster and at a much lower cost than if you regularly
+created a full image of the disk.</p>
+<p>To get more information about Snapshot, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/snapshots">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/disks/create-snapshots">Official Documentation</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Snapshot</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Snapshot</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +103,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot__ctor_" data-uid="Pulumi.Gcp.Compute.Snapshot.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Snapshot__ctor_System_String_Pulumi_Gcp_Compute_SnapshotArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Snapshot.#ctor(System.String,Pulumi.Gcp.Compute.SnapshotArgs,Pulumi.CustomResourceOptions)">Snapshot(String, SnapshotArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Snapshot__ctor_System_String_Pulumi_Gcp_Compute_SnapshotArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Snapshot.#ctor(System.String,Pulumi.Gcp.Compute.SnapshotArgs,System.Nullable{CustomResourceOptions})">Snapshot(String, SnapshotArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Snapshot resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Snapshot(string name, SnapshotArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Snapshot(string name, SnapshotArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +137,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +147,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.Snapshot.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.Snapshot.CreationTimestamp">CreationTimestamp</h4>
@@ -190,13 +168,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Description_" data-uid="Pulumi.Gcp.Compute.Snapshot.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_Description" data-uid="Pulumi.Gcp.Compute.Snapshot.Description">Description</h4>
@@ -205,7 +183,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,13 +195,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_DiskSizeGb_" data-uid="Pulumi.Gcp.Compute.Snapshot.DiskSizeGb*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_DiskSizeGb" data-uid="Pulumi.Gcp.Compute.Snapshot.DiskSizeGb">DiskSizeGb</h4>
@@ -244,13 +222,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_LabelFingerprint_" data-uid="Pulumi.Gcp.Compute.Snapshot.LabelFingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_LabelFingerprint" data-uid="Pulumi.Gcp.Compute.Snapshot.LabelFingerprint">LabelFingerprint</h4>
@@ -271,13 +249,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Labels_" data-uid="Pulumi.Gcp.Compute.Snapshot.Labels*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_Labels" data-uid="Pulumi.Gcp.Compute.Snapshot.Labels">Labels</h4>
@@ -286,7 +264,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,19 +276,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Licenses_" data-uid="Pulumi.Gcp.Compute.Snapshot.Licenses*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_Licenses" data-uid="Pulumi.Gcp.Compute.Snapshot.Licenses">Licenses</h4>
-  <div class="markdown level1 summary"><p>A list of public visible licenses that apply to this snapshot. This can be because the original image had
-licenses attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using
-a customer-supplied encryption key.</p>
+  <div class="markdown level1 summary"><p>A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
+attached (such as a Windows image). snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied
+encryption key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -327,21 +305,20 @@ a customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Name_" data-uid="Pulumi.Gcp.Compute.Snapshot.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_Name" data-uid="Pulumi.Gcp.Compute.Snapshot.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -358,13 +335,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Project_" data-uid="Pulumi.Gcp.Compute.Snapshot.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_Project" data-uid="Pulumi.Gcp.Compute.Snapshot.Project">Project</h4>
@@ -386,13 +363,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_SelfLink_" data-uid="Pulumi.Gcp.Compute.Snapshot.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_SelfLink" data-uid="Pulumi.Gcp.Compute.Snapshot.SelfLink">SelfLink</h4>
@@ -413,13 +390,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_SnapshotEncryptionKey_" data-uid="Pulumi.Gcp.Compute.Snapshot.SnapshotEncryptionKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_SnapshotEncryptionKey" data-uid="Pulumi.Gcp.Compute.Snapshot.SnapshotEncryptionKey">SnapshotEncryptionKey</h4>
@@ -441,13 +418,13 @@ customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.SnapshotSnapshotEncryptionKey.html">SnapshotSnapshotEncryptionKey</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.SnapshotSnapshotEncryptionKey.html">SnapshotSnapshotEncryptionKey</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_SnapshotId_" data-uid="Pulumi.Gcp.Compute.Snapshot.SnapshotId*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_SnapshotId" data-uid="Pulumi.Gcp.Compute.Snapshot.SnapshotId">SnapshotId</h4>
@@ -468,13 +445,13 @@ customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_SourceDisk_" data-uid="Pulumi.Gcp.Compute.Snapshot.SourceDisk*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_SourceDisk" data-uid="Pulumi.Gcp.Compute.Snapshot.SourceDisk">SourceDisk</h4>
@@ -495,18 +472,18 @@ customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_SourceDiskEncryptionKey_" data-uid="Pulumi.Gcp.Compute.Snapshot.SourceDiskEncryptionKey*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_SourceDiskEncryptionKey" data-uid="Pulumi.Gcp.Compute.Snapshot.SourceDiskEncryptionKey">SourceDiskEncryptionKey</h4>
-  <div class="markdown level1 summary"><p>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by
-a customer-supplied encryption key.</p>
+  <div class="markdown level1 summary"><p>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
+customer-supplied encryption key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -523,13 +500,13 @@ a customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.SnapshotSourceDiskEncryptionKey.html">SnapshotSourceDiskEncryptionKey</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.SnapshotSourceDiskEncryptionKey.html">SnapshotSourceDiskEncryptionKey</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_SourceDiskLink_" data-uid="Pulumi.Gcp.Compute.Snapshot.SourceDiskLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_SourceDiskLink" data-uid="Pulumi.Gcp.Compute.Snapshot.SourceDiskLink">SourceDiskLink</h4>
@@ -549,18 +526,18 @@ a customer-supplied encryption key.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_StorageBytes_" data-uid="Pulumi.Gcp.Compute.Snapshot.StorageBytes*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_StorageBytes" data-uid="Pulumi.Gcp.Compute.Snapshot.StorageBytes">StorageBytes</h4>
-  <div class="markdown level1 summary"><p>A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to
-change with snapshot creation/deletion.</p>
+  <div class="markdown level1 summary"><p>A size of the the storage used by the snapshot. As snapshots share storage, this number is expected to change with
+snapshot creation/deletion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -577,13 +554,13 @@ change with snapshot creation/deletion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Zone_" data-uid="Pulumi.Gcp.Compute.Snapshot.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_Snapshot_Zone" data-uid="Pulumi.Gcp.Compute.Snapshot.Zone">Zone</h4>
@@ -604,7 +581,7 @@ change with snapshot creation/deletion.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -612,17 +589,17 @@ change with snapshot creation/deletion.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Snapshot_Get_" data-uid="Pulumi.Gcp.Compute.Snapshot.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Snapshot_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_SnapshotState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Snapshot.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.SnapshotState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SnapshotState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Snapshot_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_SnapshotState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Snapshot.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.SnapshotState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SnapshotState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Snapshot resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Snapshot Get(string name, Input&lt;string&gt; id, SnapshotState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Snapshot Get(string name, Input&lt;string&gt; id, SnapshotState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -641,7 +618,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -653,7 +630,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -682,7 +659,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Snapshot.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Snapshot.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

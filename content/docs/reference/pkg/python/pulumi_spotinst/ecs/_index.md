@@ -13,13 +13,10 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-spotinst/issues">pulumi/pulumi-spotinst repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/issues">terraform-providers/terraform-provider-spotinst repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_spotinst.ecs"></span><dl class="class">
+<span class="target" id="module-pulumi_spotinst.ecs"></span><dl class="py class">
 <dt id="pulumi_spotinst.ecs.Ocean">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.ecs.</code><code class="sig-name descname">Ocean</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.ecs.</code><code class="sig-name descname">Ocean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draining_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">utilize_reserved_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Ocean ECS resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_ecs.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_ecs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -43,6 +40,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds tags to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
+<li><p><strong>utilize_reserved_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If Reserved instances exist, OCean will utilize them before launching Spot instances.</p></li>
 <li><p><strong>whitelists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Instance types allowed in the Ocean cluster.</p></li>
 </ul>
 </dd>
@@ -71,6 +69,22 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shutdownHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the Ocean ECS autoscaler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeWindows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the Ocean ECS autoscaler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>tags</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
@@ -85,15 +99,15 @@ anything, please consult the source <a class="reference external" href="https://
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.associate_public_ip_address">
-<code class="sig-name descname">associate_public_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.associate_public_ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">associate_public_ip_address</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.associate_public_ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure public IP address allocation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.autoscaler">
-<code class="sig-name descname">autoscaler</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.autoscaler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscaler</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.autoscaler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the Ocean ECS autoscaler.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Cooldown period between scaling actions.</p></li>
@@ -120,93 +134,93 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.cluster_name">
-<code class="sig-name descname">cluster_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.cluster_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.cluster_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ocean cluster name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.desired_capacity">
-<code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.desired_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">desired_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.desired_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of instances to launch and maintain in the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.draining_timeout">
-<code class="sig-name descname">draining_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.draining_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">draining_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.draining_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.ebs_optimized">
-<code class="sig-name descname">ebs_optimized</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.ebs_optimized" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ebs_optimized</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.ebs_optimized" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.iam_instance_profile">
-<code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iam_instance_profile</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance profile iam role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.image_id">
-<code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.image_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">image_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.image_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the image used to launch the instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.key_pair">
-<code class="sig-name descname">key_pair</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.key_pair" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">key_pair</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.key_pair" title="Permalink to this definition">¶</a></dt>
 <dd><p>The key pair to attach the instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.max_size">
-<code class="sig-name descname">max_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.max_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The upper limit of instances the cluster can scale up to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.min_size">
-<code class="sig-name descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.min_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The lower limit of instances the cluster can scale down to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.monitoring">
-<code class="sig-name descname">monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">monitoring</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Ocean cluster name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region the cluster will run in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.security_group_ids">
-<code class="sig-name descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.security_group_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_group_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.security_group_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more security group ids.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.subnet_ids">
-<code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnet_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optionally adds tags to instances launched in an Ocean cluster.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The tag key.</p></li>
@@ -214,21 +228,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.user_data">
-<code class="sig-name descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.user_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.user_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded MIME user data to make available to the instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
+<dt id="pulumi_spotinst.ecs.Ocean.utilize_reserved_instances">
+<code class="sig-name descname">utilize_reserved_instances</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.utilize_reserved_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>If Reserved instances exist, OCean will utilize them before launching Spot instances.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.Ocean.whitelists">
-<code class="sig-name descname">whitelists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.whitelists" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">whitelists</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.whitelists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance types allowed in the Ocean cluster.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.ecs.Ocean.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscaler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draining_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_pair</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">utilize_reserved_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">whitelists</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Ocean resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -255,6 +275,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds tags to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
+<li><p><strong>utilize_reserved_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If Reserved instances exist, OCean will utilize them before launching Spot instances.</p></li>
 <li><p><strong>whitelists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Instance types allowed in the Ocean cluster.</p></li>
 </ul>
 </dd>
@@ -283,6 +304,22 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shutdownHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the Ocean ECS autoscaler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeWindows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable the Ocean ECS autoscaler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>tags</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
@@ -299,9 +336,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.ecs.Ocean.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -317,9 +354,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.ecs.Ocean.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.Ocean.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -337,13 +374,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.ecs.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.ecs.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscale_headrooms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ocean_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean ECS Launch Spec resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_ecs_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_ecs_launch_spec.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -371,9 +405,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">memoryPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Optionally configure the amount of memory (MiB) to allocate for each headroom unit.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.attributes">
-<code class="sig-name descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attributes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optionally adds labels to instances launched in an Ocean cluster.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The label key.</p></li>
@@ -381,9 +415,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.autoscale_headrooms">
-<code class="sig-name descname">autoscale_headrooms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.autoscale_headrooms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">autoscale_headrooms</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.autoscale_headrooms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set custom headroom per launch spec. provide list of headrooms object.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cpuPerUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in CPU units, where 1024 units = 1 vCPU.</p></li>
@@ -392,45 +426,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.iam_instance_profile">
-<code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iam_instance_profile</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN or name of an IAM instance profile to associate with launched instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.image_id">
-<code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.image_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">image_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.image_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the image used to launch the instances.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Ocean Launch Specification name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.ocean_id">
-<code class="sig-name descname">ocean_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.ocean_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ocean_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.ocean_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Ocean cluster ID .</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.security_group_ids">
-<code class="sig-name descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.security_group_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_group_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.security_group_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more security group ids.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.user_data">
-<code class="sig-name descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.user_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.user_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded MIME user data to make available to the instances.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoscale_headrooms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ocean_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OceanLaunchSpec resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -463,9 +497,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -481,9 +515,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.ecs.OceanLaunchSpec.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.ecs.OceanLaunchSpec.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

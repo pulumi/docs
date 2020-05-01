@@ -71,50 +71,37 @@
   
   <h1 id="Pulumi_Gcp_Compute_Route" data-uid="Pulumi.Gcp.Compute.Route" class="text-break">Class Route
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a Route resource.</p>
+<p>A route is a rule that specifies how certain packets should be handled by
+the virtual network. Routes are associated with virtual machines by tag,
+and the set of routes for a particular virtual machine is called its
+routing table. For each packet leaving a virtual machine, the system
+searches that virtual machine's routing table for a single best matching
+route.</p>
+<p>Routes match packets by destination IP address, preferring smaller or more
+specific ranges over larger ones. If there is a tie, the system selects
+the route with the smallest priority value. If there is still a tie, it
+uses the layer three and four packet headers to select just one of the
+remaining matching routes. The packet is then forwarded as specified by
+the next_hop field of the winning route -- either to another virtual
+machine destination, a virtual machine gateway or a Compute
+Engine-operated gateway. Packets that do not match any route in the
+sending virtual machine's routing table will be dropped.</p>
+<p>A Route resource must have exactly one specification of either
+nextHopGateway, nextHopInstance, nextHopIp, nextHopVpnTunnel, or
+nextHopIlb.</p>
+<p>To get more information about Route, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/routes">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/using-routes">Using Routes</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Route</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Route</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +112,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route__ctor_" data-uid="Pulumi.Gcp.Compute.Route.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Route__ctor_System_String_Pulumi_Gcp_Compute_RouteArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Route.#ctor(System.String,Pulumi.Gcp.Compute.RouteArgs,Pulumi.CustomResourceOptions)">Route(String, RouteArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Route__ctor_System_String_Pulumi_Gcp_Compute_RouteArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Route.#ctor(System.String,Pulumi.Gcp.Compute.RouteArgs,System.Nullable{CustomResourceOptions})">Route(String, RouteArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Route resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Route(string name, RouteArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Route(string name, RouteArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +146,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +156,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Description_" data-uid="Pulumi.Gcp.Compute.Route.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_Description" data-uid="Pulumi.Gcp.Compute.Route.Description">Description</h4>
@@ -178,7 +165,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,13 +177,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_DestRange_" data-uid="Pulumi.Gcp.Compute.Route.DestRange*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_DestRange" data-uid="Pulumi.Gcp.Compute.Route.DestRange">DestRange</h4>
@@ -217,21 +204,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Name_" data-uid="Pulumi.Gcp.Compute.Route.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_Name" data-uid="Pulumi.Gcp.Compute.Route.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -248,13 +234,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Network_" data-uid="Pulumi.Gcp.Compute.Route.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_Network" data-uid="Pulumi.Gcp.Compute.Route.Network">Network</h4>
@@ -275,26 +261,26 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopGateway_" data-uid="Pulumi.Gcp.Compute.Route.NextHopGateway*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopGateway" data-uid="Pulumi.Gcp.Compute.Route.NextHopGateway">NextHopGateway</h4>
-  <div class="markdown level1 summary"><p>URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway,
-using a full or partial valid URL: *
+  <div class="markdown level1 summary"><p>URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full
+or partial valid URL: *
 'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' *
-'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' *
-The string 'default-internet-gateway'.</p>
+'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string
+'default-internet-gateway'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NextHopGateway { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NextHopGateway { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,26 +292,26 @@ The string 'default-internet-gateway'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopIlb_" data-uid="Pulumi.Gcp.Compute.Route.NextHopIlb*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopIlb" data-uid="Pulumi.Gcp.Compute.Route.NextHopIlb">NextHopIlb</h4>
-  <div class="markdown level1 summary"><p>The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You
-can only specify the forwarding rule as a partial or full URL. For example, the following are all valid
-URLs: <a href="https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule">https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule</a>
-regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a
-public (non-RFC 1918) IP CIDR range.</p>
+  <div class="markdown level1 summary"><p>The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. You can only
+specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
+<a href="https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule">https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule</a>
+regions/region/forwardingRules/forwardingRule Note that this can only be used when the destinationRange is a public
+(non-RFC 1918) IP CIDR range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NextHopIlb { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NextHopIlb { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,25 +323,25 @@ public (non-RFC 1918) IP CIDR range.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopInstance_" data-uid="Pulumi.Gcp.Compute.Route.NextHopInstance*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopInstance" data-uid="Pulumi.Gcp.Compute.Route.NextHopInstance">NextHopInstance</h4>
-  <div class="markdown level1 summary"><p>URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For
-example: * 'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
-'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name,
-with the zone in 'next_hop_instance_zone'.</p>
+  <div class="markdown level1 summary"><p>URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: *
+'https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance' *
+'projects/project/zones/zone/instances/instance' * 'zones/zone/instances/instance' * Just the instance name, with the
+zone in 'next_hop_instance_zone'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NextHopInstance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NextHopInstance { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +353,13 @@ with the zone in 'next_hop_instance_zone'.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopInstanceZone_" data-uid="Pulumi.Gcp.Compute.Route.NextHopInstanceZone*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopInstanceZone" data-uid="Pulumi.Gcp.Compute.Route.NextHopInstanceZone">NextHopInstanceZone</h4>
@@ -385,7 +371,7 @@ a URL.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NextHopInstanceZone { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NextHopInstanceZone { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,13 +383,13 @@ a URL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopIp_" data-uid="Pulumi.Gcp.Compute.Route.NextHopIp*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopIp" data-uid="Pulumi.Gcp.Compute.Route.NextHopIp">NextHopIp</h4>
@@ -424,13 +410,13 @@ a URL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopNetwork_" data-uid="Pulumi.Gcp.Compute.Route.NextHopNetwork*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopNetwork" data-uid="Pulumi.Gcp.Compute.Route.NextHopNetwork">NextHopNetwork</h4>
@@ -451,13 +437,13 @@ a URL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_NextHopVpnTunnel_" data-uid="Pulumi.Gcp.Compute.Route.NextHopVpnTunnel*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_NextHopVpnTunnel" data-uid="Pulumi.Gcp.Compute.Route.NextHopVpnTunnel">NextHopVpnTunnel</h4>
@@ -466,7 +452,7 @@ a URL.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NextHopVpnTunnel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NextHopVpnTunnel { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,19 +464,19 @@ a URL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Priority_" data-uid="Pulumi.Gcp.Compute.Route.Priority*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_Priority" data-uid="Pulumi.Gcp.Compute.Route.Priority">Priority</h4>
-  <div class="markdown level1 summary"><p>The priority of this route. Priority is used to break ties in cases where there is more than one matching
-route of equal prefix length. In the case of two routes with equal prefix length, the one with the
-lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.</p>
+  <div class="markdown level1 summary"><p>The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal
+prefix length. In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.
+Default value is 1000. Valid range is 0 through 65535.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -507,13 +493,13 @@ lowest-numbered priority value wins. Default value is 1000. Valid range is 0 thr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Project_" data-uid="Pulumi.Gcp.Compute.Route.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_Project" data-uid="Pulumi.Gcp.Compute.Route.Project">Project</h4>
@@ -535,13 +521,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_SelfLink_" data-uid="Pulumi.Gcp.Compute.Route.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_SelfLink" data-uid="Pulumi.Gcp.Compute.Route.SelfLink">SelfLink</h4>
@@ -562,13 +548,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Tags_" data-uid="Pulumi.Gcp.Compute.Route.Tags*"></a>
   <h4 id="Pulumi_Gcp_Compute_Route_Tags" data-uid="Pulumi.Gcp.Compute.Route.Tags">Tags</h4>
@@ -589,7 +575,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -597,17 +583,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L193">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Route_Get_" data-uid="Pulumi.Gcp.Compute.Route.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Route_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_RouteState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Route.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.RouteState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, RouteState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Route_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_RouteState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Route.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.RouteState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RouteState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Route resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Route Get(string name, Input&lt;string&gt; id, RouteState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Route Get(string name, Input&lt;string&gt; id, RouteState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -626,7 +612,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -638,7 +624,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -667,7 +653,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Route.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Route.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

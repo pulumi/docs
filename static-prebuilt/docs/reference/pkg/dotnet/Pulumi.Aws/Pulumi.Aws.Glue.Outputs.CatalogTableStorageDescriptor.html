@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CatalogTableStorageDescriptor</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Glue.Outputs.html">Pulumi.Aws.Glue.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CatalogTableStorageDescriptor</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CatalogTableStorageDescriptor : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L850">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_BucketColumns" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.BucketColumns">BucketColumns</h4>
   <div class="markdown level1 summary"><p>A list of reducer grouping columns, clustering columns, and bucketing columns in the table.</p>
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L854">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_Columns" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.Columns">Columns</h4>
   <div class="markdown level1 summary"><p>A list of the Columns in the table.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;CatalogTableStorageDescriptorColumns&gt; Columns</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;CatalogTableStorageDescriptorColumn&gt; Columns</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptorColumns.html">CatalogTableStorageDescriptorColumns</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptorColumn.html">CatalogTableStorageDescriptorColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L858">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_Compressed" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.Compressed">Compressed</h4>
   <div class="markdown level1 summary"><p>True if the data in the table is compressed, or False if not.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L862">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_InputFormat" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.InputFormat">InputFormat</h4>
   <div class="markdown level1 summary"><p>The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string InputFormat</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? InputFormat</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L866">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_Location" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.Location">Location</h4>
   <div class="markdown level1 summary"><p>The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Location</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Location</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L870">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_NumberOfBuckets" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.NumberOfBuckets">NumberOfBuckets</h4>
   <div class="markdown level1 summary"><p>Must be specified if the table contains any dimension columns.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L874">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_OutputFormat" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.OutputFormat">OutputFormat</h4>
   <div class="markdown level1 summary"><p>The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.</p>
@@ -275,7 +251,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFormat</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFormat</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,13 +263,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L878">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_Parameters" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.Parameters">Parameters</h4>
   <div class="markdown level1 summary"><p>A map of initialization parameters for the SerDe, in key-value form.</p>
@@ -301,7 +277,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Parameters</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? Parameters</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +289,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L882">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_SerDeInfo" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.SerDeInfo">SerDeInfo</h4>
   <div class="markdown level1 summary"><p>Serialization/deserialization (SerDe) information.</p>
@@ -345,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L886">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_SkewedInfo" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.SkewedInfo">SkewedInfo</h4>
   <div class="markdown level1 summary"><p>Information about values that appear very frequently in a column (skewed values).</p>
@@ -371,7 +347,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L890">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_SortColumns" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.SortColumns">SortColumns</h4>
   <div class="markdown level1 summary"><p>A list of Order objects specifying the sort order of each bucket in the table.</p>
@@ -379,7 +355,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;CatalogTableStorageDescriptorSortColumns&gt; SortColumns</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;CatalogTableStorageDescriptorSortColumn&gt; SortColumns</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,13 +367,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptorSortColumns.html">CatalogTableStorageDescriptorSortColumns</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptorSortColumn.html">CatalogTableStorageDescriptorSortColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L894">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Glue_Outputs_CatalogTableStorageDescriptor_StoredAsSubDirectories" data-uid="Pulumi.Aws.Glue.Outputs.CatalogTableStorageDescriptor.StoredAsSubDirectories">StoredAsSubDirectories</h4>
   <div class="markdown level1 summary"><p>True if the table data is stored in subdirectories, or False if not.</p>
@@ -429,7 +405,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Glue/CatalogTable.cs/#L844" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Glue/Outputs/CatalogTableStorageDescriptor.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

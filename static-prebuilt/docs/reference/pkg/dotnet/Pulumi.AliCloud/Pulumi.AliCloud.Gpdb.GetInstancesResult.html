@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstancesResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Gpdb.html">Pulumi.AliCloud.Gpdb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetInstancesResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetInstancesResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L87">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_AvailabilityZone" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.AvailabilityZone">AvailabilityZone</h4>
   <div class="markdown level1 summary"><p>Instance availability zone.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AvailabilityZone</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AvailabilityZone</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L91">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_Id" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L95">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_Ids" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>The ids list of AnalyticDB for PostgreSQL instances.</p>
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L99">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_Instances" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.Instances">Instances</h4>
   <div class="markdown level1 summary"><p>A list of AnalyticDB for PostgreSQL instances. Its every element contains the following attributes:</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstancesInstancesResult&gt; Instances</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstancesInstanceResult&gt; Instances</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,20 +185,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Gpdb.Outputs.GetInstancesInstancesResult.html">GetInstancesInstancesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Gpdb.Outputs.GetInstancesInstanceResult.html">GetInstancesInstanceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L100">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_NameRegex" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L104">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_Names" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.Names">Names</h4>
   <div class="markdown level1 summary"><p>The names list of AnalyticDB for PostgreSQL instance.</p>
@@ -260,20 +236,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L105">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_OutputFile" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,20 +261,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L106">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_Tags" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.Tags">Tags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Tags</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Tags</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,20 +286,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L107">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Gpdb_GetInstancesResult_VswitchId" data-uid="Pulumi.AliCloud.Gpdb.GetInstancesResult.VswitchId">VswitchId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VswitchId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VswitchId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,7 +311,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -347,7 +323,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Gpdb/GetInstances.cs/#L78" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Gpdb/GetInstances.cs/#L81" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

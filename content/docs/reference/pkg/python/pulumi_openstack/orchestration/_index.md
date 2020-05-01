@@ -13,13 +13,10 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_openstack.orchestration"></span><dl class="class">
+<span class="target" id="module-pulumi_openstack.orchestration"></span><dl class="py class">
 <dt id="pulumi_openstack.orchestration.StackV1">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.orchestration.</code><code class="sig-name descname">StackV1</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">environment_opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_topics=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_description=None</em>, <em class="sig-param">template_opts=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">updated_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.orchestration.</code><code class="sig-name descname">StackV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_topics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status_reason</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 stack resource within OpenStack.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/orchestration_stack_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/orchestration_stack_v1.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -69,60 +66,60 @@ is the time zone as an offset from UTC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">outputKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">outputValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.capabilities">
-<code class="sig-name descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.capabilities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">capabilities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of stack capabilities for stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.creation_time">
-<code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.creation_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creation_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.creation_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the stack resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.disable_rollback">
-<code class="sig-name descname">disable_rollback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.disable_rollback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_rollback</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.disable_rollback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
 resources are not deleted when stack creation fails.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.environment_opts">
-<code class="sig-name descname">environment_opts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.environment_opts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">environment_opts</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.environment_opts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Environment key/value pairs to associate with
 the stack which contains details for the environment of the stack.
 Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Environment Opts.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack’s name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.notification_topics">
-<code class="sig-name descname">notification_topics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.notification_topics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">notification_topics</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.notification_topics" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of notification topics for stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.outputs">
-<code class="sig-name descname">outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.outputs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">outputs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.outputs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of stack outputs.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the stack resource.</p></li>
@@ -131,72 +128,72 @@ alphabetic character. Changing this updates the stack’s name.</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.parameters">
-<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parameters</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to create the stack. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.status">
-<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The status of the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.status_reason">
-<code class="sig-name descname">status_reason</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.status_reason" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">status_reason</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.status_reason" title="Permalink to this definition">¶</a></dt>
 <dd><p>The reason for the current status of the stack.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of tags to assosciate with the Stack</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.template_description">
-<code class="sig-name descname">template_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.template_description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">template_description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.template_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the stack template.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.template_opts">
-<code class="sig-name descname">template_opts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.template_opts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">template_opts</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.template_opts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Template key/value pairs to associate with the
 stack which contains either the template file or url.
 Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Template Opts.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.timeout">
-<code class="sig-name descname">timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The timeout for stack action in minutes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_openstack.orchestration.StackV1.updated_time">
-<code class="sig-name descname">updated_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.updated_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updated_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.updated_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.orchestration.StackV1.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">environment_opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_topics=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_reason=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_description=None</em>, <em class="sig-param">template_opts=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">updated_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creation_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_rollback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notification_topics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status_reason</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template_opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_time</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StackV1 resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -251,9 +248,9 @@ is the time zone as an offset from UTC.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.orchestration.StackV1.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -269,9 +266,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_openstack.orchestration.StackV1.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.orchestration.StackV1.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

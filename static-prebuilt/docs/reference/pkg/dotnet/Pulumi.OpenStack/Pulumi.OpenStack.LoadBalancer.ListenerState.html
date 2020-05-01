@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L434">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L469">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState__ctor_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState__ctor" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.#ctor">ListenerState()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L315">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L336">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_AdminStateUp_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.AdminStateUp*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_AdminStateUp" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.AdminStateUp">AdminStateUp</h4>
@@ -128,7 +128,7 @@ A valid value is true (UP) or false (DOWN).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L322">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_ConnectionLimit_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.ConnectionLimit*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_ConnectionLimit" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.ConnectionLimit">ConnectionLimit</h4>
@@ -156,7 +156,7 @@ for the Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L329">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L350">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_DefaultPoolId_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.DefaultPoolId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_DefaultPoolId" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.DefaultPoolId">DefaultPoolId</h4>
@@ -184,7 +184,7 @@ Listener is associated.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_DefaultTlsContainerRef_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.DefaultTlsContainerRef*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_DefaultTlsContainerRef" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.DefaultTlsContainerRef">DefaultTlsContainerRef</h4>
@@ -215,7 +215,7 @@ for more information.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L366">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_Description_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Description*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_Description" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Description">Description</h4>
@@ -242,7 +242,36 @@ for more information.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L377">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_InsertHeaders_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.InsertHeaders*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_InsertHeaders" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.InsertHeaders">InsertHeaders</h4>
+  <div class="markdown level1 summary"><p>The list of key value pairs representing headers to insert
+into the request before it is sent to the backend members. Changing this updates the headers of the
+existing listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; InsertHeaders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L387">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_LoadbalancerId_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.LoadbalancerId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_LoadbalancerId" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.LoadbalancerId">LoadbalancerId</h4>
@@ -270,7 +299,7 @@ Listener. Changing this creates a new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L394">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_Name_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Name*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_Name" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Name">Name</h4>
@@ -298,7 +327,7 @@ to be unique.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L367">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L402">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_Protocol_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Protocol*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_Protocol" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Protocol">Protocol</h4>
@@ -327,7 +356,7 @@ new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L374">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_ProtocolPort_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.ProtocolPort*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_ProtocolPort" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.ProtocolPort">ProtocolPort</h4>
@@ -355,7 +384,7 @@ Changing this creates a new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L383">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L418">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_Region_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Region*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_Region" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.Region">Region</h4>
@@ -385,7 +414,7 @@ Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L395">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L430">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_SniContainerRefs_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.SniContainerRefs*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_SniContainerRefs" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.SniContainerRefs">SniContainerRefs</h4>
@@ -415,7 +444,7 @@ for more information.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L406">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L441">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_TenantId_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TenantId*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_TenantId" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TenantId">TenantId</h4>
@@ -444,7 +473,7 @@ other than their own. Changing this creates a new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L447">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutClientData_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutClientData*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutClientData" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutClientData">TimeoutClientData</h4>
@@ -471,7 +500,7 @@ other than their own. Changing this creates a new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L418">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L453">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutMemberConnect_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutMemberConnect*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutMemberConnect" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutMemberConnect">TimeoutMemberConnect</h4>
@@ -498,7 +527,7 @@ other than their own. Changing this creates a new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L424">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L459">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutMemberData_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutMemberData*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutMemberData" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutMemberData">TimeoutMemberData</h4>
@@ -525,7 +554,7 @@ other than their own. Changing this creates a new Listener.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L466">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutTcpInspect_" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutTcpInspect*"></a>
   <h4 id="Pulumi_OpenStack_LoadBalancer_ListenerState_TimeoutTcpInspect" data-uid="Pulumi.OpenStack.LoadBalancer.ListenerState.TimeoutTcpInspect">TimeoutTcpInspect</h4>
@@ -559,7 +588,7 @@ TCP packets for content inspection.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L309" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/LoadBalancer/Listener.cs/#L330" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

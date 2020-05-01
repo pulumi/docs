@@ -92,6 +92,12 @@
       "terraform_provider_name": "google"
     },
     {
+      "name": "Pulumi GitHub",
+      "package_name": "pulumi_github",
+      "pulumi_provider_name": "github",
+      "terraform_provider_name": "github"
+    },
+    {
       "name": "Pulumi GitLab",
       "package_name": "pulumi_gitlab",
       "pulumi_provider_name": "gitlab",
@@ -107,6 +113,12 @@
       "name": "Pulumi Keycloak",
       "package_name": "pulumi_keycloak",
       "pulumi_provider_name": "keycloak",
+      "terraform_provider_name": ""
+    },
+    {
+      "name": "Pulumi Kong",
+      "package_name": "pulumi_kong",
+      "pulumi_provider_name": "kong",
       "terraform_provider_name": ""
     },
     {
@@ -140,6 +152,12 @@
       "terraform_provider_name": "mailgun"
     },
     {
+      "name": "Pulumi MongoDB Atlas",
+      "package_name": "pulumi_mongodbatlas",
+      "pulumi_provider_name": "mongodbatlas",
+      "terraform_provider_name": "mongodbatlas"
+    },
+    {
       "name": "Pulumi MySQL",
       "package_name": "pulumi_mysql",
       "pulumi_provider_name": "mysql",
@@ -168,6 +186,12 @@
       "package_name": "pulumi_postgresql",
       "pulumi_provider_name": "postgresql",
       "terraform_provider_name": "postgresql"
+    },
+    {
+      "name": "Pulumi Policy",
+      "package_name": "pulumi_policy",
+      "pulumi_provider_name": "policy",
+      "terraform_provider_name": ""
     },
     {
       "name": "Pulumi Kubernetes",

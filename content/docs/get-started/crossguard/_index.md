@@ -16,6 +16,12 @@ Often organizations want to empower developers to manage their infrastructure ye
 
 Using Policy as Code, users can express business or security rules as functions that are executed against resources in their stacks. Then using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
 
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to stacks written in any language.
+
+{{% notes %}}
+Python support is currently in preview.
+{{% /notes %}}
+
 ## Terminology
 
 * **Policy Pack** - a set of related policies - i.e. “Security”, “Cost Optimization”, “Data Location”. The categorization of policies into a policy pack is left up to the user.

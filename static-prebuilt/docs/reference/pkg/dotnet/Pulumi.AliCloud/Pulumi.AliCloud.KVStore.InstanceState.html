@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">InstanceState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">InstanceState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.KVStore.html">Pulumi.AliCloud.KVStore</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L463">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L479">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState__ctor_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState__ctor" data-uid="Pulumi.AliCloud.KVStore.InstanceState.#ctor">InstanceState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L326">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L336">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_AutoRenew_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.AutoRenew*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_AutoRenew" data-uid="Pulumi.AliCloud.KVStore.InstanceState.AutoRenew">AutoRenew</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoRenew { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoRenew { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L342">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_AutoRenewPeriod_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.AutoRenewPeriod*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_AutoRenewPeriod" data-uid="Pulumi.AliCloud.KVStore.InstanceState.AutoRenewPeriod">AutoRenewPeriod</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AutoRenewPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AutoRenewPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L348">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_AvailabilityZone_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.AvailabilityZone*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_AvailabilityZone" data-uid="Pulumi.AliCloud.KVStore.InstanceState.AvailabilityZone">AvailabilityZone</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvailabilityZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvailabilityZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L341">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L351">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_BackupId_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.BackupId*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_BackupId" data-uid="Pulumi.AliCloud.KVStore.InstanceState.BackupId">BackupId</h4>
@@ -218,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BackupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BackupId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L357">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_ConnectionDomain_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.ConnectionDomain*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_ConnectionDomain" data-uid="Pulumi.AliCloud.KVStore.InstanceState.ConnectionDomain">ConnectionDomain</h4>
@@ -245,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ConnectionDomain { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ConnectionDomain { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L350">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L360">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_EngineVersion_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.EngineVersion*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_EngineVersion" data-uid="Pulumi.AliCloud.KVStore.InstanceState.EngineVersion">EngineVersion</h4>
@@ -271,7 +242,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; EngineVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? EngineVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +254,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L356">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L366">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_InstanceChargeType_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceChargeType*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_InstanceChargeType" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceChargeType">InstanceChargeType</h4>
@@ -298,7 +269,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceChargeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceChargeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,13 +281,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L369">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_InstanceClass_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceClass*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_InstanceClass" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceClass">InstanceClass</h4>
@@ -324,7 +295,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceClass { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceClass { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,13 +307,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L366">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L376">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_InstanceName_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceName*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_InstanceName" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceName">InstanceName</h4>
@@ -354,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -366,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L382">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_InstanceType_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceType*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_InstanceType" data-uid="Pulumi.AliCloud.KVStore.InstanceState.InstanceType">InstanceType</h4>
@@ -381,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L388">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_KmsEncryptedPassword_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.KmsEncryptedPassword*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_KmsEncryptedPassword" data-uid="Pulumi.AliCloud.KVStore.InstanceState.KmsEncryptedPassword">KmsEncryptedPassword</h4>
@@ -408,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsEncryptedPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsEncryptedPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L387">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L397">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_KmsEncryptionContext_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.KmsEncryptionContext*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_KmsEncryptionContext" data-uid="Pulumi.AliCloud.KVStore.InstanceState.KmsEncryptionContext">KmsEncryptionContext</h4>
@@ -447,13 +418,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L396">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L406">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_MaintainEndTime_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.MaintainEndTime*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_MaintainEndTime" data-uid="Pulumi.AliCloud.KVStore.InstanceState.MaintainEndTime">MaintainEndTime</h4>
@@ -462,7 +433,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaintainEndTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaintainEndTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -474,13 +445,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L402">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_MaintainStartTime_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.MaintainStartTime*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_MaintainStartTime" data-uid="Pulumi.AliCloud.KVStore.InstanceState.MaintainStartTime">MaintainStartTime</h4>
@@ -489,7 +460,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaintainStartTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaintainStartTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -501,13 +472,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L411">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L421">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_Parameters_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Parameters*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_Parameters" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Parameters">Parameters</h4>
@@ -516,7 +487,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceParametersGetArgs&gt; Parameters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceParameterGetArgs&gt; Parameters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,13 +499,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.AliCloud.KVStore.Inputs.InstanceParametersGetArgs.html">InstanceParametersGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.KVStore.Inputs.InstanceParameterGetArgs.html">InstanceParameterGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L417">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L427">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_Password_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Password*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_Password" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Password">Password</h4>
@@ -542,7 +513,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -554,13 +525,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L423">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L433">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_Period_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Period*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_Period" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Period">Period</h4>
@@ -569,7 +540,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Period { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Period { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -581,13 +552,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L426">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L436">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_PrivateIp_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.PrivateIp*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_PrivateIp" data-uid="Pulumi.AliCloud.KVStore.InstanceState.PrivateIp">PrivateIp</h4>
@@ -595,7 +566,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrivateIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrivateIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -607,13 +578,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L445">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_KVStore_InstanceState_SecurityGroupId_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.SecurityGroupId*"></a>
+  <h4 id="Pulumi_AliCloud_KVStore_InstanceState_SecurityGroupId" data-uid="Pulumi.AliCloud.KVStore.InstanceState.SecurityGroupId">SecurityGroupId</h4>
+  <div class="markdown level1 summary"><p>The Security Group ID of ECS.</p>
+<ul>
+<li><code>private_ip</code>- (Optional) Set the instance's private IP.</li>
+<li><code>backup_id</code>- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.</li>
+<li><code>vpc_auth_mode</code>- (Optional) Only meaningful if instance_type is <code>Redis</code> and network type is VPC. Valid values are <code>Close</code>, <code>Open</code>. Defaults to <code>Open</code>.  <code>Close</code> means the redis instance can be accessed without authentication. <code>Open</code> means authentication is required.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SecurityGroupId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L450">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_SecurityIps_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.SecurityIps*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_SecurityIps" data-uid="Pulumi.AliCloud.KVStore.InstanceState.SecurityIps">SecurityIps</h4>
@@ -633,13 +636,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L443">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L462">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_Tags_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Tags*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_Tags" data-uid="Pulumi.AliCloud.KVStore.InstanceState.Tags">Tags</h4>
@@ -660,13 +663,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L449">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L468">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_VpcAuthMode_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.VpcAuthMode*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_VpcAuthMode" data-uid="Pulumi.AliCloud.KVStore.InstanceState.VpcAuthMode">VpcAuthMode</h4>
@@ -674,7 +677,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VpcAuthMode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VpcAuthMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -686,13 +689,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L460">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L476">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_KVStore_InstanceState_VswitchId_" data-uid="Pulumi.AliCloud.KVStore.InstanceState.VswitchId*"></a>
   <h4 id="Pulumi_AliCloud_KVStore_InstanceState_VswitchId" data-uid="Pulumi.AliCloud.KVStore.InstanceState.VswitchId">VswitchId</h4>
@@ -700,15 +703,12 @@
 <ul>
 <li><code>engine_version</code>- (Optional, ForceNew) Engine version. Supported values: 2.8, 4.0 and 5.0. Default value: 2.8. Only 2.8 can be supported for Memcache Instance.</li>
 <li><code>security_ips</code>- (Optional) Set the instance's IP whitelist of the default security group.</li>
-<li><code>private_ip</code>- (Optional) Set the instance's private IP.</li>
-<li><code>backup_id</code>- (Optional) If an instance created based on a backup set generated by another instance is valid, this parameter indicates the ID of the generated backup set.</li>
-<li><code>vpc_auth_mode</code>- (Optional) Only meaningful if instance_type is <code>Redis</code> and network type is VPC. Valid values are <code>Close</code>, <code>Open</code>. Defaults to <code>Open</code>.  <code>Close</code> means the redis instance can be accessed without authentication. <code>Open</code> means authentication is required.</li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VswitchId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VswitchId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -720,7 +720,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -732,7 +732,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/Instance.cs/#L321" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/Instance.cs/#L331" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

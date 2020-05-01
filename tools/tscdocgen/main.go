@@ -201,10 +201,7 @@ func emitMarkdownDocs(srcdir, pkgname string, doc *typeDocNode, outdir, outdatad
 	// want to revisit this and make the logic here more sophisticated and general purpose someday.
 	pkg := doc.Name
 
-	// The Git commit sha is emitted as a front matter parameter (`git_sha`) on each markdown page, so we use Hugo's
-	// built-in `param` shortcode to look it up. This reduces the size of diffs when updating API docs because the Git
-	// commit sha will only change in one place at the top of the page, rather than throughout.
-	repoURL := getRepoURL(pkgRepoDir, "{{< param git_sha >}}")
+	repoURL := getRepoURL(pkgRepoDir, gitSha)
 
 	// The kubernetes package requires some special handling since the structure differs from
 	// the tf-generated providers.

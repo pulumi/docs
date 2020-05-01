@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ServiceState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ServiceState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Endpoints.html">Pulumi.Gcp.Endpoints</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState__ctor_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState__ctor" data-uid="Pulumi.Gcp.Endpoints.ServiceState.#ctor">ServiceState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_Apis_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.Apis*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_Apis" data-uid="Pulumi.Gcp.Endpoints.ServiceState.Apis">Apis</h4>
@@ -137,7 +108,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ServiceApisGetArgs&gt; Apis { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ServiceApiGetArgs&gt; Apis { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +120,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Endpoints.Inputs.ServiceApisGetArgs.html">ServiceApisGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Endpoints.Inputs.ServiceApiGetArgs.html">ServiceApiGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_ConfigId_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.ConfigId*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_ConfigId" data-uid="Pulumi.Gcp.Endpoints.ServiceState.ConfigId">ConfigId</h4>
@@ -163,7 +134,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ConfigId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ConfigId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,13 +146,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_DnsAddress_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.DnsAddress*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_DnsAddress" data-uid="Pulumi.Gcp.Endpoints.ServiceState.DnsAddress">DnsAddress</h4>
@@ -189,7 +160,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DnsAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DnsAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,13 +172,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_Endpoints_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.Endpoints*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_Endpoints" data-uid="Pulumi.Gcp.Endpoints.ServiceState.Endpoints">Endpoints</h4>
@@ -215,7 +186,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;ServiceEndpointsGetArgs&gt; Endpoints { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;ServiceEndpointGetArgs&gt; Endpoints { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,13 +198,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Endpoints.Inputs.ServiceEndpointsGetArgs.html">ServiceEndpointsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Endpoints.Inputs.ServiceEndpointGetArgs.html">ServiceEndpointGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_GrpcConfig_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.GrpcConfig*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_GrpcConfig" data-uid="Pulumi.Gcp.Endpoints.ServiceState.GrpcConfig">GrpcConfig</h4>
@@ -241,7 +212,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; GrpcConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? GrpcConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,13 +224,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_OpenapiConfig_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.OpenapiConfig*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_OpenapiConfig" data-uid="Pulumi.Gcp.Endpoints.ServiceState.OpenapiConfig">OpenapiConfig</h4>
@@ -267,7 +238,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OpenapiConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OpenapiConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,13 +250,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_Project_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.Project*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_Project" data-uid="Pulumi.Gcp.Endpoints.ServiceState.Project">Project</h4>
@@ -293,7 +264,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,13 +276,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_ProtocOutputBase64_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.ProtocOutputBase64*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_ProtocOutputBase64" data-uid="Pulumi.Gcp.Endpoints.ServiceState.ProtocOutputBase64">ProtocOutputBase64</h4>
@@ -319,7 +290,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ProtocOutputBase64 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProtocOutputBase64 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,13 +302,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Endpoints_ServiceState_ServiceName_" data-uid="Pulumi.Gcp.Endpoints.ServiceState.ServiceName*"></a>
   <h4 id="Pulumi_Gcp_Endpoints_ServiceState_ServiceName" data-uid="Pulumi.Gcp.Endpoints.ServiceState.ServiceName">ServiceName</h4>
@@ -345,7 +316,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ServiceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,7 +328,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -369,7 +340,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Endpoints/Service.cs/#L112" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Endpoints/Service.cs/#L110" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

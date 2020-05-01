@@ -74,50 +74,12 @@
   <div class="markdown level0 summary"><p>Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 <a href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Droplet</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Droplet</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -128,16 +90,16 @@ modify, and delete Droplets. Droplets also support
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet__ctor_" data-uid="Pulumi.DigitalOcean.Droplet.#ctor*"></a>
-  <h4 id="Pulumi_DigitalOcean_Droplet__ctor_System_String_Pulumi_DigitalOcean_DropletArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.Droplet.#ctor(System.String,Pulumi.DigitalOcean.DropletArgs,Pulumi.CustomResourceOptions)">Droplet(String, DropletArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_DigitalOcean_Droplet__ctor_System_String_Pulumi_DigitalOcean_DropletArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.Droplet.#ctor(System.String,Pulumi.DigitalOcean.DropletArgs,System.Nullable{CustomResourceOptions})">Droplet(String, DropletArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Droplet resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Droplet(string name, DropletArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Droplet(string name, DropletArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,7 +124,7 @@ modify, and delete Droplets. Droplets also support
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -172,7 +134,7 @@ modify, and delete Droplets. Droplets also support
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Backups_" data-uid="Pulumi.DigitalOcean.Droplet.Backups*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Backups" data-uid="Pulumi.DigitalOcean.Droplet.Backups">Backups</h4>
@@ -194,13 +156,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_CreatedAt_" data-uid="Pulumi.DigitalOcean.Droplet.CreatedAt*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_CreatedAt" data-uid="Pulumi.DigitalOcean.Droplet.CreatedAt">CreatedAt</h4>
@@ -220,13 +182,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Disk_" data-uid="Pulumi.DigitalOcean.Droplet.Disk*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Disk" data-uid="Pulumi.DigitalOcean.Droplet.Disk">Disk</h4>
@@ -247,13 +209,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Image_" data-uid="Pulumi.DigitalOcean.Droplet.Image*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Image" data-uid="Pulumi.DigitalOcean.Droplet.Image">Image</h4>
@@ -274,13 +236,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Ipv4Address_" data-uid="Pulumi.DigitalOcean.Droplet.Ipv4Address*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Ipv4Address" data-uid="Pulumi.DigitalOcean.Droplet.Ipv4Address">Ipv4Address</h4>
@@ -301,13 +263,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Ipv4AddressPrivate_" data-uid="Pulumi.DigitalOcean.Droplet.Ipv4AddressPrivate*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Ipv4AddressPrivate" data-uid="Pulumi.DigitalOcean.Droplet.Ipv4AddressPrivate">Ipv4AddressPrivate</h4>
@@ -328,13 +290,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Ipv6_" data-uid="Pulumi.DigitalOcean.Droplet.Ipv6*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Ipv6" data-uid="Pulumi.DigitalOcean.Droplet.Ipv6">Ipv6</h4>
@@ -355,13 +317,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Ipv6Address_" data-uid="Pulumi.DigitalOcean.Droplet.Ipv6Address*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Ipv6Address" data-uid="Pulumi.DigitalOcean.Droplet.Ipv6Address">Ipv6Address</h4>
@@ -382,13 +344,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Locked_" data-uid="Pulumi.DigitalOcean.Droplet.Locked*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Locked" data-uid="Pulumi.DigitalOcean.Droplet.Locked">Locked</h4>
@@ -409,13 +371,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Memory_" data-uid="Pulumi.DigitalOcean.Droplet.Memory*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Memory" data-uid="Pulumi.DigitalOcean.Droplet.Memory">Memory</h4>
@@ -435,13 +397,13 @@ false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Monitoring_" data-uid="Pulumi.DigitalOcean.Droplet.Monitoring*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Monitoring" data-uid="Pulumi.DigitalOcean.Droplet.Monitoring">Monitoring</h4>
@@ -463,13 +425,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Name_" data-uid="Pulumi.DigitalOcean.Droplet.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Name" data-uid="Pulumi.DigitalOcean.Droplet.Name">Name</h4>
@@ -490,13 +452,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_PriceHourly_" data-uid="Pulumi.DigitalOcean.Droplet.PriceHourly*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_PriceHourly" data-uid="Pulumi.DigitalOcean.Droplet.PriceHourly">PriceHourly</h4>
@@ -517,13 +479,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_PriceMonthly_" data-uid="Pulumi.DigitalOcean.Droplet.PriceMonthly*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_PriceMonthly" data-uid="Pulumi.DigitalOcean.Droplet.PriceMonthly">PriceMonthly</h4>
@@ -544,23 +506,25 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Double</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_PrivateNetworking_" data-uid="Pulumi.DigitalOcean.Droplet.PrivateNetworking*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_PrivateNetworking" data-uid="Pulumi.DigitalOcean.Droplet.PrivateNetworking">PrivateNetworking</h4>
-  <div class="markdown level1 summary"><p>Boolean controlling if private networks are
-enabled. Defaults to false.</p>
+  <div class="markdown level1 summary"><p>Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+<code>vpc_uuid</code> attribute to specify a different VPC.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PrivateNetworking { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; PrivateNetworking { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -572,13 +536,13 @@ enabled. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Region_" data-uid="Pulumi.DigitalOcean.Droplet.Region*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Region" data-uid="Pulumi.DigitalOcean.Droplet.Region">Region</h4>
@@ -599,13 +563,13 @@ enabled. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_ResizeDisk_" data-uid="Pulumi.DigitalOcean.Droplet.ResizeDisk*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_ResizeDisk" data-uid="Pulumi.DigitalOcean.Droplet.ResizeDisk">ResizeDisk</h4>
@@ -629,13 +593,13 @@ size is a permanent change</strong>. Increasing only RAM and CPU is reversible.<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Size_" data-uid="Pulumi.DigitalOcean.Droplet.Size*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Size" data-uid="Pulumi.DigitalOcean.Droplet.Size">Size</h4>
@@ -656,13 +620,13 @@ size is a permanent change</strong>. Increasing only RAM and CPU is reversible.<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_SshKeys_" data-uid="Pulumi.DigitalOcean.Droplet.SshKeys*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_SshKeys" data-uid="Pulumi.DigitalOcean.Droplet.SshKeys">SshKeys</h4>
@@ -686,13 +650,13 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Status_" data-uid="Pulumi.DigitalOcean.Droplet.Status*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Status" data-uid="Pulumi.DigitalOcean.Droplet.Status">Status</h4>
@@ -713,13 +677,13 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Tags_" data-uid="Pulumi.DigitalOcean.Droplet.Tags*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Tags" data-uid="Pulumi.DigitalOcean.Droplet.Tags">Tags</h4>
@@ -740,13 +704,13 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Urn_" data-uid="Pulumi.DigitalOcean.Droplet.Urn*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Urn" data-uid="Pulumi.DigitalOcean.Droplet.Urn">Urn</h4>
@@ -770,13 +734,13 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_UserData_" data-uid="Pulumi.DigitalOcean.Droplet.UserData*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_UserData" data-uid="Pulumi.DigitalOcean.Droplet.UserData">UserData</h4>
@@ -785,7 +749,7 @@ to retrieve them.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserData { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -797,13 +761,13 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Vcpus_" data-uid="Pulumi.DigitalOcean.Droplet.Vcpus*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_Vcpus" data-uid="Pulumi.DigitalOcean.Droplet.Vcpus">Vcpus</h4>
@@ -824,13 +788,13 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_VolumeIds_" data-uid="Pulumi.DigitalOcean.Droplet.VolumeIds*"></a>
   <h4 id="Pulumi_DigitalOcean_Droplet_VolumeIds" data-uid="Pulumi.DigitalOcean.Droplet.VolumeIds">VolumeIds</h4>
@@ -851,7 +815,34 @@ to retrieve them.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_DigitalOcean_Droplet_VpcUuid_" data-uid="Pulumi.DigitalOcean.Droplet.VpcUuid*"></a>
+  <h4 id="Pulumi_DigitalOcean_Droplet_VpcUuid" data-uid="Pulumi.DigitalOcean.Droplet.VpcUuid">VpcUuid</h4>
+  <div class="markdown level1 summary"><p>The ID of the VPC where the Droplet will be located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcUuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -859,17 +850,17 @@ to retrieve them.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L213">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_Droplet_Get_" data-uid="Pulumi.DigitalOcean.Droplet.Get*"></a>
-  <h4 id="Pulumi_DigitalOcean_Droplet_Get_System_String_Pulumi_Input_System_String__Pulumi_DigitalOcean_DropletState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.Droplet.Get(System.String,Pulumi.Input{System.String},Pulumi.DigitalOcean.DropletState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DropletState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_DigitalOcean_Droplet_Get_System_String_Input_System_String__Pulumi_DigitalOcean_DropletState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.Droplet.Get(System.String,Input{System.String},Pulumi.DigitalOcean.DropletState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DropletState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Droplet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Droplet Get(string name, Input&lt;string&gt; id, DropletState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Droplet Get(string name, Input&lt;string&gt; id, DropletState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -888,7 +879,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -900,7 +891,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -929,7 +920,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/Droplet.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/Droplet.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

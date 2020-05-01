@@ -80,40 +80,16 @@ to.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ValidatingWebhook</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.html">Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ValidatingWebhook</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ValidatingWebhook : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L412">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_AdmissionReviewVersions" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.AdmissionReviewVersions">AdmissionReviewVersions</h4>
   <div class="markdown level1 summary"><p>AdmissionReviewVersions is an ordered list of preferred <code>AdmissionReview</code> versions the
@@ -138,13 +114,13 @@ fail and be subject to the failure policy.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L417">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L417">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_ClientConfig" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.ClientConfig">ClientConfig</h4>
   <div class="markdown level1 summary"><p>ClientConfig defines how to communicate with the hook. Required</p>
@@ -170,7 +146,7 @@ fail and be subject to the failure policy.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L423">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L423">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_FailurePolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.FailurePolicy">FailurePolicy</h4>
   <div class="markdown level1 summary"><p>FailurePolicy defines how unrecognized errors from the admission endpoint are handled -
@@ -197,7 +173,7 @@ allowed values are Ignore or Fail. Defaults to Fail.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L443">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L443">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_MatchPolicy" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.MatchPolicy">MatchPolicy</h4>
   <div class="markdown level1 summary"><p>matchPolicy defines how the &quot;rules&quot; list is used to match incoming requests. Allowed
@@ -237,7 +213,7 @@ extensions/v1beta1 would be converted to apps/v1 and sent to the webhook.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L450">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L450">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the admission webhook. Name should be fully qualified, e.g.,
@@ -265,7 +241,7 @@ kubernetes.io is the name of the organization. Required.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L492">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L492">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_NamespaceSelector" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.NamespaceSelector">NamespaceSelector</h4>
   <div class="markdown level1 summary"><p>NamespaceSelector decides whether to run the webhook on an object based on whether the
@@ -324,7 +300,7 @@ examples of label selectors.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L504">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L504">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_ObjectSelector" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.ObjectSelector">ObjectSelector</h4>
   <div class="markdown level1 summary"><p>ObjectSelector decides whether to run the webhook based on if the object has matching
@@ -357,7 +333,7 @@ labels. Default to the empty LabelSelector, which matches everything.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L515">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L515">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_Rules" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.Rules">Rules</h4>
   <div class="markdown level1 summary"><p>Rules describes what operations on what resources/subresources the webhook cares about.
@@ -383,13 +359,13 @@ objects.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.html">RuleWithOperations</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.RuleWithOperations.html">RuleWithOperations</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L525">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L525">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_SideEffects" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.SideEffects">SideEffects</h4>
   <div class="markdown level1 summary"><p>SideEffects states whether this webhook has side effects. Acceptable values are: None,
@@ -420,7 +396,7 @@ webhook with sideEffects == Unknown or Some.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L532">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L532">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_AdmissionRegistration_V1_ValidatingWebhook_TimeoutSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.AdmissionRegistration.V1.ValidatingWebhook.TimeoutSeconds">TimeoutSeconds</h4>
   <div class="markdown level1 summary"><p>TimeoutSeconds specifies the timeout for this webhook. After the timeout passes, the
@@ -454,7 +430,7 @@ timeout value must be between 1 and 30 seconds. Default to 10 seconds.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L401" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L401" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

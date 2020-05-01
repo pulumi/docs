@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVpcDhcpOptionsResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetVpcDhcpOptionsResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetVpcDhcpOptionsResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_DhcpOptionsId" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.DhcpOptionsId">DhcpOptionsId</h4>
   <div class="markdown level1 summary"><p>EC2 DHCP Options ID</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_DomainName" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.DomainName">DomainName</h4>
   <div class="markdown level1 summary"><p>The suffix domain name to used when resolving non Fully Qualified Domain Names. e.g. the <code>search</code> value in the <code>/etc/resolv.conf</code> file.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_DomainNameServers" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.DomainNameServers">DomainNameServers</h4>
   <div class="markdown level1 summary"><p>List of name servers.</p>
@@ -183,20 +159,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_Filters" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.Filters">Filters</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVpcDhcpOptionsFiltersResult&gt; Filters</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVpcDhcpOptionsFilterResult&gt; Filters</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetVpcDhcpOptionsFiltersResult.html">GetVpcDhcpOptionsFiltersResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.GetVpcDhcpOptionsFilterResult.html">GetVpcDhcpOptionsFilterResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_Id" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -240,7 +216,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_NetbiosNameServers" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.NetbiosNameServers">NetbiosNameServers</h4>
   <div class="markdown level1 summary"><p>List of NETBIOS name servers.</p>
@@ -260,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_NetbiosNodeType" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.NetbiosNodeType">NetbiosNodeType</h4>
   <div class="markdown level1 summary"><p>The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see <a href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
@@ -292,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_NtpServers" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.NtpServers">NtpServers</h4>
   <div class="markdown level1 summary"><p>List of NTP servers.</p>
@@ -312,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_OwnerId" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.OwnerId">OwnerId</h4>
   <div class="markdown level1 summary"><p>The ID of the AWS account that owns the DHCP options set.</p>
@@ -344,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2_GetVpcDhcpOptionsResult_Tags" data-uid="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the resource.</p>
@@ -364,7 +340,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -376,7 +352,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L56" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/GetVpcDhcpOptions.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

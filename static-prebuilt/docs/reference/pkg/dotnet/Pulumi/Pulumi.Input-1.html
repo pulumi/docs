@@ -84,35 +84,11 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
       <div class="level2"><a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a></div>
       <div class="level2"><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Input_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Input&lt;T&gt; : IInput</code></pre>
+    <pre><code class="lang-csharp hljs">public class Input&lt;T&gt; : object, IInput</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +108,7 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Input.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Input.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
   <h4 id="Pulumi_Input_1_op_Implicit__0__Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(`0)~Pulumi.Input{`0}">Implicit(T to Input&lt;T&gt;)</h4>
@@ -175,7 +151,7 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Input.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Input.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
   <h4 id="Pulumi_Input_1_op_Implicit_Pulumi_Input__0___Pulumi_Output__0_" data-uid="Pulumi.Input`1.op_Implicit(Pulumi.Input{`0})~Pulumi.Output{`0}">Implicit(Input&lt;T&gt; to Output&lt;T&gt;)</h4>
@@ -218,7 +194,7 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Input.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Input.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Input_1_op_Implicit_" data-uid="Pulumi.Input`1.op_Implicit*"></a>
   <h4 id="Pulumi_Input_1_op_Implicit_Pulumi_Output__0___Pulumi_Input__0_" data-uid="Pulumi.Input`1.op_Implicit(Pulumi.Output{`0})~Pulumi.Input{`0}">Implicit(Output&lt;T&gt; to Input&lt;T&gt;)</h4>
@@ -262,16 +238,16 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, U&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, U&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_System_Threading_Tasks_Task___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Task&lt;U&gt;&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0_Task___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Task&lt;U&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Input&lt;U&gt;&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0_Pulumi_Input___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Input&lt;U&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Output&lt;U&gt;&gt;)</a>
+      <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__Func___0_Pulumi_Output___1___">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, Output&lt;U&gt;&gt;)</a>
   </div>
   <div>
       <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_ToOutput__1_Pulumi_Input___0__">InputExtensions.ToOutput&lt;T&gt;(Input&lt;T&gt;)</a>
@@ -283,7 +259,7 @@ available T, or the output from a existing <a class="xref" href="Pulumi.Resource
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/Input.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Core/Input.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

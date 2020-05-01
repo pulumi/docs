@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">KubernetesClusterNetworkProfile</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ContainerService.Outputs.html">Pulumi.Azure.ContainerService.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class KubernetesClusterNetworkProfile</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class KubernetesClusterNetworkProfile : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1589">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_DnsServiceIp" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.DnsServiceIp">DnsServiceIp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when <code>network_plugin</code> is set to <code>azure</code>. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DnsServiceIp</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DnsServiceIp</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +107,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1590">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_DockerBridgeCidr" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.DockerBridgeCidr">DockerBridgeCidr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when <code>network_plugin</code> is set to <code>azure</code>. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DockerBridgeCidr</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DockerBridgeCidr</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1591">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_LoadBalancerProfile" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.LoadBalancerProfile">LoadBalancerProfile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A <code>load_balancer_profile</code> block. This can only be specified when <code>load_balancer_sku</code> is set to <code>Standard</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,14 +165,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1592">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_LoadBalancerSku" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.LoadBalancerSku">LoadBalancerSku</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the SKU of the Load Balancer used for this Kubernetes Cluster. Possible values are <code>Basic</code> and <code>Standard</code>. Defaults to <code>Standard</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string LoadBalancerSku</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? LoadBalancerSku</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,16 +185,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1593">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_NetworkPlugin" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.NetworkPlugin">NetworkPlugin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Network plugin to use for networking. Currently supported values are <code>azure</code> and <code>kubenet</code>. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,14 +217,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1594">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_NetworkPolicy" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.NetworkPolicy">NetworkPolicy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets up network policy to be used with Azure CNI. <a href="https://docs.microsoft.com/en-us/azure/aks/use-network-policies">Network policy allows us to control the traffic flow between pods</a>. Currently supported values are <code>calico</code> and <code>azure</code>. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NetworkPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NetworkPolicy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,20 +237,47 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1595">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L43">View Source</a>
+  </span>
+  <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_OutboundType" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.OutboundType">OutboundType</h4>
+  <div class="markdown level1 summary"><p>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are <code>loadBalancer</code> and <code>userDefinedRouting</code>. Defaults to <code>loadBalancer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string? OutboundType</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_PodCidr" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.PodCidr">PodCidr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The CIDR to use for pod IP addresses. This field can only be set when <code>network_plugin</code> is set to <code>kubenet</code>. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PodCidr</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PodCidr</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,20 +289,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1596">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ContainerService_Outputs_KubernetesClusterNetworkProfile_ServiceCidr" data-uid="Pulumi.Azure.ContainerService.Outputs.KubernetesClusterNetworkProfile.ServiceCidr">ServiceCidr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Network Range used by the Kubernetes service. This is required when <code>network_plugin</code> is set to <code>azure</code>. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ServiceCidr</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ServiceCidr</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,7 +315,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -317,7 +327,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L1586" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Outputs/KubernetesClusterNetworkProfile.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

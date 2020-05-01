@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetFunctionsResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.FC.html">Pulumi.AliCloud.FC</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_FC_GetFunctionsResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetFunctionsResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetFunctionsResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_Functions" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.Functions">Functions</h4>
   <div class="markdown level1 summary"><p>A list of functions. Each element contains the following attributes:</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetFunctionsFunctionsResult&gt; Functions</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetFunctionsFunctionResult&gt; Functions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.FC.Outputs.GetFunctionsFunctionsResult.html">GetFunctionsFunctionsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.FC.Outputs.GetFunctionsFunctionResult.html">GetFunctionsFunctionResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_Id" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_Ids" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>A list of functions ids.</p>
@@ -183,20 +159,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_NameRegex" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_Names" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.Names">Names</h4>
   <div class="markdown level1 summary"><p>A list of functions names.</p>
@@ -234,20 +210,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_OutputFile" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_FC_GetFunctionsResult_ServiceName" data-uid="Pulumi.AliCloud.FC.GetFunctionsResult.ServiceName">ServiceName</h4>
   <div class="markdown level1 summary"></div>
@@ -296,7 +272,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Fc/GetFunctions.cs/#L54" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/FC/GetFunctions.cs/#L61" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

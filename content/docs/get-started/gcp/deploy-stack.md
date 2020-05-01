@@ -5,7 +5,7 @@ linktitle: Deploy the Stack
 meta_desc: This page provides an overview of how to deploy a Google Cloud (GCP) project as a Pulumi Stack.
 weight: 7
 menu:
-  get-started:
+  getstarted:
     parent: gcp
     identifier: gcp-deploy-stack
 
@@ -21,16 +21,16 @@ $ pulumi up
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
 ```
+$ pulumi up
 Previewing update (dev):
-
-     Type                   Name            Plan
+     Type                   Name       Plan
  +   pulumi:pulumi:Stack    quickstart-dev  create
- +   └─ gcp:storage:Bucket  my-bucket       create
+ +   └─ gcp:storage:Bucket  my-bucket  create
 
 Resources:
     + 2 to create
 
-Do you want to perform this update?
+Do you want to perform this update?  [Use arrows to move, enter to select, type to filter]
   yes
 > no
   details
@@ -43,15 +43,14 @@ Do you want to perform this update? yes
 Updating (dev):
 
      Type                   Name            Status
-     pulumi:pulumi:Stack    quickstart-dev
+     pulumi:pulumi:Stack    quickstart-dev  created
  +   └─ gcp:storage:Bucket  my-bucket       created
 
 Outputs:
   + bucketName: "gs://my-bucket-62f8bc7"
 
 Resources:
-    + 1 created
-    1 unchanged
+    + 2 created
 
 Duration: 3s
 ```

@@ -75,9 +75,6 @@
 <blockquote>
 <p><strong>WARNING</strong> SignalFx does not allow the start time of a <strong>currently active</strong> muting rule to be modified. As such, attempting to modify a currently active rule will destroy the existing rule and create a new rule. This may result in the emission of notifications.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/alert_muting_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/alert_muting_rule.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -94,7 +91,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule__ctor_" data-uid="Pulumi.SignalFx.AlertMutingRule.#ctor*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule__ctor_System_String_Pulumi_SignalFx_AlertMutingRuleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.AlertMutingRule.#ctor(System.String,Pulumi.SignalFx.AlertMutingRuleArgs,System.Nullable{CustomResourceOptions})">AlertMutingRule(String, AlertMutingRuleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -138,7 +135,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_Description_" data-uid="Pulumi.SignalFx.AlertMutingRule.Description*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_Description" data-uid="Pulumi.SignalFx.AlertMutingRule.Description">Description</h4>
@@ -165,7 +162,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_Detectors_" data-uid="Pulumi.SignalFx.AlertMutingRule.Detectors*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_Detectors" data-uid="Pulumi.SignalFx.AlertMutingRule.Detectors">Detectors</h4>
@@ -192,7 +189,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_EffectiveStartTime_" data-uid="Pulumi.SignalFx.AlertMutingRule.EffectiveStartTime*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_EffectiveStartTime" data-uid="Pulumi.SignalFx.AlertMutingRule.EffectiveStartTime">EffectiveStartTime</h4>
@@ -218,7 +215,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_Filters_" data-uid="Pulumi.SignalFx.AlertMutingRule.Filters*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_Filters" data-uid="Pulumi.SignalFx.AlertMutingRule.Filters">Filters</h4>
@@ -227,7 +224,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AlertMutingRuleFilters&gt;&gt; Filters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AlertMutingRuleFilter&gt;&gt; Filters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.AlertMutingRuleFilters.html">AlertMutingRuleFilters</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.AlertMutingRuleFilter.html">AlertMutingRuleFilter</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_StartTime_" data-uid="Pulumi.SignalFx.AlertMutingRule.StartTime*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_StartTime" data-uid="Pulumi.SignalFx.AlertMutingRule.StartTime">StartTime</h4>
@@ -272,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_StopTime_" data-uid="Pulumi.SignalFx.AlertMutingRule.StopTime*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_StopTime" data-uid="Pulumi.SignalFx.AlertMutingRule.StopTime">StopTime</h4>
@@ -301,7 +298,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_SignalFx_AlertMutingRule_Get_" data-uid="Pulumi.SignalFx.AlertMutingRule.Get*"></a>
   <h4 id="Pulumi_SignalFx_AlertMutingRule_Get_System_String_Input_System_String__Pulumi_SignalFx_AlertMutingRuleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.AlertMutingRule.Get(System.String,Input{System.String},Pulumi.SignalFx.AlertMutingRuleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AlertMutingRuleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -371,7 +368,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/AlertMutingRule.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/d4472048557dab7779ed8888ed156d31ff9205d0/sdk/dotnet/AlertMutingRule.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

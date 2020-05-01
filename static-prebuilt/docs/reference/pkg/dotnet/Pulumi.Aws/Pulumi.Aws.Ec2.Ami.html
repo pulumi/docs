@@ -77,53 +77,12 @@
 region, it's better to use <code>aws.ec2.AmiCopy</code> instead.</p>
 <p>If you just want to share an existing AMI with another AWS account,
 it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Ami</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Ami</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -134,16 +93,16 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami__ctor_" data-uid="Pulumi.Aws.Ec2.Ami.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Ami__ctor_System_String_Pulumi_Aws_Ec2_AmiArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.Ami.#ctor(System.String,Pulumi.Aws.Ec2.AmiArgs,Pulumi.CustomResourceOptions)">Ami(String, AmiArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_Ami__ctor_System_String_Pulumi_Aws_Ec2_AmiArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.Ami.#ctor(System.String,Pulumi.Aws.Ec2.AmiArgs,System.Nullable{CustomResourceOptions})">Ami(String, AmiArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Ami resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Ami(string name, AmiArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Ami(string name, AmiArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,7 +127,7 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -178,7 +137,7 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_Architecture_" data-uid="Pulumi.Aws.Ec2.Ami.Architecture*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_Architecture" data-uid="Pulumi.Aws.Ec2.Ami.Architecture">Architecture</h4>
@@ -187,7 +146,7 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Architecture { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Architecture { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,13 +158,13 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L35">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_Description_" data-uid="Pulumi.Aws.Ec2.Ami.Description*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_Description" data-uid="Pulumi.Aws.Ec2.Ami.Description">Description</h4>
@@ -214,7 +173,7 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,13 +185,13 @@ it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_EbsBlockDevices_" data-uid="Pulumi.Aws.Ec2.Ami.EbsBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_EbsBlockDevices" data-uid="Pulumi.Aws.Ec2.Ami.EbsBlockDevices">EbsBlockDevices</h4>
@@ -242,7 +201,7 @@ attached to created instances. The structure of this block is described below.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AmiEbsBlockDevices&gt;&gt; EbsBlockDevices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AmiEbsBlockDevice&gt;&gt; EbsBlockDevices { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,13 +213,13 @@ attached to created instances. The structure of this block is described below.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.AmiEbsBlockDevices.html">AmiEbsBlockDevices</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.AmiEbsBlockDevice.html">AmiEbsBlockDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_EnaSupport_" data-uid="Pulumi.Aws.Ec2.Ami.EnaSupport*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_EnaSupport" data-uid="Pulumi.Aws.Ec2.Ami.EnaSupport">EnaSupport</h4>
@@ -281,13 +240,13 @@ attached to created instances. The structure of this block is described below.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_EphemeralBlockDevices_" data-uid="Pulumi.Aws.Ec2.Ami.EphemeralBlockDevices*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_EphemeralBlockDevices" data-uid="Pulumi.Aws.Ec2.Ami.EphemeralBlockDevices">EphemeralBlockDevices</h4>
@@ -297,7 +256,7 @@ should be attached to created instances. The structure of this block is describe
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AmiEphemeralBlockDevices&gt;&gt; EphemeralBlockDevices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;AmiEphemeralBlockDevice&gt;&gt; EphemeralBlockDevices { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +268,13 @@ should be attached to created instances. The structure of this block is describe
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.AmiEphemeralBlockDevices.html">AmiEphemeralBlockDevices</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2.Outputs.AmiEphemeralBlockDevice.html">AmiEphemeralBlockDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_ImageLocation_" data-uid="Pulumi.Aws.Ec2.Ami.ImageLocation*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_ImageLocation" data-uid="Pulumi.Aws.Ec2.Ami.ImageLocation">ImageLocation</h4>
@@ -337,13 +296,13 @@ by the <code>ec2-upload-bundle</code> command in the EC2 command line tools.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_KernelId_" data-uid="Pulumi.Aws.Ec2.Ami.KernelId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_KernelId" data-uid="Pulumi.Aws.Ec2.Ami.KernelId">KernelId</h4>
@@ -353,7 +312,7 @@ kernel in created instances.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KernelId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; KernelId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,13 +324,13 @@ kernel in created instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_ManageEbsSnapshots_" data-uid="Pulumi.Aws.Ec2.Ami.ManageEbsSnapshots*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_ManageEbsSnapshots" data-uid="Pulumi.Aws.Ec2.Ami.ManageEbsSnapshots">ManageEbsSnapshots</h4>
@@ -391,13 +350,13 @@ kernel in created instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_Name_" data-uid="Pulumi.Aws.Ec2.Ami.Name*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_Name" data-uid="Pulumi.Aws.Ec2.Ami.Name">Name</h4>
@@ -418,13 +377,13 @@ kernel in created instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_RamdiskId_" data-uid="Pulumi.Aws.Ec2.Ami.RamdiskId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_RamdiskId" data-uid="Pulumi.Aws.Ec2.Ami.RamdiskId">RamdiskId</h4>
@@ -434,7 +393,7 @@ created instances.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RamdiskId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RamdiskId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,13 +405,13 @@ created instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_RootDeviceName_" data-uid="Pulumi.Aws.Ec2.Ami.RootDeviceName*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_RootDeviceName" data-uid="Pulumi.Aws.Ec2.Ami.RootDeviceName">RootDeviceName</h4>
@@ -461,7 +420,7 @@ created instances.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RootDeviceName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RootDeviceName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,13 +432,13 @@ created instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_RootSnapshotId_" data-uid="Pulumi.Aws.Ec2.Ami.RootSnapshotId*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_RootSnapshotId" data-uid="Pulumi.Aws.Ec2.Ami.RootSnapshotId">RootSnapshotId</h4>
@@ -500,13 +459,13 @@ created instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L102">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_SriovNetSupport_" data-uid="Pulumi.Aws.Ec2.Ami.SriovNetSupport*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_SriovNetSupport" data-uid="Pulumi.Aws.Ec2.Ami.SriovNetSupport">SriovNetSupport</h4>
@@ -516,7 +475,7 @@ for created instances. No other value is supported at this time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SriovNetSupport { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SriovNetSupport { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,13 +487,13 @@ for created instances. No other value is supported at this time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_Tags_" data-uid="Pulumi.Aws.Ec2.Ami.Tags*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_Tags" data-uid="Pulumi.Aws.Ec2.Ami.Tags">Tags</h4>
@@ -543,7 +502,7 @@ for created instances. No other value is supported at this time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -555,13 +514,13 @@ for created instances. No other value is supported at this time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_VirtualizationType_" data-uid="Pulumi.Aws.Ec2.Ami.VirtualizationType*"></a>
   <h4 id="Pulumi_Aws_Ec2_Ami_VirtualizationType" data-uid="Pulumi.Aws.Ec2.Ami.VirtualizationType">VirtualizationType</h4>
@@ -572,7 +531,7 @@ changes the set of further arguments that are required, as described below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VirtualizationType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VirtualizationType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,7 +543,7 @@ changes the set of further arguments that are required, as described below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -592,17 +551,17 @@ changes the set of further arguments that are required, as described below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L157">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_Ami_Get_" data-uid="Pulumi.Aws.Ec2.Ami.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_Ami_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_AmiState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.Ami.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.AmiState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AmiState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_Ami_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_AmiState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.Ami.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.AmiState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AmiState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Ami resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Ami Get(string name, Input&lt;string&gt; id, AmiState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Ami Get(string name, Input&lt;string&gt; id, AmiState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,7 +580,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -633,7 +592,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -662,7 +621,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/Ami.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/Ami.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

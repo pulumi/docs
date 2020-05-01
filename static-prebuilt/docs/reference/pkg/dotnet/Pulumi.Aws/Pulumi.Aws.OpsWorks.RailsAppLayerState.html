@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">RailsAppLayerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RailsAppLayerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.OpsWorks.html">Pulumi.Aws.OpsWorks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L581">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L621">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState__ctor_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.#ctor*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState__ctor" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.#ctor">RailsAppLayerState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L400">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L422">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AppServer_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AppServer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AppServer" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AppServer">AppServer</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AppServer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AppServer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L406">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L428">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_Arn_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.Arn*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_Arn" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name(ARN) of the layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L434">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AutoAssignElasticIps_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AutoAssignElasticIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AutoAssignElasticIps" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AutoAssignElasticIps">AutoAssignElasticIps</h4>
@@ -165,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoAssignElasticIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoAssignElasticIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L440">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AutoAssignPublicIps_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AutoAssignPublicIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AutoAssignPublicIps" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AutoAssignPublicIps">AutoAssignPublicIps</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoAssignPublicIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoAssignPublicIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L418">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L446">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AutoHealing_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AutoHealing*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_AutoHealing" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.AutoHealing">AutoHealing</h4>
@@ -219,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoHealing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoHealing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L424">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L452">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_BundlerVersion_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.BundlerVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_BundlerVersion" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.BundlerVersion">BundlerVersion</h4>
@@ -246,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BundlerVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BundlerVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L429">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L457">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomConfigureRecipes_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomConfigureRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomConfigureRecipes" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomConfigureRecipes">CustomConfigureRecipes</h4>
@@ -284,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L437">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L465">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomDeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomDeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomDeployRecipes" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomDeployRecipes">CustomDeployRecipes</h4>
@@ -310,13 +308,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L446">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L474">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomInstanceProfileArn_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomInstanceProfileArn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomInstanceProfileArn" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomInstanceProfileArn">CustomInstanceProfileArn</h4>
@@ -325,7 +323,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomInstanceProfileArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomInstanceProfileArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +335,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L452">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L480">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomJson_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomJson*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomJson" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomJson">CustomJson</h4>
@@ -352,7 +350,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomJson { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomJson { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,13 +362,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L461">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L489">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomSecurityGroupIds_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomSecurityGroupIds" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomSecurityGroupIds">CustomSecurityGroupIds</h4>
@@ -391,13 +389,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L469">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L497">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomSetupRecipes_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomSetupRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomSetupRecipes" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomSetupRecipes">CustomSetupRecipes</h4>
@@ -417,13 +415,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L477">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L505">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomShutdownRecipes_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomShutdownRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomShutdownRecipes" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomShutdownRecipes">CustomShutdownRecipes</h4>
@@ -443,13 +441,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L485">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L513">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomUndeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomUndeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_CustomUndeployRecipes" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.CustomUndeployRecipes">CustomUndeployRecipes</h4>
@@ -469,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L494">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L522">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_DrainElbOnShutdown_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.DrainElbOnShutdown*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_DrainElbOnShutdown" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.DrainElbOnShutdown">DrainElbOnShutdown</h4>
@@ -484,7 +482,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DrainElbOnShutdown { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DrainElbOnShutdown { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -496,13 +494,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L503">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L531">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_EbsVolumes_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.EbsVolumes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_EbsVolumes" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.EbsVolumes">EbsVolumes</h4>
@@ -511,7 +509,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RailsAppLayerEbsVolumesGetArgs&gt; EbsVolumes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RailsAppLayerEbsVolumeGetArgs&gt; EbsVolumes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -523,13 +521,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Inputs.RailsAppLayerEbsVolumesGetArgs.html">RailsAppLayerEbsVolumesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Inputs.RailsAppLayerEbsVolumeGetArgs.html">RailsAppLayerEbsVolumeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L512">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L540">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_ElasticLoadBalancer_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.ElasticLoadBalancer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_ElasticLoadBalancer" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.ElasticLoadBalancer">ElasticLoadBalancer</h4>
@@ -538,7 +536,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ElasticLoadBalancer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ElasticLoadBalancer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -550,13 +548,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L518">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L546">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_InstallUpdatesOnBoot_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.InstallUpdatesOnBoot*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_InstallUpdatesOnBoot" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.InstallUpdatesOnBoot">InstallUpdatesOnBoot</h4>
@@ -565,7 +563,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InstallUpdatesOnBoot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? InstallUpdatesOnBoot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -577,13 +575,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L524">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L552">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_InstanceShutdownTimeout_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.InstanceShutdownTimeout*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_InstanceShutdownTimeout" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.InstanceShutdownTimeout">InstanceShutdownTimeout</h4>
@@ -592,7 +590,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; InstanceShutdownTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? InstanceShutdownTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,13 +602,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L530">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L558">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_ManageBundler_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.ManageBundler*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_ManageBundler" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.ManageBundler">ManageBundler</h4>
@@ -619,7 +617,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ManageBundler { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ManageBundler { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,13 +629,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L536">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L564">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_Name_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.Name*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_Name" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.Name">Name</h4>
@@ -646,7 +644,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -658,13 +656,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L542">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L570">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_PassengerVersion_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.PassengerVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_PassengerVersion" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.PassengerVersion">PassengerVersion</h4>
@@ -673,7 +671,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PassengerVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PassengerVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -685,13 +683,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L554">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L582">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_RubygemsVersion_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.RubygemsVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_RubygemsVersion" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.RubygemsVersion">RubygemsVersion</h4>
@@ -700,7 +698,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RubygemsVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RubygemsVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -712,13 +710,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L548">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L576">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_RubyVersion_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.RubyVersion*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_RubyVersion" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.RubyVersion">RubyVersion</h4>
@@ -727,7 +725,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RubyVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RubyVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -739,13 +737,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L560">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L588">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_StackId_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.StackId*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_StackId" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.StackId">StackId</h4>
@@ -754,7 +752,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StackId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StackId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -766,13 +764,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L569">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L597">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_SystemPackages_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.SystemPackages*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_SystemPackages" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.SystemPackages">SystemPackages</h4>
@@ -793,22 +791,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L609">View Source</a>
   </span>
-  <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.UseEbsOptimizedInstances*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
-  <div class="markdown level1 summary"><p>Whether to use EBS-optimized instances.</p>
+  <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_Tags_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.Tags*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_Tags" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; UseEbsOptimizedInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Tags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -820,7 +818,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L618">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_RailsAppLayerState_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.UseEbsOptimizedInstances*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_RailsAppLayerState_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.RailsAppLayerState.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
+  <div class="markdown level1 summary"><p>Whether to use EBS-optimized instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? UseEbsOptimizedInstances { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -832,7 +857,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/RailsAppLayer.cs/#L395" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/RailsAppLayer.cs/#L417" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

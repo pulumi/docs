@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetKeyVaultResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.KeyVault.html">Pulumi.Azure.KeyVault</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetKeyVaultResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetKeyVaultResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_AccessPolicies" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.AccessPolicies">AccessPolicies</h4>
   <div class="markdown level1 summary"><p>One or more <code>access_policy</code> blocks as defined below.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetKeyVaultAccessPoliciesResult&gt; AccessPolicies</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetKeyVaultAccessPolicyResult&gt; AccessPolicies</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.GetKeyVaultAccessPoliciesResult.html">GetKeyVaultAccessPoliciesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.GetKeyVaultAccessPolicyResult.html">GetKeyVaultAccessPolicyResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_EnabledForDeployment" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.EnabledForDeployment">EnabledForDeployment</h4>
   <div class="markdown level1 summary"><p>Can Azure Virtual Machines retrieve certificates stored as secrets from the Key Vault?</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_EnabledForDiskEncryption" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.EnabledForDiskEncryption">EnabledForDiskEncryption</h4>
   <div class="markdown level1 summary"><p>Can Azure Disk Encryption retrieve secrets from the Key Vault?</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_EnabledForTemplateDeployment" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.EnabledForTemplateDeployment">EnabledForTemplateDeployment</h4>
   <div class="markdown level1 summary"><p>Can Azure Resource Manager retrieve secrets from the Key Vault?</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_Id" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_Location" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The Azure Region in which the Key Vault exists.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L72">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_Name" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -292,14 +268,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_NetworkAcls" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.NetworkAcls">NetworkAcls</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetKeyVaultNetworkAclsResult&gt; NetworkAcls</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetKeyVaultNetworkAclResult&gt; NetworkAcls</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,13 +287,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.GetKeyVaultNetworkAclsResult.html">GetKeyVaultNetworkAclsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.KeyVault.Outputs.GetKeyVaultNetworkAclResult.html">GetKeyVaultNetworkAclResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_PurgeProtectionEnabled" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.PurgeProtectionEnabled">PurgeProtectionEnabled</h4>
   <div class="markdown level1 summary"><p>Is purge protection enabled on this Key Vault?</p>
@@ -343,7 +319,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_ResourceGroupName" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -368,7 +344,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_SkuName" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.SkuName">SkuName</h4>
   <div class="markdown level1 summary"><p>The Name of the SKU used for this Key Vault.</p>
@@ -394,7 +370,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_SoftDeleteEnabled" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.SoftDeleteEnabled">SoftDeleteEnabled</h4>
   <div class="markdown level1 summary"><p>Is soft delete enabled on this Key Vault?</p>
@@ -420,7 +396,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_Tags" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the Key Vault.</p>
@@ -440,13 +416,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_TenantId" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.TenantId">TenantId</h4>
   <div class="markdown level1 summary"><p>The Azure Active Directory Tenant ID used to authenticate requests for this Key Vault.</p>
@@ -472,7 +448,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_KeyVault_GetKeyVaultResult_VaultUri" data-uid="Pulumi.Azure.KeyVault.GetKeyVaultResult.VaultUri">VaultUri</h4>
   <div class="markdown level1 summary"><p>The URI of the vault for performing operations on keys and secrets.</p>
@@ -504,7 +480,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Keyvault/GetKeyVault.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/KeyVault/GetKeyVault.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

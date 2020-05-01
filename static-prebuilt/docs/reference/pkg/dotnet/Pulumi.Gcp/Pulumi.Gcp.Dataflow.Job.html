@@ -75,56 +75,15 @@
 the official documentation for
 <a href="https://beam.apache.org">Beam</a> and <a href="https://cloud.google.com/dataflow/">Dataflow</a>.</p>
 <h2 id="note-on-destroy--apply">Note on &quot;destroy&quot; / &quot;apply&quot;</h2>
-<p>There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other resources.</p>
+<p>There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.</p>
 <p>The Dataflow resource is considered 'existing' while it is in a nonterminal state.  If it reaches a terminal state (e.g. 'FAILED', 'COMPLETE', 'CANCELLED'), it will be recreated on the next 'apply'.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.</p>
-<p>A Dataflow job which is 'destroyed' may be &quot;cancelled&quot; or &quot;drained&quot;.  If &quot;cancelled&quot;, the job terminates - any data written remains where it is, but no new data will be processed.  If &quot;drained&quot;, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is &quot;cancelled&quot;, but if a user sets <code>on_delete</code> to <code>&amp;quot;drain&amp;quot;</code> in the configuration, you may experience a long wait for your destroy to complete.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown</a>.</p>
-</blockquote>
+<p>A Dataflow job which is 'destroyed' may be &quot;cancelled&quot; or &quot;drained&quot;.  If &quot;cancelled&quot;, the job terminates - any data written remains where it is, but no new data will be processed.  If &quot;drained&quot;, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is &quot;cancelled&quot;, but if a user sets <code>on_delete</code> to <code>&amp;quot;drain&amp;quot;</code> in the configuration, you may experience a long wait for your <code>pulumi destroy</code> to complete.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Job</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Job</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataflow.html">Pulumi.Gcp.Dataflow</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -135,16 +94,16 @@ the official documentation for
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L145">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job__ctor_" data-uid="Pulumi.Gcp.Dataflow.Job.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Dataflow_Job__ctor_System_String_Pulumi_Gcp_Dataflow_JobArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Dataflow.Job.#ctor(System.String,Pulumi.Gcp.Dataflow.JobArgs,Pulumi.CustomResourceOptions)">Job(String, JobArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Dataflow_Job__ctor_System_String_Pulumi_Gcp_Dataflow_JobArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Dataflow.Job.#ctor(System.String,Pulumi.Gcp.Dataflow.JobArgs,System.Nullable{CustomResourceOptions})">Job(String, JobArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Job resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Job(string name, JobArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Job(string name, JobArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +128,7 @@ the official documentation for
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,7 +138,7 @@ the official documentation for
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_IpConfiguration_" data-uid="Pulumi.Gcp.Dataflow.Job.IpConfiguration*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_IpConfiguration" data-uid="Pulumi.Gcp.Dataflow.Job.IpConfiguration">IpConfiguration</h4>
@@ -188,7 +147,7 @@ the official documentation for
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IpConfiguration { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IpConfiguration { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,13 +159,13 @@ the official documentation for
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_JobId_" data-uid="Pulumi.Gcp.Dataflow.Job.JobId*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_JobId" data-uid="Pulumi.Gcp.Dataflow.Job.JobId">JobId</h4>
@@ -227,13 +186,13 @@ the official documentation for
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Labels_" data-uid="Pulumi.Gcp.Dataflow.Job.Labels*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Labels" data-uid="Pulumi.Gcp.Dataflow.Job.Labels">Labels</h4>
@@ -245,7 +204,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +216,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_MachineType_" data-uid="Pulumi.Gcp.Dataflow.Job.MachineType*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_MachineType" data-uid="Pulumi.Gcp.Dataflow.Job.MachineType">MachineType</h4>
@@ -272,7 +231,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MachineType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MachineType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +243,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_MaxWorkers_" data-uid="Pulumi.Gcp.Dataflow.Job.MaxWorkers*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_MaxWorkers" data-uid="Pulumi.Gcp.Dataflow.Job.MaxWorkers">MaxWorkers</h4>
@@ -311,13 +270,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Name_" data-uid="Pulumi.Gcp.Dataflow.Job.Name*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Name" data-uid="Pulumi.Gcp.Dataflow.Job.Name">Name</h4>
@@ -338,13 +297,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Network_" data-uid="Pulumi.Gcp.Dataflow.Job.Network*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Network" data-uid="Pulumi.Gcp.Dataflow.Job.Network">Network</h4>
@@ -353,7 +312,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Network { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Network { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,22 +324,22 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_OnDelete_" data-uid="Pulumi.Gcp.Dataflow.Job.OnDelete*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_OnDelete" data-uid="Pulumi.Gcp.Dataflow.Job.OnDelete">OnDelete</h4>
-  <div class="markdown level1 summary"><p>One of &quot;drain&quot; or &quot;cancel&quot;.  Specifies behavior of deletion during a destroy.  See above note.</p>
+  <div class="markdown level1 summary"><p>One of &quot;drain&quot; or &quot;cancel&quot;.  Specifies behavior of deletion during <code>pulumi destroy</code>.  See above note.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OnDelete { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OnDelete { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,13 +351,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Parameters_" data-uid="Pulumi.Gcp.Dataflow.Job.Parameters*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Parameters" data-uid="Pulumi.Gcp.Dataflow.Job.Parameters">Parameters</h4>
@@ -407,7 +366,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Parameters { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Parameters { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +378,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Project_" data-uid="Pulumi.Gcp.Dataflow.Job.Project*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Project" data-uid="Pulumi.Gcp.Dataflow.Job.Project">Project</h4>
@@ -446,13 +405,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Region_" data-uid="Pulumi.Gcp.Dataflow.Job.Region*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Region" data-uid="Pulumi.Gcp.Dataflow.Job.Region">Region</h4>
@@ -460,7 +419,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Region { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -472,13 +431,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_ServiceAccountEmail_" data-uid="Pulumi.Gcp.Dataflow.Job.ServiceAccountEmail*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_ServiceAccountEmail" data-uid="Pulumi.Gcp.Dataflow.Job.ServiceAccountEmail">ServiceAccountEmail</h4>
@@ -487,7 +446,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ServiceAccountEmail { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServiceAccountEmail { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -499,13 +458,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_State_" data-uid="Pulumi.Gcp.Dataflow.Job.State*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_State" data-uid="Pulumi.Gcp.Dataflow.Job.State">State</h4>
@@ -526,13 +485,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Subnetwork_" data-uid="Pulumi.Gcp.Dataflow.Job.Subnetwork*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Subnetwork" data-uid="Pulumi.Gcp.Dataflow.Job.Subnetwork">Subnetwork</h4>
@@ -541,7 +500,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Subnetwork { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Subnetwork { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -553,13 +512,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_TempGcsLocation_" data-uid="Pulumi.Gcp.Dataflow.Job.TempGcsLocation*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_TempGcsLocation" data-uid="Pulumi.Gcp.Dataflow.Job.TempGcsLocation">TempGcsLocation</h4>
@@ -580,13 +539,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_TemplateGcsPath_" data-uid="Pulumi.Gcp.Dataflow.Job.TemplateGcsPath*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_TemplateGcsPath" data-uid="Pulumi.Gcp.Dataflow.Job.TemplateGcsPath">TemplateGcsPath</h4>
@@ -607,13 +566,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Type_" data-uid="Pulumi.Gcp.Dataflow.Job.Type*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Type" data-uid="Pulumi.Gcp.Dataflow.Job.Type">Type</h4>
@@ -634,13 +593,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L133">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Zone_" data-uid="Pulumi.Gcp.Dataflow.Job.Zone*"></a>
   <h4 id="Pulumi_Gcp_Dataflow_Job_Zone" data-uid="Pulumi.Gcp.Dataflow.Job.Zone">Zone</h4>
@@ -649,7 +608,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Zone { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Zone { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -661,7 +620,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -669,17 +628,17 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataflow_Job_Get_" data-uid="Pulumi.Gcp.Dataflow.Job.Get*"></a>
-  <h4 id="Pulumi_Gcp_Dataflow_Job_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Dataflow_JobState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Dataflow.Job.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Dataflow.JobState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, JobState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Dataflow_Job_Get_System_String_Input_System_String__Pulumi_Gcp_Dataflow_JobState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Dataflow.Job.Get(System.String,Input{System.String},Pulumi.Gcp.Dataflow.JobState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, JobState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Job Get(string name, Input&lt;string&gt; id, JobState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Job Get(string name, Input&lt;string&gt; id, JobState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -698,7 +657,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -710,7 +669,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -739,7 +698,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataflow/Job.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataflow/Job.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

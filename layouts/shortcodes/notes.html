@@ -1,6 +1,9 @@
-<div class="note note-info" role="alert">
+{{ $warning := eq (.Get "type") "warning" }}
+{{ $class := cond $warning "warning" "info" }}
+{{ $icon := cond $warning "exclamation-triangle" "info-circle" }}
+<div class="note note-{{ $class }}" role="alert">
     <p>
-        <i class="fas fa-info-circle pr-2"></i>
+        <i class="fas fa-{{ $icon }} pr-2"></i>
         {{ .Inner }}
     </p>
 </div>

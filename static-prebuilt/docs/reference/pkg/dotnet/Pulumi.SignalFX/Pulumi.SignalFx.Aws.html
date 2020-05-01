@@ -78,12 +78,11 @@
   </h3>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegration.html">ExternalIntegration</a></h4>
       <section><p>SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
-<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>. Check with SignalFx support for your realm's AWS account id.</p>
+<p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
 </blockquote>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown</a>.</p>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>. Check with SignalFx support for your realm's AWS account id.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.ExternalIntegrationArgs.html">ExternalIntegrationArgs</a></h4>
@@ -92,15 +91,14 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.Integration.html">Integration</a></h4>
       <section><p>SignalFx AWS CloudWatch integrations. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services">Monitoring Amazon Web Services</a>.</p>
-<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+<blockquote>
+<p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
+</blockquote>
 <blockquote>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code>signalfx.aws.ExternalIntegration</code> or <code>signalfx.aws.TokenIntegration</code>.</p>
 </blockquote>
 <h2 id="service-names">Service Names</h2>
-<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN (VPN)&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
-</blockquote>
+<p>Fields that expect an AWS service/namespace will work with one of: &quot;AWS/ApiGateway&quot; &quot;AWS/AppStream&quot; &quot;AWS/AutoScaling&quot; &quot;AWS/Billing&quot; &quot;AWS/CloudFront&quot; &quot;AWS/CloudSearch&quot; &quot;AWS/Events&quot; &quot;AWS/Logs&quot; &quot;AWS/Connect&quot; &quot;AWS/DMS&quot; &quot;AWS/DX&quot; &quot;AWS/DynamoDB&quot; &quot;AWS/EC2&quot; &quot;AWS/EC2Spot&quot; &quot;AWS/ECS&quot; &quot;AWS/ElasticBeanstalk&quot; &quot;AWS/EBS&quot; &quot;AWS/EFS&quot; &quot;AWS/ELB&quot; &quot;AWS/ApplicationELB&quot; &quot;AWS/NetworkELB&quot; &quot;AWS/ElasticTranscoder&quot; &quot;AWS/ElastiCache&quot; &quot;AWS/ES&quot; &quot;AWS/ElasticMapReduce&quot; &quot;AWS/GameLift&quot; &quot;AWS/Inspector&quot; &quot;AWS/IoT&quot; &quot;AWS/KMS&quot; &quot;AWS/KinesisAnalytics&quot; &quot;AWS/Firehose&quot; &quot;AWS/Kinesis&quot; &quot;AWS/KinesisVideo&quot; &quot;AWS/Lambda&quot; &quot;AWS/Lex&quot; &quot;AWS/ML&quot; &quot;AWS/OpsWorks&quot; &quot;AWS/Polly&quot; &quot;AWS/Redshift&quot; &quot;AWS/RDS&quot; &quot;AWS/Route53&quot; &quot;AWS/SageMaker&quot; &quot;AWS/DDoSProtection&quot; &quot;AWS/SES&quot; &quot;AWS/SNS&quot; &quot;AWS/SQS&quot; &quot;AWS/S3&quot; &quot;AWS/SWF&quot; &quot;AWS/States&quot; &quot;AWS/StorageGateway&quot; &quot;AWS/Translate&quot; &quot;AWS/NATGateway&quot; &quot;AWS/VPN&quot; &quot;WAF&quot; &quot;AWS/WorkSpaces&quot;.</p>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.IntegrationArgs.html">IntegrationArgs</a></h4>
       <section></section>
@@ -108,12 +106,11 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.TokenIntegration.html">TokenIntegration</a></h4>
       <section><p>SignalFx AWS CloudWatch integrations using security tokens. For help with this integration see <a href="https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#connect-to-aws">Connect to AWS CloudWatch</a>.</p>
-<p><strong>Note:</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
 <blockquote>
-<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>.</p>
+<p><strong>NOTE</strong> When managing integrations you'll need to use an admin token to authenticate the SignalFx provider.</p>
 </blockquote>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown</a>.</p>
+<p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code>signalfx.aws.Integration</code>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.SignalFx.Aws.TokenIntegrationArgs.html">TokenIntegrationArgs</a></h4>

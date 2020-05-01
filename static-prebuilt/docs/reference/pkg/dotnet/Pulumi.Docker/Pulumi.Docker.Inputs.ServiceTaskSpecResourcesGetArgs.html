@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ServiceTaskSpecResourcesGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ServiceTaskSpecResourcesGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Inputs.html">Pulumi.Docker.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1650">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecResourcesGetArgs.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecResourcesGetArgs__ctor_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecResourcesGetArgs__ctor" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesGetArgs.#ctor">ServiceTaskSpecResourcesGetArgs()</h4>
@@ -129,15 +100,23 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1644">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecResourcesGetArgs.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecResourcesGetArgs_Limits_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesGetArgs.Limits*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecResourcesGetArgs_Limits" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesGetArgs.Limits">Limits</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Describes the resources which can be advertised by a node and requested by a task.</p>
+<ul>
+<li><code>nano_cpus</code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</li>
+<li><code>memory_bytes</code> (Optional, int) The amount of memory in bytes the container allocates</li>
+<li><code>generic_resources</code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</li>
+<li><code>named_resources_spec</code> (Optional, set of string) The String resources, delimited by <code>=</code></li>
+<li><code>discrete_resources_spec</code> (Optional, set of string) The Integer resources, delimited by <code>=</code></li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceTaskSpecResourcesLimitsGetArgs&gt; Limits { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceTaskSpecResourcesLimitsGetArgs&gt;? Limits { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +128,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesLimitsGetArgs.html">ServiceTaskSpecResourcesLimitsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesLimitsGetArgs.html">ServiceTaskSpecResourcesLimitsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1647">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecResourcesGetArgs.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceTaskSpecResourcesGetArgs_Reservation_" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesGetArgs.Reservation*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceTaskSpecResourcesGetArgs_Reservation" data-uid="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesGetArgs.Reservation">Reservation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An object describing the resources which can be advertised by a node and requested by a task.</p>
+<ul>
+<li><code>nano_cpus</code> (Optional, int) CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000</li>
+<li><code>memory_bytes</code> (Optional, int) The amount of memory in bytes the container allocates</li>
+<li><code>generic_resources</code> (Optional, map) User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)</li>
+<li><code>named_resources_spec</code> (Optional, set of string) The String resources</li>
+<li><code>discrete_resources_spec</code> (Optional, set of string) The Integer resources</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ServiceTaskSpecResourcesReservationGetArgs&gt; Reservation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ServiceTaskSpecResourcesReservationGetArgs&gt;? Reservation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,7 +162,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesReservationGetArgs.html">ServiceTaskSpecResourcesReservationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Docker.Inputs.ServiceTaskSpecResourcesReservationGetArgs.html">ServiceTaskSpecResourcesReservationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -187,7 +174,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1642" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceTaskSpecResourcesGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

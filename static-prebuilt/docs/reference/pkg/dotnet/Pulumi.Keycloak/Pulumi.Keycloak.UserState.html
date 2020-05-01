@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState__ctor_" data-uid="Pulumi.Keycloak.UserState.#ctor*"></a>
   <h4 id="Pulumi_Keycloak_UserState__ctor" data-uid="Pulumi.Keycloak.UserState.#ctor">UserState()</h4>
@@ -100,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L158">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L163">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_Attributes_" data-uid="Pulumi.Keycloak.UserState.Attributes*"></a>
   <h4 id="Pulumi_Keycloak_UserState_Attributes" data-uid="Pulumi.Keycloak.UserState.Attributes">Attributes</h4>
@@ -126,7 +126,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L164">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_Email_" data-uid="Pulumi.Keycloak.UserState.Email*"></a>
   <h4 id="Pulumi_Keycloak_UserState_Email" data-uid="Pulumi.Keycloak.UserState.Email">Email</h4>
@@ -152,7 +152,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L172">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_UserState_EmailVerified_" data-uid="Pulumi.Keycloak.UserState.EmailVerified*"></a>
+  <h4 id="Pulumi_Keycloak_UserState_EmailVerified" data-uid="Pulumi.Keycloak.UserState.EmailVerified">EmailVerified</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EmailVerified { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_Enabled_" data-uid="Pulumi.Keycloak.UserState.Enabled*"></a>
   <h4 id="Pulumi_Keycloak_UserState_Enabled" data-uid="Pulumi.Keycloak.UserState.Enabled">Enabled</h4>
@@ -178,7 +204,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L172">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_FederatedIdentities_" data-uid="Pulumi.Keycloak.UserState.FederatedIdentities*"></a>
   <h4 id="Pulumi_Keycloak_UserState_FederatedIdentities" data-uid="Pulumi.Keycloak.UserState.FederatedIdentities">FederatedIdentities</h4>
@@ -186,7 +212,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;UserFederatedIdentitiesGetArgs&gt; FederatedIdentities { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;UserFederatedIdentityGetArgs&gt; FederatedIdentities { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,13 +224,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Keycloak.Inputs.UserFederatedIdentitiesGetArgs.html">UserFederatedIdentitiesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Keycloak.Inputs.UserFederatedIdentityGetArgs.html">UserFederatedIdentityGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L178">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_FirstName_" data-uid="Pulumi.Keycloak.UserState.FirstName*"></a>
   <h4 id="Pulumi_Keycloak_UserState_FirstName" data-uid="Pulumi.Keycloak.UserState.FirstName">FirstName</h4>
@@ -230,7 +256,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_InitialPassword_" data-uid="Pulumi.Keycloak.UserState.InitialPassword*"></a>
   <h4 id="Pulumi_Keycloak_UserState_InitialPassword" data-uid="Pulumi.Keycloak.UserState.InitialPassword">InitialPassword</h4>
@@ -256,7 +282,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L184">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L192">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_LastName_" data-uid="Pulumi.Keycloak.UserState.LastName*"></a>
   <h4 id="Pulumi_Keycloak_UserState_LastName" data-uid="Pulumi.Keycloak.UserState.LastName">LastName</h4>
@@ -282,7 +308,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_RealmId_" data-uid="Pulumi.Keycloak.UserState.RealmId*"></a>
   <h4 id="Pulumi_Keycloak_UserState_RealmId" data-uid="Pulumi.Keycloak.UserState.RealmId">RealmId</h4>
@@ -308,7 +334,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L198">View Source</a>
   </span>
   <a id="Pulumi_Keycloak_UserState_Username_" data-uid="Pulumi.Keycloak.UserState.Username*"></a>
   <h4 id="Pulumi_Keycloak_UserState_Username" data-uid="Pulumi.Keycloak.UserState.Username">Username</h4>
@@ -340,7 +366,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/User.cs/#L154" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/b8826fd5426cd6de4e3f8adccebd88128882cf20/sdk/dotnet/User.cs/#L159" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

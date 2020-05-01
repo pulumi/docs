@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ServiceUpdateConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ServiceUpdateConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Inputs.html">Pulumi.Docker.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1869">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs__ctor_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs__ctor" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.#ctor">ServiceUpdateConfigArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1851">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Delay_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Delay*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Delay" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Delay">Delay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Delay between updates <code>(ns|us|ms|s|m|h)</code>, e.g. <code>5s</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Delay { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Delay { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1854">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_FailureAction_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.FailureAction*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_FailureAction" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.FailureAction">FailureAction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Action on update failure: <code>pause|continue|rollback</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; FailureAction { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FailureAction { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +148,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1857">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L31">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_MaxFailureRatio_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.MaxFailureRatio*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_MaxFailureRatio" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.MaxFailureRatio">MaxFailureRatio</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The failure rate to tolerate during an update as <code>float</code>. <strong>Important:</strong> the <code>float</code>need to be wrapped in a <code>string</code> to avoid internal
+casting and precision errors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; MaxFailureRatio { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? MaxFailureRatio { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +176,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1860">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Monitor_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Monitor*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Monitor" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Monitor">Monitor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Duration after each task update to monitor for failure <code>(ns|us|ms|s|m|h)</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Monitor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Monitor { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +203,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1863">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Order_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Order*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Order" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Order">Order</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Update order either 'stop-first' or 'start-first'.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Order { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Order { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +230,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1866">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Parallelism_" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Parallelism*"></a>
   <h4 id="Pulumi_Docker_Inputs_ServiceUpdateConfigArgs_Parallelism" data-uid="Pulumi.Docker.Inputs.ServiceUpdateConfigArgs.Parallelism">Parallelism</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Parallelism { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Parallelism { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,7 +257,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +269,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Service.cs/#L1849" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ServiceUpdateConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

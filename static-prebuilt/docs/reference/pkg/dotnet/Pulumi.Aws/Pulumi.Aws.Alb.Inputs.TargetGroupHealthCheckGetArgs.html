@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TargetGroupHealthCheckGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TargetGroupHealthCheckGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Alb.Inputs.html">Pulumi.Aws.Alb.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L498">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs__ctor_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs__ctor" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.#ctor">TargetGroupHealthCheckGetArgs()</h4>
@@ -129,16 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L449">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Enabled_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Enabled*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Enabled" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"><p>Indicates whether  health checks are enabled. Defaults to true.</p>
+  <div class="markdown level1 summary"><p>Boolean to enable / disable <code>stickiness</code>. Default is <code>true</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Enabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Enabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L455">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_HealthyThreshold_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.HealthyThreshold*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_HealthyThreshold" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.HealthyThreshold">HealthyThreshold</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; HealthyThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? HealthyThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L461">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Interval_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Interval*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Interval" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Interval">Interval</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Interval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Interval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L464">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Matcher_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Matcher*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Matcher" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Matcher">Matcher</h4>
@@ -218,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Matcher { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Matcher { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L470">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Path_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Path*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Path" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Path">Path</h4>
@@ -245,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Path { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Path { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,22 +228,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L476">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Port_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Port*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Port" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Port">Port</h4>
-  <div class="markdown level1 summary"><p>The port to use to connect with the target. Valid values are either ports 1-65535, or <code>traffic-port</code>. Defaults to <code>traffic-port</code>.</p>
+  <div class="markdown level1 summary"><p>The port on which targets receive traffic, unless overridden when registering a specific target. Required when <code>target_type</code> is <code>instance</code> or <code>ip</code>. Does not apply when <code>target_type</code> is <code>lambda</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Port { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Port { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,22 +255,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L482">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Protocol_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Protocol*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Protocol" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Protocol">Protocol</h4>
-  <div class="markdown level1 summary"><p>The protocol to use to connect with the target. Defaults to <code>HTTP</code>. Not applicable when <code>target_type</code> is <code>lambda</code>.</p>
+  <div class="markdown level1 summary"><p>The protocol to use for routing traffic to the targets. Should be one of &quot;TCP&quot;, &quot;TLS&quot;, &quot;UDP&quot;, &quot;TCP_UDP&quot;, &quot;HTTP&quot; or &quot;HTTPS&quot;. Required when <code>target_type</code> is <code>instance</code> or <code>ip</code>. Does not apply when <code>target_type</code> is <code>lambda</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Protocol { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Protocol { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L488">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Timeout_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Timeout*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_Timeout" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.Timeout">Timeout</h4>
@@ -326,7 +297,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Timeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Timeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,13 +309,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L495">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_UnhealthyThreshold_" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.UnhealthyThreshold*"></a>
   <h4 id="Pulumi_Aws_Alb_Inputs_TargetGroupHealthCheckGetArgs_UnhealthyThreshold" data-uid="Pulumi.Aws.Alb.Inputs.TargetGroupHealthCheckGetArgs.UnhealthyThreshold">UnhealthyThreshold</h4>
@@ -356,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; UnhealthyThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? UnhealthyThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -368,7 +339,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -380,7 +351,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Alb/TargetGroup.cs/#L444" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Alb/Inputs/TargetGroupHealthCheckGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

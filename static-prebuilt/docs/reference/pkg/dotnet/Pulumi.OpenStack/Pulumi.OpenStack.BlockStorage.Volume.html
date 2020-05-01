@@ -72,9 +72,6 @@
   <h1 id="Pulumi_OpenStack_BlockStorage_Volume" data-uid="Pulumi.OpenStack.BlockStorage.Volume" class="text-break">Class Volume
   </h1>
   <div class="markdown level0 summary"><p>Manages a V3 volume resource within OpenStack.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume__ctor_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume__ctor_System_String_Pulumi_OpenStack_BlockStorage_VolumeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.BlockStorage.Volume.#ctor(System.String,Pulumi.OpenStack.BlockStorage.VolumeArgs,System.Nullable{CustomResourceOptions})">Volume(String, VolumeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Attachments_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Attachments*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Attachments" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Attachments">Attachments</h4>
@@ -146,7 +143,7 @@ sees it.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VolumeAttachments&gt;&gt; Attachments { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VolumeAttachment&gt;&gt; Attachments { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,13 +155,13 @@ sees it.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.BlockStorage.Outputs.VolumeAttachments.html">VolumeAttachments</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.BlockStorage.Outputs.VolumeAttachment.html">VolumeAttachment</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_AvailabilityZone_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.AvailabilityZone*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_AvailabilityZone" data-uid="Pulumi.OpenStack.BlockStorage.Volume.AvailabilityZone">AvailabilityZone</h4>
@@ -192,7 +189,7 @@ Changing this creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_ConsistencyGroupId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ConsistencyGroupId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_ConsistencyGroupId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ConsistencyGroupId">ConsistencyGroupId</h4>
@@ -220,7 +217,7 @@ in.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Description_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Description*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Description" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Description">Description</h4>
@@ -248,7 +245,7 @@ the volume's description.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_EnableOnlineResize_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.EnableOnlineResize*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_EnableOnlineResize" data-uid="Pulumi.OpenStack.BlockStorage.Volume.EnableOnlineResize">EnableOnlineResize</h4>
@@ -277,7 +274,7 @@ support for version 3.42 and a compatible storage driver.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_ImageId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ImageId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_ImageId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.ImageId">ImageId</h4>
@@ -305,7 +302,7 @@ Changing this creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Metadata_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Metadata*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Metadata" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Metadata">Metadata</h4>
@@ -333,7 +330,7 @@ Changing this updates the existing volume metadata.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Multiattach_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Multiattach*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Multiattach" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Multiattach">Multiattach</h4>
@@ -360,7 +357,7 @@ Changing this updates the existing volume metadata.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Name_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Name*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Name" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Name">Name</h4>
@@ -388,7 +385,7 @@ volume's name.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Region_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Region*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Region" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Region">Region</h4>
@@ -417,7 +414,7 @@ creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Size_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Size*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Size" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Size">Size</h4>
@@ -444,7 +441,7 @@ creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_SnapshotId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SnapshotId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_SnapshotId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SnapshotId">SnapshotId</h4>
@@ -472,7 +469,7 @@ Changing this creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_SourceReplica_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceReplica*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_SourceReplica" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceReplica">SourceReplica</h4>
@@ -499,7 +496,7 @@ Changing this creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_SourceVolId_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceVolId*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_SourceVolId" data-uid="Pulumi.OpenStack.BlockStorage.Volume.SourceVolId">SourceVolId</h4>
@@ -527,7 +524,7 @@ Changing this creates a new volume.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_VolumeType_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.VolumeType*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_VolumeType" data-uid="Pulumi.OpenStack.BlockStorage.Volume.VolumeType">VolumeType</h4>
@@ -557,7 +554,7 @@ Changing this creates a new volume.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_BlockStorage_Volume_Get_" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Get*"></a>
   <h4 id="Pulumi_OpenStack_BlockStorage_Volume_Get_System_String_Input_System_String__Pulumi_OpenStack_BlockStorage_VolumeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.BlockStorage.Volume.Get(System.String,Input{System.String},Pulumi.OpenStack.BlockStorage.VolumeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VolumeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -627,7 +624,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Blockstorage/Volume.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/BlockStorage/Volume.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

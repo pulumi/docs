@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ComputeEnvironmentComputeResources</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Batch.Outputs.html">Pulumi.Aws.Batch.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ComputeEnvironmentComputeResources</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ComputeEnvironmentComputeResources : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L535">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_AllocationStrategy" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.AllocationStrategy">AllocationStrategy</h4>
   <div class="markdown level1 summary"><p>The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are <code>BEST_FIT_PROGRESSIVE</code>, <code>SPOT_CAPACITY_OPTIMIZED</code> or <code>BEST_FIT</code>. Defaults to <code>BEST_FIT</code>. See <a href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">AWS docs</a> for details.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AllocationStrategy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AllocationStrategy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L539">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_BidPercentage" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.BidPercentage">BidPercentage</h4>
   <div class="markdown level1 summary"><p>Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (<code>20</code>), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L543">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_DesiredVcpus" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.DesiredVcpus">DesiredVcpus</h4>
   <div class="markdown level1 summary"><p>The desired number of EC2 vCPUS in the compute environment.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L547">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_Ec2KeyPair" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.Ec2KeyPair">Ec2KeyPair</h4>
   <div class="markdown level1 summary"><p>The EC2 key pair that is used for instances launched in the compute environment.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Ec2KeyPair</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Ec2KeyPair</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L551">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_ImageId" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.ImageId">ImageId</h4>
   <div class="markdown level1 summary"><p>The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.</p>
@@ -223,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ImageId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ImageId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L555">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_InstanceRole" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.InstanceRole">InstanceRole</h4>
   <div class="markdown level1 summary"><p>The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L559">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_InstanceTypes" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.InstanceTypes">InstanceTypes</h4>
   <div class="markdown level1 summary"><p>A list of instance types that may be launched.</p>
@@ -287,13 +263,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L563">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_LaunchTemplate" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.LaunchTemplate">LaunchTemplate</h4>
   <div class="markdown level1 summary"><p>The launch template to use for your compute resources. See details below.</p>
@@ -319,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L567">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_MaxVcpus" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.MaxVcpus">MaxVcpus</h4>
   <div class="markdown level1 summary"><p>The maximum number of EC2 vCPUs that an environment can reach.</p>
@@ -345,7 +321,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L571">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_MinVcpus" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.MinVcpus">MinVcpus</h4>
   <div class="markdown level1 summary"><p>The minimum number of EC2 vCPUs that an environment should maintain.</p>
@@ -371,7 +347,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L575">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_SecurityGroupIds" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.SecurityGroupIds">SecurityGroupIds</h4>
   <div class="markdown level1 summary"><p>A list of EC2 security group that are associated with instances launched in the compute environment.</p>
@@ -391,13 +367,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L579">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_SpotIamFleetRole" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.SpotIamFleetRole">SpotIamFleetRole</h4>
   <div class="markdown level1 summary"><p>The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.</p>
@@ -405,7 +381,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SpotIamFleetRole</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SpotIamFleetRole</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,13 +393,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L583">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_Subnets" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.Subnets">Subnets</h4>
   <div class="markdown level1 summary"><p>A list of VPC subnets into which the compute resources are launched.</p>
@@ -443,13 +419,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L587">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_Tags" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>Key-value pair tags to be applied to resources that are launched in the compute environment.</p>
@@ -457,7 +433,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Tags</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Tags</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,13 +445,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L591">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Batch_Outputs_ComputeEnvironmentComputeResources_Type" data-uid="Pulumi.Aws.Batch.Outputs.ComputeEnvironmentComputeResources.Type">Type</h4>
   <div class="markdown level1 summary"><p>The type of compute environment. Valid items are <code>EC2</code> or <code>SPOT</code>.</p>
@@ -507,7 +483,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Batch/ComputeEnvironment.cs/#L529" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Batch/Outputs/ComputeEnvironmentComputeResources.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

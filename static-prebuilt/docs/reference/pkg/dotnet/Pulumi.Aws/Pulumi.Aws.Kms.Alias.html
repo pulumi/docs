@@ -74,53 +74,12 @@
   <div class="markdown level0 summary"><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence this provider too) allows you to create as many aliases as
 the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Alias</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Alias</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Kms.html">Pulumi.Aws.Kms</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -131,16 +90,16 @@ the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">a
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias__ctor_" data-uid="Pulumi.Aws.Kms.Alias.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Kms_Alias__ctor_System_String_Pulumi_Aws_Kms_AliasArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Kms.Alias.#ctor(System.String,Pulumi.Aws.Kms.AliasArgs,Pulumi.CustomResourceOptions)">Alias(String, AliasArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Kms_Alias__ctor_System_String_Pulumi_Aws_Kms_AliasArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Kms.Alias.#ctor(System.String,Pulumi.Aws.Kms.AliasArgs,System.Nullable{CustomResourceOptions})">Alias(String, AliasArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Alias resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Alias(string name, AliasArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Alias(string name, AliasArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +124,7 @@ the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">a
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -175,7 +134,7 @@ the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">a
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias_Arn_" data-uid="Pulumi.Aws.Kms.Alias.Arn*"></a>
   <h4 id="Pulumi_Aws_Kms_Alias_Arn" data-uid="Pulumi.Aws.Kms.Alias.Arn">Arn</h4>
@@ -196,13 +155,13 @@ the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias_Name_" data-uid="Pulumi.Aws.Kms.Alias.Name*"></a>
   <h4 id="Pulumi_Aws_Kms_Alias_Name" data-uid="Pulumi.Aws.Kms.Alias.Name">Name</h4>
@@ -223,13 +182,13 @@ the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias_NamePrefix_" data-uid="Pulumi.Aws.Kms.Alias.NamePrefix*"></a>
   <h4 id="Pulumi_Aws_Kms_Alias_NamePrefix" data-uid="Pulumi.Aws.Kms.Alias.NamePrefix">NamePrefix</h4>
@@ -239,7 +198,7 @@ The name must start with the word &quot;alias&quot; followed by a forward slash 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamePrefix { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NamePrefix { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,13 +210,13 @@ The name must start with the word &quot;alias&quot; followed by a forward slash 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias_TargetKeyArn_" data-uid="Pulumi.Aws.Kms.Alias.TargetKeyArn*"></a>
   <h4 id="Pulumi_Aws_Kms_Alias_TargetKeyArn" data-uid="Pulumi.Aws.Kms.Alias.TargetKeyArn">TargetKeyArn</h4>
@@ -278,13 +237,13 @@ The name must start with the word &quot;alias&quot; followed by a forward slash 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias_TargetKeyId_" data-uid="Pulumi.Aws.Kms.Alias.TargetKeyId*"></a>
   <h4 id="Pulumi_Aws_Kms_Alias_TargetKeyId" data-uid="Pulumi.Aws.Kms.Alias.TargetKeyId">TargetKeyId</h4>
@@ -305,7 +264,7 @@ The name must start with the word &quot;alias&quot; followed by a forward slash 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -313,17 +272,17 @@ The name must start with the word &quot;alias&quot; followed by a forward slash 
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Kms_Alias_Get_" data-uid="Pulumi.Aws.Kms.Alias.Get*"></a>
-  <h4 id="Pulumi_Aws_Kms_Alias_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Kms_AliasState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Kms.Alias.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Kms.AliasState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, AliasState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Kms_Alias_Get_System_String_Input_System_String__Pulumi_Aws_Kms_AliasState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Kms.Alias.Get(System.String,Input{System.String},Pulumi.Aws.Kms.AliasState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AliasState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Alias resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Alias Get(string name, Input&lt;string&gt; id, AliasState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Alias Get(string name, Input&lt;string&gt; id, AliasState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,7 +301,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -354,7 +313,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -383,7 +342,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Kms/Alias.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Kms/Alias.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

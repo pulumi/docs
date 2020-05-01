@@ -13,34 +13,34 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-alicloud/issues">pulumi/pulumi-alicloud repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/issues">terraform-providers/terraform-provider-alicloud repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_alicloud.sag"></span><dl class="class">
+<span class="target" id="module-pulumi_alicloud.sag"></span><dl class="py class">
 <dt id="pulumi_alicloud.sag.AwaitableGetAclsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.sag.</code><code class="sig-name descname">AwaitableGetAclsResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.sag.AwaitableGetAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.sag.</code><code class="sig-name descname">AwaitableGetAclsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.sag.AwaitableGetAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_alicloud.sag.GetAclsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.sag.</code><code class="sig-name descname">GetAclsResult</code><span class="sig-paren">(</span><em class="sig-param">acls=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.sag.GetAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.sag.</code><code class="sig-name descname">GetAclsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.sag.GetAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAcls.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.sag.GetAclsResult.acls">
 <code class="sig-name descname">acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.sag.GetAclsResult.acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Sag Acls. Each element contains the following attributes:</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.sag.GetAclsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.sag.GetAclsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.sag.GetAclsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.sag.GetAclsResult.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Sag Acl IDs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_alicloud.sag.GetAclsResult.names">
 <code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.sag.GetAclsResult.names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Sag Acls names.</p>
@@ -48,14 +48,13 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_alicloud.sag.get_acls">
-<code class="sig-prename descclassname">pulumi_alicloud.sag.</code><code class="sig-name descname">get_acls</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.sag.get_acls" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.sag.</code><code class="sig-name descname">get_acls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.sag.get_acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides Sag Acls available to the user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> Only the following regions support create Cloud Connect Network. [<code class="docutils literal notranslate"><span class="pre">cn-shanghai</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>, <code class="docutils literal notranslate"><span class="pre">cn-hongkong</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>, <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>, <code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>]</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/sag_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/sag_acls.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

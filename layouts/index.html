@@ -4,13 +4,20 @@
         {{ partial "alert" . }}
 
         <div class="relative">
-            <h1 class="font-sans font-body font-normal">
-                {{ .Params.heading }}
-            </h1>
-            <p>
-                {{ .Params.subhead | markdownify }}
-            </p>
-            <div class="mt-6">
+            <div class="relative overflow-visible inline-block">
+
+                <h1 class="font-sans font-body font-normal">
+                    {{ .Params.heading }}
+                </h1>
+                <p class="mt-2">
+                    {{ .Params.subhead | markdownify }}
+                </p>
+                <div class="md:absolute inline-block" style="top: -4rem; right: -14rem;">
+                    <img class="w-48" src="/images/mascot/pulumipus.svg" alt="Pulumi mascot">
+                </div>
+            </div>
+
+            <div class="mt-8">
                 <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
                     Get Started
                 </a>
@@ -111,14 +118,14 @@
                 <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
                     <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
                 </a>
-                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/mercedes-benz" }}">
                     <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
                 </a>
                 <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
                     <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
                 </a>
                 <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                    <img class="mx-auto mt-4 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
                 </a>
             </div>
             <div class="lg:flex items-center justify-center my-4">
@@ -134,8 +141,22 @@
                 <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
                     <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
                 </a>
-                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/lemonade" }}">
                     <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                </a>
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.lykke.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-8 mx-8" src="/logos/customers/lykke_logo.svg" alt="Lykke" title="Lykke">
+                </a>
+                <a data-track="customer-logo" href="https://www.ware2go.co/" target="_blank">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-5 mx-8" src="/logos/customers/ware2go_logo.png" title="Ware2Go" alt="Ware2Go">
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/credijusto" }}">
+                    <img class="mx-auto lg:mx-8 h-10 mx-8 mt-4 mb-4" src="/logos/customers/credijusto_logo.svg" alt="Credijusto" title="Credijusto">
+                </a>
+                <a data-track="customer-logo" href="{{ relref . "/case-studies/menta-network" }}">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/menta_logo.svg" alt="Menta Network" title="Menta Network">
                 </a>
             </div>
         </div>
@@ -209,7 +230,7 @@
 
         <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
         <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-            <iframe src="//www.youtube.com/embed/QfJTJs24-JM?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Introduction to Pulumi: Modern Infrastructure as Code"></iframe>
+            <iframe src="//www.youtube.com/embed/6f8KF6UGN7g?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Introduction to Pulumi: Modern Infrastructure as Code"></iframe>
         </div>
     </div>
 

@@ -78,40 +78,41 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAvailabilityZonesResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.html">Pulumi.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_GetAvailabilityZonesResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetAvailabilityZonesResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetAvailabilityZonesResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L102">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_AllAvailabilityZones" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.AllAvailabilityZones">AllAvailabilityZones</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool? AllAvailabilityZones</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L103">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_BlacklistedNames" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.BlacklistedNames">BlacklistedNames</h4>
   <div class="markdown level1 summary"></div>
@@ -130,13 +131,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L104">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_BlacklistedZoneIds" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.BlacklistedZoneIds">BlacklistedZoneIds</h4>
   <div class="markdown level1 summary"></div>
@@ -155,13 +156,63 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L105">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_Filters" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.Filters">Filters</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAvailabilityZonesFilterResult&gt; Filters</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAvailabilityZonesFilterResult.html">GetAvailabilityZonesFilterResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L106">View Source</a>
+  </span>
+  <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_GroupNames" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.GroupNames">GroupNames</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;string&gt; GroupNames</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_Id" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -187,7 +238,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_Names" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.Names">Names</h4>
   <div class="markdown level1 summary"><p>A list of the Availability Zone names available to the account.</p>
@@ -207,20 +258,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_State" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.State">State</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string State</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? State</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +283,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAvailabilityZonesResult_ZoneIds" data-uid="Pulumi.Aws.GetAvailabilityZonesResult.ZoneIds">ZoneIds</h4>
   <div class="markdown level1 summary"><p>A list of the Availability Zone IDs available to the account.</p>
@@ -258,7 +309,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -270,7 +321,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAvailabilityZones.cs/#L68" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAvailabilityZones.cs/#L99" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

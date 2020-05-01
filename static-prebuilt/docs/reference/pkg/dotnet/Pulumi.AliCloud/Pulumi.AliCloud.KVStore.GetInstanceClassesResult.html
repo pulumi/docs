@@ -78,47 +78,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstanceClassesResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.KVStore.html">Pulumi.AliCloud.KVStore</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetInstanceClassesResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetInstanceClassesResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L116">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_Architecture" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.Architecture">Architecture</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Architecture</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Architecture</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,13 +106,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L120">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_Classes" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.Classes">Classes</h4>
   <div class="markdown level1 summary"><p>A list of KVStore available instance classes when the <code>sorted_by</code> is &quot;Price&quot;. include:</p>
@@ -144,7 +120,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceClassesClassesResult&gt; Classes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstanceClassesClassResult&gt; Classes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,20 +132,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.KVStore.Outputs.GetInstanceClassesClassesResult.html">GetInstanceClassesClassesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.KVStore.Outputs.GetInstanceClassesClassResult.html">GetInstanceClassesClassResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L121">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_EditionType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.EditionType">EditionType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EditionType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? EditionType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,20 +157,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L122">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_Engine" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.Engine">Engine</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Engine</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Engine</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,20 +182,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_EngineVersion" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.EngineVersion">EngineVersion</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EngineVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? EngineVersion</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L127">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_Id" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -263,14 +239,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L121">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L128">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_InstanceChargeType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.InstanceChargeType">InstanceChargeType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string InstanceChargeType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? InstanceChargeType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -282,13 +258,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L132">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_InstanceClasses" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.InstanceClasses">InstanceClasses</h4>
   <div class="markdown level1 summary"><p>A list of KVStore available instance classes.</p>
@@ -308,20 +284,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L133">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_NodeType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.NodeType">NodeType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NodeType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NodeType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,20 +309,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L134">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_OutputFile" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,20 +334,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_PackageType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.PackageType">PackageType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PackageType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PackageType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,20 +359,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L136">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_PerformanceType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.PerformanceType">PerformanceType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PerformanceType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PerformanceType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -408,20 +384,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L137">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_SeriesType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.SeriesType">SeriesType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SeriesType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SeriesType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,13 +409,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L138">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_ShardNumber" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.ShardNumber">ShardNumber</h4>
   <div class="markdown level1 summary"></div>
@@ -464,14 +440,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_SortedBy" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.SortedBy">SortedBy</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SortedBy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SortedBy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,20 +459,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L140">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_StorageType" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.StorageType">StorageType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string StorageType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? StorageType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L141">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_KVStore_GetInstanceClassesResult_ZoneId" data-uid="Pulumi.AliCloud.KVStore.GetInstanceClassesResult.ZoneId">ZoneId</h4>
   <div class="markdown level1 summary"></div>
@@ -545,7 +521,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Kvstore/GetInstanceClasses.cs/#L110" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/KVStore/GetInstanceClasses.cs/#L113" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -83,17 +83,11 @@
 <blockquote>
 <p><strong>Note:</strong> This resource uses the new <a href="https://docs.datadoghq.com/api/#dashboards">Dashboard API</a> which adds new features like better validation and support for the <a href="https://docs.datadoghq.com/graphing/widgets/group/">Group widget</a>. Additionally, this resource unifies <code>datadog..TimeBoard</code> and <code>datadog..ScreenBoard</code> resources to allow you to manage all of your dashboards using a single format.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/dashboard.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.DashboardArgs.html">DashboardArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.DashboardList.html">DashboardList</a></h4>
       <section><p>Provides a Datadog dashboard_list resource. This can be used to create and manage Datadog Dashboard Lists and the individual dashboards within them.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/dashboard_list.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/dashboard_list.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.DashboardListArgs.html">DashboardListArgs</a></h4>
       <section></section>
@@ -103,17 +97,14 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.Downtime.html">Downtime</a></h4>
       <section><p>Provides a Datadog downtime resource. This can be used to create and manage Datadog downtimes.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/downtime.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/downtime.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.DowntimeArgs.html">DowntimeArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.DowntimeState.html">DowntimeState</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Datadog.GetIpRangesResult.html">GetIpRangesResult</a></h4>
+      <h4><a class="xref" href="Pulumi.Datadog.GetIpRanges.html">GetIpRanges</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Datadog.Invokes.html">Invokes</a></h4>
+      <h4><a class="xref" href="Pulumi.Datadog.GetIpRangesResult.html">GetIpRangesResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsCustomPipeline.html">LogsCustomPipeline</a></h4>
       <section><p>Provides a Datadog <a href="https://docs.datadoghq.com/api/?lang=python#logs-pipelines">Logs Pipeline API</a> resource, which is used to create and manage Datadog logs custom pipelines.</p>
@@ -123,9 +114,6 @@ a different resource datadog_logs_pipeline_order.
 When creating a new pipeline, you need to <strong>explicitly</strong> add this pipeline to the <code>datadog..LogsPipelineOrder</code>
 resource to track the pipeline. Similarly, when a pipeline needs to be destroyed, remove its references from the
 <code>datadog..LogsPipelineOrder</code> resource.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_custom_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_custom_pipeline.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsCustomPipelineArgs.html">LogsCustomPipelineArgs</a></h4>
       <section></section>
@@ -135,17 +123,11 @@ resource to track the pipeline. Similarly, when a pipeline needs to be destroyed
       <section><p>Provides a Datadog <a href="https://docs.datadoghq.com/api/?lang=python#logs-indexes">Logs Index API</a> resource. This can be used to create and manage Datadog logs indexes.</p>
 <h2 id="important-notes">Important Notes</h2>
 <p>The order of indexes is maintained in the separated resource datadog_logs_index_order.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_index.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsIndexArgs.html">LogsIndexArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsIndexOrder.html">LogsIndexOrder</a></h4>
       <section><p>Provides a Datadog <a href="https://docs.datadoghq.com/api/?lang=python#logs-indexes">Logs Index API</a> resource. This can be used to manage the order of Datadog logs indexes.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_index_order.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_index_order.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsIndexOrderArgs.html">LogsIndexOrderArgs</a></h4>
       <section></section>
@@ -161,9 +143,6 @@ specific sources. You don't need to maintain or update these types of pipelines.
 allows you to manage the order of your pipelines by referencing them in your
 datadog..LogsPipelineOrder resource. If you don't need the
 <code>pipeline_order</code> feature, this resource declaration can be omitted.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_integration_pipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_integration_pipeline.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsIntegrationPipelineArgs.html">LogsIntegrationPipelineArgs</a></h4>
       <section></section>
@@ -171,9 +150,6 @@ datadog..LogsPipelineOrder resource. If you don't need the
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsPipelineOrder.html">LogsPipelineOrder</a></h4>
       <section><p>Provides a Datadog <a href="https://docs.datadoghq.com/api/?lang=python#logs-pipelines">Logs Pipeline API</a> resource, which is used to manage Datadog log pipelines order.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_pipeline_order.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/logs_pipeline_order.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.LogsPipelineOrderArgs.html">LogsPipelineOrderArgs</a></h4>
       <section></section>
@@ -181,9 +157,6 @@ datadog..LogsPipelineOrder resource. If you don't need the
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.MetricMetadata.html">MetricMetadata</a></h4>
       <section><p>Provides a Datadog metric_metadata resource. This can be used to manage a metric's metadata.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/metric_metadata.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/metric_metadata.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.MetricMetadataArgs.html">MetricMetadataArgs</a></h4>
       <section></section>
@@ -191,9 +164,6 @@ datadog..LogsPipelineOrder resource. If you don't need the
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.Monitor.html">Monitor</a></h4>
       <section><p>Provides a Datadog monitor resource. This can be used to create and manage Datadog monitors.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/monitor.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.MonitorArgs.html">MonitorArgs</a></h4>
       <section></section>
@@ -204,9 +174,6 @@ datadog..LogsPipelineOrder resource. If you don't need the
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>
@@ -215,9 +182,6 @@ construction to achieve fine-grained programmatic control over provider settings
 <blockquote>
 <p><strong>Note:</strong> This resource is outdated. Use the new <code>datadog..Dashboard</code> resource instead.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/screenboard.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/screenboard.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.ScreenBoardArgs.html">ScreenBoardArgs</a></h4>
       <section></section>
@@ -225,19 +189,13 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.ServiceLevelObjective.html">ServiceLevelObjective</a></h4>
       <section><p>Provides a Datadog service level objective resource. This can be used to create and manage Datadog service level objectives.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/service_level_objective.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/service_level_objective.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.ServiceLevelObjectiveArgs.html">ServiceLevelObjectiveArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.ServiceLevelObjectiveState.html">ServiceLevelObjectiveState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.SyntheticsTest.html">SyntheticsTest</a></h4>
-      <section><blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/synthetics_test.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/synthetics_test.html.markdown</a>.</p>
-</blockquote>
-</section>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.SyntheticsTestArgs.html">SyntheticsTestArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.SyntheticsTestState.html">SyntheticsTestState</a></h4>
@@ -247,9 +205,6 @@ construction to achieve fine-grained programmatic control over provider settings
 <blockquote>
 <p>**Note:**This resource is outdated. Use the new <code>datadog..Dashboard</code> resource instead.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/timeboard.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/timeboard.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.TimeBoardArgs.html">TimeBoardArgs</a></h4>
       <section></section>
@@ -257,9 +212,6 @@ construction to achieve fine-grained programmatic control over provider settings
       <section></section>
       <h4><a class="xref" href="Pulumi.Datadog.User.html">User</a></h4>
       <section><p>Provides a Datadog user resource. This can be used to create and manage Datadog users.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Datadog.UserArgs.html">UserArgs</a></h4>
       <section></section>

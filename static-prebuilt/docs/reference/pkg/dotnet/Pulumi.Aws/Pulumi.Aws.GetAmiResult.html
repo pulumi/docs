@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAmiResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.html">Pulumi.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_GetAmiResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetAmiResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetAmiResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Architecture" data-uid="Pulumi.Aws.GetAmiResult.Architecture">Architecture</h4>
   <div class="markdown level1 summary"><p>The OS architecture of the AMI (ie: <code>i386</code> or <code>x86_64</code>).</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L128">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_BlockDeviceMappings" data-uid="Pulumi.Aws.GetAmiResult.BlockDeviceMappings">BlockDeviceMappings</h4>
   <div class="markdown level1 summary"><p>The block device mappings of the AMI.</p>
@@ -161,7 +137,7 @@ instance stores).</li>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAmiBlockDeviceMappingsResult&gt; BlockDeviceMappings</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAmiBlockDeviceMappingResult&gt; BlockDeviceMappings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,13 +149,13 @@ instance stores).</li>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAmiBlockDeviceMappingsResult.html">GetAmiBlockDeviceMappingsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAmiBlockDeviceMappingResult.html">GetAmiBlockDeviceMappingResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L132">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_CreationDate" data-uid="Pulumi.Aws.GetAmiResult.CreationDate">CreationDate</h4>
   <div class="markdown level1 summary"><p>The date and time the image was created.</p>
@@ -205,7 +181,7 @@ instance stores).</li>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L137">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Description" data-uid="Pulumi.Aws.GetAmiResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>The description of the AMI that was provided during image
@@ -232,7 +208,7 @@ creation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L138">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_ExecutableUsers" data-uid="Pulumi.Aws.GetAmiResult.ExecutableUsers">ExecutableUsers</h4>
   <div class="markdown level1 summary"></div>
@@ -251,20 +227,20 @@ creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L139">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Filters" data-uid="Pulumi.Aws.GetAmiResult.Filters">Filters</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAmiFiltersResult&gt; Filters</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAmiFilterResult&gt; Filters</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +252,13 @@ creation.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAmiFiltersResult.html">GetAmiFiltersResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAmiFilterResult.html">GetAmiFilterResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L143">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Hypervisor" data-uid="Pulumi.Aws.GetAmiResult.Hypervisor">Hypervisor</h4>
   <div class="markdown level1 summary"><p>The hypervisor type of the image.</p>
@@ -308,7 +284,7 @@ creation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L147">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Id" data-uid="Pulumi.Aws.GetAmiResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -334,7 +310,7 @@ creation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L151">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_ImageId" data-uid="Pulumi.Aws.GetAmiResult.ImageId">ImageId</h4>
   <div class="markdown level1 summary"><p>The ID of the AMI. Should be the same as the resource <code>id</code>.</p>
@@ -360,7 +336,7 @@ creation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L155">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_ImageLocation" data-uid="Pulumi.Aws.GetAmiResult.ImageLocation">ImageLocation</h4>
   <div class="markdown level1 summary"><p>The location of the AMI.</p>
@@ -386,7 +362,7 @@ creation.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L160">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_ImageOwnerAlias" data-uid="Pulumi.Aws.GetAmiResult.ImageOwnerAlias">ImageOwnerAlias</h4>
   <div class="markdown level1 summary"><p>The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or
@@ -413,7 +389,7 @@ the AWS account ID of the AMI owner.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L151">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L164">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_ImageType" data-uid="Pulumi.Aws.GetAmiResult.ImageType">ImageType</h4>
   <div class="markdown level1 summary"><p>The type of image.</p>
@@ -439,7 +415,7 @@ the AWS account ID of the AMI owner.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L169">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_KernelId" data-uid="Pulumi.Aws.GetAmiResult.KernelId">KernelId</h4>
   <div class="markdown level1 summary"><p>The kernel associated with the image, if any. Only applicable
@@ -466,7 +442,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L170">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_MostRecent" data-uid="Pulumi.Aws.GetAmiResult.MostRecent">MostRecent</h4>
   <div class="markdown level1 summary"></div>
@@ -491,7 +467,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L174">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Name" data-uid="Pulumi.Aws.GetAmiResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of the AMI that was provided during image creation.</p>
@@ -517,14 +493,14 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L175">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_NameRegex" data-uid="Pulumi.Aws.GetAmiResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -536,13 +512,13 @@ for machine images.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L179">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_OwnerId" data-uid="Pulumi.Aws.GetAmiResult.OwnerId">OwnerId</h4>
   <div class="markdown level1 summary"><p>The AWS account ID of the image owner.</p>
@@ -568,7 +544,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L180">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Owners" data-uid="Pulumi.Aws.GetAmiResult.Owners">Owners</h4>
   <div class="markdown level1 summary"></div>
@@ -587,13 +563,13 @@ for machine images.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L184">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Platform" data-uid="Pulumi.Aws.GetAmiResult.Platform">Platform</h4>
   <div class="markdown level1 summary"><p>The value is Windows for <code>Windows</code> AMIs; otherwise blank.</p>
@@ -619,7 +595,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L190">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_ProductCodes" data-uid="Pulumi.Aws.GetAmiResult.ProductCodes">ProductCodes</h4>
   <div class="markdown level1 summary"><p>Any product codes associated with the AMI.</p>
@@ -631,7 +607,7 @@ for machine images.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAmiProductCodesResult&gt; ProductCodes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAmiProductCodeResult&gt; ProductCodes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,13 +619,13 @@ for machine images.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAmiProductCodesResult.html">GetAmiProductCodesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Outputs.GetAmiProductCodeResult.html">GetAmiProductCodeResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L194">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Public" data-uid="Pulumi.Aws.GetAmiResult.Public">Public</h4>
   <div class="markdown level1 summary"><p><code>true</code> if the image has public launch permissions.</p>
@@ -675,7 +651,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L186">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L199">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_RamdiskId" data-uid="Pulumi.Aws.GetAmiResult.RamdiskId">RamdiskId</h4>
   <div class="markdown level1 summary"><p>The RAM disk associated with the image, if any. Only applicable
@@ -702,7 +678,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L203">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_RootDeviceName" data-uid="Pulumi.Aws.GetAmiResult.RootDeviceName">RootDeviceName</h4>
   <div class="markdown level1 summary"><p>The device name of the root device.</p>
@@ -728,7 +704,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L194">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L207">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_RootDeviceType" data-uid="Pulumi.Aws.GetAmiResult.RootDeviceType">RootDeviceType</h4>
   <div class="markdown level1 summary"><p>The type of root device (ie: <code>ebs</code> or <code>instance-store</code>).</p>
@@ -754,7 +730,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L212">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_RootSnapshotId" data-uid="Pulumi.Aws.GetAmiResult.RootSnapshotId">RootSnapshotId</h4>
   <div class="markdown level1 summary"><p>The snapshot id associated with the root device, if any
@@ -781,7 +757,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L216">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_SriovNetSupport" data-uid="Pulumi.Aws.GetAmiResult.SriovNetSupport">SriovNetSupport</h4>
   <div class="markdown level1 summary"><p>Specifies whether enhanced networking is enabled.</p>
@@ -807,7 +783,7 @@ for machine images.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L208">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L221">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_State" data-uid="Pulumi.Aws.GetAmiResult.State">State</h4>
   <div class="markdown level1 summary"><p>The current state of the AMI. If the state is <code>available</code>, the image
@@ -834,7 +810,7 @@ is successfully registered and can be used to launch an instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L214">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L227">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_StateReason" data-uid="Pulumi.Aws.GetAmiResult.StateReason">StateReason</h4>
   <div class="markdown level1 summary"><p>Describes a state change. Fields are <code>UNSET</code> if not available.</p>
@@ -858,13 +834,13 @@ is successfully registered and can be used to launch an instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L220">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L233">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_Tags" data-uid="Pulumi.Aws.GetAmiResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>Any tags assigned to the image.</p>
@@ -888,13 +864,13 @@ is successfully registered and can be used to launch an instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L238">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_GetAmiResult_VirtualizationType" data-uid="Pulumi.Aws.GetAmiResult.VirtualizationType">VirtualizationType</h4>
   <div class="markdown level1 summary"><p>The type of virtualization of the AMI (ie: <code>hvm</code> or
@@ -927,7 +903,7 @@ is successfully registered and can be used to launch an instance.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/GetAmi.cs/#L95" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/GetAmi.cs/#L104" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

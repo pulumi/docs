@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">RouterNatArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RouterNatArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L276">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs__ctor_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs__ctor" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.#ctor">RouterNatArgs()</h4>
@@ -129,12 +100,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L176">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_DrainNatIps_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.DrainNatIps*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_DrainNatIps" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.DrainNatIps">DrainNatIps</h4>
-  <div class="markdown level1 summary"><p>A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been
-assigned to the NAT.</p>
+  <div class="markdown level1 summary"><p>A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to
+the NAT.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -151,13 +122,13 @@ assigned to the NAT.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L175">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L185">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_IcmpIdleTimeoutSec_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.IcmpIdleTimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_IcmpIdleTimeoutSec" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.IcmpIdleTimeoutSec">IcmpIdleTimeoutSec</h4>
@@ -166,7 +137,7 @@ assigned to the NAT.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; IcmpIdleTimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? IcmpIdleTimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +149,13 @@ assigned to the NAT.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L191">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_LogConfig_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.LogConfig*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_LogConfig" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.LogConfig">LogConfig</h4>
@@ -193,7 +164,7 @@ assigned to the NAT.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;RouterNatLogConfigArgs&gt; LogConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;RouterNatLogConfigArgs&gt;? LogConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +176,13 @@ assigned to the NAT.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterNatLogConfigArgs.html">RouterNatLogConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterNatLogConfigArgs.html">RouterNatLogConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L187">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L197">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_MinPortsPerVm_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.MinPortsPerVm*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_MinPortsPerVm" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.MinPortsPerVm">MinPortsPerVm</h4>
@@ -220,7 +191,7 @@ assigned to the NAT.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinPortsPerVm { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinPortsPerVm { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +203,13 @@ assigned to the NAT.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L193">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L203">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_Name_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_Name" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Name">Name</h4>
@@ -247,7 +218,7 @@ assigned to the NAT.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,18 +230,18 @@ assigned to the NAT.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L200">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L210">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_NatIpAllocateOption_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.NatIpAllocateOption*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_NatIpAllocateOption" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.NatIpAllocateOption">NatIpAllocateOption</h4>
-  <div class="markdown level1 summary"><p>How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs
-allocated by Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.</p>
+  <div class="markdown level1 summary"><p>How external IPs should be allocated for this NAT. Valid values are 'AUTO_ONLY' for only allowing NAT IPs allocated by
+Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT IP addresses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -287,13 +258,13 @@ allocated by Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_NatIps_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.NatIps*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_NatIps" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.NatIps">NatIps</h4>
@@ -314,13 +285,13 @@ allocated by Google Cloud Platform, or 'MANUAL_ONLY' for only user-allocated NAT
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_Project_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_Project" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Project">Project</h4>
@@ -330,7 +301,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +313,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_Region_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_Region" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Region">Region</h4>
@@ -357,7 +328,7 @@ If it is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,13 +340,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L241">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_Router_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Router*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_Router" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Router">Router</h4>
@@ -396,22 +367,22 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L252">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_SourceSubnetworkIpRangesToNat_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.SourceSubnetworkIpRangesToNat*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_SourceSubnetworkIpRangesToNat" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.SourceSubnetworkIpRangesToNat">SourceSubnetworkIpRangesToNat</h4>
-  <div class="markdown level1 summary"><p>How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in
-every Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP
-ranges in every Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to
-Nat (specified in the field subnetwork below). Note that if this field contains
-ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other
-RouterNat section in any Router for this network in this region.</p>
+  <div class="markdown level1 summary"><p>How NAT should be configured per Subnetwork. If 'ALL_SUBNETWORKS_ALL_IP_RANGES', all of the IP ranges in every
+Subnetwork are allowed to Nat. If 'ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES', all of the primary IP ranges in every
+Subnetwork are allowed to Nat. 'LIST_OF_SUBNETWORKS': A list of Subnetworks are allowed to Nat (specified in the field
+subnetwork below). Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
+ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other RouterNat section in any Router for this
+network in this region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -428,13 +399,13 @@ RouterNat section in any Router for this network in this region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_Subnetworks_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Subnetworks*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_Subnetworks" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.Subnetworks">Subnetworks</h4>
@@ -444,7 +415,7 @@ RouterNat section in any Router for this network in this region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RouterNatSubnetworksArgs&gt; Subnetworks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RouterNatSubnetworkArgs&gt; Subnetworks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -456,13 +427,13 @@ RouterNat section in any Router for this network in this region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterNatSubnetworksArgs.html">RouterNatSubnetworksArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.RouterNatSubnetworkArgs.html">RouterNatSubnetworkArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L261">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_TcpEstablishedIdleTimeoutSec_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.TcpEstablishedIdleTimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_TcpEstablishedIdleTimeoutSec" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.TcpEstablishedIdleTimeoutSec">TcpEstablishedIdleTimeoutSec</h4>
@@ -471,7 +442,7 @@ RouterNat section in any Router for this network in this region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TcpEstablishedIdleTimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TcpEstablishedIdleTimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,13 +454,13 @@ RouterNat section in any Router for this network in this region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L267">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_TcpTransitoryIdleTimeoutSec_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.TcpTransitoryIdleTimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_TcpTransitoryIdleTimeoutSec" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.TcpTransitoryIdleTimeoutSec">TcpTransitoryIdleTimeoutSec</h4>
@@ -498,7 +469,7 @@ RouterNat section in any Router for this network in this region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TcpTransitoryIdleTimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TcpTransitoryIdleTimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -510,13 +481,13 @@ RouterNat section in any Router for this network in this region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L273">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_RouterNatArgs_UdpIdleTimeoutSec_" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.UdpIdleTimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_RouterNatArgs_UdpIdleTimeoutSec" data-uid="Pulumi.Gcp.Compute.RouterNatArgs.UdpIdleTimeoutSec">UdpIdleTimeoutSec</h4>
@@ -525,7 +496,7 @@ RouterNat section in any Router for this network in this region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; UdpIdleTimeoutSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? UdpIdleTimeoutSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -537,7 +508,7 @@ RouterNat section in any Router for this network in this region.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -549,7 +520,7 @@ RouterNat section in any Router for this network in this region.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/RouterNat.cs/#L157" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/RouterNat.cs/#L167" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

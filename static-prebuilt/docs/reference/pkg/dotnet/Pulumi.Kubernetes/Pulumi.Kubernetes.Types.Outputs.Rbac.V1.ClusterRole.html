@@ -80,40 +80,16 @@ unit by a RoleBinding or ClusterRoleBinding.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterRole</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.html">Pulumi.Kubernetes.Types.Outputs.Rbac.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1_ClusterRole_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterRole</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterRole : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L29883">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30308">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1_ClusterRole_AggregationRule" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.ClusterRole.AggregationRule">AggregationRule</h4>
   <div class="markdown level1 summary"><p>AggregationRule is an optional field that describes how to build the Rules for this
@@ -141,7 +117,7 @@ changes to Rules will be stomped by the controller.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L29891">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30316">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1_ClusterRole_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.ClusterRole.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -170,7 +146,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L29899">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30324">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1_ClusterRole_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.ClusterRole.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -199,7 +175,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L29904">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30329">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1_ClusterRole_Metadata" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.ClusterRole.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Standard object's metadata.</p>
@@ -225,7 +201,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L29909">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30334">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1_ClusterRole_Rules" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.ClusterRole.Rules">Rules</h4>
   <div class="markdown level1 summary"><p>Rules holds all the PolicyRules for this ClusterRole</p>
@@ -245,7 +221,7 @@ CamelCase. More info:
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.PolicyRule.html">PolicyRule</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1.PolicyRule.html">PolicyRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -257,7 +233,7 @@ CamelCase. More info:
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L29875" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30300" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

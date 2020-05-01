@@ -83,40 +83,16 @@ resourceRules or nonResourceRules matches the request.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PolicyRulesWithSubjects</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.html">Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_PolicyRulesWithSubjects_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PolicyRulesWithSubjects</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PolicyRulesWithSubjects : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26533">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_PolicyRulesWithSubjects_NonResourceRules" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.PolicyRulesWithSubjects.NonResourceRules">NonResourceRules</h4>
   <div class="markdown level1 summary"><p><code>nonResourceRules</code> is a list of NonResourcePolicyRules that identify matching requests
@@ -137,13 +113,13 @@ according to their verb and the target non-resource URL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.NonResourcePolicyRule.html">NonResourcePolicyRule</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.NonResourcePolicyRule.html">NonResourcePolicyRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26297">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26540">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_PolicyRulesWithSubjects_ResourceRules" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.PolicyRulesWithSubjects.ResourceRules">ResourceRules</h4>
   <div class="markdown level1 summary"><p><code>resourceRules</code> is a slice of ResourcePolicyRules that identify matching requests
@@ -165,13 +141,13 @@ according to their verb and the target resource. At least one of <code>resourceR
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.html">ResourcePolicyRule</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.html">ResourcePolicyRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26305">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26548">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_PolicyRulesWithSubjects_Subjects" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.PolicyRulesWithSubjects.Subjects">Subjects</h4>
   <div class="markdown level1 summary"><p>subjects is the list of normal user, serviceaccount, or group that this rule cares
@@ -194,7 +170,7 @@ Required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.Subject.html">Subject</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.Subject.html">Subject</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -206,7 +182,7 @@ Required.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26283" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26526" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

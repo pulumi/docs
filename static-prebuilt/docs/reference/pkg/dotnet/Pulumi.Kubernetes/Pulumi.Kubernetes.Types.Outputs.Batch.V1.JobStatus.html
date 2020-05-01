@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">JobStatus</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Batch.V1.html">Pulumi.Kubernetes.Types.Outputs.Batch.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class JobStatus</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class JobStatus : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12352">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12479">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_Active" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobStatus.Active">Active</h4>
   <div class="markdown level1 summary"><p>The number of actively running pods.</p>
@@ -138,7 +114,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12486">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_CompletionTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobStatus.CompletionTime">CompletionTime</h4>
   <div class="markdown level1 summary"><p>Represents time when the job was completed. It is not guaranteed to be set in
@@ -166,7 +142,7 @@ is in UTC.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12365">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12492">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobStatus.Conditions">Conditions</h4>
   <div class="markdown level1 summary"><p>The latest available observations of an object's current state. More info:
@@ -187,13 +163,13 @@ is in UTC.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobCondition.html">JobCondition</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobCondition.html">JobCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12370">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12497">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_Failed" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobStatus.Failed">Failed</h4>
   <div class="markdown level1 summary"><p>The number of pods which reached phase Failed.</p>
@@ -219,7 +195,7 @@ is in UTC.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12377">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12504">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_StartTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobStatus.StartTime">StartTime</h4>
   <div class="markdown level1 summary"><p>Represents time when the job was acknowledged by the job controller. It is not
@@ -247,7 +223,7 @@ represented in RFC3339 form and is in UTC.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12382">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12509">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobStatus_Succeeded" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobStatus.Succeeded">Succeeded</h4>
   <div class="markdown level1 summary"><p>The number of pods which reached phase Succeeded.</p>
@@ -279,7 +255,7 @@ represented in RFC3339 form and is in UTC.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12346" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12473" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">IoTHubFileUpload</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Iot.Outputs.html">Pulumi.Azure.Iot.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class IoTHubFileUpload</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class IoTHubFileUpload : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L833">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_ConnectionString" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.ConnectionString">ConnectionString</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The connection string for the Azure Storage account to which files are uploaded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,10 +113,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L834">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_ContainerName" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.ContainerName">ContainerName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the root container where you upload files. The container need not exist but should be creatable using the connection_string specified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +139,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L835">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_DefaultTtl" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.DefaultTtl">DefaultTtl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The period of time for which a file upload notification message is available to consume before it is expired by the IoT hub, specified as an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 timespan duration</a>. This value must be between 1 minute and 48 hours, and evaluates to 'PT1H' by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DefaultTtl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DefaultTtl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,20 +159,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L836">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_LockDuration" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.LockDuration">LockDuration</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The lock duration for the file upload notifications queue, specified as an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 timespan duration</a>. This value must be between 5 and 300 seconds, and evaluates to 'PT1M' by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string LockDuration</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? LockDuration</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,16 +185,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L837">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_MaxDeliveryCount" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.MaxDeliveryCount">MaxDeliveryCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of times the IoT hub attempts to deliver a file upload notification message. It evaluates to 10 by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,10 +217,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L838">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_Notifications" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.Notifications">Notifications</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used to specify whether file notifications are sent to IoT Hub on upload. It evaluates to false by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,14 +243,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L839">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Iot_Outputs_IoTHubFileUpload_SasTtl" data-uid="Pulumi.Azure.Iot.Outputs.IoTHubFileUpload.SasTtl">SasTtl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The period of time for which the SAS URI generated by IoT Hub for file upload is valid, specified as an <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 timespan duration</a>. This value must be between 1 minute and 24 hours, and evaluates to 'PT1H' by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SasTtl</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SasTtl</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,7 +263,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -292,7 +275,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Iot/IoTHub.cs/#L830" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Iot/Outputs/IoTHubFileUpload.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

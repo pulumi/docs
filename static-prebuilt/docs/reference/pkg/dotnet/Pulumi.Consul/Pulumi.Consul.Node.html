@@ -73,9 +73,6 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides access to Node data in Consul. This can be used to define a
 node. Currently, defining health checks is not supported.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/node.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/node.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,7 +89,7 @@ node. Currently, defining health checks is not supported.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node__ctor_" data-uid="Pulumi.Consul.Node.#ctor*"></a>
   <h4 id="Pulumi_Consul_Node__ctor_System_String_Pulumi_Consul_NodeArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Node.#ctor(System.String,Pulumi.Consul.NodeArgs,System.Nullable{CustomResourceOptions})">Node(String, NodeArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -136,7 +133,7 @@ node. Currently, defining health checks is not supported.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node_Address_" data-uid="Pulumi.Consul.Node.Address*"></a>
   <h4 id="Pulumi_Consul_Node_Address" data-uid="Pulumi.Consul.Node.Address">Address</h4>
@@ -164,7 +161,7 @@ or referenced in the catalog.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node_Datacenter_" data-uid="Pulumi.Consul.Node.Datacenter*"></a>
   <h4 id="Pulumi_Consul_Node_Datacenter" data-uid="Pulumi.Consul.Node.Datacenter">Datacenter</h4>
@@ -192,7 +189,7 @@ default datacenter and the datacenter in the provider setup.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node_Meta_" data-uid="Pulumi.Consul.Node.Meta*"></a>
   <h4 id="Pulumi_Consul_Node_Meta" data-uid="Pulumi.Consul.Node.Meta">Meta</h4>
@@ -201,7 +198,7 @@ default datacenter and the datacenter in the provider setup.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Meta { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Meta { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,13 +210,13 @@ default datacenter and the datacenter in the provider setup.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node_Name_" data-uid="Pulumi.Consul.Node.Name*"></a>
   <h4 id="Pulumi_Consul_Node_Name" data-uid="Pulumi.Consul.Node.Name">Name</h4>
@@ -247,7 +244,7 @@ referenced in the catalog.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node_Token_" data-uid="Pulumi.Consul.Node.Token*"></a>
   <h4 id="Pulumi_Consul_Node_Token" data-uid="Pulumi.Consul.Node.Token">Token</h4>
@@ -275,7 +272,7 @@ referenced in the catalog.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Consul_Node_Get_" data-uid="Pulumi.Consul.Node.Get*"></a>
   <h4 id="Pulumi_Consul_Node_Get_System_String_Input_System_String__Pulumi_Consul_NodeState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Consul.Node.Get(System.String,Input{System.String},Pulumi.Consul.NodeState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NodeState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -345,7 +342,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/Node.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/Node.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

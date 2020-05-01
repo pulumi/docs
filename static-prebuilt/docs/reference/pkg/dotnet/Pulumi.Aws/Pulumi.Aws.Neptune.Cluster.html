@@ -79,53 +79,12 @@ window. Because of this, this provider may report a difference in its planning
 phase because a modification has not yet taken place. You can use the
 <code>apply_immediately</code> flag to instruct the service to apply the change immediately
 (see documentation below).</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Cluster</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Cluster</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Neptune.html">Pulumi.Aws.Neptune</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -136,16 +95,16 @@ phase because a modification has not yet taken place. You can use the
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L212">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster__ctor_" data-uid="Pulumi.Aws.Neptune.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Neptune_Cluster__ctor_System_String_Pulumi_Aws_Neptune_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Neptune.Cluster.#ctor(System.String,Pulumi.Aws.Neptune.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Neptune_Cluster__ctor_System_String_Pulumi_Aws_Neptune_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Neptune.Cluster.#ctor(System.String,Pulumi.Aws.Neptune.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@ phase because a modification has not yet taken place. You can use the
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@ phase because a modification has not yet taken place. You can use the
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ApplyImmediately_" data-uid="Pulumi.Aws.Neptune.Cluster.ApplyImmediately*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ApplyImmediately" data-uid="Pulumi.Aws.Neptune.Cluster.ApplyImmediately">ApplyImmediately</h4>
@@ -201,13 +160,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_Arn_" data-uid="Pulumi.Aws.Neptune.Cluster.Arn*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_Arn" data-uid="Pulumi.Aws.Neptune.Cluster.Arn">Arn</h4>
@@ -228,13 +187,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_AvailabilityZones_" data-uid="Pulumi.Aws.Neptune.Cluster.AvailabilityZones*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_AvailabilityZones" data-uid="Pulumi.Aws.Neptune.Cluster.AvailabilityZones">AvailabilityZones</h4>
@@ -255,13 +214,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_BackupRetentionPeriod_" data-uid="Pulumi.Aws.Neptune.Cluster.BackupRetentionPeriod*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_BackupRetentionPeriod" data-uid="Pulumi.Aws.Neptune.Cluster.BackupRetentionPeriod">BackupRetentionPeriod</h4>
@@ -282,13 +241,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ClusterIdentifier_" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterIdentifier*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ClusterIdentifier" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterIdentifier">ClusterIdentifier</h4>
@@ -309,13 +268,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ClusterIdentifierPrefix_" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterIdentifierPrefix*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ClusterIdentifierPrefix" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterIdentifierPrefix">ClusterIdentifierPrefix</h4>
@@ -336,13 +295,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ClusterMembers_" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterMembers*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ClusterMembers" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterMembers">ClusterMembers</h4>
@@ -363,13 +322,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ClusterResourceId_" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterResourceId*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ClusterResourceId" data-uid="Pulumi.Aws.Neptune.Cluster.ClusterResourceId">ClusterResourceId</h4>
@@ -390,17 +349,18 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_DeletionProtection_" data-uid="Pulumi.Aws.Neptune.Cluster.DeletionProtection*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_DeletionProtection" data-uid="Pulumi.Aws.Neptune.Cluster.DeletionProtection">DeletionProtection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -416,13 +376,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_EnableCloudwatchLogsExports_" data-uid="Pulumi.Aws.Neptune.Cluster.EnableCloudwatchLogsExports*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_EnableCloudwatchLogsExports" data-uid="Pulumi.Aws.Neptune.Cluster.EnableCloudwatchLogsExports">EnableCloudwatchLogsExports</h4>
@@ -443,13 +403,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_Endpoint_" data-uid="Pulumi.Aws.Neptune.Cluster.Endpoint*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_Endpoint" data-uid="Pulumi.Aws.Neptune.Cluster.Endpoint">Endpoint</h4>
@@ -470,13 +430,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_Engine_" data-uid="Pulumi.Aws.Neptune.Cluster.Engine*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_Engine" data-uid="Pulumi.Aws.Neptune.Cluster.Engine">Engine</h4>
@@ -485,7 +445,7 @@ phase because a modification has not yet taken place. You can use the
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Engine { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Engine { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,13 +457,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L100">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_EngineVersion_" data-uid="Pulumi.Aws.Neptune.Cluster.EngineVersion*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_EngineVersion" data-uid="Pulumi.Aws.Neptune.Cluster.EngineVersion">EngineVersion</h4>
@@ -524,13 +484,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_FinalSnapshotIdentifier_" data-uid="Pulumi.Aws.Neptune.Cluster.FinalSnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_FinalSnapshotIdentifier" data-uid="Pulumi.Aws.Neptune.Cluster.FinalSnapshotIdentifier">FinalSnapshotIdentifier</h4>
@@ -539,7 +499,7 @@ phase because a modification has not yet taken place. You can use the
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FinalSnapshotIdentifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FinalSnapshotIdentifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,13 +511,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L112">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_HostedZoneId_" data-uid="Pulumi.Aws.Neptune.Cluster.HostedZoneId*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_HostedZoneId" data-uid="Pulumi.Aws.Neptune.Cluster.HostedZoneId">HostedZoneId</h4>
@@ -578,13 +538,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L117">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_IamDatabaseAuthenticationEnabled_" data-uid="Pulumi.Aws.Neptune.Cluster.IamDatabaseAuthenticationEnabled*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_IamDatabaseAuthenticationEnabled" data-uid="Pulumi.Aws.Neptune.Cluster.IamDatabaseAuthenticationEnabled">IamDatabaseAuthenticationEnabled</h4>
@@ -605,13 +565,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L124">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_IamRoles_" data-uid="Pulumi.Aws.Neptune.Cluster.IamRoles*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_IamRoles" data-uid="Pulumi.Aws.Neptune.Cluster.IamRoles">IamRoles</h4>
@@ -632,13 +592,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_KmsKeyArn_" data-uid="Pulumi.Aws.Neptune.Cluster.KmsKeyArn*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_KmsKeyArn" data-uid="Pulumi.Aws.Neptune.Cluster.KmsKeyArn">KmsKeyArn</h4>
@@ -659,13 +619,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L135">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_NeptuneClusterParameterGroupName_" data-uid="Pulumi.Aws.Neptune.Cluster.NeptuneClusterParameterGroupName*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_NeptuneClusterParameterGroupName" data-uid="Pulumi.Aws.Neptune.Cluster.NeptuneClusterParameterGroupName">NeptuneClusterParameterGroupName</h4>
@@ -674,7 +634,7 @@ phase because a modification has not yet taken place. You can use the
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NeptuneClusterParameterGroupName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NeptuneClusterParameterGroupName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -686,13 +646,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L141">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L142">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_NeptuneSubnetGroupName_" data-uid="Pulumi.Aws.Neptune.Cluster.NeptuneSubnetGroupName*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_NeptuneSubnetGroupName" data-uid="Pulumi.Aws.Neptune.Cluster.NeptuneSubnetGroupName">NeptuneSubnetGroupName</h4>
@@ -713,13 +673,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L148">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_Port_" data-uid="Pulumi.Aws.Neptune.Cluster.Port*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_Port" data-uid="Pulumi.Aws.Neptune.Cluster.Port">Port</h4>
@@ -740,13 +700,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L153">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_PreferredBackupWindow_" data-uid="Pulumi.Aws.Neptune.Cluster.PreferredBackupWindow*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_PreferredBackupWindow" data-uid="Pulumi.Aws.Neptune.Cluster.PreferredBackupWindow">PreferredBackupWindow</h4>
@@ -767,13 +727,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L159">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_PreferredMaintenanceWindow_" data-uid="Pulumi.Aws.Neptune.Cluster.PreferredMaintenanceWindow*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_PreferredMaintenanceWindow" data-uid="Pulumi.Aws.Neptune.Cluster.PreferredMaintenanceWindow">PreferredMaintenanceWindow</h4>
@@ -794,13 +754,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L165">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ReaderEndpoint_" data-uid="Pulumi.Aws.Neptune.Cluster.ReaderEndpoint*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ReaderEndpoint" data-uid="Pulumi.Aws.Neptune.Cluster.ReaderEndpoint">ReaderEndpoint</h4>
@@ -821,13 +781,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_ReplicationSourceIdentifier_" data-uid="Pulumi.Aws.Neptune.Cluster.ReplicationSourceIdentifier*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_ReplicationSourceIdentifier" data-uid="Pulumi.Aws.Neptune.Cluster.ReplicationSourceIdentifier">ReplicationSourceIdentifier</h4>
@@ -836,7 +796,7 @@ phase because a modification has not yet taken place. You can use the
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicationSourceIdentifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ReplicationSourceIdentifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -848,13 +808,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_SkipFinalSnapshot_" data-uid="Pulumi.Aws.Neptune.Cluster.SkipFinalSnapshot*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_SkipFinalSnapshot" data-uid="Pulumi.Aws.Neptune.Cluster.SkipFinalSnapshot">SkipFinalSnapshot</h4>
@@ -875,13 +835,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_SnapshotIdentifier_" data-uid="Pulumi.Aws.Neptune.Cluster.SnapshotIdentifier*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_SnapshotIdentifier" data-uid="Pulumi.Aws.Neptune.Cluster.SnapshotIdentifier">SnapshotIdentifier</h4>
@@ -890,7 +850,7 @@ phase because a modification has not yet taken place. You can use the
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotIdentifier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SnapshotIdentifier { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -902,13 +862,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_StorageEncrypted_" data-uid="Pulumi.Aws.Neptune.Cluster.StorageEncrypted*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_StorageEncrypted" data-uid="Pulumi.Aws.Neptune.Cluster.StorageEncrypted">StorageEncrypted</h4>
@@ -929,13 +889,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L195">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_Tags_" data-uid="Pulumi.Aws.Neptune.Cluster.Tags*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_Tags" data-uid="Pulumi.Aws.Neptune.Cluster.Tags">Tags</h4>
@@ -944,7 +904,7 @@ phase because a modification has not yet taken place. You can use the
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -956,13 +916,13 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L201">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Neptune.Cluster.VpcSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_Neptune_Cluster_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Neptune.Cluster.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
@@ -983,7 +943,7 @@ phase because a modification has not yet taken place. You can use the
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -991,17 +951,17 @@ phase because a modification has not yet taken place. You can use the
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L242">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L243">View Source</a>
   </span>
   <a id="Pulumi_Aws_Neptune_Cluster_Get_" data-uid="Pulumi.Aws.Neptune.Cluster.Get*"></a>
-  <h4 id="Pulumi_Aws_Neptune_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Neptune_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Neptune.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Neptune.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Neptune_Cluster_Get_System_String_Input_System_String__Pulumi_Aws_Neptune_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Neptune.Cluster.Get(System.String,Input{System.String},Pulumi.Aws.Neptune.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1020,7 +980,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1032,7 +992,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1061,7 +1021,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Neptune/Cluster.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Neptune/Cluster.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

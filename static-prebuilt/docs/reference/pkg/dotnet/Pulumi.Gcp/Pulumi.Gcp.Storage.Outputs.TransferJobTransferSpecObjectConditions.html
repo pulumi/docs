@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TransferJobTransferSpecObjectConditions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.Outputs.html">Pulumi.Gcp.Storage.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Storage_Outputs_TransferJobTransferSpecObjectConditions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TransferJobTransferSpecObjectConditions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TransferJobTransferSpecObjectConditions : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L796">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Outputs/TransferJobTransferSpecObjectConditions.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Storage_Outputs_TransferJobTransferSpecObjectConditions_ExcludePrefixes" data-uid="Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecObjectConditions.ExcludePrefixes">ExcludePrefixes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>exclude_prefixes</code> must follow the requirements described for <code>include_prefixes</code>. See <a href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L797">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Outputs/TransferJobTransferSpecObjectConditions.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Storage_Outputs_TransferJobTransferSpecObjectConditions_IncludePrefixes" data-uid="Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecObjectConditions.IncludePrefixes">IncludePrefixes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>include_refixes</code> is specified, objects that satisfy the object conditions must have names that start with one of the <code>include_prefixes</code> and that do not start with any of the <code>exclude_prefixes</code>. If <code>include_prefixes</code> is not specified, all objects except those that have names starting with one of the <code>exclude_prefixes</code> must satisfy the object conditions. See <a href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions">Requirements</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -155,20 +133,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L798">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Outputs/TransferJobTransferSpecObjectConditions.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Storage_Outputs_TransferJobTransferSpecObjectConditions_MaxTimeElapsedSinceLastModification" data-uid="Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecObjectConditions.MaxTimeElapsedSinceLastModification">MaxTimeElapsedSinceLastModification</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A duration in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;3.5s&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MaxTimeElapsedSinceLastModification</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MaxTimeElapsedSinceLastModification</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,20 +159,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L799">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Outputs/TransferJobTransferSpecObjectConditions.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Storage_Outputs_TransferJobTransferSpecObjectConditions_MinTimeElapsedSinceLastModification" data-uid="Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpecObjectConditions.MinTimeElapsedSinceLastModification">MinTimeElapsedSinceLastModification</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A duration in seconds with up to nine fractional digits, terminated by 's'. Example: &quot;3.5s&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string MinTimeElapsedSinceLastModification</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? MinTimeElapsedSinceLastModification</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +185,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -217,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L793" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Storage/Outputs/TransferJobTransferSpecObjectConditions.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">KubernetesClusterDefaultNodePoolGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">KubernetesClusterDefaultNodePoolGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ContainerService.Inputs.html">Pulumi.Azure.ContainerService.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L832">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs__ctor_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs__ctor" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.#ctor">KubernetesClusterDefaultNodePoolGetArgs()</h4>
@@ -129,11 +100,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L762">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_AvailabilityZones_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.AvailabilityZones*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_AvailabilityZones" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.AvailabilityZones">AvailabilityZones</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of Availability Zones across which the Node Pool should be spread.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,21 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L768">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_EnableAutoScaling_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.EnableAutoScaling*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_EnableAutoScaling" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.EnableAutoScaling">EnableAutoScaling</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should <a href="https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler">the Kubernetes Auto Scaler</a> be enabled for this Node Pool? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableAutoScaling { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableAutoScaling { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +148,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L771">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_EnableNodePublicIp_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.EnableNodePublicIp*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_EnableNodePublicIp" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.EnableNodePublicIp">EnableNodePublicIp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should nodes in this Node Pool have a Public IP Address? Defaults to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableNodePublicIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableNodePublicIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L774">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_MaxCount_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.MaxCount*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_MaxCount" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.MaxCount">MaxCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of nodes which should exist in this Node Pool. If specified this must be between <code>1</code> and <code>100</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +202,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L777">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_MaxPods_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.MaxPods*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_MaxPods" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.MaxPods">MaxPods</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxPods { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxPods { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +229,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L780">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_MinCount_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.MinCount*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_MinCount" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.MinCount">MinCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum number of nodes which should exist in this Node Pool. If specified this must be between <code>1</code> and <code>100</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MinCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,17 +256,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L786">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_Name_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.Name*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_Name" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.</p>
+  <div class="markdown level1 summary"><p>The name which should be used for the default Kubernetes Node Pool. Changing this forces a new resource to be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -306,21 +283,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L789">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_NodeCount_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.NodeCount*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_NodeCount" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.NodeCount">NodeCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The initial number of nodes which should exist in this Node Pool. If specified this must be between <code>1</code> and <code>100</code> and between <code>min_count</code> and <code>max_count</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; NodeCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? NodeCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,17 +310,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L794">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_NodeLabels_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.NodeLabels*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_NodeLabels" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.NodeLabels">NodeLabels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -358,17 +337,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L802">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_NodeTaints_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.NodeTaints*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_NodeTaints" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.NodeTaints">NodeTaints</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code>key=value:NoSchedule</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -384,21 +364,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L808">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_OsDiskSizeGb_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.OsDiskSizeGb*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_OsDiskSizeGb" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.OsDiskSizeGb">OsDiskSizeGb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; OsDiskSizeGb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? OsDiskSizeGb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,17 +391,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L817">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_Tags_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.Tags*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_Tags" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.Tags">Tags</h4>
-  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the Node Pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -437,21 +418,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L823">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_Type_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.Type*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_Type" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The type of Node Pool which should be created. Possible values are <code>AvailabilitySet</code> and <code>VirtualMachineScaleSets</code>. Defaults to <code>VirtualMachineScaleSets</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -463,17 +445,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L826">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_VmSize_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.VmSize*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_VmSize" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.VmSize">VmSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the Virtual Machine, such as <code>Standard_DS2_v2</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -489,21 +472,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L829">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_VnetSubnetId_" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.VnetSubnetId*"></a>
   <h4 id="Pulumi_Azure_ContainerService_Inputs_KubernetesClusterDefaultNodePoolGetArgs_VnetSubnetId" data-uid="Pulumi.Azure.ContainerService.Inputs.KubernetesClusterDefaultNodePoolGetArgs.VnetSubnetId">VnetSubnetId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VnetSubnetId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VnetSubnetId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,7 +499,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -527,7 +511,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Containerservice/KubernetesCluster.cs/#L758" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ContainerService/Inputs/KubernetesClusterDefaultNodePoolGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

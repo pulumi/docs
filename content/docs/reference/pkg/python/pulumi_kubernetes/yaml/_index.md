@@ -7,16 +7,16 @@ notitle: true
 
 <div class="section" id="module-pulumi_kubernetes.yaml">
 <span id="yaml"></span><h1>yaml<a class="headerlink" href="#module-pulumi_kubernetes.yaml" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_kubernetes.yaml.copy">
-<code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shallow copy operation on arbitrary Python objects.</p>
 <p>See the module’s <strong>doc</strong> string for more info.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_kubernetes.yaml.getargspec">
-<code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">getargspec</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.getargspec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">getargspec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.getargspec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the names and default values of a function’s parameters.</p>
 <p>A tuple of four things is returned: (args, varargs, keywords, defaults).
 ‘args’ is a list of the argument names, including keyword-only argument names.
@@ -29,11 +29,12 @@ on the supplied callable.</p>
 <p>Alternatively, use getfullargspec() for an API with a similar namedtuple
 based interface, but full support for annotations and keyword-only
 parameters.</p>
+<p>Deprecated since Python 3.5, use <code class="docutils literal notranslate"><span class="pre">inspect.getfullargspec()</span></code>.</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_kubernetes.yaml.CustomResource">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">CustomResource</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">kind</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">CustomResource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">api_version</span></em>, <em class="sig-param"><span class="n">kind</span></em>, <em class="sig-param"><span class="n">spec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>CustomResource represents an instance of a CustomResourceDefinition (CRD). For example, the
 CoreOS Prometheus operator exposes a CRD <code class="docutils literal notranslate"><span class="pre">monitoring.coreos.com/ServiceMonitor</span></code>; to
 instantiate this as a Pulumi resource, one could call <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">CustomResource</span></code>, passing the
@@ -55,9 +56,9 @@ resource’s behavior.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.yaml.CustomResource.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">kind</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">api_version</span></em>, <em class="sig-param"><span class="n">kind</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the state of an existing <code class="docutils literal notranslate"><span class="pre">CustomResource</span></code> resource, as identified by <code class="docutils literal notranslate"><span class="pre">id</span></code>.
 Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted,
 then (per Kubernetes convention) the ID becomes default/[name].</p>
@@ -80,9 +81,9 @@ resource’s behavior.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.yaml.CustomResource.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -98,9 +99,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.yaml.CustomResource.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.CustomResource.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -118,15 +119,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_kubernetes.yaml.get_version">
 <code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.get_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the Semver-formatted version of the package containing this file.</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_kubernetes.yaml.ConfigFile">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">file_id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">transformations=None</em>, <em class="sig-param">resource_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">file_id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>ConfigFile creates a set of Kubernetes resources from a Kubernetes YAML file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -141,15 +142,15 @@ Example: A resource created with resource_prefix=”foo” would produce a resou
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_kubernetes.yaml.ConfigFile.resources">
-<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.resources" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resources</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kubernetes resources contained in this ConfigFile.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.yaml.ConfigFile.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -165,9 +166,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.yaml.ConfigFile.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -183,9 +184,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_kubernetes.yaml.ConfigFile.get_resource">
-<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">group_version_kind</em>, <em class="sig-param">name</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[pulumi.resource.CustomResource][pulumi.resource.CustomResource]<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
 name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
 <dl class="field-list simple">

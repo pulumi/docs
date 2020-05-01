@@ -79,53 +79,12 @@ and <a href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/p
 passwords as well as certificate outputs will be stored in the raw state as
 plaintext. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_cluster.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Cluster</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Cluster</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.html">Pulumi.Gcp.Container</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -136,16 +95,16 @@ plaintext. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Rea
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L414">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster__ctor_" data-uid="Pulumi.Gcp.Container.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Container_Cluster__ctor_System_String_Pulumi_Gcp_Container_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Container.Cluster.#ctor(System.String,Pulumi.Gcp.Container.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Container_Cluster__ctor_System_String_Pulumi_Gcp_Container_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Container.Cluster.#ctor(System.String,Pulumi.Gcp.Container.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@ plaintext. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Rea
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@ plaintext. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Rea
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_AddonsConfig_" data-uid="Pulumi.Gcp.Container.Cluster.AddonsConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_AddonsConfig" data-uid="Pulumi.Gcp.Container.Cluster.AddonsConfig">AddonsConfig</h4>
@@ -202,13 +161,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.html">ClusterAddonsConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.html">ClusterAddonsConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_AuthenticatorGroupsConfig_" data-uid="Pulumi.Gcp.Container.Cluster.AuthenticatorGroupsConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_AuthenticatorGroupsConfig" data-uid="Pulumi.Gcp.Container.Cluster.AuthenticatorGroupsConfig">AuthenticatorGroupsConfig</h4>
@@ -231,18 +190,17 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterAuthenticatorGroupsConfig.html">ClusterAuthenticatorGroupsConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterAuthenticatorGroupsConfig.html">ClusterAuthenticatorGroupsConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_ClusterAutoscaling_" data-uid="Pulumi.Gcp.Container.Cluster.ClusterAutoscaling*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_ClusterAutoscaling" data-uid="Pulumi.Gcp.Container.Cluster.ClusterAutoscaling">ClusterAutoscaling</h4>
-  <div class="markdown level1 summary"><p>)
-Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+  <div class="markdown level1 summary"><p>Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
 on the current needs of the cluster's workload. See the
 <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
@@ -263,13 +221,13 @@ for more details. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterClusterAutoscaling.html">ClusterClusterAutoscaling</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterClusterAutoscaling.html">ClusterClusterAutoscaling</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_ClusterIpv4Cidr_" data-uid="Pulumi.Gcp.Container.Cluster.ClusterIpv4Cidr*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_ClusterIpv4Cidr" data-uid="Pulumi.Gcp.Container.Cluster.ClusterIpv4Cidr">ClusterIpv4Cidr</h4>
@@ -293,17 +251,17 @@ only work for routes-based clusters, where <code>ip_allocation_policy</code> is 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_DatabaseEncryption_" data-uid="Pulumi.Gcp.Container.Cluster.DatabaseEncryption*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_DatabaseEncryption" data-uid="Pulumi.Gcp.Container.Cluster.DatabaseEncryption">DatabaseEncryption</h4>
-  <div class="markdown level1 summary"><p>).
+  <div class="markdown level1 summary"><p>.
 Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -321,13 +279,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterDatabaseEncryption.html">ClusterDatabaseEncryption</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterDatabaseEncryption.html">ClusterDatabaseEncryption</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_DefaultMaxPodsPerNode_" data-uid="Pulumi.Gcp.Container.Cluster.DefaultMaxPodsPerNode*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_DefaultMaxPodsPerNode" data-uid="Pulumi.Gcp.Container.Cluster.DefaultMaxPodsPerNode">DefaultMaxPodsPerNode</h4>
@@ -351,13 +309,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Description_" data-uid="Pulumi.Gcp.Container.Cluster.Description*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Description" data-uid="Pulumi.Gcp.Container.Cluster.Description">Description</h4>
@@ -366,7 +324,7 @@ for more information.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,13 +336,13 @@ for more information.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L84">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_EnableBinaryAuthorization_" data-uid="Pulumi.Gcp.Container.Cluster.EnableBinaryAuthorization*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_EnableBinaryAuthorization" data-uid="Pulumi.Gcp.Container.Cluster.EnableBinaryAuthorization">EnableBinaryAuthorization</h4>
@@ -406,18 +364,17 @@ If enabled, all container images will be validated by Google Binary Authorizatio
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_EnableIntranodeVisibility_" data-uid="Pulumi.Gcp.Container.Cluster.EnableIntranodeVisibility*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_EnableIntranodeVisibility" data-uid="Pulumi.Gcp.Container.Cluster.EnableIntranodeVisibility">EnableIntranodeVisibility</h4>
-  <div class="markdown level1 summary"><p>)
-Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
+  <div class="markdown level1 summary"><p>Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -434,13 +391,13 @@ Whether Intra-node visibility is enabled for this cluster. This makes same node 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_EnableKubernetesAlpha_" data-uid="Pulumi.Gcp.Container.Cluster.EnableKubernetesAlpha*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_EnableKubernetesAlpha" data-uid="Pulumi.Gcp.Container.Cluster.EnableKubernetesAlpha">EnableKubernetesAlpha</h4>
@@ -463,13 +420,13 @@ and will be automatically deleted after 30 days.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_EnableLegacyAbac_" data-uid="Pulumi.Gcp.Container.Cluster.EnableLegacyAbac*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_EnableLegacyAbac" data-uid="Pulumi.Gcp.Container.Cluster.EnableLegacyAbac">EnableLegacyAbac</h4>
@@ -493,17 +450,17 @@ Defaults to <code>false</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_EnableShieldedNodes_" data-uid="Pulumi.Gcp.Container.Cluster.EnableShieldedNodes*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_EnableShieldedNodes" data-uid="Pulumi.Gcp.Container.Cluster.EnableShieldedNodes">EnableShieldedNodes</h4>
-  <div class="markdown level1 summary"><p>) Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code>false</code>.</p>
+  <div class="markdown level1 summary"><p>Enable Shielded Nodes features on all nodes in this cluster.  Defaults to <code>false</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -520,17 +477,17 @@ Defaults to <code>false</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L121">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_EnableTpu_" data-uid="Pulumi.Gcp.Container.Cluster.EnableTpu*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_EnableTpu" data-uid="Pulumi.Gcp.Container.Cluster.EnableTpu">EnableTpu</h4>
-  <div class="markdown level1 summary"><p>) Whether to enable Cloud TPU resources in this cluster.
+  <div class="markdown level1 summary"><p>Whether to enable Cloud TPU resources in this cluster.
 See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -548,13 +505,13 @@ See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">offi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L127">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Endpoint_" data-uid="Pulumi.Gcp.Container.Cluster.Endpoint*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Endpoint" data-uid="Pulumi.Gcp.Container.Cluster.Endpoint">Endpoint</h4>
@@ -575,13 +532,13 @@ See the <a href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">offi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L138">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_InitialNodeCount_" data-uid="Pulumi.Gcp.Container.Cluster.InitialNodeCount*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_InitialNodeCount" data-uid="Pulumi.Gcp.Container.Cluster.InitialNodeCount">InitialNodeCount</h4>
@@ -607,13 +564,13 @@ set this to a value of at least <code>1</code>, alongside setting
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L147">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_InstanceGroupUrls_" data-uid="Pulumi.Gcp.Container.Cluster.InstanceGroupUrls*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_InstanceGroupUrls" data-uid="Pulumi.Gcp.Container.Cluster.InstanceGroupUrls">InstanceGroupUrls</h4>
@@ -635,13 +592,13 @@ to the cluster.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L156">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_IpAllocationPolicy_" data-uid="Pulumi.Gcp.Container.Cluster.IpAllocationPolicy*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_IpAllocationPolicy" data-uid="Pulumi.Gcp.Container.Cluster.IpAllocationPolicy">IpAllocationPolicy</h4>
@@ -665,13 +622,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.html">ClusterIpAllocationPolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.html">ClusterIpAllocationPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L162">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_LabelFingerprint_" data-uid="Pulumi.Gcp.Container.Cluster.LabelFingerprint*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_LabelFingerprint" data-uid="Pulumi.Gcp.Container.Cluster.LabelFingerprint">LabelFingerprint</h4>
@@ -692,13 +649,13 @@ below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L171">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Location_" data-uid="Pulumi.Gcp.Container.Cluster.Location*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Location" data-uid="Pulumi.Gcp.Container.Cluster.Location">Location</h4>
@@ -724,13 +681,13 @@ the region, and with default node locations in those zones as well</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L181">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L179">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_LoggingService_" data-uid="Pulumi.Gcp.Container.Cluster.LoggingService*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_LoggingService" data-uid="Pulumi.Gcp.Container.Cluster.LoggingService">LoggingService</h4>
@@ -741,7 +698,7 @@ write logs to. Available options include <code>logging.googleapis.com</code>(Leg
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoggingService { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LoggingService { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -753,13 +710,13 @@ write logs to. Available options include <code>logging.googleapis.com</code>(Leg
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L188">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L186">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_MaintenancePolicy_" data-uid="Pulumi.Gcp.Container.Cluster.MaintenancePolicy*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_MaintenancePolicy" data-uid="Pulumi.Gcp.Container.Cluster.MaintenancePolicy">MaintenancePolicy</h4>
@@ -781,13 +738,13 @@ documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterMaintenancePolicy.html">ClusterMaintenancePolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterMaintenancePolicy.html">ClusterMaintenancePolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L199">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L197">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_MasterAuth_" data-uid="Pulumi.Gcp.Container.Cluster.MasterAuth*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_MasterAuth" data-uid="Pulumi.Gcp.Container.Cluster.MasterAuth">MasterAuth</h4>
@@ -813,13 +770,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterMasterAuth.html">ClusterMasterAuth</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterMasterAuth.html">ClusterMasterAuth</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_MasterAuthorizedNetworksConfig_" data-uid="Pulumi.Gcp.Container.Cluster.MasterAuthorizedNetworksConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_MasterAuthorizedNetworksConfig" data-uid="Pulumi.Gcp.Container.Cluster.MasterAuthorizedNetworksConfig">MasterAuthorizedNetworksConfig</h4>
@@ -842,13 +799,13 @@ external access (except the cluster node IPs, which GKE automatically whitelists
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterMasterAuthorizedNetworksConfig.html">ClusterMasterAuthorizedNetworksConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterMasterAuthorizedNetworksConfig.html">ClusterMasterAuthorizedNetworksConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L213">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_MasterVersion_" data-uid="Pulumi.Gcp.Container.Cluster.MasterVersion*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_MasterVersion" data-uid="Pulumi.Gcp.Container.Cluster.MasterVersion">MasterVersion</h4>
@@ -871,13 +828,13 @@ has been updated by GKE.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L229">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L228">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_MinMasterVersion_" data-uid="Pulumi.Gcp.Container.Cluster.MinMasterVersion*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_MinMasterVersion" data-uid="Pulumi.Gcp.Container.Cluster.MinMasterVersion">MinMasterVersion</h4>
@@ -887,14 +844,15 @@ current master version--use the read-only <code>master_version</code> field to o
 If unset, the cluster's version will be set by GKE to the version of the most recent
 official release (which is not necessarily the latest version).  Most users will find
 the <code>gcp.container.getEngineVersions</code> data source useful - it indicates which versions
-are available, and can be use to approximate fuzzy versions. If you intend to specify versions manually,
+are available, and can be use to approximate fuzzy versions in a
+provider-compatible way. If you intend to specify versions manually,
 <a href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
 describe the various acceptable formats for this field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MinMasterVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MinMasterVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -906,13 +864,13 @@ describe the various acceptable formats for this field.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L240">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_MonitoringService_" data-uid="Pulumi.Gcp.Container.Cluster.MonitoringService*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_MonitoringService" data-uid="Pulumi.Gcp.Container.Cluster.MonitoringService">MonitoringService</h4>
@@ -927,7 +885,7 @@ Defaults to <code>monitoring.googleapis.com/kubernetes</code></p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MonitoringService { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MonitoringService { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -939,13 +897,13 @@ Defaults to <code>monitoring.googleapis.com/kubernetes</code></p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L248">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L247">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Name_" data-uid="Pulumi.Gcp.Container.Cluster.Name*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Name" data-uid="Pulumi.Gcp.Container.Cluster.Name">Name</h4>
@@ -967,13 +925,13 @@ location.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Network_" data-uid="Pulumi.Gcp.Container.Cluster.Network*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Network" data-uid="Pulumi.Gcp.Container.Cluster.Network">Network</h4>
@@ -984,7 +942,7 @@ shared network.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Network { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Network { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -996,13 +954,13 @@ shared network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L264">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_NetworkPolicy_" data-uid="Pulumi.Gcp.Container.Cluster.NetworkPolicy*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_NetworkPolicy" data-uid="Pulumi.Gcp.Container.Cluster.NetworkPolicy">NetworkPolicy</h4>
@@ -1025,13 +983,13 @@ feature. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNetworkPolicy.html">ClusterNetworkPolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNetworkPolicy.html">ClusterNetworkPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L273">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_NodeConfig_" data-uid="Pulumi.Gcp.Container.Cluster.NodeConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_NodeConfig" data-uid="Pulumi.Gcp.Container.Cluster.NodeConfig">NodeConfig</h4>
@@ -1056,13 +1014,13 @@ this provider. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.html">ClusterNodeConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodeConfig.html">ClusterNodeConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L283">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L282">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_NodeLocations_" data-uid="Pulumi.Gcp.Container.Cluster.NodeLocations*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_NodeLocations" data-uid="Pulumi.Gcp.Container.Cluster.NodeLocations">NodeLocations</h4>
@@ -1086,13 +1044,13 @@ a zonal cluster, omit the cluster's zone.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_NodePools_" data-uid="Pulumi.Gcp.Container.Cluster.NodePools*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_NodePools" data-uid="Pulumi.Gcp.Container.Cluster.NodePools">NodePools</h4>
@@ -1106,7 +1064,7 @@ gcp.container.NodePool resource instead of this property.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterNodePools&gt;&gt; NodePools { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterNodePool&gt;&gt; NodePools { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1118,13 +1076,13 @@ gcp.container.NodePool resource instead of this property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodePools.html">ClusterNodePools</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterNodePool.html">ClusterNodePool</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L307">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_NodeVersion_" data-uid="Pulumi.Gcp.Container.Cluster.NodeVersion*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_NodeVersion" data-uid="Pulumi.Gcp.Container.Cluster.NodeVersion">NodeVersion</h4>
@@ -1132,9 +1090,9 @@ gcp.container.NodePool resource instead of this property.</p>
 or set to the same value as <code>min_master_version</code> on create. Defaults to the default
 version set by GKE which is not necessarily the latest version. This only affects
 nodes in the default node pool. While a fuzzy version can be specified, it's
-recommended that you specify explicit versions as this provider will see spurious diffs
+recommended that you specify explicit versions as the provider will see spurious diffs
 when fuzzy versions are used. See the <code>gcp.container.getEngineVersions</code> data source's
-<code>version_prefix</code> field to approximate fuzzy versions.
+<code>version_prefix</code> field to approximate fuzzy versions in a provider-compatible way.
 To update nodes in other node pools, use the <code>version</code> attribute on the node pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1152,13 +1110,13 @@ To update nodes in other node pools, use the <code>version</code> attribute on t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Operation_" data-uid="Pulumi.Gcp.Container.Cluster.Operation*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Operation" data-uid="Pulumi.Gcp.Container.Cluster.Operation">Operation</h4>
@@ -1178,17 +1136,17 @@ To update nodes in other node pools, use the <code>version</code> attribute on t
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_PodSecurityPolicyConfig_" data-uid="Pulumi.Gcp.Container.Cluster.PodSecurityPolicyConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_PodSecurityPolicyConfig" data-uid="Pulumi.Gcp.Container.Cluster.PodSecurityPolicyConfig">PodSecurityPolicyConfig</h4>
-  <div class="markdown level1 summary"><p>) Configuration for the
+  <div class="markdown level1 summary"><p>Configuration for the
 <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p>
 </div>
@@ -1207,13 +1165,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterPodSecurityPolicyConfig.html">ClusterPodSecurityPolicyConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterPodSecurityPolicyConfig.html">ClusterPodSecurityPolicyConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L324">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_PrivateClusterConfig_" data-uid="Pulumi.Gcp.Container.Cluster.PrivateClusterConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_PrivateClusterConfig" data-uid="Pulumi.Gcp.Container.Cluster.PrivateClusterConfig">PrivateClusterConfig</h4>
@@ -1235,13 +1193,13 @@ clusters with private nodes. Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterPrivateClusterConfig.html">ClusterPrivateClusterConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterPrivateClusterConfig.html">ClusterPrivateClusterConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L331">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Project_" data-uid="Pulumi.Gcp.Container.Cluster.Project*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Project" data-uid="Pulumi.Gcp.Container.Cluster.Project">Project</h4>
@@ -1263,17 +1221,17 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_ReleaseChannel_" data-uid="Pulumi.Gcp.Container.Cluster.ReleaseChannel*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_ReleaseChannel" data-uid="Pulumi.Gcp.Container.Cluster.ReleaseChannel">ReleaseChannel</h4>
-  <div class="markdown level1 summary"><p>) Configuration options for the
+  <div class="markdown level1 summary"><p>Configuration options for the
 <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels">Release channel</a>
 feature, which provide more control over automatic upgrades of your GKE clusters. Structure is documented below.</p>
 </div>
@@ -1292,13 +1250,13 @@ feature, which provide more control over automatic upgrades of your GKE clusters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterReleaseChannel.html">ClusterReleaseChannel</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterReleaseChannel.html">ClusterReleaseChannel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L349">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L348">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_RemoveDefaultNodePool_" data-uid="Pulumi.Gcp.Container.Cluster.RemoveDefaultNodePool*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_RemoveDefaultNodePool" data-uid="Pulumi.Gcp.Container.Cluster.RemoveDefaultNodePool">RemoveDefaultNodePool</h4>
@@ -1322,13 +1280,13 @@ setting <code>initial_node_count</code> to at least <code>1</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L355">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L354">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_ResourceLabels_" data-uid="Pulumi.Gcp.Container.Cluster.ResourceLabels*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_ResourceLabels" data-uid="Pulumi.Gcp.Container.Cluster.ResourceLabels">ResourceLabels</h4>
@@ -1337,7 +1295,7 @@ setting <code>initial_node_count</code> to at least <code>1</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; ResourceLabels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; ResourceLabels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1349,17 +1307,17 @@ setting <code>initial_node_count</code> to at least <code>1</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L363">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L362">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_ResourceUsageExportConfig_" data-uid="Pulumi.Gcp.Container.Cluster.ResourceUsageExportConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_ResourceUsageExportConfig" data-uid="Pulumi.Gcp.Container.Cluster.ResourceUsageExportConfig">ResourceUsageExportConfig</h4>
-  <div class="markdown level1 summary"><p>) Configuration for the
+  <div class="markdown level1 summary"><p>Configuration for the
 <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering">ResourceUsageExportConfig</a> feature.
 Structure is documented below.</p>
 </div>
@@ -1378,13 +1336,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterResourceUsageExportConfig.html">ClusterResourceUsageExportConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterResourceUsageExportConfig.html">ClusterResourceUsageExportConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L371">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_ServicesIpv4Cidr_" data-uid="Pulumi.Gcp.Container.Cluster.ServicesIpv4Cidr*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_ServicesIpv4Cidr" data-uid="Pulumi.Gcp.Container.Cluster.ServicesIpv4Cidr">ServicesIpv4Cidr</h4>
@@ -1408,13 +1366,13 @@ notation (e.g. <code>1.2.3.4/29</code>). Service addresses are typically put in 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L379">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L378">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Subnetwork_" data-uid="Pulumi.Gcp.Container.Cluster.Subnetwork*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_Subnetwork" data-uid="Pulumi.Gcp.Container.Cluster.Subnetwork">Subnetwork</h4>
@@ -1436,17 +1394,20 @@ subnetwork in which the cluster's instances are launched.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L382">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L386">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_TpuIpv4CidrBlock_" data-uid="Pulumi.Gcp.Container.Cluster.TpuIpv4CidrBlock*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_TpuIpv4CidrBlock" data-uid="Pulumi.Gcp.Container.Cluster.TpuIpv4CidrBlock">TpuIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>(Optional) The IP address range of the Cloud TPUs in this cluster, in
+<a href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
+notation (e.g. <code>1.2.3.4/29</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1462,18 +1423,17 @@ subnetwork in which the cluster's instances are launched.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L390">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L394">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_VerticalPodAutoscaling_" data-uid="Pulumi.Gcp.Container.Cluster.VerticalPodAutoscaling*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_VerticalPodAutoscaling" data-uid="Pulumi.Gcp.Container.Cluster.VerticalPodAutoscaling">VerticalPodAutoscaling</h4>
-  <div class="markdown level1 summary"><p>)
-Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+  <div class="markdown level1 summary"><p>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1491,18 +1451,17 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterVerticalPodAutoscaling.html">ClusterVerticalPodAutoscaling</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterVerticalPodAutoscaling.html">ClusterVerticalPodAutoscaling</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L403">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_WorkloadIdentityConfig_" data-uid="Pulumi.Gcp.Container.Cluster.WorkloadIdentityConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Cluster_WorkloadIdentityConfig" data-uid="Pulumi.Gcp.Container.Cluster.WorkloadIdentityConfig">WorkloadIdentityConfig</h4>
-  <div class="markdown level1 summary"><p>)
-Workload Identity allows Kubernetes service accounts to act as a user-managed
+  <div class="markdown level1 summary"><p>Workload Identity allows Kubernetes service accounts to act as a user-managed
 <a href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
 Structure is documented below.</p>
 </div>
@@ -1521,7 +1480,7 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterWorkloadIdentityConfig.html">ClusterWorkloadIdentityConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterWorkloadIdentityConfig.html">ClusterWorkloadIdentityConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1529,17 +1488,17 @@ Structure is documented below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L444">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Cluster_Get_" data-uid="Pulumi.Gcp.Container.Cluster.Get*"></a>
-  <h4 id="Pulumi_Gcp_Container_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Container_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Container.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Container.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Container_Cluster_Get_System_String_Input_System_String__Pulumi_Gcp_Container_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Container.Cluster.Get(System.String,Input{System.String},Pulumi.Gcp.Container.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1558,7 +1517,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1570,7 +1529,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1599,7 +1558,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Cluster.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Azure_Sql_Database" data-uid="Pulumi.Azure.Sql.Database" class="text-break">Class Database
   </h1>
   <div class="markdown level0 summary"><p>Allows you to manage an Azure SQL Database</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/sql_database.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Database</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Database</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Sql.html">Pulumi.Azure.Sql</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database__ctor_" data-uid="Pulumi.Azure.Sql.Database.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Sql_Database__ctor_System_String_Pulumi_Azure_Sql_DatabaseArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Sql.Database.#ctor(System.String,Pulumi.Azure.Sql.DatabaseArgs,Pulumi.CustomResourceOptions)">Database(String, DatabaseArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Sql_Database__ctor_System_String_Pulumi_Azure_Sql_DatabaseArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Sql.Database.#ctor(System.String,Pulumi.Azure.Sql.DatabaseArgs,System.Nullable{CustomResourceOptions})">Database(String, DatabaseArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Database resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Database(string name, DatabaseArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Database(string name, DatabaseArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Collation_" data-uid="Pulumi.Azure.Sql.Database.Collation*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Collation" data-uid="Pulumi.Azure.Sql.Database.Collation">Collation</h4>
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_CreateMode_" data-uid="Pulumi.Azure.Sql.Database.CreateMode*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_CreateMode" data-uid="Pulumi.Azure.Sql.Database.CreateMode">CreateMode</h4>
@@ -209,7 +168,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreateMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CreateMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_CreationDate_" data-uid="Pulumi.Azure.Sql.Database.CreationDate*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_CreationDate" data-uid="Pulumi.Azure.Sql.Database.CreationDate">CreationDate</h4>
@@ -248,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_DefaultSecondaryLocation_" data-uid="Pulumi.Azure.Sql.Database.DefaultSecondaryLocation*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_DefaultSecondaryLocation" data-uid="Pulumi.Azure.Sql.Database.DefaultSecondaryLocation">DefaultSecondaryLocation</h4>
@@ -275,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Edition_" data-uid="Pulumi.Azure.Sql.Database.Edition*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Edition" data-uid="Pulumi.Azure.Sql.Database.Edition">Edition</h4>
@@ -302,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_ElasticPoolName_" data-uid="Pulumi.Azure.Sql.Database.ElasticPoolName*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_ElasticPoolName" data-uid="Pulumi.Azure.Sql.Database.ElasticPoolName">ElasticPoolName</h4>
@@ -329,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Encryption_" data-uid="Pulumi.Azure.Sql.Database.Encryption*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Encryption" data-uid="Pulumi.Azure.Sql.Database.Encryption">Encryption</h4>
@@ -355,13 +314,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_Sql_Database_ExtendedAuditingPolicy_" data-uid="Pulumi.Azure.Sql.Database.ExtendedAuditingPolicy*"></a>
+  <h4 id="Pulumi_Azure_Sql_Database_ExtendedAuditingPolicy" data-uid="Pulumi.Azure.Sql.Database.ExtendedAuditingPolicy">ExtendedAuditingPolicy</h4>
+  <div class="markdown level1 summary"><p>A <code>extended_auditing_policy</code> block as defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DatabaseExtendedAuditingPolicy&gt; ExtendedAuditingPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Sql.Outputs.DatabaseExtendedAuditingPolicy.html">DatabaseExtendedAuditingPolicy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Import_" data-uid="Pulumi.Azure.Sql.Database.Import*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Import" data-uid="Pulumi.Azure.Sql.Database.Import">Import</h4>
@@ -382,13 +368,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Sql.Outputs.DatabaseImport.html">DatabaseImport</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Sql.Outputs.DatabaseImport.html">DatabaseImport</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Location_" data-uid="Pulumi.Azure.Sql.Database.Location*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Location" data-uid="Pulumi.Azure.Sql.Database.Location">Location</h4>
@@ -409,13 +395,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_MaxSizeBytes_" data-uid="Pulumi.Azure.Sql.Database.MaxSizeBytes*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_MaxSizeBytes" data-uid="Pulumi.Azure.Sql.Database.MaxSizeBytes">MaxSizeBytes</h4>
@@ -436,13 +422,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_MaxSizeGb_" data-uid="Pulumi.Azure.Sql.Database.MaxSizeGb*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_MaxSizeGb" data-uid="Pulumi.Azure.Sql.Database.MaxSizeGb">MaxSizeGb</h4>
@@ -462,13 +448,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Name_" data-uid="Pulumi.Azure.Sql.Database.Name*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Name" data-uid="Pulumi.Azure.Sql.Database.Name">Name</h4>
@@ -489,13 +475,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_ReadScale_" data-uid="Pulumi.Azure.Sql.Database.ReadScale*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_ReadScale" data-uid="Pulumi.Azure.Sql.Database.ReadScale">ReadScale</h4>
@@ -516,13 +502,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L99">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_RequestedServiceObjectiveId_" data-uid="Pulumi.Azure.Sql.Database.RequestedServiceObjectiveId*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_RequestedServiceObjectiveId" data-uid="Pulumi.Azure.Sql.Database.RequestedServiceObjectiveId">RequestedServiceObjectiveId</h4>
@@ -544,13 +530,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_RequestedServiceObjectiveName_" data-uid="Pulumi.Azure.Sql.Database.RequestedServiceObjectiveName*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_RequestedServiceObjectiveName" data-uid="Pulumi.Azure.Sql.Database.RequestedServiceObjectiveName">RequestedServiceObjectiveName</h4>
@@ -571,13 +557,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L111">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_ResourceGroupName_" data-uid="Pulumi.Azure.Sql.Database.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_ResourceGroupName" data-uid="Pulumi.Azure.Sql.Database.ResourceGroupName">ResourceGroupName</h4>
@@ -598,13 +584,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L117">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_RestorePointInTime_" data-uid="Pulumi.Azure.Sql.Database.RestorePointInTime*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_RestorePointInTime" data-uid="Pulumi.Azure.Sql.Database.RestorePointInTime">RestorePointInTime</h4>
@@ -625,13 +611,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_ServerName_" data-uid="Pulumi.Azure.Sql.Database.ServerName*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_ServerName" data-uid="Pulumi.Azure.Sql.Database.ServerName">ServerName</h4>
@@ -652,13 +638,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_SourceDatabaseDeletionDate_" data-uid="Pulumi.Azure.Sql.Database.SourceDatabaseDeletionDate*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_SourceDatabaseDeletionDate" data-uid="Pulumi.Azure.Sql.Database.SourceDatabaseDeletionDate">SourceDatabaseDeletionDate</h4>
@@ -679,13 +665,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_SourceDatabaseId_" data-uid="Pulumi.Azure.Sql.Database.SourceDatabaseId*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_SourceDatabaseId" data-uid="Pulumi.Azure.Sql.Database.SourceDatabaseId">SourceDatabaseId</h4>
@@ -706,13 +692,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Tags_" data-uid="Pulumi.Azure.Sql.Database.Tags*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_Tags" data-uid="Pulumi.Azure.Sql.Database.Tags">Tags</h4>
@@ -721,7 +707,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -733,13 +719,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_ThreatDetectionPolicy_" data-uid="Pulumi.Azure.Sql.Database.ThreatDetectionPolicy*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_ThreatDetectionPolicy" data-uid="Pulumi.Azure.Sql.Database.ThreatDetectionPolicy">ThreatDetectionPolicy</h4>
@@ -760,13 +746,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Sql.Outputs.DatabaseThreatDetectionPolicy.html">DatabaseThreatDetectionPolicy</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Sql.Outputs.DatabaseThreatDetectionPolicy.html">DatabaseThreatDetectionPolicy</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L153">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_ZoneRedundant_" data-uid="Pulumi.Azure.Sql.Database.ZoneRedundant*"></a>
   <h4 id="Pulumi_Azure_Sql_Database_ZoneRedundant" data-uid="Pulumi.Azure.Sql.Database.ZoneRedundant">ZoneRedundant</h4>
@@ -787,7 +773,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -795,17 +781,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L190">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Azure_Sql_Database_Get_" data-uid="Pulumi.Azure.Sql.Database.Get*"></a>
-  <h4 id="Pulumi_Azure_Sql_Database_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Sql_DatabaseState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Sql.Database.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Sql.DatabaseState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DatabaseState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Sql_Database_Get_System_String_Input_System_String__Pulumi_Azure_Sql_DatabaseState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Sql.Database.Get(System.String,Input{System.String},Pulumi.Azure.Sql.DatabaseState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DatabaseState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Database resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Database Get(string name, Input&lt;string&gt; id, DatabaseState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Database Get(string name, Input&lt;string&gt; id, DatabaseState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -824,7 +810,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -836,7 +822,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -865,7 +851,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Sql/Database.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Sql/Database.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

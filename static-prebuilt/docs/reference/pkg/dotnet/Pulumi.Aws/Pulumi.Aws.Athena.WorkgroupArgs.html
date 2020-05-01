@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">WorkgroupArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">WorkgroupArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Athena.html">Pulumi.Aws.Athena</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Aws_Athena_WorkgroupArgs__ctor_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_Athena_WorkgroupArgs__ctor" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.#ctor">WorkgroupArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L108">View Source</a>
   </span>
   <a id="Pulumi_Aws_Athena_WorkgroupArgs_Configuration_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Configuration*"></a>
   <h4 id="Pulumi_Aws_Athena_WorkgroupArgs_Configuration" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Configuration">Configuration</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;WorkgroupConfigurationArgs&gt; Configuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;WorkgroupConfigurationArgs&gt;? Configuration { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Athena.Inputs.WorkgroupConfigurationArgs.html">WorkgroupConfigurationArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Athena.Inputs.WorkgroupConfigurationArgs.html">WorkgroupConfigurationArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Aws_Athena_WorkgroupArgs_Description_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Description*"></a>
   <h4 id="Pulumi_Aws_Athena_WorkgroupArgs_Description" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Description">Description</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Athena_WorkgroupArgs_ForceDestroy_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.ForceDestroy*"></a>
+  <h4 id="Pulumi_Aws_Athena_WorkgroupArgs_ForceDestroy" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.ForceDestroy">ForceDestroy</h4>
+  <div class="markdown level1 summary"><p>The option to delete the workgroup and its contents even if the workgroup contains any named queries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ForceDestroy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Aws_Athena_WorkgroupArgs_Name_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Name*"></a>
   <h4 id="Pulumi_Aws_Athena_WorkgroupArgs_Name" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Name">Name</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L132">View Source</a>
   </span>
   <a id="Pulumi_Aws_Athena_WorkgroupArgs_State_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.State*"></a>
   <h4 id="Pulumi_Aws_Athena_WorkgroupArgs_State" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.State">State</h4>
@@ -219,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; State { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? State { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Aws_Athena_WorkgroupArgs_Tags_" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_Athena_WorkgroupArgs_Tags" data-uid="Pulumi.Aws.Athena.WorkgroupArgs.Tags">Tags</h4>
@@ -258,7 +256,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -270,7 +268,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Athena/Workgroup.cs/#L99" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Athena/Workgroup.cs/#L103" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

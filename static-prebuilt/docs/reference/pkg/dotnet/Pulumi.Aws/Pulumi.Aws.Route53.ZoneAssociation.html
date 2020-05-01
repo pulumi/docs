@@ -76,55 +76,14 @@
 <p><strong>NOTE:</strong> Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the <code>vpc</code> configuration blocks available within the <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html"><code>aws.route53.Zone</code> resource</a> instead.</p>
 </blockquote>
 <blockquote>
-<p><strong>NOTE:</strong> This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html"><code>aws.route53.Zone</code> resource</a> via <code>vpc</code> configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic this provider resource <a href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle configuration block</a> with <code>ignore_changes</code> in the <code>aws.route53.Zone</code> resource to manage additional associations via this resource.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown</a>.</p>
+<p><strong>NOTE:</strong> This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html"><code>aws.route53.Zone</code> resource</a> via <code>vpc</code> configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges"><code>ignoreChanges</code></a> in the <code>aws.route53.Zone</code> resource to manage additional associations via this resource.</p>
 </blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">ZoneAssociation</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ZoneAssociation</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Route53.html">Pulumi.Aws.Route53</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -135,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/ZoneAssociation.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ZoneAssociation.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ZoneAssociation__ctor_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Route53_ZoneAssociation__ctor_System_String_Pulumi_Aws_Route53_ZoneAssociationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.#ctor(System.String,Pulumi.Aws.Route53.ZoneAssociationArgs,Pulumi.CustomResourceOptions)">ZoneAssociation(String, ZoneAssociationArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Route53_ZoneAssociation__ctor_System_String_Pulumi_Aws_Route53_ZoneAssociationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Route53.ZoneAssociation.#ctor(System.String,Pulumi.Aws.Route53.ZoneAssociationArgs,System.Nullable{CustomResourceOptions})">ZoneAssociation(String, ZoneAssociationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a ZoneAssociation resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ZoneAssociation(string name, ZoneAssociationArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ZoneAssociation(string name, ZoneAssociationArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -179,7 +138,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/ZoneAssociation.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ZoneAssociation.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ZoneAssociation_VpcId_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.VpcId*"></a>
   <h4 id="Pulumi_Aws_Route53_ZoneAssociation_VpcId" data-uid="Pulumi.Aws.Route53.ZoneAssociation.VpcId">VpcId</h4>
@@ -200,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/ZoneAssociation.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ZoneAssociation.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ZoneAssociation_VpcRegion_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.VpcRegion*"></a>
   <h4 id="Pulumi_Aws_Route53_ZoneAssociation_VpcRegion" data-uid="Pulumi.Aws.Route53.ZoneAssociation.VpcRegion">VpcRegion</h4>
@@ -227,13 +186,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/ZoneAssociation.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ZoneAssociation.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ZoneAssociation_ZoneId_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.ZoneId*"></a>
   <h4 id="Pulumi_Aws_Route53_ZoneAssociation_ZoneId" data-uid="Pulumi.Aws.Route53.ZoneAssociation.ZoneId">ZoneId</h4>
@@ -254,7 +213,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -262,17 +221,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/ZoneAssociation.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ZoneAssociation.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_ZoneAssociation_Get_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.Get*"></a>
-  <h4 id="Pulumi_Aws_Route53_ZoneAssociation_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Route53_ZoneAssociationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Route53.ZoneAssociation.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Route53.ZoneAssociationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ZoneAssociationState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Route53_ZoneAssociation_Get_System_String_Input_System_String__Pulumi_Aws_Route53_ZoneAssociationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Route53.ZoneAssociation.Get(System.String,Input{System.String},Pulumi.Aws.Route53.ZoneAssociationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ZoneAssociationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing ZoneAssociation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ZoneAssociation Get(string name, Input&lt;string&gt; id, ZoneAssociationState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ZoneAssociation Get(string name, Input&lt;string&gt; id, ZoneAssociationState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,7 +250,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -303,7 +262,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -332,7 +291,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/ZoneAssociation.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/ZoneAssociation.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

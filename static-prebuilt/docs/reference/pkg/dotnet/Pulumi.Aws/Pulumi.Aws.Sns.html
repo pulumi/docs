@@ -76,17 +76,14 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Pulumi.Aws.Sns.GetTopic.html">GetTopic</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.GetTopicArgs.html">GetTopicArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.GetTopicResult.html">GetTopicResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Aws.Sns.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.PlatformApplication.html">PlatformApplication</a></h4>
       <section><p>Provides an SNS platform application resource</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.PlatformApplicationArgs.html">PlatformApplicationArgs</a></h4>
       <section></section>
@@ -94,9 +91,6 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.SmsPreferences.html">SmsPreferences</a></h4>
       <section><p>Provides a way to set SNS SMS preferences.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.SmsPreferencesArgs.html">SmsPreferencesArgs</a></h4>
       <section></section>
@@ -106,9 +100,6 @@
       <section><p>Provides an SNS topic resource</p>
 <h2 id="message-delivery-status-arguments">Message Delivery Status Arguments</h2>
 <p>The <code>&amp;lt;endpoint&gt;_success_feedback_role_arn</code> and <code>&amp;lt;endpoint&gt;_failure_feedback_role_arn</code> arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The <code>&amp;lt;endpoint&gt;_success_feedback_sample_rate</code> argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  <code>&amp;lt;endpoint&gt;_failure_feedback_role_arn</code> argument, then all failed message deliveries generate CloudWatch Logs.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.TopicArgs.html">TopicArgs</a></h4>
       <section></section>
@@ -116,9 +107,6 @@
       <section><p>Provides an SNS topic policy resource</p>
 <blockquote>
 <p><strong>NOTE:</strong> If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. <code>arn:aws:iam::123456789012:root</code></p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.TopicPolicyArgs.html">TopicPolicyArgs</a></h4>
@@ -143,9 +131,6 @@ probably be SQS queues.</p>
 </blockquote>
 <blockquote>
 <p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Aws.Sns.TopicSubscriptionArgs.html">TopicSubscriptionArgs</a></h4>

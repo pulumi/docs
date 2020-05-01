@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">HaproxyLayerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">HaproxyLayerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.OpsWorks.html">Pulumi.Aws.OpsWorks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L581">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L621">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState__ctor_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.#ctor*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState__ctor" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.#ctor">HaproxyLayerState()</h4>
@@ -129,7 +100,34 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L400">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L422">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_Arn_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.Arn*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_Arn" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The Amazon Resource Name(ARN) of the layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L428">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_AutoAssignElasticIps_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.AutoAssignElasticIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_AutoAssignElasticIps" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.AutoAssignElasticIps">AutoAssignElasticIps</h4>
@@ -138,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoAssignElasticIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoAssignElasticIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L406">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L434">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_AutoAssignPublicIps_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.AutoAssignPublicIps*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_AutoAssignPublicIps" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.AutoAssignPublicIps">AutoAssignPublicIps</h4>
@@ -165,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoAssignPublicIps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoAssignPublicIps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L412">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L440">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_AutoHealing_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.AutoHealing*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_AutoHealing" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.AutoHealing">AutoHealing</h4>
@@ -192,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AutoHealing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AutoHealing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L417">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L445">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomConfigureRecipes_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomConfigureRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomConfigureRecipes" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomConfigureRecipes">CustomConfigureRecipes</h4>
@@ -230,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L425">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L453">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomDeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomDeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomDeployRecipes" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomDeployRecipes">CustomDeployRecipes</h4>
@@ -256,13 +254,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L434">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L462">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomInstanceProfileArn_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomInstanceProfileArn*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomInstanceProfileArn" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomInstanceProfileArn">CustomInstanceProfileArn</h4>
@@ -271,7 +269,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomInstanceProfileArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomInstanceProfileArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,13 +281,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L440">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L468">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomJson_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomJson*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomJson" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomJson">CustomJson</h4>
@@ -298,7 +296,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CustomJson { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CustomJson { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,13 +308,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L449">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L477">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomSecurityGroupIds_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomSecurityGroupIds*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomSecurityGroupIds" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomSecurityGroupIds">CustomSecurityGroupIds</h4>
@@ -337,13 +335,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L457">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L485">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomSetupRecipes_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomSetupRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomSetupRecipes" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomSetupRecipes">CustomSetupRecipes</h4>
@@ -363,13 +361,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L465">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L493">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomShutdownRecipes_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomShutdownRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomShutdownRecipes" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomShutdownRecipes">CustomShutdownRecipes</h4>
@@ -389,13 +387,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L473">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L501">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomUndeployRecipes_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomUndeployRecipes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_CustomUndeployRecipes" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.CustomUndeployRecipes">CustomUndeployRecipes</h4>
@@ -415,13 +413,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L482">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L510">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_DrainElbOnShutdown_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.DrainElbOnShutdown*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_DrainElbOnShutdown" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.DrainElbOnShutdown">DrainElbOnShutdown</h4>
@@ -430,7 +428,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DrainElbOnShutdown { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DrainElbOnShutdown { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -442,13 +440,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L491">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L519">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_EbsVolumes_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.EbsVolumes*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_EbsVolumes" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.EbsVolumes">EbsVolumes</h4>
@@ -457,7 +455,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;HaproxyLayerEbsVolumesGetArgs&gt; EbsVolumes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;HaproxyLayerEbsVolumeGetArgs&gt; EbsVolumes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -469,13 +467,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Inputs.HaproxyLayerEbsVolumesGetArgs.html">HaproxyLayerEbsVolumesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.OpsWorks.Inputs.HaproxyLayerEbsVolumeGetArgs.html">HaproxyLayerEbsVolumeGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L500">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L528">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_ElasticLoadBalancer_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.ElasticLoadBalancer*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_ElasticLoadBalancer" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.ElasticLoadBalancer">ElasticLoadBalancer</h4>
@@ -484,7 +482,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ElasticLoadBalancer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ElasticLoadBalancer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -496,13 +494,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L506">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L534">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_HealthcheckMethod_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.HealthcheckMethod*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_HealthcheckMethod" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.HealthcheckMethod">HealthcheckMethod</h4>
@@ -511,7 +509,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HealthcheckMethod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HealthcheckMethod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -523,13 +521,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L512">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L540">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_HealthcheckUrl_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.HealthcheckUrl*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_HealthcheckUrl" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.HealthcheckUrl">HealthcheckUrl</h4>
@@ -538,7 +536,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HealthcheckUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HealthcheckUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -550,13 +548,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L518">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L546">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_InstallUpdatesOnBoot_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.InstallUpdatesOnBoot*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_InstallUpdatesOnBoot" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.InstallUpdatesOnBoot">InstallUpdatesOnBoot</h4>
@@ -565,7 +563,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; InstallUpdatesOnBoot { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? InstallUpdatesOnBoot { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -577,13 +575,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L524">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L552">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_InstanceShutdownTimeout_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.InstanceShutdownTimeout*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_InstanceShutdownTimeout" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.InstanceShutdownTimeout">InstanceShutdownTimeout</h4>
@@ -592,7 +590,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; InstanceShutdownTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? InstanceShutdownTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,13 +602,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L530">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L558">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_Name_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.Name*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_Name" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.Name">Name</h4>
@@ -619,7 +617,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,13 +629,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L536">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L564">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StackId_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StackId*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StackId" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StackId">StackId</h4>
@@ -646,7 +644,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StackId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StackId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -658,13 +656,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L542">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L570">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsEnabled_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsEnabled*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsEnabled" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsEnabled">StatsEnabled</h4>
@@ -673,7 +671,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; StatsEnabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? StatsEnabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -685,13 +683,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L548">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L576">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsPassword_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsPassword*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsPassword" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsPassword">StatsPassword</h4>
@@ -700,7 +698,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StatsPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StatsPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -712,13 +710,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L554">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L582">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsUrl_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsUrl*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsUrl" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsUrl">StatsUrl</h4>
@@ -727,7 +725,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StatsUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StatsUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -739,13 +737,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L560">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L588">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsUser_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsUser*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_StatsUser" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.StatsUser">StatsUser</h4>
@@ -754,7 +752,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StatsUser { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StatsUser { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -766,13 +764,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L569">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L597">View Source</a>
   </span>
   <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_SystemPackages_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.SystemPackages*"></a>
   <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_SystemPackages" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.SystemPackages">SystemPackages</h4>
@@ -793,22 +791,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L609">View Source</a>
   </span>
-  <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.UseEbsOptimizedInstances*"></a>
-  <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
-  <div class="markdown level1 summary"><p>Whether to use EBS-optimized instances.</p>
+  <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_Tags_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.Tags*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_Tags" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; UseEbsOptimizedInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; Tags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -820,7 +818,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L618">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_OpsWorks_HaproxyLayerState_UseEbsOptimizedInstances_" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.UseEbsOptimizedInstances*"></a>
+  <h4 id="Pulumi_Aws_OpsWorks_HaproxyLayerState_UseEbsOptimizedInstances" data-uid="Pulumi.Aws.OpsWorks.HaproxyLayerState.UseEbsOptimizedInstances">UseEbsOptimizedInstances</h4>
+  <div class="markdown level1 summary"><p>Whether to use EBS-optimized instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? UseEbsOptimizedInstances { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -832,7 +857,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Opsworks/HaproxyLayer.cs/#L395" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/OpsWorks/HaproxyLayer.cs/#L417" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -13,13 +13,12 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-signalfx/issues">pulumi/pulumi-signalfx repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/issues">terraform-providers/terraform-provider-signalfx repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_signalfx.jira"></span><dl class="class">
+<span class="target" id="module-pulumi_signalfx.jira"></span><dl class="py class">
 <dt id="pulumi_signalfx.jira.Integration">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.jira.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_token=None</em>, <em class="sig-param">assignee_display_name=None</em>, <em class="sig-param">assignee_name=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">issue_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_key=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_signalfx.jira.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assignee_display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assignee_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issue_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>SignalFx Jira integrations. For help with this integration see <a class="reference external" href="https://docs.signalfx.com/en/latest/admin-guide/integrate-notifications.html#integrate-with-jira">Integration with Jira</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -41,81 +40,81 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.api_token">
-<code class="sig-name descname">api_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.api_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">api_token</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.api_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The API token for the user email</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.assignee_display_name">
-<code class="sig-name descname">assignee_display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.assignee_display_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">assignee_display_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.assignee_display_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Jira display name for the assignee.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.assignee_name">
-<code class="sig-name descname">assignee_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.assignee_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">assignee_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.assignee_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Jira user name for the assignee.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.auth_method">
-<code class="sig-name descname">auth_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.auth_method" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">auth_method</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.auth_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Authentication method used when creating the Jira integration. One of <code class="docutils literal notranslate"><span class="pre">EmailAndToken</span></code> (using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> and <code class="docutils literal notranslate"><span class="pre">api_token</span></code>) or <code class="docutils literal notranslate"><span class="pre">UsernameAndPassword</span></code> (using <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.base_url">
-<code class="sig-name descname">base_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.base_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">base_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.base_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base URL of the Jira instance that’s integrated with SignalFx.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the integration is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.issue_type">
-<code class="sig-name descname">issue_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.issue_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">issue_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.issue_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that’s valid for the Jira project specified in <code class="docutils literal notranslate"><span class="pre">projectKey</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the integration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.password">
-<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Password used to authenticate the Jira integration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.project_key">
-<code class="sig-name descname">project_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.project_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">project_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.project_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.user_email">
-<code class="sig-name descname">user_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.user_email" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_email</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.user_email" title="Permalink to this definition">¶</a></dt>
 <dd><p>Email address used to authenticate the Jira integration.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_signalfx.jira.Integration.username">
-<code class="sig-name descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.username" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_signalfx.jira.Integration.username" title="Permalink to this definition">¶</a></dt>
 <dd><p>User name used to authenticate the Jira integration.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.jira.Integration.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_token=None</em>, <em class="sig-param">assignee_display_name=None</em>, <em class="sig-param">assignee_name=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">issue_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_key=None</em>, <em class="sig-param">user_email=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assignee_display_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assignee_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">issue_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -141,9 +140,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.jira.Integration.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -159,9 +158,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_signalfx.jira.Integration.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_signalfx.jira.Integration.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

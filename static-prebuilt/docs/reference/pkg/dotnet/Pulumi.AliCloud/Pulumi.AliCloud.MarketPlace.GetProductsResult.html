@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetProductsResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.MarketPlace.html">Pulumi.AliCloud.MarketPlace</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetProductsResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetProductsResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L104">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_CategoryId" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.CategoryId">CategoryId</h4>
   <div class="markdown level1 summary"><p>The category id of the product.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string CategoryId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? CategoryId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L127">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L108">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_Id" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L112">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_Ids" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>A list of product codes.</p>
@@ -183,20 +159,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L113">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_NameRegex" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,20 +184,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_OutputFile" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +209,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_Products" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.Products">Products</h4>
   <div class="markdown level1 summary"><p>A list of products. Each element contains the following attributes:</p>
@@ -247,7 +223,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetProductsProductsResult&gt; Products</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetProductsProductResult&gt; Products</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,20 +235,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.MarketPlace.Outputs.GetProductsProductsResult.html">GetProductsProductsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.MarketPlace.Outputs.GetProductsProductResult.html">GetProductsProductResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_ProductType" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.ProductType">ProductType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ProductType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ProductType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,20 +260,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L113">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L120">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_SearchTerm" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.SearchTerm">SearchTerm</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SearchTerm</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SearchTerm</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,20 +285,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L121">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_Sort" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.Sort">Sort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Sort</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Sort</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,13 +310,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L125">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_SuggestedPrice" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.SuggestedPrice">SuggestedPrice</h4>
   <div class="markdown level1 summary"><p>The suggested price of the product.</p>
@@ -366,7 +342,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L122">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L129">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_SupplierId" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.SupplierId">SupplierId</h4>
   <div class="markdown level1 summary"><p>The supplier id of the product.</p>
@@ -374,7 +350,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SupplierId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SupplierId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,20 +362,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_MarketPlace_GetProductsResult_SupplierNameKeyword" data-uid="Pulumi.AliCloud.MarketPlace.GetProductsResult.SupplierNameKeyword">SupplierNameKeyword</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SupplierNameKeyword</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? SupplierNameKeyword</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +387,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -423,7 +399,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Marketplace/GetProducts.cs/#L95" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/MarketPlace/GetProducts.cs/#L98" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

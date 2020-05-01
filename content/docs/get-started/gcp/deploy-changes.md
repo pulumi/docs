@@ -21,20 +21,20 @@ $ pulumi up
 Pulumi computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
+$ pulumi up
 Previewing update (dev):
+     Type                   Name               Plan       Info
+     pulumi:pulumi:Stack    quickstart-dev
+ ~   └─ gcp:storage:Bucket  my-bucket          update     [diff: ~labels]
 
-     Type                   Name            Plan       Info
-     pulumi:pulumi:Stack    gcp-bucket-dev
- +   ├─ gcp:kms:KeyRing     my-keyring      create
- +   ├─ gcp:kms:CryptoKey   my-cryptokey    create
- ~   └─ gcp:storage:Bucket  my-bucket       update     [diff: +encryption]
+Outputs:
+  ~ bucketName: "gs://my-bucket-d8d30a1" => output<string>
 
 Resources:
-    + 2 to create
     ~ 1 to update
-    3 changes. 1 unchanged
+    1 unchanged
 
-Do you want to perform this update?
+Do you want to perform this update?  [Use arrows to move, enter to select, type to filter]
   yes
 > no
   details
@@ -47,20 +47,16 @@ Choosing `yes` will proceed with the update.
 ```
 Do you want to perform this update? yes
 Updating (dev):
-
-     Type                   Name            Status      Info
-     pulumi:pulumi:Stack    gcp-bucket-dev
- +   ├─ gcp:kms:KeyRing     my-keyring      created
- +   ├─ gcp:kms:CryptoKey   my-cryptokey    created
- ~   └─ gcp:storage:Bucket  my-bucket       updated     [diff: +encryption]
+     Type                   Name               Status      Info
+     pulumi:pulumi:Stack    quickstart-dev
+ ~   └─ gcp:storage:Bucket  my-bucket          updated     [diff: ~labels]
 
 Outputs:
-    bucketName: "gs://my-bucket-6cea6b4"
+    bucketName: "gs://my-bucket-d8d30a1"
 
 Resources:
-    + 2 created
     ~ 1 updated
-    3 changes. 1 unchanged
+    1 unchanged
 
 Duration: 4s
 ```

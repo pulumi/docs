@@ -81,40 +81,16 @@ runs, and will be available from the Web console afterwards.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Log</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_Log_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Log</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Log : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Log.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Log.cs/#L17">View Source</a>
   </span>
   <a id="Pulumi_Log_Debug_" data-uid="Pulumi.Log.Debug*"></a>
   <h4 id="Pulumi_Log_Debug_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Debug(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Debug(String, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
@@ -123,7 +99,7 @@ runs, and will be available from the Web console afterwards.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Debug(string message, Resource resource = null, int? streamId = default(int? ), bool? ephemeral = default(bool? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Debug(string message, Resource resource = null, int? streamId = null, bool? ephemeral = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,7 +134,7 @@ runs, and will be available from the Web console afterwards.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Log.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Log.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Log_Error_" data-uid="Pulumi.Log.Error*"></a>
   <h4 id="Pulumi_Log_Error_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Error(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Error(String, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
@@ -168,7 +144,7 @@ operations immediately.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Error(string message, Resource resource = null, int? streamId = default(int? ), bool? ephemeral = default(bool? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Error(string message, Resource resource = null, int? streamId = null, bool? ephemeral = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,17 +179,17 @@ operations immediately.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Log.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Log.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Log_Exception_" data-uid="Pulumi.Log.Exception*"></a>
-  <h4 id="Pulumi_Log_Exception_System_Exception_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Exception(System.Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Exception(Exception, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
+  <h4 id="Pulumi_Log_Exception_Exception_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Exception(Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Exception(Exception, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"><p>Logs a fatal exception to indicate that the tool should stop processing resource
 operations immediately.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Exception(Exception exception, Resource resource = null, int? streamId = default(int? ), bool? ephemeral = default(bool? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Exception(Exception exception, Resource resource = null, int? streamId = null, bool? ephemeral = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,7 +202,7 @@ operations immediately.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><span class="xref">Exception</span></td>
         <td><span class="parametername">exception</span></td>
         <td></td>
       </tr>
@@ -248,7 +224,7 @@ operations immediately.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Log.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Log.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Log_Info_" data-uid="Pulumi.Log.Info*"></a>
   <h4 id="Pulumi_Log_Info_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Info(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Info(String, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
@@ -258,7 +234,7 @@ operations.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Info(string message, Resource resource = null, int? streamId = default(int? ), bool? ephemeral = default(bool? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Info(string message, Resource resource = null, int? streamId = null, bool? ephemeral = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,7 +269,7 @@ operations.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Log.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Log.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Log_Warn_" data-uid="Pulumi.Log.Warn*"></a>
   <h4 id="Pulumi_Log_Warn_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Warn(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Warn(String, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
@@ -302,7 +278,7 @@ operations.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Warn(string message, Resource resource = null, int? streamId = default(int? ), bool? ephemeral = default(bool? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Warn(string message, Resource resource = null, int? streamId = null, bool? ephemeral = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,7 +319,7 @@ operations.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Log.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Log.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

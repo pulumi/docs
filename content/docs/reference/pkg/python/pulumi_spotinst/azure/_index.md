@@ -13,13 +13,10 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-spotinst/issues">pulumi/pulumi-spotinst repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/issues">terraform-providers/terraform-provider-spotinst repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_spotinst.azure"></span><dl class="class">
+<span class="target" id="module-pulumi_spotinst.azure"></span><dl class="py class">
 <dt id="pulumi_spotinst.azure.Elastigroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.azure.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">integration_kubernetes=None</em>, <em class="sig-param">integration_multai_runtime=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">low_priority_sizes=None</em>, <em class="sig-param">managed_service_identities=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">od_sizes=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.azure.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_kubernetes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_multai_runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">low_priority_sizes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_service_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">od_sizes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst elastigroup Azure resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_azure.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_azure.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -183,69 +180,69 @@ anything, please consult the source <a class="reference external" href="https://
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shouldRoll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.desired_capacity">
-<code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.desired_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">desired_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.desired_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired number of instances the group should have at any time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.low_priority_sizes">
-<code class="sig-name descname">low_priority_sizes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.low_priority_sizes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">low_priority_sizes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.low_priority_sizes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Available Low-Priority sizes.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.max_size">
-<code class="sig-name descname">max_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.max_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of instances the group should have at any time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.min_size">
-<code class="sig-name descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.min_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum number of instances the group should have at any time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the managed identity.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.od_sizes">
-<code class="sig-name descname">od_sizes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.od_sizes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">od_sizes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.od_sizes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Available On-Demand sizes</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.product">
-<code class="sig-name descname">product</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.product" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">product</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operation system type. Valid values: <code class="docutils literal notranslate"><span class="pre">&quot;Linux&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Windows&quot;</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.region">
-<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region your Azure group will be created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Resource Group that the user-assigned managed identity resides in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.shutdown_script">
-<code class="sig-name descname">shutdown_script</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.shutdown_script" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shutdown_script</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.shutdown_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shutdown script for the group. Value should be passed as a string encoded at Base64 only.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.strategy">
-<code class="sig-name descname">strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.strategy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">strategy</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the deployment strategy.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">draining_timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Time (seconds) to allow the instance to be drained from incoming TCP connections and detached from MLB before terminating it during a scale-down operation.</p></li>
@@ -254,15 +251,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.azure.Elastigroup.user_data">
-<code class="sig-name descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.user_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.user_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base64-encoded MIME user data to make available to the instances.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.azure.Elastigroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">integration_kubernetes=None</em>, <em class="sig-param">integration_multai_runtime=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">low_priority_sizes=None</em>, <em class="sig-param">managed_service_identities=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">od_sizes=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">images</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_kubernetes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_multai_runtime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">low_priority_sizes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_service_identities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">od_sizes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">product</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Elastigroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -431,9 +428,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.azure.Elastigroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -449,9 +446,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.azure.Elastigroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.azure.Elastigroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

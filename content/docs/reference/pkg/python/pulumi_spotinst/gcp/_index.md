@@ -13,13 +13,10 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-spotinst/issues">pulumi/pulumi-spotinst repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/issues">terraform-providers/terraform-provider-spotinst repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_spotinst.gcp"></span><dl class="class">
+<span class="target" id="module-pulumi_spotinst.gcp"></span><dl class="py class">
 <dt id="pulumi_spotinst.gcp.Elastigroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gcp.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">backend_services=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">gpu=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">instance_types_customs=None</em>, <em class="sig-param">instance_types_ondemand=None</em>, <em class="sig-param">instance_types_preemptibles=None</em>, <em class="sig-param">integration_docker_swarm=None</em>, <em class="sig-param">integration_gke=None</em>, <em class="sig-param">ip_forwarding=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">metadatas=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">ondemand_count=None</em>, <em class="sig-param">preemptible_percentage=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">startup_script=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unhealthy_duration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gcp.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draining_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_to_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_customs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_preemptibles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_docker_swarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_gke</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_forwarding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadatas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ondemand_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preemptible_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unhealthy_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst elastigroup GCP resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gcp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -202,39 +199,39 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region for the group of subnets.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The names of the subnets in the region.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.availability_zones">
-<code class="sig-name descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.availability_zones" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">availability_zones</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of availability zones for the group.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region your GCP group will be created in.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.desired_capacity">
-<code class="sig-name descname">desired_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.desired_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">desired_capacity</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.desired_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired number of instances the group should have at any time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.draining_timeout">
-<code class="sig-name descname">draining_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.draining_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">draining_timeout</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.draining_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.fallback_to_ondemand">
-<code class="sig-name descname">fallback_to_ondemand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.fallback_to_ondemand" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fallback_to_ondemand</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.fallback_to_ondemand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.instance_types_customs">
-<code class="sig-name descname">instance_types_customs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.instance_types_customs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_types_customs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.instance_types_customs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">memoryGib</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[<a class="reference external" href="https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications">https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications</a>]</p></li>
@@ -242,21 +239,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.instance_types_ondemand">
-<code class="sig-name descname">instance_types_ondemand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.instance_types_ondemand" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_types_ondemand</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.instance_types_ondemand" title="Permalink to this definition">¶</a></dt>
 <dd><p>The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.instance_types_preemptibles">
-<code class="sig-name descname">instance_types_preemptibles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.instance_types_preemptibles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">instance_types_preemptibles</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.instance_types_preemptibles" title="Permalink to this definition">¶</a></dt>
 <dd><p>The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.labels">
-<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">labels</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of objects with key-value pairs.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Labels key.</p></li>
@@ -264,15 +261,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.max_size">
-<code class="sig-name descname">max_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.max_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of instances the group should have at any time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.metadatas">
-<code class="sig-name descname">metadatas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.metadatas" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metadatas</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.metadatas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of objects with key-value pairs.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Labels key.</p></li>
@@ -280,45 +277,45 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.min_size">
-<code class="sig-name descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.min_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">min_size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum number of instances the group should have at any time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The group name.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.preemptible_percentage">
-<code class="sig-name descname">preemptible_percentage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.preemptible_percentage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">preemptible_percentage</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.preemptible_percentage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Percentage of Preemptible VMs to spin up from the “desired_capacity”.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.service_account">
-<code class="sig-name descname">service_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.service_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>The email of the service account in which the group instances will be launched.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.shutdown_script">
-<code class="sig-name descname">shutdown_script</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.shutdown_script" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shutdown_script</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.shutdown_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: <a class="reference external" href="https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/">Shutdown Script</a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.startup_script">
-<code class="sig-name descname">startup_script</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.startup_script" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">startup_script</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.startup_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.subnets">
-<code class="sig-name descname">subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.subnets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnets</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of regions and subnets.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region for the group of subnets.</p></li>
@@ -326,15 +323,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_spotinst.gcp.Elastigroup.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tags to mark created instances.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.gcp.Elastigroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">backend_services=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">gpu=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">instance_types_customs=None</em>, <em class="sig-param">instance_types_ondemand=None</em>, <em class="sig-param">instance_types_preemptibles=None</em>, <em class="sig-param">integration_docker_swarm=None</em>, <em class="sig-param">integration_gke=None</em>, <em class="sig-param">ip_forwarding=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">metadatas=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">ondemand_count=None</em>, <em class="sig-param">preemptible_percentage=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">startup_script=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unhealthy_duration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_healing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zones</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">desired_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">draining_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fallback_to_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gpu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_grace_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">health_check_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_customs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_ondemand</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_types_preemptibles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_docker_swarm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_gke</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_forwarding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadatas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ondemand_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">preemptible_percentage</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_down_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scaling_up_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduled_tasks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shutdown_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">startup_script</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unhealthy_duration</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Elastigroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -523,9 +520,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.gcp.Elastigroup.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -541,9 +538,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_spotinst.gcp.Elastigroup.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gcp.Elastigroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

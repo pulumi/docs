@@ -13,7 +13,7 @@ menu:
 The New Relic provider for Pulumi can be used to provision any of the cloud resources available in [New Relic](https://newrelic.com/).
 The New Relic provider must be configured with credentials to deploy and update resources in New Relic.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/newrelic" >}}) for complete details of the available New Relic provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/newrelic" >}}) for complete details of the available New Relic provider APIs.
 
 ## Setup
 
@@ -54,7 +54,7 @@ policy = newrelic.AlertPolicy("my-policy")
 
 ```go
 import (
-  newrelic "github.com/pulumi/pulumi-newrelic/sdk/go/newrelic"
+  newrelic "github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic"
 )
 
 policy, _ := newrelic.NewAlertPolicy(ctx, "my-policy"

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">InstanceState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">InstanceState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Ecs.html">Pulumi.AliCloud.Ecs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L961">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L979">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState__ctor_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.#ctor*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState__ctor" data-uid="Pulumi.AliCloud.Ecs.InstanceState.#ctor">InstanceState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L652">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L664">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_AllocatePublicIp_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AllocatePublicIp*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_AllocatePublicIp" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AllocatePublicIp">AllocatePublicIp</h4>
@@ -138,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllocatePublicIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllocatePublicIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L660">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L672">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_AutoReleaseTime_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AutoReleaseTime*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_AutoReleaseTime" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AutoReleaseTime">AutoReleaseTime</h4>
@@ -167,7 +138,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AutoReleaseTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AutoReleaseTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L668">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L680">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_AutoRenewPeriod_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AutoRenewPeriod*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_AutoRenewPeriod" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AutoRenewPeriod">AutoRenewPeriod</h4>
@@ -198,7 +169,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; AutoRenewPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? AutoRenewPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,13 +181,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L674">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L686">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_AvailabilityZone_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AvailabilityZone*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_AvailabilityZone" data-uid="Pulumi.AliCloud.Ecs.InstanceState.AvailabilityZone">AvailabilityZone</h4>
@@ -225,7 +196,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AvailabilityZone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AvailabilityZone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,13 +208,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L680">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L692">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_CreditSpecification_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.CreditSpecification*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_CreditSpecification" data-uid="Pulumi.AliCloud.Ecs.InstanceState.CreditSpecification">CreditSpecification</h4>
@@ -252,7 +223,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreditSpecification { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CreditSpecification { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +235,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L689">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L701">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_DataDisks_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.DataDisks*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_DataDisks" data-uid="Pulumi.AliCloud.Ecs.InstanceState.DataDisks">DataDisks</h4>
@@ -279,7 +250,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceDataDisksGetArgs&gt; DataDisks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceDataDiskGetArgs&gt; DataDisks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,13 +262,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Inputs.InstanceDataDisksGetArgs.html">InstanceDataDisksGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.AliCloud.Ecs.Inputs.InstanceDataDiskGetArgs.html">InstanceDataDiskGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L700">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L712">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_DeletionProtection_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.DeletionProtection*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_DeletionProtection" data-uid="Pulumi.AliCloud.Ecs.InstanceState.DeletionProtection">DeletionProtection</h4>
@@ -310,7 +281,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DeletionProtection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DeletionProtection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,13 +293,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L706">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L718">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_Description_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Description*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_Description" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Description">Description</h4>
@@ -337,7 +308,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,13 +320,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L714">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L726">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_DryRun_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.DryRun*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_DryRun" data-uid="Pulumi.AliCloud.Ecs.InstanceState.DryRun">DryRun</h4>
@@ -368,7 +339,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DryRun { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DryRun { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,13 +351,13 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L721">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L733">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_ForceDelete_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.ForceDelete*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_ForceDelete" data-uid="Pulumi.AliCloud.Ecs.InstanceState.ForceDelete">ForceDelete</h4>
@@ -396,7 +367,7 @@ However, because of changing instance charge type has CPU core count quota limit
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; ForceDelete { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ForceDelete { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -408,13 +379,13 @@ However, because of changing instance charge type has CPU core count quota limit
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L728">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L740">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_HostName_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.HostName*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_HostName" data-uid="Pulumi.AliCloud.Ecs.InstanceState.HostName">HostName</h4>
@@ -424,7 +395,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HostName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HostName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,13 +407,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L734">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L746">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_ImageId_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.ImageId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_ImageId" data-uid="Pulumi.AliCloud.Ecs.InstanceState.ImageId">ImageId</h4>
@@ -451,7 +422,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ImageId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ImageId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -463,13 +434,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L740">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L752">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_IncludeDataDisks_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.IncludeDataDisks*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_IncludeDataDisks" data-uid="Pulumi.AliCloud.Ecs.InstanceState.IncludeDataDisks">IncludeDataDisks</h4>
@@ -478,7 +449,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IncludeDataDisks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IncludeDataDisks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -490,13 +461,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L746">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L758">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_InstanceChargeType_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InstanceChargeType*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_InstanceChargeType" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InstanceChargeType">InstanceChargeType</h4>
@@ -505,7 +476,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceChargeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceChargeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,13 +488,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L749">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L761">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_InstanceName_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InstanceName*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_InstanceName" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InstanceName">InstanceName</h4>
@@ -531,7 +502,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -543,13 +514,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L755">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L767">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_InstanceType_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InstanceType*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_InstanceType" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InstanceType">InstanceType</h4>
@@ -558,7 +529,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -570,13 +541,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L761">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L773">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_InternetChargeType_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InternetChargeType*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_InternetChargeType" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InternetChargeType">InternetChargeType</h4>
@@ -585,7 +556,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InternetChargeType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InternetChargeType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -597,13 +568,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L767">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L779">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_InternetMaxBandwidthIn_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InternetMaxBandwidthIn*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_InternetMaxBandwidthIn" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InternetMaxBandwidthIn">InternetMaxBandwidthIn</h4>
@@ -612,7 +583,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; InternetMaxBandwidthIn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? InternetMaxBandwidthIn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -624,13 +595,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L773">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L785">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_InternetMaxBandwidthOut_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InternetMaxBandwidthOut*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_InternetMaxBandwidthOut" data-uid="Pulumi.AliCloud.Ecs.InstanceState.InternetMaxBandwidthOut">InternetMaxBandwidthOut</h4>
@@ -639,7 +610,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; InternetMaxBandwidthOut { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? InternetMaxBandwidthOut { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -651,13 +622,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L779">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L791">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_IoOptimized_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.IoOptimized*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_IoOptimized" data-uid="Pulumi.AliCloud.Ecs.InstanceState.IoOptimized">IoOptimized</h4>
@@ -666,7 +637,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IoOptimized { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IoOptimized { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -678,13 +649,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L785">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L797">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_IsOutdated_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.IsOutdated*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_IsOutdated" data-uid="Pulumi.AliCloud.Ecs.InstanceState.IsOutdated">IsOutdated</h4>
@@ -693,7 +664,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IsOutdated { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IsOutdated { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -705,13 +676,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L791">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L803">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_KeyName_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.KeyName*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_KeyName" data-uid="Pulumi.AliCloud.Ecs.InstanceState.KeyName">KeyName</h4>
@@ -720,7 +691,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KeyName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KeyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -732,13 +703,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L797">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L809">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_KmsEncryptedPassword_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.KmsEncryptedPassword*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_KmsEncryptedPassword" data-uid="Pulumi.AliCloud.Ecs.InstanceState.KmsEncryptedPassword">KmsEncryptedPassword</h4>
@@ -747,7 +718,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; KmsEncryptedPassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? KmsEncryptedPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -759,13 +730,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L806">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L818">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_KmsEncryptionContext_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.KmsEncryptionContext*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_KmsEncryptionContext" data-uid="Pulumi.AliCloud.Ecs.InstanceState.KmsEncryptionContext">KmsEncryptionContext</h4>
@@ -786,13 +757,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L815">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L827">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_Password_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Password*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_Password" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Password">Password</h4>
@@ -801,7 +772,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Password { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Password { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -813,13 +784,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L823">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L835">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_Period_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Period*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_Period" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Period">Period</h4>
@@ -832,7 +803,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Period { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Period { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -844,13 +815,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L829">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L841">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_PeriodUnit_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.PeriodUnit*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_PeriodUnit" data-uid="Pulumi.AliCloud.Ecs.InstanceState.PeriodUnit">PeriodUnit</h4>
@@ -859,7 +830,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PeriodUnit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PeriodUnit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -871,13 +842,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L835">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L847">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_PrivateIp_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.PrivateIp*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_PrivateIp" data-uid="Pulumi.AliCloud.Ecs.InstanceState.PrivateIp">PrivateIp</h4>
@@ -886,7 +857,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PrivateIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PrivateIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -898,13 +869,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L841">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L853">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_PublicIp_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.PublicIp*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_PublicIp" data-uid="Pulumi.AliCloud.Ecs.InstanceState.PublicIp">PublicIp</h4>
@@ -913,7 +884,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PublicIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PublicIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -925,13 +896,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L850">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L862">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_RenewalStatus_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.RenewalStatus*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_RenewalStatus" data-uid="Pulumi.AliCloud.Ecs.InstanceState.RenewalStatus">RenewalStatus</h4>
@@ -945,7 +916,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RenewalStatus { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RenewalStatus { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -957,13 +928,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L856">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L868">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_ResourceGroupId_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.ResourceGroupId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_ResourceGroupId" data-uid="Pulumi.AliCloud.Ecs.InstanceState.ResourceGroupId">ResourceGroupId</h4>
@@ -972,7 +943,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroupId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -984,13 +955,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L862">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L874">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_RoleName_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.RoleName*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_RoleName" data-uid="Pulumi.AliCloud.Ecs.InstanceState.RoleName">RoleName</h4>
@@ -999,7 +970,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; RoleName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? RoleName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1011,13 +982,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L870">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L882">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SecurityEnhancementStrategy_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SecurityEnhancementStrategy*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SecurityEnhancementStrategy" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SecurityEnhancementStrategy">SecurityEnhancementStrategy</h4>
@@ -1030,7 +1001,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SecurityEnhancementStrategy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SecurityEnhancementStrategy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1042,13 +1013,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L879">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L891">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SecurityGroups_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SecurityGroups*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SecurityGroups" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SecurityGroups">SecurityGroups</h4>
@@ -1069,13 +1040,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L888">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L900">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SpotPriceLimit_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SpotPriceLimit*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SpotPriceLimit" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SpotPriceLimit">SpotPriceLimit</h4>
@@ -1084,7 +1055,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;double&gt; SpotPriceLimit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;double&gt;? SpotPriceLimit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1096,13 +1067,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L897">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L909">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SpotStrategy_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SpotStrategy*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SpotStrategy" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SpotStrategy">SpotStrategy</h4>
@@ -1116,7 +1087,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SpotStrategy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SpotStrategy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1128,13 +1099,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L903">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L915">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_Status_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Status*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_Status" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Status">Status</h4>
@@ -1143,7 +1114,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1155,13 +1126,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L906">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L918">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SubnetId_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SubnetId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SubnetId" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SubnetId">SubnetId</h4>
@@ -1169,7 +1140,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SubnetId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SubnetId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1181,13 +1152,40 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L912">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L924">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Ecs_InstanceState_SystemDiskAutoSnapshotPolicyId_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SystemDiskAutoSnapshotPolicyId*"></a>
+  <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SystemDiskAutoSnapshotPolicyId" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SystemDiskAutoSnapshotPolicyId">SystemDiskAutoSnapshotPolicyId</h4>
+  <div class="markdown level1 summary"><p>The ID of the automatic snapshot policy applied to the system disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SystemDiskAutoSnapshotPolicyId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L930">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SystemDiskCategory_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SystemDiskCategory*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SystemDiskCategory" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SystemDiskCategory">SystemDiskCategory</h4>
@@ -1196,7 +1194,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SystemDiskCategory { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SystemDiskCategory { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1208,13 +1206,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L918">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L936">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_SystemDiskSize_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SystemDiskSize*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_SystemDiskSize" data-uid="Pulumi.AliCloud.Ecs.InstanceState.SystemDiskSize">SystemDiskSize</h4>
@@ -1223,7 +1221,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; SystemDiskSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? SystemDiskSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1235,13 +1233,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L929">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L947">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_Tags_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Tags*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_Tags" data-uid="Pulumi.AliCloud.Ecs.InstanceState.Tags">Tags</h4>
@@ -1266,13 +1264,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L938">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L956">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_UserData_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.UserData*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_UserData" data-uid="Pulumi.AliCloud.Ecs.InstanceState.UserData">UserData</h4>
@@ -1281,7 +1279,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; UserData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? UserData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1293,13 +1291,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L949">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L967">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_VolumeTags_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.VolumeTags*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_VolumeTags" data-uid="Pulumi.AliCloud.Ecs.InstanceState.VolumeTags">VolumeTags</h4>
@@ -1324,13 +1322,13 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L958">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L976">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Ecs_InstanceState_VswitchId_" data-uid="Pulumi.AliCloud.Ecs.InstanceState.VswitchId*"></a>
   <h4 id="Pulumi_AliCloud_Ecs_InstanceState_VswitchId" data-uid="Pulumi.AliCloud.Ecs.InstanceState.VswitchId">VswitchId</h4>
@@ -1339,7 +1337,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; VswitchId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? VswitchId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1351,7 +1349,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1363,7 +1361,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Ecs/Instance.cs/#L647" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Ecs/Instance.cs/#L659" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

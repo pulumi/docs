@@ -72,9 +72,6 @@
   <h1 id="Pulumi_GitLab_ServiceSlack" data-uid="Pulumi.GitLab.ServiceSlack" class="text-break">Class ServiceSlack
   </h1>
   <div class="markdown level0 summary"><p>This resource allows you to manage Slack notifications integration.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/service_slack.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/service_slack.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack__ctor_" data-uid="Pulumi.GitLab.ServiceSlack.#ctor*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack__ctor_System_String_Pulumi_GitLab_ServiceSlackArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.ServiceSlack.#ctor(System.String,Pulumi.GitLab.ServiceSlackArgs,System.Nullable{CustomResourceOptions})">ServiceSlack(String, ServiceSlackArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,34 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L20">View Source</a>
+  </span>
+  <a id="Pulumi_GitLab_ServiceSlack_BranchesToBeNotified_" data-uid="Pulumi.GitLab.ServiceSlack.BranchesToBeNotified*"></a>
+  <h4 id="Pulumi_GitLab_ServiceSlack_BranchesToBeNotified" data-uid="Pulumi.GitLab.ServiceSlack.BranchesToBeNotified">BranchesToBeNotified</h4>
+  <div class="markdown level1 summary"><p>Branches to send notifications for. Valid options are &quot;all&quot;, &quot;default&quot;, &quot;protected&quot;, and &quot;default_and_protected&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BranchesToBeNotified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_ConfidentialIssueChannel_" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssueChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_ConfidentialIssueChannel" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssueChannel">ConfidentialIssueChannel</h4>
@@ -162,7 +186,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_ConfidentialIssuesEvents_" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssuesEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_ConfidentialIssuesEvents" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialIssuesEvents">ConfidentialIssuesEvents</h4>
@@ -189,7 +213,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_ConfidentialNoteEvents_" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialNoteEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_ConfidentialNoteEvents" data-uid="Pulumi.GitLab.ServiceSlack.ConfidentialNoteEvents">ConfidentialNoteEvents</h4>
@@ -216,7 +240,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_IssueChannel_" data-uid="Pulumi.GitLab.ServiceSlack.IssueChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_IssueChannel" data-uid="Pulumi.GitLab.ServiceSlack.IssueChannel">IssueChannel</h4>
@@ -243,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_IssuesEvents_" data-uid="Pulumi.GitLab.ServiceSlack.IssuesEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_IssuesEvents" data-uid="Pulumi.GitLab.ServiceSlack.IssuesEvents">IssuesEvents</h4>
@@ -270,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_JobEvents_" data-uid="Pulumi.GitLab.ServiceSlack.JobEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_JobEvents" data-uid="Pulumi.GitLab.ServiceSlack.JobEvents">JobEvents</h4>
@@ -296,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_MergeRequestChannel_" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_MergeRequestChannel" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestChannel">MergeRequestChannel</h4>
@@ -323,7 +347,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_MergeRequestsEvents_" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestsEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_MergeRequestsEvents" data-uid="Pulumi.GitLab.ServiceSlack.MergeRequestsEvents">MergeRequestsEvents</h4>
@@ -350,7 +374,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L71">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NoteChannel_" data-uid="Pulumi.GitLab.ServiceSlack.NoteChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NoteChannel" data-uid="Pulumi.GitLab.ServiceSlack.NoteChannel">NoteChannel</h4>
@@ -377,7 +401,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NoteEvents_" data-uid="Pulumi.GitLab.ServiceSlack.NoteEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NoteEvents" data-uid="Pulumi.GitLab.ServiceSlack.NoteEvents">NoteEvents</h4>
@@ -404,7 +428,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NotifyOnlyBrokenPipelines_" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyBrokenPipelines*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NotifyOnlyBrokenPipelines" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyBrokenPipelines">NotifyOnlyBrokenPipelines</h4>
@@ -431,11 +455,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_NotifyOnlyDefaultBranch_" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyDefaultBranch*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_NotifyOnlyDefaultBranch" data-uid="Pulumi.GitLab.ServiceSlack.NotifyOnlyDefaultBranch">NotifyOnlyDefaultBranch</h4>
-  <div class="markdown level1 summary"><p>Send notifications only for the default branch.</p>
+  <div class="markdown level1 summary"><p>DEPRECATED: This parameter has been replaced with <code>branches_to_be_notified</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -458,7 +482,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PipelineChannel_" data-uid="Pulumi.GitLab.ServiceSlack.PipelineChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PipelineChannel" data-uid="Pulumi.GitLab.ServiceSlack.PipelineChannel">PipelineChannel</h4>
@@ -485,7 +509,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PipelineEvents_" data-uid="Pulumi.GitLab.ServiceSlack.PipelineEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PipelineEvents" data-uid="Pulumi.GitLab.ServiceSlack.PipelineEvents">PipelineEvents</h4>
@@ -512,7 +536,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Project_" data-uid="Pulumi.GitLab.ServiceSlack.Project*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Project" data-uid="Pulumi.GitLab.ServiceSlack.Project">Project</h4>
@@ -539,7 +563,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PushChannel_" data-uid="Pulumi.GitLab.ServiceSlack.PushChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PushChannel" data-uid="Pulumi.GitLab.ServiceSlack.PushChannel">PushChannel</h4>
@@ -566,7 +590,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L114">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_PushEvents_" data-uid="Pulumi.GitLab.ServiceSlack.PushEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_PushEvents" data-uid="Pulumi.GitLab.ServiceSlack.PushEvents">PushEvents</h4>
@@ -593,7 +617,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L125">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_TagPushChannel_" data-uid="Pulumi.GitLab.ServiceSlack.TagPushChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_TagPushChannel" data-uid="Pulumi.GitLab.ServiceSlack.TagPushChannel">TagPushChannel</h4>
@@ -620,7 +644,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L126">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L131">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_TagPushEvents_" data-uid="Pulumi.GitLab.ServiceSlack.TagPushEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_TagPushEvents" data-uid="Pulumi.GitLab.ServiceSlack.TagPushEvents">TagPushEvents</h4>
@@ -647,7 +671,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L132">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Username_" data-uid="Pulumi.GitLab.ServiceSlack.Username*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Username" data-uid="Pulumi.GitLab.ServiceSlack.Username">Username</h4>
@@ -674,7 +698,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Webhook_" data-uid="Pulumi.GitLab.ServiceSlack.Webhook*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Webhook" data-uid="Pulumi.GitLab.ServiceSlack.Webhook">Webhook</h4>
@@ -701,7 +725,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L144">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L149">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_WikiPageChannel_" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageChannel*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_WikiPageChannel" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageChannel">WikiPageChannel</h4>
@@ -728,7 +752,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_WikiPageEvents_" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageEvents*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_WikiPageEvents" data-uid="Pulumi.GitLab.ServiceSlack.WikiPageEvents">WikiPageEvents</h4>
@@ -757,7 +781,7 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_GitLab_ServiceSlack_Get_" data-uid="Pulumi.GitLab.ServiceSlack.Get*"></a>
   <h4 id="Pulumi_GitLab_ServiceSlack_Get_System_String_Input_System_String__Pulumi_GitLab_ServiceSlackState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.GitLab.ServiceSlack.Get(System.String,Input{System.String},Pulumi.GitLab.ServiceSlackState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ServiceSlackState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -827,7 +851,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/master/sdk/dotnet/ServiceSlack.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gitlab/blob/6a56e91b5f378ee1e76cf91ba3517f80b45380f9/sdk/dotnet/ServiceSlack.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">JobSpec</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Batch.V1.html">Pulumi.Kubernetes.Types.Outputs.Batch.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class JobSpec</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class JobSpec : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12260">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12387">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_ActiveDeadlineSeconds" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.ActiveDeadlineSeconds">ActiveDeadlineSeconds</h4>
   <div class="markdown level1 summary"><p>Specifies the duration in seconds relative to the startTime that the job may be active
@@ -139,7 +115,7 @@ before the system tries to terminate it; value must be positive integer</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12265">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12392">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_BackoffLimit" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.BackoffLimit">BackoffLimit</h4>
   <div class="markdown level1 summary"><p>Specifies the number of retries before marking this job failed. Defaults to 6</p>
@@ -165,7 +141,7 @@ before the system tries to terminate it; value must be positive integer</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12274">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12401">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_Completions" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.Completions">Completions</h4>
   <div class="markdown level1 summary"><p>Specifies the desired number of successfully finished pods the job should be run with.
@@ -195,7 +171,7 @@ limited to 1 and the success of that pod signals the success of the job. More in
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12286">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12413">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_ManualSelector" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.ManualSelector">ManualSelector</h4>
   <div class="markdown level1 summary"><p>manualSelector controls generation of pod labels and pod selectors. Leave
@@ -228,7 +204,7 @@ the old <code>extensions/v1beta1</code> API. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12295">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12422">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_Parallelism" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.Parallelism">Parallelism</h4>
   <div class="markdown level1 summary"><p>Specifies the maximum desired number of pods the job should run at any given time. The
@@ -258,7 +234,7 @@ work left to do is less than max parallelism. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12429">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_Selector" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.Selector">Selector</h4>
   <div class="markdown level1 summary"><p>A label query over pods that should match the pod count. Normally, the system sets this
@@ -286,7 +262,7 @@ field for you. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12435">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_Template" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.Template">Template</h4>
   <div class="markdown level1 summary"><p>Describes the pod that will be created when executing a job. More info:
@@ -313,7 +289,7 @@ field for you. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12319">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12446">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Batch_V1_JobSpec_TtlSecondsAfterFinished" data-uid="Pulumi.Kubernetes.Types.Outputs.Batch.V1.JobSpec.TtlSecondsAfterFinished">TtlSecondsAfterFinished</h4>
   <div class="markdown level1 summary"><p>ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution (either
@@ -351,7 +327,7 @@ honored by servers that enable the TTLAfterFinished feature.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L12253" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L12380" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

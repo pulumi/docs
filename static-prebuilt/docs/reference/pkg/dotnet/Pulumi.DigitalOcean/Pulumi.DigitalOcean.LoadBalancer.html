@@ -73,50 +73,12 @@
   </h1>
   <div class="markdown level0 summary"><p>Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">LoadBalancer</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">LoadBalancer</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.DigitalOcean.html">Pulumi.DigitalOcean</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.DigitalOcean.dll</h6>
@@ -127,16 +89,16 @@ modify, and delete Load Balancers.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L113">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer__ctor_" data-uid="Pulumi.DigitalOcean.LoadBalancer.#ctor*"></a>
-  <h4 id="Pulumi_DigitalOcean_LoadBalancer__ctor_System_String_Pulumi_DigitalOcean_LoadBalancerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.LoadBalancer.#ctor(System.String,Pulumi.DigitalOcean.LoadBalancerArgs,Pulumi.CustomResourceOptions)">LoadBalancer(String, LoadBalancerArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_DigitalOcean_LoadBalancer__ctor_System_String_Pulumi_DigitalOcean_LoadBalancerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.LoadBalancer.#ctor(System.String,Pulumi.DigitalOcean.LoadBalancerArgs,System.Nullable{CustomResourceOptions})">LoadBalancer(String, LoadBalancerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a LoadBalancer resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LoadBalancer(string name, LoadBalancerArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoadBalancer(string name, LoadBalancerArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,7 +123,7 @@ modify, and delete Load Balancers.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -171,7 +133,7 @@ modify, and delete Load Balancers.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Algorithm_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Algorithm*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Algorithm" data-uid="Pulumi.DigitalOcean.LoadBalancer.Algorithm">Algorithm</h4>
@@ -182,7 +144,7 @@ or <code>least_connections</code>. The default value is <code>round_robin</code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Algorithm { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Algorithm { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,13 +156,13 @@ or <code>least_connections</code>. The default value is <code>round_robin</code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_DropletIds_" data-uid="Pulumi.DigitalOcean.LoadBalancer.DropletIds*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_DropletIds" data-uid="Pulumi.DigitalOcean.LoadBalancer.DropletIds">DropletIds</h4>
@@ -221,13 +183,13 @@ or <code>least_connections</code>. The default value is <code>round_robin</code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_DropletTag_" data-uid="Pulumi.DigitalOcean.LoadBalancer.DropletTag*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_DropletTag" data-uid="Pulumi.DigitalOcean.LoadBalancer.DropletTag">DropletTag</h4>
@@ -236,7 +198,7 @@ or <code>least_connections</code>. The default value is <code>round_robin</code>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DropletTag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DropletTag { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,13 +210,13 @@ or <code>least_connections</code>. The default value is <code>round_robin</code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_EnableProxyProtocol_" data-uid="Pulumi.DigitalOcean.LoadBalancer.EnableProxyProtocol*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_EnableProxyProtocol" data-uid="Pulumi.DigitalOcean.LoadBalancer.EnableProxyProtocol">EnableProxyProtocol</h4>
@@ -277,13 +239,13 @@ the backend service. Default value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_ForwardingRules_" data-uid="Pulumi.DigitalOcean.LoadBalancer.ForwardingRules*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_ForwardingRules" data-uid="Pulumi.DigitalOcean.LoadBalancer.ForwardingRules">ForwardingRules</h4>
@@ -293,7 +255,7 @@ Load Balancer. The <code>forwarding_rule</code> block is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LoadBalancerForwardingRules&gt;&gt; ForwardingRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LoadBalancerForwardingRule&gt;&gt; ForwardingRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,13 +267,13 @@ Load Balancer. The <code>forwarding_rule</code> block is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.LoadBalancerForwardingRules.html">LoadBalancerForwardingRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.LoadBalancerForwardingRule.html">LoadBalancerForwardingRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Healthcheck_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Healthcheck*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Healthcheck" data-uid="Pulumi.DigitalOcean.LoadBalancer.Healthcheck">Healthcheck</h4>
@@ -333,13 +295,13 @@ Load Balancer. The <code>healthcheck</code> block is documented below. Only 1 he
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.LoadBalancerHealthcheck.html">LoadBalancerHealthcheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.LoadBalancerHealthcheck.html">LoadBalancerHealthcheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Ip_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Ip*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Ip" data-uid="Pulumi.DigitalOcean.LoadBalancer.Ip">Ip</h4>
@@ -359,13 +321,13 @@ Load Balancer. The <code>healthcheck</code> block is documented below. Only 1 he
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Name_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Name*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Name" data-uid="Pulumi.DigitalOcean.LoadBalancer.Name">Name</h4>
@@ -386,13 +348,13 @@ Load Balancer. The <code>healthcheck</code> block is documented below. Only 1 he
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_RedirectHttpToHttps_" data-uid="Pulumi.DigitalOcean.LoadBalancer.RedirectHttpToHttps*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_RedirectHttpToHttps" data-uid="Pulumi.DigitalOcean.LoadBalancer.RedirectHttpToHttps">RedirectHttpToHttps</h4>
@@ -415,13 +377,13 @@ Default value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Region_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Region*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Region" data-uid="Pulumi.DigitalOcean.LoadBalancer.Region">Region</h4>
@@ -442,13 +404,13 @@ Default value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Status_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Status*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Status" data-uid="Pulumi.DigitalOcean.LoadBalancer.Status">Status</h4>
@@ -468,13 +430,13 @@ Default value is <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L90">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_StickySessions_" data-uid="Pulumi.DigitalOcean.LoadBalancer.StickySessions*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_StickySessions" data-uid="Pulumi.DigitalOcean.LoadBalancer.StickySessions">StickySessions</h4>
@@ -496,13 +458,13 @@ Load Balancer. The <code>sticky_sessions</code> block is documented below. Only 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.LoadBalancerStickySessions.html">LoadBalancerStickySessions</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.DigitalOcean.Outputs.LoadBalancerStickySessions.html">LoadBalancerStickySessions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Urn_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Urn*"></a>
   <h4 id="Pulumi_DigitalOcean_LoadBalancer_Urn" data-uid="Pulumi.DigitalOcean.LoadBalancer.Urn">Urn</h4>
@@ -523,7 +485,34 @@ Load Balancer. The <code>sticky_sessions</code> block is documented below. Only 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_DigitalOcean_LoadBalancer_VpcUuid_" data-uid="Pulumi.DigitalOcean.LoadBalancer.VpcUuid*"></a>
+  <h4 id="Pulumi_DigitalOcean_LoadBalancer_VpcUuid" data-uid="Pulumi.DigitalOcean.LoadBalancer.VpcUuid">VpcUuid</h4>
+  <div class="markdown level1 summary"><p>The ID of the VPC where the load balancer will be located.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpcUuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -531,17 +520,17 @@ Load Balancer. The <code>sticky_sessions</code> block is documented below. Only 
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L143">View Source</a>
   </span>
   <a id="Pulumi_DigitalOcean_LoadBalancer_Get_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Get*"></a>
-  <h4 id="Pulumi_DigitalOcean_LoadBalancer_Get_System_String_Pulumi_Input_System_String__Pulumi_DigitalOcean_LoadBalancerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.DigitalOcean.LoadBalancer.Get(System.String,Pulumi.Input{System.String},Pulumi.DigitalOcean.LoadBalancerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, LoadBalancerState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_DigitalOcean_LoadBalancer_Get_System_String_Input_System_String__Pulumi_DigitalOcean_LoadBalancerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.DigitalOcean.LoadBalancer.Get(System.String,Input{System.String},Pulumi.DigitalOcean.LoadBalancerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LoadBalancerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing LoadBalancer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LoadBalancer Get(string name, Input&lt;string&gt; id, LoadBalancerState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LoadBalancer Get(string name, Input&lt;string&gt; id, LoadBalancerState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -560,7 +549,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -572,7 +561,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -601,7 +590,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/master/sdk/dotnet/LoadBalancer.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-digitalocean//blob/461be719ea8e60ce756dac8940b4553d153b08dc/sdk/dotnet/LoadBalancer.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -75,9 +75,6 @@
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -94,16 +91,16 @@ construction to achieve fine-grained programmatic control over provider settings
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Provider.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Provider.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Fastly_Provider__ctor_" data-uid="Pulumi.Fastly.Provider.#ctor*"></a>
-  <h4 id="Pulumi_Fastly_Provider__ctor_System_String_Pulumi_Fastly_ProviderArgs_System_Nullable_ResourceOptions__" data-uid="Pulumi.Fastly.Provider.#ctor(System.String,Pulumi.Fastly.ProviderArgs,System.Nullable{ResourceOptions})">Provider(String, ProviderArgs, Nullable&lt;ResourceOptions&gt;)</h4>
+  <h4 id="Pulumi_Fastly_Provider__ctor_System_String_Pulumi_Fastly_ProviderArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Fastly.Provider.#ctor(System.String,Pulumi.Fastly.ProviderArgs,System.Nullable{CustomResourceOptions})">Provider(String, ProviderArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Provider resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Provider(string name, ProviderArgs args = null, ResourceOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Provider(string name, ProviderArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,7 +125,7 @@ construction to achieve fine-grained programmatic control over provider settings
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ResourceOptions</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -142,7 +139,7 @@ construction to achieve fine-grained programmatic control over provider settings
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-fastly/blob/master/sdk/dotnet/Provider.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-fastly/blob/d0297b9ec6b4a115f1ad580f03348ab5ade3ef17/sdk/dotnet/Provider.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,48 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ApiOperationRequest</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.html">Pulumi.Azure.ApiManagement.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_ApiManagement_Outputs_ApiOperationRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ApiOperationRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ApiOperationRequest : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/ApiOperation.cs/#L954">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiOperationRequest.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiOperationRequest_Description" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequest.Description">Description</h4>
-  <div class="markdown level1 summary"><p>A description for this API Operation, which may include HTML formatting tags.</p>
+  <div class="markdown level1 summary"><p>A description of the HTTP Request, which may include HTML tags.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Description</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Description</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,20 +107,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/ApiOperation.cs/#L955">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiOperationRequest.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiOperationRequest_Headers" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequest.Headers">Headers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>header</code> blocks as defined above.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApiOperationRequestHeaders&gt; Headers</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApiOperationRequestHeader&gt; Headers</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,20 +133,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequestHeaders.html">ApiOperationRequestHeaders</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequestHeader.html">ApiOperationRequestHeader</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/ApiOperation.cs/#L956">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiOperationRequest.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiOperationRequest_QueryParameters" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequest.QueryParameters">QueryParameters</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>query_parameter</code> blocks as defined above.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApiOperationRequestQueryParameters&gt; QueryParameters</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApiOperationRequestQueryParameter&gt; QueryParameters</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,20 +159,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequestQueryParameters.html">ApiOperationRequestQueryParameters</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequestQueryParameter.html">ApiOperationRequestQueryParameter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/ApiOperation.cs/#L957">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiOperationRequest.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_ApiManagement_Outputs_ApiOperationRequest_Representations" data-uid="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequest.Representations">Representations</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>representation</code> blocks as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApiOperationRequestRepresentations&gt; Representations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApiOperationRequestRepresentation&gt; Representations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +185,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequestRepresentations.html">ApiOperationRequestRepresentations</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.ApiManagement.Outputs.ApiOperationRequestRepresentation.html">ApiOperationRequestRepresentation</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Apimanagement/ApiOperation.cs/#L948" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ApiManagement/Outputs/ApiOperationRequest.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

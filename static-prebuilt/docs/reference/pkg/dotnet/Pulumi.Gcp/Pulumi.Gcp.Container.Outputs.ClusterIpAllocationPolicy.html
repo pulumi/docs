@@ -78,47 +78,28 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterIpAllocationPolicy</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Outputs.html">Pulumi.Gcp.Container.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Container_Outputs_ClusterIpAllocationPolicy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterIpAllocationPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterIpAllocationPolicy : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3018">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterIpAllocationPolicy.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterIpAllocationPolicy_ClusterIpv4CidrBlock" data-uid="Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.ClusterIpv4CidrBlock">ClusterIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP address range for the cluster pod IPs.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ClusterIpv4CidrBlock</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ClusterIpv4CidrBlock</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +111,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3019">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterIpAllocationPolicy.cs/#L29">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterIpAllocationPolicy_ClusterSecondaryRangeName" data-uid="Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.ClusterSecondaryRangeName">ClusterSecondaryRangeName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the existing secondary
+range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
+<code>cluster_ipv4_cidr_block</code> can be used to automatically create a GKE-managed one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ClusterSecondaryRangeName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ClusterSecondaryRangeName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,20 +139,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3020">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterIpAllocationPolicy.cs/#L37">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterIpAllocationPolicy_ServicesIpv4CidrBlock" data-uid="Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.ServicesIpv4CidrBlock">ServicesIpv4CidrBlock</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP address range of the services IPs in this cluster.
+Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
+to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14)
+from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to
+pick a specific range to use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ServicesIpv4CidrBlock</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ServicesIpv4CidrBlock</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,20 +169,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3021">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterIpAllocationPolicy.cs/#L44">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterIpAllocationPolicy_ServicesSecondaryRangeName" data-uid="Pulumi.Gcp.Container.Outputs.ClusterIpAllocationPolicy.ServicesSecondaryRangeName">ServicesSecondaryRangeName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the existing
+secondary range in the cluster's subnetwork to use for service <code>ClusterIP</code>s.
+Alternatively, <code>services_ipv4_cidr_block</code> can be used to automatically create a
+GKE-managed one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ServicesSecondaryRangeName</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ServicesSecondaryRangeName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +198,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -217,7 +210,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L3015" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterIpAllocationPolicy.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

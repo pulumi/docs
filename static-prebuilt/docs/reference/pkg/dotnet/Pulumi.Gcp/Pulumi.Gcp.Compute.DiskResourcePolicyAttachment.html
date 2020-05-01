@@ -71,50 +71,17 @@
   
   <h1 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment" class="text-break">Class DiskResourcePolicyAttachment
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Adds existing resource policies to a disk. You can only add one policy
+which will be applied to this disk for scheduling snapshot creation.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource does not support regional disks (<code>gcp.compute.RegionDisk</code>).</p>
+</blockquote>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">DiskResourcePolicyAttachment</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DiskResourcePolicyAttachment</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +92,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L53">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment__ctor_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment__ctor_System_String_Pulumi_Gcp_Compute_DiskResourcePolicyAttachmentArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.#ctor(System.String,Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentArgs,Pulumi.CustomResourceOptions)">DiskResourcePolicyAttachment(String, DiskResourcePolicyAttachmentArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment__ctor_System_String_Pulumi_Gcp_Compute_DiskResourcePolicyAttachmentArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.#ctor(System.String,Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentArgs,System.Nullable{CustomResourceOptions})">DiskResourcePolicyAttachment(String, DiskResourcePolicyAttachmentArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a DiskResourcePolicyAttachment resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DiskResourcePolicyAttachment(string name, DiskResourcePolicyAttachmentArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DiskResourcePolicyAttachment(string name, DiskResourcePolicyAttachmentArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +126,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +136,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Disk_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Disk*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Disk" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Disk">Disk</h4>
@@ -190,18 +157,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Name_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Name" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The resource policy to be attached to the disk for scheduling snapshot creation. Do not specify the self
-link.</p>
+  <div class="markdown level1 summary"><p>The resource policy to be attached to the disk for scheduling snapshot creation. Do not specify the self link.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -218,13 +184,13 @@ link.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Project_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Project" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Project">Project</h4>
@@ -246,13 +212,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Zone_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Zone" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Zone">Zone</h4>
@@ -273,7 +239,7 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -281,17 +247,17 @@ If it is not provided, the provider project is used.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Get_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_DiskResourcePolicyAttachmentState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, DiskResourcePolicyAttachmentState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_DiskResourcePolicyAttachment_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_DiskResourcePolicyAttachmentState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.DiskResourcePolicyAttachment.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.DiskResourcePolicyAttachmentState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DiskResourcePolicyAttachmentState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing DiskResourcePolicyAttachment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DiskResourcePolicyAttachment Get(string name, Input&lt;string&gt; id, DiskResourcePolicyAttachmentState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static DiskResourcePolicyAttachment Get(string name, Input&lt;string&gt; id, DiskResourcePolicyAttachmentState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +276,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -322,7 +288,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -351,7 +317,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/DiskResourcePolicyAttachment.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

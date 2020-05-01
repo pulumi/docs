@@ -87,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclAuthMethod.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Consul_GetAclAuthMethodArgs__ctor_" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.#ctor*"></a>
   <h4 id="Pulumi_Consul_GetAclAuthMethodArgs__ctor" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.#ctor">GetAclAuthMethodArgs()</h4>
@@ -100,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclAuthMethod.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L34">View Source</a>
   </span>
   <a id="Pulumi_Consul_GetAclAuthMethodArgs_Config_" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Config*"></a>
   <h4 id="Pulumi_Consul_GetAclAuthMethodArgs_Config" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Config">Config</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The configuration options of the ACL Auth Method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, object&gt; Config { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; Config { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,17 +121,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclAuthMethod.cs/#L33">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Consul_GetAclAuthMethodArgs_Description_" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Description*"></a>
   <h4 id="Pulumi_Consul_GetAclAuthMethodArgs_Description" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Description">Description</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The description of the ACL Auth Method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +154,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclAuthMethod.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Consul_GetAclAuthMethodArgs_Name_" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Name*"></a>
   <h4 id="Pulumi_Consul_GetAclAuthMethodArgs_Name" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Name">Name</h4>
@@ -179,11 +181,39 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclAuthMethod.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_Consul_GetAclAuthMethodArgs_Namespace_" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Namespace*"></a>
+  <h4 id="Pulumi_Consul_GetAclAuthMethodArgs_Namespace" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"><p>The namespace to lookup the auth method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Namespace { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Consul_GetAclAuthMethodArgs_Type_" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Type*"></a>
   <h4 id="Pulumi_Consul_GetAclAuthMethodArgs_Type" data-uid="Pulumi.Consul.GetAclAuthMethodArgs.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The type of the ACL Auth Method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,7 +241,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclAuthMethod.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclAuthMethod.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

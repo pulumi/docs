@@ -1,0 +1,1014 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FlexibleAppVersion
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FlexibleAppVersion
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion">
+  
+  <h1 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion" class="text-break">Class FlexibleAppVersion
+  </h1>
+  <div class="markdown level0 summary"><p>Flexible App Version resource to create a new version of flexible GAE Application. Based on Google Compute Engine,
+the App Engine flexible environment automatically scales your app up and down while also balancing the load.
+Learn about the differences between the standard environment and the flexible environment
+at <a href="https://cloud.google.com/appengine/docs/the-appengine-environments">https://cloud.google.com/appengine/docs/the-appengine-environments</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> The App Engine flexible environment service account uses the member ID <code>service-[YOUR_PROJECT_NUMBER]@gae-api-prod.google.com.iam.gserviceaccount.com</code>
+It should have the App Engine Flexible Environment Service Agent role, which will be applied when the <code>appengineflex.googleapis.com</code> service is enabled.</p>
+</blockquote>
+<p>To get more information about FlexibleAppVersion, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/appengine/docs/flexible">Official Documentation</a></li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FlexibleAppVersion</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.AppEngine.html">Pulumi.Gcp.AppEngine</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
+  <h5 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FlexibleAppVersion : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion__ctor_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.#ctor*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion__ctor_System_String_Pulumi_Gcp_AppEngine_FlexibleAppVersionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.#ctor(System.String,Pulumi.Gcp.AppEngine.FlexibleAppVersionArgs,System.Nullable{CustomResourceOptions})">FlexibleAppVersion(String, FlexibleAppVersionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a FlexibleAppVersion resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlexibleAppVersion(string name, FlexibleAppVersionArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.AppEngine.FlexibleAppVersionArgs.html">FlexibleAppVersionArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ApiConfig_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ApiConfig*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ApiConfig" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ApiConfig">ApiConfig</h4>
+  <div class="markdown level1 summary"><p>Serving configuration for Google Cloud Endpoints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionApiConfig&gt; ApiConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionApiConfig.html">FlexibleAppVersionApiConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_AutomaticScaling_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.AutomaticScaling*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_AutomaticScaling" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.AutomaticScaling">AutomaticScaling</h4>
+  <div class="markdown level1 summary"><p>Automatic scaling is based on request rate, response latencies, and other application metrics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionAutomaticScaling&gt; AutomaticScaling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScaling.html">FlexibleAppVersionAutomaticScaling</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_BetaSettings_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.BetaSettings*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_BetaSettings" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.BetaSettings">BetaSettings</h4>
+  <div class="markdown level1 summary"><p>Metadata settings that are supplied to this version to enable beta runtime features.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; BetaSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_DefaultExpiration_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.DefaultExpiration*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_DefaultExpiration" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.DefaultExpiration">DefaultExpiration</h4>
+  <div class="markdown level1 summary"><p>Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding
+StaticFilesHandler does not specify its own expiration time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultExpiration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_DeleteServiceOnDestroy_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.DeleteServiceOnDestroy*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_DeleteServiceOnDestroy" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.DeleteServiceOnDestroy">DeleteServiceOnDestroy</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the service will be deleted if it is the last version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeleteServiceOnDestroy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Deployment_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Deployment*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Deployment" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Deployment">Deployment</h4>
+  <div class="markdown level1 summary"><p>Code and application artifacts that make up this version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionDeployment&gt; Deployment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeployment.html">FlexibleAppVersionDeployment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_EndpointsApiService_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.EndpointsApiService*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_EndpointsApiService" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.EndpointsApiService">EndpointsApiService</h4>
+  <div class="markdown level1 summary"><p>Code and application artifacts that make up this version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionEndpointsApiService&gt; EndpointsApiService { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEndpointsApiService.html">FlexibleAppVersionEndpointsApiService</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Entrypoint_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Entrypoint*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Entrypoint" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Entrypoint">Entrypoint</h4>
+  <div class="markdown level1 summary"><p>The entrypoint for the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionEntrypoint&gt; Entrypoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEntrypoint.html">FlexibleAppVersionEntrypoint</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_EnvVariables_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.EnvVariables*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_EnvVariables" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.EnvVariables">EnvVariables</h4>
+  <div class="markdown level1 summary"><p>Environment variables available to the application. As these are not returned in the API request, Terraform will not
+detect any changes made outside of the Terraform config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; EnvVariables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_InboundServices_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.InboundServices*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_InboundServices" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.InboundServices">InboundServices</h4>
+  <div class="markdown level1 summary"><p>Before an application can receive email or XMPP messages, the application must be configured to enable the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; InboundServices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_InstanceClass_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.InstanceClass*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_InstanceClass" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.InstanceClass">InstanceClass</h4>
+  <div class="markdown level1 summary"><p>Instance class that is used to run this version. Valid values are AutomaticScaling: F1, F2, F4, F4_1G ManualScaling: B1,
+B2, B4, B8, B4_1G Defaults to F1 for AutomaticScaling and B1 for ManualScaling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; InstanceClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_LivenessCheck_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.LivenessCheck*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_LivenessCheck" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.LivenessCheck">LivenessCheck</h4>
+  <div class="markdown level1 summary"><p>Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionLivenessCheck&gt; LivenessCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionLivenessCheck.html">FlexibleAppVersionLivenessCheck</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ManualScaling_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ManualScaling*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ManualScaling" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ManualScaling">ManualScaling</h4>
+  <div class="markdown level1 summary"><p>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of
+its memory over time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionManualScaling&gt; ManualScaling { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionManualScaling.html">FlexibleAppVersionManualScaling</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Name_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Name*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Name" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The identifier for this object. Format specified above.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Network_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Network*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Network" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Network">Network</h4>
+  <div class="markdown level1 summary"><p>Extra network settings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionNetwork&gt; Network { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionNetwork.html">FlexibleAppVersionNetwork</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L127">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_NobuildFilesRegex_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.NobuildFilesRegex*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_NobuildFilesRegex" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.NobuildFilesRegex">NobuildFilesRegex</h4>
+  <div class="markdown level1 summary"><p>Files that match this pattern will not be built into this version. Only applicable for Go runtimes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NobuildFilesRegex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_NoopOnDestroy_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.NoopOnDestroy*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_NoopOnDestroy" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.NoopOnDestroy">NoopOnDestroy</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the application version will not be deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; NoopOnDestroy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L140">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Project_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Project*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Project" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Project">Project</h4>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Project { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ReadinessCheck_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ReadinessCheck*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ReadinessCheck" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ReadinessCheck">ReadinessCheck</h4>
+  <div class="markdown level1 summary"><p>Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionReadinessCheck&gt; ReadinessCheck { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionReadinessCheck.html">FlexibleAppVersionReadinessCheck</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L152">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Resources_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Resources*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Resources" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Resources">Resources</h4>
+  <div class="markdown level1 summary"><p>Machine resources for a version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionResources&gt; Resources { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResources.html">FlexibleAppVersionResources</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L158">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Runtime_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Runtime*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Runtime" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Runtime">Runtime</h4>
+  <div class="markdown level1 summary"><p>Desired runtime. Example python27.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Runtime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L165">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_RuntimeApiVersion_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.RuntimeApiVersion*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_RuntimeApiVersion" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.RuntimeApiVersion">RuntimeApiVersion</h4>
+  <div class="markdown level1 summary"><p>The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at
+<a href="https://cloud.google.com/appengine/docs/standard//config/appref">https://cloud.google.com/appengine/docs/standard//config/appref</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RuntimeApiVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L171">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_RuntimeChannel_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.RuntimeChannel*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_RuntimeChannel" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.RuntimeChannel">RuntimeChannel</h4>
+  <div class="markdown level1 summary"><p>The channel of the runtime to use. Only available for some runtimes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RuntimeChannel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L177">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_RuntimeMainExecutablePath_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.RuntimeMainExecutablePath*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_RuntimeMainExecutablePath" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.RuntimeMainExecutablePath">RuntimeMainExecutablePath</h4>
+  <div class="markdown level1 summary"><p>The path or name of the app's main executable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RuntimeMainExecutablePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L183">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Service_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Service*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Service" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Service">Service</h4>
+  <div class="markdown level1 summary"><p>AppEngine service resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Service { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ServingStatus_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ServingStatus*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_ServingStatus" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.ServingStatus">ServingStatus</h4>
+  <div class="markdown level1 summary"><p>Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Defaults to SERVING.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ServingStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_VersionId_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.VersionId*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_VersionId" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.VersionId">VersionId</h4>
+  <div class="markdown level1 summary"><p>Relative name of the version within the service. For example, 'v1'. Version names can contain only lowercase letters,
+numbers, or hyphens. Reserved names,&quot;default&quot;, &quot;latest&quot;, and any name with the prefix &quot;ah-&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; VersionId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_VpcAccessConnector_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.VpcAccessConnector*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_VpcAccessConnector" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.VpcAccessConnector">VpcAccessConnector</h4>
+  <div class="markdown level1 summary"><p>Enables VPC connectivity for standard apps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;FlexibleAppVersionVpcAccessConnector&gt; VpcAccessConnector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionVpcAccessConnector.html">FlexibleAppVersionVpcAccessConnector</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L244">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Get_" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Get*"></a>
+  <h4 id="Pulumi_Gcp_AppEngine_FlexibleAppVersion_Get_System_String_Input_System_String__Pulumi_Gcp_AppEngine_FlexibleAppVersionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.AppEngine.FlexibleAppVersion.Get(System.String,Input{System.String},Pulumi.Gcp.AppEngine.FlexibleAppVersionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FlexibleAppVersionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing FlexibleAppVersion resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlexibleAppVersion Get(string name, Input&lt;string&gt; id, FlexibleAppVersionState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.AppEngine.FlexibleAppVersionState.html">FlexibleAppVersionState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/AppEngine/FlexibleAppVersion.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

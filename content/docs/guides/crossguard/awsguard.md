@@ -29,7 +29,7 @@ In this guide, we'll show you how to create a Policy Pack that configures and us
 ### Verify your version of the Pulumi CLI
 
 ```sh
-pulumi version # should be v1.6.1 or later
+pulumi version # should be v1.14.0 or later
 ```
 
 ### Authoring a Policy Pack that uses AWSGuard policies

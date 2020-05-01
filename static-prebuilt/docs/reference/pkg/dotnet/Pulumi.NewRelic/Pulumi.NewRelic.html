@@ -78,9 +78,6 @@
   </h3>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertChannel.html">AlertChannel</a></h4>
       <section><p>Use this resource to create and manage New Relic alert policies.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_channel.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertChannelArgs.html">AlertChannelArgs</a></h4>
       <section></section>
@@ -93,13 +90,10 @@
 <ul>
 <li><code>duration</code> - (Required) In minutes, must be in the range of <code>5</code> to <code>120</code>, inclusive.</li>
 <li><code>operator</code> - (Optional) <code>above</code>, <code>below</code>, or <code>equal</code>.  Defaults to <code>equal</code>.</li>
-<li><code>priority</code> - (Optional) <code>critical</code> or <code>warning</code>.  Defaults to <code>critical</code>.</li>
+<li><code>priority</code> - (Optional) <code>critical</code> or <code>warning</code>.  Defaults to <code>critical</code>. Terms must include at least one <code>critical</code> priority term</li>
 <li><code>threshold</code> - (Required) Must be 0 or greater.</li>
 <li><code>time_function</code> - (Required) <code>all</code> or <code>any</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_condition.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertConditionArgs.html">AlertConditionArgs</a></h4>
       <section></section>
@@ -107,17 +101,11 @@
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicy.html">AlertPolicy</a></h4>
       <section><p>Use this resource to create and manage New Relic alert policies.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicyArgs.html">AlertPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicyChannel.html">AlertPolicyChannel</a></h4>
       <section><p>Use this resource to map alert policies to alert channels in New Relic.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy_channel.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.AlertPolicyChannelArgs.html">AlertPolicyChannelArgs</a></h4>
       <section></section>
@@ -183,25 +171,30 @@
 <li><code>event_types</code> - (Optional) A list of event types to enable filtering for.</li>
 <li><code>attributes</code> - (Optional) A list of attributes belonging to the specified event types to enable filtering for.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/dashboard.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.DashboardArgs.html">DashboardArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.DashboardState.html">DashboardState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.GetAlertChannel.html">GetAlertChannel</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetAlertChannelArgs.html">GetAlertChannelArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetAlertChannelResult.html">GetAlertChannelResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.GetAlertPolicy.html">GetAlertPolicy</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetAlertPolicyArgs.html">GetAlertPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetAlertPolicyResult.html">GetAlertPolicyResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.GetApplication.html">GetApplication</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetApplicationArgs.html">GetApplicationArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetApplicationResult.html">GetApplicationResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.NewRelic.GetKeyTransaction.html">GetKeyTransaction</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.GetKeyTransactionArgs.html">GetKeyTransactionArgs</a></h4>
       <section></section>
@@ -216,15 +209,10 @@
 <li><code>value</code> - (Optional) Threshold value, computed against the <code>comparison</code> operator. Supported by <code>infra_metric</code> and <code>infra_process_running</code> alert condition types.</li>
 <li><code>time_function</code> - (Optional) Indicates if the condition needs to be sustained or to just break the threshold once; <code>all</code> or <code>any</code>. Supported by the <code>infra_metric</code> alert condition type.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/infra_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/infra_alert_condition.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.InfraAlertConditionArgs.html">InfraAlertConditionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.InfraAlertConditionState.html">InfraAlertConditionState</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Pulumi.NewRelic.Invokes.html">Invokes</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.NewRelic.NrqlAlertCondition.html">NrqlAlertCondition</a></h4>
       <section><p>Use this resource to create and manage NRQL alert conditions in New Relic.</p>
@@ -243,9 +231,6 @@
 <li><code>query</code> - (Required) The NRQL query to execute for the condition.</li>
 <li><code>since_value</code> - (Required) The value to be used in the <code>SINCE &amp;lt;X&gt; MINUTES AGO</code> clause for the NRQL query. Must be between <code>1</code> and <code>20</code>.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/nrql_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/nrql_alert_condition.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.NrqlAlertConditionArgs.html">NrqlAlertConditionArgs</a></h4>
       <section></section>
@@ -256,9 +241,6 @@
 settings, however an explicit <code>Provider</code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/index.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.NewRelic.ProviderArgs.html">ProviderArgs</a></h4>
       <section></section>

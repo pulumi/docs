@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RouterBgp</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.Outputs.html">Pulumi.Gcp.Compute.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Compute_Outputs_RouterBgp_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RouterBgp</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RouterBgp : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Router.cs/#L311">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RouterBgp.cs/#L17">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RouterBgp_AdvertisedGroups" data-uid="Pulumi.Gcp.Compute.Outputs.RouterBgp.AdvertisedGroups">AdvertisedGroups</h4>
   <div class="markdown level1 summary"></div>
@@ -130,20 +106,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Router.cs/#L312">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RouterBgp.cs/#L18">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RouterBgp_AdvertisedIpRanges" data-uid="Pulumi.Gcp.Compute.Outputs.RouterBgp.AdvertisedIpRanges">AdvertisedIpRanges</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;RouterBgpAdvertisedIpRanges&gt; AdvertisedIpRanges</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;RouterBgpAdvertisedIpRange&gt; AdvertisedIpRanges</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,20 +131,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RouterBgpAdvertisedIpRanges.html">RouterBgpAdvertisedIpRanges</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.RouterBgpAdvertisedIpRange.html">RouterBgpAdvertisedIpRange</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Router.cs/#L310">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RouterBgp.cs/#L16">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RouterBgp_AdvertiseMode" data-uid="Pulumi.Gcp.Compute.Outputs.RouterBgp.AdvertiseMode">AdvertiseMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AdvertiseMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AdvertiseMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +156,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Router.cs/#L313">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RouterBgp.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Compute_Outputs_RouterBgp_Asn" data-uid="Pulumi.Gcp.Compute.Outputs.RouterBgp.Asn">Asn</h4>
   <div class="markdown level1 summary"></div>
@@ -217,7 +193,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Router.cs/#L307" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Outputs/RouterBgp.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -81,40 +81,16 @@ namespace field.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">OwnerReference</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Meta.V1.html">Pulumi.Kubernetes.Types.Outputs.Meta.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class OwnerReference</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class OwnerReference : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27559">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27802">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>API version of the referent.</p>
@@ -140,7 +116,7 @@ namespace field.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27567">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27810">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_BlockOwnerDeletion" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.BlockOwnerDeletion">BlockOwnerDeletion</h4>
   <div class="markdown level1 summary"><p>If true, AND if the owner has the &quot;foregroundDeletion&quot; finalizer, then the owner cannot
@@ -169,7 +145,7 @@ To set this field, a user needs &quot;delete&quot; permission of the owner, othe
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27572">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27815">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_Controller" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.Controller">Controller</h4>
   <div class="markdown level1 summary"><p>If true, this reference points to the managing controller.</p>
@@ -195,7 +171,7 @@ To set this field, a user needs &quot;delete&quot; permission of the owner, othe
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27821">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind of the referent. More info:
@@ -222,7 +198,7 @@ To set this field, a user needs &quot;delete&quot; permission of the owner, othe
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27583">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27826">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.Name">Name</h4>
   <div class="markdown level1 summary"><p>Name of the referent. More info: <a href="http://kubernetes.io/docs/user-guide/identifiers#names">http://kubernetes.io/docs/user-guide/identifiers#names</a></p>
@@ -248,7 +224,7 @@ To set this field, a user needs &quot;delete&quot; permission of the owner, othe
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27588">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27831">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Meta_V1_OwnerReference_Uid" data-uid="Pulumi.Kubernetes.Types.Outputs.Meta.V1.OwnerReference.Uid">Uid</h4>
   <div class="markdown level1 summary"><p>UID of the referent. More info: <a href="http://kubernetes.io/docs/user-guide/identifiers#uids">http://kubernetes.io/docs/user-guide/identifiers#uids</a></p>
@@ -280,7 +256,7 @@ To set this field, a user needs &quot;delete&quot; permission of the owner, othe
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L27553" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L27796" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

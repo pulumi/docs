@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">DocumentState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">DocumentState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ssm.html">Pulumi.Aws.Ssm</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L412">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState__ctor_" data-uid="Pulumi.Aws.Ssm.DocumentState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState__ctor" data-uid="Pulumi.Aws.Ssm.DocumentState.#ctor">DocumentState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L272">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Arn_" data-uid="Pulumi.Aws.Ssm.DocumentState.Arn*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Arn" data-uid="Pulumi.Aws.Ssm.DocumentState.Arn">Arn</h4>
@@ -137,7 +108,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +120,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L281">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_AttachmentsSources_" data-uid="Pulumi.Aws.Ssm.DocumentState.AttachmentsSources*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_AttachmentsSources" data-uid="Pulumi.Aws.Ssm.DocumentState.AttachmentsSources">AttachmentsSources</h4>
@@ -164,7 +135,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;DocumentAttachmentsSourcesGetArgs&gt; AttachmentsSources { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;DocumentAttachmentsSourceGetArgs&gt; AttachmentsSources { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +147,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Inputs.DocumentAttachmentsSourcesGetArgs.html">DocumentAttachmentsSourcesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Inputs.DocumentAttachmentsSourceGetArgs.html">DocumentAttachmentsSourceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L290">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Content_" data-uid="Pulumi.Aws.Ssm.DocumentState.Content*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Content" data-uid="Pulumi.Aws.Ssm.DocumentState.Content">Content</h4>
@@ -191,7 +162,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Content { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Content { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,13 +174,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L296">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L295">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_CreatedDate_" data-uid="Pulumi.Aws.Ssm.DocumentState.CreatedDate*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_CreatedDate" data-uid="Pulumi.Aws.Ssm.DocumentState.CreatedDate">CreatedDate</h4>
@@ -218,7 +189,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; CreatedDate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CreatedDate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,13 +201,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L302">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_DefaultVersion_" data-uid="Pulumi.Aws.Ssm.DocumentState.DefaultVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_DefaultVersion" data-uid="Pulumi.Aws.Ssm.DocumentState.DefaultVersion">DefaultVersion</h4>
@@ -245,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DefaultVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,13 +228,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L307">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Description_" data-uid="Pulumi.Aws.Ssm.DocumentState.Description*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Description" data-uid="Pulumi.Aws.Ssm.DocumentState.Description">Description</h4>
@@ -272,7 +243,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,13 +255,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L314">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_DocumentFormat_" data-uid="Pulumi.Aws.Ssm.DocumentState.DocumentFormat*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_DocumentFormat" data-uid="Pulumi.Aws.Ssm.DocumentState.DocumentFormat">DocumentFormat</h4>
@@ -299,7 +270,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DocumentFormat { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DocumentFormat { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,13 +282,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L320">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_DocumentType_" data-uid="Pulumi.Aws.Ssm.DocumentState.DocumentType*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_DocumentType" data-uid="Pulumi.Aws.Ssm.DocumentState.DocumentType">DocumentType</h4>
@@ -326,7 +297,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DocumentType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DocumentType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,13 +309,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L326">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Hash_" data-uid="Pulumi.Aws.Ssm.DocumentState.Hash*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Hash" data-uid="Pulumi.Aws.Ssm.DocumentState.Hash">Hash</h4>
@@ -353,7 +324,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Hash { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Hash { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,13 +336,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L332">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L331">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_HashType_" data-uid="Pulumi.Aws.Ssm.DocumentState.HashType*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_HashType" data-uid="Pulumi.Aws.Ssm.DocumentState.HashType">HashType</h4>
@@ -380,7 +351,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HashType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HashType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,13 +363,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L338">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L337">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_LatestVersion_" data-uid="Pulumi.Aws.Ssm.DocumentState.LatestVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_LatestVersion" data-uid="Pulumi.Aws.Ssm.DocumentState.LatestVersion">LatestVersion</h4>
@@ -407,7 +378,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; LatestVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? LatestVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,13 +390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Name_" data-uid="Pulumi.Aws.Ssm.DocumentState.Name*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Name" data-uid="Pulumi.Aws.Ssm.DocumentState.Name">Name</h4>
@@ -434,7 +405,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,13 +417,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L350">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Owner_" data-uid="Pulumi.Aws.Ssm.DocumentState.Owner*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Owner" data-uid="Pulumi.Aws.Ssm.DocumentState.Owner">Owner</h4>
@@ -461,7 +432,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Owner { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Owner { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -473,13 +444,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L359">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Parameters_" data-uid="Pulumi.Aws.Ssm.DocumentState.Parameters*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Parameters" data-uid="Pulumi.Aws.Ssm.DocumentState.Parameters">Parameters</h4>
@@ -488,7 +459,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;DocumentParametersGetArgs&gt; Parameters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;DocumentParameterGetArgs&gt; Parameters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,13 +471,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Inputs.DocumentParametersGetArgs.html">DocumentParametersGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Inputs.DocumentParameterGetArgs.html">DocumentParameterGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L368">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L367">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Permissions_" data-uid="Pulumi.Aws.Ssm.DocumentState.Permissions*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Permissions" data-uid="Pulumi.Aws.Ssm.DocumentState.Permissions">Permissions</h4>
@@ -515,7 +486,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;DocumentPermissionsGetArgs&gt; Permissions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;DocumentPermissionsGetArgs&gt;? Permissions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,13 +498,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Inputs.DocumentPermissionsGetArgs.html">DocumentPermissionsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Ssm.Inputs.DocumentPermissionsGetArgs.html">DocumentPermissionsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L377">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L376">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_PlatformTypes_" data-uid="Pulumi.Aws.Ssm.DocumentState.PlatformTypes*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_PlatformTypes" data-uid="Pulumi.Aws.Ssm.DocumentState.PlatformTypes">PlatformTypes</h4>
@@ -554,13 +525,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L386">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L385">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_SchemaVersion_" data-uid="Pulumi.Aws.Ssm.DocumentState.SchemaVersion*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_SchemaVersion" data-uid="Pulumi.Aws.Ssm.DocumentState.SchemaVersion">SchemaVersion</h4>
@@ -569,7 +540,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SchemaVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SchemaVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -581,13 +552,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L391">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Status_" data-uid="Pulumi.Aws.Ssm.DocumentState.Status*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Status" data-uid="Pulumi.Aws.Ssm.DocumentState.Status">Status</h4>
@@ -596,7 +567,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -608,13 +579,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L401">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L400">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_Tags_" data-uid="Pulumi.Aws.Ssm.DocumentState.Tags*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_Tags" data-uid="Pulumi.Aws.Ssm.DocumentState.Tags">Tags</h4>
@@ -635,13 +606,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ssm_DocumentState_TargetType_" data-uid="Pulumi.Aws.Ssm.DocumentState.TargetType*"></a>
   <h4 id="Pulumi_Aws_Ssm_DocumentState_TargetType" data-uid="Pulumi.Aws.Ssm.DocumentState.TargetType">TargetType</h4>
@@ -650,7 +621,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TargetType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TargetType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -662,7 +633,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -674,7 +645,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ssm/Document.cs/#L270" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ssm/Document.cs/#L269" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

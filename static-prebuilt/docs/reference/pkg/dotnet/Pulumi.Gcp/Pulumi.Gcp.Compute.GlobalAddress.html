@@ -71,50 +71,20 @@
   
   <h1 id="Pulumi_Gcp_Compute_GlobalAddress" data-uid="Pulumi.Gcp.Compute.GlobalAddress" class="text-break">Class GlobalAddress
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a Global Address resource. Global addresses are used for
+HTTP(S) load balancing.</p>
+<p>To get more information about GlobalAddress, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/v1/globalAddresses">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">Reserving a Static External IP Address</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">GlobalAddress</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">GlobalAddress</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +95,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress__ctor_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_GlobalAddress__ctor_System_String_Pulumi_Gcp_Compute_GlobalAddressArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.#ctor(System.String,Pulumi.Gcp.Compute.GlobalAddressArgs,Pulumi.CustomResourceOptions)">GlobalAddress(String, GlobalAddressArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_GlobalAddress__ctor_System_String_Pulumi_Gcp_Compute_GlobalAddressArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.GlobalAddress.#ctor(System.String,Pulumi.Gcp.Compute.GlobalAddressArgs,System.Nullable{CustomResourceOptions})">GlobalAddress(String, GlobalAddressArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a GlobalAddress resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GlobalAddress(string name, GlobalAddressArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public GlobalAddress(string name, GlobalAddressArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +129,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,12 +139,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Address_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Address*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Address" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Address">Address</h4>
-  <div class="markdown level1 summary"><p>The IP address or beginning of the address range represented by this resource. This can be supplied as an
-input to reserve a specific address or omitted to allow GCP to choose a valid one for you.</p>
+  <div class="markdown level1 summary"><p>The IP address or beginning of the address range represented by this resource. This can be supplied as an input to
+reserve a specific address or omitted to allow GCP to choose a valid one for you.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,23 +161,23 @@ input to reserve a specific address or omitted to allow GCP to choose a valid on
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_AddressType_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.AddressType*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_AddressType" data-uid="Pulumi.Gcp.Compute.GlobalAddress.AddressType">AddressType</h4>
-  <div class="markdown level1 summary"><p>The type of the address to reserve, default is EXTERNAL. * EXTERNAL indicates public/external single IP
-address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
+  <div class="markdown level1 summary"><p>The type of the address to reserve, default is EXTERNAL. * EXTERNAL indicates public/external single IP address. *
+INTERNAL indicates internal IP ranges belonging to some network.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AddressType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AddressType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,13 +189,13 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.GlobalAddress.CreationTimestamp">CreationTimestamp</h4>
@@ -246,13 +216,13 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L37">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Description_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Description" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Description">Description</h4>
@@ -261,7 +231,7 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,23 +243,22 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_IpVersion_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.IpVersion*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_IpVersion" data-uid="Pulumi.Gcp.Compute.GlobalAddress.IpVersion">IpVersion</h4>
-  <div class="markdown level1 summary"><p>The IP Version that will be used by this address. Valid options are 'IPV4' or 'IPV6'. The default value is
-'IPV4'.</p>
+  <div class="markdown level1 summary"><p>The IP Version that will be used by this address. Valid options are 'IPV4' or 'IPV6'. The default value is 'IPV4'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IpVersion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IpVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,13 +270,13 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_LabelFingerprint_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.LabelFingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_LabelFingerprint" data-uid="Pulumi.Gcp.Compute.GlobalAddress.LabelFingerprint">LabelFingerprint</h4>
@@ -328,13 +297,13 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Labels_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Labels*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Labels" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Labels">Labels</h4>
@@ -343,7 +312,7 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,21 +324,20 @@ address. * INTERNAL indicates internal IP ranges belonging to some network.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Name_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Name" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -386,24 +354,23 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Network_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Network*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Network" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Network">Network</h4>
-  <div class="markdown level1 summary"><p>The URL of the network in which to reserve the IP range. The IP range must be in RFC1918 space. The network
-cannot be deleted if there are any reserved IP ranges referring to it. This should only be set when using an
-Internal address.</p>
+  <div class="markdown level1 summary"><p>The URL of the network in which to reserve the IP range. The IP range must be in RFC1918 space. The network cannot be
+deleted if there are any reserved IP ranges referring to it. This should only be set when using an Internal address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Network { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Network { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -415,18 +382,18 @@ Internal address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_PrefixLength_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.PrefixLength*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_PrefixLength" data-uid="Pulumi.Gcp.Compute.GlobalAddress.PrefixLength">PrefixLength</h4>
-  <div class="markdown level1 summary"><p>The prefix length of the IP range. If not present, it means the address field is a single IP address. This
-field is not applicable to addresses with addressType=EXTERNAL.</p>
+  <div class="markdown level1 summary"><p>The prefix length of the IP range. If not present, it means the address field is a single IP address. This field is not
+applicable to addresses with addressType=EXTERNAL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -443,13 +410,13 @@ field is not applicable to addresses with addressType=EXTERNAL.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L96">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Project_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Project" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Project">Project</h4>
@@ -471,23 +438,23 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Purpose_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Purpose*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Purpose" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Purpose">Purpose</h4>
-  <div class="markdown level1 summary"><p>The purpose of the resource. For global internal addresses it can be * VPC_PEERING - for peer networks This
-should only be set when using an Internal address.</p>
+  <div class="markdown level1 summary"><p>The purpose of the resource. For global internal addresses it can be * VPC_PEERING - for peer networks This should only
+be set when using an Internal address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Purpose { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Purpose { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -499,13 +466,13 @@ should only be set when using an Internal address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_SelfLink_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_GlobalAddress_SelfLink" data-uid="Pulumi.Gcp.Compute.GlobalAddress.SelfLink">SelfLink</h4>
@@ -526,7 +493,7 @@ should only be set when using an Internal address.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -534,17 +501,17 @@ should only be set when using an Internal address.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L150">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_GlobalAddress_Get_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_GlobalAddressState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.GlobalAddressState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GlobalAddressState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_GlobalAddress_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_GlobalAddressState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.GlobalAddress.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.GlobalAddressState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, GlobalAddressState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing GlobalAddress resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GlobalAddress Get(string name, Input&lt;string&gt; id, GlobalAddressState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GlobalAddress Get(string name, Input&lt;string&gt; id, GlobalAddressState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -563,7 +530,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -575,7 +542,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -604,7 +571,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/GlobalAddress.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/GlobalAddress.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

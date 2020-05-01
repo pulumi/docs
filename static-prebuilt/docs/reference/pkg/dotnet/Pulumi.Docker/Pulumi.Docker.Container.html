@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Docker_Container" data-uid="Pulumi.Docker.Container" class="text-break">Class Container
   </h1>
   <div class="markdown level0 summary"><p>Manages the lifecycle of a Docker container.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown">https://github.com/terraform-providers/terraform-provider-docker/blob/master/website/docs/r/container.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Container</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Container</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.html">Pulumi.Docker</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L383">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L381">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container__ctor_" data-uid="Pulumi.Docker.Container.#ctor*"></a>
-  <h4 id="Pulumi_Docker_Container__ctor_System_String_Pulumi_Docker_ContainerArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Docker.Container.#ctor(System.String,Pulumi.Docker.ContainerArgs,Pulumi.CustomResourceOptions)">Container(String, ContainerArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Docker_Container__ctor_System_String_Pulumi_Docker_ContainerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Docker.Container.#ctor(System.String,Pulumi.Docker.ContainerArgs,System.Nullable{CustomResourceOptions})">Container(String, ContainerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Container resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Container(string name, ContainerArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Container(string name, ContainerArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Attach_" data-uid="Pulumi.Docker.Container.Attach*"></a>
   <h4 id="Pulumi_Docker_Container_Attach" data-uid="Pulumi.Docker.Container.Attach">Attach</h4>
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Bridge_" data-uid="Pulumi.Docker.Container.Bridge*"></a>
   <h4 id="Pulumi_Docker_Container_Bridge" data-uid="Pulumi.Docker.Container.Bridge">Bridge</h4>
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Capabilities_" data-uid="Pulumi.Docker.Container.Capabilities*"></a>
   <h4 id="Pulumi_Docker_Container_Capabilities" data-uid="Pulumi.Docker.Container.Capabilities">Capabilities</h4>
@@ -248,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerCapabilities.html">ContainerCapabilities</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerCapabilities.html">ContainerCapabilities</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Command_" data-uid="Pulumi.Docker.Container.Command*"></a>
   <h4 id="Pulumi_Docker_Container_Command" data-uid="Pulumi.Docker.Container.Command">Command</h4>
@@ -277,13 +236,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_ContainerLogs_" data-uid="Pulumi.Docker.Container.ContainerLogs*"></a>
   <h4 id="Pulumi_Docker_Container_ContainerLogs" data-uid="Pulumi.Docker.Container.ContainerLogs">ContainerLogs</h4>
@@ -304,13 +263,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_CpuSet_" data-uid="Pulumi.Docker.Container.CpuSet*"></a>
   <h4 id="Pulumi_Docker_Container_CpuSet" data-uid="Pulumi.Docker.Container.CpuSet">CpuSet</h4>
@@ -319,7 +278,7 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CpuSet { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CpuSet { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,13 +290,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_CpuShares_" data-uid="Pulumi.Docker.Container.CpuShares*"></a>
   <h4 id="Pulumi_Docker_Container_CpuShares" data-uid="Pulumi.Docker.Container.CpuShares">CpuShares</h4>
@@ -358,13 +317,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_DestroyGraceSeconds_" data-uid="Pulumi.Docker.Container.DestroyGraceSeconds*"></a>
   <h4 id="Pulumi_Docker_Container_DestroyGraceSeconds" data-uid="Pulumi.Docker.Container.DestroyGraceSeconds">DestroyGraceSeconds</h4>
@@ -385,13 +344,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Devices_" data-uid="Pulumi.Docker.Container.Devices*"></a>
   <h4 id="Pulumi_Docker_Container_Devices" data-uid="Pulumi.Docker.Container.Devices">Devices</h4>
@@ -400,7 +359,7 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerDevices&gt;&gt; Devices { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerDevice&gt;&gt; Devices { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,13 +371,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerDevices.html">ContainerDevices</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerDevice.html">ContainerDevice</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Dns_" data-uid="Pulumi.Docker.Container.Dns*"></a>
   <h4 id="Pulumi_Docker_Container_Dns" data-uid="Pulumi.Docker.Container.Dns">Dns</h4>
@@ -439,13 +398,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L84">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_DnsOpts_" data-uid="Pulumi.Docker.Container.DnsOpts*"></a>
   <h4 id="Pulumi_Docker_Container_DnsOpts" data-uid="Pulumi.Docker.Container.DnsOpts">DnsOpts</h4>
@@ -466,13 +425,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_DnsSearches_" data-uid="Pulumi.Docker.Container.DnsSearches*"></a>
   <h4 id="Pulumi_Docker_Container_DnsSearches" data-uid="Pulumi.Docker.Container.DnsSearches">DnsSearches</h4>
@@ -493,13 +452,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L94">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Domainname_" data-uid="Pulumi.Docker.Container.Domainname*"></a>
   <h4 id="Pulumi_Docker_Container_Domainname" data-uid="Pulumi.Docker.Container.Domainname">Domainname</h4>
@@ -508,7 +467,7 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Domainname { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Domainname { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -520,13 +479,13 @@ command to be <code>[&amp;quot;/usr/bin/myprogram&amp;quot;, &amp;quot;-f&amp;qu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Entrypoints_" data-uid="Pulumi.Docker.Container.Entrypoints*"></a>
   <h4 id="Pulumi_Docker_Container_Entrypoints" data-uid="Pulumi.Docker.Container.Entrypoints">Entrypoints</h4>
@@ -551,13 +510,13 @@ when starting a container, set the entrypoint to be
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Envs_" data-uid="Pulumi.Docker.Container.Envs*"></a>
   <h4 id="Pulumi_Docker_Container_Envs" data-uid="Pulumi.Docker.Container.Envs">Envs</h4>
@@ -578,13 +537,13 @@ when starting a container, set the entrypoint to be
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_ExitCode_" data-uid="Pulumi.Docker.Container.ExitCode*"></a>
   <h4 id="Pulumi_Docker_Container_ExitCode" data-uid="Pulumi.Docker.Container.ExitCode">ExitCode</h4>
@@ -605,13 +564,13 @@ when starting a container, set the entrypoint to be
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L125">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L123">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Gateway_" data-uid="Pulumi.Docker.Container.Gateway*"></a>
   <h4 id="Pulumi_Docker_Container_Gateway" data-uid="Pulumi.Docker.Container.Gateway">Gateway</h4>
@@ -633,13 +592,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L129">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_GroupAdds_" data-uid="Pulumi.Docker.Container.GroupAdds*"></a>
   <h4 id="Pulumi_Docker_Container_GroupAdds" data-uid="Pulumi.Docker.Container.GroupAdds">GroupAdds</h4>
@@ -660,13 +619,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L135">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Healthcheck_" data-uid="Pulumi.Docker.Container.Healthcheck*"></a>
   <h4 id="Pulumi_Docker_Container_Healthcheck" data-uid="Pulumi.Docker.Container.Healthcheck">Healthcheck</h4>
@@ -687,13 +646,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerHealthcheck.html">ContainerHealthcheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerHealthcheck.html">ContainerHealthcheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L149">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L141">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Hostname_" data-uid="Pulumi.Docker.Container.Hostname*"></a>
   <h4 id="Pulumi_Docker_Container_Hostname" data-uid="Pulumi.Docker.Container.Hostname">Hostname</h4>
@@ -714,13 +673,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L143">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L147">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Hosts_" data-uid="Pulumi.Docker.Container.Hosts*"></a>
   <h4 id="Pulumi_Docker_Container_Hosts" data-uid="Pulumi.Docker.Container.Hosts">Hosts</h4>
@@ -729,7 +688,7 @@ NetworkSettings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerHosts&gt;&gt; Hosts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerHost&gt;&gt; Hosts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -741,13 +700,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerHosts.html">ContainerHosts</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerHost.html">ContainerHost</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L157">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L155">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Image_" data-uid="Pulumi.Docker.Container.Image*"></a>
   <h4 id="Pulumi_Docker_Container_Image" data-uid="Pulumi.Docker.Container.Image">Image</h4>
@@ -770,13 +729,13 @@ as is shown in the example above.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L163">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L161">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_IpAddress_" data-uid="Pulumi.Docker.Container.IpAddress*"></a>
   <h4 id="Pulumi_Docker_Container_IpAddress" data-uid="Pulumi.Docker.Container.IpAddress">IpAddress</h4>
@@ -797,13 +756,13 @@ as is shown in the example above.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L176">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L174">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_IpcMode_" data-uid="Pulumi.Docker.Container.IpcMode*"></a>
   <h4 id="Pulumi_Docker_Container_IpcMode" data-uid="Pulumi.Docker.Container.IpcMode">IpcMode</h4>
@@ -824,13 +783,13 @@ as is shown in the example above.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L170">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L168">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_IpPrefixLength_" data-uid="Pulumi.Docker.Container.IpPrefixLength*"></a>
   <h4 id="Pulumi_Docker_Container_IpPrefixLength" data-uid="Pulumi.Docker.Container.IpPrefixLength">IpPrefixLength</h4>
@@ -852,13 +811,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L182">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L180">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Labels_" data-uid="Pulumi.Docker.Container.Labels*"></a>
   <h4 id="Pulumi_Docker_Container_Labels" data-uid="Pulumi.Docker.Container.Labels">Labels</h4>
@@ -867,7 +826,7 @@ NetworkSettings.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerLabels&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerLabel&gt;&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -879,13 +838,13 @@ NetworkSettings.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerLabels.html">ContainerLabels</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerLabel.html">ContainerLabel</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L189">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L187">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Links_" data-uid="Pulumi.Docker.Container.Links*"></a>
   <h4 id="Pulumi_Docker_Container_Links" data-uid="Pulumi.Docker.Container.Links">Links</h4>
@@ -907,13 +866,13 @@ connectivity between containers that are running on the same host.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L196">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L194">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_LogDriver_" data-uid="Pulumi.Docker.Container.LogDriver*"></a>
   <h4 id="Pulumi_Docker_Container_LogDriver" data-uid="Pulumi.Docker.Container.LogDriver">LogDriver</h4>
@@ -923,7 +882,7 @@ Defaults to &quot;json-file&quot;.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogDriver { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogDriver { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -935,13 +894,13 @@ Defaults to &quot;json-file&quot;.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_LogOpts_" data-uid="Pulumi.Docker.Container.LogOpts*"></a>
   <h4 id="Pulumi_Docker_Container_LogOpts" data-uid="Pulumi.Docker.Container.LogOpts">LogOpts</h4>
@@ -951,7 +910,7 @@ the logging driver.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; LogOpts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; LogOpts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -963,13 +922,13 @@ the logging driver.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Logs_" data-uid="Pulumi.Docker.Container.Logs*"></a>
   <h4 id="Pulumi_Docker_Container_Logs" data-uid="Pulumi.Docker.Container.Logs">Logs</h4>
@@ -990,13 +949,13 @@ the logging driver.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L217">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_MaxRetryCount_" data-uid="Pulumi.Docker.Container.MaxRetryCount*"></a>
   <h4 id="Pulumi_Docker_Container_MaxRetryCount" data-uid="Pulumi.Docker.Container.MaxRetryCount">MaxRetryCount</h4>
@@ -1021,13 +980,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L221">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Memory_" data-uid="Pulumi.Docker.Container.Memory*"></a>
   <h4 id="Pulumi_Docker_Container_Memory" data-uid="Pulumi.Docker.Container.Memory">Memory</h4>
@@ -1048,13 +1007,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L226">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L224">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_MemorySwap_" data-uid="Pulumi.Docker.Container.MemorySwap*"></a>
   <h4 id="Pulumi_Docker_Container_MemorySwap" data-uid="Pulumi.Docker.Container.MemorySwap">MemorySwap</h4>
@@ -1074,13 +1033,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L230">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Mounts_" data-uid="Pulumi.Docker.Container.Mounts*"></a>
   <h4 id="Pulumi_Docker_Container_Mounts" data-uid="Pulumi.Docker.Container.Mounts">Mounts</h4>
@@ -1089,7 +1048,7 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerMounts&gt;&gt; Mounts { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerMount&gt;&gt; Mounts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1101,13 +1060,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerMounts.html">ContainerMounts</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerMount.html">ContainerMount</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L235">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L233">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_MustRun_" data-uid="Pulumi.Docker.Container.MustRun*"></a>
   <h4 id="Pulumi_Docker_Container_MustRun" data-uid="Pulumi.Docker.Container.MustRun">MustRun</h4>
@@ -1127,13 +1086,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L238">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L236">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Name_" data-uid="Pulumi.Docker.Container.Name*"></a>
   <h4 id="Pulumi_Docker_Container_Name" data-uid="Pulumi.Docker.Container.Name">Name</h4>
@@ -1153,13 +1112,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L244">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_NetworkAliases_" data-uid="Pulumi.Docker.Container.NetworkAliases*"></a>
   <h4 id="Pulumi_Docker_Container_NetworkAliases" data-uid="Pulumi.Docker.Container.NetworkAliases">NetworkAliases</h4>
@@ -1180,13 +1139,13 @@ a restart when <code>restart</code> is set to &quot;on-failure&quot;</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L251">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L249">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_NetworkDatas_" data-uid="Pulumi.Docker.Container.NetworkDatas*"></a>
   <h4 id="Pulumi_Docker_Container_NetworkDatas" data-uid="Pulumi.Docker.Container.NetworkDatas">NetworkDatas</h4>
@@ -1196,7 +1155,7 @@ network. Key are the network names, values are the IP addresses.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerNetworkDatas&gt;&gt; NetworkDatas { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerNetworkData&gt;&gt; NetworkDatas { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1208,13 +1167,13 @@ network. Key are the network names, values are the IP addresses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerNetworkDatas.html">ContainerNetworkDatas</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerNetworkData.html">ContainerNetworkData</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L257">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L255">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_NetworkMode_" data-uid="Pulumi.Docker.Container.NetworkMode*"></a>
   <h4 id="Pulumi_Docker_Container_NetworkMode" data-uid="Pulumi.Docker.Container.NetworkMode">NetworkMode</h4>
@@ -1223,7 +1182,7 @@ network. Key are the network names, values are the IP addresses.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NetworkMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NetworkMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1235,13 +1194,13 @@ network. Key are the network names, values are the IP addresses.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L264">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L262">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Networks_" data-uid="Pulumi.Docker.Container.Networks*"></a>
   <h4 id="Pulumi_Docker_Container_Networks" data-uid="Pulumi.Docker.Container.Networks">Networks</h4>
@@ -1263,13 +1222,13 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L270">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_NetworksAdvanced_" data-uid="Pulumi.Docker.Container.NetworksAdvanced*"></a>
   <h4 id="Pulumi_Docker_Container_NetworksAdvanced" data-uid="Pulumi.Docker.Container.NetworksAdvanced">NetworksAdvanced</h4>
@@ -1290,13 +1249,13 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerNetworksAdvanced.html">ContainerNetworksAdvanced</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerNetworksAdvanced.html">ContainerNetworksAdvanced</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L276">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L274">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_PidMode_" data-uid="Pulumi.Docker.Container.PidMode*"></a>
   <h4 id="Pulumi_Docker_Container_PidMode" data-uid="Pulumi.Docker.Container.PidMode">PidMode</h4>
@@ -1305,7 +1264,7 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PidMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PidMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1317,13 +1276,13 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L280">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Ports_" data-uid="Pulumi.Docker.Container.Ports*"></a>
   <h4 id="Pulumi_Docker_Container_Ports" data-uid="Pulumi.Docker.Container.Ports">Ports</h4>
@@ -1332,7 +1291,7 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerPorts&gt;&gt; Ports { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerPort&gt;&gt; Ports { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1344,13 +1303,13 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerPorts.html">ContainerPorts</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerPort.html">ContainerPort</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L286">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Privileged_" data-uid="Pulumi.Docker.Container.Privileged*"></a>
   <h4 id="Pulumi_Docker_Container_Privileged" data-uid="Pulumi.Docker.Container.Privileged">Privileged</h4>
@@ -1371,13 +1330,13 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L292">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_PublishAllPorts_" data-uid="Pulumi.Docker.Container.PublishAllPorts*"></a>
   <h4 id="Pulumi_Docker_Container_PublishAllPorts" data-uid="Pulumi.Docker.Container.PublishAllPorts">PublishAllPorts</h4>
@@ -1398,13 +1357,13 @@ container is. <em>Deprecated:</em> use <code>networks_advanced</code> instead.</
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L301">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_ReadOnly_" data-uid="Pulumi.Docker.Container.ReadOnly*"></a>
   <h4 id="Pulumi_Docker_Container_ReadOnly" data-uid="Pulumi.Docker.Container.ReadOnly">ReadOnly</h4>
@@ -1426,13 +1385,13 @@ Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L308">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L306">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Restart_" data-uid="Pulumi.Docker.Container.Restart*"></a>
   <h4 id="Pulumi_Docker_Container_Restart" data-uid="Pulumi.Docker.Container.Restart">Restart</h4>
@@ -1442,7 +1401,7 @@ one of &quot;no&quot;, &quot;on-failure&quot;, &quot;always&quot;, &quot;unless-
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Restart { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Restart { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1454,13 +1413,13 @@ one of &quot;no&quot;, &quot;on-failure&quot;, &quot;always&quot;, &quot;unless-
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L311">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Rm_" data-uid="Pulumi.Docker.Container.Rm*"></a>
   <h4 id="Pulumi_Docker_Container_Rm" data-uid="Pulumi.Docker.Container.Rm">Rm</h4>
@@ -1480,13 +1439,13 @@ one of &quot;no&quot;, &quot;on-failure&quot;, &quot;always&quot;, &quot;unless-
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L317">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L315">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_ShmSize_" data-uid="Pulumi.Docker.Container.ShmSize*"></a>
   <h4 id="Pulumi_Docker_Container_ShmSize" data-uid="Pulumi.Docker.Container.ShmSize">ShmSize</h4>
@@ -1507,13 +1466,13 @@ one of &quot;no&quot;, &quot;on-failure&quot;, &quot;always&quot;, &quot;unless-
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L324">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L322">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Start_" data-uid="Pulumi.Docker.Container.Start*"></a>
   <h4 id="Pulumi_Docker_Container_Start" data-uid="Pulumi.Docker.Container.Start">Start</h4>
@@ -1535,13 +1494,13 @@ started after creation. If false, then the container is only created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L330">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L328">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Sysctls_" data-uid="Pulumi.Docker.Container.Sysctls*"></a>
   <h4 id="Pulumi_Docker_Container_Sysctls" data-uid="Pulumi.Docker.Container.Sysctls">Sysctls</h4>
@@ -1550,7 +1509,7 @@ started after creation. If false, then the container is only created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Sysctls { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Sysctls { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1562,13 +1521,13 @@ started after creation. If false, then the container is only created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L336">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Tmpfs_" data-uid="Pulumi.Docker.Container.Tmpfs*"></a>
   <h4 id="Pulumi_Docker_Container_Tmpfs" data-uid="Pulumi.Docker.Container.Tmpfs">Tmpfs</h4>
@@ -1577,7 +1536,7 @@ started after creation. If false, then the container is only created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tmpfs { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tmpfs { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1589,13 +1548,13 @@ started after creation. If false, then the container is only created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L343">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L341">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Ulimits_" data-uid="Pulumi.Docker.Container.Ulimits*"></a>
   <h4 id="Pulumi_Docker_Container_Ulimits" data-uid="Pulumi.Docker.Container.Ulimits">Ulimits</h4>
@@ -1605,7 +1564,7 @@ details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerUlimits&gt;&gt; Ulimits { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerUlimit&gt;&gt; Ulimits { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1617,13 +1576,13 @@ details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerUlimits.html">ContainerUlimits</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerUlimit.html">ContainerUlimit</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L349">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L347">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Uploads_" data-uid="Pulumi.Docker.Container.Uploads*"></a>
   <h4 id="Pulumi_Docker_Container_Uploads" data-uid="Pulumi.Docker.Container.Uploads">Uploads</h4>
@@ -1632,7 +1591,7 @@ details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerUploads&gt;&gt; Uploads { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerUpload&gt;&gt; Uploads { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1644,13 +1603,13 @@ details.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerUploads.html">ContainerUploads</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerUpload.html">ContainerUpload</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L357">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L355">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_User_" data-uid="Pulumi.Docker.Container.User*"></a>
   <h4 id="Pulumi_Docker_Container_User" data-uid="Pulumi.Docker.Container.User">User</h4>
@@ -1661,7 +1620,7 @@ by name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; User { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; User { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1673,13 +1632,13 @@ by name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L363">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L361">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_UsernsMode_" data-uid="Pulumi.Docker.Container.UsernsMode*"></a>
   <h4 id="Pulumi_Docker_Container_UsernsMode" data-uid="Pulumi.Docker.Container.UsernsMode">UsernsMode</h4>
@@ -1688,7 +1647,7 @@ by name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UsernsMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UsernsMode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1700,13 +1659,13 @@ by name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L367">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Volumes_" data-uid="Pulumi.Docker.Container.Volumes*"></a>
   <h4 id="Pulumi_Docker_Container_Volumes" data-uid="Pulumi.Docker.Container.Volumes">Volumes</h4>
@@ -1715,7 +1674,7 @@ by name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerVolumes&gt;&gt; Volumes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ContainerVolume&gt;&gt; Volumes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1727,13 +1686,13 @@ by name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerVolumes.html">ContainerVolumes</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Docker.Outputs.ContainerVolume.html">ContainerVolume</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L372">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L370">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_WorkingDir_" data-uid="Pulumi.Docker.Container.WorkingDir*"></a>
   <h4 id="Pulumi_Docker_Container_WorkingDir" data-uid="Pulumi.Docker.Container.WorkingDir">WorkingDir</h4>
@@ -1741,7 +1700,7 @@ by name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; WorkingDir { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; WorkingDir { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1753,7 +1712,7 @@ by name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1761,17 +1720,17 @@ by name.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L413">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L411">View Source</a>
   </span>
   <a id="Pulumi_Docker_Container_Get_" data-uid="Pulumi.Docker.Container.Get*"></a>
-  <h4 id="Pulumi_Docker_Container_Get_System_String_Pulumi_Input_System_String__Pulumi_Docker_ContainerState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Docker.Container.Get(System.String,Pulumi.Input{System.String},Pulumi.Docker.ContainerState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ContainerState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Docker_Container_Get_System_String_Input_System_String__Pulumi_Docker_ContainerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Docker.Container.Get(System.String,Input{System.String},Pulumi.Docker.ContainerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ContainerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Container resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Container Get(string name, Input&lt;string&gt; id, ContainerState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Container Get(string name, Input&lt;string&gt; id, ContainerState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1790,7 +1749,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1802,7 +1761,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1831,7 +1790,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Container.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

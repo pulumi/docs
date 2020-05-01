@@ -71,50 +71,28 @@
   
   <h1 id="Pulumi_Gcp_Compute_HealthCheck" data-uid="Pulumi.Gcp.Compute.HealthCheck" class="text-break">Class HealthCheck
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Health Checks determine whether instances are responsive and able to do work.
+They are an important part of a comprehensive load balancing configuration,
+as they enable monitoring instances behind load balancers.</p>
+<p>Health Checks poll instances at a specified interval. Instances that
+do not respond successfully to some number of probes in a row are marked
+as unhealthy. No new connections are sent to unhealthy instances,
+though existing connections will continue. The health check will
+continue to poll unhealthy instances. If an instance later responds
+successfully to some number of consecutive probes, it is marked
+healthy again and can receive new connections.</p>
+<p>To get more information about HealthCheck, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">HealthCheck</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">HealthCheck</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +103,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L137">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck__ctor_" data-uid="Pulumi.Gcp.Compute.HealthCheck.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_HealthCheck__ctor_System_String_Pulumi_Gcp_Compute_HealthCheckArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.HealthCheck.#ctor(System.String,Pulumi.Gcp.Compute.HealthCheckArgs,Pulumi.CustomResourceOptions)">HealthCheck(String, HealthCheckArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_HealthCheck__ctor_System_String_Pulumi_Gcp_Compute_HealthCheckArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.HealthCheck.#ctor(System.String,Pulumi.Gcp.Compute.HealthCheckArgs,System.Nullable{CustomResourceOptions})">HealthCheck(String, HealthCheckArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a HealthCheck resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HealthCheck(string name, HealthCheckArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HealthCheck(string name, HealthCheckArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +137,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +147,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_CheckIntervalSec_" data-uid="Pulumi.Gcp.Compute.HealthCheck.CheckIntervalSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_CheckIntervalSec" data-uid="Pulumi.Gcp.Compute.HealthCheck.CheckIntervalSec">CheckIntervalSec</h4>
@@ -190,13 +168,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L43">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_CreationTimestamp_" data-uid="Pulumi.Gcp.Compute.HealthCheck.CreationTimestamp*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_CreationTimestamp" data-uid="Pulumi.Gcp.Compute.HealthCheck.CreationTimestamp">CreationTimestamp</h4>
@@ -217,13 +195,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_Description_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_Description" data-uid="Pulumi.Gcp.Compute.HealthCheck.Description">Description</h4>
@@ -232,7 +210,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,18 +222,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L55">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_HealthyThreshold_" data-uid="Pulumi.Gcp.Compute.HealthCheck.HealthyThreshold*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_HealthyThreshold" data-uid="Pulumi.Gcp.Compute.HealthCheck.HealthyThreshold">HealthyThreshold</h4>
-  <div class="markdown level1 summary"><p>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value
-is 2.</p>
+  <div class="markdown level1 summary"><p>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -272,13 +249,13 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L61">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_Http2HealthCheck_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Http2HealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_Http2HealthCheck" data-uid="Pulumi.Gcp.Compute.HealthCheck.Http2HealthCheck">Http2HealthCheck</h4>
@@ -299,13 +276,13 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckHttp2HealthCheck.html">HealthCheckHttp2HealthCheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckHttp2HealthCheck.html">HealthCheckHttp2HealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L67">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_HttpHealthCheck_" data-uid="Pulumi.Gcp.Compute.HealthCheck.HttpHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_HttpHealthCheck" data-uid="Pulumi.Gcp.Compute.HealthCheck.HttpHealthCheck">HttpHealthCheck</h4>
@@ -326,13 +303,13 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckHttpHealthCheck.html">HealthCheckHttpHealthCheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckHttpHealthCheck.html">HealthCheckHttpHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L73">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_HttpsHealthCheck_" data-uid="Pulumi.Gcp.Compute.HealthCheck.HttpsHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_HttpsHealthCheck" data-uid="Pulumi.Gcp.Compute.HealthCheck.HttpsHealthCheck">HttpsHealthCheck</h4>
@@ -353,21 +330,20 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckHttpsHealthCheck.html">HealthCheckHttpsHealthCheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckHttpsHealthCheck.html">HealthCheckHttpsHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L82">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_Name_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_Name" data-uid="Pulumi.Gcp.Compute.HealthCheck.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -384,13 +360,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_Project_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_Project" data-uid="Pulumi.Gcp.Compute.HealthCheck.Project">Project</h4>
@@ -412,13 +388,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L95">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_SelfLink_" data-uid="Pulumi.Gcp.Compute.HealthCheck.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_SelfLink" data-uid="Pulumi.Gcp.Compute.HealthCheck.SelfLink">SelfLink</h4>
@@ -439,13 +415,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L101">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_SslHealthCheck_" data-uid="Pulumi.Gcp.Compute.HealthCheck.SslHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_SslHealthCheck" data-uid="Pulumi.Gcp.Compute.HealthCheck.SslHealthCheck">SslHealthCheck</h4>
@@ -466,13 +442,13 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckSslHealthCheck.html">HealthCheckSslHealthCheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckSslHealthCheck.html">HealthCheckSslHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L107">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_TcpHealthCheck_" data-uid="Pulumi.Gcp.Compute.HealthCheck.TcpHealthCheck*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_TcpHealthCheck" data-uid="Pulumi.Gcp.Compute.HealthCheck.TcpHealthCheck">TcpHealthCheck</h4>
@@ -493,18 +469,18 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckTcpHealthCheck.html">HealthCheckTcpHealthCheck</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.HealthCheckTcpHealthCheck.html">HealthCheckTcpHealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_TimeoutSec_" data-uid="Pulumi.Gcp.Compute.HealthCheck.TimeoutSec*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_TimeoutSec" data-uid="Pulumi.Gcp.Compute.HealthCheck.TimeoutSec">TimeoutSec</h4>
-  <div class="markdown level1 summary"><p>How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for
-timeoutSec to have greater value than checkIntervalSec.</p>
+  <div class="markdown level1 summary"><p>How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
+have greater value than checkIntervalSec.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -521,13 +497,13 @@ timeoutSec to have greater value than checkIntervalSec.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L102">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L120">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_Type_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Type*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_Type" data-uid="Pulumi.Gcp.Compute.HealthCheck.Type">Type</h4>
@@ -548,18 +524,17 @@ timeoutSec to have greater value than checkIntervalSec.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L126">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_UnhealthyThreshold_" data-uid="Pulumi.Gcp.Compute.HealthCheck.UnhealthyThreshold*"></a>
   <h4 id="Pulumi_Gcp_Compute_HealthCheck_UnhealthyThreshold" data-uid="Pulumi.Gcp.Compute.HealthCheck.UnhealthyThreshold">UnhealthyThreshold</h4>
-  <div class="markdown level1 summary"><p>A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value
-is 2.</p>
+  <div class="markdown level1 summary"><p>A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -576,7 +551,7 @@ is 2.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -584,17 +559,17 @@ is 2.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L150">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L167">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_HealthCheck_Get_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_HealthCheck_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_HealthCheckState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.HealthCheck.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.HealthCheckState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, HealthCheckState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_HealthCheck_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_HealthCheckState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.HealthCheck.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.HealthCheckState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, HealthCheckState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing HealthCheck resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static HealthCheck Get(string name, Input&lt;string&gt; id, HealthCheckState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static HealthCheck Get(string name, Input&lt;string&gt; id, HealthCheckState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -613,7 +588,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -625,7 +600,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -654,7 +629,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/HealthCheck.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/HealthCheck.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

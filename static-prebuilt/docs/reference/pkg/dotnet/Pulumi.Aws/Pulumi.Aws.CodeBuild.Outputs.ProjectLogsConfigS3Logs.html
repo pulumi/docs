@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ProjectLogsConfigS3Logs</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CodeBuild.Outputs.html">Pulumi.Aws.CodeBuild.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_CodeBuild_Outputs_ProjectLogsConfigS3Logs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ProjectLogsConfigS3Logs</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ProjectLogsConfigS3Logs : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1818">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectLogsConfigS3Logs.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectLogsConfigS3Logs_EncryptionDisabled" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectLogsConfigS3Logs.EncryptionDisabled">EncryptionDisabled</h4>
   <div class="markdown level1 summary"><p>If set to true, output artifacts will not be encrypted. If <code>type</code> is set to <code>NO_ARTIFACTS</code> then this value will be ignored. Defaults to <code>false</code>.</p>
@@ -137,15 +113,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1822">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectLogsConfigS3Logs.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectLogsConfigS3Logs_Location" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectLogsConfigS3Logs.Location">Location</h4>
-  <div class="markdown level1 summary"><p>The location of the source code from git or s3.</p>
+  <div class="markdown level1 summary"><p>Information about the build output artifact location. If <code>type</code> is set to <code>CODEPIPELINE</code> or <code>NO_ARTIFACTS</code> then this value will be ignored. If <code>type</code> is set to <code>S3</code>, this is the name of the output bucket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Location</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Location</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,21 +133,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1826">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectLogsConfigS3Logs.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_CodeBuild_Outputs_ProjectLogsConfigS3Logs_Status" data-uid="Pulumi.Aws.CodeBuild.Outputs.ProjectLogsConfigS3Logs.Status">Status</h4>
-  <div class="markdown level1 summary"><p>Current status of logs in S3 for a build project. Valid values: <code>ENABLED</code>, <code>DISABLED</code>. Defaults to <code>DISABLED</code>.</p>
+  <div class="markdown level1 summary"><p>Current status of logs in CloudWatch Logs for a build project. Valid values: <code>ENABLED</code>, <code>DISABLED</code>. Defaults to <code>ENABLED</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Status</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Status</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,7 +159,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -195,7 +171,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Codebuild/Project.cs/#L1812" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CodeBuild/Outputs/ProjectLogsConfigS3Logs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

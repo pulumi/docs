@@ -94,6 +94,16 @@ type is ExternalName).</li>
 time out and mark the resource update as Failed. You can override the default timeout value
 by setting the 'customTimeouts' option on the resource.</p>
 </section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Networking.V1Beta1.IngressClass.html">IngressClass</a></h4>
+      <section><p>IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The
+<code>ingressclass.kubernetes.io/is-default-class</code> annotation can be used to indicate that an
+IngressClass should be considered default. When a single IngressClass resource has this
+annotation set to true, new Ingress resources without a class specified will be assigned
+this default class.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Networking.V1Beta1.IngressClassList.html">IngressClassList</a></h4>
+      <section><p>IngressClassList is a collection of IngressClasses.</p>
+</section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Networking.V1Beta1.IngressList.html">IngressList</a></h4>
       <section><p>IngressList is a collection of Ingress.</p>
 </section>

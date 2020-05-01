@@ -1573,7 +1573,7 @@ func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOpt
 class MyComponent : Pulumi.ComponentResource
 {
     public MyComponent(string name, ComponentResourceOptions opts)
-        : base("pkg:index:MyComponent", name, opts);
+        : base("pkg:index:MyComponent", name, opts)
     {
         // initialization logic.
 
@@ -3187,7 +3187,7 @@ class MyStack
 
 {{< /chooser >}}
 
-#### Dynamic Providers <span class="badge badge-preview">PREVIEW</span> {#dynamicproviders}
+#### Dynamic Providers {#dynamicproviders}
 
 Every {{< pulumi-customresource >}} has a provider associated with it which knows how to `create`, `read`, `update`, and `delete` instances of the custom resource in the backing cloud provider. This provider plugin is defined by implementing the Pulumi Resource Provider gRPC interface. Most resources implement this without you needing to know how.
 

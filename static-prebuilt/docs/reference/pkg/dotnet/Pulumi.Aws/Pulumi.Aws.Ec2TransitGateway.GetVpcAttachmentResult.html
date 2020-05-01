@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetVpcAttachmentResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2TransitGateway.html">Pulumi.Aws.Ec2TransitGateway</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetVpcAttachmentResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetVpcAttachmentResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_DnsSupport" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.DnsSupport">DnsSupport</h4>
   <div class="markdown level1 summary"><p>Whether DNS support is enabled.</p>
@@ -137,14 +113,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L70">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_Filters" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.Filters">Filters</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVpcAttachmentFiltersResult&gt; Filters</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetVpcAttachmentFilterResult&gt; Filters</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +132,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2TransitGateway.Outputs.GetVpcAttachmentFiltersResult.html">GetVpcAttachmentFiltersResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ec2TransitGateway.Outputs.GetVpcAttachmentFilterResult.html">GetVpcAttachmentFilterResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_Id" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>EC2 Transit Gateway VPC Attachment identifier</p>
@@ -170,7 +146,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Id</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,13 +158,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L71">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_Ipv6Support" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.Ipv6Support">Ipv6Support</h4>
   <div class="markdown level1 summary"><p>Whether IPv6 support is enabled.</p>
@@ -214,7 +190,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L75">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L82">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_SubnetIds" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.SubnetIds">SubnetIds</h4>
   <div class="markdown level1 summary"><p>Identifiers of EC2 Subnets.</p>
@@ -234,13 +210,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_Tags" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>Key-value tags for the EC2 Transit Gateway VPC Attachment</p>
@@ -260,13 +236,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_TransitGatewayId" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.TransitGatewayId">TransitGatewayId</h4>
   <div class="markdown level1 summary"><p>EC2 Transit Gateway identifier</p>
@@ -292,7 +268,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_VpcId" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.VpcId">VpcId</h4>
   <div class="markdown level1 summary"><p>Identifier of EC2 VPC.</p>
@@ -318,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_Ec2TransitGateway_GetVpcAttachmentResult_VpcOwnerId" data-uid="Pulumi.Aws.Ec2TransitGateway.GetVpcAttachmentResult.VpcOwnerId">VpcOwnerId</h4>
   <div class="markdown level1 summary"><p>Identifier of the AWS account that owns the EC2 VPC.</p>
@@ -350,7 +326,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2transitgateway/GetVpcAttachment.cs/#L56" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2TransitGateway/GetVpcAttachment.cs/#L63" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

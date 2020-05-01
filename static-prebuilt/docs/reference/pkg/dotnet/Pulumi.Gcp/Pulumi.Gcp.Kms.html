@@ -77,52 +77,113 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKey.html">CryptoKey</a></h4>
-      <section></section>
+      <section><p>A <code>CryptoKey</code> represents a logical key that can be used for cryptographic operations.</p>
+<blockquote>
+<p><strong>Note:</strong> CryptoKeys cannot be deleted from Google Cloud Platform.
+Destroying a provider-managed CryptoKey will remove it from state
+and delete all CryptoKeyVersions, rendering the key unusable, but <em>will
+not delete the resource on the server.</em> When the provider destroys these keys,
+any data previously encrypted with these keys will be irrecoverable.
+For this reason, it is strongly recommended that you add lifecycle hooks
+to the resource to prevent accidental destruction.</p>
+</blockquote>
+<p>To get more information about CryptoKey, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/kms/docs/creating-keys#create_a_key">Creating a key</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyArgs.html">CryptoKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMBinding.html">CryptoKeyIAMBinding</a></h4>
-      <section><p>Allows creation and management of a single binding within IAM policy for
-an existing Google Cloud KMS crypto key.</p>
+      <section><p>Three different resources help you manage your IAM policy for KMS crypto key. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.kms.CryptoKeyIAMPolicy</code>: Authoritative. Sets the IAM policy for the crypto key and replaces any existing policy already attached.</li>
+<li><code>gcp.kms.CryptoKeyIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the crypto key are preserved.</li>
+<li><code>gcp.kms.CryptoKeyIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the crypto key are preserved.</li>
+</ul>
 <blockquote>
-<p><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.
-Use <code>import</code> and inspect the preview output to ensure
-your existing members are preserved.</p>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.kms.CryptoKeyIAMBinding</code> and <code>gcp.kms.CryptoKeyIAMMember</code> or they will fight over what your policy should be.</p>
 </blockquote>
 <blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam_binding.html.markdown</a>.</p>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMBindingArgs.html">CryptoKeyIAMBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMBindingState.html">CryptoKeyIAMBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMMember.html">CryptoKeyIAMMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for KMS crypto key. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.kms.CryptoKeyIAMPolicy</code>: Authoritative. Sets the IAM policy for the crypto key and replaces any existing policy already attached.</li>
+<li><code>gcp.kms.CryptoKeyIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the crypto key are preserved.</li>
+<li><code>gcp.kms.CryptoKeyIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the crypto key are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.kms.CryptoKeyIAMBinding</code> and <code>gcp.kms.CryptoKeyIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMMemberArgs.html">CryptoKeyIAMMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMMemberState.html">CryptoKeyIAMMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMPolicy.html">CryptoKeyIAMPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for KMS crypto key. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.kms.CryptoKeyIAMPolicy</code>: Authoritative. Sets the IAM policy for the crypto key and replaces any existing policy already attached.</li>
+<li><code>gcp.kms.CryptoKeyIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the crypto key are preserved.</li>
+<li><code>gcp.kms.CryptoKeyIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the crypto key are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.kms.CryptoKeyIAMBinding</code> and <code>gcp.kms.CryptoKeyIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.kms.CryptoKeyIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.CryptoKeyIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
+<p>With IAM Conditions:</p>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMPolicyArgs.html">CryptoKeyIAMPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyIAMPolicyState.html">CryptoKeyIAMPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.CryptoKeyState.html">CryptoKeyState</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSCryptoKey.html">GetKMSCryptoKey</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSCryptoKeyArgs.html">GetKMSCryptoKeyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSCryptoKeyResult.html">GetKMSCryptoKeyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSCryptoKeyVersion.html">GetKMSCryptoKeyVersion</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSCryptoKeyVersionArgs.html">GetKMSCryptoKeyVersionArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSCryptoKeyVersionResult.html">GetKMSCryptoKeyVersionResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSKeyRing.html">GetKMSKeyRing</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSKeyRingArgs.html">GetKMSKeyRingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSKeyRingResult.html">GetKMSKeyRingResult</a></h4>
       <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSSecret.html">GetKMSSecret</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSSecretArgs.html">GetKMSSecretArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSSecretCiphertext.html">GetKMSSecretCiphertext</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSSecretCiphertextArgs.html">GetKMSSecretCiphertextArgs</a></h4>
       <section></section>
@@ -130,10 +191,20 @@ your existing members are preserved.</p>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.GetKMSSecretResult.html">GetKMSSecretResult</a></h4>
       <section></section>
-      <h4><a class="xref" href="Pulumi.Gcp.Kms.Invokes.html">Invokes</a></h4>
-      <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRing.html">KeyRing</a></h4>
-      <section></section>
+      <section><p>A <code>KeyRing</code> is a toplevel logical grouping of <code>CryptoKeys</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> KeyRings cannot be deleted from Google Cloud Platform.
+Destroying a provider-managed KeyRing will remove it from state but
+<em>will not delete the resource on the server.</em></p>
+</blockquote>
+<p>To get more information about KeyRing, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring">Creating a key ring</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingArgs.html">KeyRingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMBinding.html">KeyRingIAMBinding</a></h4>
@@ -148,9 +219,6 @@ your existing members are preserved.</p>
 </blockquote>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.KeyRingIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.KeyRingIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown</a>.</p>
 </blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMBindingArgs.html">KeyRingIAMBindingArgs</a></h4>
@@ -170,9 +238,6 @@ your existing members are preserved.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.KeyRingIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.KeyRingIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMMemberArgs.html">KeyRingIAMMemberArgs</a></h4>
       <section></section>
@@ -191,9 +256,6 @@ your existing members are preserved.</p>
 <blockquote>
 <p><strong>Note:</strong> <code>gcp.kms.KeyRingIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.kms.KeyRingIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.KeyRingIAMPolicyArgs.html">KeyRingIAMPolicyArgs</a></h4>
       <section></section>
@@ -205,16 +267,26 @@ your existing members are preserved.</p>
       <section><p>Creates a device registry in Google's Cloud IoT Core platform. For more information see
 <a href="https://cloud.google.com/iot/docs/">the official documentation</a> and
 <a href="https://cloud.google.com/iot/docs/reference/cloudiot/rest/v1/projects.locations.registries">API</a>.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudiot_registry.html.markdown</a>.</p>
-</blockquote>
 </section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.RegistryArgs.html">RegistryArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.RegistryState.html">RegistryState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.SecretCiphertext.html">SecretCiphertext</a></h4>
-      <section></section>
+      <section><p>Encrypts secret data with Google Cloud KMS and provides access to the ciphertext.</p>
+<blockquote>
+<p><strong>NOTE</strong>: Using this resource will allow you to conceal secret data within your
+resource definitions, but it does not take care of protecting that data in the
+logging output, plan output, or state output.  Please take care to secure your secret
+data outside of resource definitions.</p>
+</blockquote>
+<p>To get more information about SecretCiphertext, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys/encrypt">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/kms/docs/encrypt-decrypt">Encrypting and decrypting data with a symmetric key</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.SecretCiphertextArgs.html">SecretCiphertextArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.Kms.SecretCiphertextState.html">SecretCiphertextState</a></h4>

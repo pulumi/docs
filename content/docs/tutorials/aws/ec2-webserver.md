@@ -179,7 +179,7 @@ class Program
         Deployment.Run(() =>
         {
             var size = "t2.micro";     // t2.micro is available in the AWS free tier
-            var ami = Aws.Invokes.GetAmi(new Aws.GetAmiArgs
+            var ami = Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
             {
                 Filters =
                 {

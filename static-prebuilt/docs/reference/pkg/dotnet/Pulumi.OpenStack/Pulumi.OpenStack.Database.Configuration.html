@@ -72,9 +72,6 @@
   <h1 id="Pulumi_OpenStack_Database_Configuration" data-uid="Pulumi.OpenStack.Database.Configuration" class="text-break">Class Configuration
   </h1>
   <div class="markdown level0 summary"><p>Manages a V1 DB configuration resource within OpenStack.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/db_configuration_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/db_configuration_v1.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration__ctor_" data-uid="Pulumi.OpenStack.Database.Configuration.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration__ctor_System_String_Pulumi_OpenStack_Database_ConfigurationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Database.Configuration.#ctor(System.String,Pulumi.OpenStack.Database.ConfigurationArgs,System.Nullable{CustomResourceOptions})">Configuration(String, ConfigurationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration_Configurations_" data-uid="Pulumi.OpenStack.Database.Configuration.Configurations*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration_Configurations" data-uid="Pulumi.OpenStack.Database.Configuration.Configurations">Configurations</h4>
@@ -144,7 +141,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ConfigurationConfigurations&gt;&gt; Configurations { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ConfigurationConfiguration&gt;&gt; Configurations { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.ConfigurationConfigurations.html">ConfigurationConfigurations</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.ConfigurationConfiguration.html">ConfigurationConfiguration</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration_Datastore_" data-uid="Pulumi.OpenStack.Database.Configuration.Datastore*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration_Datastore" data-uid="Pulumi.OpenStack.Database.Configuration.Datastore">Datastore</h4>
@@ -190,7 +187,7 @@ object structure is documented below. Changing this creates resource.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration_Description_" data-uid="Pulumi.OpenStack.Database.Configuration.Description*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration_Description" data-uid="Pulumi.OpenStack.Database.Configuration.Description">Description</h4>
@@ -217,11 +214,11 @@ object structure is documented below. Changing this creates resource.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration_Name_" data-uid="Pulumi.OpenStack.Database.Configuration.Name*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration_Name" data-uid="Pulumi.OpenStack.Database.Configuration.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A unique name for the resource.</p>
+  <div class="markdown level1 summary"><p>Configuration parameter name. Changing this creates a new resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -244,7 +241,7 @@ object structure is documented below. Changing this creates resource.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration_Region_" data-uid="Pulumi.OpenStack.Database.Configuration.Region*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration_Region" data-uid="Pulumi.OpenStack.Database.Configuration.Region">Region</h4>
@@ -274,7 +271,7 @@ creates a new instance.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L87">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Configuration_Get_" data-uid="Pulumi.OpenStack.Database.Configuration.Get*"></a>
   <h4 id="Pulumi_OpenStack_Database_Configuration_Get_System_String_Input_System_String__Pulumi_OpenStack_Database_ConfigurationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Database.Configuration.Get(System.String,Input{System.String},Pulumi.OpenStack.Database.ConfigurationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ConfigurationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -344,7 +341,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Configuration.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Configuration.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

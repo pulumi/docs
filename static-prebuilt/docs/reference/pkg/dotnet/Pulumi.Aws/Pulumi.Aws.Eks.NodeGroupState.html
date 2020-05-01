@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">NodeGroupState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NodeGroupState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Eks.html">Pulumi.Aws.Eks</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L348">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L382">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState__ctor_" data-uid="Pulumi.Aws.Eks.NodeGroupState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState__ctor" data-uid="Pulumi.Aws.Eks.NodeGroupState.#ctor">NodeGroupState()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L240">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L265">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_AmiType_" data-uid="Pulumi.Aws.Eks.NodeGroupState.AmiType*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_AmiType" data-uid="Pulumi.Aws.Eks.NodeGroupState.AmiType">AmiType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to <code>AL2_x86_64</code>. Valid values: <code>AL2_x86_64</code>, <code>AL2_x86_64_GPU</code>. This provider will only perform drift detection if a configuration value is provided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AmiType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AmiType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_Arn_" data-uid="Pulumi.Aws.Eks.NodeGroupState.Arn*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_Arn" data-uid="Pulumi.Aws.Eks.NodeGroupState.Arn">Arn</h4>
@@ -164,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Arn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Arn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L277">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_ClusterName_" data-uid="Pulumi.Aws.Eks.NodeGroupState.ClusterName*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_ClusterName" data-uid="Pulumi.Aws.Eks.NodeGroupState.ClusterName">ClusterName</h4>
@@ -191,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClusterName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ClusterName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,21 +175,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L255">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L283">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_DiskSize_" data-uid="Pulumi.Aws.Eks.NodeGroupState.DiskSize*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_DiskSize" data-uid="Pulumi.Aws.Eks.NodeGroupState.DiskSize">DiskSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disk size in GiB for worker nodes. Defaults to <code>20</code>. This provider will only perform drift detection if a configuration value is provided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; DiskSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? DiskSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,21 +202,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_InstanceTypes_" data-uid="Pulumi.Aws.Eks.NodeGroupState.InstanceTypes*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_InstanceTypes" data-uid="Pulumi.Aws.Eks.NodeGroupState.InstanceTypes">InstanceTypes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set of instance types associated with the EKS Node Group. Defaults to <code>[&amp;quot;t3.medium&amp;quot;]</code>. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceTypes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceTypes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L267">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L298">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_Labels_" data-uid="Pulumi.Aws.Eks.NodeGroupState.Labels*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_Labels" data-uid="Pulumi.Aws.Eks.NodeGroupState.Labels">Labels</h4>
@@ -282,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L276">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L307">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_NodeGroupName_" data-uid="Pulumi.Aws.Eks.NodeGroupState.NodeGroupName*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_NodeGroupName" data-uid="Pulumi.Aws.Eks.NodeGroupState.NodeGroupName">NodeGroupName</h4>
@@ -297,7 +271,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NodeGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NodeGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,13 +283,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L313">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_NodeRoleArn_" data-uid="Pulumi.Aws.Eks.NodeGroupState.NodeRoleArn*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_NodeRoleArn" data-uid="Pulumi.Aws.Eks.NodeGroupState.NodeRoleArn">NodeRoleArn</h4>
@@ -324,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NodeRoleArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NodeRoleArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,13 +310,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L319">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_ReleaseVersion_" data-uid="Pulumi.Aws.Eks.NodeGroupState.ReleaseVersion*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_ReleaseVersion" data-uid="Pulumi.Aws.Eks.NodeGroupState.ReleaseVersion">ReleaseVersion</h4>
@@ -351,7 +325,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ReleaseVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ReleaseVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -363,13 +337,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_RemoteAccess_" data-uid="Pulumi.Aws.Eks.NodeGroupState.RemoteAccess*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_RemoteAccess" data-uid="Pulumi.Aws.Eks.NodeGroupState.RemoteAccess">RemoteAccess</h4>
@@ -378,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodeGroupRemoteAccessGetArgs&gt; RemoteAccess { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeGroupRemoteAccessGetArgs&gt;? RemoteAccess { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -390,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Eks.Inputs.NodeGroupRemoteAccessGetArgs.html">NodeGroupRemoteAccessGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Inputs.NodeGroupRemoteAccessGetArgs.html">NodeGroupRemoteAccessGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_Resources_" data-uid="Pulumi.Aws.Eks.NodeGroupState.Resources*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_Resources" data-uid="Pulumi.Aws.Eks.NodeGroupState.Resources">Resources</h4>
@@ -405,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;NodeGroupResourcesGetArgs&gt; Resources { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;NodeGroupResourceGetArgs&gt; Resources { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -417,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Eks.Inputs.NodeGroupResourcesGetArgs.html">NodeGroupResourcesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Inputs.NodeGroupResourceGetArgs.html">NodeGroupResourceGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L312">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_ScalingConfig_" data-uid="Pulumi.Aws.Eks.NodeGroupState.ScalingConfig*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_ScalingConfig" data-uid="Pulumi.Aws.Eks.NodeGroupState.ScalingConfig">ScalingConfig</h4>
@@ -432,7 +406,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;NodeGroupScalingConfigGetArgs&gt; ScalingConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;NodeGroupScalingConfigGetArgs&gt;? ScalingConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -444,13 +418,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.Eks.Inputs.NodeGroupScalingConfigGetArgs.html">NodeGroupScalingConfigGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.Eks.Inputs.NodeGroupScalingConfigGetArgs.html">NodeGroupScalingConfigGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_Status_" data-uid="Pulumi.Aws.Eks.NodeGroupState.Status*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_Status" data-uid="Pulumi.Aws.Eks.NodeGroupState.Status">Status</h4>
@@ -459,7 +433,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,13 +445,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L327">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_SubnetIds_" data-uid="Pulumi.Aws.Eks.NodeGroupState.SubnetIds*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_SubnetIds" data-uid="Pulumi.Aws.Eks.NodeGroupState.SubnetIds">SubnetIds</h4>
@@ -498,13 +472,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L339">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L370">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_Tags_" data-uid="Pulumi.Aws.Eks.NodeGroupState.Tags*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_Tags" data-uid="Pulumi.Aws.Eks.NodeGroupState.Tags">Tags</h4>
@@ -525,21 +499,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L379">View Source</a>
   </span>
   <a id="Pulumi_Aws_Eks_NodeGroupState_Version_" data-uid="Pulumi.Aws.Eks.NodeGroupState.Version*"></a>
   <h4 id="Pulumi_Aws_Eks_NodeGroupState_Version" data-uid="Pulumi.Aws.Eks.NodeGroupState.Version">Version</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,7 +526,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -563,7 +538,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Eks/NodeGroup.cs/#L238" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Eks/NodeGroup.cs/#L260" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

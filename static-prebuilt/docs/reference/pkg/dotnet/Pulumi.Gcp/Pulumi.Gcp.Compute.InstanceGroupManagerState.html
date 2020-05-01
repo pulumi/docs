@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">InstanceGroupManagerState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">InstanceGroupManagerState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L431">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L414">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState__ctor_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState__ctor" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.#ctor">InstanceGroupManagerState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L305">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_AutoHealingPolicies_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.AutoHealingPolicies*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_AutoHealingPolicies" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.AutoHealingPolicies">AutoHealingPolicies</h4>
@@ -139,7 +110,7 @@ group. You can specify only one value. Structure is documented below. For more i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceGroupManagerAutoHealingPoliciesGetArgs&gt; AutoHealingPolicies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceGroupManagerAutoHealingPoliciesGetArgs&gt;? AutoHealingPolicies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ group. You can specify only one value. Structure is documented below. For more i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerAutoHealingPoliciesGetArgs.html">InstanceGroupManagerAutoHealingPoliciesGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerAutoHealingPoliciesGetArgs.html">InstanceGroupManagerAutoHealingPoliciesGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L316">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L304">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_BaseInstanceName_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.BaseInstanceName*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_BaseInstanceName" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.BaseInstanceName">BaseInstanceName</h4>
@@ -171,7 +142,7 @@ name.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BaseInstanceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BaseInstanceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +154,13 @@ name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L323">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L311">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Description_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Description" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Description">Description</h4>
@@ -199,7 +170,7 @@ group manager.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +182,13 @@ group manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L329">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L317">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Fingerprint_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Fingerprint*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Fingerprint" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Fingerprint">Fingerprint</h4>
@@ -226,7 +197,7 @@ group manager.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Fingerprint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Fingerprint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,13 +209,13 @@ group manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L335">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L323">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_InstanceGroup_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.InstanceGroup*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_InstanceGroup" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.InstanceGroup">InstanceGroup</h4>
@@ -253,7 +224,7 @@ group manager.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; InstanceGroup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? InstanceGroup { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,25 +236,24 @@ group manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L344">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L329">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Name_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Name" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the instance group manager. Must be 1-63
-characters long and comply with
-<a href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
-include lowercase letters, numbers, and hyphens.</p>
+  <div class="markdown level1 summary"><ul>
+<li>Version name.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,13 +265,13 @@ include lowercase letters, numbers, and hyphens.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L339">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_NamedPorts_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.NamedPorts*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_NamedPorts" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.NamedPorts">NamedPorts</h4>
@@ -311,7 +281,7 @@ for details on configuration.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceGroupManagerNamedPortsGetArgs&gt; NamedPorts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceGroupManagerNamedPortGetArgs&gt; NamedPorts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,13 +293,13 @@ for details on configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerNamedPortsGetArgs.html">InstanceGroupManagerNamedPortsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerNamedPortGetArgs.html">InstanceGroupManagerNamedPortGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L364">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L349">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Project_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Project" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Project">Project</h4>
@@ -339,7 +309,7 @@ is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,13 +321,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L370">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L355">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_SelfLink_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_SelfLink" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.SelfLink">SelfLink</h4>
@@ -366,7 +336,7 @@ is not provided, the provider project is used.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SelfLink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SelfLink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,13 +348,13 @@ is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L381">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L366">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_TargetPools_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.TargetPools*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_TargetPools" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.TargetPools">TargetPools</h4>
@@ -407,24 +377,24 @@ not affect existing instances.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L375">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_TargetSize_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.TargetSize*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_TargetSize" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.TargetSize">TargetSize</h4>
-  <div class="markdown level1 summary"><p>The target number of running instances for this managed
-instance group. This value should always be explicitly set unless this resource is attached to
-an autoscaler, in which case it should never be set. Defaults to <code>0</code>.</p>
+  <div class="markdown level1 summary"><ul>
+<li>The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TargetSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TargetSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,13 +406,13 @@ an autoscaler, in which case it should never be set. Defaults to <code>0</code>.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L382">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_UpdatePolicy_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.UpdatePolicy*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_UpdatePolicy" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.UpdatePolicy">UpdatePolicy</h4>
@@ -452,7 +422,7 @@ an autoscaler, in which case it should never be set. Defaults to <code>0</code>.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InstanceGroupManagerUpdatePolicyGetArgs&gt; UpdatePolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InstanceGroupManagerUpdatePolicyGetArgs&gt;? UpdatePolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,13 +434,13 @@ an autoscaler, in which case it should never be set. Defaults to <code>0</code>.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerUpdatePolicyGetArgs.html">InstanceGroupManagerUpdatePolicyGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerUpdatePolicyGetArgs.html">InstanceGroupManagerUpdatePolicyGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L410">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L393">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Versions_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Versions*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Versions" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Versions">Versions</h4>
@@ -481,7 +451,7 @@ Structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceGroupManagerVersionsGetArgs&gt; Versions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;InstanceGroupManagerVersionGetArgs&gt; Versions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -493,13 +463,13 @@ Structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerVersionsGetArgs.html">InstanceGroupManagerVersionsGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Inputs.InstanceGroupManagerVersionGetArgs.html">InstanceGroupManagerVersionGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L421">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L404">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_WaitForInstances_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.WaitForInstances*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_WaitForInstances" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.WaitForInstances">WaitForInstances</h4>
@@ -510,7 +480,7 @@ continue trying until it times out.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; WaitForInstances { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? WaitForInstances { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -522,13 +492,13 @@ continue trying until it times out.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L428">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L411">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Zone_" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Zone*"></a>
   <h4 id="Pulumi_Gcp_Compute_InstanceGroupManagerState_Zone" data-uid="Pulumi.Gcp.Compute.InstanceGroupManagerState.Zone">Zone</h4>
@@ -538,7 +508,7 @@ in.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Zone { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Zone { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -550,7 +520,7 @@ in.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -562,7 +532,7 @@ in.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/InstanceGroupManager.cs/#L299" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/InstanceGroupManager.cs/#L287" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

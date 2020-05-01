@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">MetricState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">MetricState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Logging.html">Pulumi.Gcp.Logging</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L259">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState__ctor_" data-uid="Pulumi.Gcp.Logging.MetricState.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState__ctor" data-uid="Pulumi.Gcp.Logging.MetricState.#ctor">MetricState()</h4>
@@ -129,17 +100,17 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_BucketOptions_" data-uid="Pulumi.Gcp.Logging.MetricState.BucketOptions*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_BucketOptions" data-uid="Pulumi.Gcp.Logging.MetricState.BucketOptions">BucketOptions</h4>
-  <div class="markdown level1 summary"><p>The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values.</p>
+  <div class="markdown level1 summary"><p>The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;MetricBucketOptionsGetArgs&gt; BucketOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;MetricBucketOptionsGetArgs&gt;? BucketOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,23 +122,22 @@ describes the bucket boundaries used to create a histogram of the extracted valu
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsGetArgs.html">MetricBucketOptionsGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Inputs.MetricBucketOptionsGetArgs.html">MetricBucketOptionsGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L204">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L215">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_Description_" data-uid="Pulumi.Gcp.Logging.MetricState.Description*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_Description" data-uid="Pulumi.Gcp.Logging.MetricState.Description">Description</h4>
-  <div class="markdown level1 summary"><p>A description of this metric, which is used in documentation. The maximum length of the description is 8000
-characters.</p>
+  <div class="markdown level1 summary"><p>A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,23 +149,23 @@ characters.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L222">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_Filter_" data-uid="Pulumi.Gcp.Logging.MetricState.Filter*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_Filter" data-uid="Pulumi.Gcp.Logging.MetricState.Filter">Filter</h4>
-  <div class="markdown level1 summary"><p>An advanced logs filter (<a href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match
-log entries.</p>
+  <div class="markdown level1 summary"><p>An advanced logs filter (<a href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
+entries.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Filter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Filter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,20 +177,19 @@ log entries.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L223">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L233">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_LabelExtractors_" data-uid="Pulumi.Gcp.Logging.MetricState.LabelExtractors*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_LabelExtractors" data-uid="Pulumi.Gcp.Logging.MetricState.LabelExtractors">LabelExtractors</h4>
-  <div class="markdown level1 summary"><p>A map from a label key string to an extractor expression which is used to extract data from a log entry
-field and assign as the label value. Each label key specified in the LabelDescriptor must have an associated
-extractor expression in this map. The syntax of the extractor expression is the same as for the
-valueExtractor field.</p>
+  <div class="markdown level1 summary"><p>A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -237,13 +206,13 @@ valueExtractor field.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L232">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L242">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_MetricDescriptor_" data-uid="Pulumi.Gcp.Logging.MetricState.MetricDescriptor*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_MetricDescriptor" data-uid="Pulumi.Gcp.Logging.MetricState.MetricDescriptor">MetricDescriptor</h4>
@@ -252,7 +221,7 @@ valueExtractor field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;MetricMetricDescriptorGetArgs&gt; MetricDescriptor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;MetricMetricDescriptorGetArgs&gt;? MetricDescriptor { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,25 +233,24 @@ valueExtractor field.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Inputs.MetricMetricDescriptorGetArgs.html">MetricMetricDescriptorGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Logging.Inputs.MetricMetricDescriptorGetArgs.html">MetricMetricDescriptorGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L241">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_Name_" data-uid="Pulumi.Gcp.Logging.MetricState.Name*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_Name" data-uid="Pulumi.Gcp.Logging.MetricState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The client-assigned metric identifier. Examples - &quot;error_count&quot;, &quot;nginx/requests&quot;. Metric identifiers are
-limited to 100 characters and can include only the following characters A-Z, a-z, 0-9, and the special
-characters _-.,+!*',()%/. The forward-slash character (/) denotes a hierarchy of name pieces, and it cannot
-be the first character of the name.</p>
+  <div class="markdown level1 summary"><p>The client-assigned metric identifier. Examples - &quot;error_count&quot;, &quot;nginx/requests&quot;. Metric identifiers are limited to 100
+characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
+forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,21 +262,23 @@ be the first character of the name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L244">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_Project_" data-uid="Pulumi.Gcp.Logging.MetricState.Project*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_Project" data-uid="Pulumi.Gcp.Logging.MetricState.Project">Project</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Project { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Project { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,28 +290,27 @@ be the first character of the name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L256">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L268">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Logging_MetricState_ValueExtractor_" data-uid="Pulumi.Gcp.Logging.MetricState.ValueExtractor*"></a>
   <h4 id="Pulumi_Gcp_Logging_MetricState_ValueExtractor" data-uid="Pulumi.Gcp.Logging.MetricState.ValueExtractor">ValueExtractor</h4>
-  <div class="markdown level1 summary"><p>A valueExtractor is required when using a distribution logs-based metric to extract the values to record
-from a log entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field,
-regex). The argument are 1. field - The name of the log entry field from which the value is to be extracted.
-2. regex - A regular expression using the Google RE2 syntax (<a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with
-a single capture group to extract data from the specified log entry field. The value of the field is
-converted to a string before applying the regex. It is an error to specify a regex that does not include
-exactly one capture group.</p>
+  <div class="markdown level1 summary"><p>A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
+entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
+are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
+using the Google RE2 syntax (<a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a>) with a single capture group to extract data from
+the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
+to specify a regex that does not include exactly one capture group.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ValueExtractor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ValueExtractor { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,7 +322,7 @@ exactly one capture group.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -365,7 +334,7 @@ exactly one capture group.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Logging/Metric.cs/#L191" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Logging/Metric.cs/#L203" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -72,56 +72,12 @@
   <h1 id="Pulumi_Azure_Network_NatGateway" data-uid="Pulumi.Azure.Network.NatGateway" class="text-break">Class NatGateway
   </h1>
   <div class="markdown level0 summary"><p>Manages a Azure NAT Gateway.</p>
-<blockquote>
-<p><strong>NOTE:</strong> The Azure NAT Gateway service is currently in private preview. Your subscription must be on the NAT Gateway private preview whitelist for this resource to be provisioned correctly. If you attempt to provision this resource and receive an <code>InvalidResourceType</code> error may mean that your subscription is not part of the NAT Gateway private preview or you are using a region which does not yet support the NAT Gateway private preview service. The NAT Gateway private preview service is currently available in a limited set of regions. Private preview resources may have multiple breaking changes over their lifecycle until they GA. You can opt into the Private Preview by contacting your Microsoft Representative.</p>
-</blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">NatGateway</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">NatGateway</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.html">Pulumi.Azure.Network</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -132,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L89">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway__ctor_" data-uid="Pulumi.Azure.Network.NatGateway.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Network_NatGateway__ctor_System_String_Pulumi_Azure_Network_NatGatewayArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.NatGateway.#ctor(System.String,Pulumi.Azure.Network.NatGatewayArgs,Pulumi.CustomResourceOptions)">NatGateway(String, NatGatewayArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Network_NatGateway__ctor_System_String_Pulumi_Azure_Network_NatGatewayArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Network.NatGateway.#ctor(System.String,Pulumi.Azure.Network.NatGatewayArgs,System.Nullable{CustomResourceOptions})">NatGateway(String, NatGatewayArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a NatGateway resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NatGateway(string name, NatGatewayArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public NatGateway(string name, NatGatewayArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -176,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_IdleTimeoutInMinutes_" data-uid="Pulumi.Azure.Network.NatGateway.IdleTimeoutInMinutes*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_IdleTimeoutInMinutes" data-uid="Pulumi.Azure.Network.NatGateway.IdleTimeoutInMinutes">IdleTimeoutInMinutes</h4>
@@ -197,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_Location_" data-uid="Pulumi.Azure.Network.NatGateway.Location*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_Location" data-uid="Pulumi.Azure.Network.NatGateway.Location">Location</h4>
@@ -224,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_Name_" data-uid="Pulumi.Azure.Network.NatGateway.Name*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_Name" data-uid="Pulumi.Azure.Network.NatGateway.Name">Name</h4>
@@ -251,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_PublicIpAddressIds_" data-uid="Pulumi.Azure.Network.NatGateway.PublicIpAddressIds*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_PublicIpAddressIds" data-uid="Pulumi.Azure.Network.NatGateway.PublicIpAddressIds">PublicIpAddressIds</h4>
@@ -278,13 +234,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_PublicIpPrefixIds_" data-uid="Pulumi.Azure.Network.NatGateway.PublicIpPrefixIds*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_PublicIpPrefixIds" data-uid="Pulumi.Azure.Network.NatGateway.PublicIpPrefixIds">PublicIpPrefixIds</h4>
@@ -305,13 +261,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L54">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_ResourceGroupName_" data-uid="Pulumi.Azure.Network.NatGateway.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_ResourceGroupName" data-uid="Pulumi.Azure.Network.NatGateway.ResourceGroupName">ResourceGroupName</h4>
@@ -332,13 +288,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_ResourceGuid_" data-uid="Pulumi.Azure.Network.NatGateway.ResourceGuid*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_ResourceGuid" data-uid="Pulumi.Azure.Network.NatGateway.ResourceGuid">ResourceGuid</h4>
@@ -359,13 +315,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_SkuName_" data-uid="Pulumi.Azure.Network.NatGateway.SkuName*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_SkuName" data-uid="Pulumi.Azure.Network.NatGateway.SkuName">SkuName</h4>
@@ -374,7 +330,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SkuName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SkuName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,13 +342,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_Tags_" data-uid="Pulumi.Azure.Network.NatGateway.Tags*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_Tags" data-uid="Pulumi.Azure.Network.NatGateway.Tags">Tags</h4>
@@ -401,7 +357,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -413,13 +369,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_Zones_" data-uid="Pulumi.Azure.Network.NatGateway.Zones*"></a>
   <h4 id="Pulumi_Azure_Network_NatGateway_Zones" data-uid="Pulumi.Azure.Network.NatGateway.Zones">Zones</h4>
@@ -440,7 +396,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -448,17 +404,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L115">View Source</a>
   </span>
   <a id="Pulumi_Azure_Network_NatGateway_Get_" data-uid="Pulumi.Azure.Network.NatGateway.Get*"></a>
-  <h4 id="Pulumi_Azure_Network_NatGateway_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Network_NatGatewayState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Network.NatGateway.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Network.NatGatewayState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NatGatewayState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Network_NatGateway_Get_System_String_Input_System_String__Pulumi_Azure_Network_NatGatewayState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Network.NatGateway.Get(System.String,Input{System.String},Pulumi.Azure.Network.NatGatewayState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NatGatewayState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing NatGateway resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NatGateway Get(string name, Input&lt;string&gt; id, NatGatewayState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NatGateway Get(string name, Input&lt;string&gt; id, NatGatewayState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -477,7 +433,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -489,7 +445,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -518,7 +474,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/NatGateway.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/NatGateway.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

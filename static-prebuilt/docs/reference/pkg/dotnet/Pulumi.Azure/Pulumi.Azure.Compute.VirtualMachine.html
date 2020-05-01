@@ -79,53 +79,12 @@
 <blockquote>
 <p><strong>Note:</strong> Data Disks can be attached either directly on the <code>azure.compute.VirtualMachine</code> resource, or using the <code>azure.compute.DataDiskAttachment</code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
 </blockquote>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">VirtualMachine</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">VirtualMachine</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Compute.html">Pulumi.Azure.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -136,16 +95,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine__ctor_" data-uid="Pulumi.Azure.Compute.VirtualMachine.#ctor*"></a>
-  <h4 id="Pulumi_Azure_Compute_VirtualMachine__ctor_System_String_Pulumi_Azure_Compute_VirtualMachineArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.VirtualMachine.#ctor(System.String,Pulumi.Azure.Compute.VirtualMachineArgs,Pulumi.CustomResourceOptions)">VirtualMachine(String, VirtualMachineArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Compute_VirtualMachine__ctor_System_String_Pulumi_Azure_Compute_VirtualMachineArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.VirtualMachine.#ctor(System.String,Pulumi.Azure.Compute.VirtualMachineArgs,System.Nullable{CustomResourceOptions})">VirtualMachine(String, VirtualMachineArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a VirtualMachine resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VirtualMachine(string name, VirtualMachineArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VirtualMachine(string name, VirtualMachineArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +129,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -180,7 +139,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_AdditionalCapabilities_" data-uid="Pulumi.Azure.Compute.VirtualMachine.AdditionalCapabilities*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_AdditionalCapabilities" data-uid="Pulumi.Azure.Compute.VirtualMachine.AdditionalCapabilities">AdditionalCapabilities</h4>
@@ -201,13 +160,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineAdditionalCapabilities.html">VirtualMachineAdditionalCapabilities</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineAdditionalCapabilities.html">VirtualMachineAdditionalCapabilities</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_AvailabilitySetId_" data-uid="Pulumi.Azure.Compute.VirtualMachine.AvailabilitySetId*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_AvailabilitySetId" data-uid="Pulumi.Azure.Compute.VirtualMachine.AvailabilitySetId">AvailabilitySetId</h4>
@@ -228,13 +187,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_BootDiagnostics_" data-uid="Pulumi.Azure.Compute.VirtualMachine.BootDiagnostics*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_BootDiagnostics" data-uid="Pulumi.Azure.Compute.VirtualMachine.BootDiagnostics">BootDiagnostics</h4>
@@ -255,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineBootDiagnostics.html">VirtualMachineBootDiagnostics</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineBootDiagnostics.html">VirtualMachineBootDiagnostics</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L46">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L44">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_DeleteDataDisksOnTermination_" data-uid="Pulumi.Azure.Compute.VirtualMachine.DeleteDataDisksOnTermination*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_DeleteDataDisksOnTermination" data-uid="Pulumi.Azure.Compute.VirtualMachine.DeleteDataDisksOnTermination">DeleteDataDisksOnTermination</h4>
@@ -282,13 +241,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L50">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_DeleteOsDiskOnTermination_" data-uid="Pulumi.Azure.Compute.VirtualMachine.DeleteOsDiskOnTermination*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_DeleteOsDiskOnTermination" data-uid="Pulumi.Azure.Compute.VirtualMachine.DeleteOsDiskOnTermination">DeleteOsDiskOnTermination</h4>
@@ -309,13 +268,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L58">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L56">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Identity_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Identity*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_Identity" data-uid="Pulumi.Azure.Compute.VirtualMachine.Identity">Identity</h4>
@@ -336,13 +295,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineIdentity.html">VirtualMachineIdentity</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineIdentity.html">VirtualMachineIdentity</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_LicenseType_" data-uid="Pulumi.Azure.Compute.VirtualMachine.LicenseType*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_LicenseType" data-uid="Pulumi.Azure.Compute.VirtualMachine.LicenseType">LicenseType</h4>
@@ -363,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Location_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Location*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_Location" data-uid="Pulumi.Azure.Compute.VirtualMachine.Location">Location</h4>
@@ -390,13 +349,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L74">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Name_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Name*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_Name" data-uid="Pulumi.Azure.Compute.VirtualMachine.Name">Name</h4>
@@ -417,13 +376,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L80">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_NetworkInterfaceIds_" data-uid="Pulumi.Azure.Compute.VirtualMachine.NetworkInterfaceIds*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_NetworkInterfaceIds" data-uid="Pulumi.Azure.Compute.VirtualMachine.NetworkInterfaceIds">NetworkInterfaceIds</h4>
@@ -444,13 +403,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L86">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_OsProfile_" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfile*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_OsProfile" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfile">OsProfile</h4>
@@ -471,13 +430,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfile.html">VirtualMachineOsProfile</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfile.html">VirtualMachineOsProfile</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L92">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_OsProfileLinuxConfig_" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfileLinuxConfig*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_OsProfileLinuxConfig" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfileLinuxConfig">OsProfileLinuxConfig</h4>
@@ -498,13 +457,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileLinuxConfig.html">VirtualMachineOsProfileLinuxConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileLinuxConfig.html">VirtualMachineOsProfileLinuxConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L98">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_OsProfileSecrets_" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfileSecrets*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_OsProfileSecrets" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfileSecrets">OsProfileSecrets</h4>
@@ -513,7 +472,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VirtualMachineOsProfileSecrets&gt;&gt; OsProfileSecrets { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VirtualMachineOsProfileSecret&gt;&gt; OsProfileSecrets { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -525,13 +484,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileSecrets.html">VirtualMachineOsProfileSecrets</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileSecret.html">VirtualMachineOsProfileSecret</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L104">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_OsProfileWindowsConfig_" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfileWindowsConfig*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_OsProfileWindowsConfig" data-uid="Pulumi.Azure.Compute.VirtualMachine.OsProfileWindowsConfig">OsProfileWindowsConfig</h4>
@@ -552,13 +511,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.html">VirtualMachineOsProfileWindowsConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineOsProfileWindowsConfig.html">VirtualMachineOsProfileWindowsConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L110">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Plan_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Plan*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_Plan" data-uid="Pulumi.Azure.Compute.VirtualMachine.Plan">Plan</h4>
@@ -579,13 +538,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachinePlan.html">VirtualMachinePlan</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachinePlan.html">VirtualMachinePlan</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L116">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_PrimaryNetworkInterfaceId_" data-uid="Pulumi.Azure.Compute.VirtualMachine.PrimaryNetworkInterfaceId*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_PrimaryNetworkInterfaceId" data-uid="Pulumi.Azure.Compute.VirtualMachine.PrimaryNetworkInterfaceId">PrimaryNetworkInterfaceId</h4>
@@ -594,7 +553,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrimaryNetworkInterfaceId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PrimaryNetworkInterfaceId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -606,13 +565,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L122">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_ProximityPlacementGroupId_" data-uid="Pulumi.Azure.Compute.VirtualMachine.ProximityPlacementGroupId*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_ProximityPlacementGroupId" data-uid="Pulumi.Azure.Compute.VirtualMachine.ProximityPlacementGroupId">ProximityPlacementGroupId</h4>
@@ -621,7 +580,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ProximityPlacementGroupId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProximityPlacementGroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -633,13 +592,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L130">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L128">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_ResourceGroupName_" data-uid="Pulumi.Azure.Compute.VirtualMachine.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_ResourceGroupName" data-uid="Pulumi.Azure.Compute.VirtualMachine.ResourceGroupName">ResourceGroupName</h4>
@@ -660,13 +619,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L136">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L134">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_StorageDataDisks_" data-uid="Pulumi.Azure.Compute.VirtualMachine.StorageDataDisks*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_StorageDataDisks" data-uid="Pulumi.Azure.Compute.VirtualMachine.StorageDataDisks">StorageDataDisks</h4>
@@ -675,7 +634,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VirtualMachineStorageDataDisks&gt;&gt; StorageDataDisks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;VirtualMachineStorageDataDisk&gt;&gt; StorageDataDisks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -687,13 +646,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageDataDisks.html">VirtualMachineStorageDataDisks</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageDataDisk.html">VirtualMachineStorageDataDisk</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L140">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_StorageImageReference_" data-uid="Pulumi.Azure.Compute.VirtualMachine.StorageImageReference*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_StorageImageReference" data-uid="Pulumi.Azure.Compute.VirtualMachine.StorageImageReference">StorageImageReference</h4>
@@ -714,13 +673,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageImageReference.html">VirtualMachineStorageImageReference</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageImageReference.html">VirtualMachineStorageImageReference</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L148">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L146">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_StorageOsDisk_" data-uid="Pulumi.Azure.Compute.VirtualMachine.StorageOsDisk*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_StorageOsDisk" data-uid="Pulumi.Azure.Compute.VirtualMachine.StorageOsDisk">StorageOsDisk</h4>
@@ -741,13 +700,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.html">VirtualMachineStorageOsDisk</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Azure.Compute.Outputs.VirtualMachineStorageOsDisk.html">VirtualMachineStorageOsDisk</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L154">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L152">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Tags_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Tags*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_Tags" data-uid="Pulumi.Azure.Compute.VirtualMachine.Tags">Tags</h4>
@@ -756,7 +715,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -768,13 +727,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L160">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L158">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_VmSize_" data-uid="Pulumi.Azure.Compute.VirtualMachine.VmSize*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_VmSize" data-uid="Pulumi.Azure.Compute.VirtualMachine.VmSize">VmSize</h4>
@@ -795,13 +754,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L166">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L164">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Zones_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Zones*"></a>
   <h4 id="Pulumi_Azure_Compute_VirtualMachine_Zones" data-uid="Pulumi.Azure.Compute.VirtualMachine.Zones">Zones</h4>
@@ -810,7 +769,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Zones { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Zones { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -822,7 +781,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -830,17 +789,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L207">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L205">View Source</a>
   </span>
   <a id="Pulumi_Azure_Compute_VirtualMachine_Get_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Get*"></a>
-  <h4 id="Pulumi_Azure_Compute_VirtualMachine_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_Compute_VirtualMachineState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.Compute.VirtualMachine.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.Compute.VirtualMachineState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VirtualMachineState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_Compute_VirtualMachine_Get_System_String_Input_System_String__Pulumi_Azure_Compute_VirtualMachineState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.Compute.VirtualMachine.Get(System.String,Input{System.String},Pulumi.Azure.Compute.VirtualMachineState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VirtualMachineState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing VirtualMachine resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VirtualMachine Get(string name, Input&lt;string&gt; id, VirtualMachineState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VirtualMachine Get(string name, Input&lt;string&gt; id, VirtualMachineState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -859,7 +818,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -871,7 +830,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -900,7 +859,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Compute/VirtualMachine.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Compute/VirtualMachine.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

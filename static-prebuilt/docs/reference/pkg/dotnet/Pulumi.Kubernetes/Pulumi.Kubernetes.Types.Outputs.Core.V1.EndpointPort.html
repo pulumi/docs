@@ -79,40 +79,46 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EndpointPort</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_EndpointPort_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class EndpointPort</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class EndpointPort : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L15282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L15436">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_EndpointPort_AppProtocol" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.EndpointPort.AppProtocol">AppProtocol</h4>
+  <div class="markdown level1 summary"><p>The application protocol for this port. This field follows standard Kubernetes label
+syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335
+and <a href="http://www.iana.org/assignments/service-names">http://www.iana.org/assignments/service-names</a>). Non-standard protocols should use
+prefixed names such as mycompany.com/my-custom-protocol. Field can be enabled with
+ServiceAppProtocol feature gate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string AppProtocol</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L15442">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_EndpointPort_Name" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.EndpointPort.Name">Name</h4>
   <div class="markdown level1 summary"><p>The name of this port.  This must match the 'name' field in the corresponding
@@ -139,7 +145,7 @@ ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L15287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L15447">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_EndpointPort_Port" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.EndpointPort.Port">Port</h4>
   <div class="markdown level1 summary"><p>The port number of the endpoint.</p>
@@ -165,7 +171,7 @@ ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L15292">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L15452">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_EndpointPort_Protocol" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.EndpointPort.Protocol">Protocol</h4>
   <div class="markdown level1 summary"><p>The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.</p>
@@ -197,7 +203,7 @@ ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L15275" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L15426" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

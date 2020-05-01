@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GraphQLApiOpenidConnectConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.AppSync.Outputs.html">Pulumi.Aws.AppSync.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_AppSync_Outputs_GraphQLApiOpenidConnectConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GraphQLApiOpenidConnectConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GraphQLApiOpenidConnectConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appsync/GraphQLApi.cs/#L724">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/Outputs/GraphQLApiOpenidConnectConfig.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppSync_Outputs_GraphQLApiOpenidConnectConfig_AuthTtl" data-uid="Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.AuthTtl">AuthTtl</h4>
   <div class="markdown level1 summary"><p>Number of milliseconds a token is valid after being authenticated.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appsync/GraphQLApi.cs/#L728">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/Outputs/GraphQLApiOpenidConnectConfig.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppSync_Outputs_GraphQLApiOpenidConnectConfig_ClientId" data-uid="Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.ClientId">ClientId</h4>
   <div class="markdown level1 summary"><p>Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ClientId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ClientId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appsync/GraphQLApi.cs/#L732">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/Outputs/GraphQLApiOpenidConnectConfig.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppSync_Outputs_GraphQLApiOpenidConnectConfig_IatTtl" data-uid="Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.IatTtl">IatTtl</h4>
   <div class="markdown level1 summary"><p>Number of milliseconds a token is valid after being issued to a user.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appsync/GraphQLApi.cs/#L736">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/Outputs/GraphQLApiOpenidConnectConfig.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_AppSync_Outputs_GraphQLApiOpenidConnectConfig_Issuer" data-uid="Pulumi.Aws.AppSync.Outputs.GraphQLApiOpenidConnectConfig.Issuer">Issuer</h4>
   <div class="markdown level1 summary"><p>Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p>
@@ -221,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Appsync/GraphQLApi.cs/#L718" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/AppSync/Outputs/GraphQLApiOpenidConnectConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

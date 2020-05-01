@@ -39,6 +39,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="endpoints/">endpoints</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firebase/">firebase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="firestore/">firestore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="folder/">folder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gameservices/">gameservices</a></li>
@@ -46,11 +47,13 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="identityplatform/">identityplatform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logging/">logging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml/">ml</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oslogin/">oslogin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/">projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pubsub/">pubsub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
@@ -60,6 +63,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="service_account/">service_account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicenetworking/">servicenetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serviceusage/">serviceusage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sourcerepo/">sourcerepo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spanner/">spanner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>

@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-vault/issues">pulumi/pulumi-vault repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/issues">terraform-providers/terraform-provider-vault repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_vault.azure"></span><dl class="class">
+<span class="target" id="module-pulumi_vault.azure"></span><dl class="py class">
 <dt id="pulumi_vault.azure.AuthBackendConfig">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">AuthBackendConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">resource=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">AuthBackendConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a AuthBackendConfig resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -40,52 +40,52 @@ organization.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendConfig.backend">
-<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.backend" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.backend" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path the Azure auth backend being configured was
 mounted at.  Defaults to <code class="docutils literal notranslate"><span class="pre">azure</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendConfig.client_id">
-<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.client_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.client_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The client id for credentials to query the Azure APIs.
 Currently read permissions to query compute resources are required.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendConfig.client_secret">
-<code class="sig-name descname">client_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.client_secret" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_secret</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.client_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>The client secret for credentials to query the
 Azure APIs.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendConfig.environment">
-<code class="sig-name descname">environment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.environment" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">environment</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure cloud environment. Valid values:
 AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud,
 AzureGermanCloud.  Defaults to <code class="docutils literal notranslate"><span class="pre">AzurePublicCloud</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendConfig.resource">
-<code class="sig-name descname">resource</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configured URL for the application registered in
 Azure Active Directory.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendConfig.tenant_id">
-<code class="sig-name descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.tenant_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tenant_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.tenant_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tenant id for the Azure Active Directory
 organization.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.AuthBackendConfig.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">resource=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AuthBackendConfig resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -112,9 +112,9 @@ organization.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.AuthBackendConfig.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -130,9 +130,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.AuthBackendConfig.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -150,17 +150,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vault.azure.AuthBackendRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">AuthBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_group_ids=None</em>, <em class="sig-param">bound_locations=None</em>, <em class="sig-param">bound_resource_groups=None</em>, <em class="sig-param">bound_scale_sets=None</em>, <em class="sig-param">bound_service_principal_ids=None</em>, <em class="sig-param">bound_subscription_ids=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">AuthBackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_resource_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_scale_sets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_service_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_subscription_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_no_default_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure auth backend role in a Vault server. Roles constrain the
 instances or principals that can perform the login operation against the
 backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/azure.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/azure_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/azure_auth_backend_role.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -226,154 +223,154 @@ using this role, provided as a number of seconds.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.backend">
-<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.backend" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.backend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unique name of the auth backend to configure.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.bound_group_ids">
-<code class="sig-name descname">bound_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_group_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_group_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_group_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.bound_locations">
-<code class="sig-name descname">bound_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_locations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_locations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.bound_resource_groups">
-<code class="sig-name descname">bound_resource_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_resource_groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_resource_groups</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_resource_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.bound_scale_sets">
-<code class="sig-name descname">bound_scale_sets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_scale_sets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_scale_sets</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_scale_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.bound_service_principal_ids">
-<code class="sig-name descname">bound_service_principal_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_service_principal_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_service_principal_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_service_principal_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.bound_subscription_ids">
-<code class="sig-name descname">bound_subscription_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_subscription_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bound_subscription_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.bound_subscription_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.max_ttl">
-<code class="sig-name descname">max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.period">
-<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.period" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
 value of this field. Specified in seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.policies">
-<code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of strings
 specifying the policies to be set on tokens issued using this role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the role.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_bound_cidrs">
-<code class="sig-name descname">token_bound_cidrs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_bound_cidrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_bound_cidrs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_bound_cidrs" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_explicit_max_ttl">
-<code class="sig-name descname">token_explicit_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_explicit_max_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_explicit_max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, will encode an
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">explicit max TTL</a>
 onto the token in number of seconds. This is a hard cap even if <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> and
 <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> would otherwise allow a renewal.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_max_ttl">
-<code class="sig-name descname">token_max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_max_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_no_default_policy">
-<code class="sig-name descname">token_no_default_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_no_default_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_no_default_policy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_no_default_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_num_uses">
-<code class="sig-name descname">token_num_uses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_num_uses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_num_uses</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_num_uses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_period">
-<code class="sig-name descname">token_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
 value of this field. Specified in seconds.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_policies">
-<code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_policies</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_ttl">
-<code class="sig-name descname">token_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.token_type">
-<code class="sig-name descname">token_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">token_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.token_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
 <code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
 <code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
@@ -381,16 +378,16 @@ Its current value will be referenced at renewal time.</p>
 requests a different type at generation time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.AuthBackendRole.ttl">
-<code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The TTL period of tokens issued
 using this role, provided as a number of seconds.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.AuthBackendRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_group_ids=None</em>, <em class="sig-param">bound_locations=None</em>, <em class="sig-param">bound_resource_groups=None</em>, <em class="sig-param">bound_scale_sets=None</em>, <em class="sig-param">bound_service_principal_ids=None</em>, <em class="sig-param">bound_subscription_ids=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_resource_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_scale_sets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_service_principal_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bound_subscription_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_bound_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_explicit_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_no_default_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_num_uses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_policies</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AuthBackendRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -463,9 +460,9 @@ using this role, provided as a number of seconds.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.AuthBackendRole.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -481,9 +478,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.AuthBackendRole.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AuthBackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -501,9 +498,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
+<dt id="pulumi_vault.azure.AwaitableGetAccessCredentialsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">AwaitableGetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_renewable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_cred_validation_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_seconds_between_tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_sequential_successes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_creds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.AwaitableGetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_vault.azure.Backend">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">Backend</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">Backend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Backend resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -523,52 +525,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.client_id">
-<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.client_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.client_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The client id for credentials to query the Azure APIs. Currently read permissions to query compute resources are
 required.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.client_secret">
-<code class="sig-name descname">client_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.client_secret" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_secret</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.client_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>The client secret for credentials to query the Azure APIs</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Human-friendly description of the mount for the backend.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.environment">
-<code class="sig-name descname">environment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.environment" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">environment</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure cloud environment. Valid values: AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud, AzureGermanCloud.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.path">
-<code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to mount the backend at.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.subscription_id">
-<code class="sig-name descname">subscription_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.subscription_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subscription_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.subscription_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subscription id for the Azure Active Directory.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.Backend.tenant_id">
-<code class="sig-name descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.tenant_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tenant_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.Backend.tenant_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tenant id for the Azure Active Directory organization.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.Backend.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subscription_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Backend resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -590,9 +592,9 @@ required.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.Backend.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -608,9 +610,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.Backend.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.Backend.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -628,9 +630,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_vault.azure.BackendRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">BackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_object_id=None</em>, <em class="sig-param">azure_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">BackendRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a BackendRole resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -658,16 +660,16 @@ Accepts time suffixed strings (“1h”) or an integer number of seconds. Defaul
 <li><p><code class="docutils literal notranslate"><span class="pre">role_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.application_object_id">
-<code class="sig-name descname">application_object_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.application_object_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">application_object_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.application_object_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, <code class="docutils literal notranslate"><span class="pre">azure_roles</span></code> will be ignored.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.azure_roles">
-<code class="sig-name descname">azure_roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.azure_roles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">azure_roles</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.azure_roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of Azure roles to be assigned to the generated service principal.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">role_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -676,41 +678,41 @@ be used instead of creating dynamic service principals. If present, <code class=
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.backend">
-<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.backend" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.backend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to the mounted Azure auth backend</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.description">
-<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Human-friendly description of the mount for the backend.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.max_ttl">
-<code class="sig-name descname">max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.max_ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_ttl</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.max_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings (“1h”) or an integer number of seconds. Defaults to the system/engine max TTL time.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.role">
-<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">role</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the Azure role</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_vault.azure.BackendRole.ttl">
-<code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.ttl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ttl</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.BackendRole.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings (“1h”) or an integer number of seconds. Defaults to the system/engine default TTL time.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.BackendRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_object_id=None</em>, <em class="sig-param">azure_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">application_object_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_roles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BackendRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -740,9 +742,9 @@ Accepts time suffixed strings (“1h”) or an integer number of seconds. Defaul
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.BackendRole.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -758,9 +760,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_vault.azure.BackendRole.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.BackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -776,6 +778,73 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">GetAccessCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_secret</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_duration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_renewable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_cred_validation_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_seconds_between_tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_sequential_successes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_creds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccessCredentials.</p>
+<dl class="py attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client id for credentials to query the Azure APIs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.client_secret">
+<code class="sig-name descname">client_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.client_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client secret for credentials to query the Azure APIs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.lease_duration">
+<code class="sig-name descname">lease_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.lease_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The duration of the secret lease, in seconds relative
+to the time the data was requested. Once this time has passed any plan
+generated with this data may fail to apply.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_vault.azure.GetAccessCredentialsResult.lease_id">
+<code class="sig-name descname">lease_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.azure.GetAccessCredentialsResult.lease_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lease identifier assigned by Vault.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_vault.azure.get_access_credentials">
+<code class="sig-prename descclassname">pulumi_vault.azure.</code><code class="sig-name descname">get_access_credentials</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_cred_validation_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_seconds_between_tests</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_sequential_successes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate_creds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.azure.get_access_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backend</strong> (<em>str</em>) – The path to the Azure secret backend to
+read credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>max_cred_validation_seconds</strong> (<em>float</em>) – If ‘validate_creds’ is true, 
+the number of seconds after which to give up validating credentials. Defaults
+to 1,200 (20 minutes).</p></li>
+<li><p><strong>num_seconds_between_tests</strong> (<em>float</em>) – If ‘validate_creds’ is true, 
+the number of seconds to wait between each test of generated credentials.
+Defaults to 7.</p></li>
+<li><p><strong>num_sequential_successes</strong> (<em>float</em>) – If ‘validate_creds’ is true, 
+the number of sequential successes required to validate generated
+credentials. Defaults to 8.</p></li>
+<li><p><strong>role</strong> (<em>str</em>) – The name of the Azure secret backend role to read
+credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>validate_creds</strong> (<em>bool</em>) – Whether generated credentials should be 
+validated before being returned. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, which returns
+credentials without checking whether they have fully propagated throughout
+Azure Active Directory. Designating <code class="docutils literal notranslate"><span class="pre">true</span></code> activates testing.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

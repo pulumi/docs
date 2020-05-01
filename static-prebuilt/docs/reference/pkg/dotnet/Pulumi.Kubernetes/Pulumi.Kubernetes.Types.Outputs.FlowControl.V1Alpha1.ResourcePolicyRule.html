@@ -83,40 +83,16 @@ apiGroups matches the request, (c) at least one member of resources matches the 
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ResourcePolicyRule</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.html">Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_ResourcePolicyRule_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ResourcePolicyRule</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ResourcePolicyRule : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26600">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26843">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_ResourcePolicyRule_ApiGroups" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.ApiGroups">ApiGroups</h4>
   <div class="markdown level1 summary"><p><code>apiGroups</code> is a list of matching API groups and may not be empty. &quot;*&quot; matches all API
@@ -137,13 +113,13 @@ groups and, if present, must be the only entry. Required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26608">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26851">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_ResourcePolicyRule_ClusterScope" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.ClusterScope">ClusterScope</h4>
   <div class="markdown level1 summary"><p><code>clusterScope</code> indicates whether to match requests that do not specify a namespace
@@ -172,7 +148,7 @@ a non-empty list.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26617">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26860">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_ResourcePolicyRule_Namespaces" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.Namespaces">Namespaces</h4>
   <div class="markdown level1 summary"><p><code>namespaces</code> is a list of target namespaces that restricts matches.  A request that
@@ -196,13 +172,13 @@ field for that). This list may be empty, but only if <code>clusterScope</code> i
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26624">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26867">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_ResourcePolicyRule_Resources" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.Resources">Resources</h4>
   <div class="markdown level1 summary"><p><code>resources</code> is a list of matching resources (i.e., lowercase and plural) with, if
@@ -224,13 +200,13 @@ be empty. &quot;*&quot; matches all resources and, if present, must be the only 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26630">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26873">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_FlowControl_V1Alpha1_ResourcePolicyRule_Verbs" data-uid="Pulumi.Kubernetes.Types.Outputs.FlowControl.V1Alpha1.ResourcePolicyRule.Verbs">Verbs</h4>
   <div class="markdown level1 summary"><p><code>verbs</code> is a list of matching verbs and may not be empty. &quot;*&quot; matches all verbs and, if
@@ -251,7 +227,7 @@ present, must be the only entry. Required.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -263,7 +239,7 @@ present, must be the only entry. Required.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L26593" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L26836" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

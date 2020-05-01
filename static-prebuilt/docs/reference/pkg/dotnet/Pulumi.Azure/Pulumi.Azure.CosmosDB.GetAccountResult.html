@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAccountResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.CosmosDB.html">Pulumi.Azure.CosmosDB</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_CosmosDB_GetAccountResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetAccountResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetAccountResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Capabilities" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Capabilities">Capabilities</h4>
   <div class="markdown level1 summary"><p>Capabilities enabled on this Cosmos DB account.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountCapabilitiesResult&gt; Capabilities</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountCapabilityResult&gt; Capabilities</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,20 +107,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountCapabilitiesResult.html">GetAccountCapabilitiesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountCapabilityResult.html">GetAccountCapabilityResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L52">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_ConsistencyPolicies" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.ConsistencyPolicies">ConsistencyPolicies</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountConsistencyPoliciesResult&gt; ConsistencyPolicies</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountConsistencyPolicyResult&gt; ConsistencyPolicies</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +132,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountConsistencyPoliciesResult.html">GetAccountConsistencyPoliciesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountConsistencyPolicyResult.html">GetAccountConsistencyPolicyResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_EnableAutomaticFailover" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.EnableAutomaticFailover">EnableAutomaticFailover</h4>
   <div class="markdown level1 summary"><p>If automatic failover is enabled for this CosmosDB Account.</p>
@@ -188,7 +164,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L60">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_EnableMultipleWriteLocations" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.EnableMultipleWriteLocations">EnableMultipleWriteLocations</h4>
   <div class="markdown level1 summary"><p>If multi-master is enabled for this Cosmos DB account.</p>
@@ -214,7 +190,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L61">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L64">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Endpoint" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Endpoint">Endpoint</h4>
   <div class="markdown level1 summary"><p>The endpoint used to connect to the CosmosDB account.</p>
@@ -240,14 +216,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L65">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_GeoLocations" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.GeoLocations">GeoLocations</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountGeoLocationsResult&gt; GeoLocations</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountGeoLocationResult&gt; GeoLocations</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,13 +235,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountGeoLocationsResult.html">GetAccountGeoLocationsResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountGeoLocationResult.html">GetAccountGeoLocationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L120">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L69">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Id" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -291,7 +267,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L73">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_IpRangeFilter" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.IpRangeFilter">IpRangeFilter</h4>
   <div class="markdown level1 summary"><p>The current IP Filter for this CosmosDB account</p>
@@ -317,7 +293,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_IsVirtualNetworkFilterEnabled" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.IsVirtualNetworkFilterEnabled">IsVirtualNetworkFilterEnabled</h4>
   <div class="markdown level1 summary"><p>If virtual network filtering is enabled for this Cosmos DB account.</p>
@@ -343,7 +319,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Kind" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>The Kind of the CosmosDB account.</p>
@@ -369,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Location" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The name of the Azure region hosting replicated data.</p>
@@ -395,7 +371,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L86">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Name" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -420,7 +396,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L83">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L90">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_OfferType" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.OfferType">OfferType</h4>
   <div class="markdown level1 summary"><p>The Offer Type to used by this CosmosDB Account.</p>
@@ -446,7 +422,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L94">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_PrimaryMasterKey" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.PrimaryMasterKey">PrimaryMasterKey</h4>
   <div class="markdown level1 summary"><p>The Primary master key for the CosmosDB Account.</p>
@@ -472,7 +448,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L91">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L98">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_PrimaryReadonlyMasterKey" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.PrimaryReadonlyMasterKey">PrimaryReadonlyMasterKey</h4>
   <div class="markdown level1 summary"><p>The Primary read-only master Key for the CosmosDB Account.</p>
@@ -498,7 +474,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L95">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L102">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_ReadEndpoints" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.ReadEndpoints">ReadEndpoints</h4>
   <div class="markdown level1 summary"><p>A list of read endpoints available for this CosmosDB account.</p>
@@ -518,13 +494,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L96">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L103">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_ResourceGroupName" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -549,7 +525,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L100">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L107">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_SecondaryMasterKey" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.SecondaryMasterKey">SecondaryMasterKey</h4>
   <div class="markdown level1 summary"><p>The Secondary master key for the CosmosDB Account.</p>
@@ -575,7 +551,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L111">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_SecondaryReadonlyMasterKey" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.SecondaryReadonlyMasterKey">SecondaryReadonlyMasterKey</h4>
   <div class="markdown level1 summary"><p>The Secondary read-only master key for the CosmosDB Account.</p>
@@ -601,7 +577,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L108">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L115">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_Tags" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A mapping of tags assigned to the resource.</p>
@@ -621,13 +597,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L112">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L119">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_VirtualNetworkRules" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.VirtualNetworkRules">VirtualNetworkRules</h4>
   <div class="markdown level1 summary"><p>Subnets that are allowed to access this CosmosDB account.</p>
@@ -635,7 +611,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountVirtualNetworkRulesResult&gt; VirtualNetworkRules</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountVirtualNetworkRuleResult&gt; VirtualNetworkRules</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -647,13 +623,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountVirtualNetworkRulesResult.html">GetAccountVirtualNetworkRulesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GetAccountVirtualNetworkRuleResult.html">GetAccountVirtualNetworkRuleResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L116">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L123">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_CosmosDB_GetAccountResult_WriteEndpoints" data-uid="Pulumi.Azure.CosmosDB.GetAccountResult.WriteEndpoints">WriteEndpoints</h4>
   <div class="markdown level1 summary"><p>A list of write endpoints available for this CosmosDB account.</p>
@@ -673,7 +649,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -685,7 +661,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GetAccount.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/CosmosDB/GetAccount.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

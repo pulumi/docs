@@ -13,9 +13,9 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-newrelic/issues">pulumi/pulumi-newrelic repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/issues">terraform-providers/terraform-provider-newrelic repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_newrelic.plugins"></span><dl class="class">
+<span class="target" id="module-pulumi_newrelic.plugins"></span><dl class="py class">
 <dt id="pulumi_newrelic.plugins.AlertCondition">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AlertCondition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">entities=None</em>, <em class="sig-param">metric=None</em>, <em class="sig-param">metric_description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plugin_guid=None</em>, <em class="sig-param">plugin_id=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">runbook_url=None</em>, <em class="sig-param">terms=None</em>, <em class="sig-param">value_function=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AlertCondition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runbook_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_function</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to create and manage plugins alert conditions in New Relic.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">term</span></code> mapping supports the following arguments:</p>
 <ul class="simple">
@@ -25,9 +25,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> - (Required) Must be 0 or greater.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_function</span></code> - (Required) <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">any</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -55,63 +52,63 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not this condition is enabled.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.entities">
-<code class="sig-name descname">entities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.entities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">entities</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.entities" title="Permalink to this definition">¶</a></dt>
 <dd><p>The plugin component IDs to target.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.metric">
-<code class="sig-name descname">metric</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.metric" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metric</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.metric" title="Permalink to this definition">¶</a></dt>
 <dd><p>The plugin metric to evaluate.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.metric_description">
-<code class="sig-name descname">metric_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.metric_description" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">metric_description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.metric_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The metric description.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The title of the condition. Must be between 1 and 64 characters, inclusive.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.plugin_guid">
-<code class="sig-name descname">plugin_guid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.plugin_guid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plugin_guid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.plugin_guid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The GUID of the plugin which produces the metric.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.plugin_id">
-<code class="sig-name descname">plugin_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.plugin_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plugin_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.plugin_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the installed plugin instance which produces the metric.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.policy_id">
-<code class="sig-name descname">policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.policy_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">policy_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.policy_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the policy where this condition should be used.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.runbook_url">
-<code class="sig-name descname">runbook_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.runbook_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">runbook_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.runbook_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runbook URL to display in notifications.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.terms">
-<code class="sig-name descname">terms</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.terms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">terms</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.terms" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of terms for this condition. See Terms below for details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -122,15 +119,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.value_function">
-<code class="sig-name descname">value_function</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.value_function" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">value_function</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.value_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value function to apply to the metric data.  One of <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, or <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_newrelic.plugins.AlertCondition.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">entities=None</em>, <em class="sig-param">metric=None</em>, <em class="sig-param">metric_description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plugin_guid=None</em>, <em class="sig-param">plugin_id=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">runbook_url=None</em>, <em class="sig-param">terms=None</em>, <em class="sig-param">value_function=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metric_description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">runbook_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value_function</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AlertCondition resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -163,9 +160,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_newrelic.plugins.AlertCondition.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -181,9 +178,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_newrelic.plugins.AlertCondition.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -201,27 +198,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_newrelic.plugins.AwaitableGetPluginComponentResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AwaitableGetPluginComponentResult</code><span class="sig-paren">(</span><em class="sig-param">health_status=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plugin_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AwaitableGetPluginComponentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AwaitableGetPluginComponentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">health_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AwaitableGetPluginComponentResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_newrelic.plugins.AwaitableGetPluginResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AwaitableGetPluginResult</code><span class="sig-paren">(</span><em class="sig-param">guid=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AwaitableGetPluginResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">AwaitableGetPluginResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AwaitableGetPluginResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_newrelic.plugins.GetPluginComponentResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">GetPluginComponentResult</code><span class="sig-paren">(</span><em class="sig-param">health_status=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plugin_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginComponentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">GetPluginComponentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">health_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginComponentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPluginComponent.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.GetPluginComponentResult.health_status">
 <code class="sig-name descname">health_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginComponentResult.health_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The health status of the plugin component.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.GetPluginComponentResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginComponentResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the plugin component.</p>
@@ -229,11 +226,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_newrelic.plugins.GetPluginResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">GetPluginResult</code><span class="sig-paren">(</span><em class="sig-param">guid=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">GetPluginResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPlugin.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_newrelic.plugins.GetPluginResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.GetPluginResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the installed plugin instance.</p>
@@ -241,9 +238,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_newrelic.plugins.get_plugin">
-<code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin</code><span class="sig-paren">(</span><em class="sig-param">guid=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -252,9 +249,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_newrelic.plugins.get_plugin_component">
-<code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin_component</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">plugin_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -71,50 +71,19 @@
   
   <h1 id="Pulumi_Gcp_Billing_Budget" data-uid="Pulumi.Gcp.Billing.Budget" class="text-break">Class Budget
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Budget configuration for a billing account.</p>
+<p>To get more information about Budget, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/billing/docs/reference/budget/rest/v1beta1/billingAccounts.budgets">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/billing/docs/how-to/budgets">Creating a budget</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Budget</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Budget</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Billing.html">Pulumi.Gcp.Billing</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L67">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L76">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget__ctor_" data-uid="Pulumi.Gcp.Billing.Budget.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Billing_Budget__ctor_System_String_Pulumi_Gcp_Billing_BudgetArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Billing.Budget.#ctor(System.String,Pulumi.Gcp.Billing.BudgetArgs,Pulumi.CustomResourceOptions)">Budget(String, BudgetArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Billing_Budget__ctor_System_String_Pulumi_Gcp_Billing_BudgetArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Billing.Budget.#ctor(System.String,Pulumi.Gcp.Billing.BudgetArgs,System.Nullable{CustomResourceOptions})">Budget(String, BudgetArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Budget resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Budget(string name, BudgetArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Budget(string name, BudgetArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,12 +138,12 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_AllUpdatesRule_" data-uid="Pulumi.Gcp.Billing.Budget.AllUpdatesRule*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_AllUpdatesRule" data-uid="Pulumi.Gcp.Billing.Budget.AllUpdatesRule">AllUpdatesRule</h4>
-  <div class="markdown level1 summary"><p>Defines notifications that are sent on every update to the billing account's spend, regardless of the
-thresholds defined using threshold rules.</p>
+  <div class="markdown level1 summary"><p>Defines notifications that are sent on every update to the billing account's spend, regardless of the thresholds defined
+using threshold rules.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -191,13 +160,13 @@ thresholds defined using threshold rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetAllUpdatesRule.html">BudgetAllUpdatesRule</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetAllUpdatesRule.html">BudgetAllUpdatesRule</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_Amount_" data-uid="Pulumi.Gcp.Billing.Budget.Amount*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_Amount" data-uid="Pulumi.Gcp.Billing.Budget.Amount">Amount</h4>
@@ -218,13 +187,13 @@ thresholds defined using threshold rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetAmount.html">BudgetAmount</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetAmount.html">BudgetAmount</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_BillingAccount_" data-uid="Pulumi.Gcp.Billing.Budget.BillingAccount*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_BillingAccount" data-uid="Pulumi.Gcp.Billing.Budget.BillingAccount">BillingAccount</h4>
@@ -245,13 +214,13 @@ thresholds defined using threshold rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_BudgetFilter_" data-uid="Pulumi.Gcp.Billing.Budget.BudgetFilter*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_BudgetFilter" data-uid="Pulumi.Gcp.Billing.Budget.BudgetFilter">BudgetFilter</h4>
@@ -272,13 +241,13 @@ thresholds defined using threshold rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetBudgetFilter.html">BudgetBudgetFilter</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetBudgetFilter.html">BudgetBudgetFilter</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L51">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_DisplayName_" data-uid="Pulumi.Gcp.Billing.Budget.DisplayName*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_DisplayName" data-uid="Pulumi.Gcp.Billing.Budget.DisplayName">DisplayName</h4>
@@ -287,7 +256,7 @@ thresholds defined using threshold rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DisplayName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DisplayName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,13 +268,13 @@ thresholds defined using threshold rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_Name_" data-uid="Pulumi.Gcp.Billing.Budget.Name*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_Name" data-uid="Pulumi.Gcp.Billing.Budget.Name">Name</h4>
@@ -327,23 +296,23 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_ThresholdRules_" data-uid="Pulumi.Gcp.Billing.Budget.ThresholdRules*"></a>
   <h4 id="Pulumi_Gcp_Billing_Budget_ThresholdRules" data-uid="Pulumi.Gcp.Billing.Budget.ThresholdRules">ThresholdRules</h4>
-  <div class="markdown level1 summary"><p>Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified
-percentages of the budget.</p>
+  <div class="markdown level1 summary"><p>Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of
+the budget.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BudgetThresholdRules&gt;&gt; ThresholdRules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;BudgetThresholdRule&gt;&gt; ThresholdRules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +324,7 @@ percentages of the budget.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetThresholdRules.html">BudgetThresholdRules</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Billing.Outputs.BudgetThresholdRule.html">BudgetThresholdRule</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -363,17 +332,17 @@ percentages of the budget.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L97">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L106">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Billing_Budget_Get_" data-uid="Pulumi.Gcp.Billing.Budget.Get*"></a>
-  <h4 id="Pulumi_Gcp_Billing_Budget_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Billing_BudgetState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Billing.Budget.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Billing.BudgetState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, BudgetState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Billing_Budget_Get_System_String_Input_System_String__Pulumi_Gcp_Billing_BudgetState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Billing.Budget.Get(System.String,Input{System.String},Pulumi.Gcp.Billing.BudgetState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, BudgetState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Budget resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Budget Get(string name, Input&lt;string&gt; id, BudgetState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Budget Get(string name, Input&lt;string&gt; id, BudgetState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -392,7 +361,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -404,7 +373,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -433,7 +402,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Billing/Budget.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Billing/Budget.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

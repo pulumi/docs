@@ -12,7 +12,7 @@ menu:
 
 The HashiCorp Vault provider for Pulumi can be used to provision any of the resources available in [Vault](https://www.vaultproject.io/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/vault" >}}) for complete details of the available Vault provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/vault" >}}) for complete details of the available Vault provider APIs.
 
 ## Setup
 
@@ -59,7 +59,7 @@ be = vault.AuthBackend("example",
 
 ```go
 import (
-  vault "github.com/pulumi/pulumi-vault/sdk/go/vault"
+  vault "github.com/pulumi/pulumi-vault/sdk/v2/go/vault"
 )
 
 be, _ := vault.NewAuthBackend(ctx, "example", &vault.AuthBackendArgs{

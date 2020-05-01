@@ -72,53 +72,12 @@
   <h1 id="Pulumi_Azure_SiteRecovery_Fabric" data-uid="Pulumi.Azure.SiteRecovery.Fabric" class="text-break">Class Fabric
   </h1>
   <div class="markdown level0 summary"><p>Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_fabric.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Fabric</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Fabric</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.SiteRecovery.html">Pulumi.Azure.SiteRecovery</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -129,16 +88,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Azure_SiteRecovery_Fabric__ctor_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.#ctor*"></a>
-  <h4 id="Pulumi_Azure_SiteRecovery_Fabric__ctor_System_String_Pulumi_Azure_SiteRecovery_FabricArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.#ctor(System.String,Pulumi.Azure.SiteRecovery.FabricArgs,Pulumi.CustomResourceOptions)">Fabric(String, FabricArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_SiteRecovery_Fabric__ctor_System_String_Pulumi_Azure_SiteRecovery_FabricArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.SiteRecovery.Fabric.#ctor(System.String,Pulumi.Azure.SiteRecovery.FabricArgs,System.Nullable{CustomResourceOptions})">Fabric(String, FabricArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Fabric resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Fabric(string name, FabricArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Fabric(string name, FabricArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +122,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -173,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Azure_SiteRecovery_Fabric_Location_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Location*"></a>
   <h4 id="Pulumi_Azure_SiteRecovery_Fabric_Location" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Location">Location</h4>
@@ -194,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L28">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Azure_SiteRecovery_Fabric_Name_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Name*"></a>
   <h4 id="Pulumi_Azure_SiteRecovery_Fabric_Name" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Name">Name</h4>
@@ -221,13 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Azure_SiteRecovery_Fabric_RecoveryVaultName_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.RecoveryVaultName*"></a>
   <h4 id="Pulumi_Azure_SiteRecovery_Fabric_RecoveryVaultName" data-uid="Pulumi.Azure.SiteRecovery.Fabric.RecoveryVaultName">RecoveryVaultName</h4>
@@ -248,13 +207,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Azure_SiteRecovery_Fabric_ResourceGroupName_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_SiteRecovery_Fabric_ResourceGroupName" data-uid="Pulumi.Azure.SiteRecovery.Fabric.ResourceGroupName">ResourceGroupName</h4>
@@ -275,7 +234,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -283,17 +242,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Azure_SiteRecovery_Fabric_Get_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Get*"></a>
-  <h4 id="Pulumi_Azure_SiteRecovery_Fabric_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_SiteRecovery_FabricState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.SiteRecovery.FabricState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FabricState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Azure_SiteRecovery_Fabric_Get_System_String_Input_System_String__Pulumi_Azure_SiteRecovery_FabricState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Azure.SiteRecovery.Fabric.Get(System.String,Input{System.String},Pulumi.Azure.SiteRecovery.FabricState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FabricState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Fabric resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Fabric Get(string name, Input&lt;string&gt; id, FabricState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Fabric Get(string name, Input&lt;string&gt; id, FabricState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,7 +271,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -324,7 +283,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -353,7 +312,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Siterecovery/Fabric.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/SiteRecovery/Fabric.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

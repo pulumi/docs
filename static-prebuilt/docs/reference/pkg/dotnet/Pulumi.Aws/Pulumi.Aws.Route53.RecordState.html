@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">RecordState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">RecordState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Route53.html">Pulumi.Aws.Route53</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L411">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L409">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState__ctor_" data-uid="Pulumi.Aws.Route53.RecordState.#ctor*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState__ctor" data-uid="Pulumi.Aws.Route53.RecordState.#ctor">RecordState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L291">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L289">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_Aliases_" data-uid="Pulumi.Aws.Route53.RecordState.Aliases*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_Aliases" data-uid="Pulumi.Aws.Route53.RecordState.Aliases">Aliases</h4>
@@ -139,7 +110,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RecordAliasesGetArgs&gt; Aliases { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RecordAliasGetArgs&gt; Aliases { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordAliasesGetArgs.html">RecordAliasesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordAliasGetArgs.html">RecordAliasGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L300">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L298">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_AllowOverwrite_" data-uid="Pulumi.Aws.Route53.RecordState.AllowOverwrite*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_AllowOverwrite" data-uid="Pulumi.Aws.Route53.RecordState.AllowOverwrite">AllowOverwrite</h4>
@@ -166,7 +137,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; AllowOverwrite { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AllowOverwrite { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,13 +149,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L309">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L307">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_FailoverRoutingPolicies_" data-uid="Pulumi.Aws.Route53.RecordState.FailoverRoutingPolicies*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_FailoverRoutingPolicies" data-uid="Pulumi.Aws.Route53.RecordState.FailoverRoutingPolicies">FailoverRoutingPolicies</h4>
@@ -193,7 +164,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RecordFailoverRoutingPoliciesGetArgs&gt; FailoverRoutingPolicies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RecordFailoverRoutingPolicyGetArgs&gt; FailoverRoutingPolicies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +176,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordFailoverRoutingPoliciesGetArgs.html">RecordFailoverRoutingPoliciesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordFailoverRoutingPolicyGetArgs.html">RecordFailoverRoutingPolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_Fqdn_" data-uid="Pulumi.Aws.Route53.RecordState.Fqdn*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_Fqdn" data-uid="Pulumi.Aws.Route53.RecordState.Fqdn">Fqdn</h4>
@@ -220,7 +191,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Fqdn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Fqdn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,13 +203,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L327">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L325">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_GeolocationRoutingPolicies_" data-uid="Pulumi.Aws.Route53.RecordState.GeolocationRoutingPolicies*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_GeolocationRoutingPolicies" data-uid="Pulumi.Aws.Route53.RecordState.GeolocationRoutingPolicies">GeolocationRoutingPolicies</h4>
@@ -247,7 +218,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RecordGeolocationRoutingPoliciesGetArgs&gt; GeolocationRoutingPolicies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RecordGeolocationRoutingPolicyGetArgs&gt; GeolocationRoutingPolicies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,13 +230,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordGeolocationRoutingPoliciesGetArgs.html">RecordGeolocationRoutingPoliciesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordGeolocationRoutingPolicyGetArgs.html">RecordGeolocationRoutingPolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L336">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L334">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_HealthCheckId_" data-uid="Pulumi.Aws.Route53.RecordState.HealthCheckId*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_HealthCheckId" data-uid="Pulumi.Aws.Route53.RecordState.HealthCheckId">HealthCheckId</h4>
@@ -274,7 +245,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; HealthCheckId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HealthCheckId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,13 +257,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L345">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L343">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_LatencyRoutingPolicies_" data-uid="Pulumi.Aws.Route53.RecordState.LatencyRoutingPolicies*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_LatencyRoutingPolicies" data-uid="Pulumi.Aws.Route53.RecordState.LatencyRoutingPolicies">LatencyRoutingPolicies</h4>
@@ -301,7 +272,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RecordLatencyRoutingPoliciesGetArgs&gt; LatencyRoutingPolicies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RecordLatencyRoutingPolicyGetArgs&gt; LatencyRoutingPolicies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,13 +284,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordLatencyRoutingPoliciesGetArgs.html">RecordLatencyRoutingPoliciesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordLatencyRoutingPolicyGetArgs.html">RecordLatencyRoutingPolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L354">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L352">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_MultivalueAnswerRoutingPolicy_" data-uid="Pulumi.Aws.Route53.RecordState.MultivalueAnswerRoutingPolicy*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_MultivalueAnswerRoutingPolicy" data-uid="Pulumi.Aws.Route53.RecordState.MultivalueAnswerRoutingPolicy">MultivalueAnswerRoutingPolicy</h4>
@@ -328,7 +299,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; MultivalueAnswerRoutingPolicy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? MultivalueAnswerRoutingPolicy { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,13 +311,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L360">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L358">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_Name_" data-uid="Pulumi.Aws.Route53.RecordState.Name*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_Name" data-uid="Pulumi.Aws.Route53.RecordState.Name">Name</h4>
@@ -355,7 +326,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,13 +338,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L369">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L367">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_Records_" data-uid="Pulumi.Aws.Route53.RecordState.Records*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_Records" data-uid="Pulumi.Aws.Route53.RecordState.Records">Records</h4>
@@ -394,13 +365,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L378">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L376">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_SetIdentifier_" data-uid="Pulumi.Aws.Route53.RecordState.SetIdentifier*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_SetIdentifier" data-uid="Pulumi.Aws.Route53.RecordState.SetIdentifier">SetIdentifier</h4>
@@ -409,7 +380,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; SetIdentifier { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? SetIdentifier { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -421,13 +392,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L384">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L382">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_Ttl_" data-uid="Pulumi.Aws.Route53.RecordState.Ttl*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_Ttl" data-uid="Pulumi.Aws.Route53.RecordState.Ttl">Ttl</h4>
@@ -436,7 +407,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Ttl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Ttl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,13 +419,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L390">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L388">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_Type_" data-uid="Pulumi.Aws.Route53.RecordState.Type*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_Type" data-uid="Pulumi.Aws.Route53.RecordState.Type">Type</h4>
@@ -463,7 +434,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,13 +446,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L399">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L397">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_WeightedRoutingPolicies_" data-uid="Pulumi.Aws.Route53.RecordState.WeightedRoutingPolicies*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_WeightedRoutingPolicies" data-uid="Pulumi.Aws.Route53.RecordState.WeightedRoutingPolicies">WeightedRoutingPolicies</h4>
@@ -490,7 +461,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputList&lt;RecordWeightedRoutingPoliciesGetArgs&gt; WeightedRoutingPolicies { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputList&lt;RecordWeightedRoutingPolicyGetArgs&gt; WeightedRoutingPolicies { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,13 +473,13 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordWeightedRoutingPoliciesGetArgs.html">RecordWeightedRoutingPoliciesGetArgs</a>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Aws.Route53.Inputs.RecordWeightedRoutingPolicyGetArgs.html">RecordWeightedRoutingPolicyGetArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L408">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L406">View Source</a>
   </span>
   <a id="Pulumi_Aws_Route53_RecordState_ZoneId_" data-uid="Pulumi.Aws.Route53.RecordState.ZoneId*"></a>
   <h4 id="Pulumi_Aws_Route53_RecordState_ZoneId" data-uid="Pulumi.Aws.Route53.RecordState.ZoneId">ZoneId</h4>
@@ -517,7 +488,7 @@ Alias record documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ZoneId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ZoneId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -529,7 +500,7 @@ Alias record documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -541,7 +512,7 @@ Alias record documented below.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Route53/Record.cs/#L282" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Route53/Record.cs/#L280" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

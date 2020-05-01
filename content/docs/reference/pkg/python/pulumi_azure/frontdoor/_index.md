@@ -13,13 +13,10 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.frontdoor"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.frontdoor"></span><dl class="py class">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">FirewallPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_block_response_body=None</em>, <em class="sig-param">custom_block_response_status_code=None</em>, <em class="sig-param">custom_rules=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">managed_rules=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_url=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">FirewallPolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_block_response_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_block_response_status_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirect_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Front Door Web Application Firewall Policy instance.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor_firewall_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor_firewall_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -96,21 +93,21 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the managed rule to use with this resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version on the managed rule to use with this resource.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.custom_block_response_body">
-<code class="sig-name descname">custom_block_response_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.custom_block_response_body" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_block_response_body</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.custom_block_response_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>If a <code class="docutils literal notranslate"><span class="pre">custom_rule</span></code> block’s action type is <code class="docutils literal notranslate"><span class="pre">block</span></code>, this is the response body. The body must be specified in base64 encoding.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.custom_block_response_status_code">
-<code class="sig-name descname">custom_block_response_status_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.custom_block_response_status_code" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_block_response_status_code</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.custom_block_response_status_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>If a <code class="docutils literal notranslate"><span class="pre">custom_rule</span></code> block’s action type is <code class="docutils literal notranslate"><span class="pre">block</span></code>, this is the response status code. Possible values are <code class="docutils literal notranslate"><span class="pre">200</span></code>, <code class="docutils literal notranslate"><span class="pre">403</span></code>, <code class="docutils literal notranslate"><span class="pre">405</span></code>, <code class="docutils literal notranslate"><span class="pre">406</span></code>, or <code class="docutils literal notranslate"><span class="pre">429</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.custom_rules">
-<code class="sig-name descname">custom_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.custom_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom_rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.custom_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">custom_rule</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to perform when the rule is matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code>, <code class="docutils literal notranslate"><span class="pre">Block</span></code>, <code class="docutils literal notranslate"><span class="pre">Log</span></code>, or <code class="docutils literal notranslate"><span class="pre">Redirect</span></code>.</p></li>
@@ -133,27 +130,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.enabled">
-<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is the policy a enabled state or disabled state. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.frontend_endpoint_ids">
-<code class="sig-name descname">frontend_endpoint_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.frontend_endpoint_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_endpoint_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.frontend_endpoint_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>the Frontend Endpoints associated with this Front Door Web Application Firewall policy.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource location.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.managed_rules">
-<code class="sig-name descname">managed_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.managed_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">managed_rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.managed_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">managed_rule</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">exclusion</span></code> blocks as defined below.</p>
@@ -194,39 +191,39 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.mode">
-<code class="sig-name descname">mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The firewall policy mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Detection</span></code>, <code class="docutils literal notranslate"><span class="pre">Prevention</span></code> and defaults to <code class="docutils literal notranslate"><span class="pre">Prevention</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the policy. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.redirect_url">
-<code class="sig-name descname">redirect_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.redirect_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">redirect_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.redirect_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>If action type is redirect, this field represents redirect URL for the client.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the Web Application Firewall Policy.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_block_response_body=None</em>, <em class="sig-param">custom_block_response_status_code=None</em>, <em class="sig-param">custom_rules=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frontend_endpoint_ids=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_rules=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_url=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_block_response_body</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_block_response_status_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">custom_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoint_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirect_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FirewallPolicy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -310,9 +307,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -328,9 +325,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.frontdoor.FirewallPolicy.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -348,9 +345,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_azure.frontdoor.Frontdoor">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">Frontdoor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_pool_health_probes=None</em>, <em class="sig-param">backend_pool_load_balancings=None</em>, <em class="sig-param">backend_pools=None</em>, <em class="sig-param">enforce_backend_pools_certificate_name_check=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">frontend_endpoints=None</em>, <em class="sig-param">load_balancer_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">Frontdoor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_health_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_load_balancings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Front Door instance.</p>
 <p>Azure Front Door Service is Microsoft’s highly available and scalable web application acceleration platform and global HTTP(s) load balancer. It provides built-in DDoS protection and application layer security and caching. Front Door enables you to build applications that maximize and automate high-availability and performance for your end-users. Use Front Door with Azure services including Web/Mobile Apps, Cloud Services and Virtual Machines – or combine it with on-premises services for hybrid deployments and smooth cloud migration.</p>
 <p>Below are some of the key scenarios that Azure Front Door Service addresses:</p>
@@ -359,9 +356,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.</p></li>
 <li><p>Use Front Door for application layer security and DDoS protection for your application.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -467,9 +461,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.backend_pool_health_probes">
-<code class="sig-name descname">backend_pool_health_probes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pool_health_probes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_pool_health_probes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pool_health_probes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">backend_pool_health_probe</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this health probe enabled? Dafaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -482,9 +476,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.backend_pool_load_balancings">
-<code class="sig-name descname">backend_pool_load_balancings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pool_load_balancings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_pool_load_balancings</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pool_load_balancings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">backend_pool_load_balancing</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">additionalLatencyMilliseconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
@@ -495,9 +489,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.backend_pools">
-<code class="sig-name descname">backend_pools</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pools" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">backend_pools</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.backend_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">backend_pool</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">backends</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">backend</span></code> block as defined below.</p>
@@ -518,27 +512,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.cname">
-<code class="sig-name descname">cname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.cname" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cname</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.cname" title="Permalink to this definition">¶</a></dt>
 <dd><p>The host that each frontendEndpoint must CNAME to.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.enforce_backend_pools_certificate_name_check">
-<code class="sig-name descname">enforce_backend_pools_certificate_name_check</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.enforce_backend_pools_certificate_name_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enforce_backend_pools_certificate_name_check</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.enforce_backend_pools_certificate_name_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enforce certificate name check on <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> requests to all backend pools, this setting will have no effect on <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> requests. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.friendly_name">
-<code class="sig-name descname">friendly_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.friendly_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">friendly_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.friendly_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A friendly name for the Front Door service.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.frontend_endpoints">
-<code class="sig-name descname">frontend_endpoints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.frontend_endpoints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">frontend_endpoints</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.frontend_endpoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">frontend_endpoint</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">customHttpsConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">custom_https_configuration</span></code> block as defined below.</p>
@@ -562,27 +556,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.load_balancer_enabled">
-<code class="sig-name descname">load_balancer_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.load_balancer_enabled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_balancer_enabled</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.load_balancer_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Should the Front Door Load Balancer be Enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Front Door service. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.routing_rules">
-<code class="sig-name descname">routing_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.routing_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">routing_rules</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.routing_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">routing_rule</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">acceptedProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Protocol schemes to match for the Backend Routing Rule. Defaults to <code class="docutils literal notranslate"><span class="pre">Http</span></code>.</p></li>
@@ -614,15 +608,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.frontdoor.Frontdoor.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_pool_health_probes=None</em>, <em class="sig-param">backend_pool_load_balancings=None</em>, <em class="sig-param">backend_pools=None</em>, <em class="sig-param">cname=None</em>, <em class="sig-param">enforce_backend_pools_certificate_name_check=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">frontend_endpoints=None</em>, <em class="sig-param">load_balancer_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_rules=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_health_probes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pool_load_balancings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend_pools</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_backend_pools_certificate_name_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">friendly_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">frontend_endpoints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">routing_rules</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Frontdoor resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -734,9 +728,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.frontdoor.Frontdoor.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -752,9 +746,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.frontdoor.Frontdoor.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

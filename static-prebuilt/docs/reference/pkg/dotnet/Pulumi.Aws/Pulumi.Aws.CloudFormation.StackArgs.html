@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">StackArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">StackArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.CloudFormation.html">Pulumi.Aws.CloudFormation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L261">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L259">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs__ctor_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.#ctor*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs__ctor" data-uid="Pulumi.Aws.CloudFormation.StackArgs.#ctor">StackArgs()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L159">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_Capabilities_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Capabilities*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_Capabilities" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Capabilities">Capabilities</h4>
@@ -151,13 +122,13 @@ Valid values: <code>CAPABILITY_IAM</code>, <code>CAPABILITY_NAMED_IAM</code>, or
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L171">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L169">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_DisableRollback_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.DisableRollback*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_DisableRollback" data-uid="Pulumi.Aws.CloudFormation.StackArgs.DisableRollback">DisableRollback</h4>
@@ -167,7 +138,7 @@ Conflicts with <code>on_failure</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; DisableRollback { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DisableRollback { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ Conflicts with <code>on_failure</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L177">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L175">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_IamRoleArn_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.IamRoleArn*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_IamRoleArn" data-uid="Pulumi.Aws.CloudFormation.StackArgs.IamRoleArn">IamRoleArn</h4>
@@ -194,7 +165,7 @@ Conflicts with <code>on_failure</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IamRoleArn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IamRoleArn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +177,13 @@ Conflicts with <code>on_failure</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L183">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L181">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_Name_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Name*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_Name" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Name">Name</h4>
@@ -221,7 +192,7 @@ Conflicts with <code>on_failure</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,13 +204,13 @@ Conflicts with <code>on_failure</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L192">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_NotificationArns_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.NotificationArns*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_NotificationArns" data-uid="Pulumi.Aws.CloudFormation.StackArgs.NotificationArns">NotificationArns</h4>
@@ -260,13 +231,13 @@ Conflicts with <code>on_failure</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L202">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L200">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_OnFailure_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.OnFailure*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_OnFailure" data-uid="Pulumi.Aws.CloudFormation.StackArgs.OnFailure">OnFailure</h4>
@@ -276,7 +247,7 @@ one of: <code>DO_NOTHING</code>, <code>ROLLBACK</code>, or <code>DELETE</code>. 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; OnFailure { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? OnFailure { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -288,13 +259,13 @@ one of: <code>DO_NOTHING</code>, <code>ROLLBACK</code>, or <code>DELETE</code>. 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L211">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L209">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_Parameters_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Parameters*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_Parameters" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Parameters">Parameters</h4>
@@ -315,13 +286,13 @@ one of: <code>DO_NOTHING</code>, <code>ROLLBACK</code>, or <code>DELETE</code>. 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L219">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_PolicyBody_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.PolicyBody*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_PolicyBody" data-uid="Pulumi.Aws.CloudFormation.StackArgs.PolicyBody">PolicyBody</h4>
@@ -331,7 +302,7 @@ Conflicts w/ <code>policy_url</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PolicyBody { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PolicyBody { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,13 +314,13 @@ Conflicts w/ <code>policy_url</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_PolicyUrl_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.PolicyUrl*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_PolicyUrl" data-uid="Pulumi.Aws.CloudFormation.StackArgs.PolicyUrl">PolicyUrl</h4>
@@ -359,7 +330,7 @@ Conflicts w/ <code>policy_body</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PolicyUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PolicyUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,13 +342,13 @@ Conflicts w/ <code>policy_body</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L237">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L235">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_Tags_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Tags*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_Tags" data-uid="Pulumi.Aws.CloudFormation.StackArgs.Tags">Tags</h4>
@@ -398,13 +369,13 @@ Conflicts w/ <code>policy_body</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputMap-1.html">InputMap</a>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L244">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_TemplateBody_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.TemplateBody*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_TemplateBody" data-uid="Pulumi.Aws.CloudFormation.StackArgs.TemplateBody">TemplateBody</h4>
@@ -413,7 +384,7 @@ Conflicts w/ <code>policy_body</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TemplateBody { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TemplateBody { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -425,13 +396,13 @@ Conflicts w/ <code>policy_body</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L250">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_TemplateUrl_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.TemplateUrl*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_TemplateUrl" data-uid="Pulumi.Aws.CloudFormation.StackArgs.TemplateUrl">TemplateUrl</h4>
@@ -440,7 +411,7 @@ Conflicts w/ <code>policy_body</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; TemplateUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? TemplateUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -452,13 +423,13 @@ Conflicts w/ <code>policy_body</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L256">View Source</a>
   </span>
   <a id="Pulumi_Aws_CloudFormation_StackArgs_TimeoutInMinutes_" data-uid="Pulumi.Aws.CloudFormation.StackArgs.TimeoutInMinutes*"></a>
   <h4 id="Pulumi_Aws_CloudFormation_StackArgs_TimeoutInMinutes" data-uid="Pulumi.Aws.CloudFormation.StackArgs.TimeoutInMinutes">TimeoutInMinutes</h4>
@@ -467,7 +438,7 @@ Conflicts w/ <code>policy_body</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; TimeoutInMinutes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TimeoutInMinutes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -479,7 +450,7 @@ Conflicts w/ <code>policy_body</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -491,7 +462,7 @@ Conflicts w/ <code>policy_body</code>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Cloudformation/Stack.cs/#L152" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/CloudFormation/Stack.cs/#L150" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

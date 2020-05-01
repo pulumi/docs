@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetInstancesResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Rds.html">Pulumi.AliCloud.Rds</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
   <h5 id="Pulumi_AliCloud_Rds_GetInstancesResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetInstancesResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetInstancesResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L110">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_ConnectionMode" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.ConnectionMode">ConnectionMode</h4>
   <div class="markdown level1 summary"><p><code>Standard</code> for standard access mode and <code>Safe</code> for high security access mode.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ConnectionMode</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ConnectionMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L114">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_DbType" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.DbType">DbType</h4>
   <div class="markdown level1 summary"><p><code>Primary</code> for primary instance, <code>Readonly</code> for read-only instance, <code>Guard</code> for disaster recovery instance, and <code>Temp</code> for temporary instance.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DbType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DbType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L118">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Engine" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Engine">Engine</h4>
   <div class="markdown level1 summary"><p>Database type. Options are <code>MySQL</code>, <code>SQLServer</code>, <code>PostgreSQL</code> and <code>PPAS</code>. If no value is specified, all types are returned.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Engine</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Engine</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L122">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Id" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L126">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Ids" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Ids">Ids</h4>
   <div class="markdown level1 summary"><p>A list of RDS instance IDs.</p>
@@ -235,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L123">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L130">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Instances" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Instances">Instances</h4>
   <div class="markdown level1 summary"><p>A list of RDS instances. Each element contains the following attributes:</p>
@@ -249,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstancesInstancesResult&gt; Instances</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetInstancesInstanceResult&gt; Instances</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,20 +237,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Rds.Outputs.GetInstancesInstancesResult.html">GetInstancesInstancesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Rds.Outputs.GetInstancesInstanceResult.html">GetInstancesInstanceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L131">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_NameRegex" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.NameRegex">NameRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NameRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? NameRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,13 +262,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L128">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L135">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Names" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Names">Names</h4>
   <div class="markdown level1 summary"><p>A list of RDS instance names.</p>
@@ -312,20 +288,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L129">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L136">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_OutputFile" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.OutputFile">OutputFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string OutputFile</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? OutputFile</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,13 +313,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L133">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L140">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Status" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Status">Status</h4>
   <div class="markdown level1 summary"><p>Status of the instance.</p>
@@ -351,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Status</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Status</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -363,20 +339,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L134">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L141">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_Tags" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.Tags">Tags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Tags</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Tags</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -388,13 +364,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L138">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L145">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_VpcId" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.VpcId">VpcId</h4>
   <div class="markdown level1 summary"><p>ID of the VPC the instance belongs to.</p>
@@ -402,7 +378,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VpcId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VpcId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -414,13 +390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L142">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L149">View Source</a>
   </span>
   <h4 id="Pulumi_AliCloud_Rds_GetInstancesResult_VswitchId" data-uid="Pulumi.AliCloud.Rds.GetInstancesResult.VswitchId">VswitchId</h4>
   <div class="markdown level1 summary"><p>ID of the VSwitch the instance belongs to.</p>
@@ -428,7 +404,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string VswitchId</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? VswitchId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -440,7 +416,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -452,7 +428,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Rds/GetInstances.cs/#L101" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Rds/GetInstances.cs/#L104" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

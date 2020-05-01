@@ -71,7 +71,7 @@
   
   <h1 id="Pulumi_InvokeOptions" data-uid="Pulumi.InvokeOptions" class="text-break">Class InvokeOptions
   </h1>
-  <div class="markdown level0 summary"><p>Options to help control the behavior of <a class="xref" href="Pulumi.IDeployment.html#Pulumi_IDeployment_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_">InvokeAsync&lt;T&gt;(String, InvokeArgs, InvokeOptions)</a>.</p>
+  <div class="markdown level0 summary"><p>Options to help control the behavior of <span class="xref">Pulumi.IDeployment.InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)</span>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -79,40 +79,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InvokeOptions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_InvokeOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InvokeOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public class InvokeOptions : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L15">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L15">View Source</a>
   </span>
   <a id="Pulumi_InvokeOptions_Parent_" data-uid="Pulumi.InvokeOptions.Parent*"></a>
   <h4 id="Pulumi_InvokeOptions_Parent" data-uid="Pulumi.InvokeOptions.Parent">Parent</h4>
@@ -140,7 +116,7 @@ to use).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_InvokeOptions_Provider_" data-uid="Pulumi.InvokeOptions.Provider*"></a>
   <h4 id="Pulumi_InvokeOptions_Provider" data-uid="Pulumi.InvokeOptions.Provider">Provider</h4>
@@ -168,7 +144,7 @@ provider for the invoked function's package will be used.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L27">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_InvokeOptions_Version_" data-uid="Pulumi.InvokeOptions.Version*"></a>
   <h4 id="Pulumi_InvokeOptions_Version" data-uid="Pulumi.InvokeOptions.Version">Version</h4>
@@ -178,7 +154,7 @@ used when performing this invoke.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +166,7 @@ used when performing this invoke.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -202,7 +178,7 @@ used when performing this invoke.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/00acc7999a27043871e8167ea3cc82ea01e2bd53/sdk/dotnet/Pulumi/Deployment/InvokeOptions.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -55,6 +55,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="loganalytics/">loganalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicapps/">logicapps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="machinelearning/">machinelearning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance/">maintenance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managedapplication/">managedapplication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="management/">management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementgroups/">managementgroups</a></li>

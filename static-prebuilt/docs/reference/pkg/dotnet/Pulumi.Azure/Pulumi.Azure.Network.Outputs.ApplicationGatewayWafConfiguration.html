@@ -78,47 +78,24 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ApplicationGatewayWafConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.Outputs.html">Pulumi.Azure.Network.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ApplicationGatewayWafConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ApplicationGatewayWafConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3608">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_DisabledRuleGroups" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.DisabledRuleGroups">DisabledRuleGroups</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>one or more <code>disabled_rule_group</code> blocks as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApplicationGatewayWafConfigurationDisabledRuleGroups&gt; DisabledRuleGroups</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApplicationGatewayWafConfigurationDisabledRuleGroup&gt; DisabledRuleGroups</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,16 +107,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfigurationDisabledRuleGroups.html">ApplicationGatewayWafConfigurationDisabledRuleGroups</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfigurationDisabledRuleGroup.html">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3609">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_Enabled" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Is the Web Application Firewall be enabled?</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,14 +139,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3610">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_Exclusions" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.Exclusions">Exclusions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>one or more <code>exclusion</code> blocks as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApplicationGatewayWafConfigurationExclusions&gt; Exclusions</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ApplicationGatewayWafConfigurationExclusion&gt; Exclusions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,16 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfigurationExclusions.html">ApplicationGatewayWafConfigurationExclusions</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfigurationExclusion.html">ApplicationGatewayWafConfigurationExclusion</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3611">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_FileUploadLimitMb" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.FileUploadLimitMb">FileUploadLimitMb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The File Upload Limit in MB. Accepted values are in the range <code>1</code>MB to <code>500</code>MB. Defaults to <code>100</code>MB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,10 +191,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3612">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_FirewallMode" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.FirewallMode">FirewallMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Web Application Firewall Mode. Possible values are <code>Detection</code> and <code>Prevention</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,10 +217,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3613">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_MaxRequestBodySizeKb" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.MaxRequestBodySizeKb">MaxRequestBodySizeKb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Maximum Request Body Size in KB.  Accepted values are in the range <code>1</code>KB to <code>128</code>KB.  Defaults to <code>128</code>KB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,10 +243,11 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3614">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_RequestBodyCheck" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.RequestBodyCheck">RequestBodyCheck</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Is Request Body Inspection enabled?  Defaults to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,14 +269,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3615">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_RuleSetType" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.RuleSetType">RuleSetType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Type of the Rule Set used for this Web Application Firewall.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string RuleSetType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? RuleSetType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,16 +289,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3616">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_ApplicationGatewayWafConfiguration_RuleSetVersion" data-uid="Pulumi.Azure.Network.Outputs.ApplicationGatewayWafConfiguration.RuleSetVersion">RuleSetVersion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Version of the Rule Set used for this Web Application Firewall. Possible values are <code>2.2.9</code>, <code>3.0</code>, and <code>3.1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -342,7 +327,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/ApplicationGateway.cs/#L3605" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/ApplicationGatewayWafConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

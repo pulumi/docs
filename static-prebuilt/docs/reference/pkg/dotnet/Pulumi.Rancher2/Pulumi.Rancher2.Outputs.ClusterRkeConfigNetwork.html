@@ -87,7 +87,7 @@
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8099">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_CalicoNetworkProvider" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.CalicoNetworkProvider">CalicoNetworkProvider</h4>
   <div class="markdown level1 summary"><p>Calico provider config for RKE network (list maxitems:1)</p>
@@ -113,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8103">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_CanalNetworkProvider" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.CanalNetworkProvider">CanalNetworkProvider</h4>
   <div class="markdown level1 summary"><p>Canal provider config for RKE network (list maxitems:1)</p>
@@ -139,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8107">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_FlannelNetworkProvider" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.FlannelNetworkProvider">FlannelNetworkProvider</h4>
   <div class="markdown level1 summary"><p>Flannel provider config for RKE network (list maxitems:1)</p>
@@ -165,7 +165,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8111">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L31">View Source</a>
+  </span>
+  <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_Mtu" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.Mtu">Mtu</h4>
+  <div class="markdown level1 summary"><p>Network provider MTU. Default <code>0</code> (int)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int? Mtu</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_Options" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.Options">Options</h4>
   <div class="markdown level1 summary"><p>RKE options for network (map)</p>
@@ -173,7 +199,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt; Options</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, object&gt;? Options</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,21 +211,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8115">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L39">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_Plugin" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.Plugin">Plugin</h4>
-  <div class="markdown level1 summary"><p>Plugin for RKE network. <code>canal</code> (default), <code>flannel</code>, <code>calico</code> and <code>weave</code> are supported. (string)</p>
+  <div class="markdown level1 summary"><p>Plugin for RKE network. <code>canal</code> (default), <code>flannel</code>, <code>calico</code>, <code>none</code> and <code>weave</code> are supported. (string)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string Plugin</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Plugin</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +237,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8119">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L43">View Source</a>
   </span>
   <h4 id="Pulumi_Rancher2_Outputs_ClusterRkeConfigNetwork_WeaveNetworkProvider" data-uid="Pulumi.Rancher2.Outputs.ClusterRkeConfigNetwork.WeaveNetworkProvider">WeaveNetworkProvider</h4>
   <div class="markdown level1 summary"><p>Weave provider config for RKE network (list maxitems:1)</p>
@@ -249,7 +275,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/Cluster.cs/#L8093" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/406558c5decd461aa562d0719481124524bd365e/sdk/dotnet/Outputs/ClusterRkeConfigNetwork.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

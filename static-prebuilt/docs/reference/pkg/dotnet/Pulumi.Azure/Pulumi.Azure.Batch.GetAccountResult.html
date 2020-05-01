@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetAccountResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Batch.html">Pulumi.Azure.Batch</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Batch_GetAccountResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetAccountResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetAccountResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_AccountEndpoint" data-uid="Pulumi.Azure.Batch.GetAccountResult.AccountEndpoint">AccountEndpoint</h4>
   <div class="markdown level1 summary"><p>The account endpoint used to interact with the Batch service.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_Id" data-uid="Pulumi.Azure.Batch.GetAccountResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -163,7 +139,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_KeyVaultReferences" data-uid="Pulumi.Azure.Batch.GetAccountResult.KeyVaultReferences">KeyVaultReferences</h4>
   <div class="markdown level1 summary"><p>The <code>key_vault_reference</code> block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the <code>UserSubscription</code> pool allocation mode.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountKeyVaultReferencesResult&gt; KeyVaultReferences</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAccountKeyVaultReferenceResult&gt; KeyVaultReferences</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetAccountKeyVaultReferencesResult.html">GetAccountKeyVaultReferencesResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Batch.Outputs.GetAccountKeyVaultReferenceResult.html">GetAccountKeyVaultReferenceResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_Location" data-uid="Pulumi.Azure.Batch.GetAccountResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The Azure Region in which this Batch account exists.</p>
@@ -215,7 +191,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_Name" data-uid="Pulumi.Azure.Batch.GetAccountResult.Name">Name</h4>
   <div class="markdown level1 summary"><p>The Batch account name.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_PoolAllocationMode" data-uid="Pulumi.Azure.Batch.GetAccountResult.PoolAllocationMode">PoolAllocationMode</h4>
   <div class="markdown level1 summary"><p>The pool allocation mode configured for this Batch account.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_PrimaryAccessKey" data-uid="Pulumi.Azure.Batch.GetAccountResult.PrimaryAccessKey">PrimaryAccessKey</h4>
   <div class="markdown level1 summary"><p>The Batch account primary access key.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L76">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_ResourceGroupName" data-uid="Pulumi.Azure.Batch.GetAccountResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -318,7 +294,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_SecondaryAccessKey" data-uid="Pulumi.Azure.Batch.GetAccountResult.SecondaryAccessKey">SecondaryAccessKey</h4>
   <div class="markdown level1 summary"><p>The Batch account secondary access key.</p>
@@ -344,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L84">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_StorageAccountId" data-uid="Pulumi.Azure.Batch.GetAccountResult.StorageAccountId">StorageAccountId</h4>
   <div class="markdown level1 summary"><p>The ID of the Storage Account used for this Batch account.</p>
@@ -370,7 +346,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L81">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L88">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Batch_GetAccountResult_Tags" data-uid="Pulumi.Azure.Batch.GetAccountResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A map of tags assigned to the Batch account.</p>
@@ -390,7 +366,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -402,7 +378,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Batch/GetAccount.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Batch/GetAccount.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

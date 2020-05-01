@@ -13,64 +13,64 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_aws.cur"></span><dl class="class">
+<span class="target" id="module-pulumi_aws.cur"></span><dl class="py class">
 <dt id="pulumi_aws.cur.AwaitableGetReportDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">AwaitableGetReportDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">additional_artifacts=None</em>, <em class="sig-param">additional_schema_elements=None</em>, <em class="sig-param">compression=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">report_name=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_prefix=None</em>, <em class="sig-param">s3_region=None</em>, <em class="sig-param">time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.AwaitableGetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">AwaitableGetReportDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">additional_artifacts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_schema_elements</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">report_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_unit</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.AwaitableGetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">GetReportDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param">additional_artifacts=None</em>, <em class="sig-param">additional_schema_elements=None</em>, <em class="sig-param">compression=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">report_name=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_prefix=None</em>, <em class="sig-param">s3_region=None</em>, <em class="sig-param">time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">GetReportDefinitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">additional_artifacts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_schema_elements</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">report_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_unit</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getReportDefinition.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.additional_artifacts">
 <code class="sig-name descname">additional_artifacts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.additional_artifacts" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of additional artifacts.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.additional_schema_elements">
 <code class="sig-name descname">additional_schema_elements</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.additional_schema_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of schema elements.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.compression">
 <code class="sig-name descname">compression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.compression" title="Permalink to this definition">¶</a></dt>
 <dd><p>Preferred format for report.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.format">
 <code class="sig-name descname">format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Preferred compression format for report.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.s3_bucket">
 <code class="sig-name descname">s3_bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.s3_bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of customer S3 bucket.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.s3_prefix">
 <code class="sig-name descname">s3_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.s3_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Preferred report path prefix.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.s3_region">
 <code class="sig-name descname">s3_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.s3_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of customer S3 bucket.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.time_unit">
 <code class="sig-name descname">time_unit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult.time_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The frequency on which report data are measured and displayed.</p>
@@ -78,9 +78,9 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="pulumi_aws.cur.ReportDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">ReportDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_artifacts=None</em>, <em class="sig-param">additional_schema_elements=None</em>, <em class="sig-param">compression=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">report_name=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_prefix=None</em>, <em class="sig-param">s3_region=None</em>, <em class="sig-param">time_unit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">ReportDefinition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_artifacts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_schema_elements</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">report_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages Cost and Usage Report Definitions.</p>
 <blockquote>
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>
@@ -103,63 +103,63 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.additional_artifacts">
-<code class="sig-name descname">additional_artifacts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.additional_artifacts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">additional_artifacts</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.additional_artifacts" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.additional_schema_elements">
-<code class="sig-name descname">additional_schema_elements</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.additional_schema_elements" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">additional_schema_elements</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.additional_schema_elements" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of schema elements. Valid values are: RESOURCES.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.compression">
-<code class="sig-name descname">compression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.compression" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compression</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.compression" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compression format for report. Valid values are: GZIP, ZIP.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.format">
-<code class="sig-name descname">format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.format" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">format</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format for report. Valid values are: textORcsv.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.report_name">
-<code class="sig-name descname">report_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.report_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">report_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.report_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.s3_bucket">
-<code class="sig-name descname">s3_bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.s3_bucket" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">s3_bucket</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.s3_bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the existing S3 bucket to hold generated reports.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.s3_prefix">
-<code class="sig-name descname">s3_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.s3_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">s3_prefix</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.s3_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Report path prefix. Limited to 256 characters.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.s3_region">
-<code class="sig-name descname">s3_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.s3_region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">s3_region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.s3_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of the existing S3 bucket to hold generated reports.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.time_unit">
-<code class="sig-name descname">time_unit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.time_unit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">time_unit</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.time_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cur.ReportDefinition.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_artifacts=None</em>, <em class="sig-param">additional_schema_elements=None</em>, <em class="sig-param">compression=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">report_name=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_prefix=None</em>, <em class="sig-param">s3_region=None</em>, <em class="sig-param">time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_artifacts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">additional_schema_elements</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compression</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">report_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_bucket</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">time_unit</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReportDefinition resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -182,9 +182,9 @@ properties used to qualify the lookup.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cur.ReportDefinition.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -200,9 +200,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_aws.cur.ReportDefinition.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -220,9 +220,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="pulumi_aws.cur.get_report_definition">
-<code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">get_report_definition</code><span class="sig-paren">(</span><em class="sig-param">report_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.get_report_definition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.cur.</code><code class="sig-name descname">get_report_definition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">report_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.get_report_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information on an AWS Cost and Usage Report Definition.</p>
 <blockquote>
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>

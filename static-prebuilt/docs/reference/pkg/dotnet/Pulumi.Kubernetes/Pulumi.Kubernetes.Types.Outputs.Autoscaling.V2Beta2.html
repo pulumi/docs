@@ -94,6 +94,10 @@ Kubernetes object.</p>
 automatically manages the replica count of any resource implementing the scale subresource
 based on the metrics specified.</p>
 </section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerBehavior.html">HorizontalPodAutoscalerBehavior</a></h4>
+      <section><p>HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and
+Down directions (scaleUp and scaleDown fields respectively).</p>
+</section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerCondition.html">HorizontalPodAutoscalerCondition</a></h4>
       <section><p>HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a
 certain point.</p>
@@ -107,6 +111,16 @@ HorizontalPodAutoscaler.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerStatus.html">HorizontalPodAutoscalerStatus</a></h4>
       <section><p>HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HPAScalingPolicy.html">HPAScalingPolicy</a></h4>
+      <section><p>HPAScalingPolicy is a single policy which must hold true for a specified past interval.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.HPAScalingRules.html">HPAScalingRules</a></h4>
+      <section><p>HPAScalingRules configures the scaling behavior for one direction. These Rules are applied
+after calculating DesiredReplicas from metrics for the HPA. They can limit the scaling
+velocity by specifying scaling policies. They can prevent flapping by specifying the
+stabilization window, so that the number of replicas is not set instantly, instead, the
+safest value from the stabilization window is chosen.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Autoscaling.V2Beta2.MetricIdentifier.html">MetricIdentifier</a></h4>
       <section><p>MetricIdentifier defines the name and optionally selector for a metric</p>

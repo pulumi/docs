@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">InventoryState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">InventoryState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.S3.html">Pulumi.Aws.S3</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L229">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState__ctor_" data-uid="Pulumi.Aws.S3.InventoryState.#ctor*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState__ctor" data-uid="Pulumi.Aws.S3.InventoryState.#ctor">InventoryState()</h4>
@@ -129,16 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L177">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_Bucket_" data-uid="Pulumi.Aws.S3.InventoryState.Bucket*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_Bucket" data-uid="Pulumi.Aws.S3.InventoryState.Bucket">Bucket</h4>
-  <div class="markdown level1 summary"><p>The S3 bucket configuration where inventory results are published (documented below).</p>
+  <div class="markdown level1 summary"><p>The name of the bucket where the inventory configuration will be stored.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Bucket { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Bucket { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,13 +121,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L183">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_Destination_" data-uid="Pulumi.Aws.S3.InventoryState.Destination*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_Destination" data-uid="Pulumi.Aws.S3.InventoryState.Destination">Destination</h4>
@@ -165,7 +136,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InventoryDestinationGetArgs&gt; Destination { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InventoryDestinationGetArgs&gt;? Destination { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,13 +148,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.InventoryDestinationGetArgs.html">InventoryDestinationGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.InventoryDestinationGetArgs.html">InventoryDestinationGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L189">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_Enabled_" data-uid="Pulumi.Aws.S3.InventoryState.Enabled*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_Enabled" data-uid="Pulumi.Aws.S3.InventoryState.Enabled">Enabled</h4>
@@ -192,7 +163,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; Enabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Enabled { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,13 +175,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L195">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_Filter_" data-uid="Pulumi.Aws.S3.InventoryState.Filter*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_Filter" data-uid="Pulumi.Aws.S3.InventoryState.Filter">Filter</h4>
@@ -219,7 +190,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InventoryFilterGetArgs&gt; Filter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InventoryFilterGetArgs&gt;? Filter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,13 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.InventoryFilterGetArgs.html">InventoryFilterGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.InventoryFilterGetArgs.html">InventoryFilterGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L201">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_IncludedObjectVersions_" data-uid="Pulumi.Aws.S3.InventoryState.IncludedObjectVersions*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_IncludedObjectVersions" data-uid="Pulumi.Aws.S3.InventoryState.IncludedObjectVersions">IncludedObjectVersions</h4>
@@ -246,7 +217,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; IncludedObjectVersions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? IncludedObjectVersions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,13 +229,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L207">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_Name_" data-uid="Pulumi.Aws.S3.InventoryState.Name*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_Name" data-uid="Pulumi.Aws.S3.InventoryState.Name">Name</h4>
@@ -273,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +256,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L217">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_OptionalFields_" data-uid="Pulumi.Aws.S3.InventoryState.OptionalFields*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_OptionalFields" data-uid="Pulumi.Aws.S3.InventoryState.OptionalFields">OptionalFields</h4>
@@ -313,13 +284,13 @@ Valid values: <code>Size</code>, <code>LastModifiedDate</code>, <code>StorageCla
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_Aws_S3_InventoryState_Schedule_" data-uid="Pulumi.Aws.S3.InventoryState.Schedule*"></a>
   <h4 id="Pulumi_Aws_S3_InventoryState_Schedule" data-uid="Pulumi.Aws.S3.InventoryState.Schedule">Schedule</h4>
@@ -328,7 +299,7 @@ Valid values: <code>Size</code>, <code>LastModifiedDate</code>, <code>StorageCla
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;InventoryScheduleGetArgs&gt; Schedule { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;InventoryScheduleGetArgs&gt;? Schedule { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,7 +311,7 @@ Valid values: <code>Size</code>, <code>LastModifiedDate</code>, <code>StorageCla
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.InventoryScheduleGetArgs.html">InventoryScheduleGetArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Aws.S3.Inputs.InventoryScheduleGetArgs.html">InventoryScheduleGetArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -352,7 +323,7 @@ Valid values: <code>Size</code>, <code>LastModifiedDate</code>, <code>StorageCla
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Inventory.cs/#L174" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Inventory.cs/#L172" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

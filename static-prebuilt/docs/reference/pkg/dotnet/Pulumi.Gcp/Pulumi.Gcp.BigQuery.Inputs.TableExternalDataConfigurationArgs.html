@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TableExternalDataConfigurationArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TableExternalDataConfigurationArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.html">Pulumi.Gcp.BigQuery.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L595">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs__ctor_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs__ctor" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.#ctor">TableExternalDataConfigurationArgs()</h4>
@@ -129,11 +100,15 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L566">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L19">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_Autodetect_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.Autodetect*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_Autodetect" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.Autodetect">Autodetect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><ul>
+<li>Let BigQuery try to autodetect the schema
+and format of the table.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,21 +124,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L569">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_Compression_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.Compression*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_Compression" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.Compression">Compression</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The compression type of the data source.
+Valid values are &quot;NONE&quot; or &quot;GZIP&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Compression { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Compression { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +152,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L572">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_CsvOptions_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.CsvOptions*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_CsvOptions" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.CsvOptions">CsvOptions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Additional properties to set if
+<code>source_format</code> is set to &quot;CSV&quot;. Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TableExternalDataConfigurationCsvOptionsArgs&gt; CsvOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TableExternalDataConfigurationCsvOptionsArgs&gt;? CsvOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +180,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.html">TableExternalDataConfigurationCsvOptionsArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationCsvOptionsArgs.html">TableExternalDataConfigurationCsvOptionsArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L575">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L41">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_GoogleSheetsOptions_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.GoogleSheetsOptions*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_GoogleSheetsOptions" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.GoogleSheetsOptions">GoogleSheetsOptions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Additional options if
+<code>source_format</code> is set to &quot;GOOGLE_SHEETS&quot;. Structure is
+documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;TableExternalDataConfigurationGoogleSheetsOptionsArgs&gt; GoogleSheetsOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;TableExternalDataConfigurationGoogleSheetsOptionsArgs&gt;? GoogleSheetsOptions { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +209,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs.html">TableExternalDataConfigurationGoogleSheetsOptionsArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs.html">TableExternalDataConfigurationGoogleSheetsOptionsArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L578">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_IgnoreUnknownValues_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.IgnoreUnknownValues*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_IgnoreUnknownValues" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.IgnoreUnknownValues">IgnoreUnknownValues</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if BigQuery should
+allow extra values that are not represented in the table schema.
+If true, the extra values are ignored. If false, records with
+extra columns are treated as bad records, and if there are too
+many bad records, an invalid error is returned in the job result.
+The default value is false.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; IgnoreUnknownValues { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? IgnoreUnknownValues { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,21 +241,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L581">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_MaxBadRecords_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.MaxBadRecords*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_MaxBadRecords" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.MaxBadRecords">MaxBadRecords</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of bad records that
+BigQuery can ignore when reading data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxBadRecords { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxBadRecords { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,17 +269,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L584">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_SourceFormat_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.SourceFormat*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_SourceFormat" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.SourceFormat">SourceFormat</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The data format. Supported values are:
+&quot;CSV&quot;, &quot;GOOGLE_SHEETS&quot;, &quot;NEWLINE_DELIMITED_JSON&quot;, &quot;AVRO&quot;, &quot;PARQUET&quot;,
+and &quot;DATSTORE_BACKUP&quot;. To use &quot;GOOGLE_SHEETS&quot;
+the <code>scopes</code> must include
+&quot;https://www.googleapis.com/auth/drive.readonly&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -305,17 +300,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L589">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_SourceUris_" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.SourceUris*"></a>
   <h4 id="Pulumi_Gcp_BigQuery_Inputs_TableExternalDataConfigurationArgs_SourceUris" data-uid="Pulumi.Gcp.BigQuery.Inputs.TableExternalDataConfigurationArgs.SourceUris">SourceUris</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of the fully-qualified URIs that point to
+your data in Google Cloud.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -331,7 +328,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -343,7 +340,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Bigquery/Table.cs/#L564" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/BigQuery/Inputs/TableExternalDataConfigurationArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

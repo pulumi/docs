@@ -1,6 +1,7 @@
 ---
-title: "gcp"
-block_external_search_index: true
+title: "GCP"
+title_tag: "Package GCP"
+meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
 menu:
     reference:
         parent: API Reference
@@ -11,78 +12,79 @@ menu:
 
 A Pulumi package for creating and managing Google Cloud Platform resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-gcp` repo](https://github.com/pulumi/pulumi-gcp/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-google-beta` repo](https://github.com/terraform-providers/terraform-provider-google-beta/issues).
-
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
-    <li><a href="accesscontextmanager/"><span class="symbol module"></span>accesscontextmanager</a></li>
-    <li><a href="appengine/"><span class="symbol module"></span>appengine</a></li>
-    <li><a href="bigquery/"><span class="symbol module"></span>bigquery</a></li>
-    <li><a href="bigtable/"><span class="symbol module"></span>bigtable</a></li>
-    <li><a href="billing/"><span class="symbol module"></span>billing</a></li>
-    <li><a href="binaryauthorization/"><span class="symbol module"></span>binaryauthorization</a></li>
-    <li><a href="cloudbuild/"><span class="symbol module"></span>cloudbuild</a></li>
-    <li><a href="cloudfunctions/"><span class="symbol module"></span>cloudfunctions</a></li>
-    <li><a href="cloudrun/"><span class="symbol module"></span>cloudrun</a></li>
-    <li><a href="cloudscheduler/"><span class="symbol module"></span>cloudscheduler</a></li>
-    <li><a href="cloudtasks/"><span class="symbol module"></span>cloudtasks</a></li>
-    <li><a href="composer/"><span class="symbol module"></span>composer</a></li>
-    <li><a href="compute/"><span class="symbol module"></span>compute</a></li>
-    <li><a href="container/"><span class="symbol module"></span>container</a></li>
-    <li><a href="containeranalysis/"><span class="symbol module"></span>containeranalysis</a></li>
-    <li><a href="dataflow/"><span class="symbol module"></span>dataflow</a></li>
-    <li><a href="datafusion/"><span class="symbol module"></span>datafusion</a></li>
-    <li><a href="dataproc/"><span class="symbol module"></span>dataproc</a></li>
-    <li><a href="datastore/"><span class="symbol module"></span>datastore</a></li>
-    <li><a href="deploymentmanager/"><span class="symbol module"></span>deploymentmanager</a></li>
-    <li><a href="diagflow/"><span class="symbol module"></span>diagflow</a></li>
-    <li><a href="dns/"><span class="symbol module"></span>dns</a></li>
-    <li><a href="endpoints/"><span class="symbol module"></span>endpoints</a></li>
-    <li><a href="filestore/"><span class="symbol module"></span>filestore</a></li>
-    <li><a href="firebase/"><span class="symbol module"></span>firebase</a></li>
-    <li><a href="firestore/"><span class="symbol module"></span>firestore</a></li>
-    <li><a href="folder/"><span class="symbol module"></span>folder</a></li>
-    <li><a href="gameservices/"><span class="symbol module"></span>gameservices</a></li>
-    <li><a href="healthcare/"><span class="symbol module"></span>healthcare</a></li>
-    <li><a href="iam/"><span class="symbol module"></span>iam</a></li>
-    <li><a href="iap/"><span class="symbol module"></span>iap</a></li>
-    <li><a href="identityplatform/"><span class="symbol module"></span>identityplatform</a></li>
-    <li><a href="kms/"><span class="symbol module"></span>kms</a></li>
-    <li><a href="logging/"><span class="symbol module"></span>logging</a></li>
-    <li><a href="ml/"><span class="symbol module"></span>ml</a></li>
-    <li><a href="monitoring/"><span class="symbol module"></span>monitoring</a></li>
-    <li><a href="organizations/"><span class="symbol module"></span>organizations</a></li>
-    <li><a href="projects/"><span class="symbol module"></span>projects</a></li>
-    <li><a href="pubsub/"><span class="symbol module"></span>pubsub</a></li>
-    <li><a href="redis/"><span class="symbol module"></span>redis</a></li>
-    <li><a href="resourcemanager/"><span class="symbol module"></span>resourcemanager</a></li>
-    <li><a href="runtimeconfig/"><span class="symbol module"></span>runtimeconfig</a></li>
-    <li><a href="secretmanager/"><span class="symbol module"></span>secretmanager</a></li>
-    <li><a href="securitycenter/"><span class="symbol module"></span>securitycenter</a></li>
-    <li><a href="serviceAccount/"><span class="symbol module"></span>serviceAccount</a></li>
-    <li><a href="servicenetworking/"><span class="symbol module"></span>servicenetworking</a></li>
-    <li><a href="serviceusage/"><span class="symbol module"></span>serviceusage</a></li>
-    <li><a href="sourcerepo/"><span class="symbol module"></span>sourcerepo</a></li>
-    <li><a href="spanner/"><span class="symbol module"></span>spanner</a></li>
-    <li><a href="sql/"><span class="symbol module"></span>sql</a></li>
-    <li><a href="storage/"><span class="symbol module"></span>storage</a></li>
-    <li><a href="tpu/"><span class="symbol module"></span>tpu</a></li>
-    <li><a href="vpcaccess/"><span class="symbol module"></span>vpcaccess</a></li>
+    <li><a href="accesscontextmanager/" title="accesscontextmanager"><span class="symbol module"></span>accesscontextmanager</a></li>
+    <li><a href="appengine/" title="appengine"><span class="symbol module"></span>appengine</a></li>
+    <li><a href="bigquery/" title="bigquery"><span class="symbol module"></span>bigquery</a></li>
+    <li><a href="bigtable/" title="bigtable"><span class="symbol module"></span>bigtable</a></li>
+    <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
+    <li><a href="binaryauthorization/" title="binaryauthorization"><span class="symbol module"></span>binaryauthorization</a></li>
+    <li><a href="cloudbuild/" title="cloudbuild"><span class="symbol module"></span>cloudbuild</a></li>
+    <li><a href="cloudfunctions/" title="cloudfunctions"><span class="symbol module"></span>cloudfunctions</a></li>
+    <li><a href="cloudrun/" title="cloudrun"><span class="symbol module"></span>cloudrun</a></li>
+    <li><a href="cloudscheduler/" title="cloudscheduler"><span class="symbol module"></span>cloudscheduler</a></li>
+    <li><a href="cloudtasks/" title="cloudtasks"><span class="symbol module"></span>cloudtasks</a></li>
+    <li><a href="composer/" title="composer"><span class="symbol module"></span>composer</a></li>
+    <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
+    <li><a href="container/" title="container"><span class="symbol module"></span>container</a></li>
+    <li><a href="containeranalysis/" title="containeranalysis"><span class="symbol module"></span>containeranalysis</a></li>
+    <li><a href="dataflow/" title="dataflow"><span class="symbol module"></span>dataflow</a></li>
+    <li><a href="datafusion/" title="datafusion"><span class="symbol module"></span>datafusion</a></li>
+    <li><a href="dataproc/" title="dataproc"><span class="symbol module"></span>dataproc</a></li>
+    <li><a href="datastore/" title="datastore"><span class="symbol module"></span>datastore</a></li>
+    <li><a href="deploymentmanager/" title="deploymentmanager"><span class="symbol module"></span>deploymentmanager</a></li>
+    <li><a href="diagflow/" title="diagflow"><span class="symbol module"></span>diagflow</a></li>
+    <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
+    <li><a href="endpoints/" title="endpoints"><span class="symbol module"></span>endpoints</a></li>
+    <li><a href="filestore/" title="filestore"><span class="symbol module"></span>filestore</a></li>
+    <li><a href="firebase/" title="firebase"><span class="symbol module"></span>firebase</a></li>
+    <li><a href="firestore/" title="firestore"><span class="symbol module"></span>firestore</a></li>
+    <li><a href="folder/" title="folder"><span class="symbol module"></span>folder</a></li>
+    <li><a href="gameservices/" title="gameservices"><span class="symbol module"></span>gameservices</a></li>
+    <li><a href="healthcare/" title="healthcare"><span class="symbol module"></span>healthcare</a></li>
+    <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
+    <li><a href="iap/" title="iap"><span class="symbol module"></span>iap</a></li>
+    <li><a href="identityplatform/" title="identityplatform"><span class="symbol module"></span>identityplatform</a></li>
+    <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
+    <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
+    <li><a href="logging/" title="logging"><span class="symbol module"></span>logging</a></li>
+    <li><a href="ml/" title="ml"><span class="symbol module"></span>ml</a></li>
+    <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
+    <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
+    <li><a href="oslogin/" title="oslogin"><span class="symbol module"></span>oslogin</a></li>
+    <li><a href="projects/" title="projects"><span class="symbol module"></span>projects</a></li>
+    <li><a href="pubsub/" title="pubsub"><span class="symbol module"></span>pubsub</a></li>
+    <li><a href="redis/" title="redis"><span class="symbol module"></span>redis</a></li>
+    <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
+    <li><a href="runtimeconfig/" title="runtimeconfig"><span class="symbol module"></span>runtimeconfig</a></li>
+    <li><a href="secretmanager/" title="secretmanager"><span class="symbol module"></span>secretmanager</a></li>
+    <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
+    <li><a href="serviceaccount/" title="serviceAccount"><span class="symbol module"></span>serviceAccount</a></li>
+    <li><a href="servicenetworking/" title="servicenetworking"><span class="symbol module"></span>servicenetworking</a></li>
+    <li><a href="serviceusage/" title="serviceusage"><span class="symbol module"></span>serviceusage</a></li>
+    <li><a href="sourcerepo/" title="sourcerepo"><span class="symbol module"></span>sourcerepo</a></li>
+    <li><a href="spanner/" title="spanner"><span class="symbol module"></span>spanner</a></li>
+    <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
+    <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
+    <li><a href="tpu/" title="tpu"><span class="symbol module"></span>tpu</a></li>
+    <li><a href="vpcaccess/" title="vpcaccess"><span class="symbol module"></span>vpcaccess</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
-	<dd>https://github.com/pulumi/pulumi-gcp</dd>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dt>Version</dt>
+	<dd>3.2.0</dd>
 </dl>
 

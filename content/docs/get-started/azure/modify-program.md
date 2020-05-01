@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/azure/modify-program/"]
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's enforce HTTPS-only communication for our storage account. This means, when making requests to this storage account only HTTPS traffic is allowed.
+Now that we have an instance of our Pulumi program deployed, let's add a tag to our storage account.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
@@ -33,7 +33,9 @@ const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
     accountTier: "Standard",
     accountReplicationType: "LRS",
-    enableHttpsTrafficOnly: true,
+    tags: {
+        "Environment": "Dev",
+    },
 });
 
 // Export the connection string for the storage account
@@ -55,7 +57,9 @@ const account = new azure.storage.Account("storage", {
     resourceGroupName: resourceGroup.name,
     accountTier: "Standard",
     accountReplicationType: "LRS",
-    enableHttpsTrafficOnly: true,
+    tags: {
+        "Environment": "Dev",
+    },
 });
 
 // Export the connection string for the storage account
@@ -77,7 +81,7 @@ account = storage.Account("storage",
     resource_group_name=resource_group.name,
     account_tier='Standard',
     account_replication_type='LRS',
-    enable_https_traffic_only=True)
+    tags={"Environment": "Dev"})
 
 # Export the connection string for the storage account
 pulumi.export('connection_string', account.primary_connection_string)
@@ -90,36 +94,38 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+    "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an Azure Resource Group
-		resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("WestUS"),
-		})
-		if err != nil {
-			return err
-		}
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Create an Azure Resource Group
+        resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
+            Location: pulumi.String("WestUS"),
+        })
+        if err != nil {
+            return err
+        }
 
-		// Create an Azure resource (Storage Account)
-		account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
-			ResourceGroupName:      resourceGroup.Name,
-			AccountTier:            pulumi.String("Standard"),
-			AccountReplicationType: pulumi.String("LRS"),
-			EnableHttpsTrafficOnly: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
+        // Create an Azure resource (Storage Account)
+        account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
+            ResourceGroupName:      resourceGroup.Name,
+            AccountTier:            pulumi.String("Standard"),
+            AccountReplicationType: pulumi.String("LRS"),
+            Tags: pulumi.StringMap{
+                "Environment": pulumi.String("Dev"),
+            },
+        })
+        if err != nil {
+            return err
+        }
 
-		// Export the connection string for the storage account
-		ctx.Export("connectionString", account.PrimaryConnectionString)
-		return nil
-	})
+        // Export the connection string for the storage account
+        ctx.Export("connectionString", account.PrimaryConnectionString)
+        return nil
+    })
 }
 ```
 
@@ -144,7 +150,10 @@ class MyStack : Stack
             ResourceGroupName = resourceGroup.Name,
             AccountReplicationType = "LRS",
             AccountTier = "Standard",
-            EnableHttpsTrafficOnly = true
+            Tags =
+            {
+                { "Environment", "Dev" }
+            }
         });
 
         // Export the connection string for the storage account

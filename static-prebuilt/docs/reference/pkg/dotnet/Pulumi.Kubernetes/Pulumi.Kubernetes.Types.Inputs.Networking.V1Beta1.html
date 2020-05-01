@@ -77,7 +77,7 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressPathArgs.html">HTTPIngressPathArgs</a></h4>
-      <section><p>HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are
+      <section><p>HTTPIngressPath associates a path with a backend. Incoming urls matching the path are
 forwarded to the backend.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.HTTPIngressRuleValueArgs.html">HTTPIngressRuleValueArgs</a></h4>
@@ -93,6 +93,19 @@ urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressBackendArgs.html">IngressBackendArgs</a></h4>
       <section><p>IngressBackend describes all endpoints for a given service and port.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressClassArgs.html">IngressClassArgs</a></h4>
+      <section><p>IngressClass represents the class of the Ingress, referenced by the Ingress Spec. The
+<code>ingressclass.kubernetes.io/is-default-class</code> annotation can be used to indicate that an
+IngressClass should be considered default. When a single IngressClass resource has this
+annotation set to true, new Ingress resources without a class specified will be assigned
+this default class.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressClassListArgs.html">IngressClassListArgs</a></h4>
+      <section><p>IngressClassList is a collection of IngressClasses.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressClassSpecArgs.html">IngressClassSpecArgs</a></h4>
+      <section><p>IngressClassSpec provides information about the class of an Ingress.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Networking.V1Beta1.IngressListArgs.html">IngressListArgs</a></h4>
       <section><p>IngressList is a collection of Ingress.</p>

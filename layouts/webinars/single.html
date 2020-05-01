@@ -20,16 +20,18 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="px-4">
-        <div class="container mx-auto max-w-6xl py-16 md:flex">
+    <section id="webinarLandingPage" class="px-4">
+        <div class="container mx-auto max-w-6xl pt-16 pb-8 md:flex">
             {{ if .Params.gated }}
+                {{ $buttonText := (cond (eq .Params.pre_recorded true) "WATCH NOW" "REGISTER NOW") }}
                 <div class="md:w-1/2 md:mx-8">
                     {{ with .Params.main }}
                         <h2>{{ .title }}</h2>
-                        <p><a href="#webinarRegistrationForm" class="btn md:hidden">REGISTER NOW</a></p>
-                        <time class="uppercase text-orange text-sm font-bold" datetime="{{ .datetime }}">
-                            {{ .datetime }}
+                        <p><a href="#webinarRegistrationForm" class="btn md:hidden">{{ $buttonText }}</a></p>
+                        <time class="webinar-datetime uppercase text-orange text-sm font-bold">
+                            <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
                         </time>
+                        <p class="uppercase text-orange text-sm font-bold mt-2">DURATION: {{ .duration }}</p>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
                         </div>
@@ -51,18 +53,31 @@
                     {{ end }}
                 </div>
                 <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
-                    {{ with .Params.form }}
-                        <h3 class="text-orange">Register Here</h3>
+                    {{ if .Params.unlisted }}
+                        <h3 class="text-orange">Recording Coming Soon!</h3>
+                        <p>
+                            This live webinar is no longer available. The recording will be posted to this page when it is available.
+                        </p>
+                    {{ else }}
+                        {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
+                        {{ with .Params.form }}
+                            <h3 class="text-orange">{{ $formHeader }}</h3>
 
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
+                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
+                        {{ end }}
                     {{ end }}
                 </div>
             {{ else }}
                 <div class="md:mx-auto">
+                    {{ $topLevelContext := . }}
                     {{ with .Params.main }}
                         <!-- Rendered with Hugo's YouTube shortcode: https://gohugo.io/content-management/shortcodes/#youtube -->
                         <div class="rounded shadow-md mb-10" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
                             <iframe src="{{ .youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="my-10 flex">
+                            <a href="#gettingStartedList" class="btn">GET STARTED WITH PULUMI</a>
+                            <a href="{{ relref $topLevelContext "/webinars" }}" class="ml-3 btn btn-orange">MORE WEBINARS</a>
                         </div>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
@@ -85,6 +100,25 @@
                     {{ end }}
                 </div>
             {{ end }}
+        </div>
+    </section>
+
+    <section id="gettingStartedList" class="px-4">
+        <div class="container mx-auto max-w-6xl pb-16">
+            {{ if .Params.gated }}
+                <div class="md:mx-8">
+            {{ else }}
+                <div>
+            {{ end }}
+                <h3 class="text-orange">Get Started with Pulumi:</h3>
+                <ul class="text-gray-600">
+                    <li><strong><a href="{{ relref . "/docs/get-started/aws" }}">Create an AWS S3 Bucket</a></strong> with a KMS key that enables server-side encryption on the S3 bucket using the KMS key.</li>
+                    <li><strong><a href="{{ relref . "/docs/get-started/azure" }}">Create an Azure Resource Group and Storage Account</a></strong>, then export the storage account’s connection string.</li>
+                    <li><strong><a href="{{ relref . "/docs/get-started/gcp" }}">Create a Google Cloud Storage Bucket</a></strong> and apply labels to that bucket.</li>
+                    <li><strong><a href="{{ relref . "/docs/get-started/kubernetes" }}">Create a Kubernetes NGINX deployment</a></strong> and add a config value for MiniKube deployments.</li>
+                    <li><strong><a href="{{ relref . "/docs/tutorials" }}">More topics and tutorials.</a></strong></li>
+                </ul>
+            </div>
         </div>
     </section>
 

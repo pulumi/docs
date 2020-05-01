@@ -72,9 +72,6 @@
   <h1 id="Pulumi_OpenStack_Database_Instance" data-uid="Pulumi.OpenStack.Database.Instance" class="text-break">Class Instance
   </h1>
   <div class="markdown level0 summary"><p>Manages a V1 DB instance resource within OpenStack.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/db_instance_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/db_instance_v1.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +88,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L88">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance__ctor_" data-uid="Pulumi.OpenStack.Database.Instance.#ctor*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance__ctor_System_String_Pulumi_OpenStack_Database_InstanceArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Database.Instance.#ctor(System.String,Pulumi.OpenStack.Database.InstanceArgs,System.Nullable{CustomResourceOptions})">Instance(String, InstanceArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -135,7 +132,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_ConfigurationId_" data-uid="Pulumi.OpenStack.Database.Instance.ConfigurationId*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_ConfigurationId" data-uid="Pulumi.OpenStack.Database.Instance.ConfigurationId">ConfigurationId</h4>
@@ -163,7 +160,7 @@ will be rebooted when configuration is detached.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Databases_" data-uid="Pulumi.OpenStack.Database.Instance.Databases*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Databases" data-uid="Pulumi.OpenStack.Database.Instance.Databases">Databases</h4>
@@ -173,7 +170,7 @@ object structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceDatabases&gt;&gt; Databases { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceDatabase&gt;&gt; Databases { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +182,13 @@ object structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.InstanceDatabases.html">InstanceDatabases</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.InstanceDatabase.html">InstanceDatabase</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L36">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Datastore_" data-uid="Pulumi.OpenStack.Database.Instance.Datastore*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Datastore" data-uid="Pulumi.OpenStack.Database.Instance.Datastore">Datastore</h4>
@@ -219,7 +216,7 @@ object structure is documented below. Changing this creates a new instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L43">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_FlavorId_" data-uid="Pulumi.OpenStack.Database.Instance.FlavorId*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_FlavorId" data-uid="Pulumi.OpenStack.Database.Instance.FlavorId">FlavorId</h4>
@@ -247,11 +244,12 @@ Changing this creates new instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L49">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Name_" data-uid="Pulumi.OpenStack.Database.Instance.Name*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Name" data-uid="Pulumi.OpenStack.Database.Instance.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A unique name for the resource.</p>
+  <div class="markdown level1 summary"><p>Database to be created on new instance. Changing this creates a
+new instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -274,7 +272,7 @@ Changing this creates new instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L57">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Networks_" data-uid="Pulumi.OpenStack.Database.Instance.Networks*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Networks" data-uid="Pulumi.OpenStack.Database.Instance.Networks">Networks</h4>
@@ -285,7 +283,7 @@ creates a new instance.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceNetworks&gt;&gt; Networks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceNetwork&gt;&gt; Networks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,13 +295,13 @@ creates a new instance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.InstanceNetworks.html">InstanceNetworks</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.InstanceNetwork.html">InstanceNetwork</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Region_" data-uid="Pulumi.OpenStack.Database.Instance.Region*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Region" data-uid="Pulumi.OpenStack.Database.Instance.Region">Region</h4>
@@ -331,7 +329,7 @@ creates a new instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L70">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Size_" data-uid="Pulumi.OpenStack.Database.Instance.Size*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Size" data-uid="Pulumi.OpenStack.Database.Instance.Size">Size</h4>
@@ -358,7 +356,7 @@ creates a new instance.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L77">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Users_" data-uid="Pulumi.OpenStack.Database.Instance.Users*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Users" data-uid="Pulumi.OpenStack.Database.Instance.Users">Users</h4>
@@ -368,7 +366,7 @@ object structure is documented below.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceUsers&gt;&gt; Users { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;InstanceUser&gt;&gt; Users { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,7 +378,7 @@ object structure is documented below.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.InstanceUsers.html">InstanceUsers</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Database.Outputs.InstanceUser.html">InstanceUser</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -388,7 +386,7 @@ object structure is documented below.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L118">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L118">View Source</a>
   </span>
   <a id="Pulumi_OpenStack_Database_Instance_Get_" data-uid="Pulumi.OpenStack.Database.Instance.Get*"></a>
   <h4 id="Pulumi_OpenStack_Database_Instance_Get_System_String_Input_System_String__Pulumi_OpenStack_Database_InstanceState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Database.Instance.Get(System.String,Input{System.String},Pulumi.OpenStack.Database.InstanceState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, InstanceState, Nullable&lt;CustomResourceOptions&gt;)</h4>
@@ -458,7 +456,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Database/Instance.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/e99ffdf446e65e7c12ea7b590a79bba86ac736b1/sdk/dotnet/Database/Instance.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

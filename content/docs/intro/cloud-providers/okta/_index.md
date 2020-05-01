@@ -12,7 +12,7 @@ menu:
 
 The Okta provider for Pulumi can be used to provision any of the resources available in [Okta](https://www.okta.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/okta" >}}) for complete details of the available Okta provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/okta" >}}) for complete details of the available Okta provider APIs.
 
 ## Setup
 
@@ -68,7 +68,7 @@ last_name="user",
 
 ```go
 import (
-  user "github.com/pulumi/pulumi-okta/sdk/go/okta/user"
+  user "github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
 )
 
 user, _ := user.User(ctx, "example-user", &user.UserArgs{

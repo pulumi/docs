@@ -71,50 +71,24 @@
   
   <h1 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding" class="text-break">Class SubnetworkIAMBinding
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Three different resources help you manage your IAM policy for Compute Engine Subnetwork. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.compute.SubnetworkIAMPolicy</code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
+<li><code>gcp.compute.SubnetworkIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
+<li><code>gcp.compute.SubnetworkIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.compute.SubnetworkIAMBinding</code> and <code>gcp.compute.SubnetworkIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.compute.SubnetworkIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.compute.SubnetworkIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">SubnetworkIAMBinding</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">SubnetworkIAMBinding</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +99,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding__ctor_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding__ctor_System_String_Pulumi_Gcp_Compute_SubnetworkIAMBindingArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.#ctor(System.String,Pulumi.Gcp.Compute.SubnetworkIAMBindingArgs,Pulumi.CustomResourceOptions)">SubnetworkIAMBinding(String, SubnetworkIAMBindingArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding__ctor_System_String_Pulumi_Gcp_Compute_SubnetworkIAMBindingArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.#ctor(System.String,Pulumi.Gcp.Compute.SubnetworkIAMBindingArgs,System.Nullable{CustomResourceOptions})">SubnetworkIAMBinding(String, SubnetworkIAMBindingArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a SubnetworkIAMBinding resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SubnetworkIAMBinding(string name, SubnetworkIAMBindingArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SubnetworkIAMBinding(string name, SubnetworkIAMBindingArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +133,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,11 +143,13 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L14">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Condition_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Condition*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Condition" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Condition">Condition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>) An <a href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -189,13 +165,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.SubnetworkIAMBindingCondition.html">SubnetworkIAMBindingCondition</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Compute.Outputs.SubnetworkIAMBindingCondition.html">SubnetworkIAMBindingCondition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Etag_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Etag*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Etag" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Etag">Etag</h4>
@@ -216,13 +192,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Members_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Members*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Members" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Members">Members</h4>
@@ -242,13 +218,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L30">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L45">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Project_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Project" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Project">Project</h4>
@@ -270,13 +246,13 @@ If it is not provided, the project will be parsed from the identifier of the par
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Region_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Region*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Region" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Region">Region</h4>
@@ -300,13 +276,13 @@ region is specified, it is taken from the provider configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L62">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Role_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Role*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Role" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Role">Role</h4>
@@ -329,13 +305,13 @@ region is specified, it is taken from the provider configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Subnetwork_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Subnetwork*"></a>
   <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Subnetwork" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Subnetwork">Subnetwork</h4>
@@ -356,7 +332,7 @@ region is specified, it is taken from the provider configuration.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -364,17 +340,17 @@ region is specified, it is taken from the provider configuration.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L94">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L109">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Get_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_SubnetworkIAMBindingState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.SubnetworkIAMBindingState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, SubnetworkIAMBindingState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_SubnetworkIAMBinding_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_SubnetworkIAMBindingState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.SubnetworkIAMBinding.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.SubnetworkIAMBindingState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SubnetworkIAMBindingState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing SubnetworkIAMBinding resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SubnetworkIAMBinding Get(string name, Input&lt;string&gt; id, SubnetworkIAMBindingState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SubnetworkIAMBinding Get(string name, Input&lt;string&gt; id, SubnetworkIAMBindingState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,7 +369,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -405,7 +381,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -434,7 +410,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/SubnetworkIAMBinding.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

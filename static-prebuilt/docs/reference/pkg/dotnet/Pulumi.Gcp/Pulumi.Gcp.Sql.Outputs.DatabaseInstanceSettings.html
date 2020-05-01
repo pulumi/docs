@@ -78,47 +78,25 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DatabaseInstanceSettings</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Sql.Outputs.html">Pulumi.Gcp.Sql.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DatabaseInstanceSettings</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DatabaseInstanceSettings : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L959">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L20">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_ActivationPolicy" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.ActivationPolicy">ActivationPolicy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This specifies when the instance should be
+active. Can be either <code>ALWAYS</code>, <code>NEVER</code> or <code>ON_DEMAND</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ActivationPolicy</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ActivationPolicy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,16 +108,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L960">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_AuthorizedGaeApplications" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.AuthorizedGaeApplications">AuthorizedGaeApplications</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+A list of Google App Engine (GAE) project names that are allowed to access this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -155,20 +137,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L961">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_AvailabilityType" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.AvailabilityType">AvailabilityType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This specifies whether a PostgreSQL instance
+should be set up for high availability (<code>REGIONAL</code>) or single zone (<code>ZONAL</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string AvailabilityType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? AvailabilityType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,13 +164,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L962">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L33">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_BackupConfiguration" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.BackupConfiguration">BackupConfiguration</h4>
   <div class="markdown level1 summary"></div>
@@ -211,14 +195,19 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L963">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L41">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_CrashSafeReplication" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.CrashSafeReplication">CrashSafeReplication</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Specific to read instances, indicates
+when crash-safe replication flags are enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool CrashSafeReplication</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool? CrashSafeReplication</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,20 +219,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L964">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L42">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_DatabaseFlags" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.DatabaseFlags">DatabaseFlags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;DatabaseInstanceSettingsDatabaseFlags&gt; DatabaseFlags</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;DatabaseInstanceSettingsDatabaseFlag&gt; DatabaseFlags</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,16 +244,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsDatabaseFlags.html">DatabaseInstanceSettingsDatabaseFlags</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsDatabaseFlag.html">DatabaseInstanceSettingsDatabaseFlag</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L965">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L46">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_DiskAutoresize" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.DiskAutoresize">DiskAutoresize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Configuration to increase storage size automatically.  Note that future <code>pulumi apply</code> calls will attempt to resize the disk to the value specified in <code>disk_size</code> - if this is set, do not set <code>disk_size</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,14 +276,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L966">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L50">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_DiskSize" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.DiskSize">DiskSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int DiskSize</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? DiskSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,20 +296,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L967">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L54">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_DiskType" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.DiskType">DiskType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The type of data disk: PD_SSD or PD_HDD.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string DiskType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? DiskType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,13 +322,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L968">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_IpConfiguration" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.IpConfiguration">IpConfiguration</h4>
   <div class="markdown level1 summary"></div>
@@ -361,7 +353,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L969">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_LocationPreference" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.LocationPreference">LocationPreference</h4>
   <div class="markdown level1 summary"></div>
@@ -386,7 +378,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L970">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L57">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_MaintenanceWindow" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.MaintenanceWindow">MaintenanceWindow</h4>
   <div class="markdown level1 summary"></div>
@@ -411,14 +403,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L971">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L61">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_PricingPlan" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.PricingPlan">PricingPlan</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pricing plan for this instance, can only be <code>PER_USE</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PricingPlan</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PricingPlan</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -430,20 +423,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L972">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L68">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_ReplicationType" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.ReplicationType">ReplicationType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Replication type for this instance, can be one of <code>ASYNCHRONOUS</code> or <code>SYNCHRONOUS</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ReplicationType</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ReplicationType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -455,16 +452,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L973">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L74">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_Tier" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.Tier">Tier</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The machine type to use. See <a href="https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers">tiers</a>
+for more details and supported versions. Postgres supports only shared-core machine types such as <code>db-f1-micro</code>,
+and custom machine types such as <code>db-custom-2-13312</code>. See the <a href="https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create">Custom Machine Type Documentation</a> to learn about specifying custom machine types.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -486,14 +486,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L974">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L78">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_UserLabels" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.UserLabels">UserLabels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A set of key/value user label pairs to assign to the instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; UserLabels</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt;? UserLabels</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -505,20 +506,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L975">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettings_Version" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettings.Version">Version</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int Version</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int? Version</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,7 +531,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -542,7 +543,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L956" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettings.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

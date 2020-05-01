@@ -82,40 +82,16 @@ served in v1.20.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterRoleBinding</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.html">Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
   <h5 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_ClusterRoleBinding_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterRoleBinding</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterRoleBinding : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30504">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30929">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_ClusterRoleBinding_ApiVersion" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.ClusterRoleBinding.ApiVersion">ApiVersion</h4>
   <div class="markdown level1 summary"><p>APIVersion defines the versioned schema of this representation of an object. Servers
@@ -144,7 +120,7 @@ unrecognized values. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30512">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30937">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_ClusterRoleBinding_Kind" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.ClusterRoleBinding.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>Kind is a string value representing the REST resource this object represents. Servers
@@ -173,7 +149,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30517">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30942">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_ClusterRoleBinding_Metadata" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.ClusterRoleBinding.Metadata">Metadata</h4>
   <div class="markdown level1 summary"><p>Standard object's metadata.</p>
@@ -199,7 +175,7 @@ CamelCase. More info:
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30523">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30948">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_ClusterRoleBinding_RoleRef" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.ClusterRoleBinding.RoleRef">RoleRef</h4>
   <div class="markdown level1 summary"><p>RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot
@@ -226,7 +202,7 @@ be resolved, the Authorizer must return an error.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30528">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30953">View Source</a>
   </span>
   <h4 id="Pulumi_Kubernetes_Types_Outputs_Rbac_V1Alpha1_ClusterRoleBinding_Subjects" data-uid="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.ClusterRoleBinding.Subjects">Subjects</h4>
   <div class="markdown level1 summary"><p>Subjects holds references to the objects the role applies to.</p>
@@ -246,7 +222,7 @@ be resolved, the Authorizer must return an error.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.Subject.html">Subject</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Rbac.V1Alpha1.Subject.html">Subject</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -258,7 +234,7 @@ be resolved, the Authorizer must return an error.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L30495" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/dotnet/Types/Output.cs/#L30920" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -71,50 +71,20 @@
   
   <h1 id="Pulumi_Gcp_Healthcare_FhirStore" data-uid="Pulumi.Gcp.Healthcare.FhirStore" class="text-break">Class FhirStore
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A FhirStore is a datastore inside a Healthcare dataset that conforms to the FHIR (<a href="https://www.hl7.org/fhir/STU3/">https://www.hl7.org/fhir/STU3/</a>)
+standard for Healthcare information exchange</p>
+<p>To get more information about FhirStore, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/healthcare/docs/how-tos/fhir">Creating a FHIR store</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">FhirStore</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">FhirStore</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Healthcare.html">Pulumi.Gcp.Healthcare</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +95,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L109">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L114">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore__ctor_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Healthcare_FhirStore__ctor_System_String_Pulumi_Gcp_Healthcare_FhirStoreArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.#ctor(System.String,Pulumi.Gcp.Healthcare.FhirStoreArgs,Pulumi.CustomResourceOptions)">FhirStore(String, FhirStoreArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Healthcare_FhirStore__ctor_System_String_Pulumi_Gcp_Healthcare_FhirStoreArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Healthcare.FhirStore.#ctor(System.String,Pulumi.Gcp.Healthcare.FhirStoreArgs,System.Nullable{CustomResourceOptions})">FhirStore(String, FhirStoreArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a FhirStore resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FhirStore(string name, FhirStoreArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FhirStore(string name, FhirStoreArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +129,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,7 +139,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_Dataset_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Dataset*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_Dataset" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Dataset">Dataset</h4>
@@ -191,22 +161,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L29">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_DisableReferentialIntegrity_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.DisableReferentialIntegrity*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_DisableReferentialIntegrity" data-uid="Pulumi.Gcp.Healthcare.FhirStore.DisableReferentialIntegrity">DisableReferentialIntegrity</h4>
-  <div class="markdown level1 summary"><p>Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
-creation. The default value is false, meaning that the API will enforce referential integrity and fail the
-requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
-will skip referential integrity check. Consequently, operations that rely on references, such as
-Patient.get$everything, will not return all the results if broken references exist. ** Changing this
-property may recreate the FHIR store (removing all data) **</p>
+  <div class="markdown level1 summary"><p>Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The
+default value is false, meaning that the API will enforce referential integrity and fail the requests that will result
+in inconsistent state in the FHIR store. When this field is set to true, the API will skip referential integrity check.
+Consequently, operations that rely on references, such as Patient.get$everything, will not return all the results if
+broken references exist. ** Changing this property may recreate the FHIR store (removing all data) **</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -223,22 +192,21 @@ property may recreate the FHIR store (removing all data) **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L40">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_DisableResourceVersioning_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.DisableResourceVersioning*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_DisableResourceVersioning" data-uid="Pulumi.Gcp.Healthcare.FhirStore.DisableResourceVersioning">DisableResourceVersioning</h4>
-  <div class="markdown level1 summary"><p>Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
-of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
-versions to be recorded automatically. The historical versions can be fetched through the history APIs, but
-cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
-attempts to read the historical versions. ** Changing this property may recreate the FHIR store (removing
-all data) **</p>
+  <div class="markdown level1 summary"><p>Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR
+store. If set to false, which is the default behavior, all write operations will cause historical versions to be
+recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set
+to true, no historical versions will be kept. The server will send back errors for attempts to read the historical
+versions. ** Changing this property may recreate the FHIR store (removing all data) **</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -255,22 +223,21 @@ all data) **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L51">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_EnableHistoryImport_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.EnableHistoryImport*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_EnableHistoryImport" data-uid="Pulumi.Gcp.Healthcare.FhirStore.EnableHistoryImport">EnableHistoryImport</h4>
-  <div class="markdown level1 summary"><p>Whether to allow the bulk import API to accept history bundles and directly insert historical resource
-versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
-occurred in the past, which clients may not want to allow. If set to false, history bundles within an import
-will fail with an error. ** Changing this property may recreate the FHIR store (removing all data) ** **
-This property can be changed manually in the Google Cloud Healthcare admin console without recreating the
-FHIR store **</p>
+  <div class="markdown level1 summary"><p>Whether to allow the bulk import API to accept history bundles and directly insert historical resource versions into the
+FHIR store. Importing resource histories creates resource interactions that appear to have occurred in the past, which
+clients may not want to allow. If set to false, history bundles within an import will fail with an error. ** Changing
+this property may recreate the FHIR store (removing all data) ** ** This property can be changed manually in the Google
+Cloud Healthcare admin console without recreating the FHIR store **</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -287,22 +254,21 @@ FHIR store **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_EnableUpdateCreate_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.EnableUpdateCreate*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_EnableUpdateCreate" data-uid="Pulumi.Gcp.Healthcare.FhirStore.EnableUpdateCreate">EnableUpdateCreate</h4>
-  <div class="markdown level1 summary"><p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
-operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
-the Create operation and attempts to Update a non-existent resource will return errors. Please treat the
-audit logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as
-patient identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud
-Pub/Sub notifications.</p>
+  <div class="markdown level1 summary"><p>Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update operation to
+create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and
+attempts to Update a non-existent resource will return errors. Please treat the audit logs with appropriate levels of
+care if client-specified resource IDs contain sensitive data such as patient identifiers, those IDs will be part of the
+FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -319,27 +285,27 @@ Pub/Sub notifications.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L79">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_Labels_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Labels*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_Labels" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Labels">Labels</h4>
-  <div class="markdown level1 summary"><p>User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters
-long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters
-long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
-[\p{Ll}\p{Lo}\p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object
-containing a list of &quot;key&quot;: value pairs. Example: { &quot;name&quot;: &quot;wrench&quot;, &quot;mass&quot;: &quot;1.3kg&quot;, &quot;count&quot;: &quot;3&quot; }.</p>
+  <div class="markdown level1 summary"><p>User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}<em>-]{0,62} Label values are optional, must be between 1 and 63 characters long, have a
+UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+[\p{Ll}\p{Lo}\p{N}</em>-]{0,63} No more than 64 labels can be associated with a given store. An object containing a list of
+&quot;key&quot;: value pairs. Example: { &quot;name&quot;: &quot;wrench&quot;, &quot;mass&quot;: &quot;1.3kg&quot;, &quot;count&quot;: &quot;3&quot; }.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;&gt; Labels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; Labels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,18 +317,17 @@ containing a list of &quot;key&quot;: value pairs. Example: { &quot;name&quot;: 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L85">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_Name_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Name*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_Name" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all
-data) **</p>
+  <div class="markdown level1 summary"><p>The resource name for the FhirStore. ** Changing this property may recreate the FHIR store (removing all data) **</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -379,13 +344,13 @@ data) **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L91">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_NotificationConfig_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.NotificationConfig*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_NotificationConfig" data-uid="Pulumi.Gcp.Healthcare.FhirStore.NotificationConfig">NotificationConfig</h4>
@@ -406,13 +371,13 @@ data) **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Healthcare.Outputs.FhirStoreNotificationConfig.html">FhirStoreNotificationConfig</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Gcp.Healthcare.Outputs.FhirStoreNotificationConfig.html">FhirStoreNotificationConfig</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L92">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L97">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_SelfLink_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_SelfLink" data-uid="Pulumi.Gcp.Healthcare.FhirStore.SelfLink">SelfLink</h4>
@@ -433,13 +398,13 @@ data) **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L98">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L103">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_Version_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Version*"></a>
   <h4 id="Pulumi_Gcp_Healthcare_FhirStore_Version" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Version">Version</h4>
@@ -448,7 +413,7 @@ data) **</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Version { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Version { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +425,7 @@ data) **</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -468,17 +433,17 @@ data) **</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L139">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L144">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Healthcare_FhirStore_Get_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Get*"></a>
-  <h4 id="Pulumi_Gcp_Healthcare_FhirStore_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Healthcare_FhirStoreState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Healthcare.FhirStoreState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, FhirStoreState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Healthcare_FhirStore_Get_System_String_Input_System_String__Pulumi_Gcp_Healthcare_FhirStoreState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Healthcare.FhirStore.Get(System.String,Input{System.String},Pulumi.Gcp.Healthcare.FhirStoreState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, FhirStoreState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing FhirStore resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FhirStore Get(string name, Input&lt;string&gt; id, FhirStoreState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static FhirStore Get(string name, Input&lt;string&gt; id, FhirStoreState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,7 +462,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -509,7 +474,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -538,7 +503,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Healthcare/FhirStore.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Healthcare/FhirStore.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

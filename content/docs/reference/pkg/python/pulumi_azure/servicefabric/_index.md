@@ -13,13 +13,10 @@ notitle: true
 <a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
-<span class="target" id="module-pulumi_azure.servicefabric"></span><dl class="class">
+<span class="target" id="module-pulumi_azure.servicefabric"></span><dl class="py class">
 <dt id="pulumi_azure.servicefabric.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicefabric.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version=None</em>, <em class="sig-param">diagnostics_config=None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicefabric.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_on_features</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_active_directory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_common_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_common_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_thumbprints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_code_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diagnostics_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fabric_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reliability_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_proxy_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upgrade_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_image</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Service Fabric Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -123,15 +120,15 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.add_on_features">
-<code class="sig-name descname">add_on_features</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.add_on_features" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_on_features</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.add_on_features" title="Permalink to this definition">¶</a></dt>
 <dd><p>A List of one or more features which should be enabled, such as <code class="docutils literal notranslate"><span class="pre">DnsService</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.azure_active_directory">
-<code class="sig-name descname">azure_active_directory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.azure_active_directory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">azure_active_directory</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.azure_active_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory Client ID which should be used for the Client Application.</p></li>
@@ -140,9 +137,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.certificate">
-<code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">certificate</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint of the Certificate.</p></li>
@@ -151,9 +148,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.certificate_common_names">
-<code class="sig-name descname">certificate_common_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate_common_names" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">certificate_common_names</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate_common_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">common_names</span></code> block as defined below.</p>
@@ -166,9 +163,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.client_certificate_common_names">
-<code class="sig-name descname">client_certificate_common_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.client_certificate_common_names" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_certificate_common_names</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.client_certificate_common_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">client_certificate_common_name</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -177,9 +174,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.client_certificate_thumbprints">
-<code class="sig-name descname">client_certificate_thumbprints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.client_certificate_thumbprints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">client_certificate_thumbprints</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.client_certificate_thumbprints" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or two <code class="docutils literal notranslate"><span class="pre">client_certificate_thumbprint</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
@@ -187,21 +184,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.cluster_code_version">
-<code class="sig-name descname">cluster_code_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.cluster_code_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_code_version</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.cluster_code_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Required if Upgrade Mode set to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, Specifies the Version of the Cluster Code of the cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.cluster_endpoint">
-<code class="sig-name descname">cluster_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.cluster_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cluster_endpoint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.cluster_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Cluster Endpoint for this Service Fabric Cluster.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.diagnostics_config">
-<code class="sig-name descname">diagnostics_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.diagnostics_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">diagnostics_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.diagnostics_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">diagnostics_config</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Blob Endpoint of the Storage Account.</p></li>
@@ -212,9 +209,9 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.fabric_settings">
-<code class="sig-name descname">fabric_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.fabric_settings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fabric_settings</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.fabric_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">fabric_settings</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Fabric Setting, such as <code class="docutils literal notranslate"><span class="pre">Security</span></code> or <code class="docutils literal notranslate"><span class="pre">Federation</span></code>.</p></li>
@@ -222,27 +219,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.location">
-<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">location</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.management_endpoint">
-<code class="sig-name descname">management_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.management_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">management_endpoint</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.management_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Management Endpoint of the cluster such as <code class="docutils literal notranslate"><span class="pre">http://example.com</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.name">
-<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.node_types">
-<code class="sig-name descname">node_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.node_types" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">node_types</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.node_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">node_type</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">application_ports</span></code> block as defined below.</p>
@@ -269,21 +266,21 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.reliability_level">
-<code class="sig-name descname">reliability_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.reliability_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reliability_level</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.reliability_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Reliability Level of the Cluster. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>, <code class="docutils literal notranslate"><span class="pre">Silver</span></code>, <code class="docutils literal notranslate"><span class="pre">Gold</span></code> and <code class="docutils literal notranslate"><span class="pre">Platinum</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.resource_group_name">
-<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resource_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.reverse_proxy_certificate">
-<code class="sig-name descname">reverse_proxy_certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.reverse_proxy_certificate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reverse_proxy_certificate</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.reverse_proxy_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">reverse_proxy_certificate</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint of the Certificate.</p></li>
@@ -292,27 +289,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.upgrade_mode">
-<code class="sig-name descname">upgrade_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.upgrade_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">upgrade_mode</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.upgrade_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Upgrade Mode of the cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.vm_image">
-<code class="sig-name descname">vm_image</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.vm_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">vm_image</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.vm_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the Image expected for the Service Fabric Cluster, such as <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.servicefabric.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version=None</em>, <em class="sig-param">cluster_endpoint=None</em>, <em class="sig-param">diagnostics_config=None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_on_features</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_active_directory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_common_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_common_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_certificate_thumbprints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_code_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diagnostics_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fabric_settings</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_endpoint</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reliability_level</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_proxy_certificate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">upgrade_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vm_image</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -422,9 +419,9 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.servicefabric.Cluster.translate_output_property">
-<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <dl class="field-list simple">
@@ -440,9 +437,9 @@ into a format of their choosing before writing those properties to the resource 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="pulumi_azure.servicefabric.Cluster.translate_input_property">
-<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

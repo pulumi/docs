@@ -74,53 +74,12 @@
   <div class="markdown level0 summary"><p>Provides a resource to associate additional IPv4 CIDR blocks with a VPC.</p>
 <p>When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
 The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv4 CIDR blocks to be added to the VPC.</p>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">VpcIpv4CidrBlockAssociation</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">VpcIpv4CidrBlockAssociation</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ec2.html">Pulumi.Aws.Ec2</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -131,16 +90,16 @@ The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L42">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation__ctor_" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation__ctor_System_String_Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociationArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.#ctor(System.String,Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociationArgs,Pulumi.CustomResourceOptions)">VpcIpv4CidrBlockAssociation(String, VpcIpv4CidrBlockAssociationArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation__ctor_System_String_Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociationArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.#ctor(System.String,Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociationArgs,System.Nullable{CustomResourceOptions})">VpcIpv4CidrBlockAssociation(String, VpcIpv4CidrBlockAssociationArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a VpcIpv4CidrBlockAssociation resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VpcIpv4CidrBlockAssociation(string name, VpcIpv4CidrBlockAssociationArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VpcIpv4CidrBlockAssociation(string name, VpcIpv4CidrBlockAssociationArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +124,7 @@ The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -175,7 +134,7 @@ The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_CidrBlock_" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.CidrBlock*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_CidrBlock" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.CidrBlock">CidrBlock</h4>
@@ -196,13 +155,13 @@ The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L31">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_VpcId_" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.VpcId*"></a>
   <h4 id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_VpcId" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.VpcId">VpcId</h4>
@@ -223,7 +182,7 @@ The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -231,17 +190,17 @@ The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_Get_" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.Get*"></a>
-  <h4 id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociationState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociationState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, VpcIpv4CidrBlockAssociationState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociation_Get_System_String_Input_System_String__Pulumi_Aws_Ec2_VpcIpv4CidrBlockAssociationState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.Get(System.String,Input{System.String},Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociationState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VpcIpv4CidrBlockAssociationState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing VpcIpv4CidrBlockAssociation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static VpcIpv4CidrBlockAssociation Get(string name, Input&lt;string&gt; id, VpcIpv4CidrBlockAssociationState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static VpcIpv4CidrBlockAssociation Get(string name, Input&lt;string&gt; id, VpcIpv4CidrBlockAssociationState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,7 +219,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -272,7 +231,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -301,7 +260,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Ec2/VpcIpv4CidrBlockAssociation.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -174,53 +174,12 @@ for more information about the EMR-managed security group rules.</p>
 <li><code>main_class</code> - (Optional) Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.</li>
 <li><code>properties</code> - (Optional) Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Cluster</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Cluster</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Emr.html">Pulumi.Aws.Emr</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
@@ -231,16 +190,16 @@ for more information about the EMR-managed security group rules.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L317">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster__ctor_" data-uid="Pulumi.Aws.Emr.Cluster.#ctor*"></a>
-  <h4 id="Pulumi_Aws_Emr_Cluster__ctor_System_String_Pulumi_Aws_Emr_ClusterArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Emr.Cluster.#ctor(System.String,Pulumi.Aws.Emr.ClusterArgs,Pulumi.CustomResourceOptions)">Cluster(String, ClusterArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Emr_Cluster__ctor_System_String_Pulumi_Aws_Emr_ClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Emr.Cluster.#ctor(System.String,Pulumi.Aws.Emr.ClusterArgs,System.Nullable{CustomResourceOptions})">Cluster(String, ClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Cluster resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Cluster(string name, ClusterArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,7 +224,7 @@ for more information about the EMR-managed security group rules.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -275,7 +234,7 @@ for more information about the EMR-managed security group rules.</p>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L131">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L130">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_AdditionalInfo_" data-uid="Pulumi.Aws.Emr.Cluster.AdditionalInfo*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_AdditionalInfo" data-uid="Pulumi.Aws.Emr.Cluster.AdditionalInfo">AdditionalInfo</h4>
@@ -284,7 +243,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AdditionalInfo { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AdditionalInfo { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,13 +255,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L137">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L136">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Applications_" data-uid="Pulumi.Aws.Emr.Cluster.Applications*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Applications" data-uid="Pulumi.Aws.Emr.Cluster.Applications">Applications</h4>
@@ -323,13 +282,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L140">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L139">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Arn_" data-uid="Pulumi.Aws.Emr.Cluster.Arn*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Arn" data-uid="Pulumi.Aws.Emr.Cluster.Arn">Arn</h4>
@@ -349,13 +308,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L146">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L145">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_AutoscalingRole_" data-uid="Pulumi.Aws.Emr.Cluster.AutoscalingRole*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_AutoscalingRole" data-uid="Pulumi.Aws.Emr.Cluster.AutoscalingRole">AutoscalingRole</h4>
@@ -364,7 +323,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutoscalingRole { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AutoscalingRole { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,22 +335,22 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L152">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L151">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_BootstrapActions_" data-uid="Pulumi.Aws.Emr.Cluster.BootstrapActions*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_BootstrapActions" data-uid="Pulumi.Aws.Emr.Cluster.BootstrapActions">BootstrapActions</h4>
-  <div class="markdown level1 summary"><p>List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below</p>
+  <div class="markdown level1 summary"><p>Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterBootstrapActions&gt;&gt; BootstrapActions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterBootstrapAction&gt;&gt; BootstrapActions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -403,13 +362,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterBootstrapActions.html">ClusterBootstrapActions</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterBootstrapAction.html">ClusterBootstrapAction</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L161">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L160">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Configurations_" data-uid="Pulumi.Aws.Emr.Cluster.Configurations*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Configurations" data-uid="Pulumi.Aws.Emr.Cluster.Configurations">Configurations</h4>
@@ -418,7 +377,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Configurations { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Configurations { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -430,13 +389,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L167">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L166">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_ConfigurationsJson_" data-uid="Pulumi.Aws.Emr.Cluster.ConfigurationsJson*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_ConfigurationsJson" data-uid="Pulumi.Aws.Emr.Cluster.ConfigurationsJson">ConfigurationsJson</h4>
@@ -445,7 +404,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ConfigurationsJson { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ConfigurationsJson { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -457,13 +416,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L173">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L172">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_CoreInstanceCount_" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceCount*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_CoreInstanceCount" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceCount">CoreInstanceCount</h4>
@@ -484,13 +443,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L179">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L178">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_CoreInstanceGroup_" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceGroup*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_CoreInstanceGroup" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceGroup">CoreInstanceGroup</h4>
@@ -511,13 +470,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroup.html">ClusterCoreInstanceGroup</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroup.html">ClusterCoreInstanceGroup</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L185">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L184">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_CoreInstanceType_" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceType*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_CoreInstanceType" data-uid="Pulumi.Aws.Emr.Cluster.CoreInstanceType">CoreInstanceType</h4>
@@ -538,13 +497,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L191">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L190">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_CustomAmiId_" data-uid="Pulumi.Aws.Emr.Cluster.CustomAmiId*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_CustomAmiId" data-uid="Pulumi.Aws.Emr.Cluster.CustomAmiId">CustomAmiId</h4>
@@ -553,7 +512,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CustomAmiId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; CustomAmiId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -565,13 +524,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L197">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L196">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_EbsRootVolumeSize_" data-uid="Pulumi.Aws.Emr.Cluster.EbsRootVolumeSize*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_EbsRootVolumeSize" data-uid="Pulumi.Aws.Emr.Cluster.EbsRootVolumeSize">EbsRootVolumeSize</h4>
@@ -592,13 +551,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L203">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L202">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Ec2Attributes_" data-uid="Pulumi.Aws.Emr.Cluster.Ec2Attributes*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Ec2Attributes" data-uid="Pulumi.Aws.Emr.Cluster.Ec2Attributes">Ec2Attributes</h4>
@@ -619,13 +578,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterEc2Attributes.html">ClusterEc2Attributes</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterEc2Attributes.html">ClusterEc2Attributes</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L209">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L208">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_InstanceGroups_" data-uid="Pulumi.Aws.Emr.Cluster.InstanceGroups*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_InstanceGroups" data-uid="Pulumi.Aws.Emr.Cluster.InstanceGroups">InstanceGroups</h4>
@@ -634,7 +593,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterInstanceGroups&gt;&gt; InstanceGroups { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterInstanceGroup&gt;&gt; InstanceGroups { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -646,13 +605,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterInstanceGroups.html">ClusterInstanceGroups</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterInstanceGroup.html">ClusterInstanceGroup</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L215">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L214">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_KeepJobFlowAliveWhenNoSteps_" data-uid="Pulumi.Aws.Emr.Cluster.KeepJobFlowAliveWhenNoSteps*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_KeepJobFlowAliveWhenNoSteps" data-uid="Pulumi.Aws.Emr.Cluster.KeepJobFlowAliveWhenNoSteps">KeepJobFlowAliveWhenNoSteps</h4>
@@ -673,13 +632,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L221">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L220">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_KerberosAttributes_" data-uid="Pulumi.Aws.Emr.Cluster.KerberosAttributes*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_KerberosAttributes" data-uid="Pulumi.Aws.Emr.Cluster.KerberosAttributes">KerberosAttributes</h4>
@@ -700,13 +659,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterKerberosAttributes.html">ClusterKerberosAttributes</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterKerberosAttributes.html">ClusterKerberosAttributes</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L227">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L226">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_LogUri_" data-uid="Pulumi.Aws.Emr.Cluster.LogUri*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_LogUri" data-uid="Pulumi.Aws.Emr.Cluster.LogUri">LogUri</h4>
@@ -715,7 +674,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LogUri { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LogUri { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -727,13 +686,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L233">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L232">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_MasterInstanceGroup_" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceGroup*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_MasterInstanceGroup" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceGroup">MasterInstanceGroup</h4>
@@ -754,13 +713,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroup.html">ClusterMasterInstanceGroup</a>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroup.html">ClusterMasterInstanceGroup</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L239">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L238">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_MasterInstanceType_" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceType*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_MasterInstanceType" data-uid="Pulumi.Aws.Emr.Cluster.MasterInstanceType">MasterInstanceType</h4>
@@ -781,13 +740,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L246">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L245">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_MasterPublicDns_" data-uid="Pulumi.Aws.Emr.Cluster.MasterPublicDns*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_MasterPublicDns" data-uid="Pulumi.Aws.Emr.Cluster.MasterPublicDns">MasterPublicDns</h4>
@@ -811,13 +770,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L252">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L251">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Name_" data-uid="Pulumi.Aws.Emr.Cluster.Name*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Name" data-uid="Pulumi.Aws.Emr.Cluster.Name">Name</h4>
@@ -838,13 +797,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L258">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L257">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_ReleaseLabel_" data-uid="Pulumi.Aws.Emr.Cluster.ReleaseLabel*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_ReleaseLabel" data-uid="Pulumi.Aws.Emr.Cluster.ReleaseLabel">ReleaseLabel</h4>
@@ -865,13 +824,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L264">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L263">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_ScaleDownBehavior_" data-uid="Pulumi.Aws.Emr.Cluster.ScaleDownBehavior*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_ScaleDownBehavior" data-uid="Pulumi.Aws.Emr.Cluster.ScaleDownBehavior">ScaleDownBehavior</h4>
@@ -892,13 +851,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L270">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L269">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_SecurityConfiguration_" data-uid="Pulumi.Aws.Emr.Cluster.SecurityConfiguration*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_SecurityConfiguration" data-uid="Pulumi.Aws.Emr.Cluster.SecurityConfiguration">SecurityConfiguration</h4>
@@ -907,7 +866,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SecurityConfiguration { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SecurityConfiguration { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -919,13 +878,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L276">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L275">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_ServiceRole_" data-uid="Pulumi.Aws.Emr.Cluster.ServiceRole*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_ServiceRole" data-uid="Pulumi.Aws.Emr.Cluster.ServiceRole">ServiceRole</h4>
@@ -946,13 +905,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L155">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L154">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_State_" data-uid="Pulumi.Aws.Emr.Cluster.State*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_State" data-uid="Pulumi.Aws.Emr.Cluster.State">State</h4>
@@ -972,13 +931,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L288">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L281">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_StepConcurrencyLevel_" data-uid="Pulumi.Aws.Emr.Cluster.StepConcurrencyLevel*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_StepConcurrencyLevel" data-uid="Pulumi.Aws.Emr.Cluster.StepConcurrencyLevel">StepConcurrencyLevel</h4>
@@ -999,22 +958,22 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L282">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L287">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Steps_" data-uid="Pulumi.Aws.Emr.Cluster.Steps*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Steps" data-uid="Pulumi.Aws.Emr.Cluster.Steps">Steps</h4>
-  <div class="markdown level1 summary"><p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code>ignore_changes</code> if other steps are being managed outside of this provider. This argument is processed in <a href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+  <div class="markdown level1 summary"><p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize <a href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges"><code>ignoreChanges</code></a> if other steps are being managed outside of this provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterSteps&gt;&gt; Steps { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ClusterStep&gt;&gt; Steps { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1026,13 +985,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterSteps.html">ClusterSteps</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Emr.Outputs.ClusterStep.html">ClusterStep</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L294">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Tags_" data-uid="Pulumi.Aws.Emr.Cluster.Tags*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_Tags" data-uid="Pulumi.Aws.Emr.Cluster.Tags">Tags</h4>
@@ -1041,7 +1000,7 @@ for more information about the EMR-managed security group rules.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1053,13 +1012,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L300">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L299">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_TerminationProtection_" data-uid="Pulumi.Aws.Emr.Cluster.TerminationProtection*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_TerminationProtection" data-uid="Pulumi.Aws.Emr.Cluster.TerminationProtection">TerminationProtection</h4>
@@ -1080,13 +1039,13 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L306">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L305">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_VisibleToAllUsers_" data-uid="Pulumi.Aws.Emr.Cluster.VisibleToAllUsers*"></a>
   <h4 id="Pulumi_Aws_Emr_Cluster_VisibleToAllUsers" data-uid="Pulumi.Aws.Emr.Cluster.VisibleToAllUsers">VisibleToAllUsers</h4>
@@ -1107,7 +1066,7 @@ for more information about the EMR-managed security group rules.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1115,17 +1074,17 @@ for more information about the EMR-managed security group rules.</p>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L347">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L346">View Source</a>
   </span>
   <a id="Pulumi_Aws_Emr_Cluster_Get_" data-uid="Pulumi.Aws.Emr.Cluster.Get*"></a>
-  <h4 id="Pulumi_Aws_Emr_Cluster_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Emr_ClusterState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Emr.Cluster.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Emr.ClusterState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ClusterState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Aws_Emr_Cluster_Get_System_String_Input_System_String__Pulumi_Aws_Emr_ClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Aws.Emr.Cluster.Get(System.String,Input{System.String},Pulumi.Aws.Emr.ClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Cluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Cluster Get(string name, Input&lt;string&gt; id, ClusterState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1144,7 +1103,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -1156,7 +1115,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -1185,7 +1144,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Emr/Cluster.cs/#L126" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Emr/Cluster.cs/#L125" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

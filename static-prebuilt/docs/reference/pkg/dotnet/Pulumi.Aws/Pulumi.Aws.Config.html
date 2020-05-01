@@ -78,50 +78,25 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Config</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.html">Pulumi.Aws</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_Config_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Config</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Config : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L16">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L14">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_AccessKey_" data-uid="Pulumi.Aws.Config.AccessKey*"></a>
   <h4 id="Pulumi_Aws_Config_AccessKey" data-uid="Pulumi.Aws.Config.AccessKey">AccessKey</h4>
-  <div class="markdown level1 summary"><p>The access key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of
-the AWS console.</p>
+  <div class="markdown level1 summary"><p>The access key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of the AWS console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string AccessKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? AccessKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,13 +108,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L18">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L16">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_AllowedAccountIds_" data-uid="Pulumi.Aws.Config.AllowedAccountIds*"></a>
   <h4 id="Pulumi_Aws_Config_AllowedAccountIds" data-uid="Pulumi.Aws.Config.AllowedAccountIds">AllowedAccountIds</h4>
@@ -159,13 +134,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L20">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_AssumeRole_" data-uid="Pulumi.Aws.Config.AssumeRole*"></a>
   <h4 id="Pulumi_Aws_Config_AssumeRole" data-uid="Pulumi.Aws.Config.AssumeRole">AssumeRole</h4>
@@ -173,7 +148,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AssumeRole AssumeRole { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Config.Types.AssumeRole AssumeRole { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +160,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Aws.ConfigTypes.AssumeRole.html">AssumeRole</a></td>
+        <td><a class="xref" href="Pulumi.Aws.Config.Types.AssumeRole.html">Config.Types.AssumeRole</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L22">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_Endpoints_" data-uid="Pulumi.Aws.Config.Endpoints*"></a>
   <h4 id="Pulumi_Aws_Config_Endpoints" data-uid="Pulumi.Aws.Config.Endpoints">Endpoints</h4>
@@ -199,7 +174,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ImmutableArray&lt;Endpoints&gt; Endpoints { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static ImmutableArray&lt;Config.Types.Endpoints&gt; Endpoints { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,13 +186,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.ConfigTypes.Endpoints.html">Endpoints</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Config.Types.Endpoints.html">Config.Types.Endpoints</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L24">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L22">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_ForbiddenAccountIds_" data-uid="Pulumi.Aws.Config.ForbiddenAccountIds*"></a>
   <h4 id="Pulumi_Aws_Config_ForbiddenAccountIds" data-uid="Pulumi.Aws.Config.ForbiddenAccountIds">ForbiddenAccountIds</h4>
@@ -237,49 +212,22 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L29">View Source</a>
-  </span>
-  <a id="Pulumi_Aws_Config_IgnoreTagPrefixes_" data-uid="Pulumi.Aws.Config.IgnoreTagPrefixes*"></a>
-  <h4 id="Pulumi_Aws_Config_IgnoreTagPrefixes" data-uid="Pulumi.Aws.Config.IgnoreTagPrefixes">IgnoreTagPrefixes</h4>
-  <div class="markdown level1 summary"><p>Resource tag key prefixes to ignore across all resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ImmutableArray&lt;string&gt; IgnoreTagPrefixes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_IgnoreTags_" data-uid="Pulumi.Aws.Config.IgnoreTags*"></a>
   <h4 id="Pulumi_Aws_Config_IgnoreTags" data-uid="Pulumi.Aws.Config.IgnoreTags">IgnoreTags</h4>
-  <div class="markdown level1 summary"><p>Resource tag keys to ignore across all resources.</p>
+  <div class="markdown level1 summary"><p>Configuration block with settings to ignore resource tags across all resources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ImmutableArray&lt;string&gt; IgnoreTags { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Config.Types.IgnoreTags IgnoreTags { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,13 +239,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Aws.Config.Types.IgnoreTags.html">Config.Types.IgnoreTags</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_Insecure_" data-uid="Pulumi.Aws.Config.Insecure*"></a>
   <h4 id="Pulumi_Aws_Config_Insecure" data-uid="Pulumi.Aws.Config.Insecure">Insecure</h4>
@@ -324,12 +272,11 @@ the AWS console.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L45">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L37">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_MaxRetries_" data-uid="Pulumi.Aws.Config.MaxRetries*"></a>
   <h4 id="Pulumi_Aws_Config_MaxRetries" data-uid="Pulumi.Aws.Config.MaxRetries">MaxRetries</h4>
-  <div class="markdown level1 summary"><p>The maximum number of times an AWS API request is being executed. If the API request still fails, an error
-is thrown.</p>
+  <div class="markdown level1 summary"><p>The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -352,7 +299,7 @@ is thrown.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_Profile_" data-uid="Pulumi.Aws.Config.Profile*"></a>
   <h4 id="Pulumi_Aws_Config_Profile" data-uid="Pulumi.Aws.Config.Profile">Profile</h4>
@@ -361,7 +308,7 @@ is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Profile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Profile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,13 +320,13 @@ is thrown.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_Region_" data-uid="Pulumi.Aws.Config.Region*"></a>
   <h4 id="Pulumi_Aws_Config_Region" data-uid="Pulumi.Aws.Config.Region">Region</h4>
@@ -388,7 +335,7 @@ is thrown.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Region { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Region { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,19 +347,19 @@ is thrown.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L62">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_S3ForcePathStyle_" data-uid="Pulumi.Aws.Config.S3ForcePathStyle*"></a>
   <h4 id="Pulumi_Aws_Config_S3ForcePathStyle" data-uid="Pulumi.Aws.Config.S3ForcePathStyle">S3ForcePathStyle</h4>
-  <div class="markdown level1 summary"><p>Set this to true to force the request to use path-style addressing, i.e.,
-<a href="http://s3.amazonaws.com/BUCKET/KEY">http://s3.amazonaws.com/BUCKET/KEY</a>. By default, the S3 client will use virtual hosted bucket addressing when
-possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaws.com/KEY</a>). Specific to the Amazon S3 service.</p>
+  <div class="markdown level1 summary"><p>Set this to true to force the request to use path-style addressing, i.e., <a href="http://s3.amazonaws.com/BUCKET/KEY">http://s3.amazonaws.com/BUCKET/KEY</a>. By
+default, the S3 client will use virtual hosted bucket addressing when possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaws.com/KEY</a>).
+Specific to the Amazon S3 service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -435,17 +382,16 @@ possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaw
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L59">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SecretKey_" data-uid="Pulumi.Aws.Config.SecretKey*"></a>
   <h4 id="Pulumi_Aws_Config_SecretKey" data-uid="Pulumi.Aws.Config.SecretKey">SecretKey</h4>
-  <div class="markdown level1 summary"><p>The secret key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of
-the AWS console.</p>
+  <div class="markdown level1 summary"><p>The secret key for API operations. You can retrieve this from the 'Security &amp; Credentials' section of the AWS console.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string SecretKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? SecretKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -457,13 +403,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SharedCredentialsFile_" data-uid="Pulumi.Aws.Config.SharedCredentialsFile*"></a>
   <h4 id="Pulumi_Aws_Config_SharedCredentialsFile" data-uid="Pulumi.Aws.Config.SharedCredentialsFile">SharedCredentialsFile</h4>
@@ -472,7 +418,7 @@ the AWS console.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string SharedCredentialsFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? SharedCredentialsFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -484,13 +430,13 @@ the AWS console.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L79">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L70">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SkipCredentialsValidation_" data-uid="Pulumi.Aws.Config.SkipCredentialsValidation*"></a>
   <h4 id="Pulumi_Aws_Config_SkipCredentialsValidation" data-uid="Pulumi.Aws.Config.SkipCredentialsValidation">SkipCredentialsValidation</h4>
@@ -518,12 +464,11 @@ available/implemented.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L85">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SkipGetEc2Platforms_" data-uid="Pulumi.Aws.Config.SkipGetEc2Platforms*"></a>
   <h4 id="Pulumi_Aws_Config_SkipGetEc2Platforms" data-uid="Pulumi.Aws.Config.SkipGetEc2Platforms">SkipGetEc2Platforms</h4>
-  <div class="markdown level1 summary"><p>Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes
-permissions.</p>
+  <div class="markdown level1 summary"><p>Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -546,7 +491,7 @@ permissions.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L87">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L77">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SkipMetadataApiCheck_" data-uid="Pulumi.Aws.Config.SkipMetadataApiCheck*"></a>
   <h4 id="Pulumi_Aws_Config_SkipMetadataApiCheck" data-uid="Pulumi.Aws.Config.SkipMetadataApiCheck">SkipMetadataApiCheck</h4>
@@ -572,12 +517,12 @@ permissions.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L93">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L83">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SkipRegionValidation_" data-uid="Pulumi.Aws.Config.SkipRegionValidation*"></a>
   <h4 id="Pulumi_Aws_Config_SkipRegionValidation" data-uid="Pulumi.Aws.Config.SkipRegionValidation">SkipRegionValidation</h4>
-  <div class="markdown level1 summary"><p>Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to
-regions that are not public (yet).</p>
+  <div class="markdown level1 summary"><p>Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to regions that are
+not public (yet).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -600,12 +545,11 @@ regions that are not public (yet).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L99">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L88">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_SkipRequestingAccountId_" data-uid="Pulumi.Aws.Config.SkipRequestingAccountId*"></a>
   <h4 id="Pulumi_Aws_Config_SkipRequestingAccountId" data-uid="Pulumi.Aws.Config.SkipRequestingAccountId">SkipRequestingAccountId</h4>
-  <div class="markdown level1 summary"><p>Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or
-metadata API.</p>
+  <div class="markdown level1 summary"><p>Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -628,7 +572,7 @@ metadata API.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L93">View Source</a>
   </span>
   <a id="Pulumi_Aws_Config_Token_" data-uid="Pulumi.Aws.Config.Token*"></a>
   <h4 id="Pulumi_Aws_Config_Token" data-uid="Pulumi.Aws.Config.Token">Token</h4>
@@ -637,7 +581,7 @@ metadata API.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Token { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static string? Token { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -649,7 +593,7 @@ metadata API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -661,7 +605,7 @@ metadata API.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/Config/Config.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

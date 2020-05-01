@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterNodeConfigWorkloadMetadataConfigGetArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterNodeConfigWorkloadMetadataConfigGetArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Inputs.html">Pulumi.Gcp.Container.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2104">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigWorkloadMetadataConfigGetArgs.cs/#L26">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigWorkloadMetadataConfigGetArgs__ctor_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigGetArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigWorkloadMetadataConfigGetArgs__ctor" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigGetArgs.#ctor">ClusterNodeConfigWorkloadMetadataConfigGetArgs()</h4>
@@ -129,11 +100,19 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2101">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigWorkloadMetadataConfigGetArgs.cs/#L23">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigWorkloadMetadataConfigGetArgs_NodeMetadata_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigGetArgs.NodeMetadata*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterNodeConfigWorkloadMetadataConfigGetArgs_NodeMetadata" data-uid="Pulumi.Gcp.Container.Inputs.ClusterNodeConfigWorkloadMetadataConfigGetArgs.NodeMetadata">NodeMetadata</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How to expose the node metadata to the workload running on the node.
+Accepted values are:</p>
+<ul>
+<li>UNSPECIFIED: Not Set</li>
+<li>SECURE: Prevent workloads not in hostNetwork from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. See <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/metadata-proxy">Metadata Concealment</a> documentation.</li>
+<li>EXPOSE: Expose all VM metadata to pods.</li>
+<li>GKE_METADATA_SERVER: Enables <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity">workload identity</a> on the node.</li>
+</ul>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +128,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -161,7 +140,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2099" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterNodeConfigWorkloadMetadataConfigGetArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

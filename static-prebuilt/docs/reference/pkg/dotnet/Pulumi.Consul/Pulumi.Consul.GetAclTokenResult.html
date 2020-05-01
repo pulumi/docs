@@ -87,7 +87,7 @@
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclToken.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L77">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_GetAclTokenResult_AccessorId" data-uid="Pulumi.Consul.GetAclTokenResult.AccessorId">AccessorId</h4>
   <div class="markdown level1 summary"></div>
@@ -112,7 +112,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclToken.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_GetAclTokenResult_Description" data-uid="Pulumi.Consul.GetAclTokenResult.Description">Description</h4>
   <div class="markdown level1 summary"><p>The description of the ACL token.</p>
@@ -138,7 +138,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclToken.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_GetAclTokenResult_Id" data-uid="Pulumi.Consul.GetAclTokenResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -164,7 +164,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclToken.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Consul_GetAclTokenResult_Local" data-uid="Pulumi.Consul.GetAclTokenResult.Local">Local</h4>
   <div class="markdown level1 summary"><p>Whether the ACL token is local to the datacenter it was created within.</p>
@@ -190,16 +190,14 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclToken.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L90">View Source</a>
   </span>
-  <h4 id="Pulumi_Consul_GetAclTokenResult_Policies" data-uid="Pulumi.Consul.GetAclTokenResult.Policies">Policies</h4>
-  <div class="markdown level1 summary"><p>A list of policies associated with the ACL token. Each entry has
-an <code>id</code> and a <code>name</code> attribute.</p>
-</div>
+  <h4 id="Pulumi_Consul_GetAclTokenResult_Namespace" data-uid="Pulumi.Consul.GetAclTokenResult.Namespace">Namespace</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAclTokenPoliciesResult&gt; Policies</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? Namespace</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,7 +209,34 @@ an <code>id</code> and a <code>name</code> attribute.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.GetAclTokenPoliciesResult.html">GetAclTokenPoliciesResult</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L95">View Source</a>
+  </span>
+  <h4 id="Pulumi_Consul_GetAclTokenResult_Policies" data-uid="Pulumi.Consul.GetAclTokenResult.Policies">Policies</h4>
+  <div class="markdown level1 summary"><p>A list of policies associated with the ACL token. Each entry has
+an <code>id</code> and a <code>name</code> attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetAclTokenPolicyResult&gt; Policies</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Consul.Outputs.GetAclTokenPolicyResult.html">GetAclTokenPolicyResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -223,7 +248,7 @@ an <code>id</code> and a <code>name</code> attribute.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-consul/blob/master/sdk/dotnet/GetAclToken.cs/#L53" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-consul/blob/7e0ca3355a70d2ad8d01ce6695c8eac4311457c9/sdk/dotnet/GetAclToken.cs/#L74" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

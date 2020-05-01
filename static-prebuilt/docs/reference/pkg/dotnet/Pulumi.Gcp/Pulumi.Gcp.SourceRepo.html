@@ -77,23 +77,66 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.Repository.html">Repository</a></h4>
-      <section></section>
+      <section><p>A repository (or repo) is a Git repository storing versioned source content.</p>
+<p>To get more information about Repository, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/source-repositories/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryArgs.html">RepositoryArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamBinding.html">RepositoryIamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.pubsub.TopicIAMPolicy</code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
+<li><code>gcp.pubsub.TopicIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
+<li><code>gcp.pubsub.TopicIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.pubsub.TopicIAMBinding</code> and <code>gcp.pubsub.TopicIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamBindingArgs.html">RepositoryIamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamBindingState.html">RepositoryIamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamMember.html">RepositoryIamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.pubsub.TopicIAMPolicy</code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
+<li><code>gcp.pubsub.TopicIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
+<li><code>gcp.pubsub.TopicIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.pubsub.TopicIAMBinding</code> and <code>gcp.pubsub.TopicIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamMemberArgs.html">RepositoryIamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamMemberState.html">RepositoryIamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamPolicy.html">RepositoryIamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Pub/Sub Topic. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.pubsub.TopicIAMPolicy</code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
+<li><code>gcp.pubsub.TopicIAMBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
+<li><code>gcp.pubsub.TopicIAMMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the topic are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.pubsub.TopicIAMBinding</code> and <code>gcp.pubsub.TopicIAMMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.pubsub.TopicIAMBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.pubsub.TopicIAMMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamPolicyArgs.html">RepositoryIamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.SourceRepo.RepositoryIamPolicyState.html">RepositoryIamPolicyState</a></h4>

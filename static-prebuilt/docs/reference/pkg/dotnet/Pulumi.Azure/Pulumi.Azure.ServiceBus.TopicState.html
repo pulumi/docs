@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">TopicState</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">TopicState</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ServiceBus.html">Pulumi.Azure.ServiceBus</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L356">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L354">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState__ctor_" data-uid="Pulumi.Azure.ServiceBus.TopicState.#ctor*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState__ctor" data-uid="Pulumi.Azure.ServiceBus.TopicState.#ctor">TopicState()</h4>
@@ -129,7 +100,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L266">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L264">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_AutoDeleteOnIdle_" data-uid="Pulumi.Azure.ServiceBus.TopicState.AutoDeleteOnIdle*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_AutoDeleteOnIdle" data-uid="Pulumi.Azure.ServiceBus.TopicState.AutoDeleteOnIdle">AutoDeleteOnIdle</h4>
@@ -139,7 +110,7 @@ Topic is automatically deleted, minimum of 5 minutes.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; AutoDeleteOnIdle { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? AutoDeleteOnIdle { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,13 +122,13 @@ Topic is automatically deleted, minimum of 5 minutes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L273">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L271">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_DefaultMessageTtl_" data-uid="Pulumi.Azure.ServiceBus.TopicState.DefaultMessageTtl*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_DefaultMessageTtl" data-uid="Pulumi.Azure.ServiceBus.TopicState.DefaultMessageTtl">DefaultMessageTtl</h4>
@@ -167,7 +138,7 @@ TTL value is set on the message itself.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DefaultMessageTtl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultMessageTtl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,13 +150,13 @@ TTL value is set on the message itself.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L280">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L278">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_DuplicateDetectionHistoryTimeWindow_" data-uid="Pulumi.Azure.ServiceBus.TopicState.DuplicateDetectionHistoryTimeWindow*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_DuplicateDetectionHistoryTimeWindow" data-uid="Pulumi.Azure.ServiceBus.TopicState.DuplicateDetectionHistoryTimeWindow">DuplicateDetectionHistoryTimeWindow</h4>
@@ -195,7 +166,7 @@ duplicates can be detected. Defaults to 10 minutes. (<code>PT10M</code>)</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; DuplicateDetectionHistoryTimeWindow { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DuplicateDetectionHistoryTimeWindow { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +178,13 @@ duplicates can be detected. Defaults to 10 minutes. (<code>PT10M</code>)</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L287">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L285">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_EnableBatchedOperations_" data-uid="Pulumi.Azure.ServiceBus.TopicState.EnableBatchedOperations*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_EnableBatchedOperations" data-uid="Pulumi.Azure.ServiceBus.TopicState.EnableBatchedOperations">EnableBatchedOperations</h4>
@@ -223,7 +194,7 @@ batched operations are enabled. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableBatchedOperations { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableBatchedOperations { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +206,13 @@ batched operations are enabled. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L295">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L293">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_EnableExpress_" data-uid="Pulumi.Azure.ServiceBus.TopicState.EnableExpress*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_EnableExpress" data-uid="Pulumi.Azure.ServiceBus.TopicState.EnableExpress">EnableExpress</h4>
@@ -252,7 +223,7 @@ it to persistent storage. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnableExpress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnableExpress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,13 +235,13 @@ it to persistent storage. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L303">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L301">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_EnablePartitioning_" data-uid="Pulumi.Azure.ServiceBus.TopicState.EnablePartitioning*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_EnablePartitioning" data-uid="Pulumi.Azure.ServiceBus.TopicState.EnablePartitioning">EnablePartitioning</h4>
@@ -281,7 +252,7 @@ Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; EnablePartitioning { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? EnablePartitioning { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +264,13 @@ Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L311">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L309">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_MaxSizeInMegabytes_" data-uid="Pulumi.Azure.ServiceBus.TopicState.MaxSizeInMegabytes*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_MaxSizeInMegabytes" data-uid="Pulumi.Azure.ServiceBus.TopicState.MaxSizeInMegabytes">MaxSizeInMegabytes</h4>
@@ -310,7 +281,7 @@ section of <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; MaxSizeInMegabytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxSizeInMegabytes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,13 +293,13 @@ section of <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L318">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L316">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_Name_" data-uid="Pulumi.Azure.ServiceBus.TopicState.Name*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_Name" data-uid="Pulumi.Azure.ServiceBus.TopicState.Name">Name</h4>
@@ -338,7 +309,7 @@ new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,13 +321,13 @@ new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L325">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L323">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_NamespaceName_" data-uid="Pulumi.Azure.ServiceBus.TopicState.NamespaceName*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_NamespaceName" data-uid="Pulumi.Azure.ServiceBus.TopicState.NamespaceName">NamespaceName</h4>
@@ -366,7 +337,7 @@ this topic in. Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; NamespaceName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NamespaceName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,13 +349,13 @@ this topic in. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L333">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L331">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_RequiresDuplicateDetection_" data-uid="Pulumi.Azure.ServiceBus.TopicState.RequiresDuplicateDetection*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_RequiresDuplicateDetection" data-uid="Pulumi.Azure.ServiceBus.TopicState.RequiresDuplicateDetection">RequiresDuplicateDetection</h4>
@@ -395,7 +366,7 @@ a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; RequiresDuplicateDetection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? RequiresDuplicateDetection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,13 +378,13 @@ a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L340">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L338">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_ResourceGroupName_" data-uid="Pulumi.Azure.ServiceBus.TopicState.ResourceGroupName*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_ResourceGroupName" data-uid="Pulumi.Azure.ServiceBus.TopicState.ResourceGroupName">ResourceGroupName</h4>
@@ -423,7 +394,7 @@ create the namespace. Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ResourceGroupName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ResourceGroupName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -435,13 +406,13 @@ create the namespace. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L346">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L344">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_Status_" data-uid="Pulumi.Azure.ServiceBus.TopicState.Status*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_Status" data-uid="Pulumi.Azure.ServiceBus.TopicState.Status">Status</h4>
@@ -450,7 +421,7 @@ create the namespace. Changing this forces a new resource to be created.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Status { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,13 +433,13 @@ create the namespace. Changing this forces a new resource to be created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L353">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L351">View Source</a>
   </span>
   <a id="Pulumi_Azure_ServiceBus_TopicState_SupportOrdering_" data-uid="Pulumi.Azure.ServiceBus.TopicState.SupportOrdering*"></a>
   <h4 id="Pulumi_Azure_ServiceBus_TopicState_SupportOrdering" data-uid="Pulumi.Azure.ServiceBus.TopicState.SupportOrdering">SupportOrdering</h4>
@@ -478,7 +449,7 @@ supports ordering. Defaults to false.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt; SupportOrdering { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? SupportOrdering { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -490,7 +461,7 @@ supports ordering. Defaults to false.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -502,7 +473,7 @@ supports ordering. Defaults to false.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L260" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/ServiceBus/Topic.cs/#L258" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

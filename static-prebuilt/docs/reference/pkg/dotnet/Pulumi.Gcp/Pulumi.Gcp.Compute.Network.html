@@ -71,50 +71,19 @@
   
   <h1 id="Pulumi_Gcp_Compute_Network" data-uid="Pulumi.Gcp.Compute.Network" class="text-break">Class Network
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manages a VPC network or legacy network resource on GCP.</p>
+<p>To get more information about Network, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/compute/docs/reference/rest/v1/networks">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/vpc/docs/vpc">Official Documentation</a></li>
+</ul>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">Network</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">Network</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Compute.html">Pulumi.Gcp.Compute</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -125,16 +94,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L80">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L89">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network__ctor_" data-uid="Pulumi.Gcp.Compute.Network.#ctor*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Network__ctor_System_String_Pulumi_Gcp_Compute_NetworkArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Network.#ctor(System.String,Pulumi.Gcp.Compute.NetworkArgs,Pulumi.CustomResourceOptions)">Network(String, NetworkArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Network__ctor_System_String_Pulumi_Gcp_Compute_NetworkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Network.#ctor(System.String,Pulumi.Gcp.Compute.NetworkArgs,System.Nullable{CustomResourceOptions})">Network(String, NetworkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a Network resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Network(string name, NetworkArgs args = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Network(string name, NetworkArgs args = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +128,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -169,13 +138,13 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L29">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_AutoCreateSubnetworks_" data-uid="Pulumi.Gcp.Compute.Network.AutoCreateSubnetworks*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_AutoCreateSubnetworks" data-uid="Pulumi.Gcp.Compute.Network.AutoCreateSubnetworks">AutoCreateSubnetworks</h4>
   <div class="markdown level1 summary"><p>When set to 'true', the network is created in &quot;auto subnet mode&quot; and it will create a subnet for each region
-automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in
-&quot;custom subnet mode&quot; so the user can explicitly connect subnetwork resources.</p>
+automatically across the '10.128.0.0/9' address range. When set to 'false', the network is created in &quot;custom subnet
+mode&quot; so the user can explicitly connect subnetwork resources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -192,13 +161,13 @@ automatically across the '10.128.0.0/9' address range. When set to 'false', the 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L36">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_DeleteDefaultRoutesOnCreate_" data-uid="Pulumi.Gcp.Compute.Network.DeleteDefaultRoutesOnCreate*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_DeleteDefaultRoutesOnCreate" data-uid="Pulumi.Gcp.Compute.Network.DeleteDefaultRoutesOnCreate">DeleteDefaultRoutesOnCreate</h4>
@@ -220,13 +189,13 @@ immediately after network creation. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L32">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L42">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_Description_" data-uid="Pulumi.Gcp.Compute.Network.Description*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_Description" data-uid="Pulumi.Gcp.Compute.Network.Description">Description</h4>
@@ -235,7 +204,7 @@ immediately after network creation. Defaults to <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +216,13 @@ immediately after network creation. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L38">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L48">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_GatewayIpv4_" data-uid="Pulumi.Gcp.Compute.Network.GatewayIpv4*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_GatewayIpv4" data-uid="Pulumi.Gcp.Compute.Network.GatewayIpv4">GatewayIpv4</h4>
@@ -274,21 +243,20 @@ immediately after network creation. Defaults to <code>false</code>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L57">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_Name_" data-uid="Pulumi.Gcp.Compute.Network.Name*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_Name" data-uid="Pulumi.Gcp.Compute.Network.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters
-long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular
-expression '<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all
-following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be
-a dash.</p>
+  <div class="markdown level1 summary"><p>Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
+comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
+'<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z</a>?' which means the first character must be a lowercase letter, and all following characters
+must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -305,13 +273,13 @@ a dash.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L55">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_Project_" data-uid="Pulumi.Gcp.Compute.Network.Project*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_Project" data-uid="Pulumi.Gcp.Compute.Network.Project">Project</h4>
@@ -333,19 +301,19 @@ If it is not provided, the provider project is used.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L63">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L72">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_RoutingMode_" data-uid="Pulumi.Gcp.Compute.Network.RoutingMode*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_RoutingMode" data-uid="Pulumi.Gcp.Compute.Network.RoutingMode">RoutingMode</h4>
-  <div class="markdown level1 summary"><p>The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise
-routes with subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's
-cloud routers will advertise routes with all subnetworks of this network, across regions.</p>
+  <div class="markdown level1 summary"><p>The network-wide routing mode to use. If set to 'REGIONAL', this network's cloud routers will only advertise routes with
+subnetworks of this network in the same region as the router. If set to 'GLOBAL', this network's cloud routers will
+advertise routes with all subnetworks of this network, across regions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -362,13 +330,13 @@ cloud routers will advertise routes with all subnetworks of this network, across
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L69">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L78">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_SelfLink_" data-uid="Pulumi.Gcp.Compute.Network.SelfLink*"></a>
   <h4 id="Pulumi_Gcp_Compute_Network_SelfLink" data-uid="Pulumi.Gcp.Compute.Network.SelfLink">SelfLink</h4>
@@ -389,7 +357,7 @@ cloud routers will advertise routes with all subnetworks of this network, across
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -397,17 +365,17 @@ cloud routers will advertise routes with all subnetworks of this network, across
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L110">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L119">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Compute_Network_Get_" data-uid="Pulumi.Gcp.Compute.Network.Get*"></a>
-  <h4 id="Pulumi_Gcp_Compute_Network_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Compute_NetworkState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Compute.Network.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Compute.NetworkState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NetworkState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_Gcp_Compute_Network_Get_System_String_Input_System_String__Pulumi_Gcp_Compute_NetworkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Gcp.Compute.Network.Get(System.String,Input{System.String},Pulumi.Gcp.Compute.NetworkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NetworkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing Network resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Network Get(string name, Input&lt;string&gt; id, NetworkState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Network Get(string name, Input&lt;string&gt; id, NetworkState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -426,7 +394,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -438,7 +406,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -467,7 +435,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Compute/Network.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Compute/Network.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterClusterConfigMasterConfigDiskConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterClusterConfigMasterConfigDiskConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Dataproc.Inputs.html">Pulumi.Gcp.Dataproc.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L567">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigMasterConfigDiskConfigArgs.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs__ctor_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs__ctor" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.#ctor">ClusterClusterConfigMasterConfigDiskConfigArgs()</h4>
@@ -129,15 +100,19 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L558">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigMasterConfigDiskConfigArgs.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs_BootDiskSizeGb_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.BootDiskSizeGb*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs_BootDiskSizeGb" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.BootDiskSizeGb">BootDiskSizeGb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of the primary disk attached to each preemptible worker node, specified
+in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
+computed value if not set (currently 500GB). Note: If SSDs are not
+attached, it also contains the HDFS data blocks and Hadoop working directories.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; BootDiskSizeGb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? BootDiskSizeGb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +124,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L561">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigMasterConfigDiskConfigArgs.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs_BootDiskType_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.BootDiskType*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs_BootDiskType" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.BootDiskType">BootDiskType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The disk type of the primary disk attached to each preemptible worker node.
+One of <code>&amp;quot;pd-ssd&amp;quot;</code> or <code>&amp;quot;pd-standard&amp;quot;</code>. Defaults to <code>&amp;quot;pd-standard&amp;quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; BootDiskType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? BootDiskType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +152,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L564">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigMasterConfigDiskConfigArgs.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs_NumLocalSsds_" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.NumLocalSsds*"></a>
   <h4 id="Pulumi_Gcp_Dataproc_Inputs_ClusterClusterConfigMasterConfigDiskConfigArgs_NumLocalSsds" data-uid="Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.NumLocalSsds">NumLocalSsds</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of local SSD disks that will be
+attached to each preemptible worker node. Defaults to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; NumLocalSsds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? NumLocalSsds { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,7 +180,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -213,7 +192,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Dataproc/Cluster.cs/#L556" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Dataproc/Inputs/ClusterClusterConfigMasterConfigDiskConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

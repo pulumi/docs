@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GetClusterResult</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.HDInsight.html">Pulumi.Azure.HDInsight</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_HDInsight_GetClusterResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetClusterResult</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetClusterResult : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L48">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L51">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_ClusterVersion" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.ClusterVersion">ClusterVersion</h4>
   <div class="markdown level1 summary"><p>The version of HDInsights which is used on this HDInsight Cluster.</p>
@@ -137,7 +113,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L52">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L55">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_ComponentVersions" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.ComponentVersions">ComponentVersions</h4>
   <div class="markdown level1 summary"><p>A map of versions of software used on this HDInsights Cluster.</p>
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L56">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L59">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_EdgeSshEndpoint" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.EdgeSshEndpoint">EdgeSshEndpoint</h4>
   <div class="markdown level1 summary"><p>The SSH Endpoint of the Edge Node for this HDInsight Cluster, if an Edge Node exists.</p>
@@ -189,7 +165,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L60">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L63">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Gateways" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Gateways">Gateways</h4>
   <div class="markdown level1 summary"><p>A <code>gateway</code> block as defined below.</p>
@@ -197,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetClusterGatewaysResult&gt; Gateways</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;GetClusterGatewayResult&gt; Gateways</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.HDInsight.Outputs.GetClusterGatewaysResult.html">GetClusterGatewaysResult</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.HDInsight.Outputs.GetClusterGatewayResult.html">GetClusterGatewayResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L64">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L67">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_HttpsEndpoint" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.HttpsEndpoint">HttpsEndpoint</h4>
   <div class="markdown level1 summary"><p>The HTTPS Endpoint for this HDInsight Cluster.</p>
@@ -241,7 +217,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L90">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L71">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Id" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Id">Id</h4>
   <div class="markdown level1 summary"><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -267,7 +243,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L68">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L75">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Kind" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Kind">Kind</h4>
   <div class="markdown level1 summary"><p>The kind of HDInsight Cluster this is, such as a Spark or Storm cluster.</p>
@@ -293,7 +269,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L72">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L79">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Location" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Location">Location</h4>
   <div class="markdown level1 summary"><p>The Azure Region in which this HDInsight Cluster exists.</p>
@@ -319,7 +295,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L73">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L80">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Name" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Name">Name</h4>
   <div class="markdown level1 summary"></div>
@@ -344,7 +320,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L74">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L81">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_ResourceGroupName" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.ResourceGroupName">ResourceGroupName</h4>
   <div class="markdown level1 summary"></div>
@@ -369,7 +345,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L78">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L85">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_SshEndpoint" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.SshEndpoint">SshEndpoint</h4>
   <div class="markdown level1 summary"><p>The SSH Endpoint for this HDInsight Cluster.</p>
@@ -395,7 +371,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L82">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L89">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Tags" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Tags">Tags</h4>
   <div class="markdown level1 summary"><p>A map of tags assigned to the HDInsight Cluster.</p>
@@ -415,13 +391,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L86">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L93">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_Tier" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.Tier">Tier</h4>
   <div class="markdown level1 summary"><p>The SKU / Tier of this HDInsight Cluster.</p>
@@ -446,6 +422,31 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L94">View Source</a>
+  </span>
+  <h4 id="Pulumi_Azure_HDInsight_GetClusterResult_TlsMinVersion" data-uid="Pulumi.Azure.HDInsight.GetClusterResult.TlsMinVersion">TlsMinVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string TlsMinVersion</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -453,7 +454,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Hdinsight/GetCluster.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/HDInsight/GetCluster.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,43 +78,22 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClusterAddonsConfig</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Outputs.html">Pulumi.Gcp.Container.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClusterAddonsConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ClusterAddonsConfig : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2844">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L21">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_CloudrunConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.CloudrunConfig">CloudrunConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>.
+The status of the CloudRun addon. It requires <code>istio_config</code> enabled. It is disabled by default.
+Set <code>disabled = false</code> to enable. This addon can only be enabled at cluster creation time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,10 +115,44 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2845">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L27">View Source</a>
+  </span>
+  <h4 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_DnsCacheConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.DnsCacheConfig">DnsCacheConfig</h4>
+  <div class="markdown level1 summary"><p>.
+The status of the NodeLocal DNSCache addon. It is disabled by default.
+Set <code>enabled = true</code> to enable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ClusterAddonsConfigDnsCacheConfig DnsCacheConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfigDnsCacheConfig.html">ClusterAddonsConfigDnsCacheConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L36">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_HorizontalPodAutoscaling" data-uid="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.HorizontalPodAutoscaling">HorizontalPodAutoscaling</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The status of the Horizontal Pod Autoscaling
+addon, which increases or decreases the number of replica pods a replication controller
+has based on the resource usage of the existing pods.
+It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
+It is enabled by default;
+set <code>disabled = true</code> to disable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,10 +174,13 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2846">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L42">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_HttpLoadBalancing" data-uid="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.HttpLoadBalancing">HttpLoadBalancing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The status of the HTTP (L7) load balancing
+controller addon, which makes it easy to set up HTTP load balancers for services in a
+cluster. It is enabled by default; set <code>disabled = true</code> to disable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,10 +202,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2847">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L47">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_IstioConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.IstioConfig">IstioConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,10 +229,16 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2848">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L56">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Container_Outputs_ClusterAddonsConfig_NetworkPolicyConfig" data-uid="Pulumi.Gcp.Container.Outputs.ClusterAddonsConfig.NetworkPolicyConfig">NetworkPolicyConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether we should enable the network policy addon
+for the master.  This must be enabled in order to enable network policy for the nodes.
+To enable this, you must also define a <code>network_policy</code> block,
+otherwise nothing will happen.
+It can only be disabled if the nodes already do not have network policies enabled.
+Defaults to disabled; set <code>disabled = false</code> to enable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -242,7 +266,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L2841" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Outputs/ClusterAddonsConfig.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

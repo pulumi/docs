@@ -77,31 +77,91 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.DomainMapping.html">DomainMapping</a></h4>
-      <section></section>
+      <section><p>Resource to hold the state and status of a user's domain mapping.</p>
+<p>To get more information about DomainMapping, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/run/docs/reference/rest/v1alpha1/projects.locations.domainmappings">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/run/docs/mapping-custom-domains">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.DomainMappingArgs.html">DomainMappingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.DomainMappingState.html">DomainMappingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamBinding.html">IamBinding</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Run Service. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.cloudrun.IamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
+<li><code>gcp.cloudrun.IamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
+<li><code>gcp.cloudrun.IamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudrun.IamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.cloudrun.IamBinding</code> and <code>gcp.cloudrun.IamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudrun.IamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.cloudrun.IamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamBindingArgs.html">IamBindingArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamBindingState.html">IamBindingState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamMember.html">IamMember</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Run Service. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.cloudrun.IamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
+<li><code>gcp.cloudrun.IamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
+<li><code>gcp.cloudrun.IamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudrun.IamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.cloudrun.IamBinding</code> and <code>gcp.cloudrun.IamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudrun.IamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.cloudrun.IamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamMemberArgs.html">IamMemberArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamMemberState.html">IamMemberState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamPolicy.html">IamPolicy</a></h4>
-      <section></section>
+      <section><p>Three different resources help you manage your IAM policy for Cloud Run Service. Each of these resources serves a different use case:</p>
+<ul>
+<li><code>gcp.cloudrun.IamPolicy</code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</li>
+<li><code>gcp.cloudrun.IamBinding</code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</li>
+<li><code>gcp.cloudrun.IamMember</code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudrun.IamPolicy</code> <strong>cannot</strong> be used in conjunction with <code>gcp.cloudrun.IamBinding</code> and <code>gcp.cloudrun.IamMember</code> or they will fight over what your policy should be.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> <code>gcp.cloudrun.IamBinding</code> resources <strong>can be</strong> used in conjunction with <code>gcp.cloudrun.IamMember</code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</blockquote>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamPolicyArgs.html">IamPolicyArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.IamPolicyState.html">IamPolicyState</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.Service.html">Service</a></h4>
-      <section></section>
+      <section><p>Service acts as a top-level container that manages a set of Routes and
+Configurations which implement a network service. Service exists to provide a
+singular abstraction which can be access controlled, reasoned about, and
+which encapsulates software lifecycle decisions such as rollout policy and
+team resource ownership. Service acts only as an orchestrator of the
+underlying Routes and Configurations (much as a kubernetes Deployment
+orchestrates ReplicaSets).</p>
+<p>The Service's controller will track the statuses of its owned Configuration
+and Route, reflecting their statuses and conditions as its own.</p>
+<p>See also:
+<a href="https://github.com/knative/serving/blob/master/docs/spec/overview.md#service">https://github.com/knative/serving/blob/master/docs/spec/overview.md#service</a></p>
+<p>To get more information about Service, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.services">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/run/docs/">Official Documentation</a></li>
+</ul>
+</section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.ServiceArgs.html">ServiceArgs</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.Gcp.CloudRun.ServiceState.html">ServiceState</a></h4>

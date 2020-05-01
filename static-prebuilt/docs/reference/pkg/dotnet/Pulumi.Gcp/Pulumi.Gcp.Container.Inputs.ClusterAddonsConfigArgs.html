@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ClusterAddonsConfigArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ClusterAddonsConfigArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Container.Inputs.html">Pulumi.Gcp.Container.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1234">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L68">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs__ctor_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.#ctor*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs__ctor" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.#ctor">ClusterAddonsConfigArgs()</h4>
@@ -129,15 +100,18 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1219">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_CloudrunConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.CloudrunConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_CloudrunConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.CloudrunConfig">CloudrunConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>.
+The status of the CloudRun addon. It requires <code>istio_config</code> enabled. It is disabled by default.
+Set <code>disabled = false</code> to enable. This addon can only be enabled at cluster creation time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigCloudrunConfigArgs&gt; CloudrunConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigCloudrunConfigArgs&gt;? CloudrunConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +123,56 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigCloudrunConfigArgs.html">ClusterAddonsConfigCloudrunConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigCloudrunConfigArgs.html">ClusterAddonsConfigCloudrunConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1222">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_DnsCacheConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.DnsCacheConfig*"></a>
+  <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_DnsCacheConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.DnsCacheConfig">DnsCacheConfig</h4>
+  <div class="markdown level1 summary"><p>.
+The status of the NodeLocal DNSCache addon. It is disabled by default.
+Set <code>enabled = true</code> to enable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigDnsCacheConfigArgs&gt;? DnsCacheConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigDnsCacheConfigArgs.html">ClusterAddonsConfigDnsCacheConfigArgs</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L39">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_HorizontalPodAutoscaling_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.HorizontalPodAutoscaling*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_HorizontalPodAutoscaling" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.HorizontalPodAutoscaling">HorizontalPodAutoscaling</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The status of the Horizontal Pod Autoscaling
+addon, which increases or decreases the number of replica pods a replication controller
+has based on the resource usage of the existing pods.
+It ensures that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.
+It is enabled by default;
+set <code>disabled = true</code> to disable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigHorizontalPodAutoscalingArgs&gt; HorizontalPodAutoscaling { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigHorizontalPodAutoscalingArgs&gt;? HorizontalPodAutoscaling { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +184,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigHorizontalPodAutoscalingArgs.html">ClusterAddonsConfigHorizontalPodAutoscalingArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigHorizontalPodAutoscalingArgs.html">ClusterAddonsConfigHorizontalPodAutoscalingArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1225">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L47">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_HttpLoadBalancing_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.HttpLoadBalancing*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_HttpLoadBalancing" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.HttpLoadBalancing">HttpLoadBalancing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The status of the HTTP (L7) load balancing
+controller addon, which makes it easy to set up HTTP load balancers for services in a
+cluster. It is enabled by default; set <code>disabled = true</code> to disable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigHttpLoadBalancingArgs&gt; HttpLoadBalancing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigHttpLoadBalancingArgs&gt;? HttpLoadBalancing { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,21 +213,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigHttpLoadBalancingArgs.html">ClusterAddonsConfigHttpLoadBalancingArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigHttpLoadBalancingArgs.html">ClusterAddonsConfigHttpLoadBalancingArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1228">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_IstioConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.IstioConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_IstioConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.IstioConfig">IstioConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>.
+Structure is documented below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigIstioConfigArgs&gt; IstioConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigIstioConfigArgs&gt;? IstioConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,21 +241,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigIstioConfigArgs.html">ClusterAddonsConfigIstioConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigIstioConfigArgs.html">ClusterAddonsConfigIstioConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1231">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L65">View Source</a>
   </span>
   <a id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_NetworkPolicyConfig_" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.NetworkPolicyConfig*"></a>
   <h4 id="Pulumi_Gcp_Container_Inputs_ClusterAddonsConfigArgs_NetworkPolicyConfig" data-uid="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigArgs.NetworkPolicyConfig">NetworkPolicyConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether we should enable the network policy addon
+for the master.  This must be enabled in order to enable network policy for the nodes.
+To enable this, you must also define a <code>network_policy</code> block,
+otherwise nothing will happen.
+It can only be disabled if the nodes already do not have network policies enabled.
+Defaults to disabled; set <code>disabled = false</code> to enable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigNetworkPolicyConfigArgs&gt; NetworkPolicyConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;ClusterAddonsConfigNetworkPolicyConfigArgs&gt;? NetworkPolicyConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +273,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigNetworkPolicyConfigArgs.html">ClusterAddonsConfigNetworkPolicyConfigArgs</a>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<a class="xref" href="Pulumi.Gcp.Container.Inputs.ClusterAddonsConfigNetworkPolicyConfigArgs.html">ClusterAddonsConfigNetworkPolicyConfigArgs</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -265,7 +285,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Container/Cluster.cs/#L1217" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Container/Inputs/ClusterAddonsConfigArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

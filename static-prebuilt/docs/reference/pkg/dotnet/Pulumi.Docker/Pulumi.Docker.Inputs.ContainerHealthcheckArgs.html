@@ -76,36 +76,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
-    <div class="level3"><span class="xref">ContainerHealthcheckArgs</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">ContainerHealthcheckArgs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Docker.Inputs.html">Pulumi.Docker.Inputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Docker.dll</h6>
@@ -116,7 +87,7 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1521">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs__ctor_" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.#ctor*"></a>
   <h4 id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs__ctor" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.#ctor">ContainerHealthcheckArgs()</h4>
@@ -129,15 +100,16 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1501">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L18">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Interval_" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Interval*"></a>
   <h4 id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Interval" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Interval">Interval</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Time between running the check <code>(ms|s|m|h)</code>. Default: <code>0s</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Interval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Interval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,21 +121,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1504">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L24">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Retries_" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Retries*"></a>
   <h4 id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Retries" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Retries">Retries</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Consecutive failures needed to report unhealthy. Default: <code>0</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Retries { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? Retries { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,21 +148,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1507">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L30">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_StartPeriod_" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.StartPeriod*"></a>
   <h4 id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_StartPeriod" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.StartPeriod">StartPeriod</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Start period for the container to initialize before counting retries towards unstable <code>(ms|s|m|h)</code>. Default: <code>0s</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; StartPeriod { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? StartPeriod { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,17 +175,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1512">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L40">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Tests_" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Tests*"></a>
   <h4 id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Tests" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Tests">Tests</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Command to run to check health. For example, to run <code>curl -f http://localhost/health</code> set the
+command to be <code>[&amp;quot;CMD&amp;quot;, &amp;quot;curl&amp;quot;, &amp;quot;-f&amp;quot;, &amp;quot;http://localhost/health&amp;quot;]</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -227,21 +203,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1518">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L49">View Source</a>
   </span>
   <a id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Timeout_" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Timeout*"></a>
   <h4 id="Pulumi_Docker_Inputs_ContainerHealthcheckArgs_Timeout" data-uid="Pulumi.Docker.Inputs.ContainerHealthcheckArgs.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum time to allow one check to run <code>(ms|s|m|h)</code>. Default: <code>0s</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Timeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Timeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +230,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -265,7 +242,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/dotnet/Container.cs/#L1499" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-docker/blob/d3b171d10b806b0e9b07045b16f0ad5d481bfa38/sdk/dotnet/Inputs/ContainerHealthcheckArgs.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

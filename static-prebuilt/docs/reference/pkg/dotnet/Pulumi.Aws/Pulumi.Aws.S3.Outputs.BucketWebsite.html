@@ -78,40 +78,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BucketWebsite</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.S3.Outputs.html">Pulumi.Aws.S3.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
   <h5 id="Pulumi_Aws_S3_Outputs_BucketWebsite_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class BucketWebsite</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class BucketWebsite : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Bucket.cs/#L2379">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/BucketWebsite.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_BucketWebsite_ErrorDocument" data-uid="Pulumi.Aws.S3.Outputs.BucketWebsite.ErrorDocument">ErrorDocument</h4>
   <div class="markdown level1 summary"><p>An absolute path to the document to return in case of a 4XX error.</p>
@@ -119,7 +95,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string ErrorDocument</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? ErrorDocument</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,13 +107,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Bucket.cs/#L2383">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/BucketWebsite.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_BucketWebsite_IndexDocument" data-uid="Pulumi.Aws.S3.Outputs.BucketWebsite.IndexDocument">IndexDocument</h4>
   <div class="markdown level1 summary"><p>Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.</p>
@@ -145,7 +121,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string IndexDocument</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? IndexDocument</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,13 +133,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Bucket.cs/#L2387">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/BucketWebsite.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_BucketWebsite_RedirectAllRequestsTo" data-uid="Pulumi.Aws.S3.Outputs.BucketWebsite.RedirectAllRequestsTo">RedirectAllRequestsTo</h4>
   <div class="markdown level1 summary"><p>A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (<code>http://</code> or <code>https://</code>) to use when redirecting requests. The default is the protocol that is used in the original request.</p>
@@ -171,7 +147,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string RedirectAllRequestsTo</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? RedirectAllRequestsTo</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,13 +159,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Bucket.cs/#L2392">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/BucketWebsite.cs/#L32">View Source</a>
   </span>
   <h4 id="Pulumi_Aws_S3_Outputs_BucketWebsite_RoutingRules" data-uid="Pulumi.Aws.S3.Outputs.BucketWebsite.RoutingRules">RoutingRules</h4>
   <div class="markdown level1 summary"><p>A json array containing <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html">routing rules</a>
@@ -198,7 +174,7 @@ describing redirect behavior and when redirects are applied.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string RoutingRules</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly Union&lt;string, ImmutableArray&lt;string&gt;&gt;? RoutingRules</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,7 +186,7 @@ describing redirect behavior and when redirects are applied.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Union</span>&lt;<span class="xref">System.String</span>, <span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -222,7 +198,7 @@ describing redirect behavior and when redirects are applied.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/S3/Bucket.cs/#L2373" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/a5b8388061a1cdad34c399e3699f05621b0e0464/sdk/dotnet/S3/Outputs/BucketWebsite.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -58,7 +58,7 @@ vpc = alicloud.vpc.Network("my-vpc",
 
 ```go
 import (
-  vpc "github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc"
+  vpc "github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 )
 
 vpc, _ := vpc.NewVpc(ctx, "demo-instance", &vpc.VpcArgs{

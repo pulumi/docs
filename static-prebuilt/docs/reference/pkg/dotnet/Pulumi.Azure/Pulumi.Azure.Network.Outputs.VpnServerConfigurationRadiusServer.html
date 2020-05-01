@@ -78,43 +78,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">VpnServerConfigurationRadiusServer</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.Network.Outputs.html">Pulumi.Azure.Network.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
   <h5 id="Pulumi_Azure_Network_Outputs_VpnServerConfigurationRadiusServer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class VpnServerConfigurationRadiusServer</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class VpnServerConfigurationRadiusServer : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnServerConfiguration.cs/#L724">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/VpnServerConfigurationRadiusServer.cs/#L19">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_VpnServerConfigurationRadiusServer_Address" data-uid="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServer.Address">Address</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Address of the Radius Server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,15 +113,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnServerConfiguration.cs/#L728">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/VpnServerConfigurationRadiusServer.cs/#L23">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_VpnServerConfigurationRadiusServer_ClientRootCertificates" data-uid="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServer.ClientRootCertificates">ClientRootCertificates</h4>
-  <div class="markdown level1 summary"><p>One or more <code>client_root_certificate</code> blocks as defined below.</p>
+  <div class="markdown level1 summary"><p>One or more <code>client_root_certificate</code> blocks as defined above.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VpnServerConfigurationRadiusServerClientRootCertificates&gt; ClientRootCertificates</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VpnServerConfigurationRadiusServerClientRootCertificate&gt; ClientRootCertificates</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,16 +133,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServerClientRootCertificates.html">VpnServerConfigurationRadiusServerClientRootCertificates</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServerClientRootCertificate.html">VpnServerConfigurationRadiusServerClientRootCertificate</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnServerConfiguration.cs/#L729">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/VpnServerConfigurationRadiusServer.cs/#L27">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_VpnServerConfigurationRadiusServer_Secret" data-uid="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServer.Secret">Secret</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Secret used to communicate with the Radius Server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,14 +165,15 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnServerConfiguration.cs/#L730">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/VpnServerConfigurationRadiusServer.cs/#L31">View Source</a>
   </span>
   <h4 id="Pulumi_Azure_Network_Outputs_VpnServerConfigurationRadiusServer_ServerRootCertificates" data-uid="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServer.ServerRootCertificates">ServerRootCertificates</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>One or more <code>server_root_certificate</code> blocks as defined below.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VpnServerConfigurationRadiusServerServerRootCertificates&gt; ServerRootCertificates</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;VpnServerConfigurationRadiusServerServerRootCertificate&gt; ServerRootCertificates</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +185,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServerServerRootCertificates.html">VpnServerConfigurationRadiusServerServerRootCertificates</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.Network.Outputs.VpnServerConfigurationRadiusServerServerRootCertificate.html">VpnServerConfigurationRadiusServerServerRootCertificate</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +197,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Network/VpnServerConfiguration.cs/#L721" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/e2b40795a444b9dfe78cb3af5689969bb16a1642/sdk/dotnet/Network/Outputs/VpnServerConfigurationRadiusServer.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

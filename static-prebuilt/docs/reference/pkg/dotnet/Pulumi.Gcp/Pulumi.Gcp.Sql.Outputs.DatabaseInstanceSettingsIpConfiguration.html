@@ -78,47 +78,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DatabaseInstanceSettingsIpConfiguration</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Sql.Outputs.html">Pulumi.Gcp.Sql.Outputs</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
   <h5 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsIpConfiguration_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class DatabaseInstanceSettingsIpConfiguration</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DatabaseInstanceSettingsIpConfiguration : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1064">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsIpConfiguration.cs/#L16">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsIpConfiguration_AuthorizedNetworks" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfiguration.AuthorizedNetworks">AuthorizedNetworks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;DatabaseInstanceSettingsIpConfigurationAuthorizedNetworks&gt; AuthorizedNetworks</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork&gt; AuthorizedNetworks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,20 +106,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetworks.html">DatabaseInstanceSettingsIpConfigurationAuthorizedNetworks</a>&gt;</td>
+        <td><span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork.html">DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1065">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsIpConfiguration.cs/#L22">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsIpConfiguration_Ipv4Enabled" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfiguration.Ipv4Enabled">Ipv4Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether this Cloud SQL instance should be assigned
+a public IPV4 address. Either <code>ipv4_enabled</code> must be enabled or a
+<code>private_network</code> must be configured.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool Ipv4Enabled</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly bool? Ipv4Enabled</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,20 +134,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1066">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsIpConfiguration.cs/#L30">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsIpConfiguration_PrivateNetwork" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfiguration.PrivateNetwork">PrivateNetwork</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The VPC network from which the Cloud SQL
+instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+Specifying a network enables private IP.
+Either <code>ipv4_enabled</code> must be enabled or a <code>private_network</code> must be configured.
+This setting can be updated, but it cannot be removed after it is set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string PrivateNetwork</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly string? PrivateNetwork</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,16 +164,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1067">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsIpConfiguration.cs/#L35">View Source</a>
   </span>
   <h4 id="Pulumi_Gcp_Sql_Outputs_DatabaseInstanceSettingsIpConfiguration_RequireSsl" data-uid="Pulumi.Gcp.Sql.Outputs.DatabaseInstanceSettingsIpConfiguration.RequireSsl">RequireSsl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if mysqld should default to <code>REQUIRE X509</code>
+for users connecting over IP.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -217,7 +203,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Sql/DatabaseInstance.cs/#L1061" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/615a9b78586712066d38d183ae6dab988f559803/sdk/dotnet/Sql/Outputs/DatabaseInstanceSettingsIpConfiguration.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

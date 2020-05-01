@@ -103,53 +103,12 @@
 <li><code>server_type</code> - (Optional) The server type of the backend server. Valid value Master, Slave.</li>
 <li><code>is_backup</code> - (Removed from v1.63.0) Determine if the server is executing. Valid value 0, 1.</li>
 </ul>
-<blockquote>
-<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown</a>.</p>
-</blockquote>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
-    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
-    <div class="level3"><span class="xref">MasterSlaveServerGroup</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
-    </div>
-    <div>
-      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
+    <div class="level1"><span class="xref">MasterSlaveServerGroup</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
@@ -160,16 +119,16 @@
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L76">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L75">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup__ctor_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.#ctor*"></a>
-  <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup__ctor_System_String_Pulumi_AliCloud_Slb_MasterSlaveServerGroupArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.#ctor(System.String,Pulumi.AliCloud.Slb.MasterSlaveServerGroupArgs,Pulumi.CustomResourceOptions)">MasterSlaveServerGroup(String, MasterSlaveServerGroupArgs, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup__ctor_System_String_Pulumi_AliCloud_Slb_MasterSlaveServerGroupArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.#ctor(System.String,Pulumi.AliCloud.Slb.MasterSlaveServerGroupArgs,System.Nullable{CustomResourceOptions})">MasterSlaveServerGroup(String, MasterSlaveServerGroupArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Create a MasterSlaveServerGroup resource with the given unique name, arguments, and options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MasterSlaveServerGroup(string name, MasterSlaveServerGroupArgs args, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public MasterSlaveServerGroup(string name, MasterSlaveServerGroupArgs args, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,7 +153,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -204,7 +163,7 @@
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L46">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_DeleteProtectionValidation_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.DeleteProtectionValidation*"></a>
   <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_DeleteProtectionValidation" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.DeleteProtectionValidation">DeleteProtectionValidation</h4>
@@ -225,13 +184,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L53">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L52">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_LoadBalancerId_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.LoadBalancerId*"></a>
   <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_LoadBalancerId" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.LoadBalancerId">LoadBalancerId</h4>
@@ -252,13 +211,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L59">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L58">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Name_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Name*"></a>
   <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Name" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Name">Name</h4>
@@ -279,13 +238,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L65">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L64">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Servers_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Servers*"></a>
   <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Servers" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Servers">Servers</h4>
@@ -294,7 +253,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MasterSlaveServerGroupServers&gt;&gt; Servers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;MasterSlaveServerGroupServer&gt;&gt; Servers { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,7 +265,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.MasterSlaveServerGroupServers.html">MasterSlaveServerGroupServers</a>&gt;&gt;</td>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.Outputs.MasterSlaveServerGroupServer.html">MasterSlaveServerGroupServer</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -314,17 +273,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L106">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L105">View Source</a>
   </span>
   <a id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Get_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Get*"></a>
-  <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Get_System_String_Pulumi_Input_System_String__Pulumi_AliCloud_Slb_MasterSlaveServerGroupState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Get(System.String,Pulumi.Input{System.String},Pulumi.AliCloud.Slb.MasterSlaveServerGroupState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, MasterSlaveServerGroupState, CustomResourceOptions)</h4>
+  <h4 id="Pulumi_AliCloud_Slb_MasterSlaveServerGroup_Get_System_String_Input_System_String__Pulumi_AliCloud_Slb_MasterSlaveServerGroupState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.Get(System.String,Input{System.String},Pulumi.AliCloud.Slb.MasterSlaveServerGroupState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, MasterSlaveServerGroupState, Nullable&lt;CustomResourceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Get an existing MasterSlaveServerGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MasterSlaveServerGroup Get(string name, Input&lt;string&gt; id, MasterSlaveServerGroupState state = null, CustomResourceOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MasterSlaveServerGroup Get(string name, Input&lt;string&gt; id, MasterSlaveServerGroupState state = null, CustomResourceOptions? options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,7 +302,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td><p>The unique provider ID of the resource to lookup.</p>
 </td>
@@ -355,7 +314,7 @@ properties used to qualify the lookup.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
         <td><span class="parametername">options</span></td>
         <td><p>A bag of options that control this resource's behavior</p>
 </td>
@@ -384,7 +343,7 @@ properties used to qualify the lookup.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ddf2ae47f435dcf52990d7ddba62e8b2641c977d/sdk/dotnet/Slb/MasterSlaveServerGroup.cs/#L41" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

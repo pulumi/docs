@@ -151,11 +151,14 @@ should perform all startup logic they need in their <code>Main</code> method and
 <p>}</code></p>
 <p>
 Importantly: Cloud resources cannot be created outside of the lambda passed to any of the
-<a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_System_Action_">RunAsync(Action)</a> overloads.  Because cloud Resource construction is
-inherently asynchronous, the result of this function is a <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span> which should
+<a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_RunAsync_Action_">RunAsync(Action)</a> overloads.  Because cloud Resource construction is
+inherently asynchronous, the result of this function is a <see cref="!:Task&lt;T>"></see> which should
 then be returned or awaited.  This will ensure that any problems that are encountered during
 the running of the program are properly reported.  Failure to do this may lead to the
 program ending early before all resources are properly registered.
+</section>
+      <h4><a class="xref" href="Pulumi.DeploymentInstance.html">DeploymentInstance</a></h4>
+      <section><p>Metadata of the deployment that is currently running. Accessible via <a class="xref" href="Pulumi.Deployment.html#Pulumi_Deployment_Instance">Instance</a>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.DictionaryResourceArgs.html">DictionaryResourceArgs</a></h4>
       <section><p>A special type of <a class="xref" href="Pulumi.ResourceArgs.html">ResourceArgs</a> with resource inputs represented
@@ -165,12 +168,12 @@ since it's too low-level and provides low safety. Its target scenario are
 resources with a very dynamic shape of inputs.
 The input dictionary may only contain objects that are serializable by
 Pulumi, i.e only the following types are allowed:</p>
-<ul><li>Primitive types: <span class="xref">System.String</span>, <span class="xref">System.Double</span>,
-<span class="xref">System.Int32</span>, <span class="xref">System.Boolean</span></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
+<ul><li>Primitive types: <see cref="!:System.String"></see>, <see cref="!:System.Double"></see>,
+<see cref="!:System.Int32"></see>, <see cref="!:System.Boolean"></see></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
 <a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><see cref="!:System.Text.Json.JsonElement"></see>
 </li><li>Generic collections of the above:
-<span class="xref">System.Collections.Immutable.ImmutableArray&lt;T&gt;</span>, <span class="xref">System.Collections.Immutable.ImmutableDictionary&lt;TKey, TValue&gt;</span>
-with <span class="xref">System.String</span> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
+<see cref="!:ImmutableArray&lt;T>"></see>, <see cref="!:ImmutableDictionary&lt;TKey,TValue>"></see>
+with <see cref="!:System.String"></see> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
 </section>
       <h4><a class="xref" href="Pulumi.FileArchive.html">FileArchive</a></h4>
       <section><p>A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a
@@ -212,7 +215,7 @@ backing field for the property.  i.e.</p>
 The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e. the individual values
 can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
 <p>
-<a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> differs from a normal <span class="xref">System.Collections.Generic.IList`1</span> in that it is itself
+<a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> differs from a normal <see cref="!:IList&lt;T>"></see> in that it is itself
 an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an <a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a> will accept not just a list but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 of a list.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 list from some <a class="xref" href="Pulumi.Resource.html">Resource</a> needs to be passed into another <a class="xref" href="Pulumi.Resource.html">Resource</a>.  Or for cases where creating the list invariably produces an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a> because its resultant value is dependent on other <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.
@@ -235,11 +238,11 @@ or
     });</code></pre>
 </section>
       <h4><a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a></h4>
-      <section><p>A mapping of <span class="xref">System.String</span>s to values that can be passed in as the arguments to a
+      <section><p>A mapping of <see cref="!:System.String"></see>s to values that can be passed in as the arguments to a
 <a class="xref" href="Pulumi.Resource.html">Resource</a>. The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e.
 the individual values can be concrete values or <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
 <p>
-<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> differs from a normal <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span> in that it is
+<a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> differs from a normal <see cref="!:IDictionary&lt;K,V>"></see> in that it is
 itself an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>.  For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> that accepts an
 <a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a> will accept not just a dictionary but an <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
 of a dictionary as well.  This is important for cases where the <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>
@@ -265,13 +268,13 @@ this form:
 </section>
       <h4><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a></h4>
       <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that can be one of two different types. For
-example, it might potentially be an <span class="xref">System.Int32</span> some of the time or a <span class="xref">System.String</span> in other cases.</p>
+example, it might potentially be an <see cref="!:System.Int32"></see> some of the time or a <see cref="!:System.String"></see> in other cases.</p>
 </section>
       <h4><a class="xref" href="Pulumi.InvokeArgs.html">InvokeArgs</a></h4>
       <section><p>Base type for all invoke argument classes.</p>
 </section>
       <h4><a class="xref" href="Pulumi.InvokeOptions.html">InvokeOptions</a></h4>
-      <section><p>Options to help control the behavior of <a class="xref" href="Pulumi.IDeployment.html#Pulumi_IDeployment_InvokeAsync__1_System_String_Pulumi_InvokeArgs_Pulumi_InvokeOptions_">InvokeAsync&lt;T&gt;(String, InvokeArgs, InvokeOptions)</a>.</p>
+      <section><p>Options to help control the behavior of <span class="xref">Pulumi.IDeployment.InvokeAsync``1(System.String,Pulumi.InvokeArgs,Pulumi.InvokeOptions)</span>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Log.html">Log</a></h4>
       <section><p>Logging functions that can be called from a .NET application that will be logged to the
@@ -286,7 +289,7 @@ runs, and will be available from the Web console afterwards.</p>
 created, these are represented using the special <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s type, which
 internally represents two things:</p>
 <ol><li></li><li></li></ol>
-In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>.
+In fact, <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s is quite similar to <see cref="!:Task&lt;TResult>"></see>.
 Additionally, they carry along dependency information.
 <p>
 The output properties of all resource objects in Pulumi have type <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.
@@ -299,7 +302,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
       <h4><a class="xref" href="Pulumi.OutputConstructorAttribute.html">OutputConstructorAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex
 property type so that it can be instantiated by the Pulumi runtime.</p>
-<p>The constructor should contain parameters that map to the resultant <span class="xref">Google.Protobuf.WellKnownTypes.Struct.Fields</span> returned by the engine.</p>
+<p>The constructor should contain parameters that map to the resultant <see cref="!:Struct.Fields"></see> returned by the engine.</p>
 </section>
       <h4><a class="xref" href="Pulumi.OutputExtensions.html">OutputExtensions</a></h4>
       <section><p>Extension methods for <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.</p>
@@ -374,13 +377,9 @@ This is used to hold a value that could take on several different, but fixed, ty
 one of the types can be in use at any one time. It can be thought of as a type that has
 several &quot;cases,&quot; each of which should be handled correctly when that type is manipulated.
 <p>
-For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> property that could either store a <span class="xref">System.Int32</span>
-or a <span class="xref">System.String</span> can be represented as <code>Output&lt;int, string></code>.  The <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> version of this is <a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a>.
+For example, a <a class="xref" href="Pulumi.Resource.html">Resource</a> property that could either store a <see cref="!:System.Int32"></see>
+or a <see cref="!:System.String"></see> can be represented as <code>Output&lt;int, string></code>.  The <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> version of this is <a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a>.
 </section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="Pulumi.IDeployment.html">IDeployment</a></h4>
-      <section></section>
     <h3 id="delegates">Delegates
   </h3>
       <h4><a class="xref" href="Pulumi.ResourceTransformation.html">ResourceTransformation</a></h4>
