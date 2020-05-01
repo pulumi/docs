@@ -40,21 +40,21 @@ git_sha: "f9a6e692ebc3c1fb9593c250d89af9fd37cab808"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="clientId" data-link-title="clientId">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L9">
         let <strong>clientId</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientId&#34;) || utilities.getEnv(&#34;KEYCLOAK_CLIENT_ID&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientSecret" data-link-title="clientSecret">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L10">
         let <strong>clientSecret</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientSecret&#34;) || utilities.getEnv(&#34;KEYCLOAK_CLIENT_SECRET&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientTimeout" data-link-title="clientTimeout">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L14">
         let <strong>clientTimeout</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ git_sha: "f9a6e692ebc3c1fb9593c250d89af9fd37cab808"
 Timeout (in seconds) of the Keycloak client
 
 <h3 class="pdoc-module-header" id="initialLogin" data-link-title="initialLogin">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L18">
         let <strong>initialLogin</strong>
     </a>
 </h3>
@@ -74,21 +74,21 @@ Timeout (in seconds) of the Keycloak client
 Whether or not to login to Keycloak instance on provider initialization
 
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L19">
         let <strong>password</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;) || utilities.getEnv(&#34;KEYCLOAK_PASSWORD&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="realm" data-link-title="realm">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L20">
         let <strong>realm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> realm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;realm&#34;) || (utilities.getEnv(&#34;KEYCLOAK_REALM&#34;) || &#34;master&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="rootCaCertificate" data-link-title="rootCaCertificate">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L24">
         let <strong>rootCaCertificate</strong>
     </a>
 </h3>
@@ -98,7 +98,7 @@ Whether or not to login to Keycloak instance on provider initialization
 Allows x509 calls using an unknown CA certificate (for development purposes)
 
 <h3 class="pdoc-module-header" id="tlsInsecureSkipVerify" data-link-title="tlsInsecureSkipVerify">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L29">
         let <strong>tlsInsecureSkipVerify</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ Allows ignoring insecure certificates when set to true. Defaults to false. Disab
 should be avoided.
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L33">
         let <strong>url</strong>
     </a>
 </h3>
@@ -119,7 +119,7 @@ should be avoided.
 The base URL of the Keycloak instance, before `/auth`
 
 <h3 class="pdoc-module-header" id="username" data-link-title="username">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/f9a6e692ebc3c1fb9593c250d89af9fd37cab808/sdk/nodejs/config/vars.ts#L34">
         let <strong>username</strong>
     </a>
 </h3>

@@ -32,7 +32,7 @@ git_sha: "f1f66d6c8f13a924834997cb9f08082eb384c847"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="privateKey" data-link-title="privateKey">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/f1f66d6c8f13a924834997cb9f08082eb384c847/sdk/nodejs/config/vars.ts#L12">
         let <strong>privateKey</strong>
     </a>
 </h3>
@@ -42,7 +42,7 @@ git_sha: "f1f66d6c8f13a924834997cb9f08082eb384c847"
 MongoDB Atlas Programmatic Private Key
 
 <h3 class="pdoc-module-header" id="publicKey" data-link-title="publicKey">
-    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-mongodbatlas/blob/f1f66d6c8f13a924834997cb9f08082eb384c847/sdk/nodejs/config/vars.ts#L16">
         let <strong>publicKey</strong>
     </a>
 </h3>

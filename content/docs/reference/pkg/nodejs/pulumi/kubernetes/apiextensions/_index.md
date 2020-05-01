@@ -32,7 +32,7 @@ git_sha: "4d130407f48a2c7408f3593f23f64e1932d4022f"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CustomResource" data-link-title="CustomResource">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L88">
         Resource <strong>CustomResource</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ instantiate this as a Pulumi resource, one could call `new CustomResource`, pass
 `ServiceMonitor` resource definition as an argument.
 
 <h4 class="pdoc-member-header" id="CustomResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L130"> <b>constructor</b></a>
 </h4>
 
 
@@ -59,7 +59,7 @@ Create a CustomResource resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CustomResource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L121">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L121">method <b>get</b></a>
 </h4>
 
 
@@ -73,21 +73,21 @@ Kubernetes convention) the ID becomes default/[name].
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="CustomResource-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L129">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L129">method <b>getInputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>getInputs(): <a href='#CustomResourceArgs'>CustomResourceArgs</a></code></pre>
 
 <h4 class="pdoc-member-header" id="CustomResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L88">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L88">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CustomResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L88">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L88">method <b>isInstance</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CustomResource-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L95">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L95">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="CustomResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -118,7 +118,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CustomResource-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L103">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L103">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="CustomResource-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L109">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L109">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ Standard object metadata; More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 <h4 class="pdoc-member-header" id="CustomResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L88">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L88">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CustomResourceArgs" data-link-title="CustomResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L33">
         interface <strong>CustomResourceArgs</strong>
     </a>
 </h3>
@@ -167,7 +167,7 @@ NOTE: This type is fairly loose, since other than `apiVersion` and `kind`, there
 fields required across all CRDs.
 
 <h4 class="pdoc-member-header" id="CustomResourceArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L40">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L40">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="CustomResourceArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L48">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L48">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="CustomResourceArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ Standard object metadata; More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 <h3 class="pdoc-module-header" id="CustomResourceGetOptions" data-link-title="CustomResourceGetOptions">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">
         interface <strong>CustomResourceGetOptions</strong>
     </a>
 </h3>
@@ -209,7 +209,7 @@ CustomResourceGetOptions uniquely identifies a Kubernetes CustomResource, primar
 in supplied to `apiextensions.CustomResource#get`.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-additionalSecretOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>additionalSecretOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>additionalSecretOutputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalSecretOutputs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -219,7 +219,7 @@ the resource provider and pulumi engine already determine based on inputs to you
 to mark certain ouputs as a secrets on a per resource basis.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>aliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a> | Alias&gt;[];</code></pre>
@@ -227,7 +227,7 @@ to mark certain ouputs as a secrets on a per resource basis.
 An optional list of aliases to treat this resource as matching.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L67">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L67">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -236,7 +236,7 @@ apiVersion is the API version of the apiExtensions.CustomResource we wish to sel
 as specified by the CustomResourceDefinition that defines it on the API server.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-customTimeouts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>customTimeouts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>customTimeouts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customTimeouts?: CustomTimeouts;</code></pre>
@@ -244,7 +244,7 @@ as specified by the CustomResourceDefinition that defines it on the API server.
 An optional customTimeouts configuration block.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-deleteBeforeReplace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>deleteBeforeReplace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>deleteBeforeReplace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteBeforeReplace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -253,7 +253,7 @@ When set to true, deleteBeforeReplace indicates that this resource should be del
 is created when replacement is necessary.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-dependsOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>dependsOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>dependsOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dependsOn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>&gt;;</code></pre>
@@ -261,7 +261,7 @@ is created when replacement is necessary.
 An optional additional explicit dependencies on other resources.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;;</code></pre>
@@ -270,7 +270,7 @@ An ID for the Kubernetes resource to retrieve. Takes the form [namespace]/[name]
 [name].
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-ignoreChanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>ignoreChanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>ignoreChanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreChanges?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -278,7 +278,7 @@ An ID for the Kubernetes resource to retrieve. Takes the form [namespace]/[name]
 Ignore changes to any of the specified properties.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>;</code></pre>
@@ -289,7 +289,7 @@ current state. Once a resource has been imported, the import property must be re
 options.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L73">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L73">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ kind is the kind of the apiextensions.CustomResource we wish to select, as speci
 the CustomResourceDefinition that defines it on the API server.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a>;</code></pre>
@@ -306,7 +306,7 @@ the CustomResourceDefinition that defines it on the API server.
 An optional parent resource to which this resource belongs.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-protect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>protect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>protect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -314,7 +314,7 @@ An optional parent resource to which this resource belongs.
 When set to true, protect ensures this resource cannot be deleted.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-provider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>provider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>provider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a>;</code></pre>
@@ -326,7 +326,7 @@ from the parent's provider bag (see also ComponentResourceOptions.providers).
 If this is a [ComponentResourceOptions] do not provide both [provider] and [providers]
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>transformations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformations?: ResourceTransformation[];</code></pre>
@@ -336,7 +336,7 @@ transformations are applied in order, and are applied prior to transformation ap
 parents walking from the resource up to the stack.
 
 <h4 class="pdoc-member-header" id="CustomResourceGetOptions-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/{{< param git_sha >}}/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4d130407f48a2c7408f3593f23f64e1932d4022f/sdk/nodejs/apiextensions/CustomResource.ts#L62">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

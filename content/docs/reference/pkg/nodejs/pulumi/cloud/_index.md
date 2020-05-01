@@ -91,7 +91,7 @@ import * as cloud from "@pulumi/cloud";
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Action" data-link-title="Action">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L20">
         type <strong>Action</strong>
     </a>
 </h3>
@@ -101,7 +101,7 @@ import * as cloud from "@pulumi/cloud";
 Action is a handler that performs an action in response to a timer firing.
 
 <h3 class="pdoc-module-header" id="API" data-link-title="API">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L160">
         interface <strong>API</strong>
     </a>
 </h3>
@@ -129,7 +129,7 @@ route handler can be used to provide dynamic decisions about sub-routing
 within a static path.
 
 <h4 class="pdoc-member-header" id="API-all">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L230">method <b>all</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L230">method <b>all</b></a>
 </h4>
 
 
@@ -139,7 +139,7 @@ within a static path.
 Routes all HTTP methods on the given path to the provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-attachCustomDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L243">method <b>attachCustomDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L243">method <b>attachCustomDomain</b></a>
 </h4>
 
 
@@ -157,7 +157,7 @@ _Note_: It is strongly encouraged to store certificates in config
 variables and not in source code.
 
 <h4 class="pdoc-member-header" id="API-delete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L216">method <b>delete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L216">method <b>delete</b></a>
 </h4>
 
 
@@ -167,7 +167,7 @@ variables and not in source code.
 Routes DELETE requests on the given path to the provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L195">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L195">method <b>get</b></a>
 </h4>
 
 
@@ -177,7 +177,7 @@ Routes DELETE requests on the given path to the provided handler(s).
 Routes GET requests on the given path to the provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L223">method <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L223">method <b>options</b></a>
 </h4>
 
 
@@ -187,7 +187,7 @@ Routes GET requests on the given path to the provided handler(s).
 Routes OPTIONS requests on the given path to the provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-post">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L209">method <b>post</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L209">method <b>post</b></a>
 </h4>
 
 
@@ -197,7 +197,7 @@ Routes OPTIONS requests on the given path to the provided handler(s).
 Routes POST requests on the given path to the provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-proxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L179">method <b>proxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L179">method <b>proxy</b></a>
 </h4>
 
 
@@ -207,7 +207,7 @@ Routes POST requests on the given path to the provided handler(s).
 proxy forwards an HTTP request to a target URL or Endpoint.
 
 <h4 class="pdoc-member-header" id="API-publish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L253">method <b>publish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L253">method <b>publish</b></a>
 </h4>
 
 
@@ -220,7 +220,7 @@ This should be called after describing desired routes and domains.
 Throws an error if called multiple times on the same endpoint.
 
 <h4 class="pdoc-member-header" id="API-put">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L202">method <b>put</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L202">method <b>put</b></a>
 </h4>
 
 
@@ -230,7 +230,7 @@ Throws an error if called multiple times on the same endpoint.
 Routes PUT requests on the given path to the provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L188">method <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L188">method <b>route</b></a>
 </h4>
 
 
@@ -241,7 +241,7 @@ Routes any requests with given HTTP method on the given path to the
 provided handler(s).
 
 <h4 class="pdoc-member-header" id="API-static">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L169">method <b>static</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L169">method <b>static</b></a>
 </h4>
 
 
@@ -251,21 +251,21 @@ provided handler(s).
 static serves a file or directory from within the source folder at the requested path.
 
 <h3 class="pdoc-module-header" id="APIConstructor" data-link-title="APIConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L120">
         interface <strong>APIConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>APIConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="APIConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> APIConstructor(apiName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>)</code></pre>
 
 <h3 class="pdoc-module-header" id="Bucket" data-link-title="Bucket">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L67">
         interface <strong>Bucket</strong>
     </a>
 </h3>
@@ -279,7 +279,7 @@ Gets are read-after-write consistent for puts of new blobs, and eventually consi
 Blobs in a bucket are encrypted at rest by default.
 
 <h4 class="pdoc-member-header" id="Bucket-delete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L105">method <b>delete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L105">method <b>delete</b></a>
 </h4>
 
 
@@ -289,7 +289,7 @@ Blobs in a bucket are encrypted at rest by default.
 Delete a blob from the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L91">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L91">method <b>get</b></a>
 </h4>
 
 
@@ -299,7 +299,7 @@ Delete a blob from the bucket.
 Get a blob from the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-onDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L83">method <b>onDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L83">method <b>onDelete</b></a>
 </h4>
 
 
@@ -309,7 +309,7 @@ Get a blob from the bucket.
 Registers a handler to be notified when blobs are deleted from the bucket.
 
 <h4 class="pdoc-member-header" id="Bucket-onPut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L75">method <b>onPut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L75">method <b>onPut</b></a>
 </h4>
 
 
@@ -319,7 +319,7 @@ Registers a handler to be notified when blobs are deleted from the bucket.
 Registers a handler to be notified when blobs are put into the bucket (created or updated).
 
 <h4 class="pdoc-member-header" id="Bucket-put">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L98">method <b>put</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L98">method <b>put</b></a>
 </h4>
 
 
@@ -329,14 +329,14 @@ Registers a handler to be notified when blobs are put into the bucket (created o
 Insert a blob into the bucket.
 
 <h3 class="pdoc-module-header" id="BucketConstructor" data-link-title="BucketConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L48">
         interface <strong>BucketConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BucketConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="BucketConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -349,7 +349,7 @@ Creates a new Bucket.
 * `opts` A bag of options that controls how this resource behaves.
 
 <h3 class="pdoc-module-header" id="BucketFilter" data-link-title="BucketFilter">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L43">
         interface <strong>BucketFilter</strong>
     </a>
 </h3>
@@ -359,17 +359,17 @@ Creates a new Bucket.
 BucketFilter specifies filters to apply to an [onPut] or [onDelete] subscription.
 
 <h4 class="pdoc-member-header" id="BucketFilter-keyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L44">property <b>keyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L44">property <b>keyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="BucketFilter-keySuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L45">property <b>keySuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L45">property <b>keySuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keySuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="BucketHandler" data-link-title="BucketHandler">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L38">
         type <strong>BucketHandler</strong>
     </a>
 </h3>
@@ -379,7 +379,7 @@ BucketFilter specifies filters to apply to an [onPut] or [onDelete] subscription
 BucketHandler is the callback that handles an [onPut] or [onDelete] event.
 
 <h3 class="pdoc-module-header" id="BucketHandlerArgs" data-link-title="BucketHandlerArgs">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L20">
         interface <strong>BucketHandlerArgs</strong>
     </a>
 </h3>
@@ -389,7 +389,7 @@ BucketHandler is the callback that handles an [onPut] or [onDelete] event.
 BucketHandlerArgs are the arguments passed to an [onPut] or [onDelete] handler.
 
 <h4 class="pdoc-member-header" id="BucketHandlerArgs-eventTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L32">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L32">property <b>eventTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -397,7 +397,7 @@ BucketHandlerArgs are the arguments passed to an [onPut] or [onDelete] handler.
 The time (in ISO-8601 format) when the [put] or [delete] was completed.
 
 <h4 class="pdoc-member-header" id="BucketHandlerArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L24">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L24">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -405,7 +405,7 @@ The time (in ISO-8601 format) when the [put] or [delete] was completed.
 The key that was updated or deleted by the operation.
 
 <h4 class="pdoc-member-header" id="BucketHandlerArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/bucket.ts#L28">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/bucket.ts#L28">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -413,7 +413,7 @@ The key that was updated or deleted by the operation.
 The size, in bytes, of the blob that was [put].
 
 <h3 class="pdoc-module-header" id="CacheFrom" data-link-title="CacheFrom">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L126">
         interface <strong>CacheFrom</strong>
     </a>
 </h3>
@@ -424,7 +424,7 @@ CacheFrom may be used to specify build stages to use for the Docker build cache.
 implicitly included.
 
 <h4 class="pdoc-member-header" id="CacheFrom-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L131">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L131">property <b>stages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -433,7 +433,7 @@ An optional list of build stages to use for caching. Each build stage in this li
 pushed to the target repository. A given stage's image will be tagged as "[stage-name]".
 
 <h3 class="pdoc-module-header" id="Container" data-link-title="Container">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L41">
         interface <strong>Container</strong>
     </a>
 </h3>
@@ -443,7 +443,7 @@ pushed to the target repository. A given stage's image will be tagged as "[stage
 Container specifies the metadata for a component of a Service.
 
 <h4 class="pdoc-member-header" id="Container-build">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L53">property <b>build</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L53">property <b>build</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>build?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#ContainerBuild'>ContainerBuild</a>;</code></pre>
@@ -453,7 +453,7 @@ Container, or a ContainerBuild object with more detailed build instructions.  If
 built container will be tagged with that name, but otherwise will get an auto-generated image name.
 
 <h4 class="pdoc-member-header" id="Container-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L112">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L112">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -468,7 +468,7 @@ information about the Docker `CMD` parameter, go to
 https://docs.docker.com/engine/reference/builder/#cmd.
 
 <h4 class="pdoc-member-header" id="Container-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L69">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L69">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -477,7 +477,7 @@ Number of CPUs for the container to use. Maps to the Docker `--cpus` option - se
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h4 class="pdoc-member-header" id="Container-dockerLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L119">property <b>dockerLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L119">property <b>dockerLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -488,7 +488,7 @@ API](https://docs.docker.com/engine/api/v1.27/) and the --label option to [docke
 run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L64">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L64">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;};</code></pre>
@@ -497,7 +497,7 @@ Optional environment variables to set and make available to the container
 as it is running.
 
 <h4 class="pdoc-member-header" id="Container-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L58">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L58">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>function?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</code></pre>
@@ -506,7 +506,7 @@ The function code to use as the implementation of the contaner.  If `function` i
 neither `image` nor `build` are legal.
 
 <h4 class="pdoc-member-header" id="Container-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L47">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L47">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -516,7 +516,7 @@ pulled from the Docker Hub.  If `image` *and* `build` are specified, the `image`
 resulting image tag for the build image that gets pushed.
 
 <h4 class="pdoc-member-header" id="Container-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L77">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L77">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ https://docs.docker.com/engine/reference/commandline/run.
 This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
 
 <h4 class="pdoc-member-header" id="Container-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L87">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L87">property <b>memoryReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryReservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ https://docs.docker.com/engine/reference/commandline/run.
 This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
 
 <h4 class="pdoc-member-header" id="Container-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L94">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L94">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports?: <a href='#ContainerPort'>ContainerPort</a>[];</code></pre>
@@ -553,7 +553,7 @@ Maps to the Docker `--publish` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h4 class="pdoc-member-header" id="Container-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L101">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L101">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <a href='#ContainerVolumeMount'>ContainerVolumeMount</a>[];</code></pre>
@@ -564,7 +564,7 @@ the container at which to mount the volume.  Maps to the Docker
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h3 class="pdoc-module-header" id="ContainerBuild" data-link-title="ContainerBuild">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L137">
         interface <strong>ContainerBuild</strong>
     </a>
 </h3>
@@ -574,7 +574,7 @@ https://docs.docker.com/engine/reference/commandline/run.
 ContainerBuild may be used to specify detailed instructions about how to build a container.
 
 <h4 class="pdoc-member-header" id="ContainerBuild-args">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L154">property <b>args</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L154">property <b>args</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>args?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -583,7 +583,7 @@ An optional map of named build-time argument variables to set during the Docker 
 to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.
 
 <h4 class="pdoc-member-header" id="ContainerBuild-cacheFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L161">property <b>cacheFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L161">property <b>cacheFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacheFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <a href='#CacheFrom'>CacheFrom</a>;</code></pre>
@@ -594,7 +594,7 @@ image will be pulled and passed to --cache-from; if it is a CacheFrom object, th
 also be pulled and passed to --cache-from.
 
 <h4 class="pdoc-member-header" id="ContainerBuild-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L144">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L144">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -605,7 +605,7 @@ If not specified, the context defaults to the current working directory; if a re
 is relative to the current working directory that Pulumi is evaluating.
 
 <h4 class="pdoc-member-header" id="ContainerBuild-dockerfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L149">property <b>dockerfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L149">property <b>dockerfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerfile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -614,7 +614,7 @@ dockerfile may be used to override the default Dockerfile name and/or location. 
 to be a file named Dockerfile in the root of the build context.
 
 <h3 class="pdoc-module-header" id="ContainerPort" data-link-title="ContainerPort">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L166">
         interface <strong>ContainerPort</strong>
     </a>
 </h3>
@@ -624,7 +624,7 @@ to be a file named Dockerfile in the root of the build context.
 ContainerPort represents the information about how to expose a container port on a [Service].
 
 <h4 class="pdoc-member-header" id="ContainerPort-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L178">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L178">property <b>external</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -632,7 +632,7 @@ ContainerPort represents the information about how to expose a container port on
 Whether the port should be exposed externally.  Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ContainerPort-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L170">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L170">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -640,7 +640,7 @@ Whether the port should be exposed externally.  Defaults to `false`.
 The incoming port where the service exposes the endpoint.
 
 <h4 class="pdoc-member-header" id="ContainerPort-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L186">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L186">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='#ContainerProtocol'>ContainerProtocol</a>;</code></pre>
@@ -652,7 +652,7 @@ The protocol to use for exposing the service:
 * `https`: Expose HTTPS externally and HTTP to the container.
 
 <h4 class="pdoc-member-header" id="ContainerPort-targetPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L174">property <b>targetPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L174">property <b>targetPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -660,14 +660,14 @@ The protocol to use for exposing the service:
 The target port on the backing container.  Defaults to the value of [port].
 
 <h3 class="pdoc-module-header" id="ContainerProtocol" data-link-title="ContainerProtocol">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L189">
         type <strong>ContainerProtocol</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> ContainerProtocol = <span class='s2'>"tcp"</span> | <span class='s2'>"udp"</span> | <span class='s2'>"http"</span> | <span class='s2'>"https"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Containers" data-link-title="Containers">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L20">
         interface <strong>Containers</strong>
     </a>
 </h3>
@@ -677,24 +677,24 @@ The target port on the backing container.  Defaults to the value of [port].
 A collection of Containers
 
 <h3 class="pdoc-module-header" id="ContainerVolumeMount" data-link-title="ContainerVolumeMount">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L191">
         interface <strong>ContainerVolumeMount</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerVolumeMount</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerVolumeMount-containerPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L192">property <b>containerPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L192">property <b>containerPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerVolumeMount-sourceVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L193">property <b>sourceVolume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L193">property <b>sourceVolume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVolume: <a href='#Volume'>Volume</a>;</code></pre>
 <h3 class="pdoc-module-header" id="cron" data-link-title="cron">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L88">
         function <strong>cron</strong>
     </a>
 </h3>
@@ -706,7 +706,7 @@ A collection of Containers
 A cron timer, which fires on based on a specificied cron schedule.
 
 <h3 class="pdoc-module-header" id="daily" data-link-title="daily">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L99">
         function <strong>daily</strong>
     </a>
 </h3>
@@ -724,7 +724,7 @@ A daily timer, firing each day, on the day (at UTC midnight).
 A daily timer, firing at the specified UTC hour and minute each day.
 
 <h3 class="pdoc-module-header" id="DailySchedule" data-link-title="DailySchedule">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L46">
         interface <strong>DailySchedule</strong>
     </a>
 </h3>
@@ -734,7 +734,7 @@ A daily timer, firing at the specified UTC hour and minute each day.
 DailySchedule describes a time of day ([[hourUTC]] and [[minuteUTC]]) at which a daily timer should fire.
 
 <h4 class="pdoc-member-header" id="DailySchedule-hourUTC">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L50">property <b>hourUTC</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L50">property <b>hourUTC</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hourUTC?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -742,7 +742,7 @@ DailySchedule describes a time of day ([[hourUTC]] and [[minuteUTC]]) at which a
 The hour, in UTC, that the timer should fire.
 
 <h4 class="pdoc-member-header" id="DailySchedule-minuteUTC">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L54">property <b>minuteUTC</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L54">property <b>minuteUTC</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minuteUTC?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -750,7 +750,7 @@ The hour, in UTC, that the timer should fire.
 The minute, in UTC, that the timer should fire.
 
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L277">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L277">
         interface <strong>Domain</strong>
     </a>
 </h3>
@@ -761,7 +761,7 @@ Domain includes the domain name and certificate data to enable hosting an
 API on a custom domain.
 
 <h4 class="pdoc-member-header" id="Domain-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L285">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L285">property <b>certificateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateBody: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -769,7 +769,7 @@ API on a custom domain.
 An SSL/TLS certficicate issued for this domain (`cert.pem`).
 
 <h4 class="pdoc-member-header" id="Domain-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L294">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L294">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -778,7 +778,7 @@ The certificate chain for the SSL/TLS certificate provided for this
 domain (`chain.pem`).
 
 <h4 class="pdoc-member-header" id="Domain-certificatePrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L289">property <b>certificatePrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L289">property <b>certificatePrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePrivateKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -786,7 +786,7 @@ domain (`chain.pem`).
 An SSL/TLS private key issued for thie domain (`privkey.pem`).
 
 <h4 class="pdoc-member-header" id="Domain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L281">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L281">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -794,38 +794,38 @@ An SSL/TLS private key issued for thie domain (`privkey.pem`).
 The domain name to associate with the API.
 
 <h3 class="pdoc-module-header" id="Endpoint" data-link-title="Endpoint">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L274">
         interface <strong>Endpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Endpoint</span></code></pre>
 <h4 class="pdoc-member-header" id="Endpoint-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L275">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L275">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Endpoint-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L276">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L276">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="Endpoints" data-link-title="Endpoints">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L279">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L279">
         interface <strong>Endpoints</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Endpoints</span></code></pre>
 <h3 class="pdoc-module-header" id="HostOperatingSystem" data-link-title="HostOperatingSystem">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L24">
         type <strong>HostOperatingSystem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> HostOperatingSystem = <span class='s2'>"linux"</span> | <span class='s2'>"windows"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="HostPathVolume" data-link-title="HostPathVolume">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L230">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L230">
         interface <strong>HostPathVolume</strong>
     </a>
 </h3>
@@ -839,24 +839,24 @@ across different hosts.  This is not something that most containers will need, b
 a powerful escape hatch for some applications.
 
 <h4 class="pdoc-member-header" id="HostPathVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L231">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L231">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <span class='s2'>"HostPathVolume"</span>;</code></pre>
 <h4 class="pdoc-member-header" id="HostPathVolume-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L235">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L235">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="HostPathVolumeConstructor" data-link-title="HostPathVolumeConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L238">
         interface <strong>HostPathVolumeConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HostPathVolumeConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="HostPathVolumeConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L238"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L238"> <b>constructor</b></a>
 </h4>
 
 
@@ -866,7 +866,7 @@ a powerful escape hatch for some applications.
 Construct a new Volume with the given unique name.
 
 <h3 class="pdoc-module-header" id="HostProperties" data-link-title="HostProperties">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L29">
         interface <strong>HostProperties</strong>
     </a>
 </h3>
@@ -876,7 +876,7 @@ Construct a new Volume with the given unique name.
 HostProperties describes the kind of host where a service or task can run.
 
 <h4 class="pdoc-member-header" id="HostProperties-os">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L35">property <b>os</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L35">property <b>os</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>os?: <a href='#HostOperatingSystem'>HostOperatingSystem</a>;</code></pre>
@@ -886,7 +886,7 @@ The operating system of the host.
 Default is "linux".
 
 <h3 class="pdoc-module-header" id="hourly" data-link-title="hourly">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L120">
         function <strong>hourly</strong>
     </a>
 </h3>
@@ -904,7 +904,7 @@ An hourly timer, firing each hour, on the hour.
 An hourly timer, firing at the specified UTC minute each hour.
 
 <h3 class="pdoc-module-header" id="HourlySchedule" data-link-title="HourlySchedule">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L60">
         interface <strong>HourlySchedule</strong>
     </a>
 </h3>
@@ -914,7 +914,7 @@ An hourly timer, firing at the specified UTC minute each hour.
 HourlySchedule describes a time of the hour ([[minuteUTC]]) at which an hourly timer should fire.
 
 <h4 class="pdoc-member-header" id="HourlySchedule-minuteUTC">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L64">property <b>minuteUTC</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L64">property <b>minuteUTC</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minuteUTC?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -922,7 +922,7 @@ HourlySchedule describes a time of the hour ([[minuteUTC]]) at which an hourly t
 The minute, in UTC, that the timer should fire.
 
 <h3 class="pdoc-module-header" id="HttpDeployment" data-link-title="HttpDeployment">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L260">
         interface <strong>HttpDeployment</strong>
     </a>
 </h3>
@@ -933,7 +933,7 @@ HttpDeployment represents an API that has been deployed and is
 available at a URL.
 
 <h4 class="pdoc-member-header" id="HttpDeployment-customDomainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L270">property <b>customDomainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L270">property <b>customDomainNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customDomainNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</code></pre>
@@ -943,7 +943,7 @@ previous call to attachCustomDomain on the API.  Each name
 should be mapped using a DNS A record.
 
 <h4 class="pdoc-member-header" id="HttpDeployment-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L264">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L264">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ should be mapped using a DNS A record.
 The URL at which the HttpDeployment is available to the Internet.
 
 <h3 class="pdoc-module-header" id="HttpEndpoint" data-link-title="HttpEndpoint">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L300">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L300">
         type <strong>HttpEndpoint</strong>
     </a>
 </h3>
@@ -962,7 +962,7 @@ HttpEndpoint has been renamed to API
 </div>
 <pre class="highlight"><code><span class='kd'>type</span> HttpEndpoint = <a href='#API'>API</a>;</code></pre>
 <h3 class="pdoc-module-header" id="interval" data-link-title="interval">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L75">
         function <strong>interval</strong>
     </a>
 </h3>
@@ -974,7 +974,7 @@ HttpEndpoint has been renamed to API
 An interval timer, which fires on a regular time interval.
 
 <h3 class="pdoc-module-header" id="IntervalRate" data-link-title="IntervalRate">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L28">
         interface <strong>IntervalRate</strong>
     </a>
 </h3>
@@ -986,7 +986,7 @@ IntervalRate describes the rate at which a timer will fire.
 At least one of [[minutes]], [[hours]] or [[days]] must be provided.
 
 <h4 class="pdoc-member-header" id="IntervalRate-days">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L40">property <b>days</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L40">property <b>days</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>days?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -994,7 +994,7 @@ At least one of [[minutes]], [[hours]] or [[days]] must be provided.
 The number of days in the interval.  Must be a positive integer.
 
 <h4 class="pdoc-member-header" id="IntervalRate-hours">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L36">property <b>hours</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L36">property <b>hours</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hours?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1002,7 +1002,7 @@ The number of days in the interval.  Must be a positive integer.
 The number of hours in the interval.  Must be a positive integer.
 
 <h4 class="pdoc-member-header" id="IntervalRate-minutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/timer.ts#L32">property <b>minutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/timer.ts#L32">property <b>minutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minutes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1010,7 +1010,7 @@ The number of hours in the interval.  Must be a positive integer.
 The number of minutes in the interval.  Must be a positive integer.
 
 <h3 class="pdoc-module-header" id="PrimaryKeyType" data-link-title="PrimaryKeyType">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L21">
         type <strong>PrimaryKeyType</strong>
     </a>
 </h3>
@@ -1021,7 +1021,7 @@ The available types for primary keys. The default primary key type is
 `string`.
 
 <h3 class="pdoc-module-header" id="Request" data-link-title="Request">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L21">
         interface <strong>Request</strong>
     </a>
 </h3>
@@ -1031,7 +1031,7 @@ The available types for primary keys. The default primary key type is
 Request represents an API request.
 
 <h4 class="pdoc-member-header" id="Request-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L58">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L58">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1039,7 +1039,7 @@ Request represents an API request.
 The base url on which this http request was served.
 
 <h4 class="pdoc-member-header" id="Request-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L25">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L25">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body: Buffer;</code></pre>
@@ -1047,7 +1047,7 @@ The base url on which this http request was served.
 The body of the HTTP request.
 
 <h4 class="pdoc-member-header" id="Request-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L38">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L38">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers: {[header: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]};</code></pre>
@@ -1055,7 +1055,7 @@ The body of the HTTP request.
 The headers of the HTTP request.
 
 <h4 class="pdoc-member-header" id="Request-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L62">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L62">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1063,7 +1063,7 @@ The headers of the HTTP request.
 The hostname of the request.
 
 <h4 class="pdoc-member-header" id="Request-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L29">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L29">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1071,7 +1071,7 @@ The hostname of the request.
 The method of the HTTP request.
 
 <h4 class="pdoc-member-header" id="Request-params">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L34">property <b>params</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L34">property <b>params</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>params: {[param: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1080,7 +1080,7 @@ The path parameters of the HTTP request. Each `{param}` in the matched
 route is available as a property of this oject.
 
 <h4 class="pdoc-member-header" id="Request-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L50">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L50">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1088,7 +1088,7 @@ route is available as a property of this oject.
 The raw path from the HTTP request.
 
 <h4 class="pdoc-member-header" id="Request-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L54">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L54">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1096,7 +1096,7 @@ The raw path from the HTTP request.
 The protocol of the request (e.g. HTTP/HTTPS).
 
 <h4 class="pdoc-member-header" id="Request-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L46">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L46">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: {[query: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]};</code></pre>
@@ -1104,7 +1104,7 @@ The protocol of the request (e.g. HTTP/HTTPS).
 The query parameters parsed from the query string of the request URL.
 
 <h4 class="pdoc-member-header" id="Request-rawHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L42">property <b>rawHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L42">property <b>rawHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rawHeaders: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1112,7 +1112,7 @@ The query parameters parsed from the query string of the request URL.
 The headers of the HTTP request.
 
 <h3 class="pdoc-module-header" id="Response" data-link-title="Response">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L68">
         interface <strong>Response</strong>
     </a>
 </h3>
@@ -1122,7 +1122,7 @@ The headers of the HTTP request.
 Response represents the response to an API request.
 
 <h4 class="pdoc-member-header" id="Response-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L97">method <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L97">method <b>end</b></a>
 </h4>
 
 
@@ -1133,7 +1133,7 @@ Sends the HTTP response, optionally including data to write to the HTTP
 response body.
 
 <h4 class="pdoc-member-header" id="Response-getHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L82">method <b>getHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L82">method <b>getHeader</b></a>
 </h4>
 
 
@@ -1143,7 +1143,7 @@ response body.
 Gets the Headers for the Response
 
 <h4 class="pdoc-member-header" id="Response-json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L102">method <b>json</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L102">method <b>json</b></a>
 </h4>
 
 
@@ -1154,7 +1154,7 @@ JSON serializes an object, writes it to the HTTP response body, and sends
 the HTTP response.
 
 <h4 class="pdoc-member-header" id="Response-redirect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L107">method <b>redirect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L107">method <b>redirect</b></a>
 </h4>
 
 
@@ -1168,7 +1168,7 @@ the optional status code, defaulting to 302.
 <pre class="highlight"><code><span class='kd'></span>redirect(status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Response-setHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L87">method <b>setHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L87">method <b>setHeader</b></a>
 </h4>
 
 
@@ -1179,7 +1179,7 @@ Sets a header on the HTTP response and returns the `Response` for
 chaining operations.
 
 <h4 class="pdoc-member-header" id="Response-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L78">method <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L78">method <b>status</b></a>
 </h4>
 
 
@@ -1190,7 +1190,7 @@ Sets the HTTP response status code and returns a `Response` for chaining
 operations.
 
 <h4 class="pdoc-member-header" id="Response-write">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L92">method <b>write</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L92">method <b>write</b></a>
 </h4>
 
 
@@ -1201,7 +1201,7 @@ Writes a string to the HTTP response body and returns the `Response` for
 chaining operations.
 
 <h4 class="pdoc-member-header" id="Response-locals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L73">property <b>locals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L73">property <b>locals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locals: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -1210,7 +1210,7 @@ Object containing local variables scoped to a single request. Useful for
 exposing request-level information such as user settings.
 
 <h3 class="pdoc-module-header" id="RouteHandler" data-link-title="RouteHandler">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L118">
         type <strong>RouteHandler</strong>
     </a>
 </h3>
@@ -1224,14 +1224,14 @@ invoke `next` to pass control to the next available handler on the route for
 further processing.
 
 <h3 class="pdoc-module-header" id="ServeStaticOptions" data-link-title="ServeStaticOptions">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L126">
         interface <strong>ServeStaticOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServeStaticOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="ServeStaticOptions-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L131">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L131">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1240,7 +1240,7 @@ The `content-type` to serve the file as.  Only valid when localPath points to a 
 localPath points to a directory, the content types for all files will be inferred.
 
 <h4 class="pdoc-member-header" id="ServeStaticOptions-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/api.ts#L136">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/api.ts#L136">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1249,7 +1249,7 @@ By default API.static will also serve 'index.html' in response to a request on a
 directory. To disable this set false or to supply a new index pass a string.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L290">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L290">
         interface <strong>Service</strong>
     </a>
 </h3>
@@ -1261,7 +1261,7 @@ collection of container specifications are provided to define the compute
 that will run inside this service.
 
 <h4 class="pdoc-member-header" id="Service-getEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L316">method <b>getEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L316">method <b>getEndpoint</b></a>
 </h4>
 
 
@@ -1276,7 +1276,7 @@ first exposed port is used.
 Only usable on the inside.
 
 <h4 class="pdoc-member-header" id="Service-defaultEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L306">property <b>defaultEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L306">property <b>defaultEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Endpoint'>Endpoint</a>&gt;;</code></pre>
@@ -1286,7 +1286,7 @@ can also be retrieved by using the 'Service.endpoints' property.  Note: this val
 may not be present if the service does not actually expose any endpoints.
 
 <h4 class="pdoc-member-header" id="Service-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L299">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L299">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Endpoints'>Endpoints</a>&gt;;</code></pre>
@@ -1295,12 +1295,12 @@ The exposed hostname and port for connecting to the given containerName
 on the given containerPort.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L291">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L291">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceArguments" data-link-title="ServiceArguments">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L252">
         interface <strong>ServiceArguments</strong>
     </a>
 </h3>
@@ -1312,7 +1312,7 @@ single-container scenarios, or you may specify that information using the contai
 is specified in-line, it is implicitly given the name "default".
 
 <h4 class="pdoc-member-header" id="ServiceArguments-build">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L53">property <b>build</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L53">property <b>build</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>build?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#ContainerBuild'>ContainerBuild</a>;</code></pre>
@@ -1322,7 +1322,7 @@ Container, or a ContainerBuild object with more detailed build instructions.  If
 built container will be tagged with that name, but otherwise will get an auto-generated image name.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L112">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L112">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ information about the Docker `CMD` parameter, go to
 https://docs.docker.com/engine/reference/builder/#cmd.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L256">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L256">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containers?: <a href='#Containers'>Containers</a>;</code></pre>
@@ -1345,7 +1345,7 @@ https://docs.docker.com/engine/reference/builder/#cmd.
 A collection of containers that will be deployed as part of this Service, if there are multiple.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L69">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L69">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1354,7 +1354,7 @@ Number of CPUs for the container to use. Maps to the Docker `--cpus` option - se
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-dockerLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L119">property <b>dockerLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L119">property <b>dockerLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -1365,7 +1365,7 @@ API](https://docs.docker.com/engine/api/v1.27/) and the --label option to [docke
 run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="ServiceArguments-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L64">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L64">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;};</code></pre>
@@ -1374,7 +1374,7 @@ Optional environment variables to set and make available to the container
 as it is running.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L58">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L58">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>function?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</code></pre>
@@ -1383,7 +1383,7 @@ The function code to use as the implementation of the contaner.  If `function` i
 neither `image` nor `build` are legal.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L265">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L265">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='#HostProperties'>HostProperties</a>;</code></pre>
@@ -1391,7 +1391,7 @@ neither `image` nor `build` are legal.
 The properties of the host where this service can run.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L47">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L47">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ pulled from the Docker Hub.  If `image` *and* `build` are specified, the `image`
 resulting image tag for the build image that gets pushed.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L77">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L77">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ https://docs.docker.com/engine/reference/commandline/run.
 This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L87">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L87">property <b>memoryReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryReservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ https://docs.docker.com/engine/reference/commandline/run.
 This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L94">property <b>ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L94">property <b>ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ports?: <a href='#ContainerPort'>ContainerPort</a>[];</code></pre>
@@ -1438,7 +1438,7 @@ Maps to the Docker `--publish` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L261">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L261">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1447,7 +1447,7 @@ The number of copies of this Service's containers to deploy and maintain
 as part of the running service.  Defaults to `1`.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L101">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L101">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <a href='#ContainerVolumeMount'>ContainerVolumeMount</a>[];</code></pre>
@@ -1458,7 +1458,7 @@ the container at which to mount the volume.  Maps to the Docker
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h4 class="pdoc-member-header" id="ServiceArguments-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L271">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L271">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForSteadyState?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1467,14 +1467,14 @@ Determines whether the service should wait to fully transition to a new steady s
 set to false, the service may complete its deployment before it is fully ready to be used. Defaults to 'true'.
 
 <h3 class="pdoc-module-header" id="ServiceConstructor" data-link-title="ServiceConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L319">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L319">
         interface <strong>ServiceConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L319"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L319"> <b>constructor</b></a>
 </h4>
 
 
@@ -1487,7 +1487,7 @@ Construct a new Service, which is one or more managed replicas of a group of one
 * `opts` A bag of options that controls how this resource behaves.
 
 <h3 class="pdoc-module-header" id="SharedVolume" data-link-title="SharedVolume">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L203">
         interface <strong>SharedVolume</strong>
     </a>
 </h3>
@@ -1497,24 +1497,24 @@ Construct a new Service, which is one or more managed replicas of a group of one
 A shared volume that can be mounted into one or more containers.
 
 <h4 class="pdoc-member-header" id="SharedVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L204">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L204">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <span class='s2'>"SharedVolume"</span>;</code></pre>
 <h4 class="pdoc-member-header" id="SharedVolume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SharedVolumeConstructor" data-link-title="SharedVolumeConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L211">
         interface <strong>SharedVolumeConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SharedVolumeConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="SharedVolumeConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L211"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L211"> <b>constructor</b></a>
 </h4>
 
 
@@ -1527,7 +1527,7 @@ Construct a new Volume with the given unique name.
 * `opts` A bag of options that controls how this resource behaves.
 
 <h3 class="pdoc-module-header" id="Stream" data-link-title="Stream">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L62">
         interface <strong>Stream</strong>
     </a>
 </h3>
@@ -1539,7 +1539,7 @@ from a data source.  Unlike [[Topic]], a Stream provides only access to read
 from the stream, not the ability to publish new items to the stream.
 
 <h4 class="pdoc-member-header" id="Stream-subscribe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L75">method <b>subscribe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L75">method <b>subscribe</b></a>
 </h4>
 
 
@@ -1555,7 +1555,7 @@ will be sent to the global error handler.  Note that as a result,
 subscription handlers must ensure they can safely be retried.
 
 <h3 class="pdoc-module-header" id="Table" data-link-title="Table">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L57">
         interface <strong>Table</strong>
     </a>
 </h3>
@@ -1579,7 +1579,7 @@ value equality are supported.  The `get`, `update` and `delete` operations
 expect the query to contain only the value for the primary key.
 
 <h4 class="pdoc-member-header" id="Table-delete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L101">method <b>delete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L101">method <b>delete</b></a>
 </h4>
 
 
@@ -1589,7 +1589,7 @@ expect the query to contain only the value for the primary key.
 Deletes a documents from the table.
 
 <h4 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -1599,7 +1599,7 @@ Deletes a documents from the table.
 Get a document from the table.
 
 <h4 class="pdoc-member-header" id="Table-insert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L83">method <b>insert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L83">method <b>insert</b></a>
 </h4>
 
 
@@ -1609,7 +1609,7 @@ Get a document from the table.
 Insert a document into the table.
 
 <h4 class="pdoc-member-header" id="Table-scan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L92">method <b>scan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L92">method <b>scan</b></a>
 </h4>
 
 
@@ -1622,7 +1622,7 @@ Gets all documents from the table.
 <pre class="highlight"><code><span class='kd'></span>scan(callback: (items: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[]) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Table-update">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L111">method <b>update</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L111">method <b>update</b></a>
 </h4>
 
 
@@ -1632,7 +1632,7 @@ Gets all documents from the table.
 Updates a documents in the table.
 
 <h4 class="pdoc-member-header" id="Table-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L61">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L61">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1640,7 +1640,7 @@ Updates a documents in the table.
 The name of the primary key.
 
 <h4 class="pdoc-member-header" id="Table-primaryKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L65">property <b>primaryKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L65">property <b>primaryKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1648,14 +1648,14 @@ The name of the primary key.
 The type of the primary key.
 
 <h3 class="pdoc-module-header" id="TableConstructor" data-link-title="TableConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L23">
         interface <strong>TableConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TableConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="TableConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/table.ts#L23"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/table.ts#L23"> <b>constructor</b></a>
 </h4>
 
 
@@ -1670,7 +1670,7 @@ Creates a new Table.
 * `opts` A bag of options that controls how this resource behaves.
 
 <h3 class="pdoc-module-header" id="Task" data-link-title="Task">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L350">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L350">
         interface <strong>Task</strong>
     </a>
 </h3>
@@ -1681,7 +1681,7 @@ A Task represents a container which can be [run] dynamically whenever (and
 as many times as) needed.
 
 <h4 class="pdoc-member-header" id="Task-run">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L354">method <b>run</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L354">method <b>run</b></a>
 </h4>
 
 
@@ -1691,14 +1691,14 @@ as many times as) needed.
 Run the task, passing in additional task run options.
 
 <h3 class="pdoc-module-header" id="TaskConstructor" data-link-title="TaskConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L357">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L357">
         interface <strong>TaskConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TaskConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="TaskConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L357"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L357"> <b>constructor</b></a>
 </h4>
 
 
@@ -1712,7 +1712,7 @@ Construct a new Task, which is a Container that can be run many times as individ
 * `opts` A bag of options that controls how this resource behaves.
 
 <h3 class="pdoc-module-header" id="TaskRunOptions" data-link-title="TaskRunOptions">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L335">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L335">
         interface <strong>TaskRunOptions</strong>
     </a>
 </h3>
@@ -1722,7 +1722,7 @@ Construct a new Task, which is a Container that can be run many times as individ
 Arguments to use for initializing a single run of the Task
 
 <h4 class="pdoc-member-header" id="TaskRunOptions-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L339">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L339">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1730,7 +1730,7 @@ Arguments to use for initializing a single run of the Task
 Optional environment variables to override those set in the container definition.
 
 <h4 class="pdoc-member-header" id="TaskRunOptions-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L343">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L343">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='#HostProperties'>HostProperties</a>;</code></pre>
@@ -1738,7 +1738,7 @@ Optional environment variables to override those set in the container definition
 The properties of the host where this task can run.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L36">
         interface <strong>Topic</strong>
     </a>
 </h3>
@@ -1750,7 +1750,7 @@ susbcribed handlers.  Producers can [[publish]] to the topic, and consumers
 can [[subscribe]] to be notified when new items are published.
 
 <h4 class="pdoc-member-header" id="Topic-subscribe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L52">method <b>subscribe</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L52">method <b>subscribe</b></a>
 </h4>
 
 
@@ -1762,7 +1762,7 @@ Subscribe to items published to this topic.
 Each subscription receives all items published to the topic.
 
 <h4 class="pdoc-member-header" id="Topic-publish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L42">property <b>publish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L42">property <b>publish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publish: (item: T) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
@@ -1770,14 +1770,14 @@ Each subscription receives all items published to the topic.
 Publish an item to this Topic.
 
 <h3 class="pdoc-module-header" id="TopicConstructor" data-link-title="TopicConstructor">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L17">
         interface <strong>TopicConstructor</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicConstructor</span></code></pre>
 <h4 class="pdoc-member-header" id="TopicConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/topic.ts#L17"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/topic.ts#L17"> <b>constructor</b></a>
 </h4>
 
 
@@ -1790,14 +1790,14 @@ Allocate a new Topic with a given name.
 * `opts` A bag of options that controls how this resource behaves.
 
 <h3 class="pdoc-module-header" id="Volume" data-link-title="Volume">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L198">
         type <strong>Volume</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Volume = <a href='#SharedVolume'>SharedVolume</a> | <a href='#HostPathVolume'>HostPathVolume</a>;</code></pre>
 <h3 class="pdoc-module-header" id="VolumeKind" data-link-title="VolumeKind">
-    <a href="https://github.com/pulumi/pulumi-cloud/blob/{{< param git_sha >}}/api/service.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-cloud/blob/d9efd5fc684e54e6508035b14e08b0e44fd56c0a/api/service.ts#L196">
         type <strong>VolumeKind</strong>
     </a>
 </h3>

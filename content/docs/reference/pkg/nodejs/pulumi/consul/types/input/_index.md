@@ -43,14 +43,14 @@ git_sha: "99119929560ddff16f12587910bb7a341155d727"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="AclRoleServiceIdentity" data-link-title="AclRoleServiceIdentity">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L7">
         interface <strong>AclRoleServiceIdentity</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AclRoleServiceIdentity</span></code></pre>
 <h4 class="pdoc-member-header" id="AclRoleServiceIdentity-datacenters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L11">property <b>datacenters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L11">property <b>datacenters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -58,7 +58,7 @@ git_sha: "99119929560ddff16f12587910bb7a341155d727"
 The datacenters the effective policy is valid within.
 
 <h4 class="pdoc-member-header" id="AclRoleServiceIdentity-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L15">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L15">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -66,14 +66,14 @@ The datacenters the effective policy is valid within.
 The name of the service.
 
 <h3 class="pdoc-module-header" id="CatalogEntryService" data-link-title="CatalogEntryService">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L18">
         interface <strong>CatalogEntryService</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CatalogEntryService</span></code></pre>
 <h4 class="pdoc-member-header" id="CatalogEntryService-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L23">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L23">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -82,7 +82,7 @@ The address of the service. Defaults to the
 node address.
 
 <h4 class="pdoc-member-header" id="CatalogEntryService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -90,7 +90,7 @@ node address.
 The ID of the service. Defaults to the `name`.
 
 <h4 class="pdoc-member-header" id="CatalogEntryService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L31">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L31">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -98,7 +98,7 @@ The ID of the service. Defaults to the `name`.
 The name of the service
 
 <h4 class="pdoc-member-header" id="CatalogEntryService-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L35">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L35">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -106,7 +106,7 @@ The name of the service
 The port of the service.
 
 <h4 class="pdoc-member-header" id="CatalogEntryService-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L40">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L40">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -115,19 +115,19 @@ A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
 
 <h3 class="pdoc-module-header" id="GetAclRolePolicy" data-link-title="GetAclRolePolicy">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L43">
         interface <strong>GetAclRolePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAclRolePolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAclRolePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAclRolePolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -135,199 +135,199 @@ but can be used to distinguish between services or nodes.
 The name of the ACL Role.
 
 <h3 class="pdoc-module-header" id="GetAclRoleServiceIdentity" data-link-title="GetAclRoleServiceIdentity">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L51">
         interface <strong>GetAclRoleServiceIdentity</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAclRoleServiceIdentity</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAclRoleServiceIdentity-datacenters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L52">property <b>datacenters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L52">property <b>datacenters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenters?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAclRoleServiceIdentity-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L53">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L53">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAclTokenPolicy" data-link-title="GetAclTokenPolicy">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L56">
         interface <strong>GetAclTokenPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAclTokenPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAclTokenPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAclTokenPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCatalogNodesQueryOption" data-link-title="GetCatalogNodesQueryOption">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L61">
         interface <strong>GetCatalogNodesQueryOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCatalogNodesQueryOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-allowStale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L62">property <b>allowStale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L62">property <b>allowStale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowStale?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L63">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L63">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-near">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L64">property <b>near</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L64">property <b>near</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>near?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-nodeMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L65">property <b>nodeMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L65">property <b>nodeMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeMeta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-requireConsistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L66">property <b>requireConsistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L66">property <b>requireConsistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireConsistent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L67">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L67">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-waitIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L68">property <b>waitIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L68">property <b>waitIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogNodesQueryOption-waitTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L69">property <b>waitTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L69">property <b>waitTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCatalogServiceQueryOption" data-link-title="GetCatalogServiceQueryOption">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L72">
         interface <strong>GetCatalogServiceQueryOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCatalogServiceQueryOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-allowStale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L73">property <b>allowStale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L73">property <b>allowStale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowStale?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L74">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L74">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L75">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L75">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-near">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L76">property <b>near</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L76">property <b>near</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>near?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-nodeMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L77">property <b>nodeMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L77">property <b>nodeMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeMeta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-requireConsistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L78">property <b>requireConsistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L78">property <b>requireConsistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireConsistent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L79">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L79">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-waitIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L80">property <b>waitIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L80">property <b>waitIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServiceQueryOption-waitTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L81">property <b>waitTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L81">property <b>waitTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCatalogServicesQueryOption" data-link-title="GetCatalogServicesQueryOption">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L84">
         interface <strong>GetCatalogServicesQueryOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCatalogServicesQueryOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-allowStale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L85">property <b>allowStale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L85">property <b>allowStale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowStale?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L86">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L86">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L87">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L87">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-near">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L88">property <b>near</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L88">property <b>near</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>near?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-nodeMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L89">property <b>nodeMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L89">property <b>nodeMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeMeta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-requireConsistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L90">property <b>requireConsistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L90">property <b>requireConsistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireConsistent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L91">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L91">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-waitIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L92">property <b>waitIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L92">property <b>waitIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCatalogServicesQueryOption-waitTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L93">property <b>waitTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L93">property <b>waitTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKeyPrefixSubkeyCollection" data-link-title="GetKeyPrefixSubkeyCollection">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L96">
         interface <strong>GetKeyPrefixSubkeyCollection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetKeyPrefixSubkeyCollection</span></code></pre>
 <h4 class="pdoc-member-header" id="GetKeyPrefixSubkeyCollection-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L101">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L101">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -336,7 +336,7 @@ This is the default value to set for `var.<name>`
 if the key does not exist in Consul. Defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="GetKeyPrefixSubkeyCollection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -346,7 +346,7 @@ key is exposed as `var.<name>`. This is not the path of the subkey
 in Consul.
 
 <h4 class="pdoc-member-header" id="GetKeyPrefixSubkeyCollection-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L113">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L113">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -356,14 +356,14 @@ to the given `pathPrefix`) to construct the full key that will be used
 to read the value.
 
 <h3 class="pdoc-module-header" id="GetKeysKey" data-link-title="GetKeysKey">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L116">
         interface <strong>GetKeysKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetKeysKey</span></code></pre>
 <h4 class="pdoc-member-header" id="GetKeysKey-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L121">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L121">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -372,7 +372,7 @@ This is the default value to set for `var.<name>`
 if the key does not exist in Consul. Defaults to an empty string.
 
 <h4 class="pdoc-member-header" id="GetKeysKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L127">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -382,7 +382,7 @@ key is exposed as `var.<name>`. This is not the path of the key
 in Consul.
 
 <h4 class="pdoc-member-header" id="GetKeysKey-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L132">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L132">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -391,14 +391,14 @@ This is the path in Consul that should be read
 or written to.
 
 <h3 class="pdoc-module-header" id="GetNodesQueryOption" data-link-title="GetNodesQueryOption">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L135">
         interface <strong>GetNodesQueryOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetNodesQueryOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-allowStale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L140">property <b>allowStale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L140">property <b>allowStale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowStale?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -407,7 +407,7 @@ When `true`, the default, allow responses from
 Consul servers that are followers.
 
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L147">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L147">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -418,17 +418,17 @@ empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to then the datacenter in the provider setup.
 
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-near">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L148">property <b>near</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L148">property <b>near</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>near?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-nodeMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L149">property <b>nodeMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L149">property <b>nodeMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeMeta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-requireConsistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L155">property <b>requireConsistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L155">property <b>requireConsistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireConsistent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -438,7 +438,7 @@ read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
 
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L161">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L161">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -448,7 +448,7 @@ request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
 
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-waitIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L165">property <b>waitIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L165">property <b>waitIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -456,7 +456,7 @@ provider but may be overriden if necessary.
 Index number used to enable blocking quereis.
 
 <h4 class="pdoc-member-header" id="GetNodesQueryOption-waitTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L170">property <b>waitTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L170">property <b>waitTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -465,14 +465,14 @@ Max time the client should wait for a blocking query
 to return.
 
 <h3 class="pdoc-module-header" id="GetServiceQueryOption" data-link-title="GetServiceQueryOption">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L173">
         interface <strong>GetServiceQueryOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServiceQueryOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-allowStale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L178">property <b>allowStale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L178">property <b>allowStale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowStale?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -481,7 +481,7 @@ When `true`, the default, allow responses from
 Consul servers that are followers.
 
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L185">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L185">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -492,7 +492,7 @@ empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
 
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L189">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L189">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -500,17 +500,17 @@ configured to talk to.
 The namespace to lookup the service.
 
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-near">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L190">property <b>near</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L190">property <b>near</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>near?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-nodeMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L191">property <b>nodeMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L191">property <b>nodeMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeMeta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-requireConsistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L197">property <b>requireConsistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L197">property <b>requireConsistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireConsistent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -520,7 +520,7 @@ read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
 
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L203">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L203">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -530,7 +530,7 @@ request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
 
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-waitIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L207">property <b>waitIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L207">property <b>waitIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -538,7 +538,7 @@ provider but may be overriden if necessary.
 Index number used to enable blocking quereis.
 
 <h4 class="pdoc-member-header" id="GetServiceQueryOption-waitTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L212">property <b>waitTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L212">property <b>waitTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -547,14 +547,14 @@ Max time the client should wait for a blocking query
 to return.
 
 <h3 class="pdoc-module-header" id="GetServicesQueryOption" data-link-title="GetServicesQueryOption">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L215">
         interface <strong>GetServicesQueryOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetServicesQueryOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-allowStale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L220">property <b>allowStale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L220">property <b>allowStale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowStale?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -563,7 +563,7 @@ When `true`, the default, allow responses from
 Consul servers that are followers.
 
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-datacenter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L227">property <b>datacenter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L227">property <b>datacenter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -574,7 +574,7 @@ empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
 
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L231">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L231">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -582,17 +582,17 @@ configured to talk to.
 The namespace to lookup the services.
 
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-near">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L232">property <b>near</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L232">property <b>near</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>near?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-nodeMeta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L233">property <b>nodeMeta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L233">property <b>nodeMeta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeMeta?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-requireConsistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L239">property <b>requireConsistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L239">property <b>requireConsistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireConsistent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -602,7 +602,7 @@ read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
 
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L245">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L245">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -612,7 +612,7 @@ request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
 
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-waitIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L249">property <b>waitIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L249">property <b>waitIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -620,7 +620,7 @@ provider but may be overriden if necessary.
 Index number used to enable blocking quereis.
 
 <h4 class="pdoc-member-header" id="GetServicesQueryOption-waitTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L254">property <b>waitTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L254">property <b>waitTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitTime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -629,14 +629,14 @@ Max time the client should wait for a blocking query
 to return.
 
 <h3 class="pdoc-module-header" id="KeyPrefixSubkeyCollection" data-link-title="KeyPrefixSubkeyCollection">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L257">
         interface <strong>KeyPrefixSubkeyCollection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KeyPrefixSubkeyCollection</span></code></pre>
 <h4 class="pdoc-member-header" id="KeyPrefixSubkeyCollection-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L262">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L262">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -645,7 +645,7 @@ An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
 
 <h4 class="pdoc-member-header" id="KeyPrefixSubkeyCollection-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L267">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L267">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ This is the path (which will be appended to the given
 `pathPrefix`) in Consul that should be written to.
 
 <h4 class="pdoc-member-header" id="KeyPrefixSubkeyCollection-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L271">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L271">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -662,19 +662,19 @@ This is the path (which will be appended to the given
 The value to write to the given path.
 
 <h3 class="pdoc-module-header" id="KeysKey" data-link-title="KeysKey">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L274">
         interface <strong>KeysKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KeysKey</span></code></pre>
 <h4 class="pdoc-member-header" id="KeysKey-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L275">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L275">property <b>default</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>default?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeysKey-delete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L282">property <b>delete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L282">property <b>delete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -685,7 +685,7 @@ the entire resource is destroyed. Otherwise, it will be left in Consul.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="KeysKey-flags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L287">property <b>flags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L287">property <b>flags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -694,12 +694,12 @@ An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
 
 <h4 class="pdoc-member-header" id="KeysKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L288">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L288">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeysKey-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L292">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L292">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +707,7 @@ to attach to the key (defaults to 0).
 This is the path in Consul that should be written to.
 
 <h4 class="pdoc-member-header" id="KeysKey-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L296">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L296">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,14 +715,14 @@ This is the path in Consul that should be written to.
 The value to write to the given path.
 
 <h3 class="pdoc-module-header" id="PreparedQueryDns" data-link-title="PreparedQueryDns">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L299">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L299">
         interface <strong>PreparedQueryDns</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PreparedQueryDns</span></code></pre>
 <h4 class="pdoc-member-header" id="PreparedQueryDns-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L303">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L303">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,14 +730,14 @@ The value to write to the given path.
 The TTL to send when returning DNS results.
 
 <h3 class="pdoc-module-header" id="PreparedQueryFailover" data-link-title="PreparedQueryFailover">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L306">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L306">
         interface <strong>PreparedQueryFailover</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PreparedQueryFailover</span></code></pre>
 <h4 class="pdoc-member-header" id="PreparedQueryFailover-datacenters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L310">property <b>datacenters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L310">property <b>datacenters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -745,7 +745,7 @@ The TTL to send when returning DNS results.
 Remote datacenters to return results from.
 
 <h4 class="pdoc-member-header" id="PreparedQueryFailover-nearestN">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L315">property <b>nearestN</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L315">property <b>nearestN</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nearestN?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -754,14 +754,14 @@ Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
 
 <h3 class="pdoc-module-header" id="PreparedQueryTemplate" data-link-title="PreparedQueryTemplate">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L318">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L318">
         interface <strong>PreparedQueryTemplate</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PreparedQueryTemplate</span></code></pre>
 <h4 class="pdoc-member-header" id="PreparedQueryTemplate-regexp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L323">property <b>regexp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L323">property <b>regexp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regexp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The regular expression to match with. When using
 `namePrefixMatch`, this regex is applied against the query name.
 
 <h4 class="pdoc-member-header" id="PreparedQueryTemplate-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L328">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L328">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -779,14 +779,14 @@ The type of template matching to perform. Currently
 only `namePrefixMatch` is supported.
 
 <h3 class="pdoc-module-header" id="ServiceCheck" data-link-title="ServiceCheck">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L331">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L331">
         interface <strong>ServiceCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceCheck</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceCheck-checkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L336">property <b>checkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L336">property <b>checkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ An ID, *unique per agent*. Will default to *name*
 if not set.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-deregisterCriticalServiceAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L342">property <b>deregisterCriticalServiceAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L342">property <b>deregisterCriticalServiceAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deregisterCriticalServiceAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ the service is automatically deregistered when in the `critical` state.
 Defaults to `30s`.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L347">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L347">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceCheckHeader'>ServiceCheckHeader</a>&gt;[]&gt;;</code></pre>
@@ -814,7 +814,7 @@ The headers to send for an HTTP check.
 The attributes of each header is given below.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-http">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L351">property <b>http</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L351">property <b>http</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>http?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -822,7 +822,7 @@ The attributes of each header is given below.
 The HTTP endpoint to call for an HTTP check.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L356">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L356">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +831,7 @@ The interval to wait between each health-check
 invocation.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L361">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L361">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -840,7 +840,7 @@ The method to use for HTTP health-checks. Defaults
 to `GET`.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L365">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L365">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -848,7 +848,7 @@ to `GET`.
 The name of the health-check.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L369">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L369">property <b>notes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -856,7 +856,7 @@ The name of the health-check.
 An opaque field meant to hold human readable text.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L373">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L373">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ An opaque field meant to hold human readable text.
 The initial health-check status.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-tcp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L377">property <b>tcp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L377">property <b>tcp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ The initial health-check status.
 The TCP address and port to connect to for a TCP check.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L381">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L381">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ The TCP address and port to connect to for a TCP check.
 The timeout value for HTTP checks.
 
 <h4 class="pdoc-member-header" id="ServiceCheck-tlsSkipVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L386">property <b>tlsSkipVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L386">property <b>tlsSkipVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsSkipVerify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -889,14 +889,14 @@ Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="ServiceCheckHeader" data-link-title="ServiceCheckHeader">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L389">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L389">
         interface <strong>ServiceCheckHeader</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceCheckHeader</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceCheckHeader-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L393">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L393">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ verification for HTTP health-checks. Defaults to `false`.
 The name of the header.
 
 <h4 class="pdoc-member-header" id="ServiceCheckHeader-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/{{< param git_sha >}}/sdk/nodejs/types/input.ts#L397">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-consul/blob/99119929560ddff16f12587910bb7a341155d727/sdk/nodejs/types/input.ts#L397">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>

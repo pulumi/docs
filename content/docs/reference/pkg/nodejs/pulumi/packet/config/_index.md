@@ -31,7 +31,7 @@ git_sha: "f6a64df150a079a52d784aa951f350b631343b89"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/f6a64df150a079a52d784aa951f350b631343b89/sdk/nodejs/config/vars.ts#L12">
         let <strong>authToken</strong>
     </a>
 </h3>

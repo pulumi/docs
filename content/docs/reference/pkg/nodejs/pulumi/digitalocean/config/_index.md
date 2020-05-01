@@ -35,7 +35,7 @@ git_sha: "b0c54ba0d6a76889f0058baff188f0248979ba26"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiEndpoint" data-link-title="apiEndpoint">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/b0c54ba0d6a76889f0058baff188f0248979ba26/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiEndpoint</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ git_sha: "b0c54ba0d6a76889f0058baff188f0248979ba26"
 The URL to use for the DigitalOcean API.
 
 <h3 class="pdoc-module-header" id="spacesAccessId" data-link-title="spacesAccessId">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/b0c54ba0d6a76889f0058baff188f0248979ba26/sdk/nodejs/config/vars.ts#L16">
         let <strong>spacesAccessId</strong>
     </a>
 </h3>
@@ -55,7 +55,7 @@ The URL to use for the DigitalOcean API.
 The access key ID for Spaces API operations.
 
 <h3 class="pdoc-module-header" id="spacesEndpoint" data-link-title="spacesEndpoint">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/b0c54ba0d6a76889f0058baff188f0248979ba26/sdk/nodejs/config/vars.ts#L20">
         let <strong>spacesEndpoint</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ The access key ID for Spaces API operations.
 The URL to use for the DigitalOcean Spaces API.
 
 <h3 class="pdoc-module-header" id="spacesSecretKey" data-link-title="spacesSecretKey">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/b0c54ba0d6a76889f0058baff188f0248979ba26/sdk/nodejs/config/vars.ts#L24">
         let <strong>spacesSecretKey</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ The URL to use for the DigitalOcean Spaces API.
 The secret access key for Spaces API operations.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/{{< param git_sha >}}/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/b0c54ba0d6a76889f0058baff188f0248979ba26/sdk/nodejs/config/vars.ts#L28">
         let <strong>token</strong>
     </a>
 </h3>

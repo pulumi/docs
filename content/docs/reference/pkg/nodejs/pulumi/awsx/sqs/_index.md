@@ -32,7 +32,7 @@ git_sha: "6e41506897a3d7bf3985beb8ecdc596638047699"
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="approximateAgeOfOldestMessage" data-link-title="approximateAgeOfOldestMessage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L78">
         function <strong>approximateAgeOfOldestMessage</strong>
     </a>
 </h3>
@@ -52,7 +52,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="approximateNumberOfMessagesDelayed" data-link-title="approximateNumberOfMessagesDelayed">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L92">
         function <strong>approximateNumberOfMessagesDelayed</strong>
     </a>
 </h3>
@@ -71,7 +71,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="approximateNumberOfMessagesNotVisible" data-link-title="approximateNumberOfMessagesNotVisible">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L106">
         function <strong>approximateNumberOfMessagesNotVisible</strong>
     </a>
 </h3>
@@ -90,7 +90,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="approximateNumberOfMessagesVisible" data-link-title="approximateNumberOfMessagesVisible">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L118">
         function <strong>approximateNumberOfMessagesVisible</strong>
     </a>
 </h3>
@@ -107,7 +107,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L54">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -136,7 +136,7 @@ six hours if it contains any messages or if any action accesses it.
 The only dimension that Amazon SQS sends to CloudWatch is "QueueName"
 
 <h3 class="pdoc-module-header" id="numberOfEmptyReceives" data-link-title="numberOfEmptyReceives">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L130">
         function <strong>numberOfEmptyReceives</strong>
     </a>
 </h3>
@@ -153,7 +153,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="numberOfMessagesDeleted" data-link-title="numberOfMessagesDeleted">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L155">
         function <strong>numberOfMessagesDeleted</strong>
     </a>
 </h3>
@@ -183,7 +183,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="numberOfMessagesReceived" data-link-title="numberOfMessagesReceived">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L162">
         function <strong>numberOfMessagesReceived</strong>
     </a>
 </h3>
@@ -195,7 +195,7 @@ the Amazon SQS console)
 The number of messages returned by calls to the ReceiveMessage action.
 
 <h3 class="pdoc-module-header" id="numberOfMessagesSent" data-link-title="numberOfMessagesSent">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L174">
         function <strong>numberOfMessagesSent</strong>
     </a>
 </h3>
@@ -212,7 +212,7 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="sentMessageSize" data-link-title="sentMessageSize">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L186">
         function <strong>sentMessageSize</strong>
     </a>
 </h3>
@@ -229,14 +229,14 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 <h3 class="pdoc-module-header" id="SqsMetricChange" data-link-title="SqsMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L27">
         interface <strong>SqsMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SqsMetricChange</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="SqsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L461">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L461">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L430">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L430">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -256,7 +256,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L470">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L470">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L436">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L436">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-queue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L31">property <b>queue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L31">property <b>queue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queue?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/sqs/#Queue'>aws.sqs.Queue</a>;</code></pre>
@@ -296,7 +296,7 @@ to [undefined] then the value will be set to the default (300s).
 Optional [Queue] to filter events down to.
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -306,7 +306,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L454">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L454">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -316,7 +316,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -327,7 +327,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="SqsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/cloudwatch/metric.ts#L485">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/cloudwatch/metric.ts#L485">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="SqsMetricName" data-link-title="SqsMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/{{< param git_sha >}}/nodejs/awsx/sqs/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/6e41506897a3d7bf3985beb8ecdc596638047699/nodejs/awsx/sqs/metrics.ts#L21">
         type <strong>SqsMetricName</strong>
     </a>
 </h3>
