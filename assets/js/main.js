@@ -49,6 +49,11 @@ function generateOnThisPage() {
         // It's hidden by default. If we added links to the list, show it.
         if (found) {
             $(".on-this-page").show();
+            $(".on-this-page").click(function(){
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 100);
+            });
 
             // Highlight the first heading whose offset from top is greater than the current scroll
             // position, to best indicate your location within the page hierarchy.
