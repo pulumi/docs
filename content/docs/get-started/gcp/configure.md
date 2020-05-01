@@ -1,7 +1,7 @@
 ---
-title: Configure | GCP
-h1: Configure
-linktitle: Configure
+title: Configure Cloud Access | GCP
+h1: Configure Cloud Access
+linktitle: Configure Cloud Access
 meta_desc: This page provides an overview of how to configure a Google Cloud (GCP) project.
 weight: 4
 menu:
