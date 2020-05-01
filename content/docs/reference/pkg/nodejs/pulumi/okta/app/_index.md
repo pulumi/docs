@@ -82,7 +82,7 @@ git_sha: "690544114ef62ed552d293d3e22cb1eb83517de6"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AutoLogin" data-link-title="AutoLogin">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L33">
         Resource <strong>AutoLogin</strong>
     </a>
 </h3>
@@ -113,7 +113,7 @@ const example = new okta.app.AutoLogin("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown.
 
 <h4 class="pdoc-member-header" id="AutoLogin-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -127,7 +127,7 @@ Create a AutoLogin resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AutoLogin-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -138,14 +138,14 @@ Get an existing AutoLogin resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AutoLogin-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AutoLogin-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -156,7 +156,7 @@ Returns true if the given object is an instance of AutoLogin.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AutoLogin-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilityErrorRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Custom error page URL
 
 <h4 class="pdoc-member-header" id="AutoLogin-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L67">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L67">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilitySelfService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Custom error page URL
 Enable self service
 
 <h4 class="pdoc-member-header" id="AutoLogin-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L71">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L71">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ Enable self service
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="AutoLogin-credentialsScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L75">property <b>credentialsScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L75">property <b>credentialsScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsScheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ Display auto submit toolbar
 Application credentials scheme
 
 <h4 class="pdoc-member-header" id="AutoLogin-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L79">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L79">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Application credentials scheme
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="AutoLogin-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L83">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L83">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="AutoLogin-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L87">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L87">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="AutoLogin-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -221,7 +221,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AutoLogin-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L91">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L91">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ deployments and may be missing (undefined) during planning phases.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="AutoLogin-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The Application's display name.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="AutoLogin-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L99">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L99">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preconfiguredApp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ Name assigned to the application by Okta.
 Tells Okta to use an existing application in their application catalog, as opposed to a custom application.
 
 <h4 class="pdoc-member-header" id="AutoLogin-revealPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L103">property <b>revealPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L103">property <b>revealPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revealPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ Tells Okta to use an existing application in their application catalog, as oppos
 Allow user to reveal password
 
 <h4 class="pdoc-member-header" id="AutoLogin-sharedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L107">property <b>sharedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L107">property <b>sharedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Allow user to reveal password
 Shared password, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="AutoLogin-sharedUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L111">property <b>sharedUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L111">property <b>sharedUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ Shared password, required for certain schemes.
 Shared username, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="AutoLogin-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L115">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L115">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ Shared username, required for certain schemes.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="AutoLogin-signOnRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L119">property <b>signOnRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L119">property <b>signOnRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ Sign on mode of application.
 Post login redirect URL
 
 <h4 class="pdoc-member-header" id="AutoLogin-signOnUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L123">property <b>signOnUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L123">property <b>signOnUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ Post login redirect URL
 Login URL
 
 <h4 class="pdoc-member-header" id="AutoLogin-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L127">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L127">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ Login URL
 The status of the application, by default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="AutoLogin-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -310,7 +310,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AutoLogin-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L131">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L131">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -318,7 +318,7 @@ deployments.
 Username template
 
 <h4 class="pdoc-member-header" id="AutoLogin-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L135">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L135">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplateType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ Username template
 Username template type
 
 <h4 class="pdoc-member-header" id="AutoLogin-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L139">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L139">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#AutoLoginUser'>AutoLoginUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -334,7 +334,7 @@ Username template type
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="BasicAuth" data-link-title="BasicAuth">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L31">
         Resource <strong>BasicAuth</strong>
     </a>
 </h3>
@@ -363,7 +363,7 @@ const example = new okta.app.BasicAuth("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown.
 
 <h4 class="pdoc-member-header" id="BasicAuth-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -377,7 +377,7 @@ Create a BasicAuth resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BasicAuth-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -388,14 +388,14 @@ Get an existing BasicAuth resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BasicAuth-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BasicAuth-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -406,7 +406,7 @@ Returns true if the given object is an instance of BasicAuth.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BasicAuth-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L61">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L61">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -414,7 +414,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The URL of the authenticating site for this app.
 
 <h4 class="pdoc-member-header" id="BasicAuth-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L65">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L65">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -422,7 +422,7 @@ The URL of the authenticating site for this app.
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="BasicAuth-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L69">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L69">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -430,7 +430,7 @@ Display auto submit toolbar
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="BasicAuth-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L73">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L73">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="BasicAuth-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L77">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L77">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="BasicAuth-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -455,7 +455,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BasicAuth-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L81">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L81">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ deployments and may be missing (undefined) during planning phases.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="BasicAuth-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -471,7 +471,7 @@ The Application's display name.
 name of app.
 
 <h4 class="pdoc-member-header" id="BasicAuth-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L89">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L89">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ name of app.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="BasicAuth-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L93">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L93">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ Sign on mode of application.
 Status of application.
 
 <h4 class="pdoc-member-header" id="BasicAuth-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L97">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L97">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -495,7 +495,7 @@ Status of application.
 The URL of the sign-in page for this app.
 
 <h4 class="pdoc-member-header" id="BasicAuth-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -504,7 +504,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="BasicAuth-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L101">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L101">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#BasicAuthUser'>BasicAuthUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ deployments.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="Bookmark" data-link-title="Bookmark">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L30">
         Resource <strong>Bookmark</strong>
     </a>
 </h3>
@@ -540,7 +540,7 @@ const example = new okta.app.Bookmark("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown.
 
 <h4 class="pdoc-member-header" id="Bookmark-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -554,7 +554,7 @@ Create a Bookmark resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Bookmark-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -565,14 +565,14 @@ Get an existing Bookmark resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Bookmark-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Bookmark-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -583,7 +583,7 @@ Returns true if the given object is an instance of Bookmark.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Bookmark-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L60">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L60">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="Bookmark-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L64">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L64">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ Display auto submit toolbar
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="Bookmark-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L68">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L68">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="Bookmark-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L72">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L72">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="Bookmark-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -624,7 +624,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Bookmark-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L76">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L76">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ deployments and may be missing (undefined) during planning phases.
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="Bookmark-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ The Application's display name.
 name of app.
 
 <h4 class="pdoc-member-header" id="Bookmark-requestIntegration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L84">property <b>requestIntegration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L84">property <b>requestIntegration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestIntegration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ name of app.
 Would you like Okta to add an integration for this app?
 
 <h4 class="pdoc-member-header" id="Bookmark-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L88">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L88">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ Would you like Okta to add an integration for this app?
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="Bookmark-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L92">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L92">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -664,7 +664,7 @@ Sign on mode of application.
 Status of application.
 
 <h4 class="pdoc-member-header" id="Bookmark-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L96">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L96">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -672,7 +672,7 @@ Status of application.
 The URL of the bookmark.
 
 <h4 class="pdoc-member-header" id="Bookmark-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -681,7 +681,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Bookmark-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L100">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L100">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#BookmarkUser'>BookmarkUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ deployments.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="GroupAssignment" data-link-title="GroupAssignment">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L40">
         Resource <strong>GroupAssignment</strong>
     </a>
 </h3>
@@ -727,7 +727,7 @@ const example = new okta.app.GroupAssignment("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -741,7 +741,7 @@ Create a GroupAssignment resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -752,14 +752,14 @@ Get an existing GroupAssignment resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupAssignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -770,7 +770,7 @@ Returns true if the given object is an instance of GroupAssignment.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L70">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L70">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the application to assign a group to.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L74">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L74">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ The ID of the application to assign a group to.
 The ID of the group to assign the app to.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -795,12 +795,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupAssignment-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L75">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L75">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GroupAssignment-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L79">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L79">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -808,7 +808,7 @@ deployments and may be missing (undefined) during planning phases.
 JSON document containing [application profile](https://developer.okta.com/docs/reference/api/apps/#profile-object)
 
 <h4 class="pdoc-member-header" id="GroupAssignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -817,7 +817,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OAuth" data-link-title="OAuth">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L33">
         Resource <strong>OAuth</strong>
     </a>
 </h3>
@@ -848,7 +848,7 @@ const example = new okta.app.OAuth("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown.
 
 <h4 class="pdoc-member-header" id="OAuth-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L175"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L175"> <b>constructor</b></a>
 </h4>
 
 
@@ -862,7 +862,7 @@ Create a OAuth resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OAuth-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -873,14 +873,14 @@ Get an existing OAuth resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OAuth-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OAuth-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -891,7 +891,7 @@ Returns true if the given object is an instance of OAuth.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OAuth-autoKeyRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L63">property <b>autoKeyRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L63">property <b>autoKeyRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoKeyRotation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -899,7 +899,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Requested key rotation mode.
 
 <h4 class="pdoc-member-header" id="OAuth-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L67">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L67">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -907,7 +907,7 @@ Requested key rotation mode.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="OAuth-clientBasicSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L71">property <b>clientBasicSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L71">property <b>clientBasicSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientBasicSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -915,7 +915,7 @@ Display auto submit toolbar.
 OAuth client secret key, this can be set when tokenEndpointAuthMethod is client_secret_basic.
 
 <h4 class="pdoc-member-header" id="OAuth-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L75">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L75">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -923,7 +923,7 @@ OAuth client secret key, this can be set when tokenEndpointAuthMethod is client_
 The client ID of the application.
 
 <h4 class="pdoc-member-header" id="OAuth-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L79">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L79">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -931,7 +931,7 @@ The client ID of the application.
 The client secret of the application.
 
 <h4 class="pdoc-member-header" id="OAuth-clientUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L83">property <b>clientUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L83">property <b>clientUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -939,7 +939,7 @@ The client secret of the application.
 URI to a web page providing information about the client.
 
 <h4 class="pdoc-member-header" id="OAuth-consentMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L87">property <b>consentMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L87">property <b>consentMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consentMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -947,7 +947,7 @@ URI to a web page providing information about the client.
 Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 
 <h4 class="pdoc-member-header" id="OAuth-customClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L91">property <b>customClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L91">property <b>customClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -955,7 +955,7 @@ Indicates whether user consent is required or implicit. Valid values: REQUIRED, 
 This property allows you to set the application's client id.
 
 <h4 class="pdoc-member-header" id="OAuth-grantTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L95">property <b>grantTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L95">property <b>grantTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -963,7 +963,7 @@ This property allows you to set the application's client id.
 List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
 
 <h4 class="pdoc-member-header" id="OAuth-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L99">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L99">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -971,7 +971,7 @@ List of OAuth 2.0 grant types. Conditional validation params found here https://
 The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
 
 <h4 class="pdoc-member-header" id="OAuth-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L103">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L103">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ The groups assigned to the application. It is recommended not to use this and in
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="OAuth-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L107">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L107">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -987,7 +987,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="OAuth-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -996,7 +996,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OAuth-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L111">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L111">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuerMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1004,7 +1004,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 
 <h4 class="pdoc-member-header" id="OAuth-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L115">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L115">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1012,7 +1012,7 @@ Indicates whether the Okta Authorization Server uses the original Okta org domai
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="OAuth-loginUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L119">property <b>loginUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L119">property <b>loginUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loginUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1020,7 +1020,7 @@ The Application's display name.
 URI that initiates login.
 
 <h4 class="pdoc-member-header" id="OAuth-logoUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L123">property <b>logoUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L123">property <b>logoUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logoUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ URI that initiates login.
 URI that references a logo for the client.
 
 <h4 class="pdoc-member-header" id="OAuth-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L127">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1036,7 @@ URI that references a logo for the client.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="OAuth-omitSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L131">property <b>omitSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L131">property <b>omitSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>omitSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1044,7 +1044,7 @@ Name assigned to the application by Okta.
 This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 
 <h4 class="pdoc-member-header" id="OAuth-policyUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L135">property <b>policyUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L135">property <b>policyUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1052,7 +1052,7 @@ This tells the provider not to persist the application's secret to state. If thi
 URI to web page providing client policy document.
 
 <h4 class="pdoc-member-header" id="OAuth-postLogoutRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L139">property <b>postLogoutRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L139">property <b>postLogoutRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postLogoutRedirectUris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ URI to web page providing client policy document.
 List of URIs for redirection after logout.
 
 <h4 class="pdoc-member-header" id="OAuth-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L143">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L143">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ List of URIs for redirection after logout.
 Custom JSON that represents an OAuth application's profile.
 
 <h4 class="pdoc-member-header" id="OAuth-redirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L147">property <b>redirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L147">property <b>redirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>redirectUris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1076,7 +1076,7 @@ Custom JSON that represents an OAuth application's profile.
 List of URIs for use in the redirect-based flow. This is required for all application types except service.
 
 <h4 class="pdoc-member-header" id="OAuth-responseTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L151">property <b>responseTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L151">property <b>responseTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1084,7 +1084,7 @@ List of URIs for use in the redirect-based flow. This is required for all applic
 List of OAuth 2.0 response type strings.
 
 <h4 class="pdoc-member-header" id="OAuth-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L155">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L155">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1092,7 +1092,7 @@ List of OAuth 2.0 response type strings.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="OAuth-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L159">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L159">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1100,7 +1100,7 @@ Sign on mode of application.
 The status of the application, by default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="OAuth-tokenEndpointAuthMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L163">property <b>tokenEndpointAuthMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L163">property <b>tokenEndpointAuthMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenEndpointAuthMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1108,7 +1108,7 @@ The status of the application, by default it is `"ACTIVE"`.
 Requested authentication method for the token endpoint. It can be set to `"none"`, `"clientSecretPost"`, `"clientSecretBasic"`, `"clientSecretJwt"`.
 
 <h4 class="pdoc-member-header" id="OAuth-tosUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L167">property <b>tosUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L167">property <b>tosUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tosUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ Requested authentication method for the token endpoint. It can be set to `"none"
 URI to web page providing client tos (terms of service).
 
 <h4 class="pdoc-member-header" id="OAuth-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L171">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L171">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1124,7 +1124,7 @@ URI to web page providing client tos (terms of service).
 The type of OAuth application.
 
 <h4 class="pdoc-member-header" id="OAuth-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="OAuth-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L175">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L175">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#OAuthUser'>OAuthUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1141,14 +1141,14 @@ deployments.
 The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 
 <h3 class="pdoc-module-header" id="OAuthRedirectUri" data-link-title="OAuthRedirectUri">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L9">
         Resource <strong>OAuthRedirectUri</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>OAuthRedirectUri</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L40"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L40"> <b>constructor</b></a>
 </h4>
 
 
@@ -1162,7 +1162,7 @@ Create a OAuthRedirectUri resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L18">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -1173,14 +1173,14 @@ Get an existing OAuthRedirectUri resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L9">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L29">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1191,12 +1191,12 @@ Returns true if the given object is an instance of OAuthRedirectUri.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L36">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L36">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L9">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L40">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L40">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ deployments and may be missing (undefined) during planning phases.
 Redirect URI to append to Okta OIDC application.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUri-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L9">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1222,7 +1222,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Saml" data-link-title="Saml">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L46">
         Resource <strong>Saml</strong>
     </a>
 </h3>
@@ -1266,7 +1266,7 @@ const example = new okta.app.Saml("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown.
 
 <h4 class="pdoc-member-header" id="Saml-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L248"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L248"> <b>constructor</b></a>
 </h4>
 
 
@@ -1280,7 +1280,7 @@ Create a Saml resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Saml-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -1291,14 +1291,14 @@ Get an existing Saml resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Saml-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Saml-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1309,7 +1309,7 @@ Returns true if the given object is an instance of Saml.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Saml-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L76">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L76">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilityErrorRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="Saml-accessibilityLoginRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L80">property <b>accessibilityLoginRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L80">property <b>accessibilityLoginRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilityLoginRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1325,7 +1325,7 @@ Custom error page URL.
 Custom login page URL.
 
 <h4 class="pdoc-member-header" id="Saml-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L84">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L84">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilitySelfService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1333,7 +1333,7 @@ Custom login page URL.
 Enable self service.
 
 <h4 class="pdoc-member-header" id="Saml-appSettingsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L88">property <b>appSettingsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L88">property <b>appSettingsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appSettingsJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1341,7 +1341,7 @@ Enable self service.
 Application settings in JSON format.
 
 <h4 class="pdoc-member-header" id="Saml-assertionSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L92">property <b>assertionSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L92">property <b>assertionSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>assertionSigned: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1349,7 +1349,7 @@ Application settings in JSON format.
 Determines whether the SAML assertion is digitally signed.
 
 <h4 class="pdoc-member-header" id="Saml-attributeStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L96">property <b>attributeStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L96">property <b>attributeStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributeStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#SamlAttributeStatement'>SamlAttributeStatement</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1357,7 +1357,7 @@ Determines whether the SAML assertion is digitally signed.
 List of SAML Attribute statements.
 
 <h4 class="pdoc-member-header" id="Saml-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L100">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L100">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>audience: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1365,7 +1365,7 @@ List of SAML Attribute statements.
 Audience restriction.
 
 <h4 class="pdoc-member-header" id="Saml-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L104">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L104">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authnContextClassRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1373,7 +1373,7 @@ Audience restriction.
 Identifies the SAML authentication context class for the assertion’s authentication statement.
 
 <h4 class="pdoc-member-header" id="Saml-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L108">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L108">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1381,7 +1381,7 @@ Identifies the SAML authentication context class for the assertion’s authentic
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="Saml-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L112">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L112">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1389,7 +1389,7 @@ Display auto submit toolbar.
 The raw signing certificate.
 
 <h4 class="pdoc-member-header" id="Saml-defaultRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L116">property <b>defaultRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L116">property <b>defaultRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultRelayState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1397,7 +1397,7 @@ The raw signing certificate.
 Identifies a specific application resource in an IDP initiated SSO scenario.
 
 <h4 class="pdoc-member-header" id="Saml-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L120">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L120">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1405,7 +1405,7 @@ Identifies a specific application resource in an IDP initiated SSO scenario.
 Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
 
 <h4 class="pdoc-member-header" id="Saml-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L124">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L124">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>digestAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ Identifies the location where the SAML response is intended to be sent inside of
 Determines the digest algorithm used to digitally sign the SAML assertion and response.
 
 <h4 class="pdoc-member-header" id="Saml-entityKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L128">property <b>entityKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L128">property <b>entityKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1421,7 +1421,7 @@ Determines the digest algorithm used to digitally sign the SAML assertion and re
 Entity ID, the ID portion of the `entityUrl`.
 
 <h4 class="pdoc-member-header" id="Saml-entityUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L132">property <b>entityUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L132">property <b>entityUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entityUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1429,7 +1429,7 @@ Entity ID, the ID portion of the `entityUrl`.
 Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8.
 
 <h4 class="pdoc-member-header" id="Saml-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L136">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L136">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>features: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1437,7 +1437,7 @@ Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8.
 features enabled.
 
 <h4 class="pdoc-member-header" id="Saml-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L140">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L140">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1445,7 +1445,7 @@ features enabled.
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="Saml-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L144">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L144">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1453,7 +1453,7 @@ Groups associated with the application
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="Saml-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L148">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L148">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="Saml-honorForceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L152">property <b>honorForceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L152">property <b>honorForceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>honorForceAuthn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ Do not display application icon to users
 Prompt user to re-authenticate if SP asks for it.
 
 <h4 class="pdoc-member-header" id="Saml-httpPostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L156">property <b>httpPostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L156">property <b>httpPostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpPostBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ Prompt user to re-authenticate if SP asks for it.
 `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post` location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="Saml-httpRedirectBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L160">property <b>httpRedirectBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L160">property <b>httpRedirectBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpRedirectBinding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1485,7 +1485,7 @@ Prompt user to re-authenticate if SP asks for it.
 `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="Saml-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1494,7 +1494,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Saml-idpIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L164">property <b>idpIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L164">property <b>idpIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpIssuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1502,7 +1502,7 @@ deployments and may be missing (undefined) during planning phases.
 SAML issuer ID.
 
 <h4 class="pdoc-member-header" id="Saml-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L168">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L168">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ SAML issuer ID.
 Certificate key ID.
 
 <h4 class="pdoc-member-header" id="Saml-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L172">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L172">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1518,7 +1518,7 @@ Certificate key ID.
 Certificate name. This modulates the rotation of keys. New name == new key.
 
 <h4 class="pdoc-member-header" id="Saml-keyYearsValid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L176">property <b>keyYearsValid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L176">property <b>keyYearsValid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyYearsValid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ Certificate name. This modulates the rotation of keys. New name == new key.
 Number of years the certificate is valid.
 
 <h4 class="pdoc-member-header" id="Saml-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L180">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L180">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1534,7 +1534,7 @@ Number of years the certificate is valid.
 label of application.
 
 <h4 class="pdoc-member-header" id="Saml-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L184">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L184">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1542,7 +1542,7 @@ label of application.
 The raw SAML metadata in XML.
 
 <h4 class="pdoc-member-header" id="Saml-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1550,7 @@ The raw SAML metadata in XML.
 The name of the attribute statement.
 
 <h4 class="pdoc-member-header" id="Saml-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L192">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L192">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preconfiguredApp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1558,7 +1558,7 @@ The name of the attribute statement.
 name of application from the Okta Integration Network, if not included a custom app will be created.
 
 <h4 class="pdoc-member-header" id="Saml-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L196">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L196">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recipient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1566,7 +1566,7 @@ name of application from the Okta Integration Network, if not included a custom 
 The location where the app may present the SAML assertion.
 
 <h4 class="pdoc-member-header" id="Saml-requestCompressed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L200">property <b>requestCompressed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L200">property <b>requestCompressed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestCompressed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1574,7 +1574,7 @@ The location where the app may present the SAML assertion.
 Denotes whether the request is compressed or not.
 
 <h4 class="pdoc-member-header" id="Saml-responseSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L204">property <b>responseSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L204">property <b>responseSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseSigned: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1582,7 +1582,7 @@ Denotes whether the request is compressed or not.
 Determines whether the SAML auth response message is digitally signed.
 
 <h4 class="pdoc-member-header" id="Saml-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L208">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L208">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1590,7 +1590,7 @@ Determines whether the SAML auth response message is digitally signed.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="Saml-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L212">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L212">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signatureAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1598,7 +1598,7 @@ Sign on mode of application.
 Signature algorithm used ot digitally sign the assertion and response.
 
 <h4 class="pdoc-member-header" id="Saml-spIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L216">property <b>spIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L216">property <b>spIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spIssuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1606,7 +1606,7 @@ Signature algorithm used ot digitally sign the assertion and response.
 SAML service provider issuer.
 
 <h4 class="pdoc-member-header" id="Saml-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L220">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L220">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ssoUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1614,7 +1614,7 @@ SAML service provider issuer.
 Single Sign on Url.
 
 <h4 class="pdoc-member-header" id="Saml-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L224">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L224">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1622,7 +1622,7 @@ Single Sign on Url.
 status of application.
 
 <h4 class="pdoc-member-header" id="Saml-subjectNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L228">property <b>subjectNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L228">property <b>subjectNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectNameIdFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1630,7 +1630,7 @@ status of application.
 Identifies the SAML processing rules.
 
 <h4 class="pdoc-member-header" id="Saml-subjectNameIdTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L232">property <b>subjectNameIdTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L232">property <b>subjectNameIdTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectNameIdTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1638,7 +1638,7 @@ Identifies the SAML processing rules.
 Template for app user's username when a user is assigned to the app.
 
 <h4 class="pdoc-member-header" id="Saml-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1647,7 +1647,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Saml-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L236">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L236">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1655,7 +1655,7 @@ deployments.
 Username template.
 
 <h4 class="pdoc-member-header" id="Saml-userNameTemplateSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L240">property <b>userNameTemplateSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L240">property <b>userNameTemplateSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplateSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1663,7 +1663,7 @@ Username template.
 Username template suffix.
 
 <h4 class="pdoc-member-header" id="Saml-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L244">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L244">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplateType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1671,7 +1671,7 @@ Username template suffix.
 Username template type.
 
 <h4 class="pdoc-member-header" id="Saml-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L248">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L248">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#SamlUser'>SamlUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1679,7 +1679,7 @@ Username template type.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="SecurePasswordStore" data-link-title="SecurePasswordStore">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L33">
         Resource <strong>SecurePasswordStore</strong>
     </a>
 </h3>
@@ -1710,7 +1710,7 @@ const example = new okta.app.SecurePasswordStore("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L163"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L163"> <b>constructor</b></a>
 </h4>
 
 
@@ -1724,7 +1724,7 @@ Create a SecurePasswordStore resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1735,14 +1735,14 @@ Get an existing SecurePasswordStore resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1753,7 +1753,7 @@ Returns true if the given object is an instance of SecurePasswordStore.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilityErrorRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L67">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L67">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilitySelfService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1769,7 +1769,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L71">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L71">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1777,7 +1777,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-credentialsScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L75">property <b>credentialsScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L75">property <b>credentialsScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsScheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1785,7 +1785,7 @@ Display auto submit toolbar.
 Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L79">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L79">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1793,7 +1793,7 @@ Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L83">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L83">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1801,7 +1801,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L87">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L87">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1809,7 +1809,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1818,7 +1818,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L91">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L91">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1826,7 +1826,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1834,7 +1834,7 @@ The display name of the Application.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-optionalField1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L99">property <b>optionalField1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L99">property <b>optionalField1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalField1: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1842,7 +1842,7 @@ Name assigned to the application by Okta.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-optionalField1Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L103">property <b>optionalField1Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L103">property <b>optionalField1Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalField1Value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1850,7 +1850,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-optionalField2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L107">property <b>optionalField2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L107">property <b>optionalField2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalField2: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1858,7 +1858,7 @@ Name of optional value in the login form.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-optionalField2Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L111">property <b>optionalField2Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L111">property <b>optionalField2Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalField2Value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1866,7 +1866,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-optionalField3">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L115">property <b>optionalField3</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L115">property <b>optionalField3</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalField3: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1874,7 +1874,7 @@ Name of optional value in the login form.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-optionalField3Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L119">property <b>optionalField3Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L119">property <b>optionalField3Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalField3Value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1882,7 +1882,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-passwordField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L123">property <b>passwordField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L123">property <b>passwordField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1890,7 +1890,7 @@ Name of optional value in the login form.
 Login password field.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-revealPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L127">property <b>revealPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L127">property <b>revealPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revealPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1898,7 +1898,7 @@ Login password field.
 Allow user to reveal password.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-sharedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L131">property <b>sharedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L131">property <b>sharedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1906,7 +1906,7 @@ Allow user to reveal password.
 Shared password, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-sharedUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L135">property <b>sharedUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L135">property <b>sharedUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sharedUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ Shared password, required for certain schemes.
 Shared username, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L139">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L139">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ Shared username, required for certain schemes.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L143">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L143">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1930,7 +1930,7 @@ Sign on mode of application.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L147">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L147">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1947,7 +1947,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L151">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L151">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1955,7 +1955,7 @@ deployments.
 The default username assigned to each user.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L155">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L155">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplateType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +1963,7 @@ The default username assigned to each user.
 The Username template type.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-usernameField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L159">property <b>usernameField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L159">property <b>usernameField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1971,7 +1971,7 @@ The Username template type.
 Login username field.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStore-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L163">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L163">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#SecurePasswordStoreUser'>SecurePasswordStoreUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1979,7 +1979,7 @@ Login username field.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="Swa" data-link-title="Swa">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L33">
         Resource <strong>Swa</strong>
     </a>
 </h3>
@@ -2010,7 +2010,7 @@ const example = new okta.app.Swa("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown.
 
 <h4 class="pdoc-member-header" id="Swa-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L135"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L135"> <b>constructor</b></a>
 </h4>
 
 
@@ -2024,7 +2024,7 @@ Create a Swa resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Swa-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -2035,14 +2035,14 @@ Get an existing Swa resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Swa-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Swa-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2053,7 +2053,7 @@ Returns true if the given object is an instance of Swa.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Swa-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilityErrorRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2061,7 +2061,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="Swa-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L67">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L67">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilitySelfService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2069,7 +2069,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="Swa-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L71">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L71">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2077,7 +2077,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="Swa-buttonField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L75">property <b>buttonField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L75">property <b>buttonField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>buttonField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2085,7 +2085,7 @@ Display auto submit toolbar.
 Login button field.
 
 <h4 class="pdoc-member-header" id="Swa-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L79">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L79">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2093,7 +2093,7 @@ Login button field.
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="Swa-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L83">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L83">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2101,7 +2101,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="Swa-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L87">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L87">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2109,7 +2109,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="Swa-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2118,7 +2118,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Swa-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L91">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L91">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2126,7 +2126,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="Swa-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2134,7 +2134,7 @@ The display name of the Application.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="Swa-passwordField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L99">property <b>passwordField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L99">property <b>passwordField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2142,7 +2142,7 @@ Name assigned to the application by Okta.
 Login password field.
 
 <h4 class="pdoc-member-header" id="Swa-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L103">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L103">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preconfiguredApp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2150,7 +2150,7 @@ Login password field.
 name of application from the Okta Integration Network, if not included a custom app will be created.
 
 <h4 class="pdoc-member-header" id="Swa-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L107">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L107">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2158,7 +2158,7 @@ name of application from the Okta Integration Network, if not included a custom 
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="Swa-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L111">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L111">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2166,7 +2166,7 @@ Sign on mode of application.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="Swa-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L115">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L115">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2174,7 +2174,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="Swa-urlRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L119">property <b>urlRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L119">property <b>urlRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urlRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2182,7 +2182,7 @@ Login URL.
 A regex that further restricts URL to the specified regex.
 
 <h4 class="pdoc-member-header" id="Swa-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2191,7 +2191,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Swa-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L123">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L123">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ deployments.
 The default username assigned to each user.
 
 <h4 class="pdoc-member-header" id="Swa-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L127">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L127">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplateType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ The default username assigned to each user.
 The Username template type.
 
 <h4 class="pdoc-member-header" id="Swa-usernameField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L131">property <b>usernameField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L131">property <b>usernameField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ The Username template type.
 Login username field.
 
 <h4 class="pdoc-member-header" id="Swa-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L135">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L135">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#SwaUser'>SwaUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2223,7 +2223,7 @@ Login username field.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="ThreeField" data-link-title="ThreeField">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L33">
         Resource <strong>ThreeField</strong>
     </a>
 </h3>
@@ -2254,7 +2254,7 @@ const example = new okta.app.ThreeField("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown.
 
 <h4 class="pdoc-member-header" id="ThreeField-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -2268,7 +2268,7 @@ Create a ThreeField resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ThreeField-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -2279,14 +2279,14 @@ Get an existing ThreeField resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ThreeField-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ThreeField-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2297,7 +2297,7 @@ Returns true if the given object is an instance of ThreeField.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ThreeField-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L63">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilityErrorRedirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2305,7 +2305,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="ThreeField-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L67">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L67">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessibilitySelfService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2313,7 +2313,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="ThreeField-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L71">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L71">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoSubmitToolbar: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2321,7 +2321,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="ThreeField-buttonSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L75">property <b>buttonSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L75">property <b>buttonSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>buttonSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2329,7 +2329,7 @@ Display auto submit toolbar.
 Login button field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeField-extraFieldSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L79">property <b>extraFieldSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L79">property <b>extraFieldSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extraFieldSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2337,7 +2337,7 @@ Login button field CSS selector.
 Extra field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeField-extraFieldValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L83">property <b>extraFieldValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L83">property <b>extraFieldValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extraFieldValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2345,7 +2345,7 @@ Extra field CSS selector.
 Value for extra form field.
 
 <h4 class="pdoc-member-header" id="ThreeField-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L87">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L87">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2353,7 +2353,7 @@ Value for extra form field.
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="ThreeField-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L91">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L91">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideIos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2361,7 +2361,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="ThreeField-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L95">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L95">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hideWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2369,7 +2369,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="ThreeField-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2378,7 +2378,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ThreeField-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L99">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L99">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2386,7 +2386,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="ThreeField-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L103">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2394,7 +2394,7 @@ The display name of the Application.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="ThreeField-passwordSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L107">property <b>passwordSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L107">property <b>passwordSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2402,7 +2402,7 @@ Name assigned to the application by Okta.
 Login password field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeField-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L111">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L111">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signOnMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2410,7 +2410,7 @@ Login password field CSS selector.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="ThreeField-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L115">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L115">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2418,7 +2418,7 @@ Sign on mode of application.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="ThreeField-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L119">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L119">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2426,7 +2426,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="ThreeField-urlRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L123">property <b>urlRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L123">property <b>urlRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urlRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2434,7 +2434,7 @@ Login URL.
 A regex that further restricts URL to the specified regex.
 
 <h4 class="pdoc-member-header" id="ThreeField-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2443,7 +2443,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ThreeField-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L127">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L127">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2451,7 +2451,7 @@ deployments.
 The default username assigned to each user.
 
 <h4 class="pdoc-member-header" id="ThreeField-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L131">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L131">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userNameTemplateType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2459,7 +2459,7 @@ The default username assigned to each user.
 The Username template type.
 
 <h4 class="pdoc-member-header" id="ThreeField-usernameSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L135">property <b>usernameSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L135">property <b>usernameSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2467,7 +2467,7 @@ The Username template type.
 Login username field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeField-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L139">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L139">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#ThreeFieldUser'>ThreeFieldUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2475,7 +2475,7 @@ Login username field CSS selector.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L37">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -2510,7 +2510,7 @@ const example = new okta.app.User("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown.
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -2524,7 +2524,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -2535,14 +2535,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2553,7 +2553,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L67">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L67">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2561,7 +2561,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 App to associate user with.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2570,7 +2570,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L71">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L71">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2578,7 +2578,7 @@ deployments and may be missing (undefined) during planning phases.
 The password to use.
 
 <h4 class="pdoc-member-header" id="User-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L75">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L75">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2586,7 +2586,7 @@ The password to use.
 The JSON profile of the App User.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2595,7 +2595,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L79">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L79">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2603,7 +2603,7 @@ deployments.
 User to associate the application with.
 
 <h4 class="pdoc-member-header" id="User-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L83">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L83">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2611,7 +2611,7 @@ User to associate the application with.
 The username to use for the app user.
 
 <h3 class="pdoc-module-header" id="UserBaseSchema" data-link-title="UserBaseSchema">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L33">
         Resource <strong>UserBaseSchema</strong>
     </a>
 </h3>
@@ -2642,7 +2642,7 @@ const example = new okta.app.UserBaseSchema("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -2656,7 +2656,7 @@ Create a UserBaseSchema resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -2667,14 +2667,14 @@ Get an existing UserBaseSchema resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2685,7 +2685,7 @@ Returns true if the given object is an instance of UserBaseSchema.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L63">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L63">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2693,7 +2693,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Application's ID the user schema property should be assigned to.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2702,7 +2702,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L67">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L67">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2710,7 @@ deployments and may be missing (undefined) during planning phases.
 The property name.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L71">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L71">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>master: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2718,7 +2718,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L75">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L75">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2726,7 +2726,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L79">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L79">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>required: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2734,7 +2734,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L83">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L83">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2742,7 @@ Whether the property is required for this application's users.
 The property display name.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L87">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L87">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2750,7 +2750,7 @@ The property display name.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchema-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2759,7 +2759,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="UserSchema" data-link-title="UserSchema">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L35">
         Resource <strong>UserSchema</strong>
     </a>
 </h3>
@@ -2792,7 +2792,7 @@ const example = new okta.app.UserSchema("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown.
 
 <h4 class="pdoc-member-header" id="UserSchema-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L129"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L129"> <b>constructor</b></a>
 </h4>
 
 
@@ -2806,7 +2806,7 @@ Create a UserSchema resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserSchema-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -2817,14 +2817,14 @@ Get an existing UserSchema resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserSchema-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserSchema-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2835,7 +2835,7 @@ Returns true if the given object is an instance of UserSchema.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserSchema-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L65">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L65">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2843,7 +2843,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Application's ID the user custom schema property should be assigned to.
 
 <h4 class="pdoc-member-header" id="UserSchema-arrayEnums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L69">property <b>arrayEnums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L69">property <b>arrayEnums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arrayEnums: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2851,7 +2851,7 @@ The Application's ID the user custom schema property should be assigned to.
 Array of values that an array property's items can be set to.
 
 <h4 class="pdoc-member-header" id="UserSchema-arrayOneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L73">property <b>arrayOneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L73">property <b>arrayOneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arrayOneOfs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#UserSchemaArrayOneOf'>UserSchemaArrayOneOf</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2859,7 +2859,7 @@ Array of values that an array property's items can be set to.
 Display name and value an enum array can be set to.
 
 <h4 class="pdoc-member-header" id="UserSchema-arrayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L77">property <b>arrayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L77">property <b>arrayType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arrayType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2867,7 +2867,7 @@ Display name and value an enum array can be set to.
 The type of the array elements if `type` is set to `"array"`.
 
 <h4 class="pdoc-member-header" id="UserSchema-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2875,7 +2875,7 @@ The type of the array elements if `type` is set to `"array"`.
 The description of the user schema property.
 
 <h4 class="pdoc-member-header" id="UserSchema-enums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L85">property <b>enums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L85">property <b>enums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enums: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2883,7 +2883,7 @@ The description of the user schema property.
 Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 
 <h4 class="pdoc-member-header" id="UserSchema-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L89">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L89">property <b>externalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2891,7 +2891,7 @@ Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="UserSchema-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2900,7 +2900,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserSchema-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L93">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L93">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2908,7 +2908,7 @@ deployments and may be missing (undefined) during planning phases.
 The property name.
 
 <h4 class="pdoc-member-header" id="UserSchema-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L97">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L97">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>master: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2916,7 +2916,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="UserSchema-maxLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L101">property <b>maxLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L101">property <b>maxLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2924,7 +2924,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The maximum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="UserSchema-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L105">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L105">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2932,7 +2932,7 @@ The maximum length of the user property value. Only applies to type `"string"`.
 The minimum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="UserSchema-oneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L109">property <b>oneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L109">property <b>oneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oneOfs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#UserSchemaOneOf'>UserSchemaOneOf</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2940,7 +2940,7 @@ The minimum length of the user property value. Only applies to type `"string"`.
 Array of maps containing a mapping for display name to enum value.
 
 <h4 class="pdoc-member-header" id="UserSchema-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L113">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L113">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2948,7 +2948,7 @@ Array of maps containing a mapping for display name to enum value.
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="UserSchema-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L117">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L117">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>required: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2956,7 +2956,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="UserSchema-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L121">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L121">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2964,7 +2964,7 @@ Whether the property is required for this application's users.
 determines whether an app user attribute can be set at the Individual or Group Level.
 
 <h4 class="pdoc-member-header" id="UserSchema-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L125">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L125">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2972,7 +2972,7 @@ determines whether an app user attribute can be set at the Individual or Group L
 display name for the enum value.
 
 <h4 class="pdoc-member-header" id="UserSchema-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L129">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L129">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +2980,7 @@ display name for the enum value.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h4 class="pdoc-member-header" id="UserSchema-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2991,7 +2991,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getApp" data-link-title="getApp">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L27">
         Function <strong>getApp</strong>
     </a>
 </h3>
@@ -3018,7 +3018,7 @@ const example = pulumi.output(okta.app.getApp({
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown.
 
 <h3 class="pdoc-module-header" id="getMetadataSaml" data-link-title="getMetadataSaml">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L28">
         Function <strong>getMetadataSaml</strong>
     </a>
 </h3>
@@ -3046,7 +3046,7 @@ const example = pulumi.output(okta.app.getMetadataSaml({
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown.
 
 <h3 class="pdoc-module-header" id="getSaml" data-link-title="getSaml">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L27">
         Function <strong>getSaml</strong>
     </a>
 </h3>
@@ -3075,7 +3075,7 @@ const example = pulumi.output(okta.app.getSaml({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AutoLoginArgs" data-link-title="AutoLoginArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L299">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L299">
         interface <strong>AutoLoginArgs</strong>
     </a>
 </h3>
@@ -3085,7 +3085,7 @@ const example = pulumi.output(okta.app.getSaml({
 The set of arguments for constructing a AutoLogin resource.
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L303">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L303">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3093,7 +3093,7 @@ The set of arguments for constructing a AutoLogin resource.
 Custom error page URL
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L307">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L307">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3101,7 +3101,7 @@ Custom error page URL
 Enable self service
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L311">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L311">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3109,7 +3109,7 @@ Enable self service
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-credentialsScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L315">property <b>credentialsScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L315">property <b>credentialsScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsScheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3117,7 +3117,7 @@ Display auto submit toolbar
 Application credentials scheme
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L319">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L319">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3125,7 +3125,7 @@ Application credentials scheme
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L323">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L323">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3133,7 +3133,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L327">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L327">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3141,7 +3141,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L331">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L331">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3149,7 +3149,7 @@ Do not display application icon to users
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L335">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L335">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preconfiguredApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3157,7 +3157,7 @@ The Application's display name.
 Tells Okta to use an existing application in their application catalog, as opposed to a custom application.
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-revealPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L339">property <b>revealPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L339">property <b>revealPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revealPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3165,7 +3165,7 @@ Tells Okta to use an existing application in their application catalog, as oppos
 Allow user to reveal password
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-sharedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L343">property <b>sharedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L343">property <b>sharedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3173,7 +3173,7 @@ Allow user to reveal password
 Shared password, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-sharedUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L347">property <b>sharedUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L347">property <b>sharedUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3181,7 +3181,7 @@ Shared password, required for certain schemes.
 Shared username, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-signOnRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L351">property <b>signOnRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L351">property <b>signOnRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3189,7 +3189,7 @@ Shared username, required for certain schemes.
 Post login redirect URL
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-signOnUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L355">property <b>signOnUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L355">property <b>signOnUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3197,7 +3197,7 @@ Post login redirect URL
 Login URL
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L359">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L359">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3205,7 +3205,7 @@ Login URL
 The status of the application, by default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="AutoLoginArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L363">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L363">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#AutoLoginUser'>AutoLoginUser</a>&gt;[]&gt;;</code></pre>
@@ -3213,7 +3213,7 @@ The status of the application, by default it is `"ACTIVE"`.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="AutoLoginState" data-link-title="AutoLoginState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L213">
         interface <strong>AutoLoginState</strong>
     </a>
 </h3>
@@ -3223,7 +3223,7 @@ Users associated with the application
 Input properties used for looking up and filtering AutoLogin resources.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L217">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L217">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3231,7 +3231,7 @@ Input properties used for looking up and filtering AutoLogin resources.
 Custom error page URL
 
 <h4 class="pdoc-member-header" id="AutoLoginState-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L221">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L221">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3239,7 +3239,7 @@ Custom error page URL
 Enable self service
 
 <h4 class="pdoc-member-header" id="AutoLoginState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L225">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L225">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3247,7 +3247,7 @@ Enable self service
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="AutoLoginState-credentialsScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L229">property <b>credentialsScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L229">property <b>credentialsScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsScheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3255,7 +3255,7 @@ Display auto submit toolbar
 Application credentials scheme
 
 <h4 class="pdoc-member-header" id="AutoLoginState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L233">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L233">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3263,7 +3263,7 @@ Application credentials scheme
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="AutoLoginState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L237">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L237">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3271,7 +3271,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="AutoLoginState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L241">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L241">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3279,7 +3279,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="AutoLoginState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L245">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L245">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3287,7 +3287,7 @@ Do not display application icon to users
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3295,7 +3295,7 @@ The Application's display name.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L253">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L253">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preconfiguredApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3303,7 +3303,7 @@ Name assigned to the application by Okta.
 Tells Okta to use an existing application in their application catalog, as opposed to a custom application.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-revealPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L257">property <b>revealPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L257">property <b>revealPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revealPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3311,7 +3311,7 @@ Tells Okta to use an existing application in their application catalog, as oppos
 Allow user to reveal password
 
 <h4 class="pdoc-member-header" id="AutoLoginState-sharedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L261">property <b>sharedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L261">property <b>sharedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3319,7 +3319,7 @@ Allow user to reveal password
 Shared password, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-sharedUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L265">property <b>sharedUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L265">property <b>sharedUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3327,7 +3327,7 @@ Shared password, required for certain schemes.
 Shared username, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L269">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L269">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3335,7 +3335,7 @@ Shared username, required for certain schemes.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-signOnRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L273">property <b>signOnRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L273">property <b>signOnRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3343,7 +3343,7 @@ Sign on mode of application.
 Post login redirect URL
 
 <h4 class="pdoc-member-header" id="AutoLoginState-signOnUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L277">property <b>signOnUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L277">property <b>signOnUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3351,7 +3351,7 @@ Post login redirect URL
 Login URL
 
 <h4 class="pdoc-member-header" id="AutoLoginState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L281">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L281">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3359,7 +3359,7 @@ Login URL
 The status of the application, by default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="AutoLoginState-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L285">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L285">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3367,7 +3367,7 @@ The status of the application, by default it is `"ACTIVE"`.
 Username template
 
 <h4 class="pdoc-member-header" id="AutoLoginState-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L289">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L289">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3375,7 +3375,7 @@ Username template
 Username template type
 
 <h4 class="pdoc-member-header" id="AutoLoginState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/autoLogin.ts#L293">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/autoLogin.ts#L293">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#AutoLoginUser'>AutoLoginUser</a>&gt;[]&gt;;</code></pre>
@@ -3383,7 +3383,7 @@ Username template type
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="BasicAuthArgs" data-link-title="BasicAuthArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L207">
         interface <strong>BasicAuthArgs</strong>
     </a>
 </h3>
@@ -3393,7 +3393,7 @@ Users associated with the application
 The set of arguments for constructing a BasicAuth resource.
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L211">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L211">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3401,7 +3401,7 @@ The set of arguments for constructing a BasicAuth resource.
 The URL of the authenticating site for this app.
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L215">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L215">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3409,7 +3409,7 @@ The URL of the authenticating site for this app.
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L219">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L219">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3417,7 +3417,7 @@ Display auto submit toolbar
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L223">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L223">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3425,7 +3425,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L227">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L227">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3433,7 +3433,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L231">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L231">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3441,7 +3441,7 @@ Do not display application icon to users
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L235">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L235">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3449,7 +3449,7 @@ The Application's display name.
 Status of application.
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L239">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L239">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3457,7 +3457,7 @@ Status of application.
 The URL of the sign-in page for this app.
 
 <h4 class="pdoc-member-header" id="BasicAuthArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L243">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L243">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#BasicAuthUser'>BasicAuthUser</a>&gt;[]&gt;;</code></pre>
@@ -3465,7 +3465,7 @@ The URL of the sign-in page for this app.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="BasicAuthState" data-link-title="BasicAuthState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L157">
         interface <strong>BasicAuthState</strong>
     </a>
 </h3>
@@ -3475,7 +3475,7 @@ Users associated with the application
 Input properties used for looking up and filtering BasicAuth resources.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-authUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L161">property <b>authUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L161">property <b>authUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3483,7 +3483,7 @@ Input properties used for looking up and filtering BasicAuth resources.
 The URL of the authenticating site for this app.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L165">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L165">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3491,7 +3491,7 @@ The URL of the authenticating site for this app.
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="BasicAuthState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L169">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L169">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3499,7 +3499,7 @@ Display auto submit toolbar
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="BasicAuthState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L173">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L173">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3507,7 +3507,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="BasicAuthState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L177">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L177">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3515,7 +3515,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="BasicAuthState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L181">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L181">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3523,7 +3523,7 @@ Do not display application icon to users
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3531,7 +3531,7 @@ The Application's display name.
 name of app.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L189">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L189">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3539,7 +3539,7 @@ name of app.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L193">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L193">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3547,7 +3547,7 @@ Sign on mode of application.
 Status of application.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L197">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L197">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3555,7 +3555,7 @@ Status of application.
 The URL of the sign-in page for this app.
 
 <h4 class="pdoc-member-header" id="BasicAuthState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/basicAuth.ts#L201">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/basicAuth.ts#L201">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#BasicAuthUser'>BasicAuthUser</a>&gt;[]&gt;;</code></pre>
@@ -3563,7 +3563,7 @@ The URL of the sign-in page for this app.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="BookmarkArgs" data-link-title="BookmarkArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L209">
         interface <strong>BookmarkArgs</strong>
     </a>
 </h3>
@@ -3573,7 +3573,7 @@ Users associated with the application
 The set of arguments for constructing a Bookmark resource.
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L213">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L213">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3581,7 +3581,7 @@ The set of arguments for constructing a Bookmark resource.
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L217">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L217">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3589,7 +3589,7 @@ Display auto submit toolbar
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L221">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L221">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3597,7 +3597,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L225">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L225">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3605,7 +3605,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L229">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L229">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3613,7 +3613,7 @@ Do not display application icon to users
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-requestIntegration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L233">property <b>requestIntegration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L233">property <b>requestIntegration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3621,7 +3621,7 @@ The Application's display name.
 Would you like Okta to add an integration for this app?
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L237">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L237">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3629,7 +3629,7 @@ Would you like Okta to add an integration for this app?
 Status of application.
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L241">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L241">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3637,7 +3637,7 @@ Status of application.
 The URL of the bookmark.
 
 <h4 class="pdoc-member-header" id="BookmarkArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L245">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L245">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#BookmarkUser'>BookmarkUser</a>&gt;[]&gt;;</code></pre>
@@ -3645,7 +3645,7 @@ The URL of the bookmark.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="BookmarkState" data-link-title="BookmarkState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L159">
         interface <strong>BookmarkState</strong>
     </a>
 </h3>
@@ -3655,7 +3655,7 @@ Users associated with the application
 Input properties used for looking up and filtering Bookmark resources.
 
 <h4 class="pdoc-member-header" id="BookmarkState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L163">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L163">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3663,7 +3663,7 @@ Input properties used for looking up and filtering Bookmark resources.
 Display auto submit toolbar
 
 <h4 class="pdoc-member-header" id="BookmarkState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L167">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L167">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3671,7 +3671,7 @@ Display auto submit toolbar
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="BookmarkState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L171">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L171">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3679,7 +3679,7 @@ Groups associated with the application
 Do not display application icon on mobile app
 
 <h4 class="pdoc-member-header" id="BookmarkState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L175">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L175">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3687,7 +3687,7 @@ Do not display application icon on mobile app
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="BookmarkState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L179">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L179">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3695,7 +3695,7 @@ Do not display application icon to users
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="BookmarkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L183">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3703,7 +3703,7 @@ The Application's display name.
 name of app.
 
 <h4 class="pdoc-member-header" id="BookmarkState-requestIntegration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L187">property <b>requestIntegration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L187">property <b>requestIntegration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3711,7 +3711,7 @@ name of app.
 Would you like Okta to add an integration for this app?
 
 <h4 class="pdoc-member-header" id="BookmarkState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L191">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L191">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3719,7 +3719,7 @@ Would you like Okta to add an integration for this app?
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="BookmarkState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L195">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L195">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3727,7 +3727,7 @@ Sign on mode of application.
 Status of application.
 
 <h4 class="pdoc-member-header" id="BookmarkState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L199">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L199">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3735,7 +3735,7 @@ Status of application.
 The URL of the bookmark.
 
 <h4 class="pdoc-member-header" id="BookmarkState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/bookmark.ts#L203">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/bookmark.ts#L203">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#BookmarkUser'>BookmarkUser</a>&gt;[]&gt;;</code></pre>
@@ -3743,7 +3743,7 @@ The URL of the bookmark.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="GetAppArgs" data-link-title="GetAppArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L47">
         interface <strong>GetAppArgs</strong>
     </a>
 </h3>
@@ -3753,7 +3753,7 @@ Users associated with the application
 A collection of arguments for invoking getApp.
 
 <h4 class="pdoc-member-header" id="GetAppArgs-activeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L51">property <b>activeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L51">property <b>activeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -3761,7 +3761,7 @@ A collection of arguments for invoking getApp.
 tells the provider to query for only `ACTIVE` applications.
 
 <h4 class="pdoc-member-header" id="GetAppArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3769,7 +3769,7 @@ tells the provider to query for only `ACTIVE` applications.
 `id` of application to retrieve, conflicts with `label` and `labelPrefix`.
 
 <h4 class="pdoc-member-header" id="GetAppArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L59">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L59">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3777,7 +3777,7 @@ tells the provider to query for only `ACTIVE` applications.
 The label of the app to retrieve, conflicts with `labelPrefix` and `id`.
 
 <h4 class="pdoc-member-header" id="GetAppArgs-labelPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L63">property <b>labelPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L63">property <b>labelPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3785,7 +3785,7 @@ The label of the app to retrieve, conflicts with `labelPrefix` and `id`.
 Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 
 <h3 class="pdoc-module-header" id="GetAppResult" data-link-title="GetAppResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L69">
         interface <strong>GetAppResult</strong>
     </a>
 </h3>
@@ -3795,12 +3795,12 @@ Label prefix of the app to retrieve, conflicts with `label` and `id`. This will 
 A collection of values returned by getApp.
 
 <h4 class="pdoc-member-header" id="GetAppResult-activeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L70">property <b>activeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L70">property <b>activeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAppResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3808,7 +3808,7 @@ A collection of values returned by getApp.
 `description` of application.
 
 <h4 class="pdoc-member-header" id="GetAppResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3816,7 +3816,7 @@ A collection of values returned by getApp.
 `id` of application.
 
 <h4 class="pdoc-member-header" id="GetAppResult-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L82">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L82">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3824,12 +3824,12 @@ A collection of values returned by getApp.
 `label` of application.
 
 <h4 class="pdoc-member-header" id="GetAppResult-labelPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L83">property <b>labelPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L83">property <b>labelPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAppResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3837,7 +3837,7 @@ A collection of values returned by getApp.
 `name` of application.
 
 <h4 class="pdoc-member-header" id="GetAppResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getApp.ts#L91">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getApp.ts#L91">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3845,7 +3845,7 @@ A collection of values returned by getApp.
 `status` of application.
 
 <h3 class="pdoc-module-header" id="GetMetadataSamlArgs" data-link-title="GetMetadataSamlArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L45">
         interface <strong>GetMetadataSamlArgs</strong>
     </a>
 </h3>
@@ -3855,7 +3855,7 @@ A collection of values returned by getApp.
 A collection of arguments for invoking getMetadataSaml.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L49">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L49">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3863,7 +3863,7 @@ A collection of arguments for invoking getMetadataSaml.
 The application ID.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L53">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L53">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3871,7 +3871,7 @@ The application ID.
 Certificate Key ID.
 
 <h3 class="pdoc-module-header" id="GetMetadataSamlResult" data-link-title="GetMetadataSamlResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L59">
         interface <strong>GetMetadataSamlResult</strong>
     </a>
 </h3>
@@ -3881,12 +3881,12 @@ Certificate Key ID.
 A collection of values returned by getMetadataSaml.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L60">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L60">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L64">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L64">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3894,7 +3894,7 @@ A collection of values returned by getMetadataSaml.
 public certificate from application metadata.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-entityId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L68">property <b>entityId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L68">property <b>entityId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3902,7 +3902,7 @@ public certificate from application metadata.
 Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-httpPostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L72">property <b>httpPostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L72">property <b>httpPostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpPostBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3910,7 +3910,7 @@ Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlyb
 urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-httpRedirectBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L76">property <b>httpRedirectBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L76">property <b>httpRedirectBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpRedirectBinding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3918,7 +3918,7 @@ urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3926,12 +3926,12 @@ urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metada
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L77">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L77">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L81">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L81">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3939,7 +3939,7 @@ The provider-assigned unique ID for this managed resource.
 raw metadata of application.
 
 <h4 class="pdoc-member-header" id="GetMetadataSamlResult-wantAuthnRequestsSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getMetadataSaml.ts#L85">property <b>wantAuthnRequestsSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getMetadataSaml.ts#L85">property <b>wantAuthnRequestsSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wantAuthnRequestsSigned: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3947,7 +3947,7 @@ raw metadata of application.
 Whether authn requests are signed.
 
 <h3 class="pdoc-module-header" id="GetSamlArgs" data-link-title="GetSamlArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L75">
         interface <strong>GetSamlArgs</strong>
     </a>
 </h3>
@@ -3957,7 +3957,7 @@ Whether authn requests are signed.
 A collection of arguments for invoking getSaml.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L79">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L79">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3965,7 +3965,7 @@ A collection of arguments for invoking getSaml.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-accessibilityLoginRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L83">property <b>accessibilityLoginRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L83">property <b>accessibilityLoginRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityLoginRedirectUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3973,7 +3973,7 @@ Custom error page URL.
 Custom login page URL.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L87">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L87">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -3981,7 +3981,7 @@ Custom login page URL.
 Enable self service.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-activeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L91">property <b>activeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L91">property <b>activeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -3989,7 +3989,7 @@ Enable self service.
 tells the provider to query for only `ACTIVE` applications.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-appSettingsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L95">property <b>appSettingsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L95">property <b>appSettingsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettingsJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3997,7 +3997,7 @@ tells the provider to query for only `ACTIVE` applications.
 Application settings in JSON format.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-assertionSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L99">property <b>assertionSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L99">property <b>assertionSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionSigned?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4005,7 +4005,7 @@ Application settings in JSON format.
 Determines whether the SAML assertion is digitally signed.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-attributeStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L103">property <b>attributeStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L103">property <b>attributeStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributeStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetSamlAttributeStatement'>GetSamlAttributeStatement</a>[];</code></pre>
@@ -4013,7 +4013,7 @@ Determines whether the SAML assertion is digitally signed.
 SAML Attribute statements.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L107">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L107">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4021,7 +4021,7 @@ SAML Attribute statements.
 Audience restriction.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L111">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L111">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnContextClassRef?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4029,7 +4029,7 @@ Audience restriction.
 Identifies the SAML authentication context class for the assertion’s authentication statement.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L115">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L115">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4037,7 +4037,7 @@ Identifies the SAML authentication context class for the assertion’s authentic
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-defaultRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L119">property <b>defaultRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L119">property <b>defaultRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRelayState?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4045,7 +4045,7 @@ Display auto submit toolbar.
 Identifies a specific application resource in an IDP initiated SSO scenario.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L123">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L123">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4053,7 +4053,7 @@ Identifies a specific application resource in an IDP initiated SSO scenario.
 Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L127">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L127">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4061,7 +4061,7 @@ Identifies the location where the SAML response is intended to be sent inside of
 Determines the digest algorithm used to digitally sign the SAML assertion and response.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L131">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L131">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4069,7 +4069,7 @@ Determines the digest algorithm used to digitally sign the SAML assertion and re
 features enabled.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L135">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L135">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4077,7 +4077,7 @@ features enabled.
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L139">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L139">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4085,7 +4085,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-honorForceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L143">property <b>honorForceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L143">property <b>honorForceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorForceAuthn?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4093,7 +4093,7 @@ Do not display application icon to users
 Prompt user to re-authenticate if SP asks for it.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L147">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L147">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4101,7 +4101,7 @@ Prompt user to re-authenticate if SP asks for it.
 `id` of application to retrieve, conflicts with `label` and `labelPrefix`.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-idpIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L151">property <b>idpIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L151">property <b>idpIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpIssuer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4109,7 +4109,7 @@ Prompt user to re-authenticate if SP asks for it.
 SAML issuer ID.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L155">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L155">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4117,7 +4117,7 @@ SAML issuer ID.
 The label of the app to retrieve, conflicts with `labelPrefix` and `id`.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-labelPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L159">property <b>labelPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L159">property <b>labelPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4125,7 +4125,7 @@ The label of the app to retrieve, conflicts with `labelPrefix` and `id`.
 Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L163">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L163">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4133,7 +4133,7 @@ Label prefix of the app to retrieve, conflicts with `label` and `id`. This will 
 The location where the app may present the SAML assertion.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-requestCompressed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L167">property <b>requestCompressed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L167">property <b>requestCompressed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCompressed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4141,7 +4141,7 @@ The location where the app may present the SAML assertion.
 Denotes whether the request is compressed or not.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-responseSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L171">property <b>responseSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L171">property <b>responseSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSigned?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4149,7 +4149,7 @@ Denotes whether the request is compressed or not.
 Determines whether the SAML auth response message is digitally signed.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L175">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L175">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4157,7 +4157,7 @@ Determines whether the SAML auth response message is digitally signed.
 Signature algorithm used ot digitally sign the assertion and response.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-spIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L179">property <b>spIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L179">property <b>spIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spIssuer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4165,7 +4165,7 @@ Signature algorithm used ot digitally sign the assertion and response.
 SAML service provider issuer.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L183">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L183">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4173,7 +4173,7 @@ SAML service provider issuer.
 Single Sign on Url.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-subjectNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L187">property <b>subjectNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L187">property <b>subjectNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4181,7 +4181,7 @@ Single Sign on Url.
 Identifies the SAML processing rules.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-subjectNameIdTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L191">property <b>subjectNameIdTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L191">property <b>subjectNameIdTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdTemplate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4189,7 +4189,7 @@ Identifies the SAML processing rules.
 Template for app user's username when a user is assigned to the app.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L195">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L195">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4197,7 +4197,7 @@ Template for app user's username when a user is assigned to the app.
 Username template.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-userNameTemplateSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L199">property <b>userNameTemplateSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L199">property <b>userNameTemplateSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateSuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4205,7 +4205,7 @@ Username template.
 Username template suffix.
 
 <h4 class="pdoc-member-header" id="GetSamlArgs-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L203">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L203">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4213,7 +4213,7 @@ Username template suffix.
 Username template type.
 
 <h3 class="pdoc-module-header" id="GetSamlResult" data-link-title="GetSamlResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L209">
         interface <strong>GetSamlResult</strong>
     </a>
 </h3>
@@ -4223,7 +4223,7 @@ Username template type.
 A collection of values returned by getSaml.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L213">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L213">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4231,7 +4231,7 @@ A collection of values returned by getSaml.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-accessibilityLoginRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L217">property <b>accessibilityLoginRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L217">property <b>accessibilityLoginRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityLoginRedirectUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4239,7 +4239,7 @@ Custom error page URL.
 Custom login page URL.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L221">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L221">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4247,12 +4247,12 @@ Custom login page URL.
 Enable self service.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-activeOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L222">property <b>activeOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L222">property <b>activeOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSamlResult-appSettingsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L226">property <b>appSettingsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L226">property <b>appSettingsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettingsJson?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4260,7 +4260,7 @@ Enable self service.
 Application settings in JSON format.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-assertionSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L230">property <b>assertionSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L230">property <b>assertionSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionSigned?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4268,7 +4268,7 @@ Application settings in JSON format.
 Determines whether the SAML assertion is digitally signed.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-attributeStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L234">property <b>attributeStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L234">property <b>attributeStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributeStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetSamlAttributeStatement'>GetSamlAttributeStatement</a>[];</code></pre>
@@ -4276,7 +4276,7 @@ Determines whether the SAML assertion is digitally signed.
 SAML Attribute statements.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L238">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L238">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4284,7 +4284,7 @@ SAML Attribute statements.
 Audience restriction.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L242">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L242">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnContextClassRef?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4292,7 +4292,7 @@ Audience restriction.
 Identifies the SAML authentication context class for the assertion’s authentication statement.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L246">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L246">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4300,7 +4300,7 @@ Identifies the SAML authentication context class for the assertion’s authentic
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-defaultRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L250">property <b>defaultRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L250">property <b>defaultRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRelayState?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4308,7 +4308,7 @@ Display auto submit toolbar.
 Identifies a specific application resource in an IDP initiated SSO scenario.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L254">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L254">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4316,7 +4316,7 @@ Identifies a specific application resource in an IDP initiated SSO scenario.
 description of application.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L258">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L258">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4324,7 +4324,7 @@ description of application.
 Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L262">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L262">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4332,7 +4332,7 @@ Identifies the location where the SAML response is intended to be sent inside of
 Determines the digest algorithm used to digitally sign the SAML assertion and response.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L266">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L266">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4340,7 +4340,7 @@ Determines the digest algorithm used to digitally sign the SAML assertion and re
 features enabled.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L270">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L270">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4348,7 +4348,7 @@ features enabled.
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L274">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L274">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4356,7 +4356,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="GetSamlResult-honorForceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L278">property <b>honorForceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L278">property <b>honorForceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorForceAuthn?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4364,7 +4364,7 @@ Do not display application icon to users
 Prompt user to re-authenticate if SP asks for it.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L282">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L282">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4372,7 +4372,7 @@ Prompt user to re-authenticate if SP asks for it.
 id of application.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-idpIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L286">property <b>idpIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L286">property <b>idpIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpIssuer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4380,7 +4380,7 @@ id of application.
 SAML issuer ID.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L290">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L290">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4388,7 +4388,7 @@ SAML issuer ID.
 Certificate key ID.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L294">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L294">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4396,12 +4396,12 @@ Certificate key ID.
 label of application.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-labelPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L295">property <b>labelPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L295">property <b>labelPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labelPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSamlResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L299">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L299">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4409,7 +4409,7 @@ label of application.
 name of application.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L303">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L303">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4417,7 +4417,7 @@ name of application.
 The location where the app may present the SAML assertion.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-requestCompressed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L307">property <b>requestCompressed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L307">property <b>requestCompressed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCompressed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4425,7 +4425,7 @@ The location where the app may present the SAML assertion.
 Denotes whether the request is compressed or not.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-responseSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L311">property <b>responseSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L311">property <b>responseSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSigned?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4433,7 +4433,7 @@ Denotes whether the request is compressed or not.
 Determines whether the SAML auth response message is digitally signed.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L315">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L315">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4441,7 +4441,7 @@ Determines whether the SAML auth response message is digitally signed.
 Signature algorithm used ot digitally sign the assertion and response.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-spIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L319">property <b>spIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L319">property <b>spIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spIssuer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4449,7 +4449,7 @@ Signature algorithm used ot digitally sign the assertion and response.
 SAML service provider issuer.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L323">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L323">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4457,7 +4457,7 @@ SAML service provider issuer.
 Single Sign on Url.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L327">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L327">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4465,7 +4465,7 @@ Single Sign on Url.
 status of application.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-subjectNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L331">property <b>subjectNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L331">property <b>subjectNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4473,7 +4473,7 @@ status of application.
 Identifies the SAML processing rules.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-subjectNameIdTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L335">property <b>subjectNameIdTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L335">property <b>subjectNameIdTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdTemplate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4481,7 +4481,7 @@ Identifies the SAML processing rules.
 Template for app user's username when a user is assigned to the app.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L339">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L339">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4489,7 +4489,7 @@ Template for app user's username when a user is assigned to the app.
 Username template.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-userNameTemplateSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L343">property <b>userNameTemplateSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L343">property <b>userNameTemplateSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateSuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4497,7 +4497,7 @@ Username template.
 Username template suffix.
 
 <h4 class="pdoc-member-header" id="GetSamlResult-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/getSaml.ts#L347">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/getSaml.ts#L347">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4505,7 +4505,7 @@ Username template suffix.
 Username template type.
 
 <h3 class="pdoc-module-header" id="GroupAssignmentArgs" data-link-title="GroupAssignmentArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L143">
         interface <strong>GroupAssignmentArgs</strong>
     </a>
 </h3>
@@ -4515,7 +4515,7 @@ Username template type.
 The set of arguments for constructing a GroupAssignment resource.
 
 <h4 class="pdoc-member-header" id="GroupAssignmentArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L147">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L147">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4523,7 +4523,7 @@ The set of arguments for constructing a GroupAssignment resource.
 The ID of the application to assign a group to.
 
 <h4 class="pdoc-member-header" id="GroupAssignmentArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L151">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L151">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4531,12 +4531,12 @@ The ID of the application to assign a group to.
 The ID of the group to assign the app to.
 
 <h4 class="pdoc-member-header" id="GroupAssignmentArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L152">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L152">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GroupAssignmentArgs-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L156">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L156">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4544,7 +4544,7 @@ The ID of the group to assign the app to.
 JSON document containing [application profile](https://developer.okta.com/docs/reference/api/apps/#profile-object)
 
 <h3 class="pdoc-module-header" id="GroupAssignmentState" data-link-title="GroupAssignmentState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L124">
         interface <strong>GroupAssignmentState</strong>
     </a>
 </h3>
@@ -4554,7 +4554,7 @@ JSON document containing [application profile](https://developer.okta.com/docs/r
 Input properties used for looking up and filtering GroupAssignment resources.
 
 <h4 class="pdoc-member-header" id="GroupAssignmentState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L128">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L128">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4562,7 +4562,7 @@ Input properties used for looking up and filtering GroupAssignment resources.
 The ID of the application to assign a group to.
 
 <h4 class="pdoc-member-header" id="GroupAssignmentState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L132">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L132">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4570,12 +4570,12 @@ The ID of the application to assign a group to.
 The ID of the group to assign the app to.
 
 <h4 class="pdoc-member-header" id="GroupAssignmentState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L133">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L133">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GroupAssignmentState-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/groupAssignment.ts#L137">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/groupAssignment.ts#L137">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4583,7 +4583,7 @@ The ID of the group to assign the app to.
 JSON document containing [application profile](https://developer.okta.com/docs/reference/api/apps/#profile-object)
 
 <h3 class="pdoc-module-header" id="OAuthArgs" data-link-title="OAuthArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L392">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L392">
         interface <strong>OAuthArgs</strong>
     </a>
 </h3>
@@ -4593,7 +4593,7 @@ JSON document containing [application profile](https://developer.okta.com/docs/r
 The set of arguments for constructing a OAuth resource.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-autoKeyRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L396">property <b>autoKeyRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L396">property <b>autoKeyRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoKeyRotation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4601,7 +4601,7 @@ The set of arguments for constructing a OAuth resource.
 Requested key rotation mode.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L400">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L400">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4609,7 +4609,7 @@ Requested key rotation mode.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-clientBasicSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L404">property <b>clientBasicSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L404">property <b>clientBasicSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientBasicSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4617,7 +4617,7 @@ Display auto submit toolbar.
 OAuth client secret key, this can be set when tokenEndpointAuthMethod is client_secret_basic.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-clientUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L408">property <b>clientUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L408">property <b>clientUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4625,7 +4625,7 @@ OAuth client secret key, this can be set when tokenEndpointAuthMethod is client_
 URI to a web page providing information about the client.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-consentMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L412">property <b>consentMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L412">property <b>consentMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4633,7 +4633,7 @@ URI to a web page providing information about the client.
 Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-customClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L416">property <b>customClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L416">property <b>customClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customClientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4641,7 +4641,7 @@ Indicates whether user consent is required or implicit. Valid values: REQUIRED, 
 This property allows you to set the application's client id.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-grantTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L420">property <b>grantTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L420">property <b>grantTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4649,7 +4649,7 @@ This property allows you to set the application's client id.
 List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L424">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L424">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4657,7 +4657,7 @@ List of OAuth 2.0 grant types. Conditional validation params found here https://
 The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L428">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L428">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4665,7 +4665,7 @@ The groups assigned to the application. It is recommended not to use this and in
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L432">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L432">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4673,7 +4673,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L436">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L436">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4681,7 +4681,7 @@ Do not display application icon to users.
 Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L440">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L440">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4689,7 +4689,7 @@ Indicates whether the Okta Authorization Server uses the original Okta org domai
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-loginUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L444">property <b>loginUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L444">property <b>loginUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4697,7 +4697,7 @@ The Application's display name.
 URI that initiates login.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-logoUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L448">property <b>logoUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L448">property <b>logoUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4705,7 +4705,7 @@ URI that initiates login.
 URI that references a logo for the client.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-omitSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L452">property <b>omitSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L452">property <b>omitSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>omitSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4713,7 +4713,7 @@ URI that references a logo for the client.
 This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-policyUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L456">property <b>policyUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L456">property <b>policyUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4721,7 +4721,7 @@ This tells the provider not to persist the application's secret to state. If thi
 URI to web page providing client policy document.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-postLogoutRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L460">property <b>postLogoutRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L460">property <b>postLogoutRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postLogoutRedirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4729,7 +4729,7 @@ URI to web page providing client policy document.
 List of URIs for redirection after logout.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L464">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L464">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4737,7 +4737,7 @@ List of URIs for redirection after logout.
 Custom JSON that represents an OAuth application's profile.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-redirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L468">property <b>redirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L468">property <b>redirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4745,7 +4745,7 @@ Custom JSON that represents an OAuth application's profile.
 List of URIs for use in the redirect-based flow. This is required for all application types except service.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-responseTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L472">property <b>responseTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L472">property <b>responseTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4753,7 +4753,7 @@ List of URIs for use in the redirect-based flow. This is required for all applic
 List of OAuth 2.0 response type strings.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L476">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L476">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4761,7 +4761,7 @@ List of OAuth 2.0 response type strings.
 The status of the application, by default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-tokenEndpointAuthMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L480">property <b>tokenEndpointAuthMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L480">property <b>tokenEndpointAuthMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenEndpointAuthMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4769,7 +4769,7 @@ The status of the application, by default it is `"ACTIVE"`.
 Requested authentication method for the token endpoint. It can be set to `"none"`, `"clientSecretPost"`, `"clientSecretBasic"`, `"clientSecretJwt"`.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-tosUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L484">property <b>tosUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L484">property <b>tosUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tosUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4777,7 +4777,7 @@ Requested authentication method for the token endpoint. It can be set to `"none"
 URI to web page providing client tos (terms of service).
 
 <h4 class="pdoc-member-header" id="OAuthArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L488">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L488">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4785,7 +4785,7 @@ URI to web page providing client tos (terms of service).
 The type of OAuth application.
 
 <h4 class="pdoc-member-header" id="OAuthArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L492">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L492">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#OAuthUser'>OAuthUser</a>&gt;[]&gt;;</code></pre>
@@ -4793,7 +4793,7 @@ The type of OAuth application.
 The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 
 <h3 class="pdoc-module-header" id="OAuthRedirectUriArgs" data-link-title="OAuthRedirectUriArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L92">
         interface <strong>OAuthRedirectUriArgs</strong>
     </a>
 </h3>
@@ -4803,12 +4803,12 @@ The users assigned to the application. It is recommended not to use this and ins
 The set of arguments for constructing a OAuthRedirectUri resource.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUriArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L93">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L93">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OAuthRedirectUriArgs-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L97">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L97">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4816,7 +4816,7 @@ The set of arguments for constructing a OAuthRedirectUri resource.
 Redirect URI to append to Okta OIDC application.
 
 <h3 class="pdoc-module-header" id="OAuthRedirectUriState" data-link-title="OAuthRedirectUriState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L81">
         interface <strong>OAuthRedirectUriState</strong>
     </a>
 </h3>
@@ -4826,12 +4826,12 @@ Redirect URI to append to Okta OIDC application.
 Input properties used for looking up and filtering OAuthRedirectUri resources.
 
 <h4 class="pdoc-member-header" id="OAuthRedirectUriState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L82">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L82">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OAuthRedirectUriState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuthRedirectUri.ts#L86">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuthRedirectUri.ts#L86">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4839,7 +4839,7 @@ Input properties used for looking up and filtering OAuthRedirectUri resources.
 Redirect URI to append to Okta OIDC application.
 
 <h3 class="pdoc-module-header" id="OAuthState" data-link-title="OAuthState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L270">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L270">
         interface <strong>OAuthState</strong>
     </a>
 </h3>
@@ -4849,7 +4849,7 @@ Redirect URI to append to Okta OIDC application.
 Input properties used for looking up and filtering OAuth resources.
 
 <h4 class="pdoc-member-header" id="OAuthState-autoKeyRotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L274">property <b>autoKeyRotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L274">property <b>autoKeyRotation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoKeyRotation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4857,7 +4857,7 @@ Input properties used for looking up and filtering OAuth resources.
 Requested key rotation mode.
 
 <h4 class="pdoc-member-header" id="OAuthState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L278">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L278">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4865,7 +4865,7 @@ Requested key rotation mode.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="OAuthState-clientBasicSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L282">property <b>clientBasicSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L282">property <b>clientBasicSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientBasicSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4873,7 +4873,7 @@ Display auto submit toolbar.
 OAuth client secret key, this can be set when tokenEndpointAuthMethod is client_secret_basic.
 
 <h4 class="pdoc-member-header" id="OAuthState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L286">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L286">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4881,7 +4881,7 @@ OAuth client secret key, this can be set when tokenEndpointAuthMethod is client_
 The client ID of the application.
 
 <h4 class="pdoc-member-header" id="OAuthState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L290">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L290">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4889,7 +4889,7 @@ The client ID of the application.
 The client secret of the application.
 
 <h4 class="pdoc-member-header" id="OAuthState-clientUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L294">property <b>clientUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L294">property <b>clientUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4897,7 +4897,7 @@ The client secret of the application.
 URI to a web page providing information about the client.
 
 <h4 class="pdoc-member-header" id="OAuthState-consentMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L298">property <b>consentMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L298">property <b>consentMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4905,7 +4905,7 @@ URI to a web page providing information about the client.
 Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 
 <h4 class="pdoc-member-header" id="OAuthState-customClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L302">property <b>customClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L302">property <b>customClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customClientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4913,7 +4913,7 @@ Indicates whether user consent is required or implicit. Valid values: REQUIRED, 
 This property allows you to set the application's client id.
 
 <h4 class="pdoc-member-header" id="OAuthState-grantTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L306">property <b>grantTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L306">property <b>grantTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4921,7 +4921,7 @@ This property allows you to set the application's client id.
 List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
 
 <h4 class="pdoc-member-header" id="OAuthState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L310">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L310">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4929,7 +4929,7 @@ List of OAuth 2.0 grant types. Conditional validation params found here https://
 The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
 
 <h4 class="pdoc-member-header" id="OAuthState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L314">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L314">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4937,7 +4937,7 @@ The groups assigned to the application. It is recommended not to use this and in
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="OAuthState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L318">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L318">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4945,7 +4945,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="OAuthState-issuerMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L322">property <b>issuerMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L322">property <b>issuerMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuerMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4953,7 +4953,7 @@ Do not display application icon to users.
 Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 
 <h4 class="pdoc-member-header" id="OAuthState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L326">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L326">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4961,7 +4961,7 @@ Indicates whether the Okta Authorization Server uses the original Okta org domai
 The Application's display name.
 
 <h4 class="pdoc-member-header" id="OAuthState-loginUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L330">property <b>loginUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L330">property <b>loginUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4969,7 +4969,7 @@ The Application's display name.
 URI that initiates login.
 
 <h4 class="pdoc-member-header" id="OAuthState-logoUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L334">property <b>logoUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L334">property <b>logoUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logoUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4977,7 +4977,7 @@ URI that initiates login.
 URI that references a logo for the client.
 
 <h4 class="pdoc-member-header" id="OAuthState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L338">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L338">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4985,7 +4985,7 @@ URI that references a logo for the client.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="OAuthState-omitSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L342">property <b>omitSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L342">property <b>omitSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>omitSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4993,7 +4993,7 @@ Name assigned to the application by Okta.
 This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 
 <h4 class="pdoc-member-header" id="OAuthState-policyUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L346">property <b>policyUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L346">property <b>policyUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5001,7 +5001,7 @@ This tells the provider not to persist the application's secret to state. If thi
 URI to web page providing client policy document.
 
 <h4 class="pdoc-member-header" id="OAuthState-postLogoutRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L350">property <b>postLogoutRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L350">property <b>postLogoutRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postLogoutRedirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5009,7 +5009,7 @@ URI to web page providing client policy document.
 List of URIs for redirection after logout.
 
 <h4 class="pdoc-member-header" id="OAuthState-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L354">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L354">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5017,7 +5017,7 @@ List of URIs for redirection after logout.
 Custom JSON that represents an OAuth application's profile.
 
 <h4 class="pdoc-member-header" id="OAuthState-redirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L358">property <b>redirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L358">property <b>redirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5025,7 +5025,7 @@ Custom JSON that represents an OAuth application's profile.
 List of URIs for use in the redirect-based flow. This is required for all application types except service.
 
 <h4 class="pdoc-member-header" id="OAuthState-responseTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L362">property <b>responseTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L362">property <b>responseTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5033,7 +5033,7 @@ List of URIs for use in the redirect-based flow. This is required for all applic
 List of OAuth 2.0 response type strings.
 
 <h4 class="pdoc-member-header" id="OAuthState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L366">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L366">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5041,7 +5041,7 @@ List of OAuth 2.0 response type strings.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="OAuthState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L370">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L370">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5049,7 +5049,7 @@ Sign on mode of application.
 The status of the application, by default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="OAuthState-tokenEndpointAuthMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L374">property <b>tokenEndpointAuthMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L374">property <b>tokenEndpointAuthMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenEndpointAuthMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5057,7 +5057,7 @@ The status of the application, by default it is `"ACTIVE"`.
 Requested authentication method for the token endpoint. It can be set to `"none"`, `"clientSecretPost"`, `"clientSecretBasic"`, `"clientSecretJwt"`.
 
 <h4 class="pdoc-member-header" id="OAuthState-tosUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L378">property <b>tosUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L378">property <b>tosUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tosUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5065,7 +5065,7 @@ Requested authentication method for the token endpoint. It can be set to `"none"
 URI to web page providing client tos (terms of service).
 
 <h4 class="pdoc-member-header" id="OAuthState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L382">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L382">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5073,7 +5073,7 @@ URI to web page providing client tos (terms of service).
 The type of OAuth application.
 
 <h4 class="pdoc-member-header" id="OAuthState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/oAuth.ts#L386">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/oAuth.ts#L386">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#OAuthUser'>OAuthUser</a>&gt;[]&gt;;</code></pre>
@@ -5081,7 +5081,7 @@ The type of OAuth application.
 The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 
 <h3 class="pdoc-module-header" id="SamlArgs" data-link-title="SamlArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L552">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L552">
         interface <strong>SamlArgs</strong>
     </a>
 </h3>
@@ -5091,7 +5091,7 @@ The users assigned to the application. It is recommended not to use this and ins
 The set of arguments for constructing a Saml resource.
 
 <h4 class="pdoc-member-header" id="SamlArgs-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L556">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L556">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5099,7 +5099,7 @@ The set of arguments for constructing a Saml resource.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SamlArgs-accessibilityLoginRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L560">property <b>accessibilityLoginRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L560">property <b>accessibilityLoginRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityLoginRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5107,7 +5107,7 @@ Custom error page URL.
 Custom login page URL.
 
 <h4 class="pdoc-member-header" id="SamlArgs-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L564">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L564">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5115,7 +5115,7 @@ Custom login page URL.
 Enable self service.
 
 <h4 class="pdoc-member-header" id="SamlArgs-appSettingsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L568">property <b>appSettingsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L568">property <b>appSettingsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettingsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5123,7 +5123,7 @@ Enable self service.
 Application settings in JSON format.
 
 <h4 class="pdoc-member-header" id="SamlArgs-assertionSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L572">property <b>assertionSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L572">property <b>assertionSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionSigned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5131,7 +5131,7 @@ Application settings in JSON format.
 Determines whether the SAML assertion is digitally signed.
 
 <h4 class="pdoc-member-header" id="SamlArgs-attributeStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L576">property <b>attributeStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L576">property <b>attributeStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributeStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SamlAttributeStatement'>SamlAttributeStatement</a>&gt;[]&gt;;</code></pre>
@@ -5139,7 +5139,7 @@ Determines whether the SAML assertion is digitally signed.
 List of SAML Attribute statements.
 
 <h4 class="pdoc-member-header" id="SamlArgs-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L580">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L580">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5147,7 +5147,7 @@ List of SAML Attribute statements.
 Audience restriction.
 
 <h4 class="pdoc-member-header" id="SamlArgs-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L584">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L584">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnContextClassRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5155,7 +5155,7 @@ Audience restriction.
 Identifies the SAML authentication context class for the assertion’s authentication statement.
 
 <h4 class="pdoc-member-header" id="SamlArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L588">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L588">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5163,7 +5163,7 @@ Identifies the SAML authentication context class for the assertion’s authentic
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SamlArgs-defaultRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L592">property <b>defaultRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L592">property <b>defaultRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRelayState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5171,7 +5171,7 @@ Display auto submit toolbar.
 Identifies a specific application resource in an IDP initiated SSO scenario.
 
 <h4 class="pdoc-member-header" id="SamlArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L596">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L596">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5179,7 +5179,7 @@ Identifies a specific application resource in an IDP initiated SSO scenario.
 Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
 
 <h4 class="pdoc-member-header" id="SamlArgs-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L600">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L600">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5187,7 +5187,7 @@ Identifies the location where the SAML response is intended to be sent inside of
 Determines the digest algorithm used to digitally sign the SAML assertion and response.
 
 <h4 class="pdoc-member-header" id="SamlArgs-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L604">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L604">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5195,7 +5195,7 @@ Determines the digest algorithm used to digitally sign the SAML assertion and re
 features enabled.
 
 <h4 class="pdoc-member-header" id="SamlArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L608">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L608">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5203,7 +5203,7 @@ features enabled.
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="SamlArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L612">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L612">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5211,7 +5211,7 @@ Groups associated with the application
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SamlArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L616">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L616">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5219,7 +5219,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="SamlArgs-honorForceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L620">property <b>honorForceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L620">property <b>honorForceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorForceAuthn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5227,7 +5227,7 @@ Do not display application icon to users
 Prompt user to re-authenticate if SP asks for it.
 
 <h4 class="pdoc-member-header" id="SamlArgs-idpIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L624">property <b>idpIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L624">property <b>idpIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5235,7 +5235,7 @@ Prompt user to re-authenticate if SP asks for it.
 SAML issuer ID.
 
 <h4 class="pdoc-member-header" id="SamlArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L628">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L628">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5243,7 +5243,7 @@ SAML issuer ID.
 Certificate name. This modulates the rotation of keys. New name == new key.
 
 <h4 class="pdoc-member-header" id="SamlArgs-keyYearsValid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L632">property <b>keyYearsValid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L632">property <b>keyYearsValid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyYearsValid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5251,7 +5251,7 @@ Certificate name. This modulates the rotation of keys. New name == new key.
 Number of years the certificate is valid.
 
 <h4 class="pdoc-member-header" id="SamlArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L636">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L636">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5259,7 +5259,7 @@ Number of years the certificate is valid.
 label of application.
 
 <h4 class="pdoc-member-header" id="SamlArgs-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L640">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L640">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preconfiguredApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5267,7 +5267,7 @@ label of application.
 name of application from the Okta Integration Network, if not included a custom app will be created.
 
 <h4 class="pdoc-member-header" id="SamlArgs-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L644">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L644">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5275,7 +5275,7 @@ name of application from the Okta Integration Network, if not included a custom 
 The location where the app may present the SAML assertion.
 
 <h4 class="pdoc-member-header" id="SamlArgs-requestCompressed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L648">property <b>requestCompressed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L648">property <b>requestCompressed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCompressed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5283,7 +5283,7 @@ The location where the app may present the SAML assertion.
 Denotes whether the request is compressed or not.
 
 <h4 class="pdoc-member-header" id="SamlArgs-responseSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L652">property <b>responseSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L652">property <b>responseSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSigned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5291,7 +5291,7 @@ Denotes whether the request is compressed or not.
 Determines whether the SAML auth response message is digitally signed.
 
 <h4 class="pdoc-member-header" id="SamlArgs-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L656">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L656">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5299,7 +5299,7 @@ Determines whether the SAML auth response message is digitally signed.
 Signature algorithm used ot digitally sign the assertion and response.
 
 <h4 class="pdoc-member-header" id="SamlArgs-spIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L660">property <b>spIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L660">property <b>spIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5307,7 +5307,7 @@ Signature algorithm used ot digitally sign the assertion and response.
 SAML service provider issuer.
 
 <h4 class="pdoc-member-header" id="SamlArgs-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L664">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L664">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5315,7 +5315,7 @@ SAML service provider issuer.
 Single Sign on Url.
 
 <h4 class="pdoc-member-header" id="SamlArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L668">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L668">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5323,7 +5323,7 @@ Single Sign on Url.
 status of application.
 
 <h4 class="pdoc-member-header" id="SamlArgs-subjectNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L672">property <b>subjectNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L672">property <b>subjectNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5331,7 +5331,7 @@ status of application.
 Identifies the SAML processing rules.
 
 <h4 class="pdoc-member-header" id="SamlArgs-subjectNameIdTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L676">property <b>subjectNameIdTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L676">property <b>subjectNameIdTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5339,7 +5339,7 @@ Identifies the SAML processing rules.
 Template for app user's username when a user is assigned to the app.
 
 <h4 class="pdoc-member-header" id="SamlArgs-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L680">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L680">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5347,7 +5347,7 @@ Template for app user's username when a user is assigned to the app.
 Username template.
 
 <h4 class="pdoc-member-header" id="SamlArgs-userNameTemplateSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L684">property <b>userNameTemplateSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L684">property <b>userNameTemplateSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5355,7 +5355,7 @@ Username template.
 Username template suffix.
 
 <h4 class="pdoc-member-header" id="SamlArgs-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L688">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L688">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5363,7 +5363,7 @@ Username template suffix.
 Username template type.
 
 <h4 class="pdoc-member-header" id="SamlArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L692">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L692">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SamlUser'>SamlUser</a>&gt;[]&gt;;</code></pre>
@@ -5371,7 +5371,7 @@ Username template type.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="SamlState" data-link-title="SamlState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L370">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L370">
         interface <strong>SamlState</strong>
     </a>
 </h3>
@@ -5381,7 +5381,7 @@ Users associated with the application
 Input properties used for looking up and filtering Saml resources.
 
 <h4 class="pdoc-member-header" id="SamlState-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L374">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L374">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5389,7 +5389,7 @@ Input properties used for looking up and filtering Saml resources.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SamlState-accessibilityLoginRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L378">property <b>accessibilityLoginRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L378">property <b>accessibilityLoginRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityLoginRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5397,7 +5397,7 @@ Custom error page URL.
 Custom login page URL.
 
 <h4 class="pdoc-member-header" id="SamlState-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L382">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L382">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5405,7 +5405,7 @@ Custom login page URL.
 Enable self service.
 
 <h4 class="pdoc-member-header" id="SamlState-appSettingsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L386">property <b>appSettingsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L386">property <b>appSettingsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettingsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5413,7 +5413,7 @@ Enable self service.
 Application settings in JSON format.
 
 <h4 class="pdoc-member-header" id="SamlState-assertionSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L390">property <b>assertionSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L390">property <b>assertionSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assertionSigned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5421,7 +5421,7 @@ Application settings in JSON format.
 Determines whether the SAML assertion is digitally signed.
 
 <h4 class="pdoc-member-header" id="SamlState-attributeStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L394">property <b>attributeStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L394">property <b>attributeStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributeStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SamlAttributeStatement'>SamlAttributeStatement</a>&gt;[]&gt;;</code></pre>
@@ -5429,7 +5429,7 @@ Determines whether the SAML assertion is digitally signed.
 List of SAML Attribute statements.
 
 <h4 class="pdoc-member-header" id="SamlState-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L398">property <b>audience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L398">property <b>audience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>audience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5437,7 +5437,7 @@ List of SAML Attribute statements.
 Audience restriction.
 
 <h4 class="pdoc-member-header" id="SamlState-authnContextClassRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L402">property <b>authnContextClassRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L402">property <b>authnContextClassRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authnContextClassRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5445,7 +5445,7 @@ Audience restriction.
 Identifies the SAML authentication context class for the assertion’s authentication statement.
 
 <h4 class="pdoc-member-header" id="SamlState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L406">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L406">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5453,7 +5453,7 @@ Identifies the SAML authentication context class for the assertion’s authentic
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SamlState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L410">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L410">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5461,7 +5461,7 @@ Display auto submit toolbar.
 The raw signing certificate.
 
 <h4 class="pdoc-member-header" id="SamlState-defaultRelayState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L414">property <b>defaultRelayState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L414">property <b>defaultRelayState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRelayState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5469,7 +5469,7 @@ The raw signing certificate.
 Identifies a specific application resource in an IDP initiated SSO scenario.
 
 <h4 class="pdoc-member-header" id="SamlState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L418">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L418">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5477,7 +5477,7 @@ Identifies a specific application resource in an IDP initiated SSO scenario.
 Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
 
 <h4 class="pdoc-member-header" id="SamlState-digestAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L422">property <b>digestAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L422">property <b>digestAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digestAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5485,7 +5485,7 @@ Identifies the location where the SAML response is intended to be sent inside of
 Determines the digest algorithm used to digitally sign the SAML assertion and response.
 
 <h4 class="pdoc-member-header" id="SamlState-entityKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L426">property <b>entityKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L426">property <b>entityKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5493,7 +5493,7 @@ Determines the digest algorithm used to digitally sign the SAML assertion and re
 Entity ID, the ID portion of the `entityUrl`.
 
 <h4 class="pdoc-member-header" id="SamlState-entityUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L430">property <b>entityUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L430">property <b>entityUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entityUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5501,7 +5501,7 @@ Entity ID, the ID portion of the `entityUrl`.
 Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8.
 
 <h4 class="pdoc-member-header" id="SamlState-features">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L434">property <b>features</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L434">property <b>features</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>features?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5509,7 +5509,7 @@ Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8.
 features enabled.
 
 <h4 class="pdoc-member-header" id="SamlState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L438">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L438">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5517,7 +5517,7 @@ features enabled.
 Groups associated with the application
 
 <h4 class="pdoc-member-header" id="SamlState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L442">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L442">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5525,7 +5525,7 @@ Groups associated with the application
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SamlState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L446">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L446">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5533,7 +5533,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users
 
 <h4 class="pdoc-member-header" id="SamlState-honorForceAuthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L450">property <b>honorForceAuthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L450">property <b>honorForceAuthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>honorForceAuthn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5541,7 +5541,7 @@ Do not display application icon to users
 Prompt user to re-authenticate if SP asks for it.
 
 <h4 class="pdoc-member-header" id="SamlState-httpPostBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L454">property <b>httpPostBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L454">property <b>httpPostBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpPostBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5549,7 +5549,7 @@ Prompt user to re-authenticate if SP asks for it.
 `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post` location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="SamlState-httpRedirectBinding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L458">property <b>httpRedirectBinding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L458">property <b>httpRedirectBinding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpRedirectBinding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5557,7 +5557,7 @@ Prompt user to re-authenticate if SP asks for it.
 `urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect` location from the SAML metadata.
 
 <h4 class="pdoc-member-header" id="SamlState-idpIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L462">property <b>idpIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L462">property <b>idpIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5565,7 +5565,7 @@ Prompt user to re-authenticate if SP asks for it.
 SAML issuer ID.
 
 <h4 class="pdoc-member-header" id="SamlState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L466">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L466">property <b>keyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5573,7 +5573,7 @@ SAML issuer ID.
 Certificate key ID.
 
 <h4 class="pdoc-member-header" id="SamlState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L470">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L470">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5581,7 +5581,7 @@ Certificate key ID.
 Certificate name. This modulates the rotation of keys. New name == new key.
 
 <h4 class="pdoc-member-header" id="SamlState-keyYearsValid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L474">property <b>keyYearsValid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L474">property <b>keyYearsValid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyYearsValid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5589,7 +5589,7 @@ Certificate name. This modulates the rotation of keys. New name == new key.
 Number of years the certificate is valid.
 
 <h4 class="pdoc-member-header" id="SamlState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L478">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L478">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5597,7 +5597,7 @@ Number of years the certificate is valid.
 label of application.
 
 <h4 class="pdoc-member-header" id="SamlState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L482">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L482">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5605,7 +5605,7 @@ label of application.
 The raw SAML metadata in XML.
 
 <h4 class="pdoc-member-header" id="SamlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L486">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L486">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5613,7 +5613,7 @@ The raw SAML metadata in XML.
 The name of the attribute statement.
 
 <h4 class="pdoc-member-header" id="SamlState-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L490">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L490">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preconfiguredApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5621,7 +5621,7 @@ The name of the attribute statement.
 name of application from the Okta Integration Network, if not included a custom app will be created.
 
 <h4 class="pdoc-member-header" id="SamlState-recipient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L494">property <b>recipient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L494">property <b>recipient</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5629,7 +5629,7 @@ name of application from the Okta Integration Network, if not included a custom 
 The location where the app may present the SAML assertion.
 
 <h4 class="pdoc-member-header" id="SamlState-requestCompressed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L498">property <b>requestCompressed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L498">property <b>requestCompressed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestCompressed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5637,7 +5637,7 @@ The location where the app may present the SAML assertion.
 Denotes whether the request is compressed or not.
 
 <h4 class="pdoc-member-header" id="SamlState-responseSigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L502">property <b>responseSigned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L502">property <b>responseSigned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseSigned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5645,7 +5645,7 @@ Denotes whether the request is compressed or not.
 Determines whether the SAML auth response message is digitally signed.
 
 <h4 class="pdoc-member-header" id="SamlState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L506">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L506">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5653,7 +5653,7 @@ Determines whether the SAML auth response message is digitally signed.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="SamlState-signatureAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L510">property <b>signatureAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L510">property <b>signatureAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5661,7 +5661,7 @@ Sign on mode of application.
 Signature algorithm used ot digitally sign the assertion and response.
 
 <h4 class="pdoc-member-header" id="SamlState-spIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L514">property <b>spIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L514">property <b>spIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5669,7 +5669,7 @@ Signature algorithm used ot digitally sign the assertion and response.
 SAML service provider issuer.
 
 <h4 class="pdoc-member-header" id="SamlState-ssoUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L518">property <b>ssoUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L518">property <b>ssoUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssoUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5677,7 +5677,7 @@ SAML service provider issuer.
 Single Sign on Url.
 
 <h4 class="pdoc-member-header" id="SamlState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L522">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L522">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5685,7 +5685,7 @@ Single Sign on Url.
 status of application.
 
 <h4 class="pdoc-member-header" id="SamlState-subjectNameIdFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L526">property <b>subjectNameIdFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L526">property <b>subjectNameIdFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5693,7 +5693,7 @@ status of application.
 Identifies the SAML processing rules.
 
 <h4 class="pdoc-member-header" id="SamlState-subjectNameIdTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L530">property <b>subjectNameIdTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L530">property <b>subjectNameIdTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectNameIdTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5701,7 +5701,7 @@ Identifies the SAML processing rules.
 Template for app user's username when a user is assigned to the app.
 
 <h4 class="pdoc-member-header" id="SamlState-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L534">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L534">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5709,7 +5709,7 @@ Template for app user's username when a user is assigned to the app.
 Username template.
 
 <h4 class="pdoc-member-header" id="SamlState-userNameTemplateSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L538">property <b>userNameTemplateSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L538">property <b>userNameTemplateSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5717,7 +5717,7 @@ Username template.
 Username template suffix.
 
 <h4 class="pdoc-member-header" id="SamlState-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L542">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L542">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5725,7 +5725,7 @@ Username template suffix.
 Username template type.
 
 <h4 class="pdoc-member-header" id="SamlState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/saml.ts#L546">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/saml.ts#L546">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SamlUser'>SamlUser</a>&gt;[]&gt;;</code></pre>
@@ -5733,7 +5733,7 @@ Username template type.
 Users associated with the application
 
 <h3 class="pdoc-module-header" id="SecurePasswordStoreArgs" data-link-title="SecurePasswordStoreArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L368">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L368">
         interface <strong>SecurePasswordStoreArgs</strong>
     </a>
 </h3>
@@ -5743,7 +5743,7 @@ Users associated with the application
 The set of arguments for constructing a SecurePasswordStore resource.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L372">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L372">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5751,7 +5751,7 @@ The set of arguments for constructing a SecurePasswordStore resource.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L376">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L376">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5759,7 +5759,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L380">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L380">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5767,7 +5767,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-credentialsScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L384">property <b>credentialsScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L384">property <b>credentialsScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsScheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5775,7 +5775,7 @@ Display auto submit toolbar.
 Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L388">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L388">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5783,7 +5783,7 @@ Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L392">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L392">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5791,7 +5791,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L396">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L396">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5799,7 +5799,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L400">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L400">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5807,7 +5807,7 @@ Do not display application icon to users.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-optionalField1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L404">property <b>optionalField1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L404">property <b>optionalField1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField1?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5815,7 +5815,7 @@ The display name of the Application.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-optionalField1Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L408">property <b>optionalField1Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L408">property <b>optionalField1Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField1Value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5823,7 +5823,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-optionalField2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L412">property <b>optionalField2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L412">property <b>optionalField2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5831,7 +5831,7 @@ Name of optional value in the login form.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-optionalField2Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L416">property <b>optionalField2Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L416">property <b>optionalField2Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField2Value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5839,7 +5839,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-optionalField3">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L420">property <b>optionalField3</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L420">property <b>optionalField3</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField3?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5847,7 +5847,7 @@ Name of optional value in the login form.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-optionalField3Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L424">property <b>optionalField3Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L424">property <b>optionalField3Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField3Value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5855,7 +5855,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-passwordField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L428">property <b>passwordField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L428">property <b>passwordField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5863,7 +5863,7 @@ Name of optional value in the login form.
 Login password field.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-revealPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L432">property <b>revealPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L432">property <b>revealPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revealPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5871,7 +5871,7 @@ Login password field.
 Allow user to reveal password.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-sharedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L436">property <b>sharedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L436">property <b>sharedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5879,7 +5879,7 @@ Allow user to reveal password.
 Shared password, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-sharedUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L440">property <b>sharedUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L440">property <b>sharedUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5887,7 +5887,7 @@ Shared password, required for certain schemes.
 Shared username, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L444">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L444">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5895,7 +5895,7 @@ Shared username, required for certain schemes.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L448">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L448">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5903,7 +5903,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-usernameField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L452">property <b>usernameField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L452">property <b>usernameField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameField: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5911,7 +5911,7 @@ Login URL.
 Login username field.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L456">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L456">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SecurePasswordStoreUser'>SecurePasswordStoreUser</a>&gt;[]&gt;;</code></pre>
@@ -5919,7 +5919,7 @@ Login username field.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="SecurePasswordStoreState" data-link-title="SecurePasswordStoreState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L258">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L258">
         interface <strong>SecurePasswordStoreState</strong>
     </a>
 </h3>
@@ -5929,7 +5929,7 @@ The users assigned to the application. See `okta.app.User` for a more flexible a
 Input properties used for looking up and filtering SecurePasswordStore resources.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L262">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L262">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5937,7 +5937,7 @@ Input properties used for looking up and filtering SecurePasswordStore resources
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L266">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L266">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5945,7 +5945,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L270">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L270">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5953,7 +5953,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-credentialsScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L274">property <b>credentialsScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L274">property <b>credentialsScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsScheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5961,7 +5961,7 @@ Display auto submit toolbar.
 Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"ADMIN_SETS_CREDENTIALS"`, `"EDIT_PASSWORD_ONLY"`, `"EXTERNAL_PASSWORD_SYNC"`, or `"SHARED_USERNAME_AND_PASSWORD"`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L278">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L278">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5969,7 +5969,7 @@ Application credentials scheme. Can be set to `"EDIT_USERNAME_AND_PASSWORD"`, `"
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L282">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L282">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5977,7 +5977,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L286">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L286">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5985,7 +5985,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L290">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L290">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5993,7 +5993,7 @@ Do not display application icon to users.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L294">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L294">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6001,7 +6001,7 @@ The display name of the Application.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-optionalField1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L298">property <b>optionalField1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L298">property <b>optionalField1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField1?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6009,7 +6009,7 @@ Name assigned to the application by Okta.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-optionalField1Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L302">property <b>optionalField1Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L302">property <b>optionalField1Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField1Value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6017,7 +6017,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-optionalField2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L306">property <b>optionalField2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L306">property <b>optionalField2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6025,7 +6025,7 @@ Name of optional value in the login form.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-optionalField2Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L310">property <b>optionalField2Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L310">property <b>optionalField2Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField2Value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6033,7 +6033,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-optionalField3">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L314">property <b>optionalField3</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L314">property <b>optionalField3</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField3?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6041,7 +6041,7 @@ Name of optional value in the login form.
 Name of optional param in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-optionalField3Value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L318">property <b>optionalField3Value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L318">property <b>optionalField3Value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalField3Value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6049,7 +6049,7 @@ Name of optional param in the login form.
 Name of optional value in the login form.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-passwordField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L322">property <b>passwordField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L322">property <b>passwordField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6057,7 +6057,7 @@ Name of optional value in the login form.
 Login password field.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-revealPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L326">property <b>revealPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L326">property <b>revealPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revealPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6065,7 +6065,7 @@ Login password field.
 Allow user to reveal password.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-sharedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L330">property <b>sharedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L330">property <b>sharedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6073,7 +6073,7 @@ Allow user to reveal password.
 Shared password, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-sharedUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L334">property <b>sharedUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L334">property <b>sharedUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6081,7 +6081,7 @@ Shared password, required for certain schemes.
 Shared username, required for certain schemes.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L338">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L338">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6089,7 +6089,7 @@ Shared username, required for certain schemes.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L342">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L342">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6097,7 +6097,7 @@ Sign on mode of application.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L346">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L346">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6105,7 +6105,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L350">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L350">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6113,7 +6113,7 @@ Login URL.
 The default username assigned to each user.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L354">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L354">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6121,7 +6121,7 @@ The default username assigned to each user.
 The Username template type.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-usernameField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L358">property <b>usernameField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L358">property <b>usernameField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6129,7 +6129,7 @@ The Username template type.
 Login username field.
 
 <h4 class="pdoc-member-header" id="SecurePasswordStoreState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/securePasswordStore.ts#L362">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/securePasswordStore.ts#L362">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SecurePasswordStoreUser'>SecurePasswordStoreUser</a>&gt;[]&gt;;</code></pre>
@@ -6137,7 +6137,7 @@ Login username field.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="SwaArgs" data-link-title="SwaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L289">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L289">
         interface <strong>SwaArgs</strong>
     </a>
 </h3>
@@ -6147,7 +6147,7 @@ The users assigned to the application. See `okta.app.User` for a more flexible a
 The set of arguments for constructing a Swa resource.
 
 <h4 class="pdoc-member-header" id="SwaArgs-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L293">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L293">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6155,7 +6155,7 @@ The set of arguments for constructing a Swa resource.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SwaArgs-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L297">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L297">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6163,7 +6163,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="SwaArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L301">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L301">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6171,7 +6171,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SwaArgs-buttonField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L305">property <b>buttonField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L305">property <b>buttonField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buttonField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6179,7 +6179,7 @@ Display auto submit toolbar.
 Login button field.
 
 <h4 class="pdoc-member-header" id="SwaArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L309">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L309">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6187,7 +6187,7 @@ Login button field.
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="SwaArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L313">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L313">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6195,7 +6195,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SwaArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L317">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L317">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6203,7 +6203,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="SwaArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L321">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L321">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6211,7 +6211,7 @@ Do not display application icon to users.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="SwaArgs-passwordField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L325">property <b>passwordField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L325">property <b>passwordField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6219,7 +6219,7 @@ The display name of the Application.
 Login password field.
 
 <h4 class="pdoc-member-header" id="SwaArgs-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L329">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L329">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preconfiguredApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6227,7 +6227,7 @@ Login password field.
 name of application from the Okta Integration Network, if not included a custom app will be created.
 
 <h4 class="pdoc-member-header" id="SwaArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L333">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L333">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6235,7 +6235,7 @@ name of application from the Okta Integration Network, if not included a custom 
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="SwaArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L337">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L337">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6243,7 +6243,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="SwaArgs-urlRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L341">property <b>urlRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L341">property <b>urlRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6251,7 +6251,7 @@ Login URL.
 A regex that further restricts URL to the specified regex.
 
 <h4 class="pdoc-member-header" id="SwaArgs-usernameField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L345">property <b>usernameField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L345">property <b>usernameField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6259,7 +6259,7 @@ A regex that further restricts URL to the specified regex.
 Login username field.
 
 <h4 class="pdoc-member-header" id="SwaArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L349">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L349">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SwaUser'>SwaUser</a>&gt;[]&gt;;</code></pre>
@@ -6267,7 +6267,7 @@ Login username field.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="SwaState" data-link-title="SwaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L207">
         interface <strong>SwaState</strong>
     </a>
 </h3>
@@ -6277,7 +6277,7 @@ The users assigned to the application. See `okta.app.User` for a more flexible a
 Input properties used for looking up and filtering Swa resources.
 
 <h4 class="pdoc-member-header" id="SwaState-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L211">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L211">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6285,7 +6285,7 @@ Input properties used for looking up and filtering Swa resources.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="SwaState-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L215">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L215">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6293,7 +6293,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="SwaState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L219">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L219">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6301,7 +6301,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="SwaState-buttonField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L223">property <b>buttonField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L223">property <b>buttonField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buttonField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6309,7 +6309,7 @@ Display auto submit toolbar.
 Login button field.
 
 <h4 class="pdoc-member-header" id="SwaState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L227">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L227">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6317,7 +6317,7 @@ Login button field.
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="SwaState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L231">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L231">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6325,7 +6325,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="SwaState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L235">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L235">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6333,7 +6333,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="SwaState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L239">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L239">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6341,7 +6341,7 @@ Do not display application icon to users.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="SwaState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L243">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L243">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6349,7 +6349,7 @@ The display name of the Application.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="SwaState-passwordField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L247">property <b>passwordField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L247">property <b>passwordField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6357,7 +6357,7 @@ Name assigned to the application by Okta.
 Login password field.
 
 <h4 class="pdoc-member-header" id="SwaState-preconfiguredApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L251">property <b>preconfiguredApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L251">property <b>preconfiguredApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preconfiguredApp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6365,7 +6365,7 @@ Login password field.
 name of application from the Okta Integration Network, if not included a custom app will be created.
 
 <h4 class="pdoc-member-header" id="SwaState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L255">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L255">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6373,7 +6373,7 @@ name of application from the Okta Integration Network, if not included a custom 
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="SwaState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L259">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L259">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6381,7 +6381,7 @@ Sign on mode of application.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="SwaState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L263">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L263">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6389,7 +6389,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="SwaState-urlRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L267">property <b>urlRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L267">property <b>urlRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6397,7 +6397,7 @@ Login URL.
 A regex that further restricts URL to the specified regex.
 
 <h4 class="pdoc-member-header" id="SwaState-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L271">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L271">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6405,7 +6405,7 @@ A regex that further restricts URL to the specified regex.
 The default username assigned to each user.
 
 <h4 class="pdoc-member-header" id="SwaState-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L275">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L275">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6413,7 +6413,7 @@ The default username assigned to each user.
 The Username template type.
 
 <h4 class="pdoc-member-header" id="SwaState-usernameField">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L279">property <b>usernameField</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L279">property <b>usernameField</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameField?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6421,7 +6421,7 @@ The Username template type.
 Login username field.
 
 <h4 class="pdoc-member-header" id="SwaState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/swa.ts#L283">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/swa.ts#L283">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#SwaUser'>SwaUser</a>&gt;[]&gt;;</code></pre>
@@ -6429,7 +6429,7 @@ Login username field.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="ThreeFieldArgs" data-link-title="ThreeFieldArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L317">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L317">
         interface <strong>ThreeFieldArgs</strong>
     </a>
 </h3>
@@ -6439,7 +6439,7 @@ The users assigned to the application. See `okta.app.User` for a more flexible a
 The set of arguments for constructing a ThreeField resource.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L321">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L321">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6447,7 +6447,7 @@ The set of arguments for constructing a ThreeField resource.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L325">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L325">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6455,7 +6455,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L329">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L329">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6463,7 +6463,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-buttonSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L333">property <b>buttonSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L333">property <b>buttonSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buttonSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6471,7 +6471,7 @@ Display auto submit toolbar.
 Login button field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-extraFieldSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L337">property <b>extraFieldSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L337">property <b>extraFieldSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraFieldSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6479,7 +6479,7 @@ Login button field CSS selector.
 Extra field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-extraFieldValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L341">property <b>extraFieldValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L341">property <b>extraFieldValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraFieldValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6487,7 +6487,7 @@ Extra field CSS selector.
 Value for extra form field.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L345">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L345">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6495,7 +6495,7 @@ Value for extra form field.
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L349">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L349">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6503,7 +6503,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L353">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L353">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6511,7 +6511,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L357">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L357">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6519,7 +6519,7 @@ Do not display application icon to users.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-passwordSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L361">property <b>passwordSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L361">property <b>passwordSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6527,7 +6527,7 @@ The display name of the Application.
 Login password field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L365">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L365">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6535,7 +6535,7 @@ Login password field CSS selector.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L369">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L369">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6543,7 +6543,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-urlRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L373">property <b>urlRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L373">property <b>urlRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6551,7 +6551,7 @@ Login URL.
 A regex that further restricts URL to the specified regex.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-usernameSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L377">property <b>usernameSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L377">property <b>usernameSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameSelector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6559,7 +6559,7 @@ A regex that further restricts URL to the specified regex.
 Login username field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L381">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L381">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#ThreeFieldUser'>ThreeFieldUser</a>&gt;[]&gt;;</code></pre>
@@ -6567,7 +6567,7 @@ Login username field CSS selector.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="ThreeFieldState" data-link-title="ThreeFieldState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L231">
         interface <strong>ThreeFieldState</strong>
     </a>
 </h3>
@@ -6577,7 +6577,7 @@ The users assigned to the application. See `okta.app.User` for a more flexible a
 Input properties used for looking up and filtering ThreeField resources.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-accessibilityErrorRedirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L235">property <b>accessibilityErrorRedirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L235">property <b>accessibilityErrorRedirectUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilityErrorRedirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6585,7 +6585,7 @@ Input properties used for looking up and filtering ThreeField resources.
 Custom error page URL.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-accessibilitySelfService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L239">property <b>accessibilitySelfService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L239">property <b>accessibilitySelfService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessibilitySelfService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6593,7 +6593,7 @@ Custom error page URL.
 Enable self service. By default it is `false`.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-autoSubmitToolbar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L243">property <b>autoSubmitToolbar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L243">property <b>autoSubmitToolbar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoSubmitToolbar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6601,7 +6601,7 @@ Enable self service. By default it is `false`.
 Display auto submit toolbar.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-buttonSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L247">property <b>buttonSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L247">property <b>buttonSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buttonSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6609,7 +6609,7 @@ Display auto submit toolbar.
 Login button field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-extraFieldSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L251">property <b>extraFieldSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L251">property <b>extraFieldSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraFieldSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6617,7 +6617,7 @@ Login button field CSS selector.
 Extra field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-extraFieldValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L255">property <b>extraFieldValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L255">property <b>extraFieldValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraFieldValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6625,7 +6625,7 @@ Extra field CSS selector.
 Value for extra form field.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L259">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L259">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6633,7 +6633,7 @@ Value for extra form field.
 Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-hideIos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L263">property <b>hideIos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L263">property <b>hideIos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideIos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6641,7 +6641,7 @@ Groups associated with the application. See `okta.app.GroupAssignment` for a mor
 Do not display application icon on mobile app.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-hideWeb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L267">property <b>hideWeb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L267">property <b>hideWeb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hideWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6649,7 +6649,7 @@ Do not display application icon on mobile app.
 Do not display application icon to users.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L271">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L271">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6657,7 +6657,7 @@ Do not display application icon to users.
 The display name of the Application.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6665,7 +6665,7 @@ The display name of the Application.
 Name assigned to the application by Okta.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-passwordSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L279">property <b>passwordSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L279">property <b>passwordSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6673,7 +6673,7 @@ Name assigned to the application by Okta.
 Login password field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-signOnMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L283">property <b>signOnMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L283">property <b>signOnMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signOnMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6681,7 +6681,7 @@ Login password field CSS selector.
 Sign on mode of application.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L287">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L287">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6689,7 +6689,7 @@ Sign on mode of application.
 Status of application. By default it is `"ACTIVE"`.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L291">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L291">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6697,7 +6697,7 @@ Status of application. By default it is `"ACTIVE"`.
 Login URL.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-urlRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L295">property <b>urlRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L295">property <b>urlRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6705,7 +6705,7 @@ Login URL.
 A regex that further restricts URL to the specified regex.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-userNameTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L299">property <b>userNameTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L299">property <b>userNameTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6713,7 +6713,7 @@ A regex that further restricts URL to the specified regex.
 The default username assigned to each user.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-userNameTemplateType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L303">property <b>userNameTemplateType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L303">property <b>userNameTemplateType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userNameTemplateType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6721,7 +6721,7 @@ The default username assigned to each user.
 The Username template type.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-usernameSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L307">property <b>usernameSelector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L307">property <b>usernameSelector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameSelector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6729,7 +6729,7 @@ The Username template type.
 Login username field CSS selector.
 
 <h4 class="pdoc-member-header" id="ThreeFieldState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/threeField.ts#L311">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/threeField.ts#L311">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#ThreeFieldUser'>ThreeFieldUser</a>&gt;[]&gt;;</code></pre>
@@ -6737,7 +6737,7 @@ Login username field CSS selector.
 The users assigned to the application. See `okta.app.User` for a more flexible approach.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L159">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -6747,7 +6747,7 @@ The users assigned to the application. See `okta.app.User` for a more flexible a
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L163">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L163">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6755,7 +6755,7 @@ The set of arguments for constructing a User resource.
 App to associate user with.
 
 <h4 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L167">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L167">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6763,7 +6763,7 @@ App to associate user with.
 The password to use.
 
 <h4 class="pdoc-member-header" id="UserArgs-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L171">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L171">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6771,7 +6771,7 @@ The password to use.
 The JSON profile of the App User.
 
 <h4 class="pdoc-member-header" id="UserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L175">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L175">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6779,7 +6779,7 @@ The JSON profile of the App User.
 User to associate the application with.
 
 <h4 class="pdoc-member-header" id="UserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L179">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L179">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6787,7 +6787,7 @@ User to associate the application with.
 The username to use for the app user.
 
 <h3 class="pdoc-module-header" id="UserBaseSchemaArgs" data-link-title="UserBaseSchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L178">
         interface <strong>UserBaseSchemaArgs</strong>
     </a>
 </h3>
@@ -6797,7 +6797,7 @@ The username to use for the app user.
 The set of arguments for constructing a UserBaseSchema resource.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L182">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L182">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6805,7 +6805,7 @@ The set of arguments for constructing a UserBaseSchema resource.
 The Application's ID the user schema property should be assigned to.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L186">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L186">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6813,7 +6813,7 @@ The Application's ID the user schema property should be assigned to.
 The property name.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L190">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L190">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6821,7 +6821,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L194">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L194">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6829,7 +6829,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L198">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L198">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6837,7 +6837,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L202">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L202">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6845,7 +6845,7 @@ Whether the property is required for this application's users.
 The property display name.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L206">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L206">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6853,7 +6853,7 @@ The property display name.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h3 class="pdoc-module-header" id="UserBaseSchemaState" data-link-title="UserBaseSchemaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L144">
         interface <strong>UserBaseSchemaState</strong>
     </a>
 </h3>
@@ -6863,7 +6863,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 Input properties used for looking up and filtering UserBaseSchema resources.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L148">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L148">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6871,7 +6871,7 @@ Input properties used for looking up and filtering UserBaseSchema resources.
 The Application's ID the user schema property should be assigned to.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L152">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L152">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6879,7 +6879,7 @@ The Application's ID the user schema property should be assigned to.
 The property name.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L156">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L156">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6887,7 +6887,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L160">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L160">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6895,7 +6895,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L164">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L164">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6903,7 +6903,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L168">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L168">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6911,7 +6911,7 @@ Whether the property is required for this application's users.
 The property display name.
 
 <h4 class="pdoc-member-header" id="UserBaseSchemaState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userBaseSchema.ts#L172">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userBaseSchema.ts#L172">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6919,7 +6919,7 @@ The property display name.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h3 class="pdoc-module-header" id="UserSchemaArgs" data-link-title="UserSchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L280">
         interface <strong>UserSchemaArgs</strong>
     </a>
 </h3>
@@ -6929,7 +6929,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 The set of arguments for constructing a UserSchema resource.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L284">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L284">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6937,7 +6937,7 @@ The set of arguments for constructing a UserSchema resource.
 The Application's ID the user custom schema property should be assigned to.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-arrayEnums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L288">property <b>arrayEnums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L288">property <b>arrayEnums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayEnums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6945,7 +6945,7 @@ The Application's ID the user custom schema property should be assigned to.
 Array of values that an array property's items can be set to.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-arrayOneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L292">property <b>arrayOneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L292">property <b>arrayOneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayOneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#UserSchemaArrayOneOf'>UserSchemaArrayOneOf</a>&gt;[]&gt;;</code></pre>
@@ -6953,7 +6953,7 @@ Array of values that an array property's items can be set to.
 Display name and value an enum array can be set to.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-arrayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L296">property <b>arrayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L296">property <b>arrayType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6961,7 +6961,7 @@ Display name and value an enum array can be set to.
 The type of the array elements if `type` is set to `"array"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L300">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L300">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6969,7 +6969,7 @@ The type of the array elements if `type` is set to `"array"`.
 The description of the user schema property.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-enums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L304">property <b>enums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L304">property <b>enums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6977,7 +6977,7 @@ The description of the user schema property.
 Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L308">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L308">property <b>externalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6985,7 +6985,7 @@ Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L312">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L312">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6993,7 +6993,7 @@ External name of the user schema property.
 The property name.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L316">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L316">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7001,7 +7001,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-maxLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L320">property <b>maxLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L320">property <b>maxLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7009,7 +7009,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The maximum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L324">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L324">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7017,7 +7017,7 @@ The maximum length of the user property value. Only applies to type `"string"`.
 The minimum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-oneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L328">property <b>oneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L328">property <b>oneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#UserSchemaOneOf'>UserSchemaOneOf</a>&gt;[]&gt;;</code></pre>
@@ -7025,7 +7025,7 @@ The minimum length of the user property value. Only applies to type `"string"`.
 Array of maps containing a mapping for display name to enum value.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L332">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L332">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7033,7 +7033,7 @@ Array of maps containing a mapping for display name to enum value.
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L336">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L336">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7041,7 +7041,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L340">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L340">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7049,7 +7049,7 @@ Whether the property is required for this application's users.
 determines whether an app user attribute can be set at the Individual or Group Level.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L344">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L344">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7057,7 +7057,7 @@ determines whether an app user attribute can be set at the Individual or Group L
 display name for the enum value.
 
 <h4 class="pdoc-member-header" id="UserSchemaArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L348">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L348">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7065,7 +7065,7 @@ display name for the enum value.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h3 class="pdoc-module-header" id="UserSchemaState" data-link-title="UserSchemaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L206">
         interface <strong>UserSchemaState</strong>
     </a>
 </h3>
@@ -7075,7 +7075,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 Input properties used for looking up and filtering UserSchema resources.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L210">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L210">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7083,7 +7083,7 @@ Input properties used for looking up and filtering UserSchema resources.
 The Application's ID the user custom schema property should be assigned to.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-arrayEnums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L214">property <b>arrayEnums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L214">property <b>arrayEnums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayEnums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7091,7 +7091,7 @@ The Application's ID the user custom schema property should be assigned to.
 Array of values that an array property's items can be set to.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-arrayOneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L218">property <b>arrayOneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L218">property <b>arrayOneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayOneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#UserSchemaArrayOneOf'>UserSchemaArrayOneOf</a>&gt;[]&gt;;</code></pre>
@@ -7099,7 +7099,7 @@ Array of values that an array property's items can be set to.
 Display name and value an enum array can be set to.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-arrayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L222">property <b>arrayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L222">property <b>arrayType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arrayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7107,7 +7107,7 @@ Display name and value an enum array can be set to.
 The type of the array elements if `type` is set to `"array"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L226">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L226">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7115,7 +7115,7 @@ The type of the array elements if `type` is set to `"array"`.
 The description of the user schema property.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-enums">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L230">property <b>enums</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L230">property <b>enums</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enums?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7123,7 +7123,7 @@ The description of the user schema property.
 Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L234">property <b>externalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L234">property <b>externalName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7131,7 +7131,7 @@ Array of values a primitive property can be set to. See `arrayEnum` for arrays.
 External name of the user schema property.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-index">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L238">property <b>index</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L238">property <b>index</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>index?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7139,7 +7139,7 @@ External name of the user schema property.
 The property name.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-master">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L242">property <b>master</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L242">property <b>master</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>master?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7147,7 +7147,7 @@ The property name.
 Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-maxLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L246">property <b>maxLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L246">property <b>maxLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7155,7 +7155,7 @@ Master priority for the user schema property. It can be set to `"PROFILE_MASTER"
 The maximum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-minLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L250">property <b>minLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L250">property <b>minLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7163,7 +7163,7 @@ The maximum length of the user property value. Only applies to type `"string"`.
 The minimum length of the user property value. Only applies to type `"string"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-oneOfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L254">property <b>oneOfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L254">property <b>oneOfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oneOfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#UserSchemaOneOf'>UserSchemaOneOf</a>&gt;[]&gt;;</code></pre>
@@ -7171,7 +7171,7 @@ The minimum length of the user property value. Only applies to type `"string"`.
 Array of maps containing a mapping for display name to enum value.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L258">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L258">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7179,7 +7179,7 @@ Array of maps containing a mapping for display name to enum value.
 Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L262">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L262">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7187,7 +7187,7 @@ Access control permissions for the property. It can be set to `"READ_WRITE"`, `"
 Whether the property is required for this application's users.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L266">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L266">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7195,7 +7195,7 @@ Whether the property is required for this application's users.
 determines whether an app user attribute can be set at the Individual or Group Level.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L270">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L270">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7203,7 +7203,7 @@ determines whether an app user attribute can be set at the Individual or Group L
 display name for the enum value.
 
 <h4 class="pdoc-member-header" id="UserSchemaState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/userSchema.ts#L274">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/userSchema.ts#L274">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7211,7 +7211,7 @@ display name for the enum value.
 The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L133">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -7221,7 +7221,7 @@ The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, 
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L137">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L137">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7229,7 +7229,7 @@ Input properties used for looking up and filtering User resources.
 App to associate user with.
 
 <h4 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L141">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L141">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7237,7 +7237,7 @@ App to associate user with.
 The password to use.
 
 <h4 class="pdoc-member-header" id="UserState-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L145">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L145">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7245,7 +7245,7 @@ The password to use.
 The JSON profile of the App User.
 
 <h4 class="pdoc-member-header" id="UserState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L149">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L149">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7253,7 +7253,7 @@ The JSON profile of the App User.
 User to associate the application with.
 
 <h4 class="pdoc-member-header" id="UserState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/app/user.ts#L153">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/app/user.ts#L153">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

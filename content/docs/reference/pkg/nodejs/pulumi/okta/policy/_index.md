@@ -61,7 +61,7 @@ git_sha: "690544114ef62ed552d293d3e22cb1eb83517de6"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Mfa" data-link-title="Mfa">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L34">
         Resource <strong>Mfa</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ const example = new okta.policy.Mfa("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown.
 
 <h4 class="pdoc-member-header" id="Mfa-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L132"> <b>constructor</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Create a Mfa resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Mfa-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +118,14 @@ Get an existing Mfa resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Mfa-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Mfa-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +136,7 @@ Returns true if the given object is an instance of Mfa.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Mfa-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="Mfa-duo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L68">property <b>duo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L68">property <b>duo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaDuo'>MfaDuo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ Policy Description.
 DUO MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-fidoU2f">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L72">property <b>fidoU2f</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L72">property <b>fidoU2f</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fidoU2f: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaFidoU2f'>MfaFidoU2f</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ DUO MFA policy settings.
 Fido U2F MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-fidoWebauthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L76">property <b>fidoWebauthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L76">property <b>fidoWebauthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fidoWebauthn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaFidoWebauthn'>MfaFidoWebauthn</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ Fido U2F MFA policy settings.
 Fido Web Authn MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-googleOtp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L80">property <b>googleOtp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L80">property <b>googleOtp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>googleOtp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaGoogleOtp'>MfaGoogleOtp</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ Fido Web Authn MFA policy settings.
 Google OTP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L84">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L84">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsIncludeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ Google OTP MFA policy settings.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="Mfa-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -193,7 +193,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Mfa-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ deployments and may be missing (undefined) during planning phases.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="Mfa-oktaCall">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L92">property <b>oktaCall</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L92">property <b>oktaCall</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oktaCall: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaCall'>MfaOktaCall</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ Policy Name.
 Okta Call MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-oktaOtp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L96">property <b>oktaOtp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L96">property <b>oktaOtp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oktaOtp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaOtp'>MfaOktaOtp</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ Okta Call MFA policy settings.
 Okta OTP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-oktaPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L100">property <b>oktaPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L100">property <b>oktaPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oktaPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaPassword'>MfaOktaPassword</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ Okta OTP MFA policy settings.
 Okta Password MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-oktaPush">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L104">property <b>oktaPush</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L104">property <b>oktaPush</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oktaPush: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaPush'>MfaOktaPush</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ Okta Password MFA policy settings.
 Okta Push MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-oktaQuestion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L108">property <b>oktaQuestion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L108">property <b>oktaQuestion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oktaQuestion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaQuestion'>MfaOktaQuestion</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ Okta Push MFA policy settings.
 Okta Question MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-oktaSms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L112">property <b>oktaSms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L112">property <b>oktaSms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oktaSms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaSms'>MfaOktaSms</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ Okta Question MFA policy settings.
 Okta SMS MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L116">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L116">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ Okta SMS MFA policy settings.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="Mfa-rsaToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L120">property <b>rsaToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L120">property <b>rsaToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rsaToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaRsaToken'>MfaRsaToken</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ Priority of the policy.
 RSA Token MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L124">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L124">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ RSA Token MFA policy settings.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="Mfa-symantecVip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L128">property <b>symantecVip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L128">property <b>symantecVip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>symantecVip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaSymantecVip'>MfaSymantecVip</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 Symantec VIP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="Mfa-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -290,7 +290,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Mfa-yubikeyToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L132">property <b>yubikeyToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L132">property <b>yubikeyToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>yubikeyToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaYubikeyToken'>MfaYubikeyToken</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ deployments.
 Yubikey Token MFA policy settings.
 
 <h3 class="pdoc-module-header" id="Password" data-link-title="Password">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L32">
         Resource <strong>Password</strong>
     </a>
 </h3>
@@ -328,7 +328,7 @@ const example = new okta.policy.Password("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown.
 
 <h4 class="pdoc-member-header" id="Password-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L170"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L170"> <b>constructor</b></a>
 </h4>
 
 
@@ -342,7 +342,7 @@ Create a Password resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Password-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -353,14 +353,14 @@ Get an existing Password resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Password-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Password-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -371,7 +371,7 @@ Returns true if the given object is an instance of Password.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Password-authProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L62">property <b>authProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L62">property <b>authProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Authentication Provider: `"OKTA"` or `"ACTIVE_DIRECTORY"`. Default is `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="Password-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Authentication Provider: `"OKTA"` or `"ACTIVE_DIRECTORY"`. Default is `"OKTA"`.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="Password-emailRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L70">property <b>emailRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L70">property <b>emailRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailRecovery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ Policy Description.
 Enable or disable email password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="Password-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L74">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L74">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsIncludeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ Enable or disable email password recovery: ACTIVE or INACTIVE.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="Password-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -412,7 +412,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Password-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ deployments and may be missing (undefined) during planning phases.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="Password-passwordAutoUnlockMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L82">property <b>passwordAutoUnlockMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L82">property <b>passwordAutoUnlockMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordAutoUnlockMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ Policy Name.
 Number of minutes before a locked account is unlocked: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="Password-passwordDictionaryLookup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L86">property <b>passwordDictionaryLookup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L86">property <b>passwordDictionaryLookup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordDictionaryLookup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ Number of minutes before a locked account is unlocked: 0 = no limit.
 Check Passwords Against Common Password Dictionary.
 
 <h4 class="pdoc-member-header" id="Password-passwordExcludeFirstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L90">property <b>passwordExcludeFirstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L90">property <b>passwordExcludeFirstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordExcludeFirstName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ Check Passwords Against Common Password Dictionary.
 User firstName attribute must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="Password-passwordExcludeLastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L94">property <b>passwordExcludeLastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L94">property <b>passwordExcludeLastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordExcludeLastName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ User firstName attribute must be excluded from the password.
 User lastName attribute must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="Password-passwordExcludeUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L98">property <b>passwordExcludeUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L98">property <b>passwordExcludeUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordExcludeUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ User lastName attribute must be excluded from the password.
 If the user name must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="Password-passwordExpireWarnDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L102">property <b>passwordExpireWarnDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L102">property <b>passwordExpireWarnDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordExpireWarnDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ If the user name must be excluded from the password.
 Length in days a user will be warned before password expiry: 0 = no warning.
 
 <h4 class="pdoc-member-header" id="Password-passwordHistoryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L106">property <b>passwordHistoryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L106">property <b>passwordHistoryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordHistoryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ Length in days a user will be warned before password expiry: 0 = no warning.
 Number of distinct passwords that must be created before they can be reused: 0 = none.
 
 <h4 class="pdoc-member-header" id="Password-passwordMaxAgeDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L110">property <b>passwordMaxAgeDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L110">property <b>passwordMaxAgeDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMaxAgeDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ Number of distinct passwords that must be created before they can be reused: 0 =
 Length in days a password is valid before expiry: 0 = no limit.",
 
 <h4 class="pdoc-member-header" id="Password-passwordMaxLockoutAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L114">property <b>passwordMaxLockoutAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L114">property <b>passwordMaxLockoutAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMaxLockoutAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ Length in days a password is valid before expiry: 0 = no limit.",
 Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="Password-passwordMinAgeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L118">property <b>passwordMinAgeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L118">property <b>passwordMinAgeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMinAgeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 Minimum time interval in minutes between password changes: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="Password-passwordMinLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L122">property <b>passwordMinLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L122">property <b>passwordMinLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMinLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -508,7 +508,7 @@ Minimum time interval in minutes between password changes: 0 = no limit.
 Minimum password length. Default is 8.
 
 <h4 class="pdoc-member-header" id="Password-passwordMinLowercase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L126">property <b>passwordMinLowercase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L126">property <b>passwordMinLowercase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMinLowercase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -516,7 +516,7 @@ Minimum password length. Default is 8.
 Minimum number of lower case characters in password.
 
 <h4 class="pdoc-member-header" id="Password-passwordMinNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L130">property <b>passwordMinNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L130">property <b>passwordMinNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMinNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -524,7 +524,7 @@ Minimum number of lower case characters in password.
 Minimum number of numbers in password.
 
 <h4 class="pdoc-member-header" id="Password-passwordMinSymbol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L134">property <b>passwordMinSymbol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L134">property <b>passwordMinSymbol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMinSymbol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ Minimum number of numbers in password.
 Minimum number of symbols in password.
 
 <h4 class="pdoc-member-header" id="Password-passwordMinUppercase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L138">property <b>passwordMinUppercase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L138">property <b>passwordMinUppercase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordMinUppercase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ Minimum number of symbols in password.
 Minimum number of upper case characters in password.
 
 <h4 class="pdoc-member-header" id="Password-passwordShowLockoutFailures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L142">property <b>passwordShowLockoutFailures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L142">property <b>passwordShowLockoutFailures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordShowLockoutFailures: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ Minimum number of upper case characters in password.
 If a user should be informed when their account is locked.
 
 <h4 class="pdoc-member-header" id="Password-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L146">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L146">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -556,7 +556,7 @@ If a user should be informed when their account is locked.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="Password-questionMinLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L150">property <b>questionMinLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L150">property <b>questionMinLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>questionMinLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ Priority of the policy.
 Min length of the password recovery question answer.
 
 <h4 class="pdoc-member-header" id="Password-questionRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L154">property <b>questionRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L154">property <b>questionRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>questionRecovery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -572,7 +572,7 @@ Min length of the password recovery question answer.
 Enable or disable security question password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="Password-recoveryEmailToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L158">property <b>recoveryEmailToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L158">property <b>recoveryEmailToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryEmailToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -580,7 +580,7 @@ Enable or disable security question password recovery: ACTIVE or INACTIVE.
 Lifetime in minutes of the recovery email token.
 
 <h4 class="pdoc-member-header" id="Password-skipUnlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L162">property <b>skipUnlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L162">property <b>skipUnlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipUnlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -588,7 +588,7 @@ Lifetime in minutes of the recovery email token.
 When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's Windows account.
 
 <h4 class="pdoc-member-header" id="Password-smsRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L166">property <b>smsRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L166">property <b>smsRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>smsRecovery: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -596,7 +596,7 @@ When an Active Directory user is locked out of Okta, the Okta unlock operation s
 Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="Password-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L170">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L170">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -604,7 +604,7 @@ Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="Password-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -613,7 +613,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RuleIdpDiscovery" data-link-title="RuleIdpDiscovery">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">
         Resource <strong>RuleIdpDiscovery</strong>
     </a>
 </h3>
@@ -649,7 +649,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -663,7 +663,7 @@ Create a RuleIdpDiscovery resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -674,14 +674,14 @@ Get an existing RuleIdpDiscovery resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -692,7 +692,7 @@ Returns true if the given object is an instance of RuleIdpDiscovery.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-appExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L68">property <b>appExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L68">property <b>appExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appExcludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#RuleIdpDiscoveryAppExclude'>RuleIdpDiscoveryAppExclude</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Applications to exclude in discovery rule
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-appIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L72">property <b>appIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L72">property <b>appIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#RuleIdpDiscoveryAppInclude'>RuleIdpDiscoveryAppInclude</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ Applications to exclude in discovery rule
 Applications to include in discovery rule
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -717,17 +717,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L73">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L73">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-idpType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L74">property <b>idpType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L74">property <b>idpType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>idpType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -735,7 +735,7 @@ deployments and may be missing (undefined) during planning phases.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L82">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L82">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -743,7 +743,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L86">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L86">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkExcludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L90">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L90">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -759,12 +759,12 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-platformIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L91">property <b>platformIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L91">property <b>platformIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#RuleIdpDiscoveryPlatformInclude'>RuleIdpDiscoveryPlatformInclude</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L95">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L95">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -772,7 +772,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L99">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L99">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -780,7 +780,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L103">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L103">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -788,7 +788,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -797,22 +797,22 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-userIdentifierAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L104">property <b>userIdentifierAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L104">property <b>userIdentifierAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userIdentifierAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-userIdentifierPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L105">property <b>userIdentifierPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L105">property <b>userIdentifierPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userIdentifierPatterns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#RuleIdpDiscoveryUserIdentifierPattern'>RuleIdpDiscoveryUserIdentifierPattern</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscovery-userIdentifierType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L106">property <b>userIdentifierType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L106">property <b>userIdentifierType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userIdentifierType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RuleMfa" data-link-title="RuleMfa">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L16">
         Resource <strong>RuleMfa</strong>
     </a>
 </h3>
@@ -826,7 +826,7 @@ This resource allows you to create and configure an MFA Policy Rule.
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown.
 
 <h4 class="pdoc-member-header" id="RuleMfa-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -840,7 +840,7 @@ Create a RuleMfa resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RuleMfa-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -851,14 +851,14 @@ Get an existing RuleMfa resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RuleMfa-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RuleMfa-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -869,7 +869,7 @@ Returns true if the given object is an instance of RuleMfa.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RuleMfa-enroll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L46">property <b>enroll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L46">property <b>enroll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enroll: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -877,7 +877,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When a user should be prompted for MFA. It can be `"CHALLENGE"`, `"LOGIN"`, or `"NEVER"`.
 
 <h4 class="pdoc-member-header" id="RuleMfa-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -886,7 +886,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RuleMfa-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +894,7 @@ deployments and may be missing (undefined) during planning phases.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleMfa-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L54">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L54">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -902,7 +902,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleMfa-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L58">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L58">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkExcludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -910,7 +910,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleMfa-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L62">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L62">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +918,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleMfa-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L66">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L66">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleMfa-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L70">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L70">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -934,7 +934,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleMfa-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L74">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L74">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -942,7 +942,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleMfa-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -951,7 +951,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="RuleMfa-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L78">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L78">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usersExcludeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ deployments.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RulePassword" data-link-title="RulePassword">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L16">
         Resource <strong>RulePassword</strong>
     </a>
 </h3>
@@ -973,7 +973,7 @@ This resource allows you to create and configure a Password Policy Rule.
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown.
 
 <h4 class="pdoc-member-header" id="RulePassword-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -987,7 +987,7 @@ Create a RulePassword resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RulePassword-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L25">method <b>get</b></a>
 </h4>
 
 
@@ -998,14 +998,14 @@ Get an existing RulePassword resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RulePassword-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RulePassword-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L36">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L36">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1016,7 +1016,7 @@ Returns true if the given object is an instance of RulePassword.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RulePassword-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1025,7 +1025,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RulePassword-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ deployments and may be missing (undefined) during planning phases.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RulePassword-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L50">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L50">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RulePassword-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L54">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L54">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkExcludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1049,7 +1049,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RulePassword-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L58">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L58">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1057,7 +1057,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RulePassword-passwordChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L62">property <b>passwordChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L62">property <b>passwordChange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordChange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1065,7 +1065,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Allow or deny a user to change their password: `"ALLOW"` or `"DENY"`. By default it is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RulePassword-passwordReset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L66">property <b>passwordReset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L66">property <b>passwordReset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordReset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1073,7 +1073,7 @@ Allow or deny a user to change their password: `"ALLOW"` or `"DENY"`. By default
 Allow or deny a user to reset their password: `"ALLOW"` or `"DENY"`. By default it is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RulePassword-passwordUnlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L70">property <b>passwordUnlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L70">property <b>passwordUnlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordUnlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ Allow or deny a user to reset their password: `"ALLOW"` or `"DENY"`. By default 
 Allow or deny a user to unlock: `"ALLOW"` or `"DENY"`. By default it is `"DENY"`,
 
 <h4 class="pdoc-member-header" id="RulePassword-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L74">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L74">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ Allow or deny a user to unlock: `"ALLOW"` or `"DENY"`. By default it is `"DENY"`
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RulePassword-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L78">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L78">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RulePassword-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L82">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L82">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RulePassword-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="RulePassword-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L86">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L86">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usersExcludeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ deployments.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RuleSignon" data-link-title="RuleSignon">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L14">
         Resource <strong>RuleSignon</strong>
     </a>
 </h3>
@@ -1134,7 +1134,7 @@ Creates a Sign On Policy Rule.
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown.
 
 <h4 class="pdoc-member-header" id="RuleSignon-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -1148,7 +1148,7 @@ Create a RuleSignon resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RuleSignon-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -1159,14 +1159,14 @@ Get an existing RuleSignon resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RuleSignon-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RuleSignon-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1177,7 +1177,7 @@ Returns true if the given object is an instance of RuleSignon.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RuleSignon-access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L44">property <b>access</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L44">property <b>access</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>access: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1185,7 +1185,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Allow or deny access based on the rule conditions: `"ALLOW"` or `"DENY"`. The default is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-authtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L48">property <b>authtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L48">property <b>authtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1193,7 +1193,7 @@ Allow or deny access based on the rule conditions: `"ALLOW"` or `"DENY"`. The de
 Authentication entrypoint: `"ANY"` or `"RADIUS"`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1202,7 +1202,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RuleSignon-mfaLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L52">property <b>mfaLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L52">property <b>mfaLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mfaLifetime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1210,7 +1210,7 @@ deployments and may be missing (undefined) during planning phases.
 Elapsed time before the next MFA challenge.
 
 <h4 class="pdoc-member-header" id="RuleSignon-mfaPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L56">property <b>mfaPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L56">property <b>mfaPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mfaPrompt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1218,7 +1218,7 @@ Elapsed time before the next MFA challenge.
 Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: `"DEVICE"`, `"SESSION"` or `"ALWAYS"`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-mfaRememberDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L60">property <b>mfaRememberDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L60">property <b>mfaRememberDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mfaRememberDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1226,7 +1226,7 @@ Prompt for MFA based on the device used, a factor session lifetime, or every sig
 Remember MFA device. The default `false`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-mfaRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L64">property <b>mfaRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L64">property <b>mfaRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mfaRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1234,7 +1234,7 @@ Remember MFA device. The default `false`.
 Require MFA. By default is `false`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1242,7 +1242,7 @@ Require MFA. By default is `false`.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleSignon-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L72">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L72">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1250,7 +1250,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L76">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L76">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkExcludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1258,7 +1258,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L80">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L80">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkIncludes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1266,7 +1266,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L84">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L84">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1274,7 +1274,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleSignon-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L88">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L88">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleSignon-sessionIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L92">property <b>sessionIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L92">property <b>sessionIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Max minutes a session can be idle.",
 
 <h4 class="pdoc-member-header" id="RuleSignon-sessionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L96">property <b>sessionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L96">property <b>sessionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionLifetime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ Max minutes a session can be idle.",
 Max minutes a session is active: Disable = 0.
 
 <h4 class="pdoc-member-header" id="RuleSignon-sessionPersistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L100">property <b>sessionPersistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L100">property <b>sessionPersistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionPersistent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1306,7 +1306,7 @@ Max minutes a session is active: Disable = 0.
 Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session cookies.
 
 <h4 class="pdoc-member-header" id="RuleSignon-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L104">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L104">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1314,7 +1314,7 @@ Whether session cookies will last across browser sessions. Okta Administrators c
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleSignon-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1323,7 +1323,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="RuleSignon-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L108">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L108">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usersExcludeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ deployments.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="Signon" data-link-title="Signon">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L31">
         Resource <strong>Signon</strong>
     </a>
 </h3>
@@ -1360,7 +1360,7 @@ const example = new okta.policy.Signon("example", {
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown.
 
 <h4 class="pdoc-member-header" id="Signon-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -1374,7 +1374,7 @@ Create a Signon resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Signon-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -1385,14 +1385,14 @@ Get an existing Signon resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Signon-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Signon-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1403,7 +1403,7 @@ Returns true if the given object is an instance of Signon.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Signon-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1411,7 +1411,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="Signon-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L65">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L65">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsIncludeds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ Policy Description.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="Signon-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1428,7 +1428,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Signon-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1436,7 +1436,7 @@ deployments and may be missing (undefined) during planning phases.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="Signon-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L73">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L73">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1444,7 +1444,7 @@ Policy Name.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="Signon-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L77">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L77">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1452,7 +1452,7 @@ Priority of the policy.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="Signon-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1463,7 +1463,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDefaultPolicy" data-link-title="getDefaultPolicy">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getDefaultPolicy.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getDefaultPolicy.ts#L27">
         Function <strong>getDefaultPolicy</strong>
     </a>
 </h3>
@@ -1490,7 +1490,7 @@ const example = pulumi.output(okta.policy.getDefaultPolicy({
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown.
 
 <h3 class="pdoc-module-header" id="getPolicy" data-link-title="getPolicy">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L28">
         Function <strong>getPolicy</strong>
     </a>
 </h3>
@@ -1520,7 +1520,7 @@ const example = pulumi.output(okta.policy.getPolicy({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetDefaultPolicyArgs" data-link-title="GetDefaultPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getDefaultPolicy.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getDefaultPolicy.ts#L43">
         interface <strong>GetDefaultPolicyArgs</strong>
     </a>
 </h3>
@@ -1530,7 +1530,7 @@ const example = pulumi.output(okta.policy.getPolicy({
 A collection of arguments for invoking getDefaultPolicy.
 
 <h4 class="pdoc-member-header" id="GetDefaultPolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getDefaultPolicy.ts#L47">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getDefaultPolicy.ts#L47">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1538,7 +1538,7 @@ A collection of arguments for invoking getDefaultPolicy.
 type of policy to retrieve.
 
 <h3 class="pdoc-module-header" id="GetDefaultPolicyResult" data-link-title="GetDefaultPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getDefaultPolicy.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getDefaultPolicy.ts#L53">
         interface <strong>GetDefaultPolicyResult</strong>
     </a>
 </h3>
@@ -1548,7 +1548,7 @@ type of policy to retrieve.
 A collection of values returned by getDefaultPolicy.
 
 <h4 class="pdoc-member-header" id="GetDefaultPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getDefaultPolicy.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getDefaultPolicy.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1556,7 +1556,7 @@ A collection of values returned by getDefaultPolicy.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDefaultPolicyResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getDefaultPolicy.ts#L57">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getDefaultPolicy.ts#L57">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1564,7 +1564,7 @@ The provider-assigned unique ID for this managed resource.
 type of policy.
 
 <h3 class="pdoc-module-header" id="GetPolicyArgs" data-link-title="GetPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L45">
         interface <strong>GetPolicyArgs</strong>
     </a>
 </h3>
@@ -1574,7 +1574,7 @@ type of policy.
 A collection of arguments for invoking getPolicy.
 
 <h4 class="pdoc-member-header" id="GetPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1582,7 +1582,7 @@ A collection of arguments for invoking getPolicy.
 name of policy to retrieve.
 
 <h4 class="pdoc-member-header" id="GetPolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L53">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L53">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1590,7 +1590,7 @@ name of policy to retrieve.
 type of policy to retrieve.
 
 <h3 class="pdoc-module-header" id="GetPolicyResult" data-link-title="GetPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L59">
         interface <strong>GetPolicyResult</strong>
     </a>
 </h3>
@@ -1600,7 +1600,7 @@ type of policy to retrieve.
 A collection of values returned by getPolicy.
 
 <h4 class="pdoc-member-header" id="GetPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1608,7 +1608,7 @@ A collection of values returned by getPolicy.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1616,7 +1616,7 @@ The provider-assigned unique ID for this managed resource.
 name of policy.
 
 <h4 class="pdoc-member-header" id="GetPolicyResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/getPolicy.ts#L67">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/getPolicy.ts#L67">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1624,7 +1624,7 @@ name of policy.
 type of policy.
 
 <h3 class="pdoc-module-header" id="MfaArgs" data-link-title="MfaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L277">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L277">
         interface <strong>MfaArgs</strong>
     </a>
 </h3>
@@ -1634,7 +1634,7 @@ type of policy.
 The set of arguments for constructing a Mfa resource.
 
 <h4 class="pdoc-member-header" id="MfaArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L281">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L281">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1642,7 +1642,7 @@ The set of arguments for constructing a Mfa resource.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="MfaArgs-duo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L285">property <b>duo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L285">property <b>duo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaDuo'>MfaDuo</a>&gt;;</code></pre>
@@ -1650,7 +1650,7 @@ Policy Description.
 DUO MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-fidoU2f">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L289">property <b>fidoU2f</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L289">property <b>fidoU2f</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fidoU2f?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaFidoU2f'>MfaFidoU2f</a>&gt;;</code></pre>
@@ -1658,7 +1658,7 @@ DUO MFA policy settings.
 Fido U2F MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-fidoWebauthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L293">property <b>fidoWebauthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L293">property <b>fidoWebauthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fidoWebauthn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaFidoWebauthn'>MfaFidoWebauthn</a>&gt;;</code></pre>
@@ -1666,7 +1666,7 @@ Fido U2F MFA policy settings.
 Fido Web Authn MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-googleOtp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L297">property <b>googleOtp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L297">property <b>googleOtp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>googleOtp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaGoogleOtp'>MfaGoogleOtp</a>&gt;;</code></pre>
@@ -1674,7 +1674,7 @@ Fido Web Authn MFA policy settings.
 Google OTP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L301">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L301">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsIncludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1682,7 +1682,7 @@ Google OTP MFA policy settings.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="MfaArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L305">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L305">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1690,7 +1690,7 @@ List of Group IDs to Include.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="MfaArgs-oktaCall">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L309">property <b>oktaCall</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L309">property <b>oktaCall</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaCall?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaCall'>MfaOktaCall</a>&gt;;</code></pre>
@@ -1698,7 +1698,7 @@ Policy Name.
 Okta Call MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-oktaOtp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L313">property <b>oktaOtp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L313">property <b>oktaOtp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaOtp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaOtp'>MfaOktaOtp</a>&gt;;</code></pre>
@@ -1706,7 +1706,7 @@ Okta Call MFA policy settings.
 Okta OTP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-oktaPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L317">property <b>oktaPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L317">property <b>oktaPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaPassword'>MfaOktaPassword</a>&gt;;</code></pre>
@@ -1714,7 +1714,7 @@ Okta OTP MFA policy settings.
 Okta Password MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-oktaPush">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L321">property <b>oktaPush</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L321">property <b>oktaPush</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaPush?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaPush'>MfaOktaPush</a>&gt;;</code></pre>
@@ -1722,7 +1722,7 @@ Okta Password MFA policy settings.
 Okta Push MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-oktaQuestion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L325">property <b>oktaQuestion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L325">property <b>oktaQuestion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaQuestion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaQuestion'>MfaOktaQuestion</a>&gt;;</code></pre>
@@ -1730,7 +1730,7 @@ Okta Push MFA policy settings.
 Okta Question MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-oktaSms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L329">property <b>oktaSms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L329">property <b>oktaSms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaSms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaSms'>MfaOktaSms</a>&gt;;</code></pre>
@@ -1738,7 +1738,7 @@ Okta Question MFA policy settings.
 Okta SMS MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L333">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L333">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1746,7 +1746,7 @@ Okta SMS MFA policy settings.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="MfaArgs-rsaToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L337">property <b>rsaToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L337">property <b>rsaToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rsaToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaRsaToken'>MfaRsaToken</a>&gt;;</code></pre>
@@ -1754,7 +1754,7 @@ Priority of the policy.
 RSA Token MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L341">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L341">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1762,7 +1762,7 @@ RSA Token MFA policy settings.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="MfaArgs-symantecVip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L345">property <b>symantecVip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L345">property <b>symantecVip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>symantecVip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaSymantecVip'>MfaSymantecVip</a>&gt;;</code></pre>
@@ -1770,7 +1770,7 @@ Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 Symantec VIP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaArgs-yubikeyToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L349">property <b>yubikeyToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L349">property <b>yubikeyToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yubikeyToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaYubikeyToken'>MfaYubikeyToken</a>&gt;;</code></pre>
@@ -1778,7 +1778,7 @@ Symantec VIP MFA policy settings.
 Yubikey Token MFA policy settings.
 
 <h3 class="pdoc-module-header" id="MfaState" data-link-title="MfaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L199">
         interface <strong>MfaState</strong>
     </a>
 </h3>
@@ -1788,7 +1788,7 @@ Yubikey Token MFA policy settings.
 Input properties used for looking up and filtering Mfa resources.
 
 <h4 class="pdoc-member-header" id="MfaState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L203">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1796,7 +1796,7 @@ Input properties used for looking up and filtering Mfa resources.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="MfaState-duo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L207">property <b>duo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L207">property <b>duo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaDuo'>MfaDuo</a>&gt;;</code></pre>
@@ -1804,7 +1804,7 @@ Policy Description.
 DUO MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-fidoU2f">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L211">property <b>fidoU2f</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L211">property <b>fidoU2f</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fidoU2f?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaFidoU2f'>MfaFidoU2f</a>&gt;;</code></pre>
@@ -1812,7 +1812,7 @@ DUO MFA policy settings.
 Fido U2F MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-fidoWebauthn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L215">property <b>fidoWebauthn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L215">property <b>fidoWebauthn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fidoWebauthn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaFidoWebauthn'>MfaFidoWebauthn</a>&gt;;</code></pre>
@@ -1820,7 +1820,7 @@ Fido U2F MFA policy settings.
 Fido Web Authn MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-googleOtp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L219">property <b>googleOtp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L219">property <b>googleOtp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>googleOtp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaGoogleOtp'>MfaGoogleOtp</a>&gt;;</code></pre>
@@ -1828,7 +1828,7 @@ Fido Web Authn MFA policy settings.
 Google OTP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L223">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L223">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsIncludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1836,7 +1836,7 @@ Google OTP MFA policy settings.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="MfaState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1844,7 +1844,7 @@ List of Group IDs to Include.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="MfaState-oktaCall">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L231">property <b>oktaCall</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L231">property <b>oktaCall</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaCall?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaCall'>MfaOktaCall</a>&gt;;</code></pre>
@@ -1852,7 +1852,7 @@ Policy Name.
 Okta Call MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-oktaOtp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L235">property <b>oktaOtp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L235">property <b>oktaOtp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaOtp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaOtp'>MfaOktaOtp</a>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ Okta Call MFA policy settings.
 Okta OTP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-oktaPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L239">property <b>oktaPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L239">property <b>oktaPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaPassword'>MfaOktaPassword</a>&gt;;</code></pre>
@@ -1868,7 +1868,7 @@ Okta OTP MFA policy settings.
 Okta Password MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-oktaPush">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L243">property <b>oktaPush</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L243">property <b>oktaPush</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaPush?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaPush'>MfaOktaPush</a>&gt;;</code></pre>
@@ -1876,7 +1876,7 @@ Okta Password MFA policy settings.
 Okta Push MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-oktaQuestion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L247">property <b>oktaQuestion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L247">property <b>oktaQuestion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaQuestion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaQuestion'>MfaOktaQuestion</a>&gt;;</code></pre>
@@ -1884,7 +1884,7 @@ Okta Push MFA policy settings.
 Okta Question MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-oktaSms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L251">property <b>oktaSms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L251">property <b>oktaSms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oktaSms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaSms'>MfaOktaSms</a>&gt;;</code></pre>
@@ -1892,7 +1892,7 @@ Okta Question MFA policy settings.
 Okta SMS MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L255">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L255">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1900,7 +1900,7 @@ Okta SMS MFA policy settings.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="MfaState-rsaToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L259">property <b>rsaToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L259">property <b>rsaToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rsaToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaRsaToken'>MfaRsaToken</a>&gt;;</code></pre>
@@ -1908,7 +1908,7 @@ Priority of the policy.
 RSA Token MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L263">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L263">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1916,7 +1916,7 @@ RSA Token MFA policy settings.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="MfaState-symantecVip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L267">property <b>symantecVip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L267">property <b>symantecVip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>symantecVip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaSymantecVip'>MfaSymantecVip</a>&gt;;</code></pre>
@@ -1924,7 +1924,7 @@ Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 Symantec VIP MFA policy settings.
 
 <h4 class="pdoc-member-header" id="MfaState-yubikeyToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/mfa.ts#L271">property <b>yubikeyToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/mfa.ts#L271">property <b>yubikeyToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yubikeyToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaYubikeyToken'>MfaYubikeyToken</a>&gt;;</code></pre>
@@ -1932,7 +1932,7 @@ Symantec VIP MFA policy settings.
 Yubikey Token MFA policy settings.
 
 <h3 class="pdoc-module-header" id="PasswordArgs" data-link-title="PasswordArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L375">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L375">
         interface <strong>PasswordArgs</strong>
     </a>
 </h3>
@@ -1942,7 +1942,7 @@ Yubikey Token MFA policy settings.
 The set of arguments for constructing a Password resource.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-authProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L379">property <b>authProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L379">property <b>authProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1950,7 +1950,7 @@ The set of arguments for constructing a Password resource.
 Authentication Provider: `"OKTA"` or `"ACTIVE_DIRECTORY"`. Default is `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L383">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L383">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1958,7 +1958,7 @@ Authentication Provider: `"OKTA"` or `"ACTIVE_DIRECTORY"`. Default is `"OKTA"`.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-emailRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L387">property <b>emailRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L387">property <b>emailRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1966,7 +1966,7 @@ Policy Description.
 Enable or disable email password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L391">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L391">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsIncludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1974,7 +1974,7 @@ Enable or disable email password recovery: ACTIVE or INACTIVE.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L395">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L395">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1982,7 +1982,7 @@ List of Group IDs to Include.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordAutoUnlockMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L399">property <b>passwordAutoUnlockMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L399">property <b>passwordAutoUnlockMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordAutoUnlockMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1990,7 +1990,7 @@ Policy Name.
 Number of minutes before a locked account is unlocked: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordDictionaryLookup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L403">property <b>passwordDictionaryLookup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L403">property <b>passwordDictionaryLookup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordDictionaryLookup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ Number of minutes before a locked account is unlocked: 0 = no limit.
 Check Passwords Against Common Password Dictionary.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordExcludeFirstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L407">property <b>passwordExcludeFirstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L407">property <b>passwordExcludeFirstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExcludeFirstName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2006,7 +2006,7 @@ Check Passwords Against Common Password Dictionary.
 User firstName attribute must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordExcludeLastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L411">property <b>passwordExcludeLastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L411">property <b>passwordExcludeLastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExcludeLastName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ User firstName attribute must be excluded from the password.
 User lastName attribute must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordExcludeUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L415">property <b>passwordExcludeUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L415">property <b>passwordExcludeUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExcludeUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2022,7 +2022,7 @@ User lastName attribute must be excluded from the password.
 If the user name must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordExpireWarnDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L419">property <b>passwordExpireWarnDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L419">property <b>passwordExpireWarnDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExpireWarnDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2030,7 +2030,7 @@ If the user name must be excluded from the password.
 Length in days a user will be warned before password expiry: 0 = no warning.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordHistoryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L423">property <b>passwordHistoryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L423">property <b>passwordHistoryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordHistoryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2038,7 +2038,7 @@ Length in days a user will be warned before password expiry: 0 = no warning.
 Number of distinct passwords that must be created before they can be reused: 0 = none.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMaxAgeDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L427">property <b>passwordMaxAgeDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L427">property <b>passwordMaxAgeDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMaxAgeDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2046,7 +2046,7 @@ Number of distinct passwords that must be created before they can be reused: 0 =
 Length in days a password is valid before expiry: 0 = no limit.",
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMaxLockoutAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L431">property <b>passwordMaxLockoutAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L431">property <b>passwordMaxLockoutAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMaxLockoutAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2054,7 +2054,7 @@ Length in days a password is valid before expiry: 0 = no limit.",
 Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMinAgeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L435">property <b>passwordMinAgeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L435">property <b>passwordMinAgeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinAgeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2062,7 +2062,7 @@ Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 Minimum time interval in minutes between password changes: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMinLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L439">property <b>passwordMinLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L439">property <b>passwordMinLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2070,7 +2070,7 @@ Minimum time interval in minutes between password changes: 0 = no limit.
 Minimum password length. Default is 8.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMinLowercase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L443">property <b>passwordMinLowercase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L443">property <b>passwordMinLowercase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinLowercase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2078,7 +2078,7 @@ Minimum password length. Default is 8.
 Minimum number of lower case characters in password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMinNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L447">property <b>passwordMinNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L447">property <b>passwordMinNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2086,7 +2086,7 @@ Minimum number of lower case characters in password.
 Minimum number of numbers in password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMinSymbol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L451">property <b>passwordMinSymbol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L451">property <b>passwordMinSymbol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinSymbol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2094,7 +2094,7 @@ Minimum number of numbers in password.
 Minimum number of symbols in password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordMinUppercase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L455">property <b>passwordMinUppercase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L455">property <b>passwordMinUppercase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinUppercase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2102,7 +2102,7 @@ Minimum number of symbols in password.
 Minimum number of upper case characters in password.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-passwordShowLockoutFailures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L459">property <b>passwordShowLockoutFailures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L459">property <b>passwordShowLockoutFailures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordShowLockoutFailures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2110,7 +2110,7 @@ Minimum number of upper case characters in password.
 If a user should be informed when their account is locked.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L463">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L463">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2118,7 +2118,7 @@ If a user should be informed when their account is locked.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-questionMinLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L467">property <b>questionMinLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L467">property <b>questionMinLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>questionMinLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2126,7 +2126,7 @@ Priority of the policy.
 Min length of the password recovery question answer.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-questionRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L471">property <b>questionRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L471">property <b>questionRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>questionRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2134,7 +2134,7 @@ Min length of the password recovery question answer.
 Enable or disable security question password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-recoveryEmailToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L475">property <b>recoveryEmailToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L475">property <b>recoveryEmailToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryEmailToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2142,7 +2142,7 @@ Enable or disable security question password recovery: ACTIVE or INACTIVE.
 Lifetime in minutes of the recovery email token.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-skipUnlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L479">property <b>skipUnlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L479">property <b>skipUnlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipUnlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2150,7 +2150,7 @@ Lifetime in minutes of the recovery email token.
 When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's Windows account.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-smsRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L483">property <b>smsRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L483">property <b>smsRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2158,7 +2158,7 @@ When an Active Directory user is locked out of Okta, the Okta unlock operation s
 Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="PasswordArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L487">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L487">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2166,7 +2166,7 @@ Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h3 class="pdoc-module-header" id="PasswordState" data-link-title="PasswordState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L257">
         interface <strong>PasswordState</strong>
     </a>
 </h3>
@@ -2176,7 +2176,7 @@ Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 Input properties used for looking up and filtering Password resources.
 
 <h4 class="pdoc-member-header" id="PasswordState-authProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L261">property <b>authProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L261">property <b>authProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2184,7 +2184,7 @@ Input properties used for looking up and filtering Password resources.
 Authentication Provider: `"OKTA"` or `"ACTIVE_DIRECTORY"`. Default is `"OKTA"`.
 
 <h4 class="pdoc-member-header" id="PasswordState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L265">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L265">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2192,7 +2192,7 @@ Authentication Provider: `"OKTA"` or `"ACTIVE_DIRECTORY"`. Default is `"OKTA"`.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="PasswordState-emailRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L269">property <b>emailRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L269">property <b>emailRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2200,7 +2200,7 @@ Policy Description.
 Enable or disable email password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="PasswordState-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L273">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L273">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsIncludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2208,7 +2208,7 @@ Enable or disable email password recovery: ACTIVE or INACTIVE.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="PasswordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L277">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L277">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2216,7 +2216,7 @@ List of Group IDs to Include.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordAutoUnlockMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L281">property <b>passwordAutoUnlockMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L281">property <b>passwordAutoUnlockMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordAutoUnlockMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2224,7 +2224,7 @@ Policy Name.
 Number of minutes before a locked account is unlocked: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordDictionaryLookup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L285">property <b>passwordDictionaryLookup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L285">property <b>passwordDictionaryLookup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordDictionaryLookup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2232,7 +2232,7 @@ Number of minutes before a locked account is unlocked: 0 = no limit.
 Check Passwords Against Common Password Dictionary.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordExcludeFirstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L289">property <b>passwordExcludeFirstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L289">property <b>passwordExcludeFirstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExcludeFirstName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2240,7 +2240,7 @@ Check Passwords Against Common Password Dictionary.
 User firstName attribute must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordExcludeLastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L293">property <b>passwordExcludeLastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L293">property <b>passwordExcludeLastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExcludeLastName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2248,7 +2248,7 @@ User firstName attribute must be excluded from the password.
 User lastName attribute must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordExcludeUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L297">property <b>passwordExcludeUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L297">property <b>passwordExcludeUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExcludeUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2256,7 +2256,7 @@ User lastName attribute must be excluded from the password.
 If the user name must be excluded from the password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordExpireWarnDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L301">property <b>passwordExpireWarnDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L301">property <b>passwordExpireWarnDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordExpireWarnDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2264,7 +2264,7 @@ If the user name must be excluded from the password.
 Length in days a user will be warned before password expiry: 0 = no warning.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordHistoryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L305">property <b>passwordHistoryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L305">property <b>passwordHistoryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordHistoryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2272,7 +2272,7 @@ Length in days a user will be warned before password expiry: 0 = no warning.
 Number of distinct passwords that must be created before they can be reused: 0 = none.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMaxAgeDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L309">property <b>passwordMaxAgeDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L309">property <b>passwordMaxAgeDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMaxAgeDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2280,7 +2280,7 @@ Number of distinct passwords that must be created before they can be reused: 0 =
 Length in days a password is valid before expiry: 0 = no limit.",
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMaxLockoutAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L313">property <b>passwordMaxLockoutAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L313">property <b>passwordMaxLockoutAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMaxLockoutAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2288,7 +2288,7 @@ Length in days a password is valid before expiry: 0 = no limit.",
 Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMinAgeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L317">property <b>passwordMinAgeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L317">property <b>passwordMinAgeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinAgeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2296,7 +2296,7 @@ Number of unsuccessful login attempts allowed before lockout: 0 = no limit.
 Minimum time interval in minutes between password changes: 0 = no limit.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMinLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L321">property <b>passwordMinLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L321">property <b>passwordMinLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2304,7 +2304,7 @@ Minimum time interval in minutes between password changes: 0 = no limit.
 Minimum password length. Default is 8.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMinLowercase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L325">property <b>passwordMinLowercase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L325">property <b>passwordMinLowercase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinLowercase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2312,7 +2312,7 @@ Minimum password length. Default is 8.
 Minimum number of lower case characters in password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMinNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L329">property <b>passwordMinNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L329">property <b>passwordMinNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2320,7 +2320,7 @@ Minimum number of lower case characters in password.
 Minimum number of numbers in password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMinSymbol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L333">property <b>passwordMinSymbol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L333">property <b>passwordMinSymbol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinSymbol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2328,7 +2328,7 @@ Minimum number of numbers in password.
 Minimum number of symbols in password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordMinUppercase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L337">property <b>passwordMinUppercase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L337">property <b>passwordMinUppercase</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordMinUppercase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2336,7 +2336,7 @@ Minimum number of symbols in password.
 Minimum number of upper case characters in password.
 
 <h4 class="pdoc-member-header" id="PasswordState-passwordShowLockoutFailures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L341">property <b>passwordShowLockoutFailures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L341">property <b>passwordShowLockoutFailures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordShowLockoutFailures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2344,7 +2344,7 @@ Minimum number of upper case characters in password.
 If a user should be informed when their account is locked.
 
 <h4 class="pdoc-member-header" id="PasswordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L345">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L345">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2352,7 +2352,7 @@ If a user should be informed when their account is locked.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="PasswordState-questionMinLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L349">property <b>questionMinLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L349">property <b>questionMinLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>questionMinLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2360,7 +2360,7 @@ Priority of the policy.
 Min length of the password recovery question answer.
 
 <h4 class="pdoc-member-header" id="PasswordState-questionRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L353">property <b>questionRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L353">property <b>questionRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>questionRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2368,7 +2368,7 @@ Min length of the password recovery question answer.
 Enable or disable security question password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="PasswordState-recoveryEmailToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L357">property <b>recoveryEmailToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L357">property <b>recoveryEmailToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryEmailToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2376,7 +2376,7 @@ Enable or disable security question password recovery: ACTIVE or INACTIVE.
 Lifetime in minutes of the recovery email token.
 
 <h4 class="pdoc-member-header" id="PasswordState-skipUnlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L361">property <b>skipUnlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L361">property <b>skipUnlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipUnlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2384,7 +2384,7 @@ Lifetime in minutes of the recovery email token.
 When an Active Directory user is locked out of Okta, the Okta unlock operation should also attempt to unlock the user's Windows account.
 
 <h4 class="pdoc-member-header" id="PasswordState-smsRecovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L365">property <b>smsRecovery</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L365">property <b>smsRecovery</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsRecovery?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2392,7 +2392,7 @@ When an Active Directory user is locked out of Okta, the Okta unlock operation s
 Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 
 <h4 class="pdoc-member-header" id="PasswordState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/password.ts#L369">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/password.ts#L369">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2400,7 @@ Enable or disable SMS password recovery: ACTIVE or INACTIVE.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h3 class="pdoc-module-header" id="RuleIdpDiscoveryArgs" data-link-title="RuleIdpDiscoveryArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L218">
         interface <strong>RuleIdpDiscoveryArgs</strong>
     </a>
 </h3>
@@ -2410,7 +2410,7 @@ Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 The set of arguments for constructing a RuleIdpDiscovery resource.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-appExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L222">property <b>appExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L222">property <b>appExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryAppExclude'>RuleIdpDiscoveryAppExclude</a>&gt;[]&gt;;</code></pre>
@@ -2418,7 +2418,7 @@ The set of arguments for constructing a RuleIdpDiscovery resource.
 Applications to exclude in discovery rule
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-appIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L226">property <b>appIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L226">property <b>appIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryAppInclude'>RuleIdpDiscoveryAppInclude</a>&gt;[]&gt;;</code></pre>
@@ -2426,17 +2426,17 @@ Applications to exclude in discovery rule
 Applications to include in discovery rule
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L227">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L227">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-idpType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L228">property <b>idpType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L228">property <b>idpType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L232">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2444,7 +2444,7 @@ Applications to include in discovery rule
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L236">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L236">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2452,7 +2452,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L240">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L240">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2460,7 +2460,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L244">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L244">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2468,12 +2468,12 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-platformIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L245">property <b>platformIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L245">property <b>platformIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryPlatformInclude'>RuleIdpDiscoveryPlatformInclude</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L249">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L249">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2481,7 +2481,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L253">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L253">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2489,7 +2489,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L257">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L257">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2497,22 +2497,22 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-userIdentifierAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L258">property <b>userIdentifierAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L258">property <b>userIdentifierAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentifierAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-userIdentifierPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L259">property <b>userIdentifierPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L259">property <b>userIdentifierPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentifierPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryUserIdentifierPattern'>RuleIdpDiscoveryUserIdentifierPattern</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryArgs-userIdentifierType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L260">property <b>userIdentifierType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L260">property <b>userIdentifierType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentifierType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RuleIdpDiscoveryState" data-link-title="RuleIdpDiscoveryState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L170">
         interface <strong>RuleIdpDiscoveryState</strong>
     </a>
 </h3>
@@ -2522,7 +2522,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Input properties used for looking up and filtering RuleIdpDiscovery resources.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-appExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L174">property <b>appExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L174">property <b>appExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryAppExclude'>RuleIdpDiscoveryAppExclude</a>&gt;[]&gt;;</code></pre>
@@ -2530,7 +2530,7 @@ Input properties used for looking up and filtering RuleIdpDiscovery resources.
 Applications to exclude in discovery rule
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-appIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L178">property <b>appIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L178">property <b>appIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryAppInclude'>RuleIdpDiscoveryAppInclude</a>&gt;[]&gt;;</code></pre>
@@ -2538,17 +2538,17 @@ Applications to exclude in discovery rule
 Applications to include in discovery rule
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-idpId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L179">property <b>idpId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L179">property <b>idpId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-idpType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L180">property <b>idpType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L180">property <b>idpType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>idpType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2556,7 +2556,7 @@ Applications to include in discovery rule
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L188">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L188">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2564,7 +2564,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L192">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L192">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2572,7 +2572,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L196">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L196">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2580,12 +2580,12 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-platformIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L197">property <b>platformIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L197">property <b>platformIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryPlatformInclude'>RuleIdpDiscoveryPlatformInclude</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L201">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L201">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2593,7 +2593,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L205">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L205">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2601,7 +2601,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L209">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L209">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2609,22 +2609,22 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-userIdentifierAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L210">property <b>userIdentifierAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L210">property <b>userIdentifierAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentifierAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-userIdentifierPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L211">property <b>userIdentifierPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L211">property <b>userIdentifierPatterns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentifierPatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#RuleIdpDiscoveryUserIdentifierPattern'>RuleIdpDiscoveryUserIdentifierPattern</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RuleIdpDiscoveryState-userIdentifierType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleIdpDiscovery.ts#L212">property <b>userIdentifierType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleIdpDiscovery.ts#L212">property <b>userIdentifierType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userIdentifierType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RuleMfaArgs" data-link-title="RuleMfaArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L172">
         interface <strong>RuleMfaArgs</strong>
     </a>
 </h3>
@@ -2634,7 +2634,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 The set of arguments for constructing a RuleMfa resource.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-enroll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L176">property <b>enroll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L176">property <b>enroll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enroll?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2642,7 +2642,7 @@ The set of arguments for constructing a RuleMfa resource.
 When a user should be prompted for MFA. It can be `"CHALLENGE"`, `"LOGIN"`, or `"NEVER"`.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2650,7 +2650,7 @@ When a user should be prompted for MFA. It can be `"CHALLENGE"`, `"LOGIN"`, or `
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L184">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L184">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2658,7 +2658,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L188">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L188">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2666,7 +2666,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L192">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L192">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2674,7 +2674,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L196">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L196">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2682,7 +2682,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L200">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L200">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2690,7 +2690,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L204">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L204">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2698,7 +2698,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleMfaArgs-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L208">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L208">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersExcludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2706,7 +2706,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RuleMfaState" data-link-title="RuleMfaState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L130">
         interface <strong>RuleMfaState</strong>
     </a>
 </h3>
@@ -2716,7 +2716,7 @@ Set of User IDs to Exclude
 Input properties used for looking up and filtering RuleMfa resources.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-enroll">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L134">property <b>enroll</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L134">property <b>enroll</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enroll?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2724,7 +2724,7 @@ Input properties used for looking up and filtering RuleMfa resources.
 When a user should be prompted for MFA. It can be `"CHALLENGE"`, `"LOGIN"`, or `"NEVER"`.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2732,7 +2732,7 @@ When a user should be prompted for MFA. It can be `"CHALLENGE"`, `"LOGIN"`, or `
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L142">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L142">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L146">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L146">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2748,7 +2748,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L150">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L150">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2756,7 +2756,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L154">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L154">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2764,7 +2764,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L158">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L158">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2772,7 +2772,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L162">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L162">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2780,7 +2780,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleMfaState-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleMfa.ts#L166">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleMfa.ts#L166">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersExcludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2788,7 +2788,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RulePasswordArgs" data-link-title="RulePasswordArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L192">
         interface <strong>RulePasswordArgs</strong>
     </a>
 </h3>
@@ -2798,7 +2798,7 @@ Set of User IDs to Exclude
 The set of arguments for constructing a RulePassword resource.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2806,7 +2806,7 @@ The set of arguments for constructing a RulePassword resource.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L200">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L200">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2814,7 +2814,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L204">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L204">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2822,7 +2822,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L208">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L208">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2830,7 +2830,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-passwordChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L212">property <b>passwordChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L212">property <b>passwordChange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordChange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2838,7 +2838,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Allow or deny a user to change their password: `"ALLOW"` or `"DENY"`. By default it is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-passwordReset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L216">property <b>passwordReset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L216">property <b>passwordReset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordReset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2846,7 +2846,7 @@ Allow or deny a user to change their password: `"ALLOW"` or `"DENY"`. By default
 Allow or deny a user to reset their password: `"ALLOW"` or `"DENY"`. By default it is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-passwordUnlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L220">property <b>passwordUnlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L220">property <b>passwordUnlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordUnlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ Allow or deny a user to reset their password: `"ALLOW"` or `"DENY"`. By default 
 Allow or deny a user to unlock: `"ALLOW"` or `"DENY"`. By default it is `"DENY"`,
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L224">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L224">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2862,7 +2862,7 @@ Allow or deny a user to unlock: `"ALLOW"` or `"DENY"`. By default it is `"DENY"`
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L228">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L228">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2870,7 +2870,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L232">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L232">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2878,7 +2878,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordArgs-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L236">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L236">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersExcludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2886,7 +2886,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RulePasswordState" data-link-title="RulePasswordState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L142">
         interface <strong>RulePasswordState</strong>
     </a>
 </h3>
@@ -2896,7 +2896,7 @@ Set of User IDs to Exclude
 Input properties used for looking up and filtering RulePassword resources.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +2904,7 @@ Input properties used for looking up and filtering RulePassword resources.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L150">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L150">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2912,7 +2912,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L154">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L154">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2920,7 +2920,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L158">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L158">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2928,7 +2928,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-passwordChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L162">property <b>passwordChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L162">property <b>passwordChange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordChange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2936,7 +2936,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Allow or deny a user to change their password: `"ALLOW"` or `"DENY"`. By default it is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-passwordReset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L166">property <b>passwordReset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L166">property <b>passwordReset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordReset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2944,7 +2944,7 @@ Allow or deny a user to change their password: `"ALLOW"` or `"DENY"`. By default
 Allow or deny a user to reset their password: `"ALLOW"` or `"DENY"`. By default it is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-passwordUnlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L170">property <b>passwordUnlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L170">property <b>passwordUnlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordUnlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2952,7 +2952,7 @@ Allow or deny a user to reset their password: `"ALLOW"` or `"DENY"`. By default 
 Allow or deny a user to unlock: `"ALLOW"` or `"DENY"`. By default it is `"DENY"`,
 
 <h4 class="pdoc-member-header" id="RulePasswordState-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L174">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L174">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2960,7 +2960,7 @@ Allow or deny a user to unlock: `"ALLOW"` or `"DENY"`. By default it is `"DENY"`
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L178">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L178">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2968,7 +2968,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L182">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L182">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2976,7 +2976,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RulePasswordState-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/rulePassword.ts#L186">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/rulePassword.ts#L186">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersExcludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2984,7 +2984,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RuleSignonArgs" data-link-title="RuleSignonArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L250">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L250">
         interface <strong>RuleSignonArgs</strong>
     </a>
 </h3>
@@ -2994,7 +2994,7 @@ Set of User IDs to Exclude
 The set of arguments for constructing a RuleSignon resource.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L254">property <b>access</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L254">property <b>access</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>access?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3002,7 +3002,7 @@ The set of arguments for constructing a RuleSignon resource.
 Allow or deny access based on the rule conditions: `"ALLOW"` or `"DENY"`. The default is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-authtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L258">property <b>authtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L258">property <b>authtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3010,7 +3010,7 @@ Allow or deny access based on the rule conditions: `"ALLOW"` or `"DENY"`. The de
 Authentication entrypoint: `"ANY"` or `"RADIUS"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-mfaLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L262">property <b>mfaLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L262">property <b>mfaLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaLifetime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3018,7 +3018,7 @@ Authentication entrypoint: `"ANY"` or `"RADIUS"`.
 Elapsed time before the next MFA challenge.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-mfaPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L266">property <b>mfaPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L266">property <b>mfaPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3026,7 +3026,7 @@ Elapsed time before the next MFA challenge.
 Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: `"DEVICE"`, `"SESSION"` or `"ALWAYS"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-mfaRememberDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L270">property <b>mfaRememberDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L270">property <b>mfaRememberDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaRememberDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3034,7 +3034,7 @@ Prompt for MFA based on the device used, a factor session lifetime, or every sig
 Remember MFA device. The default `false`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-mfaRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L274">property <b>mfaRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L274">property <b>mfaRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3042,7 +3042,7 @@ Remember MFA device. The default `false`.
 Require MFA. By default is `false`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L278">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L278">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3050,7 +3050,7 @@ Require MFA. By default is `false`.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L282">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L282">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3058,7 +3058,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L286">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L286">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3066,7 +3066,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L290">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L290">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3074,7 +3074,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L294">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L294">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3082,7 +3082,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L298">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L298">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3090,7 +3090,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-sessionIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L302">property <b>sessionIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L302">property <b>sessionIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3098,7 +3098,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Max minutes a session can be idle.",
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-sessionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L306">property <b>sessionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L306">property <b>sessionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionLifetime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3106,7 +3106,7 @@ Max minutes a session can be idle.",
 Max minutes a session is active: Disable = 0.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-sessionPersistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L310">property <b>sessionPersistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L310">property <b>sessionPersistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionPersistent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3114,7 +3114,7 @@ Max minutes a session is active: Disable = 0.
 Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session cookies.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L314">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L314">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3122,7 +3122,7 @@ Whether session cookies will last across browser sessions. Okta Administrators c
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonArgs-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L318">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L318">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersExcludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3130,7 +3130,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="RuleSignonState" data-link-title="RuleSignonState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L176">
         interface <strong>RuleSignonState</strong>
     </a>
 </h3>
@@ -3140,7 +3140,7 @@ Set of User IDs to Exclude
 Input properties used for looking up and filtering RuleSignon resources.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L180">property <b>access</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L180">property <b>access</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>access?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3148,7 +3148,7 @@ Input properties used for looking up and filtering RuleSignon resources.
 Allow or deny access based on the rule conditions: `"ALLOW"` or `"DENY"`. The default is `"ALLOW"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-authtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L184">property <b>authtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L184">property <b>authtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3156,7 +3156,7 @@ Allow or deny access based on the rule conditions: `"ALLOW"` or `"DENY"`. The de
 Authentication entrypoint: `"ANY"` or `"RADIUS"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-mfaLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L188">property <b>mfaLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L188">property <b>mfaLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaLifetime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3164,7 +3164,7 @@ Authentication entrypoint: `"ANY"` or `"RADIUS"`.
 Elapsed time before the next MFA challenge.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-mfaPrompt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L192">property <b>mfaPrompt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L192">property <b>mfaPrompt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaPrompt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3172,7 +3172,7 @@ Elapsed time before the next MFA challenge.
 Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: `"DEVICE"`, `"SESSION"` or `"ALWAYS"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-mfaRememberDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L196">property <b>mfaRememberDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L196">property <b>mfaRememberDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaRememberDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3180,7 +3180,7 @@ Prompt for MFA based on the device used, a factor session lifetime, or every sig
 Remember MFA device. The default `false`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-mfaRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L200">property <b>mfaRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L200">property <b>mfaRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mfaRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3188,7 +3188,7 @@ Remember MFA device. The default `false`.
 Require MFA. By default is `false`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3196,7 +3196,7 @@ Require MFA. By default is `false`.
 Policy Rule Name.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-networkConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L208">property <b>networkConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L208">property <b>networkConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3204,7 +3204,7 @@ Policy Rule Name.
 Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-networkExcludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L212">property <b>networkExcludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L212">property <b>networkExcludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkExcludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3212,7 +3212,7 @@ Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK
 The network zones to exclude. Conflicts with `networkIncludes`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-networkIncludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L216">property <b>networkIncludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L216">property <b>networkIncludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkIncludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3220,7 +3220,7 @@ The network zones to exclude. Conflicts with `networkIncludes`.
 The network zones to include. Conflicts with `networkExcludes`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-policyid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L220">property <b>policyid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L220">property <b>policyid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3228,7 +3228,7 @@ The network zones to include. Conflicts with `networkExcludes`.
 Policy ID.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L224">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L224">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3236,7 +3236,7 @@ Policy ID.
 Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-sessionIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L228">property <b>sessionIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L228">property <b>sessionIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3244,7 +3244,7 @@ Policy Rule Priority, this attribute can be set to a valid priority. To avoid en
 Max minutes a session can be idle.",
 
 <h4 class="pdoc-member-header" id="RuleSignonState-sessionLifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L232">property <b>sessionLifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L232">property <b>sessionLifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionLifetime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3252,7 +3252,7 @@ Max minutes a session can be idle.",
 Max minutes a session is active: Disable = 0.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-sessionPersistent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L236">property <b>sessionPersistent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L236">property <b>sessionPersistent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionPersistent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3260,7 +3260,7 @@ Max minutes a session is active: Disable = 0.
 Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session cookies.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L240">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L240">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3268,7 +3268,7 @@ Whether session cookies will last across browser sessions. Okta Administrators c
 Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h4 class="pdoc-member-header" id="RuleSignonState-usersExcludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/ruleSignon.ts#L244">property <b>usersExcludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/ruleSignon.ts#L244">property <b>usersExcludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usersExcludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3276,7 +3276,7 @@ Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 Set of User IDs to Exclude
 
 <h3 class="pdoc-module-header" id="SignonArgs" data-link-title="SignonArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L144">
         interface <strong>SignonArgs</strong>
     </a>
 </h3>
@@ -3286,7 +3286,7 @@ Set of User IDs to Exclude
 The set of arguments for constructing a Signon resource.
 
 <h4 class="pdoc-member-header" id="SignonArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L148">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L148">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3294,7 +3294,7 @@ The set of arguments for constructing a Signon resource.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="SignonArgs-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L152">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L152">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsIncludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3302,7 +3302,7 @@ Policy Description.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="SignonArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3310,7 +3310,7 @@ List of Group IDs to Include.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="SignonArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L160">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L160">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3318,7 +3318,7 @@ Policy Name.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="SignonArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L164">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L164">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3326,7 +3326,7 @@ Priority of the policy.
 Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 
 <h3 class="pdoc-module-header" id="SignonState" data-link-title="SignonState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L118">
         interface <strong>SignonState</strong>
     </a>
 </h3>
@@ -3336,7 +3336,7 @@ Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 Input properties used for looking up and filtering Signon resources.
 
 <h4 class="pdoc-member-header" id="SignonState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L122">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L122">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3344,7 +3344,7 @@ Input properties used for looking up and filtering Signon resources.
 Policy Description.
 
 <h4 class="pdoc-member-header" id="SignonState-groupsIncludeds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L126">property <b>groupsIncludeds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L126">property <b>groupsIncludeds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsIncludeds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3352,7 +3352,7 @@ Policy Description.
 List of Group IDs to Include.
 
 <h4 class="pdoc-member-header" id="SignonState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3360,7 +3360,7 @@ List of Group IDs to Include.
 Policy Name.
 
 <h4 class="pdoc-member-header" id="SignonState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L134">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L134">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3368,7 +3368,7 @@ Policy Name.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="SignonState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/{{< param git_sha >}}/sdk/nodejs/policy/signon.ts#L138">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/690544114ef62ed552d293d3e22cb1eb83517de6/sdk/nodejs/policy/signon.ts#L138">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
