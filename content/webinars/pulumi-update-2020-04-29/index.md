@@ -2,7 +2,7 @@
 # Name of the webinar.
 title: "Pulumi Up(date)"
 meta_desc: "Watch Pulumi CEO, Joe Duffy and Corey Quinn as they walk-through Pulumi features and new capabilities that help tame cloud cost and complexity."
-meta_image: "/images/webinar/pulumi-update-twitter-card.jpg"
+meta_image: "/images/webinar/pulumi-update-twitter-card.png"
 
 # A featured webinar will display first in the list.
 featured: true
