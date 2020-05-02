@@ -887,6 +887,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryWebhookConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#RepositoryWebhookConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Inputs.RepositoryWebhookConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.Outputs.RepositoryWebhookConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
