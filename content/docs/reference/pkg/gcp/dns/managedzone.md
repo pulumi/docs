@@ -235,7 +235,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -253,8 +253,9 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,8 +283,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -312,9 +313,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -350,7 +351,7 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,8 +369,9 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -397,8 +399,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -427,9 +429,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +467,7 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,8 +485,9 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,8 +515,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -542,9 +545,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,7 +583,7 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,8 +601,9 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -627,8 +631,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -657,9 +661,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -919,7 +923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -946,8 +950,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -984,8 +989,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,9 +1019,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1043,7 +1048,7 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,8 +1075,9 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1108,8 +1114,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1138,9 +1144,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1173,7 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1194,8 +1200,9 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1232,8 +1239,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1262,9 +1269,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1291,7 +1298,7 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1318,8 +1325,9 @@ Must be one of: `public`, `private`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
-contains the set of destinations to forward to.
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
+for this zone. The value of this field contains the set of destinations
+to forward to.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1356,8 +1364,8 @@ Must be unique within the project.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
-network to peer with.
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
+zone. The value of this field contains the network to peer with.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1386,9 +1394,9 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
-automatically configured records for VPC resources. This only applies to networks listed under
-'private_visibility_config'.
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+lookup queries using automatically configured records for VPC resources. This only applies
+to networks listed under `private_visibility_config`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1424,6 +1432,9 @@ Must be one of: `public`, `private`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneDnssecConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneDnssecConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1627,6 +1638,9 @@ non_existence can only be updated when the state is `off`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigDefaultKeySpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigDefaultKeySpecOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneDnssecConfigDefaultKeySpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneDnssecConfigDefaultKeySpec.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1835,6 +1849,9 @@ to sign all other types of resource record sets.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneForwardingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneForwardingConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1921,6 +1938,9 @@ one target is given.  Structure is documented below.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigTargetNameServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigTargetNameServerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZoneForwardingConfigTargetNameServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZoneForwardingConfigTargetNameServer.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2045,6 +2065,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePeeringConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePeeringConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2123,6 +2146,9 @@ to the Internet. When set to `private`, Cloud DNS will always send queries throu
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigTargetNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePeeringConfigTargetNetworkOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePeeringConfigTargetNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePeeringConfigTargetNetwork.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2211,6 +2237,9 @@ This should be formatted like
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePrivateVisibilityConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2224,7 +2253,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List&lt;Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2239,7 +2269,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">[]Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2254,7 +2285,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2269,7 +2301,8 @@ This should be formatted like
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2285,6 +2318,9 @@ This should be formatted like
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigNetworkOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Inputs.ManagedZonePrivateVisibilityConfigNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.Outputs.ManagedZonePrivateVisibilityConfigNetwork.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2378,3 +2414,4 @@ This should be formatted like
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
+

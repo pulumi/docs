@@ -464,7 +464,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,7 +601,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,7 +738,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +875,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1326,7 +1326,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1490,7 +1490,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1654,7 +1654,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1818,7 +1818,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1925,6 +1925,9 @@ consecutive failures. The default value is 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttp2HealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttp2HealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttp2HealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttp2HealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2289,6 +2292,9 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttpHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2651,6 +2657,9 @@ can only be ASCII.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpsHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckHttpsHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckHttpsHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckHttpsHealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3015,6 +3024,9 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3097,6 +3109,9 @@ which means no health check logging will be done.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckSslHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckSslHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckSslHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckSslHealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3424,6 +3439,9 @@ can only be ASCII.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckTcpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckTcpHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.HealthCheckTcpHealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

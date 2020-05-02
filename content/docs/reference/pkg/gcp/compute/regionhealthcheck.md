@@ -464,7 +464,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,7 +611,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +758,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +905,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Dict[Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1366,7 +1366,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1540,7 +1540,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1714,7 +1714,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1888,7 +1888,7 @@ consecutive successes. The default value is 2.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionhealthchecklogconfig">Dict[Region<wbr>Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}Configure logging on this health check.
+    <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2005,6 +2005,9 @@ consecutive failures. The default value is 2.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttp2HealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttp2HealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttp2HealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttp2HealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2369,6 +2372,9 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpHealthCheck.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2731,6 +2737,9 @@ can only be ASCII.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpsHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpsHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionHealthCheckHttpsHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionHealthCheckHttpsHealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3095,6 +3104,9 @@ can only be ASCII.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionHealthCheckLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionHealthCheckLogConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3177,6 +3189,9 @@ which means no health check logging will be done.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckSslHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckSslHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionHealthCheckSslHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionHealthCheckSslHealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3504,6 +3519,9 @@ can only be ASCII.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckTcpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckTcpHealthCheckOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionHealthCheckTcpHealthCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

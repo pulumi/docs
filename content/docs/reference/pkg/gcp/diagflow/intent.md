@@ -1688,6 +1688,9 @@ filling prompt is forwarded to the webhook.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/diagflow?tab=doc#IntentFollowupIntentInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Outputs.IntentFollowupIntentInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

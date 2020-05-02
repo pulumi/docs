@@ -229,17 +229,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,7 +278,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -325,9 +334,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,17 +410,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -439,7 +459,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,9 +515,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -569,17 +591,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,7 +640,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -665,9 +696,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -739,17 +772,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -779,7 +821,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -835,9 +877,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1166,17 +1210,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1215,7 +1268,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1271,9 +1324,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,17 +1409,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1403,7 +1467,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1459,9 +1523,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1542,17 +1608,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,7 +1666,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1647,9 +1722,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1730,17 +1807,26 @@ you create the resource.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of. Addresses are restricted based on the forwarding
-rule's load balancing scheme (EXTERNAL or INTERNAL) and scope (global or regional). When the load balancing scheme is
-EXTERNAL, for global forwarding rules, the address must be a global IP, and for regional forwarding rules, the address
-must live in the same region as the forwarding rule. If this field is empty, an ephemeral IPv4 address from the same
-scope (global or regional) will be assigned. A regional forwarding rule supports IPv4 only. A global forwarding rule
-supports either IPv4 or IPv6. When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address
-belonging to the network/subnet configured for the forwarding rule. By default, if this field is empty, an ephemeral
-internal IP address will be automatically allocated from the IP range of the subnet or network configured for this
-forwarding rule. An address must be specified by a literal IP address. ~> **NOTE**: While the API allows you to specify
-various resource paths for an address resource instead, Terraform requires this to specifically be an IP address to
-avoid needing to fetching the IP address from resource paths on refresh or unnecessary diffs.
+    <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
+Addresses are restricted based on the forwarding rule's load balancing
+scheme (EXTERNAL or INTERNAL) and scope (global or regional).
+When the load balancing scheme is EXTERNAL, for global forwarding
+rules, the address must be a global IP, and for regional forwarding
+rules, the address must live in the same region as the forwarding
+rule. If this field is empty, an ephemeral IPv4 address from the same
+scope (global or regional) will be assigned. A regional forwarding
+rule supports IPv4 only. A global forwarding rule supports either IPv4
+or IPv6.
+When the load balancing scheme is INTERNAL, this can only be an RFC
+1918 IP address belonging to the network/subnet configured for the
+forwarding rule. By default, if this field is empty, an ephemeral
+internal IP address will be automatically allocated from the IP range
+of the subnet or network configured for this forwarding rule.
+An address must be specified by a literal IP address. > **NOTE**: While
+the API allows you to specify various resource paths for an address resource
+instead, this provider requires this to specifically be an IP address to
+avoid needing to fetching the IP address from resource paths on refresh
+or unnecessary diffs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1779,7 +1865,7 @@ Valid options are IPV4 or IPV6.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
-    <dd>{{% md %}}Labels to apply to this forwarding rule. A list of key->value pairs.
+    <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1835,9 +1921,11 @@ loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}This field is not used for external load balancing. For INTERNAL_SELF_MANAGED load balancing, this field identifies the
-network that the load balanced IP should belong to for this global forwarding rule. If this field is not specified, the
-default network will be used.
+    <dd>{{% md %}}This field is not used for external load balancing.
+For INTERNAL_SELF_MANAGED load balancing, this field
+identifies the network that the load balanced IP should belong to
+for this global forwarding rule. If this field is not specified,
+the default network will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1917,6 +2005,9 @@ are valid.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GlobalForwardingRuleMetadataFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GlobalForwardingRuleMetadataFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2060,6 +2151,9 @@ provided metadata.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterFilterLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterFilterLabelOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GlobalForwardingRuleMetadataFilterFilterLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GlobalForwardingRuleMetadataFilterFilterLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

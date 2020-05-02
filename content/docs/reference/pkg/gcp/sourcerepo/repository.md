@@ -865,6 +865,9 @@ Keyed by the topic names.  Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sourcerepo?tab=doc#RepositoryPubsubConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sourcerepo?tab=doc#RepositoryPubsubConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SourceRepo.Inputs.RepositoryPubsubConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SourceRepo.Outputs.RepositoryPubsubConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
