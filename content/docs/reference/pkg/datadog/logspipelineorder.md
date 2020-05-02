@@ -1,7 +1,8 @@
 
 ---
 title: "LogsPipelineOrder"
-block_external_search_index: true
+title_tag: "Resource LogsPipelineOrder | Package Datadog"
+meta_desc: "Explore the LogsPipelineOrder resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=python#logs-pipelines) resource, which is used to manage Datadog log pipelines order."
 ---
 
 
@@ -17,7 +18,7 @@ Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=pyth
 
 
 
-## Create a LogsPipelineOrder Resource
+## Create a LogsPipelineOrder Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -26,7 +27,7 @@ Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=pyth
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogsPipelineOrder</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>pipelines=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LogsPipelineOrder</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>pipelines=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -107,7 +108,7 @@ Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=pyth
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -184,7 +185,13 @@ Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/?lang=pyth
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## LogsPipelineOrder Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The LogsPipelineOrder resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -297,11 +304,79 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LogsPipelineOrder resource produces the following output properties:
 
 
 
 
-## Look up an Existing LogsPipelineOrder Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing LogsPipelineOrder Resource {#look-up}
 
 Get an existing LogsPipelineOrder resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -535,14 +610,13 @@ No related field is available in  [Logs Pipeline API](https://docs.datadoghq.com
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-datadog">https://github.com/pulumi/pulumi-datadog</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
-	
 </dl>
 
