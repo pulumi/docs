@@ -32,7 +32,7 @@ the official website mark  more regions. or you can call [DescribeRegions](https
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstance = new alicloud.hbase.Instance("default", {
+const defaultHbaseInstance = new alicloud.HbaseInstance("default", {
     coldStorageSize: 0,
     coreDiskSize: 400,
     coreDiskType: "cloud_efficiency",
@@ -40,6 +40,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     coreInstanceType: "hbase.sn1.large",
     engineVersion: "2.0",
     masterInstanceType: "hbase.sn1.large",
+    name: "tf_testAccHBase_classic",
     payType: "PostPaid",
     zoneId: "cn-shenzhen-b",
 });
