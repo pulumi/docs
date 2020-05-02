@@ -1530,6 +1530,9 @@ Changing this creates a new volume.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeV2AttachmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.BlockStorage.Outputs.VolumeV2Attachment.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
