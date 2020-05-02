@@ -841,6 +841,9 @@ provided).
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#VolumeLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#VolumeLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.VolumeLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.VolumeLabel.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
