@@ -392,6 +392,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSpacesBucketsBucket">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetSpacesBucketsBucket.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -563,6 +566,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSpacesBucketsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSpacesBucketsFilter">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.GetSpacesBucketsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetSpacesBucketsFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -682,6 +688,9 @@ where the `key` field takes on one or more of the values provided here.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSpacesBucketsSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSpacesBucketsSort">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.GetSpacesBucketsSortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetSpacesBucketsSort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -790,4 +799,16 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

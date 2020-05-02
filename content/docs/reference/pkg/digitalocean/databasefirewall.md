@@ -629,6 +629,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseFirewallRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseFirewallRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.DatabaseFirewallRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.DatabaseFirewallRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

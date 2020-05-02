@@ -1307,6 +1307,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesNodePoolNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesNodePoolNode.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

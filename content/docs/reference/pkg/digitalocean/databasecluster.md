@@ -1957,6 +1957,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseClusterMaintenanceWindowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#DatabaseClusterMaintenanceWindowOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.DatabaseClusterMaintenanceWindowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.DatabaseClusterMaintenanceWindow.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

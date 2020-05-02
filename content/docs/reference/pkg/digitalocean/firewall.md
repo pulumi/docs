@@ -1108,6 +1108,9 @@ This can be "waiting", "succeeded", or "failed".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallInboundRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallInboundRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.FirewallInboundRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.FirewallInboundRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1406,6 +1409,9 @@ will be accepted.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallOutboundRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallOutboundRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.FirewallOutboundRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.FirewallOutboundRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1709,6 +1715,9 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#FirewallPendingChangeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.FirewallPendingChange.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1643,6 +1643,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterKubeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterKubeConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1909,6 +1912,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterNodePool.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2316,6 +2322,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#KubernetesClusterNodePoolNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.KubernetesClusterNodePoolNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.KubernetesClusterNodePoolNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
