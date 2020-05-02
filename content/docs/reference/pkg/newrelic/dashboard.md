@@ -1022,6 +1022,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1128,6 +1131,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1880,6 +1886,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetCompareWithArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidgetCompareWith.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1987,6 +1996,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithPresentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithPresentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetCompareWithPresentationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidgetCompareWithPresentation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2093,6 +2105,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetMetricOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidgetMetric.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -535,6 +535,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/insights?tab=doc#EventEventArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/insights?tab=doc#EventEventOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Insights.Inputs.EventEventArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Insights.Outputs.EventEvent.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -673,6 +676,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/insights?tab=doc#EventEventAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/insights?tab=doc#EventEventAttributeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Insights.Inputs.EventEventAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Insights.Outputs.EventEventAttribute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
