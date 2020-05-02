@@ -1231,6 +1231,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.RouteDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.RouteDestination.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1337,6 +1340,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#RouteSourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.RouteSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.RouteSource.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
