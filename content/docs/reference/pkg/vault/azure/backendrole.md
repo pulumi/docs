@@ -991,6 +991,9 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#BackendRoleAzureRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/azure?tab=doc#BackendRoleAzureRoleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.Inputs.BackendRoleAzureRoleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.Outputs.BackendRoleAzureRole.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
