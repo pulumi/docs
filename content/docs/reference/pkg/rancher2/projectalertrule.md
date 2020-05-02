@@ -1399,6 +1399,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectAlertRuleMetricRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectAlertRuleMetricRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectAlertRuleMetricRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectAlertRuleMetricRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1622,6 +1625,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectAlertRulePodRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectAlertRulePodRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectAlertRulePodRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectAlertRulePodRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1808,6 +1814,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectAlertRuleWorkloadRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ProjectAlertRuleWorkloadRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ProjectAlertRuleWorkloadRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ProjectAlertRuleWorkloadRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

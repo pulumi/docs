@@ -1039,6 +1039,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#EtcdBackupBackupConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#EtcdBackupBackupConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.EtcdBackupBackupConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.EtcdBackupBackupConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1257,6 +1260,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#EtcdBackupBackupConfigS3BackupConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#EtcdBackupBackupConfigS3BackupConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.EtcdBackupBackupConfigS3BackupConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.EtcdBackupBackupConfigS3BackupConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

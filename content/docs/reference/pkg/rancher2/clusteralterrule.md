@@ -1471,6 +1471,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleEventRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleEventRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleEventRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleEventRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1585,6 +1588,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleMetricRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleMetricRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleMetricRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleMetricRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1809,6 +1815,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleNodeRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleNodeRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleNodeRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleNodeRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2031,6 +2040,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleSystemServiceRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterAlterRuleSystemServiceRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterAlterRuleSystemServiceRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterAlterRuleSystemServiceRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
