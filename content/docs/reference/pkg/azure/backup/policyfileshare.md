@@ -931,6 +931,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyFileShareBackupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyFileShareBackupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyFileShareBackupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyFileShareBackup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1041,6 +1044,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyFileShareRetentionDailyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyFileShareRetentionDailyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyFileShareRetentionDailyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyFileShareRetentionDaily.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

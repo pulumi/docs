@@ -1145,6 +1145,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfile">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAddonProfile.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1332,6 +1335,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileAzurePolicy">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAddonProfileAzurePolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1410,6 +1416,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileHttpApplicationRouting">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAddonProfileHttpApplicationRouting.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1526,6 +1535,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileKubeDashboard">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAddonProfileKubeDashboard.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1604,6 +1616,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileOmsAgent">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAddonProfileOmsAgent.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1719,6 +1734,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAgentPoolProfile">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterAgentPoolProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2331,6 +2349,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeAdminConfig">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterKubeAdminConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2589,6 +2610,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterKubeConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2849,6 +2873,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterLinuxProfile">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterLinuxProfile.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2964,6 +2991,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterLinuxProfileSshKey">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterLinuxProfileSshKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3042,6 +3072,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterNetworkProfile">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterNetworkProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3334,6 +3367,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterRoleBasedAccessControl">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterRoleBasedAccessControl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3448,6 +3484,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3600,6 +3639,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterServicePrincipal">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterServicePrincipal.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3679,6 +3721,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterWindowsProfile">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.Outputs.GetKubernetesClusterWindowsProfile.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3751,4 +3796,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+</dl>
 

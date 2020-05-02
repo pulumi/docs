@@ -1734,6 +1734,9 @@ routing method. Supports values between 1 and 1000.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#EndpointCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#EndpointCustomHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Inputs.EndpointCustomHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Outputs.EndpointCustomHeader.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1848,6 +1851,9 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#EndpointSubnetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#EndpointSubnetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Inputs.EndpointSubnetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Outputs.EndpointSubnet.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

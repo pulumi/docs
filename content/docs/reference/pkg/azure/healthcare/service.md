@@ -1149,6 +1149,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceAuthenticationConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Healthcare.Inputs.ServiceAuthenticationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Healthcare.Outputs.ServiceAuthenticationConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1303,6 +1306,9 @@ Authority must be registered to Azure AD and in the following format: https://{A
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceCorsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceCorsConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Healthcare.Inputs.ServiceCorsConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Healthcare.Outputs.ServiceCorsConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

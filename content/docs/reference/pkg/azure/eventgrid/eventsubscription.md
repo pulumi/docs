@@ -1403,6 +1403,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionEventhubEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionEventhubEndpointOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionEventhubEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionEventhubEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1482,6 +1485,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionHybridConnectionEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionHybridConnectionEndpointOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionHybridConnectionEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionHybridConnectionEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1560,6 +1566,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionRetryPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionRetryPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionRetryPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1676,6 +1685,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionStorageBlobDeadLetterDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionStorageBlobDeadLetterDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionStorageBlobDeadLetterDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionStorageBlobDeadLetterDestination.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1791,6 +1803,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionStorageQueueEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionStorageQueueEndpointOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionStorageQueueEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionStorageQueueEndpoint.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1905,6 +1920,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionSubjectFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionSubjectFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionSubjectFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionSubjectFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2056,6 +2074,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionWebhookEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#EventSubscriptionWebhookEndpointOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.EventSubscriptionWebhookEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.EventSubscriptionWebhookEndpoint.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

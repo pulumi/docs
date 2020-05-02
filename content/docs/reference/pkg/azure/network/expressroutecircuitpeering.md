@@ -1336,6 +1336,9 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

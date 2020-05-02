@@ -1043,6 +1043,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/databricks?tab=doc#WorkspaceCustomParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/databricks?tab=doc#WorkspaceCustomParametersOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataBricks.Inputs.WorkspaceCustomParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataBricks.Outputs.WorkspaceCustomParameters.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

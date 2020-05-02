@@ -1835,6 +1835,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2670,6 +2673,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleCacheExpirationActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleCacheExpirationActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleCacheExpirationActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleCacheExpirationAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2785,6 +2791,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleCacheKeyQueryStringActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleCacheKeyQueryStringActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleCacheKeyQueryStringActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleCacheKeyQueryStringAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2899,6 +2908,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleCookiesConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleCookiesConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleCookiesConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleCookiesCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3123,6 +3135,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleDeviceConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleDeviceConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleDeviceConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleDeviceCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3273,6 +3288,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleHttpVersionConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleHttpVersionConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleHttpVersionConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleHttpVersionCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3425,6 +3443,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleModifyRequestHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleModifyRequestHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleModifyRequestHeaderActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleModifyRequestHeaderAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3576,6 +3597,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleModifyResponseHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleModifyResponseHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleModifyResponseHeaderActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleModifyResponseHeaderAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3726,6 +3750,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRulePostArgConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRulePostArgConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRulePostArgConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRulePostArgCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3950,6 +3977,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleQueryStringConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleQueryStringConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleQueryStringConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleQueryStringCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4137,6 +4167,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRemoteAddressConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRemoteAddressConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleRemoteAddressConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleRemoteAddressCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4287,6 +4320,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestBodyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestBodyConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleRequestBodyConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleRequestBodyCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4474,6 +4510,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestHeaderConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestHeaderConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleRequestHeaderConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleRequestHeaderCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4698,6 +4737,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestMethodConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestMethodConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleRequestMethodConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleRequestMethodCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4849,6 +4891,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestSchemeConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestSchemeConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleRequestSchemeConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleRequestSchemeCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4999,6 +5044,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestUriConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleRequestUriConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleRequestUriConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleRequestUriCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5187,6 +5235,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlFileExtensionConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlFileExtensionConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleUrlFileExtensionConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleUrlFileExtensionCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5373,6 +5424,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlFileNameConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlFileNameConditionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleUrlFileNameConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleUrlFileNameCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5561,6 +5615,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlPathConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlPathConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleUrlPathConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleUrlPathCondition.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -5747,6 +5804,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlRedirectActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlRedirectActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleUrlRedirectActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleUrlRedirectAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6007,6 +6067,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlRewriteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointDeliveryRuleUrlRewriteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointDeliveryRuleUrlRewriteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointDeliveryRuleUrlRewriteAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6158,6 +6221,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGeoFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGeoFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGeoFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGeoFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6308,6 +6374,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6568,6 +6637,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleCacheExpirationActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleCacheExpirationActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleCacheExpirationActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRuleCacheExpirationAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6683,6 +6755,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleCacheKeyQueryStringActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleCacheKeyQueryStringActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRuleCacheKeyQueryStringAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -6797,6 +6872,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleModifyRequestHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleModifyRequestHeaderActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleModifyRequestHeaderActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRuleModifyRequestHeaderAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6949,6 +7027,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleModifyResponseHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleModifyResponseHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleModifyResponseHeaderActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRuleModifyResponseHeaderAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -7099,6 +7180,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleUrlRedirectActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleUrlRedirectActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleUrlRedirectActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRuleUrlRedirectAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7359,6 +7443,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleUrlRewriteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointGlobalDeliveryRuleUrlRewriteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointGlobalDeliveryRuleUrlRewriteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointGlobalDeliveryRuleUrlRewriteAction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -7509,6 +7596,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cdn?tab=doc#EndpointOriginOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Inputs.EndpointOriginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Cdn.Outputs.EndpointOrigin.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

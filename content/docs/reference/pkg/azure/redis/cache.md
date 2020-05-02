@@ -2093,6 +2093,9 @@ create the Redis instance.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#CachePatchScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#CachePatchScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.Inputs.CachePatchScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.Outputs.CachePatchSchedule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2199,6 +2202,9 @@ create the Redis instance.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#CacheRedisConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#CacheRedisConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.Inputs.CacheRedisConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.Outputs.CacheRedisConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
