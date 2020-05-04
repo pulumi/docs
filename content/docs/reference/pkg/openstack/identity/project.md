@@ -42,7 +42,7 @@ const project1 = new openstack.identity.Project("project_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>is_domain=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>is_domain=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -278,7 +278,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -352,7 +362,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -426,7 +446,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -500,7 +530,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -593,7 +633,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>is_domain=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>is_domain=None<span class="p">, </span>name=None<span class="p">, </span>parent_id=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -771,7 +811,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -845,7 +895,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -919,7 +979,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>
@@ -993,7 +1063,17 @@ are `true` and `false`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
-creates a new User.
+creates a new project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for the project. Changing this updates the existing
+project.
 {{% /md %}}</dd>
 
 </dl>

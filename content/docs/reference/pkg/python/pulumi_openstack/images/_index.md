@@ -112,7 +112,7 @@ the image or image</p>
 
 <dl class="py class">
 <dt id="pulumi_openstack.images.Image">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_cache_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_source_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_file_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram_mb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_cache_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_source_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_file_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram_mb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_download</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Image resource within OpenStack Glance.</p>
 <p>This resource supports the ability to add properties to a resource during
 creation as well as add, update, and delete properties during an update of this
@@ -132,13 +132,13 @@ Image Service set it.</p>
 “ami”, “ari”, “aki”, “bare”, “ovf”.</p></li>
 <li><p><strong>disk_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The disk format. Must be one of
 “ami”, “ari”, “aki”, “vhd”, “vmdk”, “raw”, “qcow2”, “vdi”, “iso”.</p></li>
-<li><p><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image that will
-be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
-Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
-does not yet provide a way to do so.
+<li><p><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image. If <code class="docutils literal notranslate"><span class="pre">web_download</span></code>
+is not used, then the image will be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before
+being uploaded to Glance.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</p></li>
 <li><p><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</p></li>
+that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code> and
+<code class="docutils literal notranslate"><span class="pre">web_download</span></code>.</p></li>
 <li><p><strong>min_disk_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of disk space (in GB) required to boot image.
 Defaults to 0.</p></li>
 <li><p><strong>min_ram_mb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of ram (in MB) required to boot image.
@@ -156,10 +156,14 @@ is used. Changing this creates a new Image.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.</p></li>
 <li><p><strong>verify_checksum</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.</p></li>
+once the image is finished uploading. Conflicts with <code class="docutils literal notranslate"><span class="pre">web_download</span></code>.
+Defaults to true when not using <code class="docutils literal notranslate"><span class="pre">web_download</span></code>.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The visibility of the image. Must be one of
 “public”, “private”, “community”, or “shared”. The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.</p></li>
+<li><p><strong>web_download</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the “web-download” import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>. Defaults to false.</p></li>
 </ul>
 </dd>
 </dl>
@@ -200,10 +204,9 @@ or the path to retrieve it.</p>
 <dl class="py attribute">
 <dt id="pulumi_openstack.images.Image.image_source_url">
 <code class="sig-name descname">image_source_url</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.image_source_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the url of the raw image that will
-be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
-Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
-does not yet provide a way to do so.
+<dd><p>This is the url of the raw image. If <code class="docutils literal notranslate"><span class="pre">web_download</span></code>
+is not used, then the image will be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before
+being uploaded to Glance.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</p>
 </dd></dl>
 
@@ -211,7 +214,8 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">loca
 <dt id="pulumi_openstack.images.Image.local_file_path">
 <code class="sig-name descname">local_file_path</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.local_file_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</p>
+that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code> and
+<code class="docutils literal notranslate"><span class="pre">web_download</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -315,7 +319,8 @@ At this time, it is not possible to delete all tags of an image.</p>
 <dt id="pulumi_openstack.images.Image.verify_checksum">
 <code class="sig-name descname">verify_checksum</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.verify_checksum" title="Permalink to this definition">¶</a></dt>
 <dd><p>If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.</p>
+once the image is finished uploading. Conflicts with <code class="docutils literal notranslate"><span class="pre">web_download</span></code>.
+Defaults to true when not using <code class="docutils literal notranslate"><span class="pre">web_download</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -326,9 +331,17 @@ once the image is finished uploading. Defaults to true.</p>
 visibility depends upon the configuration of the OpenStack cloud.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt id="pulumi_openstack.images.Image.web_download">
+<code class="sig-name descname">web_download</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.web_download" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the “web-download” import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>. Defaults to false.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_openstack.images.Image.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_cache_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_source_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_file_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram_mb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disk_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_cache_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_source_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local_file_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_disk_gb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min_ram_mb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protected</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verify_checksum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">web_download</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Image resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -346,13 +359,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>file</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.</p></li>
-<li><p><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image that will
-be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
-Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
-does not yet provide a way to do so.
+<li><p><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image. If <code class="docutils literal notranslate"><span class="pre">web_download</span></code>
+is not used, then the image will be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before
+being uploaded to Glance.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</p></li>
 <li><p><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</p></li>
+that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code> and
+<code class="docutils literal notranslate"><span class="pre">web_download</span></code>.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See <a class="reference external" href="https://docs.openstack.org/glance/latest/user/metadefs-concepts.html">https://docs.openstack.org/glance/latest/user/metadefs-concepts.html</a>.</p></li>
@@ -381,10 +394,14 @@ At this time, it is not possible to delete all tags of an image.</p></li>
 <li><p><strong>update_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">updated_at</span></code> instead)</p></li>
 <li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image was last updated.</p></li>
 <li><p><strong>verify_checksum</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If false, the checksum will not be verified
-once the image is finished uploading. Defaults to true.</p></li>
+once the image is finished uploading. Conflicts with <code class="docutils literal notranslate"><span class="pre">web_download</span></code>.
+Defaults to true when not using <code class="docutils literal notranslate"><span class="pre">web_download</span></code>.</p></li>
 <li><p><strong>visibility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The visibility of the image. Must be one of
 “public”, “private”, “community”, or “shared”. The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.</p></li>
+<li><p><strong>web_download</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the “web-download” import method will
+be used to let Openstack download the image directly from the remote source.
+Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>. Defaults to false.</p></li>
 </ul>
 </dd>
 </dl>

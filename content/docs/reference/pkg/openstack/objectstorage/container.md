@@ -14,7 +14,9 @@ Manages a V1 container resource within OpenStack.
 
 {{% examples %}}
 ## Example Usage
+
 {{% example %}}
+### Basic Container
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -30,6 +32,52 @@ const container1 = new openstack.objectstorage.Container("container_1", {
         location: "tf-test-container-versions",
         type: "versions",
     },
+});
+```
+
+{{% /example %}}
+{{% example %}}
+### Global Read Access
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const container1 = new openstack.objectstorage.Container("container_1", {
+    containerRead: ".r:*",
+    region: "RegionOne",
+});
+```
+
+{{% /example %}}
+{{% example %}}
+### Global Read and List Access
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const container1 = new openstack.objectstorage.Container("container_1", {
+    containerRead: ".r:*,.rlistings",
+    region: "RegionOne",
+});
+```
+
+{{% /example %}}
+{{% example %}}
+### Write-Only Access for a User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const current = pulumi.output(openstack.identity.getAuthScope({
+    name: "current",
+}, { async: true }));
+const container1 = new openstack.objectstorage.Container("container_1", {
+    containerRead: `.r:-${var_username}`,
+    containerWrite: pulumi.interpolate`${current.projectId}:${var_username}`,
+    region: "RegionOne",
 });
 ```
 
@@ -1296,6 +1344,9 @@ creates a new container.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage?tab=doc#ContainerVersioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/objectstorage?tab=doc#ContainerVersioningOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.ObjectStorage.Inputs.ContainerVersioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.ObjectStorage.Outputs.ContainerVersioning.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1318,7 +1369,7 @@ creates a new container.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/overview_object_versioning.html).
+    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1343,7 +1394,7 @@ creates a new container.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/overview_object_versioning.html).
+    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1368,7 +1419,7 @@ creates a new container.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/overview_object_versioning.html).
+    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1393,7 +1444,7 @@ creates a new container.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/overview_object_versioning.html).
+    <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
 {{% /md %}}</dd>
 
 </dl>

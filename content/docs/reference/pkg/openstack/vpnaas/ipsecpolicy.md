@@ -1390,6 +1390,9 @@ Changing this updates the existing policy. Default is ESP.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#IpSecPolicyLifetimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas?tab=doc#IpSecPolicyLifetimeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.Inputs.IpSecPolicyLifetimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.Outputs.IpSecPolicyLifetime.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

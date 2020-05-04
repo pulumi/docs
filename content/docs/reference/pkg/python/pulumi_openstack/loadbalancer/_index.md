@@ -857,24 +857,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the member to receive traffic from
 the load balancer. Changing this creates a new member.</p></li>
 <li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the member.
-A valid value is true (UP) or false (DOWN).</p></li>
+A valid value is true (UP) or false (DOWN). Defaults to true.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the member.</p></li>
-<li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this member will be
-assigned to.</p></li>
+<li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this member will be assigned
+to. Changing this creates a new member.</p></li>
 <li><p><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
 Changing this creates a new member.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
-member.</p></li>
-<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet in which to access the member</p></li>
+A Networking client is needed to create a member. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used. Changing this creates a new member.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet in which to access the member. Changing
+this creates a new member.</p></li>
 <li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
 the member.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new member.</p></li>
 <li><p><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.</p></li>
+as a member with a weight of 2. Defaults to 1.</p></li>
 </ul>
 </dd>
 </dl>
@@ -889,7 +889,7 @@ the load balancer. Changing this creates a new member.</p>
 <dt id="pulumi_openstack.loadbalancer.Member.admin_state_up">
 <code class="sig-name descname">admin_state_up</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.admin_state_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>The administrative state of the member.
-A valid value is true (UP) or false (DOWN).</p>
+A valid value is true (UP) or false (DOWN). Defaults to true.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -901,8 +901,8 @@ A valid value is true (UP) or false (DOWN).</p>
 <dl class="py attribute">
 <dt id="pulumi_openstack.loadbalancer.Member.pool_id">
 <code class="sig-name descname">pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.pool_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the pool that this member will be
-assigned to.</p>
+<dd><p>The id of the pool that this member will be assigned
+to. Changing this creates a new member.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -916,15 +916,15 @@ Changing this creates a new member.</p>
 <dt id="pulumi_openstack.loadbalancer.Member.region">
 <code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
-member.</p>
+A Networking client is needed to create a member. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used. Changing this creates a new member.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_openstack.loadbalancer.Member.subnet_id">
 <code class="sig-name descname">subnet_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.subnet_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The subnet in which to access the member</p>
+<dd><p>The subnet in which to access the member. Changing
+this creates a new member.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -941,7 +941,7 @@ other than their own. Changing this creates a new member.</p>
 <dd><p>A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.</p>
+as a member with a weight of 2. Defaults to 1.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -958,24 +958,24 @@ properties used to qualify the lookup.</p>
 <li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the member to receive traffic from
 the load balancer. Changing this creates a new member.</p></li>
 <li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the member.
-A valid value is true (UP) or false (DOWN).</p></li>
+A valid value is true (UP) or false (DOWN). Defaults to true.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the member.</p></li>
-<li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this member will be
-assigned to.</p></li>
+<li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this member will be assigned
+to. Changing this creates a new member.</p></li>
 <li><p><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
 Changing this creates a new member.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
-member.</p></li>
-<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet in which to access the member</p></li>
+A Networking client is needed to create a member. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used. Changing this creates a new member.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet in which to access the member. Changing
+this creates a new member.</p></li>
 <li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
 the member.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new member.</p></li>
 <li><p><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
-as a member with a weight of 2.</p></li>
+as a member with a weight of 2. Defaults to 1.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1143,6 +1143,160 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_openstack.loadbalancer.MemberV1.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_openstack.loadbalancer.Members">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Members</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 members resource within OpenStack (batch members update).</p>
+<blockquote>
+<div><p><strong>Note:</strong> This resource works only within Octavia API. For
+legacy Neutron LBaaS v2 extension please use
+loadbalancer.Member resource.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of dictionaries containing member parameters. The
+structure is described below.</p></li>
+<li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that members will be assigned to.
+Changing this creates a new members resource.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create pool members. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+members resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>members</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address of the members to receive traffic from
+the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The administrative state of the member.
+A valid value is true (UP) or false (DOWN). Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique ID for the members.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on which to listen for client traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet in which to access the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A positive integer value that indicates the relative
+portion of traffic that this members should receive from the pool. For
+example, a member with a weight of 10 receives five times as much traffic
+as a member with a weight of 2. Defaults to 1.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_openstack.loadbalancer.Members.members">
+<code class="sig-name descname">members</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members.members" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of dictionaries containing member parameters. The
+structure is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address of the members to receive traffic from
+the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - The administrative state of the member.
+A valid value is true (UP) or false (DOWN). Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique ID for the members.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Human-readable name for the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port on which to listen for client traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnet in which to access the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A positive integer value that indicates the relative
+portion of traffic that this members should receive from the pool. For
+example, a member with a weight of 10 receives five times as much traffic
+as a member with a weight of 2. Defaults to 1.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.loadbalancer.Members.pool_id">
+<code class="sig-name descname">pool_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members.pool_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the pool that members will be assigned to.
+Changing this creates a new members resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.loadbalancer.Members.region">
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create pool members. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+members resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_openstack.loadbalancer.Members.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Members resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of dictionaries containing member parameters. The
+structure is described below.</p></li>
+<li><p><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that members will be assigned to.
+Changing this creates a new members resource.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create pool members. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+members resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>members</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address of the members to receive traffic from
+the load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - The administrative state of the member.
+A valid value is true (UP) or false (DOWN). Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique ID for the members.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on which to listen for client traffic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet in which to access the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A positive integer value that indicates the relative
+portion of traffic that this members should receive from the pool. For
+example, a member with a weight of 10 receives five times as much traffic
+as a member with a weight of 2. Defaults to 1.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_openstack.loadbalancer.Members.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_openstack.loadbalancer.Members.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Members.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1607,7 +1761,8 @@ A valid value is true (UP) or false (DOWN).</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the pool.</p></li>
 <li><p><strong>lb_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm to
 distribute traffic to the pool’s members. Must be one of
-ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.</p></li>
+ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
+in Octavia).</p></li>
 <li><p><strong>listener_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.</p></li>
@@ -1655,7 +1810,8 @@ A valid value is true (UP) or false (DOWN).</p>
 <code class="sig-name descname">lb_method</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool.lb_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The load balancing algorithm to
 distribute traffic to the pool’s members. Must be one of
-ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.</p>
+ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
+in Octavia).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1734,7 +1890,8 @@ A valid value is true (UP) or false (DOWN).</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the pool.</p></li>
 <li><p><strong>lb_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm to
 distribute traffic to the pool’s members. Must be one of
-ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.</p></li>
+ROUND_ROBIN, LEAST_CONNECTIONS, SOURCE_IP, or SOURCE_IP_PORT (supported only
+in Octavia).</p></li>
 <li><p><strong>listener_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Listener on which the members of the pool
 will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.</p></li>

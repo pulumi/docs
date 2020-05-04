@@ -316,7 +316,7 @@ the cluster.
             title="">
         <span>Master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ the cluster.
             title="">
         <span>Node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
 {{% /md %}}</dd>
@@ -548,7 +548,7 @@ the cluster.
             title="">
         <span>Master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
 {{% /md %}}</dd>
@@ -584,7 +584,7 @@ the cluster.
             title="">
         <span>Node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
 {{% /md %}}</dd>
@@ -780,7 +780,7 @@ the cluster.
             title="">
         <span>master<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ the cluster.
             title="">
         <span>node<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ the cluster.
             title="">
         <span>master_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the master node of the cluster.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ the cluster.
             title="">
         <span>node_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses of the node of the cluster.
 {{% /md %}}</dd>
@@ -1115,4 +1115,16 @@ the cluster.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+</dl>
 

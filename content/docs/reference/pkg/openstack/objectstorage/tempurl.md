@@ -26,10 +26,19 @@ a new ID and URL.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
+const container1 = new openstack.objectstorage.Container("container_1", {
+    metadata: {
+        "Temp-URL-Key": "testkey",
+    },
+});
+const object1 = new openstack.objectstorage.ContainerObject("object_1", {
+    containerName: container1.name,
+    content: "Hello, world!",
+});
 const objTempurl = new openstack.objectstorage.TempUrl("obj_tempurl", {
-    container: "test",
+    container: container1.name,
     method: "post",
-    object: "container",
+    object: object1.name,
     ttl: 20,
 });
 ```

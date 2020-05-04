@@ -49,7 +49,7 @@ creates a new container.</p></li>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Container in which versions will be stored.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/overview_object_versioning.html">Openstack documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/api/object_versioning.html">Openstack documentation</a>.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_openstack.objectstorage.Container.container_read">
@@ -122,7 +122,7 @@ creates a new container.</p>
 <dd><p>Enable object versioning. The structure is described below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Container in which versions will be stored.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/overview_object_versioning.html">Openstack documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/api/object_versioning.html">Openstack documentation</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -164,7 +164,7 @@ creates a new container.</p></li>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Container in which versions will be stored.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/overview_object_versioning.html">Openstack documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Versioning type which can be <code class="docutils literal notranslate"><span class="pre">versions</span></code> or <code class="docutils literal notranslate"><span class="pre">history</span></code> according to <a class="reference external" href="https://docs.openstack.org/swift/latest/api/object_versioning.html">Openstack documentation</a>.</p></li>
 </ul>
 </dd></dl>
 

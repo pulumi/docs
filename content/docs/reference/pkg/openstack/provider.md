@@ -204,9 +204,8 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,7 +286,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -491,9 +491,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,7 +573,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,9 +778,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,7 +860,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1065,9 +1065,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
-useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
-initial token TTL.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
+Defaults to `true`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1148,7 +1147,8 @@ initial token TTL.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
+    <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
+to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
