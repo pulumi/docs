@@ -3,6 +3,7 @@ title: Audit Logs
 meta_desc: "This page is a guide on how to audit your organization's infrastructure as code activity"
 menu:
   userguides:
+    parent: self_hosted_console_service
     identifier: auditing
     weight: 2
 ---
@@ -31,7 +32,7 @@ by selecting your organization from the organization drop down. Then click on th
 On the left nav-bar you should see a tab called Audit Logs. Clicking here will allow you to view
 the most recent audit logs for your organization.
 
-![auditlogs](./auditlogs.png)
+<img src="/images/docs/guides/self-hosted/auditlogs.png">
 
 This will show the most recent events in decending order. You can
 also filter logs by a particular user by clicking on the user's avatar. Doing so will
