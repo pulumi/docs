@@ -238,6 +238,154 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="py class">
+<dt id="pulumi_newrelic.plugins.Workload">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">Workload</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_guids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_search_queries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope_account_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.Workload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this resource to create, update, and delete a New Relic One workload.</p>
+<p>A New Relic Personal API key is required to provision this resource.  Set the <code class="docutils literal notranslate"><span class="pre">provider_api_key</span></code>
+attribute in the <code class="docutils literal notranslate"><span class="pre">provider</span></code> block or the <code class="docutils literal notranslate"><span class="pre">NEWRELIC_PERSONAL_API_KEY</span></code> environment
+variable with your Personal API key,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The New Relic account ID where you want to create the workload.</p></li>
+<li><p><strong>entity_guids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of entity GUIDs manually assigned to this workload.</p></li>
+<li><p><strong>entity_search_queries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of search queries that define a dynamic workload.  See Nested entity_search_query blocks below for details.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The workload’s name.</p></li>
+<li><p><strong>scope_account_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of account IDs that will be used to get entities from.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>entity_search_queries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The query.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.account_id">
+<code class="sig-name descname">account_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The New Relic account ID where you want to create the workload.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.composite_entity_search_query">
+<code class="sig-name descname">composite_entity_search_query</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.composite_entity_search_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>The composite query used to compose a dynamic workload.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.entity_guids">
+<code class="sig-name descname">entity_guids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.entity_guids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of entity GUIDs manually assigned to this workload.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.entity_search_queries">
+<code class="sig-name descname">entity_search_queries</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.entity_search_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of search queries that define a dynamic workload.  See Nested entity_search_query blocks below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The query.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.guid">
+<code class="sig-name descname">guid</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.guid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique entity identifier of the workload in New Relic.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.name">
+<code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The workload’s name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.permalink">
+<code class="sig-name descname">permalink</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.permalink" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL of the workload.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.scope_account_ids">
+<code class="sig-name descname">scope_account_ids</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.scope_account_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of account IDs that will be used to get entities from.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_newrelic.plugins.Workload.workload_id">
+<code class="sig-name descname">workload_id</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.workload_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique entity identifier of the workload.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.plugins.Workload.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">composite_entity_search_query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_guids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity_search_queries</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permalink</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scope_account_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">workload_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Workload resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The New Relic account ID where you want to create the workload.</p></li>
+<li><p><strong>composite_entity_search_query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The composite query used to compose a dynamic workload.</p></li>
+<li><p><strong>entity_guids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of entity GUIDs manually assigned to this workload.</p></li>
+<li><p><strong>entity_search_queries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of search queries that define a dynamic workload.  See Nested entity_search_query blocks below for details.</p></li>
+<li><p><strong>guid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique entity identifier of the workload in New Relic.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The workload’s name.</p></li>
+<li><p><strong>permalink</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the workload.</p></li>
+<li><p><strong>scope_account_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of account IDs that will be used to get entities from.</p></li>
+<li><p><strong>workload_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique entity identifier of the workload.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>entity_search_queries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The query.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.plugins.Workload.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.plugins.Workload.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.Workload.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt id="pulumi_newrelic.plugins.get_plugin">
 <code class="sig-prename descclassname">pulumi_newrelic.plugins.</code><code class="sig-name descname">get_plugin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.get_plugin" title="Permalink to this definition">¶</a></dt>
