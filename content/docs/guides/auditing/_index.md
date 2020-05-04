@@ -1,5 +1,5 @@
 ---
-title: Auditing
+title: Audit Logs
 meta_desc: "This page is a guide on how to audit your organization's infrastructure as code activity"
 menu:
   userguides:
