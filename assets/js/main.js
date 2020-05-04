@@ -113,15 +113,4 @@ function getQueryVariable(variable) {
 
             $(list).removeClass("invisible");
         });
-
-    // Defer loading of iframes that have 'data-src' attribute.
-    var iframes = document.getElementsByTagName('iframe');
-    for (var i = 0; i < iframes.length; i++) {
-        var iframe = iframes[i];
-        var dataSrc = iframe.getAttribute("data-src");
-
-        if (dataSrc) {
-            iframe.setAttribute("src", dataSrc);
-        }
-    }
 }(jQuery));
