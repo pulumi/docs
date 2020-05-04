@@ -39,9 +39,9 @@ const foo = new aws.elb.AppCookieStickinessPolicy("foo", {
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.AppCookieStickinessPolicy has been deprecated in favour of aws.AppCookieStickinessPolicy
+Deprecated: aws.elasticloadbalancing.AppCookieStickinessPolicy has been deprecated in favour of aws.elb.AppCookieStickinessPolicy
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.AppCookieStickinessPolicy has been deprecated in favour of aws.AppCookieStickinessPolicy{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.AppCookieStickinessPolicy has been deprecated in favour of aws.elb.AppCookieStickinessPolicy{{% /md %}}</p>
 
 
 ## Create a AppCookieStickinessPolicy Resource {#create}

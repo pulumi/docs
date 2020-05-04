@@ -245,7 +245,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The option to delete the workgroup and its contents even if the workgroup contains any named queries.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the workgroup.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the workgroup. Valid values are <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags for the workgroup.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags for the workgroup.</p></li>
 </ul>
 </dd>
 </dl>
@@ -321,7 +321,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.athena.Workgroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.Workgroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags for the workgroup.</p>
+<dd><p>Key-value map of resource tags for the workgroup.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -341,7 +341,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The option to delete the workgroup and its contents even if the workgroup contains any named queries.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the workgroup.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the workgroup. Valid values are <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags for the workgroup.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags for the workgroup.</p></li>
 </ul>
 </dd>
 </dl>

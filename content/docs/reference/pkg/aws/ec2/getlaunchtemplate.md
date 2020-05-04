@@ -105,7 +105,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -139,7 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -173,7 +173,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -207,7 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -469,7 +469,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}(Optional) A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -752,7 +752,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}(Optional) A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1035,7 +1035,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}(Optional) A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1318,7 +1318,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}(Optional) A mapping of tags to assign to the launch template.
+    <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1375,6 +1375,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateBlockDeviceMapping">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMapping.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1546,6 +1549,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateBlockDeviceMappingEb">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMappingEb.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1814,6 +1820,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateCreditSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1889,6 +1898,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateElasticGpuSpecification">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateElasticGpuSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1963,6 +1975,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateFilter">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchTemplateFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2079,6 +2094,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateHibernationOption">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateHibernationOption.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2153,6 +2171,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateIamInstanceProfile">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateIamInstanceProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2269,6 +2290,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateInstanceMarketOption">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOption.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2375,6 +2399,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateInstanceMarketOptionSpotOption">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOptionSpotOption.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2579,6 +2606,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateMetadataOption">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMetadataOption.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2730,6 +2760,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateMonitoring">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMonitoring.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2805,20 +2838,15 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateNetworkInterface.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2906,6 +2934,14 @@ Interfaces below for more details.
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2918,14 +2954,6 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -3013,20 +3041,20 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3117,20 +3145,20 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3221,6 +3249,14 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3235,6 +3271,9 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplatePlacement">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplatePlacement.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3471,6 +3510,9 @@ Interfaces below for more details.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetLaunchTemplateTagSpecification">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateTagSpecification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3492,7 +3534,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -3516,7 +3558,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -3540,7 +3582,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -3564,7 +3606,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
 
 </dl>
@@ -3575,4 +3617,16 @@ Interfaces below for more details.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

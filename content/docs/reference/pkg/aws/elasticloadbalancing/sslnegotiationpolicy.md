@@ -69,9 +69,9 @@ const foo = new aws.elb.SslNegotiationPolicy("foo", {
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.SslNegotiationPolicy has been deprecated in favour of aws.SslNegotiationPolicy
+Deprecated: aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favour of aws.elb.SslNegotiationPolicy
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.SslNegotiationPolicy has been deprecated in favour of aws.SslNegotiationPolicy{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.SslNegotiationPolicy has been deprecated in favour of aws.elb.SslNegotiationPolicy{{% /md %}}</p>
 
 
 ## Create a SslNegotiationPolicy Resource {#create}
@@ -835,6 +835,9 @@ should be attached.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#SslNegotiationPolicyAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#SslNegotiationPolicyAttributeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Inputs.SslNegotiationPolicyAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Outputs.SslNegotiationPolicyAttribute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

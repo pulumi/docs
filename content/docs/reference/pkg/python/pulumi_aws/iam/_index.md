@@ -1594,7 +1594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 </p></li>
 <li><p><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the role.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the IAM role</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the IAM role</p></li>
 </ul>
 </dd>
 </dl>
@@ -1662,7 +1662,7 @@ See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/U
 <dl class="py attribute">
 <dt id="pulumi_aws.iam.Role.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Role.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of tags for the IAM role</p>
+<dd><p>Key-value map of tags for the IAM role</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1694,7 +1694,7 @@ properties used to qualify the lookup.</p>
 See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 </p></li>
 <li><p><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the role.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the IAM role</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the IAM role</p></li>
 <li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The stable and unique string identifying the role.</p></li>
 </ul>
 </dd>
@@ -1742,7 +1742,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aws.iam.RolePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">RolePolicy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an IAM role policy.</p>
+<dd><p>Provides an IAM role inline policy.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2436,8 +2436,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.</p></li>
+has non-provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
+a user with non-provider-managed access keys and login profile will fail to be destroyed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <code class="docutils literal notranslate"><span class="pre">=,.&#64;-_.</span></code>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the user.</p></li>
 <li><p><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the user.</p></li>
@@ -2455,8 +2455,8 @@ a user with non-this provider-managed access keys and login profile will fail to
 <dt id="pulumi_aws.iam.User.force_destroy">
 <code class="sig-name descname">force_destroy</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.User.force_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.</p>
+has non-provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
+a user with non-provider-managed access keys and login profile will fail to be destroyed.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2502,8 +2502,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this user.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When destroying this user, destroy even if it
-has non-this provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.</p></li>
+has non-provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
+a user with non-provider-managed access keys and login profile will fail to be destroyed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <code class="docutils literal notranslate"><span class="pre">=,.&#64;-_.</span></code>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the user.</p></li>
 <li><p><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the user.</p></li>

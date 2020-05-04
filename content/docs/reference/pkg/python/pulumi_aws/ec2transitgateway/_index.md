@@ -19,6 +19,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aws.ec2transitgateway.AwaitableGetPeeringAttachmentResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">AwaitableGetPeeringAttachmentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetPeeringAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aws.ec2transitgateway.AwaitableGetRouteTableResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">default_association_route_table</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_propagation_route_table</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -52,6 +57,36 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value tags for the EC2 Transit Gateway Attachment</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">GetPeeringAttachmentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPeeringAttachment.</p>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.peer_account_id">
+<code class="sig-name descname">peer_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.peer_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the peer AWS account</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.peer_region">
+<code class="sig-name descname">peer_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.peer_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the peer AWS region</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.peer_transit_gateway_id">
+<code class="sig-name descname">peer_transit_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.peer_transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the peer EC2 Transit Gateway</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.transit_gateway_id">
+<code class="sig-name descname">transit_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetPeeringAttachmentResult.transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the local EC2 Transit Gateway</p>
 </dd></dl>
 
 </dd></dl>
@@ -244,6 +279,114 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ec2transitgateway.GetVpnAttachmentResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpnAttachmentResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value tags for the EC2 Transit Gateway VPN Attachment</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">PeeringAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an EC2 Transit Gateway Peering Attachment.
+For examples of custom route table association and propagation, see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html">EC2 Transit Gateway Networking Examples Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p></li>
+<li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of EC2 Transit Gateway to peer with.</p></li>
+<li><p><strong>peer_transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway to peer with.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Peering Attachment.</p></li>
+<li><p><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.peer_account_id">
+<code class="sig-name descname">peer_account_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.peer_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.peer_region">
+<code class="sig-name descname">peer_region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.peer_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Region of EC2 Transit Gateway to peer with.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.peer_transit_gateway_id">
+<code class="sig-name descname">peer_transit_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.peer_transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Transit Gateway to peer with.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value tags for the EC2 Transit Gateway Peering Attachment.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.transit_gateway_id">
+<code class="sig-name descname">transit_gateway_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Transit Gateway.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transit_gateway_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PeeringAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>peer_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html">AWS provider</a> is currently connected to.</p>
+</p></li>
+<li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of EC2 Transit Gateway to peer with.</p></li>
+<li><p><strong>peer_transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway to peer with.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Peering Attachment.</p></li>
+<li><p><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.ec2transitgateway.PeeringAttachment.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.PeeringAttachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1083,7 +1226,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dx_gateway_id</strong> (<em>str</em>) – Identifier of the Direct Connect Gateway.</p></li>
 <li><p><strong>filters</strong> (<em>list</em>) – Configuration block(s) for filtering. Detailed below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match a pair on the desired Transit Gateway Direct Connect Gateway Attachment.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway Direct Connect Gateway Attachment.</p></li>
 <li><p><strong>transit_gateway_id</strong> (<em>str</em>) – Identifier of the EC2 Transit Gateway.</p></li>
 </ul>
 </dd>
@@ -1092,6 +1235,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the filter field. Valid values can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGatewayAttachments.html">EC2 DescribeTransitGatewayAttachments API Reference</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given filter field. Results will be selected if any given value matches.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aws.ec2transitgateway.get_peering_attachment">
+<code class="sig-prename descclassname">pulumi_aws.ec2transitgateway.</code><code class="sig-name descname">get_peering_attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_peering_attachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on an EC2 Transit Gateway Peering Attachment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more configuration blocks containing name-values filters. Detailed below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – Identifier of the EC2 Transit Gateway Peering Attachment.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGatewayPeeringAttachments.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+An EC2 Transit Gateway Peering Attachment be selected if any one of the given values matches.</p></li>
 </ul>
 </dd></dl>
 
@@ -1163,7 +1329,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Configuration block(s) for filtering. Detailed below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match a pair on the desired Transit Gateway VPN Attachment.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway VPN Attachment.</p></li>
 <li><p><strong>transit_gateway_id</strong> (<em>str</em>) – Identifier of the EC2 Transit Gateway.</p></li>
 <li><p><strong>vpn_connection_id</strong> (<em>str</em>) – Identifier of the EC2 VPN Connection.</p></li>
 </ul>

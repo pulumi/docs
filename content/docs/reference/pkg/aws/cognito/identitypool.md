@@ -304,7 +304,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -384,7 +384,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -464,7 +464,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -544,7 +544,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -866,7 +866,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -955,7 +955,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1044,7 +1044,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1133,7 +1133,7 @@ backend and the Cognito service to communicate about the developer provider.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the Identity Pool.
+    <dd>{{% md %}}A map of tags to assign to the Identity Pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -1158,6 +1158,9 @@ backend and the Cognito service to communicate about the developer provider.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolCognitoIdentityProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#IdentityPoolCognitoIdentityProviderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.IdentityPoolCognitoIdentityProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.IdentityPoolCognitoIdentityProvider.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -253,7 +253,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -295,7 +295,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -337,7 +337,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -379,7 +379,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -663,7 +663,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -714,7 +714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -765,7 +765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -816,7 +816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
 
 </dl>
@@ -841,6 +841,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#ApplicationAppversionLifecycleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#ApplicationAppversionLifecycleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Inputs.ApplicationAppversionLifecycleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Outputs.ApplicationAppversionLifecycle.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

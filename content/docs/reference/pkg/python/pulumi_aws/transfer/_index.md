@@ -82,7 +82,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>identity_provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.</p></li>
 <li><p><strong>invocation_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p></li>
 <li><p><strong>logging_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
 <li><p>URL of the service endpoint used to authenticate users with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p></li>
 </ul>
@@ -160,7 +160,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_aws.transfer.Server.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.Server.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -192,7 +192,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>identity_provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.</p></li>
 <li><p><strong>invocation_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p></li>
 <li><p><strong>logging_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
 <li><p>URL of the service endpoint used to authenticate users with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p></li>
 </ul>
@@ -347,7 +347,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.</p></li>
 <li><p><strong>server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name used for log in to your SFTP server.</p></li>
 </ul>
 </dd>
@@ -385,7 +385,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.transfer.User.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -410,7 +410,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.</p></li>
 <li><p><strong>server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name used for log in to your SFTP server.</p></li>
 </ul>
 </dd>

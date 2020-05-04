@@ -328,7 +328,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -417,7 +417,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -506,7 +506,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -595,7 +595,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
 </dl>
@@ -1007,7 +1007,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1123,7 +1123,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1239,7 +1239,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,7 +1355,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the IAM role
+    <dd>{{% md %}}Key-value map of tags for the IAM role
 {{% /md %}}</dd>
 
     <dt class="property-optional"

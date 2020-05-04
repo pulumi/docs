@@ -70,7 +70,7 @@ region or in all regions. Defaults to <code class="docutils literal notranslate"
 the name of the bucket you have designated for log file delivery.</p></li>
 <li><p><strong>sns_topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the trail</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the trail</p></li>
 </ul>
 </dd>
 </dl>
@@ -196,7 +196,7 @@ defined for notification of log file delivery.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.cloudtrail.Trail.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the trail</p>
+<dd><p>A map of tags to assign to the trail</p>
 </dd></dl>
 
 <dl class="py method">
@@ -234,7 +234,7 @@ region or in all regions. Defaults to <code class="docutils literal notranslate"
 the name of the bucket you have designated for log file delivery.</p></li>
 <li><p><strong>sns_topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the trail</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the trail</p></li>
 </ul>
 </dd>
 </dl>

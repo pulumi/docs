@@ -37,9 +37,9 @@ const baz = new aws.elb.Attachment("baz", {
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.Attachment has been deprecated in favour of aws.Attachment
+Deprecated: aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.Attachment has been deprecated in favour of aws.Attachment{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.Attachment has been deprecated in favour of aws.elb.Attachment{{% /md %}}</p>
 
 
 ## Create a Attachment Resource {#create}

@@ -99,9 +99,9 @@ This example shows how to enable backend authentication for an ELB as well as cu
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.LoadBalancerPolicy has been deprecated in favour of aws.LoadBalancerPolicy
+Deprecated: aws.elasticloadbalancing.LoadBalancerPolicy has been deprecated in favour of aws.elb.LoadBalancerPolicy
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.LoadBalancerPolicy has been deprecated in favour of aws.LoadBalancerPolicy{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.LoadBalancerPolicy has been deprecated in favour of aws.elb.LoadBalancerPolicy{{% /md %}}</p>
 
 
 ## Create a LoadBalancerPolicy Resource {#create}
@@ -841,6 +841,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerPolicyPolicyAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerPolicyPolicyAttributeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Inputs.LoadBalancerPolicyPolicyAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Outputs.LoadBalancerPolicyPolicyAttribute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

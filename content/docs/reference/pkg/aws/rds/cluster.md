@@ -628,7 +628,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -966,7 +966,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1304,7 +1304,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1642,7 +1642,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2407,7 +2407,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2791,7 +2791,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3175,7 +3175,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3559,7 +3559,7 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3594,6 +3594,9 @@ with the Cluster
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterS3ImportArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterS3ImportOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Inputs.ClusterS3ImportArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Outputs.ClusterS3Import.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3817,6 +3820,9 @@ with the Cluster
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterScalingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#ClusterScalingConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Inputs.ClusterScalingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Outputs.ClusterScalingConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

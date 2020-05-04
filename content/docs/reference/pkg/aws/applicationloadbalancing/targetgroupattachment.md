@@ -55,9 +55,9 @@ const testTargetGroupAttachment = new aws.lb.TargetGroupAttachment("test", {
 }, { dependsOn: [withLb] });
 ```
 
-Deprecated: aws.TargetGroupAttachment has been deprecated in favour of aws.TargetGroupAttachment
+Deprecated: aws.applicationloadbalancing.TargetGroupAttachment has been deprecated in favour of aws.alb.TargetGroupAttachment
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.TargetGroupAttachment has been deprecated in favour of aws.TargetGroupAttachment{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.applicationloadbalancing.TargetGroupAttachment has been deprecated in favour of aws.alb.TargetGroupAttachment{{% /md %}}</p>
 
 
 ## Create a TargetGroupAttachment Resource {#create}

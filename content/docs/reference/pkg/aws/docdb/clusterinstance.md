@@ -347,7 +347,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -471,7 +471,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -595,7 +595,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -719,7 +719,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -1521,7 +1521,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1743,7 +1743,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1965,7 +1965,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2187,7 +2187,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the instance.
+    <dd>{{% md %}}A map of tags to assign to the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

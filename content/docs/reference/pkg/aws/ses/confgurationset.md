@@ -11,9 +11,9 @@ meta_desc: "Explore the ConfgurationSet resource of the ses module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-Deprecated: aws.ConfgurationSet has been deprecated in favour of aws.ConfigurationSet
+Deprecated: aws.ses.ConfgurationSet has been deprecated in favour of aws.ses.ConfigurationSet
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.ConfgurationSet has been deprecated in favour of aws.ConfigurationSet{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.ses.ConfgurationSet has been deprecated in favour of aws.ses.ConfigurationSet{{% /md %}}</p>
 
 
 ## Create a ConfgurationSet Resource {#create}

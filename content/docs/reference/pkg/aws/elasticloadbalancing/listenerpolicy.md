@@ -93,9 +93,9 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
 
 This example shows how to add a [Predefined Security Policy for ELBs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html)
 
-Deprecated: aws.ListenerPolicy has been deprecated in favour of aws.ListenerPolicy
+Deprecated: aws.elasticloadbalancing.ListenerPolicy has been deprecated in favour of aws.elb.ListenerPolicy
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.ListenerPolicy has been deprecated in favour of aws.ListenerPolicy{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.ListenerPolicy has been deprecated in favour of aws.elb.ListenerPolicy{{% /md %}}</p>
 
 
 ## Create a ListenerPolicy Resource {#create}

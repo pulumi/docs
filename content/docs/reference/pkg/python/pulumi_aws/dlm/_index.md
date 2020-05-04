@@ -26,7 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that is able to be assumed by the DLM service.</p></li>
 <li><p><strong>policy_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -49,10 +49,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many snapshots to keep. Must be an integer between 1 and 1000.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_aws.dlm.LifecyclePolicy.arn">
@@ -94,10 +94,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How many snapshots to keep. Must be an integer between 1 and 1000.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
 </ul>
 </dd></dl>
 
@@ -110,7 +110,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_aws.dlm.LifecyclePolicy.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags.</p>
+<dd><p>Key-value map of resource tags.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -129,7 +129,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that is able to be assumed by the DLM service.</p></li>
 <li><p><strong>policy_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -152,10 +152,10 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many snapshots to keep. Must be an integer between 1 and 1000.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
 </ul>
 </dd></dl>
 

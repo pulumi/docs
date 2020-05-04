@@ -400,7 +400,7 @@ Only valid if creating an ELB within a VPC</p></li>
 part of your inbound rules for your load balancer’s back-end application
 instances. Use this for Classic or Default VPC only.</p></li>
 <li><p><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to attach to the ELB.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -582,7 +582,7 @@ instances. Only available on ELBs launched in a VPC.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.elb.LoadBalancer.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elb.LoadBalancer.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -626,7 +626,7 @@ instances. Use this for Classic or Default VPC only.</p></li>
 part of your inbound rules for your load balancer’s back-end application
 instances. Only available on ELBs launched in a VPC.</p></li>
 <li><p><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to attach to the ELB.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)</p></li>
 </ul>
 </dd>

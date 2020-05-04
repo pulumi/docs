@@ -294,7 +294,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -365,7 +365,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -436,7 +436,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,7 +507,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -820,7 +820,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -900,7 +900,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -980,7 +980,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
@@ -1060,7 +1060,7 @@ by multiple Elastic Beanstalk Environments.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags for the Elastic Beanstalk Application Version.
+    <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}</dd>
 
 </dl>
