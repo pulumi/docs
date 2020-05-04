@@ -77,7 +77,7 @@ The optional filter block supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dashboard</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>editable=None<span class="p">, </span>filter=None<span class="p">, </span>icon=None<span class="p">, </span>title=None<span class="p">, </span>visibility=None<span class="p">, </span>widgets=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Dashboard</span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>editable=None<span class="p">, </span>filter=None<span class="p">, </span>grid_column_count=None<span class="p">, </span>icon=None<span class="p">, </span>title=None<span class="p">, </span>visibility=None<span class="p">, </span>widgets=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -278,6 +278,15 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span>Grid<wbr>Column<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Icon</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -335,6 +344,15 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Grid<wbr>Column<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,6 +418,15 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span>grid<wbr>Column<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>icon</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -457,6 +484,15 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Dict[Dashboard<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>grid_<wbr>column_<wbr>count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -612,7 +648,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dashboard_url=None<span class="p">, </span>editable=None<span class="p">, </span>filter=None<span class="p">, </span>icon=None<span class="p">, </span>title=None<span class="p">, </span>visibility=None<span class="p">, </span>widgets=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dashboard_url=None<span class="p">, </span>editable=None<span class="p">, </span>filter=None<span class="p">, </span>grid_column_count=None<span class="p">, </span>icon=None<span class="p">, </span>title=None<span class="p">, </span>visibility=None<span class="p">, </span>widgets=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -755,6 +791,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Grid<wbr>Column<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Icon</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -821,6 +866,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Grid<wbr>Column<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -895,6 +949,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>grid<wbr>Column<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>icon</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -965,6 +1028,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>grid_<wbr>column_<wbr>count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>icon</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1021,6 +1093,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardFilterOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1128,6 +1203,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1880,6 +1958,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetCompareWithArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidgetCompareWith.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1987,6 +2068,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithPresentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetCompareWithPresentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetCompareWithPresentationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidgetCompareWithPresentation.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2093,6 +2177,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#DashboardWidgetMetricOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.DashboardWidgetMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.DashboardWidgetMetric.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

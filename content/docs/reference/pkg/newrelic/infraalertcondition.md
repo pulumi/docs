@@ -1626,6 +1626,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionCriticalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionCriticalOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.InfraAlertConditionCriticalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.InfraAlertConditionCritical.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1764,6 +1767,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionWarningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionWarningOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Inputs.InfraAlertConditionWarningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.Outputs.InfraAlertConditionWarning.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
