@@ -6,7 +6,8 @@ meta_image: scott_lowe.png
 authors:
     - scott-lowe
 tags:
-    - change-me
+    - Kubernetes
+    - ClusterAPI
 ---
 
 Scott Lowe is a 20+ year veteran of the IT industry and a Staff Kubernetes Architect at VMWare. He’s a prolific author (seven books) and [blogger](https://blog.scottlowe.org). His technology-focused blog covers a range of topics that include cloud computing (AWS, Azure, and Kubernetes), virtualization (KVM, VMware vSphere), open-source tools (Terraform, Ansible, Vagrant, and others), and networking (Open vSwitch, Linux networking).
