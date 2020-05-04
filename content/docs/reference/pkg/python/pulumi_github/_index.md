@@ -117,6 +117,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_github.AwaitableGetBranchResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">AwaitableGetBranchResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sha</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.AwaitableGetBranchResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_github.AwaitableGetCollaboratorsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">AwaitableGetCollaboratorsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">affiliation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">collaborators</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.AwaitableGetCollaboratorsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -155,6 +160,127 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.AwaitableGetUserResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">avatar_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bio</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">blog</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">company</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">followers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">following</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gpg_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gravatar_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">login</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_gists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_repos</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">site_admin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_github.Branch">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">Branch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_sha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.Branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to create and manage branches within your repository.</p>
+<p>Additional constraints can be applied to ensure your branch is created from
+another branch or commit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository branch to create.</p></li>
+<li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GitHub repository name.</p></li>
+<li><p><strong>source_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The branch name to start from. Defaults to <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p></li>
+<li><p><strong>source_sha</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The commit hash to start from. Defaults to the tip of <code class="docutils literal notranslate"><span class="pre">source_branch</span></code>. If provided, <code class="docutils literal notranslate"><span class="pre">source_branch</span></code> is ignored.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.branch">
+<code class="sig-name descname">branch</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The repository branch to create.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.etag">
+<code class="sig-name descname">etag</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>An etag representing the Branch object.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.ref">
+<code class="sig-name descname">ref</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string representing a branch reference, in the form of <code class="docutils literal notranslate"><span class="pre">refs/heads/&lt;branch&gt;</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.repository">
+<code class="sig-name descname">repository</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.repository" title="Permalink to this definition">¶</a></dt>
+<dd><p>The GitHub repository name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.sha">
+<code class="sig-name descname">sha</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.sha" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string storing the reference’s <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> commit’s SHA1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.source_branch">
+<code class="sig-name descname">source_branch</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.source_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The branch name to start from. Defaults to <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.Branch.source_sha">
+<code class="sig-name descname">source_sha</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.Branch.source_sha" title="Permalink to this definition">¶</a></dt>
+<dd><p>The commit hash to start from. Defaults to the tip of <code class="docutils literal notranslate"><span class="pre">source_branch</span></code>. If provided, <code class="docutils literal notranslate"><span class="pre">source_branch</span></code> is ignored.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.Branch.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sha</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_sha</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.Branch.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Branch resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository branch to create.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An etag representing the Branch object.</p></li>
+<li><p><strong>ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing a branch reference, in the form of <code class="docutils literal notranslate"><span class="pre">refs/heads/&lt;branch&gt;</span></code>.</p></li>
+<li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GitHub repository name.</p></li>
+<li><p><strong>sha</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string storing the reference’s <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> commit’s SHA1.</p></li>
+<li><p><strong>source_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The branch name to start from. Defaults to <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p></li>
+<li><p><strong>source_sha</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The commit hash to start from. Defaults to the tip of <code class="docutils literal notranslate"><span class="pre">source_branch</span></code>. If provided, <code class="docutils literal notranslate"><span class="pre">source_branch</span></code> is ignored.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.Branch.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.Branch.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.Branch.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.Branch.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_github.BranchProtection">
@@ -359,6 +485,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.GetActionsPublicKeyResult.key_id">
 <code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetActionsPublicKeyResult.key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the key that has been retrieved.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_github.GetBranchResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">GetBranchResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sha</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.GetBranchResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getBranch.</p>
+<dl class="py attribute">
+<dt id="pulumi_github.GetBranchResult.etag">
+<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetBranchResult.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>An etag representing the Branch object.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.GetBranchResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetBranchResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.GetBranchResult.ref">
+<code class="sig-name descname">ref</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetBranchResult.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string representing a branch reference, in the form of <code class="docutils literal notranslate"><span class="pre">refs/heads/&lt;branch&gt;</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_github.GetBranchResult.sha">
+<code class="sig-name descname">sha</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_github.GetBranchResult.sha" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string storing the reference’s <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> commit’s SHA1.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2913,6 +3069,20 @@ Note that the provider <code class="docutils literal notranslate"><span class="p
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>repository</strong> (<em>str</em>) – Name of the repository to get public key from.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_github.get_branch">
+<code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">get_branch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">branch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.get_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve information about a repository branch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>branch</strong> (<em>str</em>) – The repository branch to create.</p></li>
+<li><p><strong>repository</strong> (<em>str</em>) – The GitHub repository name.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
