@@ -105,7 +105,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
 <li><p><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.</p></li>
 <li><p><strong>source_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source region for an encrypted replica DB cluster.</p></li>
 <li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">provisioned</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">serverless</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the DB cluster.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the DB cluster.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to associate
 with the Cluster</p></li>
 </ul>
@@ -373,7 +373,7 @@ load-balanced across replicas</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.Cluster.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the DB cluster.</p>
+<dd><p>A map of tags to assign to the DB cluster.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -447,7 +447,7 @@ load-balanced across replicas</p></li>
 <li><p><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.</p></li>
 <li><p><strong>source_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source region for an encrypted replica DB cluster.</p></li>
 <li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">provisioned</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">serverless</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the DB cluster.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the DB cluster.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to associate
 with the Cluster</p></li>
 </ul>
@@ -524,7 +524,7 @@ You can refer to the <a class="reference external" href="https://docs.aws.amazon
 <li><p><strong>custom_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the endpoint. One of: READER , ANY .</p></li>
 <li><p><strong>excluded_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <code class="docutils literal notranslate"><span class="pre">static_members</span></code>.</p></li>
 <li><p><strong>static_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <code class="docutils literal notranslate"><span class="pre">excluded_members</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -573,7 +573,7 @@ You can refer to the <a class="reference external" href="https://docs.aws.amazon
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.ClusterEndpoint.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py method">
@@ -594,7 +594,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom endpoint for the Aurora cluster</p></li>
 <li><p><strong>excluded_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <code class="docutils literal notranslate"><span class="pre">static_members</span></code>.</p></li>
 <li><p><strong>static_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <code class="docutils literal notranslate"><span class="pre">excluded_members</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -694,7 +694,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p></li>
 <li><p><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">Creating DB Instances</a> for more
 details on controlling this property.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the instance.</p></li>
 </ul>
 </dd>
 </dl>
@@ -874,7 +874,7 @@ details on controlling this property.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the instance.</p>
+<dd><p>A map of tags to assign to the instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -937,7 +937,7 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 details on controlling this property.</p>
 </p></li>
 <li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the instance.</p></li>
 <li><p><strong>writer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean indicating if this instance is writable. <code class="docutils literal notranslate"><span class="pre">False</span></code> indicates this instance is a read replica.</p></li>
 </ul>
 </dd>
@@ -1000,7 +1000,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1058,7 +1058,7 @@ specify “pending-reboot” here.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.ClusterParameterGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1078,7 +1078,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1141,7 +1141,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>db_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Cluster Identifier from which to take the snapshot.</p></li>
 <li><p><strong>db_cluster_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the DB cluster.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the DB cluster.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1220,7 +1220,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.ClusterSnapshot.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterSnapshot.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the DB cluster.</p>
+<dd><p>A map of tags to assign to the DB cluster.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1252,7 +1252,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port that the DB cluster was listening on at the time of the snapshot.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of this DB Cluster Snapshot.</p></li>
 <li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster snapshot is encrypted.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the DB cluster.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the DB cluster.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID associated with the DB cluster snapshot.</p></li>
 </ul>
 </dd>
@@ -1319,7 +1319,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>sns_topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SNS topic to send events to.</p></li>
 <li><p><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</p></li>
 <li><p><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1368,7 +1368,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.EventSubscription.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.EventSubscription.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1389,7 +1389,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>sns_topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SNS topic to send events to.</p></li>
 <li><p><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</p></li>
 <li><p><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1530,7 +1530,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.GetClusterSnapshotResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GetClusterSnapshotResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags for the resource.</p>
+<dd><p>A map of tags for the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2204,7 +2204,7 @@ default is <code class="docutils literal notranslate"><span class="pre">false</s
 <li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One of “standard” (magnetic), “gp2” (general
 purpose SSD), or “io1” (provisioned IOPS SSD). The default is “io1” if <code class="docutils literal notranslate"><span class="pre">iops</span></code> is
 specified, “gp2” if not.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time zone of the DB instance. <code class="docutils literal notranslate"><span class="pre">timezone</span></code> is currently
 only supported by Microsoft SQL Server. The <code class="docutils literal notranslate"><span class="pre">timezone</span></code> can only be set on
 creation. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">MSSQL User
@@ -2626,7 +2626,7 @@ specified, “gp2” if not.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.Instance.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2801,7 +2801,7 @@ default is <code class="docutils literal notranslate"><span class="pre">false</s
 <li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One of “standard” (magnetic), “gp2” (general
 purpose SSD), or “io1” (provisioned IOPS SSD). The default is “io1” if <code class="docutils literal notranslate"><span class="pre">iops</span></code> is
 specified, “gp2” if not.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Time zone of the DB instance. <code class="docutils literal notranslate"><span class="pre">timezone</span></code> is currently
 only supported by Microsoft SQL Server. The <code class="docutils literal notranslate"><span class="pre">timezone</span></code> can only be set on
 creation. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">MSSQL User
@@ -2884,7 +2884,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Must be lowercase, to match as it is stored in AWS.</p></li>
 <li><p><strong>option_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the option group. Defaults to “Managed by Pulumi”.</p></li>
 <li><p><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Options to apply.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2960,7 +2960,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.OptionGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.OptionGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2981,7 +2981,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Must be lowercase, to match as it is stored in AWS.</p></li>
 <li><p><strong>option_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the option group. Defaults to “Managed by Pulumi”.</p></li>
 <li><p><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Options to apply.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3060,7 +3060,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3118,7 +3118,7 @@ specify “pending-reboot” here.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.ParameterGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3138,7 +3138,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3303,7 +3303,7 @@ attribute instead.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB security group. Defaults to “Managed by Pulumi”.</p></li>
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB security group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3349,7 +3349,7 @@ by <code class="docutils literal notranslate"><span class="pre">security_group_n
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.SecurityGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.SecurityGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3367,7 +3367,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB security group. Defaults to “Managed by Pulumi”.</p></li>
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB security group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3430,7 +3430,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>db_instance_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Instance Identifier from which to take the snapshot.</p></li>
 <li><p><strong>db_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -3533,7 +3533,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.Snapshot.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Snapshot.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3569,7 +3569,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>source_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region that the DB snapshot was created in or copied from.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the status of this DB snapshot.</p></li>
 <li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage type associated with DB snapshot.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage type associated with DB snapshot.</p></li>
 </ul>
 </dd>
@@ -3627,7 +3627,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB subnet group. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3664,7 +3664,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.rds.SubnetGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3683,7 +3683,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB subnet group. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3760,7 +3760,7 @@ The default is <code class="docutils literal notranslate"><span class="pre">fals
 <li><p><strong>snapshot_type</strong> (<em>str</em>) – The type of snapshots to be returned. If you don’t specify a SnapshotType
 value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
 included in the returned results by default. Possible values are, <code class="docutils literal notranslate"><span class="pre">automated</span></code>, <code class="docutils literal notranslate"><span class="pre">manual</span></code>, <code class="docutils literal notranslate"><span class="pre">shared</span></code> and <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags for the resource.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags for the resource.</p></li>
 </ul>
 </dd>
 </dl>

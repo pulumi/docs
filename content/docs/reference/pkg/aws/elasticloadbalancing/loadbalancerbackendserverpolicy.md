@@ -71,9 +71,9 @@ This example shows how to enable backend authentication for an ELB as well as cu
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.LoadBalancerBackendServerPolicy
+Deprecated: aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.elb.LoadBalancerBackendServerPolicy
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.LoadBalancerBackendServerPolicy{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favour of aws.elb.LoadBalancerBackendServerPolicy{{% /md %}}</p>
 
 
 ## Create a LoadBalancerBackendServerPolicy Resource {#create}

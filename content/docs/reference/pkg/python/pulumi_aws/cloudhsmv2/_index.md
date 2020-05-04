@@ -39,7 +39,7 @@ To initialize cluster, you have to add an hsm instance to the cluster then sign 
 <li><p><strong>hsm_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of HSM module in the cluster. Currently, only hsm1.medium is supported.</p></li>
 <li><p><strong>source_backup_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of Cloud HSM v2 cluster backup to be restored.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of subnets in which cluster will operate.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -103,7 +103,7 @@ To initialize cluster, you have to add an hsm instance to the cluster then sign 
 <dl class="py attribute">
 <dt id="pulumi_aws.cloudhsmv2.Cluster.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Cluster.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -143,7 +143,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the security group associated with the CloudHSM cluster.</p></li>
 <li><p><strong>source_backup_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of Cloud HSM v2 cluster backup to be restored.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of subnets in which cluster will operate.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the VPC that the CloudHSM cluster resides in.</p></li>
 </ul>
 </dd>

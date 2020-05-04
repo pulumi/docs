@@ -53,7 +53,7 @@ backend and the Cognito service to communicate about the developer provider.</p>
 <li><p><strong>openid_connect_provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of OpendID Connect provider ARNs.</p></li>
 <li><p><strong>saml_provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.</p></li>
 <li><p><strong>supported_login_providers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-Value pairs mapping provider names to provider app IDs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Identity Pool.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the Identity Pool.</p></li>
 </ul>
 </dd>
 </dl>
@@ -120,7 +120,7 @@ backend and the Cognito service to communicate about the developer provider.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.cognito.IdentityPool.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the Identity Pool.</p>
+<dd><p>A map of tags to assign to the Identity Pool.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -143,7 +143,7 @@ backend and the Cognito service to communicate about the developer provider.</p>
 <li><p><strong>openid_connect_provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of OpendID Connect provider ARNs.</p></li>
 <li><p><strong>saml_provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.</p></li>
 <li><p><strong>supported_login_providers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-Value pairs mapping provider names to provider app IDs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Identity Pool.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the Identity Pool.</p></li>
 </ul>
 </dd>
 </dl>
@@ -696,7 +696,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the <cite>``up`</cite> command and use –replace &lt;<a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a>&gt;`_.</p></li>
 <li><p><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.</p></li>
 <li><p><strong>software_token_mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the User Pool.</p></li>
 <li><p><strong>user_pool_add_ons</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for user pool add-ons to enable user pool advanced security mode features.</p></li>
 <li><p><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p></li>
 <li><p><strong>username_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Username Configuration.</p></li>
@@ -724,7 +724,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>email_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sender’s email address or sender’s name with their email address (e.g. “<a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>” or “John Smith <a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sender’s email address or sender’s name with their email address (e.g. <code class="docutils literal notranslate"><span class="pre">john&#64;smith.com</span></code> or <code class="docutils literal notranslate"><span class="pre">John</span> <span class="pre">Smith</span> <span class="pre">&lt;john&#64;smith.com&gt;</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The REPLY-TO email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the email source.</p></li>
 </ul>
@@ -853,7 +853,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Email Configuration.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sender’s email address or sender’s name with their email address (e.g. “<a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>” or “John Smith <a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sender’s email address or sender’s name with their email address (e.g. <code class="docutils literal notranslate"><span class="pre">john&#64;smith.com</span></code> or <code class="docutils literal notranslate"><span class="pre">John</span> <span class="pre">Smith</span> <span class="pre">&lt;john&#64;smith.com&gt;</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The REPLY-TO email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the email source.</p></li>
 </ul>
@@ -986,7 +986,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.cognito.UserPool.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the User Pool.</p>
+<dd><p>A map of tags to assign to the User Pool.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1059,7 +1059,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the <cite>``up`</cite> command and use –replace &lt;<a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a>&gt;`_.</p></li>
 <li><p><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.</p></li>
 <li><p><strong>software_token_mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the User Pool.</p></li>
 <li><p><strong>user_pool_add_ons</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for user pool add-ons to enable user pool advanced security mode features.</p></li>
 <li><p><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p></li>
 <li><p><strong>username_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Username Configuration.</p></li>
@@ -1087,7 +1087,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>email_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sender’s email address or sender’s name with their email address (e.g. “<a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>” or “John Smith <a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sender’s email address or sender’s name with their email address (e.g. <code class="docutils literal notranslate"><span class="pre">john&#64;smith.com</span></code> or <code class="docutils literal notranslate"><span class="pre">John</span> <span class="pre">Smith</span> <span class="pre">&lt;john&#64;smith.com&gt;</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The REPLY-TO email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the email source.</p></li>
 </ul>

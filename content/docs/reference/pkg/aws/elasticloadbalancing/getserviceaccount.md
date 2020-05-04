@@ -62,9 +62,9 @@ const bar = new aws.elb.LoadBalancer("bar", {
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.getServiceAccount has been deprecated in favour of aws.getServiceAccount
+Deprecated: aws.elasticloadbalancing.getServiceAccount has been deprecated in favour of aws.elb.getServiceAccount
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.getServiceAccount has been deprecated in favour of aws.getServiceAccount{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancing.getServiceAccount has been deprecated in favour of aws.elb.getServiceAccount{{% /md %}}</p>
 
 
 ## Using GetServiceAccount {#using}
@@ -316,4 +316,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

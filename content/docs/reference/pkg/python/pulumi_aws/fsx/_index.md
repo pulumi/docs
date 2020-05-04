@@ -28,7 +28,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.</p></li>
 <li><p><strong>storage_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The storage capacity (GiB) of the file system. Minimum of <code class="docutils literal notranslate"><span class="pre">1200</span></code>. Storage capacity is provisioned in increments of 3,600 GiB.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet’s Availability Zone.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the file system.</p></li>
 <li><p><strong>weekly_maintenance_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preferred start time (in <code class="docutils literal notranslate"><span class="pre">d:HH:MM</span></code> format) to perform weekly maintenance, in the UTC time zone.</p></li>
 </ul>
 </dd>
@@ -96,7 +96,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_aws.fsx.LustreFileSystem.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.fsx.LustreFileSystem.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the file system.</p>
+<dd><p>A map of tags to assign to the file system.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -132,7 +132,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.</p></li>
 <li><p><strong>storage_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The storage capacity (GiB) of the file system. Minimum of <code class="docutils literal notranslate"><span class="pre">1200</span></code>. Storage capacity is provisioned in increments of 3,600 GiB.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet’s Availability Zone.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the file system.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the Virtual Private Cloud for the file system.</p></li>
 <li><p><strong>weekly_maintenance_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preferred start time (in <code class="docutils literal notranslate"><span class="pre">d:HH:MM</span></code> format) to perform weekly maintenance, in the UTC time zone.</p></li>
 </ul>
@@ -200,7 +200,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>skip_final_backup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>storage_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of IDs for the subnets that the file system will be accessible from. File systems support only one subnet. The file server is also launched in that subnet’s Availability Zone.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the file system.</p></li>
 <li><p><strong>throughput_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of <code class="docutils literal notranslate"><span class="pre">8</span></code> and maximum of <code class="docutils literal notranslate"><span class="pre">2048</span></code>.</p></li>
 <li><p><strong>weekly_maintenance_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preferred start time (in <code class="docutils literal notranslate"><span class="pre">d:HH:MM</span></code> format) to perform weekly maintenance, in the UTC time zone.</p></li>
 </ul>
@@ -310,7 +310,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.fsx.WindowsFileSystem.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.fsx.WindowsFileSystem.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the file system.</p>
+<dd><p>A map of tags to assign to the file system.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -356,7 +356,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>skip_final_backup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>storage_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of IDs for the subnets that the file system will be accessible from. File systems support only one subnet. The file server is also launched in that subnet’s Availability Zone.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the file system.</p></li>
 <li><p><strong>throughput_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of <code class="docutils literal notranslate"><span class="pre">8</span></code> and maximum of <code class="docutils literal notranslate"><span class="pre">2048</span></code>.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the Virtual Private Cloud for the file system.</p></li>
 <li><p><strong>weekly_maintenance_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preferred start time (in <code class="docutils literal notranslate"><span class="pre">d:HH:MM</span></code> format) to perform weekly maintenance, in the UTC time zone.</p></li>

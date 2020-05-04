@@ -114,7 +114,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
 
@@ -176,7 +176,7 @@ a pair on the specific VPC Endpoint to retrieve.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
 
@@ -238,7 +238,7 @@ a pair on the specific VPC Endpoint to retrieve.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
 
@@ -300,7 +300,7 @@ a pair on the specific VPC Endpoint to retrieve.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
 
@@ -999,6 +999,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcEndpointDnsEntry">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcEndpointDnsEntry.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1113,6 +1116,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcEndpointFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcEndpointFilter">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcEndpointFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcEndpointFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1230,4 +1236,16 @@ A VPC Endpoint will be selected if any one of the given values matches.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

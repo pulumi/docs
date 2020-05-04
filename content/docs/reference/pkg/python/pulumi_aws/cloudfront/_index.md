@@ -69,7 +69,7 @@ configuration for this distribution (maximum one).</p></li>
 <li><p><strong>retain_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>viewer_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SSL
 configuration for this distribution (maximum
 one).</p></li>
@@ -739,7 +739,7 @@ CloudFront system.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -854,7 +854,7 @@ the distribution needs to be deleted manually afterwards. Default: <code class="
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current status of the distribution. <code class="docutils literal notranslate"><span class="pre">Deployed</span></code> if the
 distribution’s information is fully propagated throughout the Amazon
 CloudFront system.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>viewer_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SSL
 configuration for this distribution (maximum
 one).</p></li>

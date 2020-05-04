@@ -12,9 +12,7 @@ meta_desc: "Explore the MaintenanceWindowTarget resource of the ssm module, incl
 
 Provides an SSM Maintenance Window Target resource
 
-{{% examples %}}
-## Example Usage
-{{% example %}}
+## Instance Target Example Usage
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,8 +34,30 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
 });
 ```
 
-{{% /example %}}
-{{% /examples %}}
+## Resource Group Target Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const window = new aws.ssm.MaintenanceWindow("window", {
+    cutoff: 1,
+    duration: 3,
+    schedule: "cron(0 16 ? * TUE *)",
+});
+const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
+    description: "This is a maintenance window target",
+    resourceType: "RESOURCE_GROUP",
+    targets: [{
+        key: "resource-groups:ResourceTypeFilters",
+        values: [
+            "AWS::EC2::INSTANCE",
+            "AWS::EC2::VPC",
+        ],
+    }],
+    windowId: window.id,
+});
+```
 
 
 
@@ -228,7 +248,7 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -237,7 +257,8 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">List&lt;Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -289,7 +310,7 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -298,7 +319,8 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -350,7 +372,7 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -359,7 +381,8 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">Maintenance<wbr>Window<wbr>Target<wbr>Target[]</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -411,7 +434,7 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -420,7 +443,8 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">List[Maintenance<wbr>Window<wbr>Target<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -696,7 +720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -705,7 +729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">List&lt;Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,7 +782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -766,7 +791,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -818,7 +844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -827,7 +853,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">Maintenance<wbr>Window<wbr>Target<wbr>Target[]</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -879,7 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
+    <dd>{{% md %}}The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -888,7 +915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtargettarget">List[Maintenance<wbr>Window<wbr>Target<wbr>Target]</a></span>
     </dt>
-    <dd>{{% md %}}The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
+    <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+(https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -922,6 +950,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#MaintenanceWindowTargetTargetOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Inputs.MaintenanceWindowTargetTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.Outputs.MaintenanceWindowTargetTarget.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

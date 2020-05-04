@@ -26,7 +26,6 @@ const dynamodbTarget = new aws.appautoscaling.Target("dynamodb", {
     maxCapacity: 100,
     minCapacity: 5,
     resourceId: "table/tableName",
-    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn,
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
@@ -54,7 +53,6 @@ const ecsTarget = new aws.appautoscaling.Target("ecs", {
     maxCapacity: 4,
     minCapacity: 1,
     resourceId: "service/clusterName/serviceName",
-    roleArn: var_ecs_iam_role,
     scalableDimension: "ecs:service:DesiredCount",
     serviceNamespace: "ecs",
 });
@@ -1172,6 +1170,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appautoscaling?tab=doc#ScheduledActionScalableTargetActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.ScheduledActionScalableTargetActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.ScheduledActionScalableTargetAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

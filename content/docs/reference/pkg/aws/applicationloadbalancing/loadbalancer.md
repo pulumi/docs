@@ -86,9 +86,9 @@ const example = new aws.lb.LoadBalancer("example", {
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.LoadBalancer has been deprecated in favour of aws.LoadBalancer
+Deprecated: aws.applicationloadbalancing.LoadBalancer has been deprecated in favour of aws.alb.LoadBalancer
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.LoadBalancer has been deprecated in favour of aws.LoadBalancer{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.applicationloadbalancing.LoadBalancer has been deprecated in favour of aws.alb.LoadBalancer{{% /md %}}</p>
 
 
 ## Create a LoadBalancer Resource {#create}
@@ -410,7 +410,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -558,7 +558,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -706,7 +706,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -854,7 +854,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1402,7 +1402,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1594,7 +1594,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1786,7 +1786,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1978,7 +1978,7 @@ for load balancers of type `network` will force a recreation of the resource.
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2020,6 +2020,9 @@ for load balancers of type `network` will force a recreation of the resource.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/applicationloadbalancing?tab=doc#LoadBalancerAccessLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/applicationloadbalancing?tab=doc#LoadBalancerAccessLogsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Inputs.LoadBalancerAccessLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Outputs.LoadBalancerAccessLogs.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2171,6 +2174,9 @@ for load balancers of type `network` will force a recreation of the resource.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/applicationloadbalancing?tab=doc#LoadBalancerSubnetMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/applicationloadbalancing?tab=doc#LoadBalancerSubnetMappingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Inputs.LoadBalancerSubnetMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Outputs.LoadBalancerSubnetMapping.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -680,7 +680,7 @@ is enabled. Defaults to false.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p></li>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the object.</p></li>
 </ul>
 </dd>
 </dl>
@@ -745,7 +745,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT
 <dl class="py attribute">
 <dt id="pulumi_aws.kms.Key.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the object.</p>
+<dd><p>A map of tags to assign to the object.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -774,7 +774,7 @@ is enabled. Defaults to false.</p>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p></li>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the object.</p></li>
 </ul>
 </dd>
 </dl>

@@ -41,7 +41,7 @@ domain on every apply.</p></li>
 <li><p><strong>log_publishing_options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Options for publishing slow logs to CloudWatch Logs.</p></li>
 <li><p><strong>node_to_node_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node-to-node encryption options. See below.</p></li>
 <li><p><strong>snapshot_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Snapshot related options, see below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 <li><p><strong>vpc_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – VPC related options, see below. Adding or removing this configuration forces a new resource (<a class="reference external" href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations">documentation</a>).</p></li>
 </ul>
 </dd>
@@ -249,7 +249,7 @@ snapshot of the indices in the domain.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.elasticsearch.Domain.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource</p>
+<dd><p>A map of tags to assign to the resource</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -305,7 +305,7 @@ domain on every apply.</p></li>
 <li><p><strong>log_publishing_options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Options for publishing slow logs to CloudWatch Logs.</p></li>
 <li><p><strong>node_to_node_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node-to-node encryption options. See below.</p></li>
 <li><p><strong>snapshot_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Snapshot related options, see below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 <li><p><strong>vpc_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>VPC related options, see below. Adding or removing this configuration forces a new resource (<a class="reference external" href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations">documentation</a>).</p>
 </p></li>
 </ul>

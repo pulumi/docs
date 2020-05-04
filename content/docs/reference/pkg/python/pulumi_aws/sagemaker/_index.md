@@ -255,7 +255,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A role that SageMaker can assume to access model artifacts and docker images for deployment.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model (must be unique). If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>primary_container</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the <code class="docutils literal notranslate"><span class="pre">container</span></code> argument is required. Fields are documented below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.</p></li>
 </ul>
 </dd>
@@ -334,7 +334,7 @@ A list of key value pairs.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.sagemaker.Model.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -364,7 +364,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A role that SageMaker can assume to access model artifacts and docker images for deployment.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model (must be unique). If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>primary_container</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the <code class="docutils literal notranslate"><span class="pre">container</span></code> argument is required. Fields are documented below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.</p></li>
 </ul>
 </dd>
@@ -447,7 +447,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The associated security groups.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC subnet ID.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -508,7 +508,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.sagemaker.NotebookInstance.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.NotebookInstance.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -531,7 +531,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The associated security groups.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC subnet ID.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>

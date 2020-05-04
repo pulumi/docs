@@ -44,7 +44,7 @@ created instances.</p></li>
 <li><p><strong>root_device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the root device (for example, <code class="docutils literal notranslate"><span class="pre">/dev/sda1</span></code>, or <code class="docutils literal notranslate"><span class="pre">/dev/xvda</span></code>).</p></li>
 <li><p><strong>sriov_net_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When set to “simple” (the default), enables enhanced networking
 for created instances. No other value is supported at this time.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>virtualization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword to choose what virtualization mode created instances
 will use. Can be either “paravirtual” (the default) or “hvm”. The choice of virtualization type
 changes the set of further arguments that are required, as described below.</p></li>
@@ -176,7 +176,7 @@ for created instances. No other value is supported at this time.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.Ami.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -216,7 +216,7 @@ created instances.</p></li>
 <li><p><strong>root_snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Snapshot ID for the root volume (for EBS-backed AMIs)</p></li>
 <li><p><strong>sriov_net_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When set to “simple” (the default), enables enhanced networking
 for created instances. No other value is supported at this time.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>virtualization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword to choose what virtualization mode created instances
 will use. Can be either “paravirtual” (the default) or “hvm”. The choice of virtualization type
 changes the set of further arguments that are required, as described below.</p></li>
@@ -316,7 +316,7 @@ if this parameter is not specified, the default CMK for EBS is used</p></li>
 given by <code class="docutils literal notranslate"><span class="pre">source_ami_region</span></code>.</p></li>
 <li><p><strong>source_ami_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region from which the AMI will be copied. This may be the
 same as the AWS provider region in order to create a copy within the same region.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -467,7 +467,7 @@ for created instances. No other value is supported at this time.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -514,7 +514,7 @@ given by <code class="docutils literal notranslate"><span class="pre">source_ami
 same as the AWS provider region in order to create a copy within the same region.</p></li>
 <li><p><strong>sriov_net_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When set to “simple” (the default), enables enhanced networking
 for created instances. No other value is supported at this time.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>virtualization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword to choose what virtualization mode created instances
 will use. Can be either “paravirtual” (the default) or “hvm”. The choice of virtualization type
 changes the set of further arguments that are required, as described below.</p></li>
@@ -617,7 +617,7 @@ the instance before snapshotting. This is risky since it may cause a snapshot of
 inconsistent filesystem state, but can be used to avoid downtime if the user otherwise
 guarantees that no filesystem writes will be underway at the time of snapshot.</p></li>
 <li><p><strong>source_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the instance to use as the basis of the AMI.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -755,7 +755,7 @@ for created instances. No other value is supported at this time.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.AmiFromInstance.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -799,7 +799,7 @@ guarantees that no filesystem writes will be underway at the time of snapshot.</
 <li><p><strong>source_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the instance to use as the basis of the AMI.</p></li>
 <li><p><strong>sriov_net_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When set to “simple” (the default), enables enhanced networking
 for created instances. No other value is supported at this time.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>virtualization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword to choose what virtualization mode created instances
 will use. Can be either “paravirtual” (the default) or “hvm”. The choice of virtualization type
 changes the set of further arguments that are required, as described below.</p></li>
@@ -1043,7 +1043,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1088,7 +1088,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetNetworkInterfaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetNetworkInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">associations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requester_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetNetworkInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">associations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requester_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1128,7 +1128,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.AwaitableGetSubnetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_for_az</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_for_az</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1184,7 +1184,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>instance_match_criteria</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.</p></li>
 <li><p><strong>instance_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type for which to reserve capacity.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the tenancy of the Capacity Reservation. Specify either <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>.</p></li>
 </ul>
 </dd>
@@ -1246,7 +1246,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1276,7 +1276,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>instance_match_criteria</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.</p></li>
 <li><p><strong>instance_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.</p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type for which to reserve capacity.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the tenancy of the Capacity Reservation. Specify either <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>.</p></li>
 </ul>
 </dd>
@@ -1455,7 +1455,7 @@ attribute is exported from <code class="docutils literal notranslate"><span clas
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an ingress rule. Parameters defined below.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1548,7 +1548,7 @@ notes below on managing Subnets in the Default Network ACL</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1575,7 +1575,7 @@ attribute is exported from <code class="docutils literal notranslate"><span clas
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the Default Network ACL</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated VPC</p></li>
 </ul>
 </dd>
@@ -1854,7 +1854,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 egress rule. Each egress block supports fields documented below.</p></li>
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID. <strong>Note that changing
 the ``vpc_id`` will *not* restore any default security group rules that were
 modified, added, or removed.</strong> It will be left in its current state</p></li>
@@ -1942,7 +1942,7 @@ ingress rule. Each ingress block supports fields documented below.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1971,7 +1971,7 @@ egress rule. Each egress block supports fields documented below.</p></li>
 ingress rule. Each ingress block supports fields documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner ID.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID. <strong>Note that changing
 the ``vpc_id`` will *not* restore any default security group rules that were
 modified, added, or removed.</strong> It will be left in its current state</p></li>
@@ -2044,7 +2044,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.DefaultSubnet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">DefaultSubnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">DefaultSubnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics">default AWS VPC subnet</a>
 in the current region.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">ec2.DefaultSubnet</span></code> behaves differently from normal resources, in that
@@ -2058,7 +2058,7 @@ into management.</p>
 <li><p><strong>map_public_ip_on_launch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2091,7 +2091,7 @@ a public IP address.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.DefaultSubnet.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2102,7 +2102,7 @@ a public IP address.</p>
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.DefaultSubnet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultSubnet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2117,7 +2117,7 @@ properties used to qualify the lookup.</p>
 that instances launched into the subnet should be assigned
 a public IP address.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the subnet.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
 </ul>
 </dd>
@@ -2183,7 +2183,7 @@ for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink documentation</a> for more information. Defaults false.</p></li>
 <li><p><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</p></li>
 <li><p><strong>enable_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS support in the VPC. Defaults true.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2279,7 +2279,7 @@ this VPC. Note that you can change a VPC’s main route table by using an
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.DefaultVpc.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2313,7 +2313,7 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 this VPC. Note that you can change a VPC’s main route table by using an
 <cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html</a>&gt;`_</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VPC.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2375,7 +2375,7 @@ into management.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</p></li>
 <li><p><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2400,7 +2400,7 @@ into management.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2418,7 +2418,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 </p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the DHCP options set.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2474,7 +2474,7 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -2482,7 +2482,7 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2502,7 +2502,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -2566,7 +2566,7 @@ the Elastic IP address is associated with the primary private IP address.</p></l
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 instance ID.</p></li>
 <li><p><strong>network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network interface ID to associate with.</p></li>
 <li><p><strong>public_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 IPv4 address pool identifier or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>. This option is only available for VPC EIPs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean if the EIP is in a VPC or not.</p></li>
 </ul>
 </dd>
@@ -2624,7 +2624,7 @@ the Elastic IP address is associated with the primary private IP address.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.Eip.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2654,7 +2654,7 @@ the Elastic IP address is associated with the primary private IP address.</p></l
 <li><p><strong>public_dns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Public DNS associated with the Elastic IP address.</p></li>
 <li><p><strong>public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the public IP address.</p></li>
 <li><p><strong>public_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 IPv4 address pool identifier or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>. This option is only available for VPC EIPs.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean if the EIP is in a VPC or not.</p></li>
 </ul>
 </dd>
@@ -3120,7 +3120,7 @@ during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds (1 minute) or <code class="docutils literal notranslate"><span class="pre">600</span></code> seconds (10
 minutes). Default: <code class="docutils literal notranslate"><span class="pre">600</span></code>.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – VPC ID to attach to</p></li>
 </ul>
@@ -3180,7 +3180,7 @@ minutes). Default: <code class="docutils literal notranslate"><span class="pre">
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.FlowLog.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3217,7 +3217,7 @@ during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds (1 minute) or <code class="docutils literal notranslate"><span class="pre">600</span></code> seconds (10
 minutes). Default: <code class="docutils literal notranslate"><span class="pre">600</span></code>.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – VPC ID to attach to</p></li>
 </ul>
@@ -3295,7 +3295,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.GetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.ami">
@@ -3397,6 +3397,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.GetInstanceResult.network_interface_id">
 <code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.network_interface_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the network interface that was created with the Instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetInstanceResult.outpost_arn">
+<code class="sig-name descname">outpost_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.outpost_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Outpost.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3866,7 +3872,7 @@ Interfaces below for more details.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional) A mapping of tags to assign to the launch template.</p>
+<dd><p>(Optional) A map of tags to assign to the launch template.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3933,7 +3939,7 @@ Interfaces below for more details.</p>
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.GetNetworkInterfaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetNetworkInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">associations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requester_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetNetworkInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">associations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interface_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requester_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterface.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetNetworkInterfaceResult.associations">
@@ -3969,6 +3975,12 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.GetNetworkInterfaceResult.mac_address">
 <code class="sig-name descname">mac_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfaceResult.mac_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MAC address.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetNetworkInterfaceResult.outpost_arn">
+<code class="sig-name descname">outpost_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfaceResult.outpost_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Outpost.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4174,12 +4186,18 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.GetSubnetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_for_az</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_for_az</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnet.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetSubnetResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the subnet.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.GetSubnetResult.outpost_arn">
+<code class="sig-name descname">outpost_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetResult.outpost_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Outpost.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4245,7 +4263,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags assigned to the resource.</p>
+<dd><p>A map of tags assigned to the resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4389,7 +4407,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags assigned to the resource.</p>
+<dd><p>A map of tags assigned to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4567,11 +4585,11 @@ device of the instance. See Block Devices below for details.</p></li>
 <li><p><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Subnet ID to launch in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p></li>
 <li><p><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p></li>
-<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</p></li>
+<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the devices created by the instance at launch time.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</p></li>
 </ul>
 </dd>
@@ -4828,6 +4846,12 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.Instance.outpost_arn">
+<code class="sig-name descname">outpost_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.outpost_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the Outpost the instance is assigned to.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.Instance.password_data">
 <code class="sig-name descname">password_data</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.password_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base-64 encoded encrypted password data for the instance.
@@ -4920,7 +4944,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.Instance.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4944,7 +4968,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.Instance.volume_tags">
 <code class="sig-name descname">volume_tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.volume_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the devices created by the instance at launch time.</p>
+<dd><p>A map of tags to assign to the devices created by the instance at launch time.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4955,7 +4979,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_core_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_threads_per_core</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hibernation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_initiated_shutdown_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_address_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_core_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_threads_per_core</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hibernation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_initiated_shutdown_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_address_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5009,6 +5033,7 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 <li><p><strong>metadata_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the metadata options of the instance. See Metadata Options below for more details.</p></li>
 <li><p><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)</p></li>
 <li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.</p></li>
+<li><p><strong>outpost_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Outpost the instance is assigned to.</p></li>
 <li><p><strong>password_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
 This attribute is only exported if <code class="docutils literal notranslate"><span class="pre">get_password_data</span></code> is true.
@@ -5031,11 +5056,11 @@ device of the instance. See Block Devices below for details.</p></li>
 <li><p><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Subnet ID to launch in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p></li>
 <li><p><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p></li>
-<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</p></li>
+<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the devices created by the instance at launch time.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</p></li>
 </ul>
 </dd>
@@ -5146,7 +5171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -5160,7 +5185,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.InternetGateway.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5181,7 +5206,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the internet gateway.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -5245,7 +5270,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the key pair.</p></li>
 <li><p><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -5282,7 +5307,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.KeyPair.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5301,7 +5326,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
 <li><p><strong>key_pair_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair ID.</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -5761,7 +5786,7 @@ Interfaces below for more details.</p></li>
 <li><p><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group names to associate with. If you are creating Instances in a VPC, use
 <code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> instead.</p></li>
 <li><p><strong>tag_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags to apply to the resources during launch. See Tag Specifications below for more details.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the launch template.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the launch template.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded user data to provide when launching the instance.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</p></li>
 </ul>
@@ -5881,7 +5906,7 @@ Otherwise, specify the default value of 2.</p></li>
 <p>The <strong>tag_specifications</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of resource to tag. Valid values are <code class="docutils literal notranslate"><span class="pre">instance</span></code> and <code class="docutils literal notranslate"><span class="pre">volume</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tags to assign to the resource.</p></li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.arn">
@@ -6169,14 +6194,14 @@ Interfaces below for more details.</p>
 <dd><p>The tags to apply to the resources during launch. See Tag Specifications below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of resource to tag. Valid values are <code class="docutils literal notranslate"><span class="pre">instance</span></code> and <code class="docutils literal notranslate"><span class="pre">volume</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of tags to assign to the resource.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the launch template.</p>
+<dd><p>A map of tags to assign to the launch template.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -6242,7 +6267,7 @@ Interfaces below for more details.</p></li>
 <li><p><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group names to associate with. If you are creating Instances in a VPC, use
 <code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> instead.</p></li>
 <li><p><strong>tag_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags to apply to the resources during launch. See Tag Specifications below for more details.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the launch template.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the launch template.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded user data to provide when launching the instance.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</p></li>
 </ul>
@@ -6362,7 +6387,7 @@ Otherwise, specify the default value of 2.</p></li>
 <p>The <strong>tag_specifications</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of resource to tag. Valid values are <code class="docutils literal notranslate"><span class="pre">instance</span></code> and <code class="docutils literal notranslate"><span class="pre">volume</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tags to assign to the resource.</p></li>
 </ul>
 </dd></dl>
 
@@ -6513,7 +6538,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allocation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Allocation ID of the Elastic IP address for the gateway.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Subnet ID of the subnet in which to place the gateway.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -6550,7 +6575,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.NatGateway.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NatGateway.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6569,7 +6594,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private IP address of the NAT Gateway.</p></li>
 <li><p><strong>public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public IP address of the NAT Gateway.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Subnet ID of the subnet in which to place the gateway.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -6993,7 +7018,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group IDs to assign to the ENI.</p></li>
 <li><p><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable source destination checking for the ENI. Default true.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to create the ENI in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -7065,12 +7090,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.NetworkInterface.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.NetworkInterface.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mac_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ips_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkInterface resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7088,7 +7113,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group IDs to assign to the ENI.</p></li>
 <li><p><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable source destination checking for the ENI. Default true.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to create the ENI in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -7525,7 +7550,7 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group.</p></li>
 <li><p><strong>strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The placement strategy.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -7550,7 +7575,7 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.PlacementGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags.</p>
+<dd><p>Key-value map of resource tags.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7567,7 +7592,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group.</p></li>
 <li><p><strong>placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the placement group.</p></li>
 <li><p><strong>strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The placement strategy.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -8136,7 +8161,7 @@ Elastic Map Reduce may automatically add required rules to security groups used
 with the service, and those rules may contain a cyclic dependency that prevent
 the security groups from being destroyed without removing the dependency first.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
 </ul>
 </dd>
@@ -8260,7 +8285,7 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -8298,7 +8323,7 @@ Elastic Map Reduce may automatically add required rules to security groups used
 with the service, and those rules may contain a cyclic dependency that prevent
 the security groups from being destroyed without removing the dependency first.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
 </ul>
 </dd>
@@ -8722,7 +8747,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.SpotFleetRequest">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SpotFleetRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_fleet_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_unhealthy_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SpotFleetRequest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_fleet_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_unhealthy_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.</p>
 <dl class="field-list simple">
@@ -8751,11 +8776,12 @@ the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.</p></li>
 <li><p><strong>launch_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.</p></li>
+across different markets and instance types. Conflicts with <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code>. At least one of <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code> or <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code> is required.</p></li>
+<li><p><strong>launch_template_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Launch template configuration block. See Launch Template Configs below for more details. Conflicts with <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code>. At least one of <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code> or <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code> is required.</p></li>
 <li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the Spot fleet.</p></li>
 <li><p><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum bid price per unit hour.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum spot bid for this override request.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.</p></li>
@@ -8775,7 +8801,7 @@ timeout of 10m is reached.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability zone in which to place the request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ebs_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -8797,7 +8823,7 @@ timeout of 10m is reached.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iam_instance_profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iamInstanceProfileArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of instance to request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -8812,12 +8838,32 @@ timeout of 10m is reached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum bid price per unit hour.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum spot bid for this override request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet in which to launch the requested instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tags to assign to the resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The capacity added to the fleet by a fulfilled request.</p></li>
+</ul>
+<p>The <strong>launch_template_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Launch template specification. See Launch Template Specification below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Template version. Unlike the autoscaling equivalent, does not support <code class="docutils literal notranslate"><span class="pre">$Latest</span></code> or <code class="docutils literal notranslate"><span class="pre">$Default</span></code>, so use the launch_template resource’s attribute, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;${aws_launch_template.foo.latest_version}&quot;</span></code>. It will use the default version if omitted.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more override configurations. See Overrides below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability zone in which to place the request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of instance to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum spot bid for this override request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet in which to launch the requested instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The capacity added to the fleet by a fulfilled request.</p></li>
+</ul>
+</li>
 </ul>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.allocation_strategy">
@@ -8873,11 +8919,11 @@ the number of Spot pools that you specify.</p>
 <code class="sig-name descname">launch_specifications</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.launch_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.</p>
+across different markets and instance types. Conflicts with <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code>. At least one of <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code> or <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code> is required.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The availability zone in which to place the request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ebs_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -8899,7 +8945,7 @@ across different markets and instance types.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iam_instance_profile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iamInstanceProfileArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of instance to request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -8914,12 +8960,37 @@ across different markets and instance types.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The maximum bid price per unit hour.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The maximum spot bid for this override request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnet in which to launch the requested instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of tags to assign to the resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The capacity added to the fleet by a fulfilled request.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aws.ec2.SpotFleetRequest.launch_template_configs">
+<code class="sig-name descname">launch_template_configs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.launch_template_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch template configuration block. See Launch Template Configs below for more details. Conflicts with <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code>. At least one of <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code> or <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code> is required.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Launch template specification. See Launch Template Specification below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Template version. Unlike the autoscaling equivalent, does not support <code class="docutils literal notranslate"><span class="pre">$Latest</span></code> or <code class="docutils literal notranslate"><span class="pre">$Default</span></code>, so use the launch_template resource’s attribute, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;${aws_launch_template.foo.latest_version}&quot;</span></code>. It will use the default version if omitted.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrides</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more override configurations. See Overrides below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The availability zone in which to place the request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of instance to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The maximum spot bid for this override request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnet in which to launch the requested instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The capacity added to the fleet by a fulfilled request.</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -8938,7 +9009,7 @@ across different markets and instance types.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.spot_price">
 <code class="sig-name descname">spot_price</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.spot_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum bid price per unit hour.</p>
+<dd><p>The maximum spot bid for this override request.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -8950,7 +9021,7 @@ across different markets and instance types.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -8996,7 +9067,7 @@ timeout of 10m is reached.</p>
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_fleet_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_unhealthy_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_request_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allocation_strategy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_token</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">excess_capacity_termination_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fleet_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_fleet_role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_pools_to_use_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_specifications</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_template_configs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_unhealthy_instances</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_request_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_capacity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_group_arns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminate_instances_with_expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotFleetRequest resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9026,12 +9097,13 @@ the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.</p></li>
 <li><p><strong>launch_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
-across different markets and instance types.</p></li>
+across different markets and instance types. Conflicts with <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code>. At least one of <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code> or <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code> is required.</p></li>
+<li><p><strong>launch_template_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Launch template configuration block. See Launch Template Configs below for more details. Conflicts with <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code>. At least one of <code class="docutils literal notranslate"><span class="pre">launch_specification</span></code> or <code class="docutils literal notranslate"><span class="pre">launch_template_config</span></code> is required.</p></li>
 <li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the Spot fleet.</p></li>
 <li><p><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum bid price per unit hour.</p></li>
+<li><p><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum spot bid for this override request.</p></li>
 <li><p><strong>spot_request_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the Spot fleet request.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.</p></li>
@@ -9052,7 +9124,7 @@ timeout of 10m is reached.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability zone in which to place the request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ebs_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -9074,7 +9146,7 @@ timeout of 10m is reached.</p></li>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iam_instance_profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iamInstanceProfileArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of instance to request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -9089,12 +9161,32 @@ timeout of 10m is reached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum bid price per unit hour.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum spot bid for this override request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet in which to launch the requested instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tags to assign to the resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The capacity added to the fleet by a fulfilled request.</p></li>
+</ul>
+<p>The <strong>launch_template_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Launch template specification. See Launch Template Specification below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the launch template. Conflicts with <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Template version. Unlike the autoscaling equivalent, does not support <code class="docutils literal notranslate"><span class="pre">$Latest</span></code> or <code class="docutils literal notranslate"><span class="pre">$Default</span></code>, so use the launch_template resource’s attribute, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;${aws_launch_template.foo.latest_version}&quot;</span></code>. It will use the default version if omitted.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more override configurations. See Overrides below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability zone in which to place the request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of instance to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum spot bid for this override request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet in which to launch the requested instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The capacity added to the fleet by a fulfilled request.</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -9224,7 +9316,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <li><p><strong>spot_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">one-time</span></code>, after
 the instance is terminated, the spot request will be closed.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Subnet ID to launch in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p></li>
 <li><p><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p></li>
@@ -9232,7 +9324,7 @@ the instance is terminated, the spot request will be closed.</p></li>
 </p></li>
 <li><p><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.</p>
 </p></li>
-<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</p></li>
+<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the devices created by the instance at launch time.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</p></li>
 <li><p><strong>wait_for_fulfillment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -9610,7 +9702,7 @@ the instance is terminated, the spot request will be closed.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -9646,7 +9738,7 @@ the instance is terminated, the spot request will be closed.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.volume_tags">
 <code class="sig-name descname">volume_tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.volume_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the devices created by the instance at launch time.</p>
+<dd><p>A map of tags to assign to the devices created by the instance at launch time.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -9665,7 +9757,7 @@ timeout of 10m is reached.</p>
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_duration_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_core_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_threads_per_core</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hibernation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_initiated_shutdown_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_address_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_bid_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_request_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ami</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">associate_public_ip_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_duration_minutes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_core_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cpu_threads_per_core</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">credit_specification</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disable_api_termination</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ebs_optimized</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ephemeral_block_devices</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">get_password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hibernation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iam_instance_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_initiated_shutdown_behavior</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_interruption_behaviour</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_address_count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_addresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">launch_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata_options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitoring</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_interfaces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">placement_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">primary_network_interface_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_dns</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">public_ip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root_block_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">security_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_dest_check</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_bid_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_price</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_request_state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">spot_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subnet_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenancy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data_base64</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_from</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valid_until</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_security_group_ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_fulfillment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotInstanceRequest resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9757,7 +9849,7 @@ the Spot Instance request.</p></li>
 <li><p><strong>spot_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">one-time</span></code>, after
 the instance is terminated, the spot request will be closed.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Subnet ID to launch in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p></li>
 <li><p><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p></li>
@@ -9765,7 +9857,7 @@ the instance is terminated, the spot request will be closed.</p></li>
 </p></li>
 <li><p><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.</p>
 </p></li>
-<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</p></li>
+<li><p><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the devices created by the instance at launch time.</p></li>
 <li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</p></li>
 <li><p><strong>wait_for_fulfillment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -9872,7 +9964,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aws.ec2.Subnet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an VPC subnet resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Due to <a class="reference external" href="https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/">AWS Lambda improved VPC networking changes that began deploying in September 2019</a>, subnets associated with Lambda Functions can take up to 45 minutes to successfully delete.</p>
@@ -9893,7 +9985,8 @@ in CIDR notation. The subnet size must use a /64 prefix length.</p></li>
 <li><p><strong>map_public_ip_on_launch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>outpost_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Outpost.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
 </ul>
 </dd>
@@ -9952,6 +10045,12 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_aws.ec2.Subnet.outpost_arn">
+<code class="sig-name descname">outpost_arn</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.outpost_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Outpost.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_aws.ec2.Subnet.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that owns the subnet.</p>
@@ -9960,7 +10059,7 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.Subnet.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -9971,7 +10070,7 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 
 <dl class="py method">
 <dt id="pulumi_aws.ec2.Subnet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">assign_ipv6_address_on_creation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_block_association_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_public_ip_on_launch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outpost_arn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Subnet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9993,8 +10092,9 @@ in CIDR notation. The subnet size must use a /64 prefix length.</p></li>
 <li><p><strong>map_public_ip_on_launch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
 that instances launched into the subnet should be assigned
 a public IP address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>outpost_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Outpost.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the subnet.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
 </ul>
 </dd>
@@ -10051,7 +10151,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the filter.</p></li>
 <li><p><strong>network_services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of amazon network services that should be mirrored. Valid values: <code class="docutils literal notranslate"><span class="pre">amazon-dns</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10070,7 +10170,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorFilter.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorFilter.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags.</p>
+<dd><p>Key-value map of resource tags.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10086,7 +10186,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the filter.</p></li>
 <li><p><strong>network_services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of amazon network services that should be mirrored. Valid values: <code class="docutils literal notranslate"><span class="pre">amazon-dns</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10323,7 +10423,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <li><p>The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.</p></li>
 </ul>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 <li><p><strong>traffic_mirror_filter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror filter to be used</p></li>
 <li><p><strong>traffic_mirror_target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror target to be used</p></li>
 <li><p><strong>virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
@@ -10362,7 +10462,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorSession.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorSession.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags.</p>
+<dd><p>Key-value map of resource tags.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -10403,7 +10503,7 @@ properties used to qualify the lookup.</p>
 <li><p>The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.</p></li>
 </ul>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 <li><p><strong>traffic_mirror_filter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror filter to be used</p></li>
 <li><p><strong>traffic_mirror_target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the traffic mirror target to be used</p></li>
 <li><p><strong>virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <ul>
@@ -10466,7 +10566,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
 <li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface ID that is associated with the target.</p></li>
 <li><p><strong>network_load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10491,7 +10591,7 @@ Read <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.TrafficMirrorTarget.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.TrafficMirrorTarget.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags.</p>
+<dd><p>Key-value map of resource tags.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10508,7 +10608,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the traffic mirror session.</p></li>
 <li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface ID that is associated with the target.</p></li>
 <li><p><strong>network_load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10710,7 +10810,7 @@ Only valid in regions and accounts that support EC2 Classic.</p></li>
 <li><p><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</p></li>
 <li><p><strong>enable_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS support in the VPC. Defaults true.</p></li>
 <li><p><strong>instance_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A tenancy option for instances launched into the VPC</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10814,7 +10914,7 @@ this VPC. Note that you can change a VPC’s main route table by using an
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.Vpc.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10851,7 +10951,7 @@ Only valid in regions and accounts that support EC2 Classic.</p></li>
 this VPC. Note that you can change a VPC’s main route table by using an
 <cite>``ec2.MainRouteTableAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_association.html</a>&gt;`_.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VPC.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10917,7 +11017,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 </p></li>
 <li><p><strong>ntp_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NTP servers to configure.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10960,7 +11060,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10981,7 +11081,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>ntp_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NTP servers to configure.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the DHCP options set.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -11136,7 +11236,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
 <li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name. For AWS services the service name is usually in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.&lt;region&gt;.&lt;service&gt;</span></code> (the SageMaker Notebook service is an exception to this rule, the service name is in the form <code class="docutils literal notranslate"><span class="pre">aws.sagemaker.&lt;region&gt;.notebook</span></code>).</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC in which the endpoint will be used.</p></li>
 </ul>
@@ -11234,7 +11334,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -11276,7 +11376,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name. For AWS services the service name is usually in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.&lt;region&gt;.&lt;service&gt;</span></code> (the SageMaker Notebook service is an exception to this rule, the service name is in the form <code class="docutils literal notranslate"><span class="pre">aws.sagemaker.&lt;region&gt;.notebook</span></code>).</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the VPC endpoint.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC in which the endpoint will be used.</p></li>
 </ul>
@@ -11543,7 +11643,7 @@ and will overwrite the association.</p>
 <li><p><strong>acceptance_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>allowed_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more principals allowed to discover the endpoint service.</p></li>
 <li><p><strong>network_load_balancer_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more Network Load Balancers for the endpoint service.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -11610,7 +11710,7 @@ and will overwrite the association.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointService.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11634,7 +11734,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name.</p></li>
 <li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the VPC endpoint service.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -11976,7 +12076,7 @@ and use the <code class="docutils literal notranslate"><span class="pre">ec2.Vpc
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC.</p></li>
 </ul>
 </dd>
@@ -12082,7 +12182,7 @@ connection.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -12116,7 +12216,7 @@ and use the <code class="docutils literal notranslate"><span class="pre">ec2.Vpc
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC.</p></li>
 </ul>
 </dd>
@@ -12207,7 +12307,7 @@ connection into management.</p>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to accept the peering request. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Peering Connection ID to manage.</p></li>
 </ul>
 </dd>
@@ -12293,7 +12393,7 @@ connection in the peer VPC over the VPC Peering Connection.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -12328,7 +12428,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the requester VPC.</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the accepter VPC.</p></li>
 <li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Peering Connection ID to manage.</p></li>
 </ul>
@@ -12735,7 +12835,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>amazon_side_asn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don’t specify an ASN, the virtual private gateway is created with the default ASN.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the virtual private gateway.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -12755,7 +12855,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ec2.VpnGateway.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -12777,7 +12877,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>amazon_side_asn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don’t specify an ASN, the virtual private gateway is created with the default ASN.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the virtual private gateway.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -13032,7 +13132,7 @@ several valid keys, for a full reference, check out
 </p></li>
 <li><p><strong>get_user_data</strong> (<em>bool</em>) – Retrieve Base64 encoded User Data contents into the <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> attribute. A SHA-1 hash of the User Data contents will always be present in the <code class="docutils literal notranslate"><span class="pre">user_data</span></code> attribute. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>instance_id</strong> (<em>str</em>) – Specify the exact Instance ID with which to populate the data source.</p></li>
-<li><p><strong>instance_tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must
+<li><p><strong>instance_tags</strong> (<em>dict</em>) – A map of tags, each pair of which must
 exactly match a pair on the desired Instance.</p></li>
 <li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the Instance.</p></li>
 </ul>
@@ -13103,7 +13203,7 @@ and you’d need to re-run <code class="docutils literal notranslate"><span clas
 several valid keys, for a full reference, check out
 [describe-instances in the AWS CLI reference][1].</p></li>
 <li><p><strong>instance_state_names</strong> (<em>list</em>) – A list of instance states that should be applicable to the desired instances. The permitted values are: <code class="docutils literal notranslate"><span class="pre">pending,</span> <span class="pre">running,</span> <span class="pre">shutting-down,</span> <span class="pre">stopped,</span> <span class="pre">stopping,</span> <span class="pre">terminated</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">running</span></code>.</p></li>
-<li><p><strong>instance_tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must
+<li><p><strong>instance_tags</strong> (<em>dict</em>) – A map of tags, each pair of which must
 exactly match a pair on desired instances.</p></li>
 </ul>
 </dd>
@@ -13124,7 +13224,7 @@ exactly match a pair on desired instances.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
 <li><p><strong>internet_gateway_id</strong> (<em>str</em>) – The id of the specific Internet Gateway to retrieve.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired Internet Gateway.</p></li>
 </ul>
 </dd>
@@ -13158,7 +13258,7 @@ An Internet Gateway will be selected if any one of the given values matches.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Configuration block(s) for filtering. Detailed below.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the filter field. Valid values can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html">EC2 DescribeLaunchTemplates API Reference</a>.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match a pair on the desired Launch Template.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match a pair on the desired Launch Template.</p></li>
 </ul>
 </dd>
 </dl>
@@ -13180,7 +13280,7 @@ An Internet Gateway will be selected if any one of the given values matches.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The id of the specific Nat Gateway to retrieve.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – The state of the NAT gateway (pending | failed | available | deleting | deleted ).</p></li>
 <li><p><strong>subnet_id</strong> (<em>str</em>) – The id of subnet that the Nat Gateway resides in.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired Nat Gateway.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the Nat Gateway resides in.</p></li>
 </ul>
@@ -13202,7 +13302,7 @@ An Nat Gateway will be selected if any one of the given values matches.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired network ACLs.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The VPC ID that you want to filter from.</p></li>
 </ul>
@@ -13244,7 +13344,7 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired network interfaces.</p></li>
 </ul>
 </dd>
@@ -13296,7 +13396,7 @@ the Route Table.</p>
 <li><p><strong>gateway_id</strong> (<em>str</em>) – The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).</p></li>
 <li><p><strong>route_table_id</strong> (<em>str</em>) – The id of the specific Route Table to retrieve.</p></li>
 <li><p><strong>subnet_id</strong> (<em>str</em>) – The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired Route Table.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired Route Table belongs to.</p></li>
 </ul>
@@ -13319,7 +13419,7 @@ A Route Table will be selected if any one of the given values matches.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired route tables.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The VPC ID that you want to filter from.</p></li>
 </ul>
@@ -13349,7 +13449,7 @@ VPC that the security group belongs to.</p>
 <li><p><strong>name</strong> (<em>str</em>) – <p>The name of the field to filter by, as defined by
 <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html">the underlying AWS API</a>.</p>
 </p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired security group.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired security group belongs to.</p></li>
 </ul>
@@ -13375,7 +13475,7 @@ outside of this provider.</p>
 <li><p><strong>filters</strong> (<em>list</em>) – One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
 [describe-security-groups in the AWS CLI reference][1].</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match for
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match for
 desired security groups.</p></li>
 </ul>
 </dd>
@@ -13407,7 +13507,7 @@ subnet must be the default subnet for its associated availability zone.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The id of the specific subnet to retrieve.</p></li>
 <li><p><strong>ipv6_cidr_block</strong> (<em>str</em>) – The Ipv6 cidr block of the desired subnet</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – The state that the desired subnet must have.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired subnet.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired subnet belongs to.</p></li>
 </ul>
@@ -13432,7 +13532,7 @@ A subnet will be selected if any one of the given values matches.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired subnets.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The VPC ID that you want to filter from.</p></li>
 </ul>
@@ -13466,7 +13566,7 @@ the default VPC for the region.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The id of the specific VPC to retrieve.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – The current state of the desired VPC.
 Can be either <code class="docutils literal notranslate"><span class="pre">&quot;pending&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;available&quot;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired VPC.</p></li>
 </ul>
 </dd>
@@ -13489,7 +13589,7 @@ A VPC will be selected if any one of the given values matches.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dhcp_options_id</strong> (<em>str</em>) – The EC2 DHCP Options ID.</p></li>
 <li><p><strong>filters</strong> (<em>list</em>) – List of custom filters as described below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags assigned to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -13512,7 +13612,7 @@ a specific VPC endpoint.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The ID of the specific VPC Endpoint to retrieve.</p></li>
 <li><p><strong>service_name</strong> (<em>str</em>) – The service name of the specific VPC Endpoint to retrieve. For AWS services the service name is usually in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.&lt;region&gt;.&lt;service&gt;</span></code> (the SageMaker Notebook service is an exception to this rule, the service name is in the form <code class="docutils literal notranslate"><span class="pre">aws.sagemaker.&lt;region&gt;.notebook</span></code>).</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – The state of the specific VPC Endpoint to retrieve.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The ID of the VPC in which the specific VPC Endpoint is used.</p></li>
 </ul>
@@ -13538,7 +13638,7 @@ can be specified when creating a VPC endpoint within the region configured in th
 <li><p><strong>filters</strong> (<em>list</em>) – Configuration block(s) for filtering. Detailed below.</p></li>
 <li><p><strong>service</strong> (<em>str</em>) – The common name of an AWS service (e.g. <code class="docutils literal notranslate"><span class="pre">s3</span></code>).</p></li>
 <li><p><strong>service_name</strong> (<em>str</em>) – The service name that is specified when creating a VPC endpoint. For AWS services the service name is usually in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.&lt;region&gt;.&lt;service&gt;</span></code> (the SageMaker Notebook service is an exception to this rule, the service name is in the form <code class="docutils literal notranslate"><span class="pre">aws.sagemaker.&lt;region&gt;.notebook</span></code>).</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match a pair on the desired VPC Endpoint Service.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match a pair on the desired VPC Endpoint Service.</p></li>
 </ul>
 </dd>
 </dl>
@@ -13567,7 +13667,7 @@ a specific VPC peering connection.</p>
 <li><p><strong>peer_vpc_id</strong> (<em>str</em>) – The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region of the requester VPC of the specific VPC Peering Connection to retrieve.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – The status of the specific VPC Peering Connection to retrieve.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The ID of the requester VPC of the specific VPC Peering Connection to retrieve.</p></li>
 </ul>
@@ -13591,7 +13691,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired vpcs.</p></li>
 </ul>
 </dd>
@@ -13619,7 +13719,7 @@ a specific VPN gateway.</p>
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The ID of the specific VPN Gateway to retrieve.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – The state of the specific VPN Gateway to retrieve.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags, each pair of which must exactly match
 a pair on the desired VPN Gateway.</p></li>
 </ul>
 </dd>

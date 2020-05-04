@@ -680,6 +680,9 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#AccountThrottleSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.AccountThrottleSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

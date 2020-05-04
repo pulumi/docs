@@ -49,7 +49,7 @@ with the cluster</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options</p></li>
 <li><p><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the subnet group to be used for the
 cluster</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 </ul>
 </dd>
 </dl>
@@ -189,7 +189,7 @@ cluster</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.dax.Cluster.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.Cluster.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource</p>
+<dd><p>A map of tags to assign to the resource</p>
 </dd></dl>
 
 <dl class="py method">
@@ -239,7 +239,7 @@ with the cluster</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options</p></li>
 <li><p><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the subnet group to be used for the
 cluster</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 </ul>
 </dd>
 </dl>

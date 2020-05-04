@@ -33,7 +33,7 @@ See CloudWatch Logging Options below for more details.</p></li>
 <li><p><strong>outputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Output destination configuration of the application. See Outputs below for more details.</p></li>
 <li><p><strong>reference_data_sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Kinesis Analytics Application.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the Kinesis Analytics Application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -432,7 +432,7 @@ See JSON Mapping Parameters below for more details.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of tags for the Kinesis Analytics Application.</p>
+<dd><p>Key-value map of tags for the Kinesis Analytics Application.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -465,7 +465,7 @@ See CloudWatch Logging Options below for more details.</p></li>
 <li><p><strong>reference_data_sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Status of the application.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Kinesis Analytics Application.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the Kinesis Analytics Application.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Version of the application.</p></li>
 </ul>
 </dd>
@@ -703,7 +703,7 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 is redshift). More details are given below.</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</p></li>
 </ul>
 </dd>
@@ -1280,7 +1280,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <dl class="py attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1314,7 +1314,7 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 is redshift). More details are given below.</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</p></li>
 </ul>
 </dd>
@@ -1694,7 +1694,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assigned to the stream.</p>
+<dd><p>A map of tags to assigned to the stream.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1720,7 +1720,7 @@ scales elastically for real-time processing of streaming big data.</p>
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html">Amazon Kinesis Streams</a> for more.</p></li>
 <li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1776,7 +1776,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 <dl class="py attribute">
 <dt id="pulumi_aws.kinesis.Stream.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1801,7 +1801,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 </p></li>
 <li><p><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of shard-level CloudWatch metrics which can be enabled for the stream. See <a class="reference external" href="https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html">Monitoring with CloudWatch</a> for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</p>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1861,7 +1861,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see <a class="reference external" href="http://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>. If you choose to specify the MediaType, see <a class="reference external" href="https://tools.ietf.org/html/rfc6838#section-4.2">Naming Requirements</a> for guidelines.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1911,7 +1911,7 @@ AWS account and region the Stream is created in.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.kinesis.VideoStream.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1940,7 +1940,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the stream.</p></li>
 </ul>
 </dd>
@@ -1995,7 +1995,7 @@ resources.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the Kinesis Stream.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags to assigned to the stream.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags to assigned to the stream.</p></li>
 </ul>
 </dd>
 </dl>

@@ -318,7 +318,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -370,7 +370,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -422,7 +422,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -474,7 +474,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -768,7 +768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -890,7 +890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -951,7 +951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -976,6 +976,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetails.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1008,7 +1011,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+    <dd>{{% md %}}A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
 {{% /md %}}</dd>
 
 </dl>
@@ -1042,7 +1045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+    <dd>{{% md %}}A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
 {{% /md %}}</dd>
 
 </dl>
@@ -1076,7 +1079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+    <dd>{{% md %}}A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
 {{% /md %}}</dd>
 
 </dl>
@@ -1110,7 +1113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
+    <dd>{{% md %}}A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
 {{% /md %}}</dd>
 
 </dl>
@@ -1127,6 +1130,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetailsSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1177,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+    <dd>{{% md %}}A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
 
 </dl>
@@ -1229,7 +1235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+    <dd>{{% md %}}A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
 
 </dl>
@@ -1281,7 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+    <dd>{{% md %}}A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
 
 </dl>
@@ -1333,7 +1339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+    <dd>{{% md %}}A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
 
 </dl>
@@ -1350,6 +1356,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleCreateRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetailsScheduleCreateRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1501,6 +1510,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dlm?tab=doc#LifecyclePolicyPolicyDetailsScheduleRetainRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dlm.Outputs.LifecyclePolicyPolicyDetailsScheduleRetainRule.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

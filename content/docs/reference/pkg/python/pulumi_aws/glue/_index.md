@@ -182,7 +182,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of names of columns that contain skewed values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValueLocationMaps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of values that appear so frequently as to be considered skewed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A mapping of skewed values to the columns that contain them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A map of skewed values to the columns that contain them.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sortColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Order objects specifying the sort order of each bucket in the table.</p>
@@ -276,7 +276,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of names of columns that contain skewed values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValueLocationMaps</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of values that appear so frequently as to be considered skewed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A mapping of skewed values to the columns that contain them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A map of skewed values to the columns that contain them.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sortColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Order objects specifying the sort order of each bucket in the table.</p>
@@ -367,7 +367,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of names of columns that contain skewed values.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValueLocationMaps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of values that appear so frequently as to be considered skewed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A mapping of skewed values to the columns that contain them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A map of skewed values to the columns that contain them.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sortColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Order objects specifying the sort order of each bucket in the table.</p>
@@ -606,7 +606,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p></li>
 <li><p><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</p></li>
-<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
+<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the connection.</p></li>
 <li><p><strong>match_criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of criteria that can be used in selecting this connection.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection.</p></li>
@@ -635,7 +635,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.glue.Connection.connection_type">
 <code class="sig-name descname">connection_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Connection.connection_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the connection. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p>
+<dd><p>The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -680,7 +680,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p></li>
 <li><p><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</p></li>
-<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
+<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Supported are: <code class="docutils literal notranslate"><span class="pre">JDBC</span></code>, <code class="docutils literal notranslate"><span class="pre">MONGODB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the connection.</p></li>
 <li><p><strong>match_criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of criteria that can be used in selecting this connection.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection.</p></li>
@@ -756,7 +756,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
 <li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -888,7 +888,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.glue.Crawler.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py method">
@@ -917,7 +917,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
 <li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -1037,7 +1037,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</p></li>
 <li><p><strong>worker_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.</p></li>
 </ul>
@@ -1161,7 +1161,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.glue.Job.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1204,7 +1204,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</p></li>
 <li><p><strong>worker_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.</p></li>
 </ul>
@@ -1424,7 +1424,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>predicate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.</p></li>
 <li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A cron expression used to specify the schedule. <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a></p>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p></li>
 <li><p><strong>workflow_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (<code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code> type) and can contain multiple additional <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code> triggers.</p></li>
 </ul>
@@ -1513,7 +1513,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.glue.Trigger.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1547,7 +1547,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>predicate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.</p></li>
 <li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A cron expression used to specify the schedule. <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a></p>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p></li>
 <li><p><strong>workflow_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (<code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code> type) and can contain multiple additional <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code> triggers.</p></li>
 </ul>

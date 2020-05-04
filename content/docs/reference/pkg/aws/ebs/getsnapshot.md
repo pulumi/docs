@@ -129,7 +129,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -192,7 +192,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -255,7 +255,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -318,7 +318,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -428,7 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -583,7 +583,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -738,7 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -893,7 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags for the resource.
+    <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -974,6 +974,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#GetSnapshotFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#GetSnapshotFilter">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.Inputs.GetSnapshotFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.Outputs.GetSnapshotFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1075,4 +1078,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

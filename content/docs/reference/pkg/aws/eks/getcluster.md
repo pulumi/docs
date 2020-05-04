@@ -85,7 +85,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -110,7 +110,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -135,7 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -160,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,7 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -419,7 +419,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -551,7 +551,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -683,7 +683,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -724,6 +724,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#GetClusterCertificateAuthority">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterCertificateAuthority.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -804,6 +807,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#GetClusterIdentity">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -883,6 +889,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#GetClusterIdentityOidc">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterIdentityOidc.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -961,6 +970,9 @@ The following output properties are available:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/eks?tab=doc#GetClusterVpcConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterVpcConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1250,4 +1262,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

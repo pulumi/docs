@@ -562,7 +562,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</p></li>
 <li><p><strong>loggings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A settings of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html">bucket logging</a> (documented below).</p></li>
 <li><p><strong>object_lock_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">S3 object locking</a> (documented below)</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span> <span class="pre">/</span> <span class="pre">preview</span> <span class="pre">/</span> <span class="pre">update</span></code>. In this case, please make sure you use the verbose/specific version of the policy.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.</p></li>
 <li><p><strong>replication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">replication configuration</a> (documented below).</p></li>
 <li><p><strong>request_payer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies who should bear the cost of Amazon S3 data transfer.
@@ -668,7 +668,7 @@ developer guide for more information.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Filter that identifies subset of objects to which the replication rule applies (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags that identifies subset of objects to which the rule applies.
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.</p></li>
 </ul>
 </li>
@@ -865,7 +865,7 @@ describing redirect behavior and when redirects are applied.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.s3.Bucket.policy">
 <code class="sig-name descname">policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p>
+<dd><p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span> <span class="pre">/</span> <span class="pre">preview</span> <span class="pre">/</span> <span class="pre">update</span></code>. In this case, please make sure you use the verbose/specific version of the policy.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -899,7 +899,7 @@ describing redirect behavior and when redirects are applied.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Filter that identifies subset of objects to which the replication rule applies (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags that identifies subset of objects to which the rule applies.
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.</p></li>
 </ul>
 </li>
@@ -1024,7 +1024,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>object_lock_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A configuration of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">S3 object locking</a> (documented below)</p>
 </p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document.</p>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span> <span class="pre">/</span> <span class="pre">preview</span> <span class="pre">/</span> <span class="pre">update</span></code>. In this case, please make sure you use the verbose/specific version of the policy.</p>
 </p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.</p></li>
 <li><p><strong>replication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">replication configuration</a> (documented below).</p>
@@ -1135,7 +1135,7 @@ developer guide for more information.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">filter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Filter that identifies subset of objects to which the replication rule applies (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags that identifies subset of objects to which the rule applies.
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.</p></li>
 </ul>
 </li>
@@ -1525,7 +1525,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">false</s
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">kms.Key</span></code>,
 use the exported <code class="docutils literal notranslate"><span class="pre">arn</span></code> attribute:
 <code class="docutils literal notranslate"><span class="pre">kms_key_id</span> <span class="pre">=</span> <span class="pre">&quot;${aws_kms_key.foo.arn}&quot;</span></code></p></li>
-<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
 <li><p><strong>object_lock_legal_hold_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds">legal hold</a> status that you want to apply to the specified object. Valid values are <code class="docutils literal notranslate"><span class="pre">ON</span></code> and <code class="docutils literal notranslate"><span class="pre">OFF</span></code>.</p></li>
 <li><p><strong>object_lock_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object lock <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes">retention mode</a> that you want to apply to this object. Valid values are <code class="docutils literal notranslate"><span class="pre">GOVERNANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">COMPLIANCE</span></code>.</p></li>
 <li><p><strong>object_lock_retain_until_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time, in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a>, when this object’s object lock will <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods">expire</a>.</p></li>
@@ -1533,7 +1533,7 @@ use the exported <code class="docutils literal notranslate"><span class="pre">ar
 <li><p><strong>pulumi.Archive</strong><strong>]</strong><strong>] </strong><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>Union</em><em>[</em><em>pulumi.Asset</em><em>,</em>) – The path to a file that will be read and uploaded as raw bytes for the object content.</p></li>
 <li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the desired <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Class</a>
 for the object. Can be either “<code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>”, “<code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>”, “<code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>”, “<code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>”, “<code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>”, “<code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>”, or “<code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>”. Defaults to “<code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>”.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the object.</p></li>
 <li><p><strong>website_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a target URL for <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">website redirect</a>.</p></li>
 </ul>
 </dd>
@@ -1624,7 +1624,7 @@ use the exported <code class="docutils literal notranslate"><span class="pre">ar
 <dl class="py attribute">
 <dt id="pulumi_aws.s3.BucketObject.metadata">
 <code class="sig-name descname">metadata</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.metadata" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p>
+<dd><p>A map of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1667,7 +1667,7 @@ for the object. Can be either “<code class="docutils literal notranslate"><spa
 <dl class="py attribute">
 <dt id="pulumi_aws.s3.BucketObject.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the object.</p>
+<dd><p>A map of tags to assign to the object.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1717,7 +1717,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">false</s
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">kms.Key</span></code>,
 use the exported <code class="docutils literal notranslate"><span class="pre">arn</span></code> attribute:
 <code class="docutils literal notranslate"><span class="pre">kms_key_id</span> <span class="pre">=</span> <span class="pre">&quot;${aws_kms_key.foo.arn}&quot;</span></code></p></li>
-<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
 <li><p><strong>object_lock_legal_hold_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds">legal hold</a> status that you want to apply to the specified object. Valid values are <code class="docutils literal notranslate"><span class="pre">ON</span></code> and <code class="docutils literal notranslate"><span class="pre">OFF</span></code>.</p>
 </p></li>
 <li><p><strong>object_lock_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The object lock <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes">retention mode</a> that you want to apply to this object. Valid values are <code class="docutils literal notranslate"><span class="pre">GOVERNANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">COMPLIANCE</span></code>.</p>
@@ -1729,7 +1729,7 @@ use the exported <code class="docutils literal notranslate"><span class="pre">ar
 <li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the desired <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Class</a>
 for the object. Can be either “<code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>”, “<code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>”, “<code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>”, “<code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>”, “<code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>”, “<code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>”, or “<code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>”. Defaults to “<code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>”.</p>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the object.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique version ID value for the object, if bucket versioning
 is enabled.</p></li>
 <li><p><strong>website_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies a target URL for <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">website redirect</a>.</p>
@@ -2153,7 +2153,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.s3.GetBucketObjectResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags assigned to the object.</p>
+<dd><p>A map of tags assigned to the object.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2498,7 +2498,7 @@ Distribution.</p>
 <li><p><strong>bucket</strong> (<em>str</em>) – <p>The name of the bucket to read the object from. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified</p>
 </p></li>
 <li><p><strong>key</strong> (<em>str</em>) – The full path to the object inside the bucket</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the object.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags assigned to the object.</p></li>
 <li><p><strong>version_id</strong> (<em>str</em>) – Specific version ID of the object returned (defaults to latest version)</p></li>
 </ul>
 </dd>

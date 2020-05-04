@@ -90,7 +90,7 @@ Please note that setting a <code class="docutils literal notranslate"><span clas
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p></li>
 <li><p><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the subnet group to be used
 for the cache cluster.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 </ul>
 </dd>
 </dl>
@@ -275,7 +275,7 @@ for the cache cluster.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.elasticache.Cluster.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource</p>
+<dd><p>A map of tags to assign to the resource</p>
 </dd></dl>
 
 <dl class="py method">
@@ -344,7 +344,7 @@ Please note that setting a <code class="docutils literal notranslate"><span clas
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p></li>
 <li><p><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the subnet group to be used
 for the cache cluster.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 </ul>
 </dd>
 </dl>
@@ -782,7 +782,7 @@ Please note that setting a <code class="docutils literal notranslate"><span clas
 <li><p><strong>snapshot_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: <code class="docutils literal notranslate"><span class="pre">05:00-09:00</span></code></p></li>
 <li><p><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cache subnet group to be used for the replication group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 <li><p><strong>transit_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable encryption in transit.</p></li>
 </ul>
 </dd>
@@ -978,7 +978,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <dl class="py attribute">
 <dt id="pulumi_aws.elasticache.ReplicationGroup.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource</p>
+<dd><p>A map of tags to assign to the resource</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1037,7 +1037,7 @@ Please note that setting a <code class="docutils literal notranslate"><span clas
 <li><p><strong>snapshot_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: <code class="docutils literal notranslate"><span class="pre">05:00-09:00</span></code></p></li>
 <li><p><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cache subnet group to be used for the replication group.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource</p></li>
 <li><p><strong>transit_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable encryption in transit.</p></li>
 </ul>
 </dd>

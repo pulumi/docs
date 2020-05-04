@@ -224,7 +224,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -258,7 +258,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -292,7 +292,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -326,7 +326,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -602,7 +602,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -645,7 +645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -688,7 +688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -731,7 +731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -756,6 +756,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.CapacityProviderAutoScalingGroupProvider.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -907,6 +910,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderManagedScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecs?tab=doc#CapacityProviderAutoScalingGroupProviderManagedScalingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Inputs.CapacityProviderAutoScalingGroupProviderManagedScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Outputs.CapacityProviderAutoScalingGroupProviderManagedScaling.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

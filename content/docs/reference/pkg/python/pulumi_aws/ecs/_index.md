@@ -47,7 +47,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_scaling_group_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining the provider for the ECS auto scaling group. Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the capacity provider.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -97,7 +97,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_aws.ecs.CapacityProvider.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags.</p>
+<dd><p>Key-value map of resource tags.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -114,7 +114,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) that identifies the capacity provider.</p></li>
 <li><p><strong>auto_scaling_group_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining the provider for the ECS auto scaling group. Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the capacity provider.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -184,7 +184,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>default_capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -241,7 +241,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aws.ecs.Cluster.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py method">
@@ -260,7 +260,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>default_capacity_provider_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -917,7 +917,7 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <li><p><strong>placement_constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of placement constraints rules that are taken into consideration during task placement. Maximum number of <code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p></li>
 <li><p><strong>proxy_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The proxy configuration details for the App Mesh proxy.</p></li>
 <li><p><strong>requires_compatibilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of launch types required by the task. The valid values are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>task_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.</p></li>
 <li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of volume blocks that containers in your task may use.</p></li>
 </ul>
@@ -1071,7 +1071,7 @@ Guide</a>.</p></li>
 <dl class="py attribute">
 <dt id="pulumi_aws.ecs.TaskDefinition.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of resource tags</p>
+<dd><p>Key-value map of resource tags</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1137,7 +1137,7 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <li><p><strong>proxy_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The proxy configuration details for the App Mesh proxy.</p></li>
 <li><p><strong>requires_compatibilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of launch types required by the task. The valid values are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code>.</p></li>
 <li><p><strong>revision</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The revision of the task in a particular family.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of resource tags</p></li>
 <li><p><strong>task_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.</p></li>
 <li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of volume blocks that containers in your task may use.</p></li>
 </ul>

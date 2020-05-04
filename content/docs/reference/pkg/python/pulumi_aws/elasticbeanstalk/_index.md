@@ -28,7 +28,7 @@ the infrastructure that runs those applications.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the application</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application, must be unique within your account</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the Elastic Beanstalk Application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -60,7 +60,7 @@ the infrastructure that runs those applications.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Application.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of tags for the Elastic Beanstalk Application.</p>
+<dd><p>Key-value map of tags for the Elastic Beanstalk Application.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -77,7 +77,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this Elastic Beanstalk Application.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the application</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application, must be unique within your account</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the Elastic Beanstalk Application.</p></li>
 </ul>
 </dd>
 </dl>
@@ -154,7 +154,7 @@ To work around this you can either create each environment in a separate AWS acc
 by multiple Elastic Beanstalk Environments.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 object that is the Application Version source bundle.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the this Application Version.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application Version.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the Elastic Beanstalk Application Version.</p></li>
 </ul>
 </dd>
 </dl>
@@ -204,7 +204,7 @@ by multiple Elastic Beanstalk Environments.</p>
 <dl class="py attribute">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value mapping of tags for the Elastic Beanstalk Application Version.</p>
+<dd><p>Key-value map of tags for the Elastic Beanstalk Application Version.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -226,7 +226,7 @@ properties used to qualify the lookup.</p>
 by multiple Elastic Beanstalk Environments.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 object that is the Application Version source bundle.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the this Application Version.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application Version.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags for the Elastic Beanstalk Application Version.</p></li>
 </ul>
 </dd>
 </dl>

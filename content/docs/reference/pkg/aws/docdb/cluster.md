@@ -439,7 +439,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,7 +670,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +901,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,7 +1132,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1785,7 +1785,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2061,7 +2061,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2337,7 +2337,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2613,7 +2613,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+    <dd>{{% md %}}A map of tags to assign to the DB cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

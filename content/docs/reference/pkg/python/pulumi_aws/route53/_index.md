@@ -157,7 +157,7 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dl class="py attribute">
 <dt id="pulumi_aws.route53.GetResolverRuleResult.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags assigned to the resolver rule.</p>
+<dd><p>A map of tags assigned to the resolver rule.</p>
 </dd></dl>
 
 </dd></dl>
@@ -255,7 +255,7 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <li><p><strong>request_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.</p></li>
 <li><p><strong>resource_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path that you want Amazon Route 53 to request when performing health checks.</p></li>
 <li><p><strong>search_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with <code class="docutils literal notranslate"><span class="pre">HTTP_STR_MATCH</span></code> and <code class="docutils literal notranslate"><span class="pre">HTTPS_STR_MATCH</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the health check.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the health check.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use when performing health checks. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP_STR_MATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS_STR_MATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">CALCULATED</span></code> and <code class="docutils literal notranslate"><span class="pre">CLOUDWATCH_METRIC</span></code>.</p></li>
 </ul>
 </dd>
@@ -366,7 +366,7 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dl class="py attribute">
 <dt id="pulumi_aws.route53.HealthCheck.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.HealthCheck.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the health check.</p>
+<dd><p>A map of tags to assign to the health check.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -404,7 +404,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>request_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.</p></li>
 <li><p><strong>resource_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path that you want Amazon Route 53 to request when performing health checks.</p></li>
 <li><p><strong>search_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with <code class="docutils literal notranslate"><span class="pre">HTTP_STR_MATCH</span></code> and <code class="docutils literal notranslate"><span class="pre">HTTPS_STR_MATCH</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the health check.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the health check.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use when performing health checks. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP_STR_MATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS_STR_MATCH</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">CALCULATED</span></code> and <code class="docutils literal notranslate"><span class="pre">CLOUDWATCH_METRIC</span></code>.</p></li>
 </ul>
 </dd>
@@ -810,7 +810,7 @@ or <code class="docutils literal notranslate"><span class="pre">OUTBOUND</span><
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name of the Route 53 Resolver endpoint.</p></li>
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups that you want to use to control access to this VPC.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -867,7 +867,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 <dl class="py attribute">
 <dt id="pulumi_aws.route53.ResolverEndpoint.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -890,7 +890,7 @@ or <code class="docutils literal notranslate"><span class="pre">OUTBOUND</span><
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name of the Route 53 Resolver endpoint.</p></li>
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups that you want to use to control access to this VPC.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -954,7 +954,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resolver_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using <code class="docutils literal notranslate"><span class="pre">target_ip</span></code>.
 This argument should only be specified for <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code> type rules.</p></li>
 <li><p><strong>rule_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rule type. Valid values are <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> and <code class="docutils literal notranslate"><span class="pre">RECURSIVE</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>target_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code> type rules.</p></li>
 </ul>
@@ -1012,7 +1012,7 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <dl class="py attribute">
 <dt id="pulumi_aws.route53.ResolverRule.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverRule.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1046,7 +1046,7 @@ This argument should only be specified for <code class="docutils literal notrans
 <li><p><strong>rule_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rule type. Valid values are <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> and <code class="docutils literal notranslate"><span class="pre">RECURSIVE</span></code>.</p></li>
 <li><p><strong>share_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
 Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHARED</span></code>, <code class="docutils literal notranslate"><span class="pre">SHARED_BY_ME</span></code> or <code class="docutils literal notranslate"><span class="pre">SHARED_WITH_ME</span></code></p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 <li><p><strong>target_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code> type rules.</p></li>
 </ul>
@@ -1450,7 +1450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resolver_endpoint_id</strong> (<em>str</em>) – The ID of the outbound resolver endpoint of the desired resolver rule. Conflicts with <code class="docutils literal notranslate"><span class="pre">resolver_rule_id</span></code>.</p></li>
 <li><p><strong>resolver_rule_id</strong> (<em>str</em>) – The ID of the desired resolver rule. Conflicts with <code class="docutils literal notranslate"><span class="pre">domain_name</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">resolver_endpoint_id</span></code> and <code class="docutils literal notranslate"><span class="pre">rule_type</span></code>.</p></li>
 <li><p><strong>rule_type</strong> (<em>str</em>) – The rule type of the desired resolver rule. Valid values are <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> and <code class="docutils literal notranslate"><span class="pre">RECURSIVE</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">resolver_rule_id</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the resolver rule.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags assigned to the resolver rule.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1484,7 +1484,7 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <li><p><strong>name</strong> (<em>str</em>) – The Hosted Zone name of the desired Hosted Zone.</p></li>
 <li><p><strong>private_zone</strong> (<em>bool</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field to get a private Hosted Zone.</p></li>
 <li><p><strong>resource_record_set_count</strong> (<em>float</em>) – The number of Record Set in the Hosted Zone.</p></li>
-<li><p><strong>tags</strong> (<em>dict</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field. A mapping of tags, each pair of which must exactly match a pair on the desired Hosted Zone.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field. A map of tags, each pair of which must exactly match a pair on the desired Hosted Zone.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).</p></li>
 <li><p><strong>zone_id</strong> (<em>str</em>) – The Hosted Zone id of the desired Hosted Zone.</p></li>
 </ul>

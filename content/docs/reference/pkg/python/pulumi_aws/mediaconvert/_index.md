@@ -27,7 +27,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>pricing_plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">RESERVED</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
 <li><p><strong>reservation_plan_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A detail pricing plan of the  reserved queue. See below.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A status of the queue. Valid values are <code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code> or <code class="docutils literal notranslate"><span class="pre">RESERVED</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -81,7 +81,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="py attribute">
 <dt id="pulumi_aws.mediaconvert.Queue.tags">
 <code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediaconvert.Queue.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags to assign to the resource.</p>
+<dd><p>A map of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -101,7 +101,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>pricing_plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">RESERVED</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
 <li><p><strong>reservation_plan_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A detail pricing plan of the  reserved queue. See below.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A status of the queue. Valid values are <code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code> or <code class="docutils literal notranslate"><span class="pre">RESERVED</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">PAUSED</span></code>.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>

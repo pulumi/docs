@@ -36,9 +36,9 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
 {{% /example %}}
 {{% /examples %}}
 
-Deprecated: aws.ListenerCertificate has been deprecated in favour of aws.ListenerCertificate
+Deprecated: aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favour of aws.lb.ListenerCertificate
 
-<p class="resource-deprecated">Deprecated: {{% md %}}aws.ListenerCertificate has been deprecated in favour of aws.ListenerCertificate{{% /md %}}</p>
+<p class="resource-deprecated">Deprecated: {{% md %}}aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favour of aws.lb.ListenerCertificate{{% /md %}}</p>
 
 
 ## Create a ListenerCertificate Resource {#create}
