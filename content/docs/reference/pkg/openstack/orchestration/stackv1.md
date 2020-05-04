@@ -1869,6 +1869,9 @@ is the time zone as an offset from UTC.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.Inputs.StackV1OutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Orchestration.Outputs.StackV1Output.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

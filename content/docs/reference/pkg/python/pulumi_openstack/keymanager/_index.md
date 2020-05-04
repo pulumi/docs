@@ -478,6 +478,194 @@ explicitly and implicitly added.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_openstack.keymanager.OrderV1">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">OrderV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V1 Barbican order resource within OpenStack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Dictionary containing the order metadata used to generate the order. The structure is described below.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V1 KeyManager client.
+A KeyManager client is needed to create a order. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+V1 order.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of key to be generated. Must be one of <code class="docutils literal notranslate"><span class="pre">asymmetric</span></code>, <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>meta</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Algorithm to use for key generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit_length</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - - Bit lenght of key to be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode to use for key generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the secret set by the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload_content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The media type for the content of the secrets payload. Must be one of <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/plain;charset=utf-8</span></code>, <code class="docutils literal notranslate"><span class="pre">text/plain;</span> <span class="pre">charset=utf-8</span></code>, <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>, <code class="docutils literal notranslate"><span class="pre">application/pkcs8</span></code>.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.container_ref">
+<code class="sig-name descname">container_ref</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.container_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>The container reference / where to find the container.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.created">
+<code class="sig-name descname">created</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.created" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the order was created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.creator_id">
+<code class="sig-name descname">creator_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.creator_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The creator of the order.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.meta">
+<code class="sig-name descname">meta</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary containing the order metadata used to generate the order. The structure is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Algorithm to use for key generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit_length</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - - Bit lenght of key to be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The mode to use for key generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the secret set by the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload_content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The media type for the content of the secrets payload. Must be one of <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/plain;charset=utf-8</span></code>, <code class="docutils literal notranslate"><span class="pre">text/plain;</span> <span class="pre">charset=utf-8</span></code>, <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>, <code class="docutils literal notranslate"><span class="pre">application/pkcs8</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.order_ref">
+<code class="sig-name descname">order_ref</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.order_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>The order reference / where to find the order.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.region">
+<code class="sig-name descname">region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V1 KeyManager client.
+A KeyManager client is needed to create a order. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+V1 order.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.secret_ref">
+<code class="sig-name descname">secret_ref</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.secret_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secret reference / where to find the secret.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.status">
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the order.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.sub_status">
+<code class="sig-name descname">sub_status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.sub_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sub status of the order.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.sub_status_message">
+<code class="sig-name descname">sub_status_message</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.sub_status_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sub status message of the order.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.type">
+<code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of key to be generated. Must be one of <code class="docutils literal notranslate"><span class="pre">asymmetric</span></code>, <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_openstack.keymanager.OrderV1.updated">
+<code class="sig-name descname">updated</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the order was last updated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_openstack.keymanager.OrderV1.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creator_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">order_ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sub_status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sub_status_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OrderV1 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container reference / where to find the container.</p></li>
+<li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the order was created.</p></li>
+<li><p><strong>creator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creator of the order.</p></li>
+<li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Dictionary containing the order metadata used to generate the order. The structure is described below.</p></li>
+<li><p><strong>order_ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The order reference / where to find the order.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V1 KeyManager client.
+A KeyManager client is needed to create a order. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+V1 order.</p></li>
+<li><p><strong>secret_ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret reference / where to find the secret.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the order.</p></li>
+<li><p><strong>sub_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sub status of the order.</p></li>
+<li><p><strong>sub_status_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sub status message of the order.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of key to be generated. Must be one of <code class="docutils literal notranslate"><span class="pre">asymmetric</span></code>, <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p></li>
+<li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the order was last updated.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>meta</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Algorithm to use for key generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bit_length</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - - Bit lenght of key to be generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode to use for key generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the secret set by the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload_content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The media type for the content of the secrets payload. Must be one of <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/plain;charset=utf-8</span></code>, <code class="docutils literal notranslate"><span class="pre">text/plain;</span> <span class="pre">charset=utf-8</span></code>, <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>, <code class="docutils literal notranslate"><span class="pre">application/pkcs8</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_openstack.keymanager.OrderV1.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_openstack.keymanager.OrderV1.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.OrderV1.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_openstack.keymanager.SecretV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">SecretV1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bit_length</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expiration</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payload</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payload_content_encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payload_content_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SecretV1 resource with the given unique name, props, and options.

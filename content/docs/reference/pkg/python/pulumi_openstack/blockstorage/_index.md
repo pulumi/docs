@@ -655,7 +655,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_openstack.blockstorage.Volume">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_online_resize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiattach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_online_resize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiattach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 volume resource within OpenStack.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -681,6 +681,8 @@ volume’s name.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</p></li>
+<li><p><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes).</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
 Changing this creates a new volume.</p></li>
@@ -692,6 +694,23 @@ Changing this creates a new volume.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>scheduler_hints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localToInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An instance UUID. The volume should be 
+scheduled on the same host as the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A conditional query that a back-end must pass in
+order to host a volume. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.</p></li>
+</ul>
 <dl class="py attribute">
 <dt id="pulumi_openstack.blockstorage.Volume.attachments">
 <code class="sig-name descname">attachments</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.attachments" title="Permalink to this definition">¶</a></dt>
@@ -770,6 +789,29 @@ creates a new volume.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_openstack.blockstorage.Volume.scheduler_hints">
+<code class="sig-name descname">scheduler_hints</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.scheduler_hints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localToInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An instance UUID. The volume should be 
+scheduled on the same host as the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A conditional query that a back-end must pass in
+order to host a volume. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_openstack.blockstorage.Volume.size">
 <code class="sig-name descname">size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the volume to create (in gigabytes).</p>
@@ -804,7 +846,7 @@ Changing this creates a new volume.</p>
 
 <dl class="py method">
 <dt id="pulumi_openstack.blockstorage.Volume.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_online_resize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiattach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_online_resize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multiattach</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -835,6 +877,8 @@ volume’s name.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</p></li>
+<li><p><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes).</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
 Changing this creates a new volume.</p></li>
@@ -851,6 +895,23 @@ Changing this creates a new volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>scheduler_hints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localToInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An instance UUID. The volume should be 
+scheduled on the same host as the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A conditional query that a back-end must pass in
+order to host a volume. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.</p></li>
 </ul>
 </dd></dl>
 
@@ -1537,7 +1598,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_openstack.blockstorage.VolumeV2">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">VolumeV2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">VolumeV2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 volume resource within OpenStack.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1559,6 +1620,8 @@ volume’s name.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</p></li>
+<li><p><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes). Changing
 this creates a new volume.</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
@@ -1571,6 +1634,23 @@ Changing this creates a new volume.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>scheduler_hints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localToInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An instance UUID. The volume should be 
+scheduled on the same host as the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A conditional query that a back-end must pass in
+order to host a volume. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.</p></li>
+</ul>
 <dl class="py attribute">
 <dt id="pulumi_openstack.blockstorage.VolumeV2.attachments">
 <code class="sig-name descname">attachments</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.attachments" title="Permalink to this definition">¶</a></dt>
@@ -1635,6 +1715,29 @@ creates a new volume.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_openstack.blockstorage.VolumeV2.scheduler_hints">
+<code class="sig-name descname">scheduler_hints</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.scheduler_hints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localToInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An instance UUID. The volume should be 
+scheduled on the same host as the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A conditional query that a back-end must pass in
+order to host a volume. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_openstack.blockstorage.VolumeV2.size">
 <code class="sig-name descname">size</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of the volume to create (in gigabytes). Changing
@@ -1670,7 +1773,7 @@ Changing this creates a new volume.</p>
 
 <dl class="py method">
 <dt id="pulumi_openstack.blockstorage.VolumeV2.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attachments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">availability_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">consistency_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scheduler_hints</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">snapshot_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_replica</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_vol_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">volume_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeV2 resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1697,6 +1800,8 @@ volume’s name.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</p></li>
+<li><p><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Cinder scheduler with hints on where
+to instantiate a volume in the OpenStack cloud. The available hints are described below.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes). Changing
 this creates a new volume.</p></li>
 <li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
@@ -1714,6 +1819,23 @@ Changing this creates a new volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>scheduler_hints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arbitrary key/value pairs of additional
+properties to pass to the scheduler.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">differentHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The volume should be scheduled on a 
+different host from the set of volumes specified in the list provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localToInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An instance UUID. The volume should be 
+scheduled on the same host as the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A conditional query that a back-end must pass in
+order to host a volume. The query must use the <code class="docutils literal notranslate"><span class="pre">JsonFilter</span></code> syntax
+which is described
+<a class="reference external" href="https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter">here</a>.
+At this time, only simple queries are supported. Compound queries using
+<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, or <code class="docutils literal notranslate"><span class="pre">not</span></code> are not supported. An example of a simple query is:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sameHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of volume UUIDs. The volume should be
+scheduled on the same host as another volume specified in the list provided.</p></li>
 </ul>
 </dd></dl>
 

@@ -879,6 +879,9 @@ may be used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroupRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Inputs.SecGroupRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.Outputs.SecGroupRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

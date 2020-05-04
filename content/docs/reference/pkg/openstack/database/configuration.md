@@ -866,6 +866,9 @@ creates a new instance.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database?tab=doc#ConfigurationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database?tab=doc#ConfigurationConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Database.Inputs.ConfigurationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Database.Outputs.ConfigurationConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -980,6 +983,9 @@ creates a new instance.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database?tab=doc#ConfigurationDatastoreArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/database?tab=doc#ConfigurationDatastoreOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Database.Inputs.ConfigurationDatastoreArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Database.Outputs.ConfigurationDatastore.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

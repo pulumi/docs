@@ -60,7 +60,7 @@ for (let i = 0; i < 2; i++) {
     }));
 }
 
-export const volume_devices = attachments.map(v => v.device);
+export const volumeDevices = attachments.map(v => v.device);
 ```
 
 Note that the above example will not guarantee that the volumes are attached in
@@ -92,7 +92,7 @@ const attach2 = new openstack.compute.VolumeAttach("attach_2", {
     volumeId: volumes[1].id,
 }, { dependsOn: [attach1] });
 
-export const volume_devices = openstack_compute_volume_attach_v2_attachments.map(v => v.device);
+export const volumeDevices = openstack_compute_volume_attach_v2_attachments.map(v => v.device);
 ```
 
 {{% /example %}}
