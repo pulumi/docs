@@ -12,13 +12,13 @@ tags:
     - security
 ---
 
-The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. [Previously](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) we introduced client-side secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
-Our first iteration of the client-side encryption used a passphrase for encrypting the secret, however, remembering that passphrase and sharing it securely with team members is less than ideal.
+The secrets in your infrastructure are a vital part of your security model, and provisioning infrastructure is an inherently privileged process. [Previously](https://www.pulumi.com/blog/managing-secrets-with-pulumi/) we introduced secret encryption and started encrypting secret configuration values inside the Pulumi state so that users could be confident their passwords, tokens and other secret values were viewable only by them while managing their infrastructure.
+Our first iteration of the encryption used either a passphrase for encrypting the secret or encryption via the Pulumi service backend. However, these options didn't meet the needs of our users who needed more control over their data.
 That's why we also added support for "Cloud Secret Providers", giving users full confidence that their sensitive values are for their eyes only.
 
 <!--more-->
 
-Pulumi supports encryption via [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
+Pulumi supports encryption via the [Pulumi service](https://www.pulumi.com/docs/intro/concepts/config/#configuring-secrets-encryption), [AWS KMS](https://aws.amazon.com/kms/), [Azure KeyVault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud KMS](https://cloud.google.com/kms) and [Hashicorp Vault](https://www.vaultproject.io/). This post shows you _one_ example of using a cloud secret provider in a Pulumi stack using AWS KMS.
 
 ## Create a KMS Key
 
@@ -166,7 +166,7 @@ class KeyStack : Stack
 
 {{< /chooser >}}
 
-Creating the key is enough to allow us to start using it for our encryption provider. However, we need to consider who has access to the key before we start utilizing it with Pulumi.
+Creating the key is enough to allow us to start using it for our encryption provider. However, we need to consider who has access to the key before we start encrypting our sensitive values with it in our Pulumi programs.
 
 ## Scoping Permission to our Key
 
@@ -188,7 +188,7 @@ Generally, in AWS, you scope access to resources using IAM roles. However, for s
 
 That user gets access to every KMS key in your account, which would also mean they could decrypt any secret in your Pulumi stack.
 
-To rectify this, we need to attach a Key Policy to the key:
+To rectify this, we need to attach a Key Policy to the key. We can do this by updating our previous code:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -546,19 +546,22 @@ aws sts get-caller-identity | jq .Arn -r | pulumi config set <projectname>:iamRo
 Now our key has been created and is adequately scoped; we can create a new stack and use the `secrets-provider` flag on creation to specify the KMS key to encrypt our secrets.
 
 ```bash
-# In our examples we set our alias to "stack-encryption-key" so we'll use that
+# We need to first retrieve the stack encryption key from our previous stack
+KEY_ALIAS=$(pulumi stack output aliasArn | cut -d/ -f2)
 # Note, we need to set the region we're deploying to
-pulumi new aws-typescript -n <projectname> -s <stackname> -d "An example stack encrypted with AWS KMS" --secrets-provider="awskms://alias/stack-encryption-key?region=us-west-2" --config aws:region=us-west-2
+pulumi new aws-typescript -n <projectname> -s <stackname> -d "An example stack encrypted with AWS KMS" --secrets-provider="awskms://alias/${KEY_ALIAS}?region=us-west-2" --config aws:region=us-west-2 --dir $HOME/git/new-project
 ```
 
 You can check inside your `Pulumi.<stackname>.yaml` for which key you're using to encrypt your secrets:
 
 ```yaml
-secretsprovider: awskms://alias/stack-encryption-key?region=us-west-2
+secretsprovider: awskms://alias/<stack-encryption-key-alias>?region=us-west-2
 encryptedkey: AQICAHjqW3rb5Hw5Vpxi0c1sayz52VXj7yn20WVwsVILJSBU8wFDjvGuox3wDCJX99TxZFzAAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMWNeFRZIg8kVXMxrUAgEQgDtz6zV0aqegeAbmaQUNllMp8PQJa1qbjBH813I/XH6LbfynxZO9NE3sYPG89G0u/ltYsADiUAFS0bnadQ==
 config:
   aws:region: us-west-2
 ```
+
+It's worth noting here that the "encryptedkey" field here is an encrypted version of the data key in AWS KMS. You can read more about this [here](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#data-keys).
 
 ## Use your Encrypted Secret
 
@@ -570,7 +573,7 @@ pulumi config set --secret supersecret correct-horse-battery-stable
 
 ## Verify the encryption
 
-To verify that the secret is indeed only accessible to the KMS key we created earlier, we can remove access to the key temporarily and try to perform a Pulumi operation. First, let's use the secret in our stack:
+To verify that the secret is indeed only accessible to the KMS key we created earlier, we can remove access to the key temporarily and try to perform a Pulumi operation. There are a few ways to remove your access, but first, let's use the secret in our stack:
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -651,7 +654,7 @@ class AnotherStack : Stack
 
 {{< /chooser >}}
 
-Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
+Now we need to verify if the value is _actually_ encrypted. An easy way to do that is to try and export the secret value without access to the key. In my setup, I use the `AWS_PROFILE` environment variable which refers to a [named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) to configure access to AWS. If I unset this environment variable, I will no longer be using the AWS credentials that have access to this KMS key. Let's unset the AWS_PROFILE environment variable and then rerun `pulumi up`:
 
 ```bash
 unset AWS_PROFILE
