@@ -593,3 +593,15 @@ The following output properties are available:
 
 
 
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-rancher2">https://github.com/pulumi/pulumi-rancher2</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+</dl>
+
