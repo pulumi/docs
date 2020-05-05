@@ -4,7 +4,7 @@ title: "Peace of Mind with Cloud Secret Providers"
 date: 2020-05-07T14:30:35-07:00
 draft: false
 meta_desc: "Encrypt your Pulumi secrets with a cloud secrets provider"
-meta_image: meta.png
+meta_image: secrets.png
 authors:
     - lee-briggs
 tags:
