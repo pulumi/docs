@@ -15,6 +15,41 @@ Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP
 > **NOTE:** Floating IPs can be assigned to a Droplet either directly on the `digitalocean..FloatingIp` resource by setting a `droplet_id` or using the `digitalocean..FloatingIpAssignment` resource, but the two cannot be used together.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobarDroplet = new digitalocean.Droplet("foobarDroplet", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "sgp1",
+    ipv6: true,
+    privateNetworking: true,
+});
+const foobarFloatingIp = new digitalocean.FloatingIp("foobarFloatingIp", {
+    dropletId: foobarDroplet.id,
+    region: foobarDroplet.region,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foobar_droplet = digitalocean.Droplet("foobarDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="sgp1",
+    ipv6=True,
+    private_networking=True)
+foobar_floating_ip = digitalocean.FloatingIp("foobarFloatingIp",
+    droplet_id=foobar_droplet.id,
+    region=foobar_droplet.region)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 

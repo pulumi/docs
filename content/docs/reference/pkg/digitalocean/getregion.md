@@ -14,6 +14,27 @@ Get information on a single DigitalOcean region. This is useful to find out
 what Droplet sizes and features are supported within a region.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const sfo2 = digitalocean.getRegion({
+    slug: "sfo2",
+});
+export const regionName = sfo2.then(sfo2 => sfo2.name);
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+sfo2 = digitalocean.get_region(slug="sfo2")
+pulumi.export("regionName", sfo2.name)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -375,4 +396,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

@@ -15,6 +15,61 @@ source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Get the volume snapshot:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
+    mostRecent: true,
+    nameRegex: "^web",
+    region: "nyc3",
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+snapshot = digitalocean.get_volume_snapshot(most_recent=True,
+    name_regex="^web",
+    region="nyc3")
+```
+
+Reuse the data about a volume snapshot to create a new volume based on it:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const snapshot = digitalocean.getVolumeSnapshot({
+    nameRegex: "^web",
+    region: "nyc3",
+    mostRecent: true,
+});
+const foobar = new digitalocean.Volume("foobar", {
+    region: "nyc3",
+    size: 100,
+    snapshotId: snapshot.then(snapshot => snapshot.id),
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+snapshot = digitalocean.get_volume_snapshot(name_regex="^web",
+    region="nyc3",
+    most_recent=True)
+foobar = digitalocean.Volume("foobar",
+    region="nyc3",
+    size=100,
+    snapshot_id=snapshot.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -648,4 +703,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

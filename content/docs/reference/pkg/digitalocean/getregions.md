@@ -35,6 +35,15 @@ const available = pulumi.output(digitalocean.getRegions({
     }],
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+available = digitalocean.get_regions(filters=[{
+    "key": "available",
+    "values": ["true"],
+}])
+```
 
 You can filter on multiple fields and sort the results as well:
 
@@ -58,6 +67,25 @@ const available = pulumi.output(digitalocean.getRegions({
         key: "name",
     }],
 }, { async: true }));
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+available = digitalocean.get_regions(filters=[
+        {
+            "key": "available",
+            "values": ["true"],
+        },
+        {
+            "key": "features",
+            "values": ["private_networking"],
+        },
+    ],
+    sorts=[{
+        "direction": "desc",
+        "key": "name",
+    }])
 ```
 
 {{% /example %}}
@@ -419,6 +447,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetRegionsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetRegionsFilter">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.GetRegionsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetRegionsFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -541,6 +572,9 @@ where the `key` field takes on one or more of the values provided here.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetRegionsRegion">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetRegionsRegion.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -745,6 +779,9 @@ where the `key` field takes on one or more of the values provided here.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetRegionsSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetRegionsSort">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.GetRegionsSortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetRegionsSort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -857,4 +894,16 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

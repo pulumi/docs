@@ -15,6 +15,137 @@ the ability to filter and sort the results. If no filters are specified, all siz
 will be returned.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+Most common usage will probably be to supply a size to droplet:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const main = digitalocean.getSizes({
+    filter: [{
+        key: "slug",
+        values: ["s-1vcpu-1gb"],
+    }],
+});
+const web = new digitalocean.Droplet("web", {
+    image: "ubuntu-18-04-x64",
+    region: "sgp1",
+    size: main.then(main => main.sizes)[0].then(main => main.slug),
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+main = digitalocean.get_sizes(filter=[{
+    "key": "slug",
+    "values": ["s-1vcpu-1gb"],
+}])
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="sgp1",
+    size=main.sizes[0].slug)
+```
+
+The data source also supports multiple filters and sorts. For example, to fetch sizes with 1 or 2 virtual CPU that are available "sgp1" region, then pick the cheapest one:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const main = digitalocean.getSizes({
+    filter: [
+        {
+            key: "vcpus",
+            values: [
+                1,
+                2,
+            ],
+        },
+        {
+            key: "regions",
+            values: ["sgp1"],
+        },
+    ],
+    sort: [{
+        key: "price_monthly",
+        direction: "asc",
+    }],
+});
+const web = new digitalocean.Droplet("web", {
+    image: "ubuntu-18-04-x64",
+    region: "sgp1",
+    size: main.then(main => main.sizes)[0].then(main => main.slug),
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+main = digitalocean.get_sizes(filter=[
+        {
+            "key": "vcpus",
+            "values": [
+                1,
+                2,
+            ],
+        },
+        {
+            "key": "regions",
+            "values": ["sgp1"],
+        },
+    ],
+    sort=[{
+        "key": "price_monthly",
+        "direction": "asc",
+    }])
+web = digitalocean.Droplet("web",
+    image="ubuntu-18-04-x64",
+    region="sgp1",
+    size=main.sizes[0].slug)
+```
+
+The data source can also handle multiple sorts. In which case, the sort will be applied in the order it is defined. For example, to sort by memory in ascending order, then sort by disk in descending order between sizes with same memory:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const main = pulumi.output(digitalocean.getSizes({
+    sorts: [
+        {
+            direction: "asc",
+            // Sort by memory ascendingly
+            key: "memory",
+        },
+        {
+            direction: "desc",
+            // Then sort by disk descendingly for sizes with same memory
+            key: "disk",
+        },
+    ],
+}, { async: true }));
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+main = digitalocean.get_sizes(sorts=[
+    {
+        "direction": "asc",
+        "key": "memory",
+    },
+    {
+        "direction": "desc",
+        "key": "disk",
+    },
+])
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 
@@ -349,6 +480,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesFilter">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.GetSizesFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetSizesFilter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -475,6 +609,9 @@ one of the values provided here.
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesSize">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetSizesSize.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -843,6 +980,9 @@ one of the values provided here.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesSort">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Inputs.GetSizesSortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.Outputs.GetSizesSort.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -955,4 +1095,16 @@ one of the values provided here.
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 

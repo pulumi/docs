@@ -15,6 +15,43 @@ makes it easy to provision floating IP addresses that are not tied to the lifecy
 Droplet.
 
 {{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobarFloatingIp = new digitalocean.FloatingIp("foobarFloatingIp", {region: "sgp1"});
+const foobarDroplet = new digitalocean.Droplet("foobarDroplet", {
+    size: "s-1vcpu-1gb",
+    image: "ubuntu-18-04-x64",
+    region: "sgp1",
+    ipv6: true,
+    privateNetworking: true,
+});
+const foobarFloatingIpAssignment = new digitalocean.FloatingIpAssignment("foobarFloatingIpAssignment", {
+    ipAddress: foobarFloatingIp.ipAddress,
+    dropletId: foobarDroplet.id,
+});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+foobar_floating_ip = digitalocean.FloatingIp("foobarFloatingIp", region="sgp1")
+foobar_droplet = digitalocean.Droplet("foobarDroplet",
+    size="s-1vcpu-1gb",
+    image="ubuntu-18-04-x64",
+    region="sgp1",
+    ipv6=True,
+    private_networking=True)
+foobar_floating_ip_assignment = digitalocean.FloatingIpAssignment("foobarFloatingIpAssignment",
+    ip_address=foobar_floating_ip.ip_address,
+    droplet_id=foobar_droplet.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 

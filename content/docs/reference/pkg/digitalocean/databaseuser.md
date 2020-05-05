@@ -15,6 +15,37 @@ Provides a DigitalOcean database user resource. When creating a new database clu
 > **NOTE:** Any new users created will always have `normal` role, only the default user that comes with database cluster creation has `primary` role. Additional permissions must be managed manually.
 
 {{% examples %}}
+## Example Usage
+
+{{% example %}}
+### Create a new PostgreSQL database user
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const postgres-example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    version: "11",
+    size: "db-s-1vcpu-1gb",
+    region: "nyc1",
+    nodeCount: 1,
+});
+const user-example = new digitalocean.DatabaseUser("user-example", {clusterId: postgres-example.id});
+```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+postgres_example = digitalocean.DatabaseCluster("postgres-example",
+    engine="pg",
+    version="11",
+    size="db-s-1vcpu-1gb",
+    region="nyc1",
+    node_count=1)
+user_example = digitalocean.DatabaseUser("user-example", cluster_id=postgres_example.id)
+```
+
+{{% /example %}}
 {{% /examples %}}
 
 

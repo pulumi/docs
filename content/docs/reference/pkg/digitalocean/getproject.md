@@ -26,6 +26,13 @@ const staging = pulumi.output(digitalocean.getProject({
     name: "My Staging Project",
 }, { async: true }));
 ```
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+default = digitalocean.get_project()
+staging = digitalocean.get_project(name="My Staging Project")
+```
 
 {{% /example %}}
 {{% /examples %}}
@@ -597,4 +604,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+</dl>
 
