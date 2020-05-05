@@ -2241,6 +2241,9 @@ using PARTNER type this will be managed upstream.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentPrivateInterconnectInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InterconnectAttachmentPrivateInterconnectInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 

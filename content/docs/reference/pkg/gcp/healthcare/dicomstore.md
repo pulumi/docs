@@ -15,7 +15,7 @@ A DicomStore is a datastore inside a Healthcare dataset that conforms to the DIC
 
 To get more information about DicomStore, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.dicomStores)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.dicomStores)
 * How-to Guides
     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
 
@@ -902,6 +902,9 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#DicomStoreNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#DicomStoreNotificationConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.DicomStoreNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.DicomStoreNotificationConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

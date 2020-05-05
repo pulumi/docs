@@ -15,7 +15,7 @@ standard for Healthcare information exchange
 
 To get more information about Hl7V2Store, see:
 
-* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.hl7V2Stores)
+* [API documentation](https://cloud.google.com/healthcare/docs/reference/rest/v1/projects.locations.datasets.hl7V2Stores)
 * How-to Guides
     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
 
@@ -975,6 +975,9 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreNotificationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.Hl7StoreNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.Hl7StoreNotificationConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1074,6 +1077,9 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreParserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#Hl7StoreParserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.Hl7StoreParserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.Hl7StoreParserConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1088,6 +1094,16 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
+store if schematized parsing is desired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1118,6 +1134,16 @@ A base64-encoded string.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
+store if schematized parsing is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Segment<wbr>Terminator</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1144,6 +1170,16 @@ A base64-encoded string.
 
     <dt class="property-optional"
             title="Optional">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
+store if schematized parsing is desired.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>segment<wbr>Terminator</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1166,6 +1202,16 @@ A base64-encoded string.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
+store if schematized parsing is desired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
