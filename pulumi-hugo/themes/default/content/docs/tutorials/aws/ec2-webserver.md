@@ -168,58 +168,56 @@ pulumi.export('publicHostName', server.public_dns)
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Pulumi.Aws.Inputs;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main() =>
-        Deployment.Run(() =>
+    public MyStack()
+    {
+        var size = "t2.micro";     // t2.micro is available in the AWS free tier
+
+        var ami = Pulumi.Aws.GetAmi.InvokeAsync(new Pulumi.Aws.GetAmiArgs
         {
-            var size = "t2.micro";     // t2.micro is available in the AWS free tier
-            var ami = Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
-            {
-                Filters =
+            Filters =
                 {
-                    new GetAmiFiltersArgs
+                    new GetAmiFilterArgs
                     {
                         Name = "name",
                         Values =  { "amzn-ami-hvm-*" },
                     },
                 },
-                Owners = { "137112412989" }, // This owner ID is Amazon
-                MostRecent = true,
-            });
+            Owners = { "137112412989" }, // This owner ID is Amazon
+            MostRecent = true,
+        }).Result;
 
-            var group = new Aws.Ec2.SecurityGroup("webserver-secgrp", new Aws.Ec2.SecurityGroupArgs
+        var group = new Pulumi.Aws.Ec2.SecurityGroup("webserver-secgrp", new Pulumi.Aws.Ec2.SecurityGroupArgs
+        {
+            Ingress = new Pulumi.Aws.Ec2.Inputs.SecurityGroupIngressArgs
             {
-                Ingress =
-                {
-                    new Aws.Ec2.SecurityGroupIngressArgs
-                    {
-                        Protocol = "tcp",
-                        FromPort = 22,
-                        ToPort = 22,
-                        CidrBlocks = { "0.0.0.0/0" },
-                    },
-                },
-            });
-
-            var server = new Aws.Ec2.Instance("webserver-www", new Aws.Ec2.InstanceArgs
-            {
-                InstanceType = size,
-                SecurityGroups = { group.Name }, // reference the security group resource above
-                Ami = ami.Id,
-            });
-
-            return new Dictionary<string, object>
-            {
-                { "publicIp", server.PublicIp },
-                { "publicHostName", server.PublicDns },
-            };
+                Protocol = "tcp",
+                FromPort = 22,
+                ToPort = 22,
+                CidrBlocks = { "0.0.0.0/0" },
+            },
         });
+
+        var server = new Pulumi.Aws.Ec2.Instance("webserver-www", new Pulumi.Aws.Ec2.InstanceArgs
+        {
+            InstanceType = size,
+            VpcSecurityGroupIds = { group.Name }, // reference the security group resource above
+            Ami = ami.Id,
+        });
+
+        PublicIp = server.PublicIp;
+        PublicDns = server.PublicDns;
+    }
+
+    [Output]
+    public Output<string> PublicIp { get; set; }
+
+    [Output]
+    public Output<string> PublicDns { get; set; }
 }
 ```
 
