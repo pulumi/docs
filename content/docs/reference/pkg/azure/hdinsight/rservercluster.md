@@ -1467,6 +1467,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterGatewayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterGatewayOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterGatewayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterGateway.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1617,6 +1620,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterRolesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterRoles.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1804,6 +1810,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesEdgeNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesEdgeNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterRolesEdgeNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesEdgeNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2064,6 +2073,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesHeadNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesHeadNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterRolesHeadNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesHeadNode.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2322,6 +2334,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesWorkerNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesWorkerNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterRolesWorkerNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesWorkerNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2654,6 +2669,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesZookeeperNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterRolesZookeeperNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterRolesZookeeperNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterRolesZookeeperNode.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2912,6 +2930,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterStorageAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#RServerClusterStorageAccountOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.RServerClusterStorageAccountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.RServerClusterStorageAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

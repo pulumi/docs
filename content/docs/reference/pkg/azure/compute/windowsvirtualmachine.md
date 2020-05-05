@@ -3141,6 +3141,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineAdditionalCapabilitiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineAdditionalCapabilitiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineAdditionalCapabilitiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineAdditionalCapabilities.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3219,6 +3222,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineAdditionalUnattendContentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineAdditionalUnattendContentOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineAdditionalUnattendContentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineAdditionalUnattendContent.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3335,6 +3341,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineBootDiagnosticsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineBootDiagnosticsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineBootDiagnosticsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineBootDiagnostics.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3413,6 +3422,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineIdentityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineIdentity.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3564,6 +3576,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineOsDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineOsDiskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineOsDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineOsDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3860,6 +3875,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineOsDiskDiffDiskSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineOsDiskDiffDiskSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineOsDiskDiffDiskSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineOsDiskDiffDiskSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3938,6 +3956,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachinePlanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachinePlanOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachinePlanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachinePlan.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4090,6 +4111,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineSecretArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineSecretOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineSecretArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineSecret.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4205,6 +4229,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineSecretCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineSecretCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineSecretCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineSecretCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4319,6 +4346,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineSourceImageReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineSourceImageReferenceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineSourceImageReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineSourceImageReference.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4494,6 +4524,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineWinrmListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#WindowsVirtualMachineWinrmListenerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.WindowsVirtualMachineWinrmListenerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.WindowsVirtualMachineWinrmListener.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

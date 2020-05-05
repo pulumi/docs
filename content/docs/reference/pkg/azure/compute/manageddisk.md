@@ -1688,6 +1688,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ManagedDiskEncryptionSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ManagedDiskEncryptionSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ManagedDiskEncryptionSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ManagedDiskEncryptionSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1839,6 +1842,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ManagedDiskEncryptionSettingsDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ManagedDiskEncryptionSettingsDiskEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ManagedDiskEncryptionSettingsDiskEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ManagedDiskEncryptionSettingsDiskEncryptionKey.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1953,6 +1959,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ManagedDiskEncryptionSettingsKeyEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ManagedDiskEncryptionSettingsKeyEncryptionKeyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ManagedDiskEncryptionSettingsKeyEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ManagedDiskEncryptionSettingsKeyEncryptionKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

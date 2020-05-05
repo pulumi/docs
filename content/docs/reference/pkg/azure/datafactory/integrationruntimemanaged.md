@@ -1395,6 +1395,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedCatalogInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedCatalogInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Inputs.IntegrationRuntimeManagedCatalogInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Outputs.IntegrationRuntimeManagedCatalogInfo.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1582,6 +1585,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedCustomSetupScriptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedCustomSetupScriptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Inputs.IntegrationRuntimeManagedCustomSetupScriptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Outputs.IntegrationRuntimeManagedCustomSetupScript.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1696,6 +1702,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedVnetIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory?tab=doc#IntegrationRuntimeManagedVnetIntegrationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Inputs.IntegrationRuntimeManagedVnetIntegrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataFactory.Outputs.IntegrationRuntimeManagedVnetIntegration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

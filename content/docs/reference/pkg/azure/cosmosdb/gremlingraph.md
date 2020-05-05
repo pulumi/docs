@@ -1115,6 +1115,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#GremlinGraphConflictResolutionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#GremlinGraphConflictResolutionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.GremlinGraphConflictResolutionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.GremlinGraphConflictResolutionPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1265,6 +1268,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#GremlinGraphIndexPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#GremlinGraphIndexPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.GremlinGraphIndexPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.GremlinGraphIndexPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1452,6 +1458,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#GremlinGraphUniqueKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#GremlinGraphUniqueKeyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.GremlinGraphUniqueKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.GremlinGraphUniqueKey.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

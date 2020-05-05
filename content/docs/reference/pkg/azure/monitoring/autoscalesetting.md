@@ -1122,6 +1122,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingNotificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingNotification.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1236,6 +1239,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationEmailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationEmailOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingNotificationEmailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingNotificationEmail.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1388,6 +1394,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationWebhookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationWebhookOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingNotificationWebhookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingNotificationWebhook.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1502,6 +1511,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1726,6 +1738,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileCapacityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileCapacityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileCapacityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileCapacity.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1877,6 +1892,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileFixedDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileFixedDateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileFixedDateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileFixedDate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2027,6 +2045,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRecurrenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRecurrenceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileRecurrenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileRecurrence.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2215,6 +2236,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileRule.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2329,6 +2353,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileRuleMetricTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileRuleMetricTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2660,6 +2687,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleScaleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleScaleActionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileRuleScaleActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileRuleScaleAction.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

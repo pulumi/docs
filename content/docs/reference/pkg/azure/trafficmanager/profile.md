@@ -1046,6 +1046,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#ProfileDnsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#ProfileDnsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Inputs.ProfileDnsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Outputs.ProfileDnsConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1160,6 +1163,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#ProfileMonitorConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#ProfileMonitorConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Inputs.ProfileMonitorConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Outputs.ProfileMonitorConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1491,6 +1497,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#ProfileMonitorConfigCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#ProfileMonitorConfigCustomHeaderOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Inputs.ProfileMonitorConfigCustomHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.Outputs.ProfileMonitorConfigCustomHeader.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

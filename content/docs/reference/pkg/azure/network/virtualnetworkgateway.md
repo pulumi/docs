@@ -1653,6 +1653,9 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayBgpSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayBgpSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayBgpSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayBgpSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1819,6 +1822,9 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayIpConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayIpConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayIpConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayIpConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2030,6 +2036,9 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayVpnClientConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2330,6 +2339,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2440,6 +2452,9 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRootCertificateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.VirtualNetworkGatewayVpnClientConfigurationRootCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.VirtualNetworkGatewayVpnClientConfigurationRootCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

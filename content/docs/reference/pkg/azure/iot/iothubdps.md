@@ -1187,6 +1187,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsLinkedHubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsLinkedHubOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.Inputs.IotHubDpsLinkedHubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.Outputs.IotHubDpsLinkedHub.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1409,6 +1412,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsSkuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsSkuOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.Inputs.IotHubDpsSkuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.Outputs.IotHubDpsSku.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

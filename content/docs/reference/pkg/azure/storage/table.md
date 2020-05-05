@@ -691,6 +691,9 @@ Changing this forces a new resource to be created.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#TableAclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#TableAclOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.TableAclArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Outputs.TableAcl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -805,6 +808,9 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#TableAclAccessPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#TableAclAccessPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.TableAclAccessPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Outputs.TableAclAccessPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

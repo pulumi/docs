@@ -1467,6 +1467,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterComponentVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterComponentVersionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterComponentVersionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterComponentVersion.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1545,6 +1548,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterGatewayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterGatewayOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterGatewayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterGateway.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1697,6 +1703,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterRolesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterRoles.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1847,6 +1856,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesHeadNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesHeadNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterRolesHeadNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterRolesHeadNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2106,6 +2118,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesWorkerNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesWorkerNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterRolesWorkerNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterRolesWorkerNode.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2438,6 +2453,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesZookeeperNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterRolesZookeeperNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterRolesZookeeperNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterRolesZookeeperNode.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2697,6 +2715,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterStorageAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterStorageAccountOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterStorageAccountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterStorageAccount.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2847,6 +2868,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterStorageAccountGen2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#HBaseClusterStorageAccountGen2Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.HBaseClusterStorageAccountGen2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.HBaseClusterStorageAccountGen2.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -1243,6 +1243,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMBackupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMBackupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyVMBackupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyVMBackup.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1394,6 +1397,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionDailyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionDailyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyVMRetentionDailyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyVMRetentionDaily.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1472,6 +1478,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionMonthlyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionMonthlyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyVMRetentionMonthlyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyVMRetentionMonthly.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1624,6 +1633,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionWeeklyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionWeeklyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyVMRetentionWeeklyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyVMRetentionWeekly.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1738,6 +1750,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionYearlyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/backup?tab=doc#PolicyVMRetentionYearlyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Inputs.PolicyVMRetentionYearlyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Backup.Outputs.PolicyVMRetentionYearly.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -714,6 +714,9 @@ The following output properties are available:
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#GetSharedImageIdentifier">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.GetSharedImageIdentifier.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -858,4 +861,16 @@ The following output properties are available:
 
 
 
+
+
+
+<h2 id="package-details">Package Details</h2>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+	<dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+</dl>
 

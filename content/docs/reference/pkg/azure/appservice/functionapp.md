@@ -2256,6 +2256,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettings.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2803,6 +2806,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsActiveDirectoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsActiveDirectoryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsActiveDirectoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettingsActiveDirectory.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -2953,6 +2959,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsFacebookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsFacebookOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsFacebookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettingsFacebook.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3105,6 +3114,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsGoogleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsGoogleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsGoogleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettingsGoogle.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3255,6 +3267,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsMicrosoftArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsMicrosoftOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsMicrosoftArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettingsMicrosoft.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3407,6 +3422,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsTwitterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppAuthSettingsTwitterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppAuthSettingsTwitterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppAuthSettingsTwitter.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -3513,6 +3531,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppConnectionStringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppConnectionStringOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppConnectionStringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppConnectionString.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3664,6 +3685,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppIdentityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppIdentity.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3851,6 +3875,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppSiteConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppSiteConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4255,6 +4282,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteConfigCorsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteConfigCorsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppSiteConfigCorsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppSiteConfigCors.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4370,6 +4400,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteConfigIpRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteConfigIpRestrictionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.FunctionAppSiteConfigIpRestrictionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppSiteConfigIpRestriction.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -4484,6 +4517,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#FunctionAppSiteCredentialOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.FunctionAppSiteCredential.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

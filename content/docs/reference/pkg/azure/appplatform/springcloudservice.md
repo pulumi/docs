@@ -827,6 +827,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSetting.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1086,6 +1089,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingHttpBasicAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingHttpBasicAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingHttpBasicAuth.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1200,6 +1206,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingRepository.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1496,6 +1505,9 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1610,6 +1622,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositorySshAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingRepositorySshAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingRepositorySshAuth.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1797,6 +1812,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingSshAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingSshAuthOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingSshAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingSshAuth.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
