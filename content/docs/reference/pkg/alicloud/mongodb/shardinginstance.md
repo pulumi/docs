@@ -1767,6 +1767,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/mongodb?tab=doc#ShardingInstanceMongoListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/mongodb?tab=doc#ShardingInstanceMongoListOutput">output</a> API doc for this type.
 {{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.MongoDB.Inputs.ShardingInstanceMongoListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.MongoDB.Outputs.ShardingInstanceMongoList.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
@@ -1957,6 +1960,9 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/mongodb?tab=doc#ShardingInstanceShardListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/mongodb?tab=doc#ShardingInstanceShardListOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.MongoDB.Inputs.ShardingInstanceShardListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.MongoDB.Outputs.ShardingInstanceShardList.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

@@ -51,7 +51,7 @@ const template = new alicloud.ecs.LaunchTemplate("template", {
     instanceType: "ecs.n1.tiny",
     securityGroupId: defaultSecurityGroup.id,
 });
-const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("default", {
+const defaultAutoProvisioningGroup = new alicloud.AutoProvisioningGroup("default", {
     launchTemplateConfigs: [{
         instanceType: "ecs.n1.small",
         vswitchId: defaultSwitch.id,
@@ -1950,6 +1950,9 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#AutoProvisioningGroupLaunchTemplateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#AutoProvisioningGroupLaunchTemplateConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Inputs.AutoProvisioningGroupLaunchTemplateConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.Outputs.AutoProvisioningGroupLaunchTemplateConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
